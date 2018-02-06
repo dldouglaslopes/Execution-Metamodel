@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel"
+    modelDirectory="/Metamodel-Execution/src-gen" creationIcons="false"
+    editDirectory="/Metamodel-Execution.edit/src-gen" editorDirectory="/Metamodel-Execution.editor/src-gen"
+    modelPluginID="Metamodel-Execution" modelName="MetamodelExecution" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    codeFormatting="true" importerID="org.eclipse.emf.importer.ecore" complianceLevel="8.0"
+    copyrightFields="false" operationReflection="true" importOrganizing="true">
+  <foreignModel>MetamodelExecution.ecore</foreignModel>
+  <testsDirectory xsi:nil="true"/>
+  <genPackages prefix="MetamodelExecution" basePackage="metamodel-execution" disposableProviderFactory="true"
+      ecorePackage="MetamodelExecution.ecore#/">
+    <genClasses ecoreClass="MetamodelExecution.ecore#//Step">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MetamodelExecution.ecore#//Step/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MetamodelExecution.ecore#//Step/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MetamodelExecution.ecore#//Step/typeverbose"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MetamodelExecution.ecore#//Step/url"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MetamodelExecution.ecore#//Step/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MetamodelExecution.ecore#//Step/description"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MetamodelExecution.ecore#//Step/isInitial"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MetamodelExecution.ecore#//Step/isTerminal"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MetamodelExecution.ecore#//Step/mandatory"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>
