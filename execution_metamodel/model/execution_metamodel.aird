@@ -3,6 +3,7 @@
   <viewpoint:DAnalysis xmi:id="_GaFY8BEVEei_MO2ar4s9Jg" selectedViews="_GcLDoBEVEei_MO2ar4s9Jg" version="12.1.0.201708031200">
     <semanticResources>execution_metamodel.ecore</semanticResources>
     <semanticResources>execution_metamodel.genmodel</semanticResources>
+    <semanticResources>http://www.eclipse.org/emf/2002/Ecore</semanticResources>
     <ownedViews xmi:type="viewpoint:DView" xmi:id="_GcLDoBEVEei_MO2ar4s9Jg">
       <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']"/>
       <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" xmi:id="_GdhHcBEVEei_MO2ar4s9Jg" name="execution_metamodel" repPath="#_GdEbgBEVEei_MO2ar4s9Jg">
