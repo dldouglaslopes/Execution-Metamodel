@@ -2,7 +2,7 @@
 <ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="MetamodelExecution" nsURI="http://www.example.org/MetamodelExecution"
     nsPrefix="MetamodelExecution">
-  <eClassifiers xsi:type="ecore:EClass" name="Execution" abstract="true">
+  <eClassifiers xsi:type="ecore:EClass" name="Element" abstract="true">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="typeVerbose" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -31,14 +31,14 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="idProtocol" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="idExecutedProtocol" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="AuxiliaryConduct" eSuperTypes="#//Execution">
+  <eClassifiers xsi:type="ecore:EClass" name="AuxiliaryConduct" eSuperTypes="#//Element">
     <eStructuralFeatures xsi:type="ecore:EReference" name="answers" upperBound="-1"
         eType="#//Answer" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Information" eSuperTypes="#//Execution"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Discharge" eSuperTypes="#//Execution"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Referral" eSuperTypes="#//Execution"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Prescription" eSuperTypes="#//Execution">
+  <eClassifiers xsi:type="ecore:EClass" name="Information" eSuperTypes="#//Element"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Discharge" eSuperTypes="#//Element"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Referral" eSuperTypes="#//Element"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Prescription" eSuperTypes="#//Element">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="text" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="idPrescribedMedicament"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
@@ -48,7 +48,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="prescribedprescriptionitem"
         upperBound="-1" eType="#//PrescribedPrescriptionItem" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Treatment" eSuperTypes="#//Execution">
+  <eClassifiers xsi:type="ecore:EClass" name="Treatment" eSuperTypes="#//Element">
     <eStructuralFeatures xsi:type="ecore:EReference" name="prescribedexam" eType="#//PrescribedExamination"
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="prescribedprocedure" upperBound="-1"
@@ -69,7 +69,7 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="clinicalIndication" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="sideMemberDisplay" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="examination" lowerBound="1"
-        eType="#//Examination.1" containment="true"/>
+        eType="#//Exam" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Previous">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="url" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -150,11 +150,11 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="report" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="numberGuide" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="prescription" lowerBound="1"
-        eType="#//Prescription.1" containment="true"/>
+        eType="#//ExaminationPrescription" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="complement" upperBound="-1"
         eType="#//Complement" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Examination">
+  <eClassifiers xsi:type="ecore:EClass" name="Exam">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="url" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="code" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
@@ -166,7 +166,7 @@
   <eClassifiers xsi:type="ecore:EClass" name="PrescribedProcedure"/>
   <eClassifiers xsi:type="ecore:EClass" name="PrescribedInternment"/>
   <eClassifiers xsi:type="ecore:EClass" name="PrescribedMedication"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Prescription">
+  <eClassifiers xsi:type="ecore:EClass" name="ExaminationPrescription">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="success" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="message" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -181,4 +181,8 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="PrescribedPrescriptionItem"/>
   <eClassifiers xsi:type="ecore:EClass" name="PrescribedMedicament"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Execution">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="element" upperBound="-1"
+        eType="#//Element" containment="true"/>
+  </eClassifiers>
 </ecore:EPackage>
