@@ -185,4 +185,5 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="element" upperBound="-1"
         eType="#//Element" containment="true"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ExtendedProtocol" eSuperTypes="protocolosv2.ecore#//Protocol"/>
 </ecore:EPackage>
