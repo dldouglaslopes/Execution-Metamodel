@@ -26,7 +26,7 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="idStep" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="idProtocol" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="idExecutedProtocol" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="justify" eType="#//Justify"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="justification" eType="#//Justification"
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="step" upperBound="-1" eType="ecore:EClass protocolosv2.ecore#//Element"
         containment="true"/>
@@ -159,7 +159,7 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="conclusion" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="completed" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="aborted" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="justify" eType="#//Justify"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="justification" eType="#//Justification"
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="lastExecutedStepDate" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="idProtocol" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
@@ -174,7 +174,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="executedstep" lowerBound="1"
         eType="#//ExecutedStep" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Justify">
+  <eClassifiers xsi:type="ecore:EClass" name="Justification">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="reason" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="reasonDisplay" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -219,7 +219,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="previous" eType="#//Previous"
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="next" eType="#//Next" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="justify" eType="#//Justify"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="justification" eType="#//Justification"
         containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="LastProfessional">
