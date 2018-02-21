@@ -33,7 +33,7 @@ import org.eclipse.emf.ecore.EObject;
  * </ul>
  *
  * @see MetamodelExecution.Execution_metamodelPackage#getExecutionProtocol()
- * @model abstract="true"
+ * @model
  * @generated
  */
 public interface ExecutionProtocol extends EObject {

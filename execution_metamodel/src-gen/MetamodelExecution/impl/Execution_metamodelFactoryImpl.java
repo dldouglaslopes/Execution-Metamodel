@@ -104,6 +104,8 @@ public class Execution_metamodelFactoryImpl extends EFactoryImpl implements Exec
 			return createPrescribedMedicament();
 		case Execution_metamodelPackage.EXTENDED_PROTOCOL:
 			return createExtendedProtocol();
+		case Execution_metamodelPackage.EXECUTION_PROTOCOL:
+			return createExecutionProtocol();
 		case Execution_metamodelPackage.JUSTIFY:
 			return createJustify();
 		case Execution_metamodelPackage.PROTOCOL:
@@ -357,6 +359,16 @@ public class Execution_metamodelFactoryImpl extends EFactoryImpl implements Exec
 	public ExtendedProtocol createExtendedProtocol() {
 		ExtendedProtocolImpl extendedProtocol = new ExtendedProtocolImpl();
 		return extendedProtocol;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ExecutionProtocol createExecutionProtocol() {
+		ExecutionProtocolImpl executionProtocol = new ExecutionProtocolImpl();
+		return executionProtocol;
 	}
 
 	/**

@@ -48,7 +48,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *
  * @generated
  */
-public abstract class ExecutionProtocolImpl extends MinimalEObjectImpl.Container implements ExecutionProtocol {
+public class ExecutionProtocolImpl extends MinimalEObjectImpl.Container implements ExecutionProtocol {
 	/**
 	 * The default value of the '{@link #getId() <em>Id</em>}' attribute.
 	 * <!-- begin-user-doc -->

@@ -3258,14 +3258,14 @@ public interface Execution_metamodelPackage extends EPackage {
 	int LAST_PROFESSIONAL_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link MetamodelExecution.Data <em>Data</em>}' class.
+	 * The meta object id for the '{@link MetamodelExecution.impl.UserDataImpl <em>User Data</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see MetamodelExecution.Data
-	 * @see MetamodelExecution.impl.Execution_metamodelPackageImpl#getData()
+	 * @see MetamodelExecution.impl.UserDataImpl
+	 * @see MetamodelExecution.impl.Execution_metamodelPackageImpl#getUserData()
 	 * @generated
 	 */
-	int DATA = 31;
+	int USER_DATA = 31;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -3274,7 +3274,7 @@ public interface Execution_metamodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DATA__ID = 0;
+	int USER_DATA__ID = 0;
 
 	/**
 	 * The feature id for the '<em><b>Url</b></em>' attribute.
@@ -3283,7 +3283,7 @@ public interface Execution_metamodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DATA__URL = 1;
+	int USER_DATA__URL = 1;
 
 	/**
 	 * The feature id for the '<em><b>Code</b></em>' attribute.
@@ -3292,7 +3292,7 @@ public interface Execution_metamodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DATA__CODE = 2;
+	int USER_DATA__CODE = 2;
 
 	/**
 	 * The feature id for the '<em><b>Email</b></em>' attribute.
@@ -3301,7 +3301,7 @@ public interface Execution_metamodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DATA__EMAIL = 3;
+	int USER_DATA__EMAIL = 3;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -3310,7 +3310,7 @@ public interface Execution_metamodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DATA__NAME = 4;
+	int USER_DATA__NAME = 4;
 
 	/**
 	 * The feature id for the '<em><b>Type Council</b></em>' attribute.
@@ -3319,7 +3319,7 @@ public interface Execution_metamodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DATA__TYPE_COUNCIL = 5;
+	int USER_DATA__TYPE_COUNCIL = 5;
 
 	/**
 	 * The feature id for the '<em><b>Login</b></em>' attribute.
@@ -3328,7 +3328,7 @@ public interface Execution_metamodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DATA__LOGIN = 6;
+	int USER_DATA__LOGIN = 6;
 
 	/**
 	 * The feature id for the '<em><b>Number Council</b></em>' attribute.
@@ -3337,7 +3337,7 @@ public interface Execution_metamodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DATA__NUMBER_COUNCIL = 7;
+	int USER_DATA__NUMBER_COUNCIL = 7;
 
 	/**
 	 * The feature id for the '<em><b>State</b></em>' attribute.
@@ -3346,7 +3346,7 @@ public interface Execution_metamodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DATA__STATE = 8;
+	int USER_DATA__STATE = 8;
 
 	/**
 	 * The feature id for the '<em><b>Executor</b></em>' reference.
@@ -3355,7 +3355,7 @@ public interface Execution_metamodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DATA__EXECUTOR = 9;
+	int USER_DATA__EXECUTOR = 9;
 
 	/**
 	 * The feature id for the '<em><b>Creator</b></em>' reference.
@@ -3364,25 +3364,25 @@ public interface Execution_metamodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DATA__CREATOR = 10;
+	int USER_DATA__CREATOR = 10;
 
 	/**
-	 * The number of structural features of the '<em>Data</em>' class.
+	 * The number of structural features of the '<em>User Data</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DATA_FEATURE_COUNT = 11;
+	int USER_DATA_FEATURE_COUNT = 11;
 
 	/**
-	 * The number of operations of the '<em>Data</em>' class.
+	 * The number of operations of the '<em>User Data</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DATA_OPERATION_COUNT = 0;
+	int USER_DATA_OPERATION_COUNT = 0;
 
 	/**
 	 * Returns the meta object for class '{@link MetamodelExecution.ExecutionStep <em>Execution Step</em>}'.
@@ -5202,135 +5202,135 @@ public interface Execution_metamodelPackage extends EPackage {
 	EReference getLastProfessional_Data();
 
 	/**
-	 * Returns the meta object for class '{@link MetamodelExecution.Data <em>Data</em>}'.
+	 * Returns the meta object for class '{@link MetamodelExecution.UserData <em>User Data</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Data</em>'.
-	 * @see MetamodelExecution.Data
+	 * @return the meta object for class '<em>User Data</em>'.
+	 * @see MetamodelExecution.UserData
 	 * @generated
 	 */
-	EClass getData();
+	EClass getUserData();
 
 	/**
-	 * Returns the meta object for the attribute '{@link MetamodelExecution.Data#getId <em>Id</em>}'.
+	 * Returns the meta object for the attribute '{@link MetamodelExecution.UserData#getId <em>Id</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Id</em>'.
-	 * @see MetamodelExecution.Data#getId()
-	 * @see #getData()
+	 * @see MetamodelExecution.UserData#getId()
+	 * @see #getUserData()
 	 * @generated
 	 */
-	EAttribute getData_Id();
+	EAttribute getUserData_Id();
 
 	/**
-	 * Returns the meta object for the attribute '{@link MetamodelExecution.Data#getUrl <em>Url</em>}'.
+	 * Returns the meta object for the attribute '{@link MetamodelExecution.UserData#getUrl <em>Url</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Url</em>'.
-	 * @see MetamodelExecution.Data#getUrl()
-	 * @see #getData()
+	 * @see MetamodelExecution.UserData#getUrl()
+	 * @see #getUserData()
 	 * @generated
 	 */
-	EAttribute getData_Url();
+	EAttribute getUserData_Url();
 
 	/**
-	 * Returns the meta object for the attribute '{@link MetamodelExecution.Data#getCode <em>Code</em>}'.
+	 * Returns the meta object for the attribute '{@link MetamodelExecution.UserData#getCode <em>Code</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Code</em>'.
-	 * @see MetamodelExecution.Data#getCode()
-	 * @see #getData()
+	 * @see MetamodelExecution.UserData#getCode()
+	 * @see #getUserData()
 	 * @generated
 	 */
-	EAttribute getData_Code();
+	EAttribute getUserData_Code();
 
 	/**
-	 * Returns the meta object for the attribute '{@link MetamodelExecution.Data#getEmail <em>Email</em>}'.
+	 * Returns the meta object for the attribute '{@link MetamodelExecution.UserData#getEmail <em>Email</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Email</em>'.
-	 * @see MetamodelExecution.Data#getEmail()
-	 * @see #getData()
+	 * @see MetamodelExecution.UserData#getEmail()
+	 * @see #getUserData()
 	 * @generated
 	 */
-	EAttribute getData_Email();
+	EAttribute getUserData_Email();
 
 	/**
-	 * Returns the meta object for the attribute '{@link MetamodelExecution.Data#getName <em>Name</em>}'.
+	 * Returns the meta object for the attribute '{@link MetamodelExecution.UserData#getName <em>Name</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see MetamodelExecution.Data#getName()
-	 * @see #getData()
+	 * @see MetamodelExecution.UserData#getName()
+	 * @see #getUserData()
 	 * @generated
 	 */
-	EAttribute getData_Name();
+	EAttribute getUserData_Name();
 
 	/**
-	 * Returns the meta object for the attribute '{@link MetamodelExecution.Data#getTypeCouncil <em>Type Council</em>}'.
+	 * Returns the meta object for the attribute '{@link MetamodelExecution.UserData#getTypeCouncil <em>Type Council</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Type Council</em>'.
-	 * @see MetamodelExecution.Data#getTypeCouncil()
-	 * @see #getData()
+	 * @see MetamodelExecution.UserData#getTypeCouncil()
+	 * @see #getUserData()
 	 * @generated
 	 */
-	EAttribute getData_TypeCouncil();
+	EAttribute getUserData_TypeCouncil();
 
 	/**
-	 * Returns the meta object for the attribute '{@link MetamodelExecution.Data#getLogin <em>Login</em>}'.
+	 * Returns the meta object for the attribute '{@link MetamodelExecution.UserData#getLogin <em>Login</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Login</em>'.
-	 * @see MetamodelExecution.Data#getLogin()
-	 * @see #getData()
+	 * @see MetamodelExecution.UserData#getLogin()
+	 * @see #getUserData()
 	 * @generated
 	 */
-	EAttribute getData_Login();
+	EAttribute getUserData_Login();
 
 	/**
-	 * Returns the meta object for the attribute '{@link MetamodelExecution.Data#getNumberCouncil <em>Number Council</em>}'.
+	 * Returns the meta object for the attribute '{@link MetamodelExecution.UserData#getNumberCouncil <em>Number Council</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Number Council</em>'.
-	 * @see MetamodelExecution.Data#getNumberCouncil()
-	 * @see #getData()
+	 * @see MetamodelExecution.UserData#getNumberCouncil()
+	 * @see #getUserData()
 	 * @generated
 	 */
-	EAttribute getData_NumberCouncil();
+	EAttribute getUserData_NumberCouncil();
 
 	/**
-	 * Returns the meta object for the attribute '{@link MetamodelExecution.Data#getState <em>State</em>}'.
+	 * Returns the meta object for the attribute '{@link MetamodelExecution.UserData#getState <em>State</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>State</em>'.
-	 * @see MetamodelExecution.Data#getState()
-	 * @see #getData()
+	 * @see MetamodelExecution.UserData#getState()
+	 * @see #getUserData()
 	 * @generated
 	 */
-	EAttribute getData_State();
+	EAttribute getUserData_State();
 
 	/**
-	 * Returns the meta object for the reference '{@link MetamodelExecution.Data#getExecutor <em>Executor</em>}'.
+	 * Returns the meta object for the reference '{@link MetamodelExecution.UserData#getExecutor <em>Executor</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Executor</em>'.
-	 * @see MetamodelExecution.Data#getExecutor()
-	 * @see #getData()
+	 * @see MetamodelExecution.UserData#getExecutor()
+	 * @see #getUserData()
 	 * @generated
 	 */
-	EReference getData_Executor();
+	EReference getUserData_Executor();
 
 	/**
-	 * Returns the meta object for the reference '{@link MetamodelExecution.Data#getCreator <em>Creator</em>}'.
+	 * Returns the meta object for the reference '{@link MetamodelExecution.UserData#getCreator <em>Creator</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Creator</em>'.
-	 * @see MetamodelExecution.Data#getCreator()
-	 * @see #getData()
+	 * @see MetamodelExecution.UserData#getCreator()
+	 * @see #getUserData()
 	 * @generated
 	 */
-	EReference getData_Creator();
+	EReference getUserData_Creator();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -6762,14 +6762,14 @@ public interface Execution_metamodelPackage extends EPackage {
 		EReference LAST_PROFESSIONAL__DATA = eINSTANCE.getLastProfessional_Data();
 
 		/**
-		 * The meta object literal for the '{@link MetamodelExecution.Data <em>Data</em>}' class.
+		 * The meta object literal for the '{@link MetamodelExecution.impl.UserDataImpl <em>User Data</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see MetamodelExecution.Data
-		 * @see MetamodelExecution.impl.Execution_metamodelPackageImpl#getData()
+		 * @see MetamodelExecution.impl.UserDataImpl
+		 * @see MetamodelExecution.impl.Execution_metamodelPackageImpl#getUserData()
 		 * @generated
 		 */
-		EClass DATA = eINSTANCE.getData();
+		EClass USER_DATA = eINSTANCE.getUserData();
 
 		/**
 		 * The meta object literal for the '<em><b>Id</b></em>' attribute feature.
@@ -6777,7 +6777,7 @@ public interface Execution_metamodelPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute DATA__ID = eINSTANCE.getData_Id();
+		EAttribute USER_DATA__ID = eINSTANCE.getUserData_Id();
 
 		/**
 		 * The meta object literal for the '<em><b>Url</b></em>' attribute feature.
@@ -6785,7 +6785,7 @@ public interface Execution_metamodelPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute DATA__URL = eINSTANCE.getData_Url();
+		EAttribute USER_DATA__URL = eINSTANCE.getUserData_Url();
 
 		/**
 		 * The meta object literal for the '<em><b>Code</b></em>' attribute feature.
@@ -6793,7 +6793,7 @@ public interface Execution_metamodelPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute DATA__CODE = eINSTANCE.getData_Code();
+		EAttribute USER_DATA__CODE = eINSTANCE.getUserData_Code();
 
 		/**
 		 * The meta object literal for the '<em><b>Email</b></em>' attribute feature.
@@ -6801,7 +6801,7 @@ public interface Execution_metamodelPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute DATA__EMAIL = eINSTANCE.getData_Email();
+		EAttribute USER_DATA__EMAIL = eINSTANCE.getUserData_Email();
 
 		/**
 		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
@@ -6809,7 +6809,7 @@ public interface Execution_metamodelPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute DATA__NAME = eINSTANCE.getData_Name();
+		EAttribute USER_DATA__NAME = eINSTANCE.getUserData_Name();
 
 		/**
 		 * The meta object literal for the '<em><b>Type Council</b></em>' attribute feature.
@@ -6817,7 +6817,7 @@ public interface Execution_metamodelPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute DATA__TYPE_COUNCIL = eINSTANCE.getData_TypeCouncil();
+		EAttribute USER_DATA__TYPE_COUNCIL = eINSTANCE.getUserData_TypeCouncil();
 
 		/**
 		 * The meta object literal for the '<em><b>Login</b></em>' attribute feature.
@@ -6825,7 +6825,7 @@ public interface Execution_metamodelPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute DATA__LOGIN = eINSTANCE.getData_Login();
+		EAttribute USER_DATA__LOGIN = eINSTANCE.getUserData_Login();
 
 		/**
 		 * The meta object literal for the '<em><b>Number Council</b></em>' attribute feature.
@@ -6833,7 +6833,7 @@ public interface Execution_metamodelPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute DATA__NUMBER_COUNCIL = eINSTANCE.getData_NumberCouncil();
+		EAttribute USER_DATA__NUMBER_COUNCIL = eINSTANCE.getUserData_NumberCouncil();
 
 		/**
 		 * The meta object literal for the '<em><b>State</b></em>' attribute feature.
@@ -6841,7 +6841,7 @@ public interface Execution_metamodelPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute DATA__STATE = eINSTANCE.getData_State();
+		EAttribute USER_DATA__STATE = eINSTANCE.getUserData_State();
 
 		/**
 		 * The meta object literal for the '<em><b>Executor</b></em>' reference feature.
@@ -6849,7 +6849,7 @@ public interface Execution_metamodelPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference DATA__EXECUTOR = eINSTANCE.getData_Executor();
+		EReference USER_DATA__EXECUTOR = eINSTANCE.getUserData_Executor();
 
 		/**
 		 * The meta object literal for the '<em><b>Creator</b></em>' reference feature.
@@ -6857,7 +6857,7 @@ public interface Execution_metamodelPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference DATA__CREATOR = eINSTANCE.getData_Creator();
+		EReference USER_DATA__CREATOR = eINSTANCE.getUserData_Creator();
 
 	}
 

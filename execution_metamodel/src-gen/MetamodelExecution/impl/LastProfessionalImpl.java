@@ -2,10 +2,10 @@
  */
 package MetamodelExecution.impl;
 
-import MetamodelExecution.Data;
 import MetamodelExecution.Execution_metamodelPackage;
 import MetamodelExecution.LastProfessional;
 
+import MetamodelExecution.UserData;
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;
@@ -36,7 +36,7 @@ public class LastProfessionalImpl extends MinimalEObjectImpl.Container implement
 	 * @generated
 	 * @ordered
 	 */
-	protected Data data;
+	protected UserData data;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -62,10 +62,10 @@ public class LastProfessionalImpl extends MinimalEObjectImpl.Container implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Data getData() {
+	public UserData getData() {
 		if (data != null && data.eIsProxy()) {
 			InternalEObject oldData = (InternalEObject) data;
-			data = (Data) eResolveProxy(oldData);
+			data = (UserData) eResolveProxy(oldData);
 			if (data != oldData) {
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE,
@@ -80,7 +80,7 @@ public class LastProfessionalImpl extends MinimalEObjectImpl.Container implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Data basicGetData() {
+	public UserData basicGetData() {
 		return data;
 	}
 
@@ -89,8 +89,8 @@ public class LastProfessionalImpl extends MinimalEObjectImpl.Container implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setData(Data newData) {
-		Data oldData = data;
+	public void setData(UserData newData) {
+		UserData oldData = data;
 		data = newData;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.LAST_PROFESSIONAL__DATA,
@@ -122,7 +122,7 @@ public class LastProfessionalImpl extends MinimalEObjectImpl.Container implement
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 		case Execution_metamodelPackage.LAST_PROFESSIONAL__DATA:
-			setData((Data) newValue);
+			setData((UserData) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -137,7 +137,7 @@ public class LastProfessionalImpl extends MinimalEObjectImpl.Container implement
 	public void eUnset(int featureID) {
 		switch (featureID) {
 		case Execution_metamodelPackage.LAST_PROFESSIONAL__DATA:
-			setData((Data) null);
+			setData((UserData) null);
 			return;
 		}
 		super.eUnset(featureID);

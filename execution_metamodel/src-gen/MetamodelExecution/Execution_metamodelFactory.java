@@ -238,6 +238,15 @@ public interface Execution_metamodelFactory extends EFactory {
 	ExtendedProtocol createExtendedProtocol();
 
 	/**
+	 * Returns a new object of class '<em>Execution Protocol</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Execution Protocol</em>'.
+	 * @generated
+	 */
+	ExecutionProtocol createExecutionProtocol();
+
+	/**
 	 * Returns a new object of class '<em>Justify</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

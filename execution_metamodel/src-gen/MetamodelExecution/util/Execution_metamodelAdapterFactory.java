@@ -222,8 +222,8 @@ public class Execution_metamodelAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
-		public Adapter caseData(Data object) {
-			return createDataAdapter();
+		public Adapter caseUserData(UserData object) {
+			return createUserDataAdapter();
 		}
 
 		@Override
@@ -685,16 +685,16 @@ public class Execution_metamodelAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link MetamodelExecution.Data <em>Data</em>}'.
+	 * Creates a new adapter for an object of class '{@link MetamodelExecution.UserData <em>User Data</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see MetamodelExecution.Data
+	 * @see MetamodelExecution.UserData
 	 * @generated
 	 */
-	public Adapter createDataAdapter() {
+	public Adapter createUserDataAdapter() {
 		return null;
 	}
 

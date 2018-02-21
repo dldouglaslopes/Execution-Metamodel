@@ -297,9 +297,9 @@ public class Execution_metamodelSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case Execution_metamodelPackage.DATA: {
-			Data data = (Data) theEObject;
-			T result = caseData(data);
+		case Execution_metamodelPackage.USER_DATA: {
+			UserData userData = (UserData) theEObject;
+			T result = caseUserData(userData);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -775,17 +775,17 @@ public class Execution_metamodelSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Data</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>User Data</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Data</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>User Data</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseData(Data object) {
+	public T caseUserData(UserData object) {
 		return null;
 	}
 

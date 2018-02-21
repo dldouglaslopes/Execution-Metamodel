@@ -6,7 +6,6 @@ import MetamodelExecution.Answer;
 import MetamodelExecution.AuxiliaryConduct;
 import MetamodelExecution.Complement;
 import MetamodelExecution.Creator;
-import MetamodelExecution.Data;
 import MetamodelExecution.Discharge;
 import MetamodelExecution.Exam;
 import MetamodelExecution.Examination;
@@ -35,6 +34,7 @@ import MetamodelExecution.Question;
 import MetamodelExecution.Referral;
 import MetamodelExecution.Responsible;
 import MetamodelExecution.Treatment;
+import MetamodelExecution.UserData;
 import MetamodelExecution.Variable;
 
 import org.eclipse.emf.ecore.EAttribute;
@@ -277,7 +277,7 @@ public class Execution_metamodelPackageImpl extends EPackageImpl implements Exec
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass dataEClass = null;
+	private EClass userDataEClass = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -1868,8 +1868,8 @@ public class Execution_metamodelPackageImpl extends EPackageImpl implements Exec
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getData() {
-		return dataEClass;
+	public EClass getUserData() {
+		return userDataEClass;
 	}
 
 	/**
@@ -1877,8 +1877,8 @@ public class Execution_metamodelPackageImpl extends EPackageImpl implements Exec
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getData_Id() {
-		return (EAttribute) dataEClass.getEStructuralFeatures().get(0);
+	public EAttribute getUserData_Id() {
+		return (EAttribute) userDataEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -1886,8 +1886,8 @@ public class Execution_metamodelPackageImpl extends EPackageImpl implements Exec
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getData_Url() {
-		return (EAttribute) dataEClass.getEStructuralFeatures().get(1);
+	public EAttribute getUserData_Url() {
+		return (EAttribute) userDataEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -1895,8 +1895,8 @@ public class Execution_metamodelPackageImpl extends EPackageImpl implements Exec
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getData_Code() {
-		return (EAttribute) dataEClass.getEStructuralFeatures().get(2);
+	public EAttribute getUserData_Code() {
+		return (EAttribute) userDataEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -1904,8 +1904,8 @@ public class Execution_metamodelPackageImpl extends EPackageImpl implements Exec
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getData_Email() {
-		return (EAttribute) dataEClass.getEStructuralFeatures().get(3);
+	public EAttribute getUserData_Email() {
+		return (EAttribute) userDataEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -1913,8 +1913,8 @@ public class Execution_metamodelPackageImpl extends EPackageImpl implements Exec
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getData_Name() {
-		return (EAttribute) dataEClass.getEStructuralFeatures().get(4);
+	public EAttribute getUserData_Name() {
+		return (EAttribute) userDataEClass.getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -1922,8 +1922,8 @@ public class Execution_metamodelPackageImpl extends EPackageImpl implements Exec
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getData_TypeCouncil() {
-		return (EAttribute) dataEClass.getEStructuralFeatures().get(5);
+	public EAttribute getUserData_TypeCouncil() {
+		return (EAttribute) userDataEClass.getEStructuralFeatures().get(5);
 	}
 
 	/**
@@ -1931,8 +1931,8 @@ public class Execution_metamodelPackageImpl extends EPackageImpl implements Exec
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getData_Login() {
-		return (EAttribute) dataEClass.getEStructuralFeatures().get(6);
+	public EAttribute getUserData_Login() {
+		return (EAttribute) userDataEClass.getEStructuralFeatures().get(6);
 	}
 
 	/**
@@ -1940,8 +1940,8 @@ public class Execution_metamodelPackageImpl extends EPackageImpl implements Exec
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getData_NumberCouncil() {
-		return (EAttribute) dataEClass.getEStructuralFeatures().get(7);
+	public EAttribute getUserData_NumberCouncil() {
+		return (EAttribute) userDataEClass.getEStructuralFeatures().get(7);
 	}
 
 	/**
@@ -1949,8 +1949,8 @@ public class Execution_metamodelPackageImpl extends EPackageImpl implements Exec
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getData_State() {
-		return (EAttribute) dataEClass.getEStructuralFeatures().get(8);
+	public EAttribute getUserData_State() {
+		return (EAttribute) userDataEClass.getEStructuralFeatures().get(8);
 	}
 
 	/**
@@ -1958,8 +1958,8 @@ public class Execution_metamodelPackageImpl extends EPackageImpl implements Exec
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getData_Executor() {
-		return (EReference) dataEClass.getEStructuralFeatures().get(9);
+	public EReference getUserData_Executor() {
+		return (EReference) userDataEClass.getEStructuralFeatures().get(9);
 	}
 
 	/**
@@ -1967,8 +1967,8 @@ public class Execution_metamodelPackageImpl extends EPackageImpl implements Exec
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getData_Creator() {
-		return (EReference) dataEClass.getEStructuralFeatures().get(10);
+	public EReference getUserData_Creator() {
+		return (EReference) userDataEClass.getEStructuralFeatures().get(10);
 	}
 
 	/**
@@ -2199,18 +2199,18 @@ public class Execution_metamodelPackageImpl extends EPackageImpl implements Exec
 		lastProfessionalEClass = createEClass(LAST_PROFESSIONAL);
 		createEReference(lastProfessionalEClass, LAST_PROFESSIONAL__DATA);
 
-		dataEClass = createEClass(DATA);
-		createEAttribute(dataEClass, DATA__ID);
-		createEAttribute(dataEClass, DATA__URL);
-		createEAttribute(dataEClass, DATA__CODE);
-		createEAttribute(dataEClass, DATA__EMAIL);
-		createEAttribute(dataEClass, DATA__NAME);
-		createEAttribute(dataEClass, DATA__TYPE_COUNCIL);
-		createEAttribute(dataEClass, DATA__LOGIN);
-		createEAttribute(dataEClass, DATA__NUMBER_COUNCIL);
-		createEAttribute(dataEClass, DATA__STATE);
-		createEReference(dataEClass, DATA__EXECUTOR);
-		createEReference(dataEClass, DATA__CREATOR);
+		userDataEClass = createEClass(USER_DATA);
+		createEAttribute(userDataEClass, USER_DATA__ID);
+		createEAttribute(userDataEClass, USER_DATA__URL);
+		createEAttribute(userDataEClass, USER_DATA__CODE);
+		createEAttribute(userDataEClass, USER_DATA__EMAIL);
+		createEAttribute(userDataEClass, USER_DATA__NAME);
+		createEAttribute(userDataEClass, USER_DATA__TYPE_COUNCIL);
+		createEAttribute(userDataEClass, USER_DATA__LOGIN);
+		createEAttribute(userDataEClass, USER_DATA__NUMBER_COUNCIL);
+		createEAttribute(userDataEClass, USER_DATA__STATE);
+		createEReference(userDataEClass, USER_DATA__EXECUTOR);
+		createEReference(userDataEClass, USER_DATA__CREATOR);
 	}
 
 	/**
@@ -2544,7 +2544,7 @@ public class Execution_metamodelPackageImpl extends EPackageImpl implements Exec
 				ExtendedProtocol.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(executionProtocolEClass, ExecutionProtocol.class, "ExecutionProtocol", IS_ABSTRACT, !IS_INTERFACE,
+		initEClass(executionProtocolEClass, ExecutionProtocol.class, "ExecutionProtocol", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getExecutionProtocol_Id(), ecorePackage.getEInt(), "id", null, 0, 1, ExecutionProtocol.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -2625,7 +2625,7 @@ public class Execution_metamodelPackageImpl extends EPackageImpl implements Exec
 
 		initEClass(responsibleEClass, Responsible.class, "Responsible", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getResponsible_Data(), this.getData(), null, "data", null, 1, 1, Responsible.class,
+		initEReference(getResponsible_Data(), this.getUserData(), null, "data", null, 1, 1, Responsible.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
@@ -2692,35 +2692,35 @@ public class Execution_metamodelPackageImpl extends EPackageImpl implements Exec
 
 		initEClass(lastProfessionalEClass, LastProfessional.class, "LastProfessional", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getLastProfessional_Data(), this.getData(), null, "data", null, 1, 1, LastProfessional.class,
+		initEReference(getLastProfessional_Data(), this.getUserData(), null, "data", null, 1, 1, LastProfessional.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(dataEClass, Data.class, "Data", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getData_Id(), ecorePackage.getEInt(), "id", null, 0, 1, Data.class, !IS_TRANSIENT, !IS_VOLATILE,
-				IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getData_Url(), ecorePackage.getEString(), "url", null, 0, 1, Data.class, !IS_TRANSIENT,
+		initEClass(userDataEClass, UserData.class, "UserData", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getUserData_Id(), ecorePackage.getEInt(), "id", null, 0, 1, UserData.class, !IS_TRANSIENT,
 				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getData_Code(), ecorePackage.getEInt(), "code", null, 0, 1, Data.class, !IS_TRANSIENT,
+		initEAttribute(getUserData_Url(), ecorePackage.getEString(), "url", null, 0, 1, UserData.class, !IS_TRANSIENT,
 				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getData_Email(), ecorePackage.getEString(), "email", null, 0, 1, Data.class, !IS_TRANSIENT,
+		initEAttribute(getUserData_Code(), ecorePackage.getEInt(), "code", null, 0, 1, UserData.class, !IS_TRANSIENT,
 				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getData_Name(), ecorePackage.getEString(), "name", null, 0, 1, Data.class, !IS_TRANSIENT,
-				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getData_TypeCouncil(), ecorePackage.getEString(), "typeCouncil", null, 0, 1, Data.class,
+		initEAttribute(getUserData_Email(), ecorePackage.getEString(), "email", null, 0, 1, UserData.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getData_Login(), ecorePackage.getEString(), "login", null, 0, 1, Data.class, !IS_TRANSIENT,
+		initEAttribute(getUserData_Name(), ecorePackage.getEString(), "name", null, 0, 1, UserData.class, !IS_TRANSIENT,
 				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getData_NumberCouncil(), ecorePackage.getEInt(), "numberCouncil", null, 0, 1, Data.class,
+		initEAttribute(getUserData_TypeCouncil(), ecorePackage.getEString(), "typeCouncil", null, 0, 1, UserData.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getData_State(), ecorePackage.getEString(), "state", null, 0, 1, Data.class, !IS_TRANSIENT,
-				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getData_Executor(), this.getExecutor(), null, "executor", null, 1, 1, Data.class, !IS_TRANSIENT,
-				!IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED,
-				IS_ORDERED);
-		initEReference(getData_Creator(), this.getCreator(), null, "creator", null, 1, 1, Data.class, !IS_TRANSIENT,
-				!IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED,
-				IS_ORDERED);
+		initEAttribute(getUserData_Login(), ecorePackage.getEString(), "login", null, 0, 1, UserData.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getUserData_NumberCouncil(), ecorePackage.getEInt(), "numberCouncil", null, 0, 1, UserData.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getUserData_State(), ecorePackage.getEString(), "state", null, 0, 1, UserData.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getUserData_Executor(), this.getExecutor(), null, "executor", null, 1, 1, UserData.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getUserData_Creator(), this.getCreator(), null, "creator", null, 1, 1, UserData.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Create resource
 		createResource(eNS_URI);
