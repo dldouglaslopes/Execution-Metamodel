@@ -67,8 +67,8 @@ public class Execution_metamodelAdapterFactory extends AdapterFactoryImpl {
 	 */
 	protected Execution_metamodelSwitch<Adapter> modelSwitch = new Execution_metamodelSwitch<Adapter>() {
 		@Override
-		public Adapter caseElement(Element object) {
-			return createElementAdapter();
+		public Adapter caseExecutionStep(ExecutionStep object) {
+			return createExecutionStepAdapter();
 		}
 
 		@Override
@@ -117,18 +117,13 @@ public class Execution_metamodelAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
-		public Adapter caseCreatedBy(CreatedBy object) {
-			return createCreatedByAdapter();
+		public Adapter caseCreator(Creator object) {
+			return createCreatorAdapter();
 		}
 
 		@Override
-		public Adapter caseStep(Step object) {
-			return createStepAdapter();
-		}
-
-		@Override
-		public Adapter caseExecutedBy(ExecutedBy object) {
-			return createExecutedByAdapter();
+		public Adapter caseExecutor(Executor object) {
+			return createExecutorAdapter();
 		}
 
 		@Override
@@ -192,8 +187,48 @@ public class Execution_metamodelAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
-		public Adapter caseExecution(Execution object) {
-			return createExecutionAdapter();
+		public Adapter caseExtendedProtocol(ExtendedProtocol object) {
+			return createExtendedProtocolAdapter();
+		}
+
+		@Override
+		public Adapter caseExecutionProtocol(ExecutionProtocol object) {
+			return createExecutionProtocolAdapter();
+		}
+
+		@Override
+		public Adapter caseJustify(Justify object) {
+			return createJustifyAdapter();
+		}
+
+		@Override
+		public Adapter caseProtocol(Protocol object) {
+			return createProtocolAdapter();
+		}
+
+		@Override
+		public Adapter caseResponsible(Responsible object) {
+			return createResponsibleAdapter();
+		}
+
+		@Override
+		public Adapter caseExecutedStep(ExecutedStep object) {
+			return createExecutedStepAdapter();
+		}
+
+		@Override
+		public Adapter caseLastProfessional(LastProfessional object) {
+			return createLastProfessionalAdapter();
+		}
+
+		@Override
+		public Adapter caseData(Data object) {
+			return createDataAdapter();
+		}
+
+		@Override
+		public Adapter caseProtocolosv2_Protocol(protocolosv2.Protocol object) {
+			return createProtocolosv2_ProtocolAdapter();
 		}
 
 		@Override
@@ -216,16 +251,16 @@ public class Execution_metamodelAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link MetamodelExecution.Element <em>Element</em>}'.
+	 * Creates a new adapter for an object of class '{@link MetamodelExecution.ExecutionStep <em>Execution Step</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see MetamodelExecution.Element
+	 * @see MetamodelExecution.ExecutionStep
 	 * @generated
 	 */
-	public Adapter createElementAdapter() {
+	public Adapter createExecutionStepAdapter() {
 		return null;
 	}
 
@@ -356,44 +391,30 @@ public class Execution_metamodelAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link MetamodelExecution.CreatedBy <em>Created By</em>}'.
+	 * Creates a new adapter for an object of class '{@link MetamodelExecution.Creator <em>Creator</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see MetamodelExecution.CreatedBy
+	 * @see MetamodelExecution.Creator
 	 * @generated
 	 */
-	public Adapter createCreatedByAdapter() {
+	public Adapter createCreatorAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link MetamodelExecution.Step <em>Step</em>}'.
+	 * Creates a new adapter for an object of class '{@link MetamodelExecution.Executor <em>Executor</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see MetamodelExecution.Step
+	 * @see MetamodelExecution.Executor
 	 * @generated
 	 */
-	public Adapter createStepAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link MetamodelExecution.ExecutedBy <em>Executed By</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see MetamodelExecution.ExecutedBy
-	 * @generated
-	 */
-	public Adapter createExecutedByAdapter() {
+	public Adapter createExecutorAdapter() {
 		return null;
 	}
 
@@ -566,16 +587,128 @@ public class Execution_metamodelAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link MetamodelExecution.Execution <em>Execution</em>}'.
+	 * Creates a new adapter for an object of class '{@link MetamodelExecution.ExtendedProtocol <em>Extended Protocol</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see MetamodelExecution.Execution
+	 * @see MetamodelExecution.ExtendedProtocol
 	 * @generated
 	 */
-	public Adapter createExecutionAdapter() {
+	public Adapter createExtendedProtocolAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link MetamodelExecution.ExecutionProtocol <em>Execution Protocol</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see MetamodelExecution.ExecutionProtocol
+	 * @generated
+	 */
+	public Adapter createExecutionProtocolAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link MetamodelExecution.Justify <em>Justify</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see MetamodelExecution.Justify
+	 * @generated
+	 */
+	public Adapter createJustifyAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link MetamodelExecution.Protocol <em>Protocol</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see MetamodelExecution.Protocol
+	 * @generated
+	 */
+	public Adapter createProtocolAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link MetamodelExecution.Responsible <em>Responsible</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see MetamodelExecution.Responsible
+	 * @generated
+	 */
+	public Adapter createResponsibleAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link MetamodelExecution.ExecutedStep <em>Executed Step</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see MetamodelExecution.ExecutedStep
+	 * @generated
+	 */
+	public Adapter createExecutedStepAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link MetamodelExecution.LastProfessional <em>Last Professional</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see MetamodelExecution.LastProfessional
+	 * @generated
+	 */
+	public Adapter createLastProfessionalAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link MetamodelExecution.Data <em>Data</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see MetamodelExecution.Data
+	 * @generated
+	 */
+	public Adapter createDataAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link protocolosv2.Protocol <em>Protocol</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see protocolosv2.Protocol
+	 * @generated
+	 */
+	public Adapter createProtocolosv2_ProtocolAdapter() {
 		return null;
 	}
 

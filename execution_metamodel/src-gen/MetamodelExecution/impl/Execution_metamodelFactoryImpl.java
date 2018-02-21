@@ -74,12 +74,10 @@ public class Execution_metamodelFactoryImpl extends EFactoryImpl implements Exec
 			return createPrevious();
 		case Execution_metamodelPackage.NEXT:
 			return createNext();
-		case Execution_metamodelPackage.CREATED_BY:
-			return createCreatedBy();
-		case Execution_metamodelPackage.STEP:
-			return createStep();
-		case Execution_metamodelPackage.EXECUTED_BY:
-			return createExecutedBy();
+		case Execution_metamodelPackage.CREATOR:
+			return createCreator();
+		case Execution_metamodelPackage.EXECUTOR:
+			return createExecutor();
 		case Execution_metamodelPackage.ANSWER:
 			return createAnswer();
 		case Execution_metamodelPackage.QUESTION:
@@ -104,8 +102,18 @@ public class Execution_metamodelFactoryImpl extends EFactoryImpl implements Exec
 			return createPrescribedPrescriptionItem();
 		case Execution_metamodelPackage.PRESCRIBED_MEDICAMENT:
 			return createPrescribedMedicament();
-		case Execution_metamodelPackage.EXECUTION:
-			return createExecution();
+		case Execution_metamodelPackage.EXTENDED_PROTOCOL:
+			return createExtendedProtocol();
+		case Execution_metamodelPackage.JUSTIFY:
+			return createJustify();
+		case Execution_metamodelPackage.PROTOCOL:
+			return createProtocol();
+		case Execution_metamodelPackage.RESPONSIBLE:
+			return createResponsible();
+		case Execution_metamodelPackage.EXECUTED_STEP:
+			return createExecutedStep();
+		case Execution_metamodelPackage.LAST_PROFESSIONAL:
+			return createLastProfessional();
 		default:
 			throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -206,9 +214,9 @@ public class Execution_metamodelFactoryImpl extends EFactoryImpl implements Exec
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public CreatedBy createCreatedBy() {
-		CreatedByImpl createdBy = new CreatedByImpl();
-		return createdBy;
+	public Creator createCreator() {
+		CreatorImpl creator = new CreatorImpl();
+		return creator;
 	}
 
 	/**
@@ -216,19 +224,9 @@ public class Execution_metamodelFactoryImpl extends EFactoryImpl implements Exec
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Step createStep() {
-		StepImpl step = new StepImpl();
-		return step;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public ExecutedBy createExecutedBy() {
-		ExecutedByImpl executedBy = new ExecutedByImpl();
-		return executedBy;
+	public Executor createExecutor() {
+		ExecutorImpl executor = new ExecutorImpl();
+		return executor;
 	}
 
 	/**
@@ -356,9 +354,59 @@ public class Execution_metamodelFactoryImpl extends EFactoryImpl implements Exec
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Execution createExecution() {
-		ExecutionImpl execution = new ExecutionImpl();
-		return execution;
+	public ExtendedProtocol createExtendedProtocol() {
+		ExtendedProtocolImpl extendedProtocol = new ExtendedProtocolImpl();
+		return extendedProtocol;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Justify createJustify() {
+		JustifyImpl justify = new JustifyImpl();
+		return justify;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Protocol createProtocol() {
+		ProtocolImpl protocol = new ProtocolImpl();
+		return protocol;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Responsible createResponsible() {
+		ResponsibleImpl responsible = new ResponsibleImpl();
+		return responsible;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ExecutedStep createExecutedStep() {
+		ExecutedStepImpl executedStep = new ExecutedStepImpl();
+		return executedStep;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public LastProfessional createLastProfessional() {
+		LastProfessionalImpl lastProfessional = new LastProfessionalImpl();
+		return lastProfessional;
 	}
 
 	/**

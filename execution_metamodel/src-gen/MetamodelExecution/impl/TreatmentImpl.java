@@ -36,12 +36,11 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link MetamodelExecution.impl.TreatmentImpl#getPrescribedprocedure <em>Prescribedprocedure</em>}</li>
  *   <li>{@link MetamodelExecution.impl.TreatmentImpl#getPrescribedinternment <em>Prescribedinternment</em>}</li>
  *   <li>{@link MetamodelExecution.impl.TreatmentImpl#getPrescribedmedication <em>Prescribedmedication</em>}</li>
- *   <li>{@link MetamodelExecution.impl.TreatmentImpl#getIdPrescribedExam <em>Id Prescribed Exam</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class TreatmentImpl extends ElementImpl implements Treatment {
+public class TreatmentImpl extends ExecutionStepImpl implements Treatment {
 	/**
 	 * The cached value of the '{@link #getPrescribedexam() <em>Prescribedexam</em>}' containment reference.
 	 * <!-- begin-user-doc -->
@@ -81,26 +80,6 @@ public class TreatmentImpl extends ElementImpl implements Treatment {
 	 * @ordered
 	 */
 	protected EList<PrescribedMedication> prescribedmedication;
-
-	/**
-	 * The default value of the '{@link #getIdPrescribedExam() <em>Id Prescribed Exam</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getIdPrescribedExam()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final int ID_PRESCRIBED_EXAM_EDEFAULT = 0;
-
-	/**
-	 * The cached value of the '{@link #getIdPrescribedExam() <em>Id Prescribed Exam</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getIdPrescribedExam()
-	 * @generated
-	 * @ordered
-	 */
-	protected int idPrescribedExam = ID_PRESCRIBED_EXAM_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -215,28 +194,6 @@ public class TreatmentImpl extends ElementImpl implements Treatment {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public int getIdPrescribedExam() {
-		return idPrescribedExam;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setIdPrescribedExam(int newIdPrescribedExam) {
-		int oldIdPrescribedExam = idPrescribedExam;
-		idPrescribedExam = newIdPrescribedExam;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET,
-					Execution_metamodelPackage.TREATMENT__ID_PRESCRIBED_EXAM, oldIdPrescribedExam, idPrescribedExam));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -268,8 +225,6 @@ public class TreatmentImpl extends ElementImpl implements Treatment {
 			return getPrescribedinternment();
 		case Execution_metamodelPackage.TREATMENT__PRESCRIBEDMEDICATION:
 			return getPrescribedmedication();
-		case Execution_metamodelPackage.TREATMENT__ID_PRESCRIBED_EXAM:
-			return getIdPrescribedExam();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -298,9 +253,6 @@ public class TreatmentImpl extends ElementImpl implements Treatment {
 			getPrescribedmedication().clear();
 			getPrescribedmedication().addAll((Collection<? extends PrescribedMedication>) newValue);
 			return;
-		case Execution_metamodelPackage.TREATMENT__ID_PRESCRIBED_EXAM:
-			setIdPrescribedExam((Integer) newValue);
-			return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -325,9 +277,6 @@ public class TreatmentImpl extends ElementImpl implements Treatment {
 		case Execution_metamodelPackage.TREATMENT__PRESCRIBEDMEDICATION:
 			getPrescribedmedication().clear();
 			return;
-		case Execution_metamodelPackage.TREATMENT__ID_PRESCRIBED_EXAM:
-			setIdPrescribedExam(ID_PRESCRIBED_EXAM_EDEFAULT);
-			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -348,27 +297,8 @@ public class TreatmentImpl extends ElementImpl implements Treatment {
 			return prescribedinternment != null && !prescribedinternment.isEmpty();
 		case Execution_metamodelPackage.TREATMENT__PRESCRIBEDMEDICATION:
 			return prescribedmedication != null && !prescribedmedication.isEmpty();
-		case Execution_metamodelPackage.TREATMENT__ID_PRESCRIBED_EXAM:
-			return idPrescribedExam != ID_PRESCRIBED_EXAM_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String toString() {
-		if (eIsProxy())
-			return super.toString();
-
-		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (idPrescribedExam: ");
-		result.append(idPrescribedExam);
-		result.append(')');
-		return result.toString();
 	}
 
 } //TreatmentImpl

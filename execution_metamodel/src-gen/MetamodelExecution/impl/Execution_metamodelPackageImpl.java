@@ -5,17 +5,22 @@ package MetamodelExecution.impl;
 import MetamodelExecution.Answer;
 import MetamodelExecution.AuxiliaryConduct;
 import MetamodelExecution.Complement;
-import MetamodelExecution.CreatedBy;
+import MetamodelExecution.Creator;
+import MetamodelExecution.Data;
 import MetamodelExecution.Discharge;
-import MetamodelExecution.Element;
 import MetamodelExecution.Exam;
 import MetamodelExecution.Examination;
 import MetamodelExecution.ExaminationPrescription;
-import MetamodelExecution.ExecutedBy;
-import MetamodelExecution.Execution;
+import MetamodelExecution.ExecutedStep;
+import MetamodelExecution.ExecutionProtocol;
+import MetamodelExecution.ExecutionStep;
 import MetamodelExecution.Execution_metamodelFactory;
 import MetamodelExecution.Execution_metamodelPackage;
+import MetamodelExecution.Executor;
+import MetamodelExecution.ExtendedProtocol;
 import MetamodelExecution.Information;
+import MetamodelExecution.Justify;
+import MetamodelExecution.LastProfessional;
 import MetamodelExecution.Next;
 import MetamodelExecution.PrescribedExamination;
 import MetamodelExecution.PrescribedInternment;
@@ -25,9 +30,10 @@ import MetamodelExecution.PrescribedPrescriptionItem;
 import MetamodelExecution.PrescribedProcedure;
 import MetamodelExecution.Prescription;
 import MetamodelExecution.Previous;
+import MetamodelExecution.Protocol;
 import MetamodelExecution.Question;
 import MetamodelExecution.Referral;
-import MetamodelExecution.Step;
+import MetamodelExecution.Responsible;
 import MetamodelExecution.Treatment;
 import MetamodelExecution.Variable;
 
@@ -37,6 +43,10 @@ import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 
 import org.eclipse.emf.ecore.impl.EPackageImpl;
+
+import protocolosv2.Protocolosv2Package;
+
+import protocolosv2.impl.Protocolosv2PackageImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -50,7 +60,7 @@ public class Execution_metamodelPackageImpl extends EPackageImpl implements Exec
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass elementEClass = null;
+	private EClass executionStepEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -120,21 +130,14 @@ public class Execution_metamodelPackageImpl extends EPackageImpl implements Exec
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass createdByEClass = null;
+	private EClass creatorEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass stepEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass executedByEClass = null;
+	private EClass executorEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -225,7 +228,56 @@ public class Execution_metamodelPackageImpl extends EPackageImpl implements Exec
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass executionEClass = null;
+	private EClass extendedProtocolEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass executionProtocolEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass justifyEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass protocolEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass responsibleEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass executedStepEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass lastProfessionalEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass dataEClass = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -277,11 +329,19 @@ public class Execution_metamodelPackageImpl extends EPackageImpl implements Exec
 
 		isInited = true;
 
+		// Obtain or create and register interdependencies
+		Protocolosv2PackageImpl theProtocolosv2Package = (Protocolosv2PackageImpl) (EPackage.Registry.INSTANCE
+				.getEPackage(Protocolosv2Package.eNS_URI) instanceof Protocolosv2PackageImpl
+						? EPackage.Registry.INSTANCE.getEPackage(Protocolosv2Package.eNS_URI)
+						: Protocolosv2Package.eINSTANCE);
+
 		// Create package meta-data objects
 		theExecution_metamodelPackage.createPackageContents();
+		theProtocolosv2Package.createPackageContents();
 
 		// Initialize created meta-data
 		theExecution_metamodelPackage.initializePackageContents();
+		theProtocolosv2Package.initializePackageContents();
 
 		// Mark meta-data to indicate it can't be changed
 		theExecution_metamodelPackage.freeze();
@@ -296,8 +356,8 @@ public class Execution_metamodelPackageImpl extends EPackageImpl implements Exec
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getElement() {
-		return elementEClass;
+	public EClass getExecutionStep() {
+		return executionStepEClass;
 	}
 
 	/**
@@ -305,8 +365,8 @@ public class Execution_metamodelPackageImpl extends EPackageImpl implements Exec
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getElement_Id() {
-		return (EAttribute) elementEClass.getEStructuralFeatures().get(0);
+	public EAttribute getExecutionStep_Id() {
+		return (EAttribute) executionStepEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -314,8 +374,8 @@ public class Execution_metamodelPackageImpl extends EPackageImpl implements Exec
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getElement_Type() {
-		return (EAttribute) elementEClass.getEStructuralFeatures().get(1);
+	public EAttribute getExecutionStep_Type() {
+		return (EAttribute) executionStepEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -323,8 +383,8 @@ public class Execution_metamodelPackageImpl extends EPackageImpl implements Exec
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getElement_TypeVerbose() {
-		return (EAttribute) elementEClass.getEStructuralFeatures().get(2);
+	public EAttribute getExecutionStep_TypeVerbose() {
+		return (EAttribute) executionStepEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -332,8 +392,8 @@ public class Execution_metamodelPackageImpl extends EPackageImpl implements Exec
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getElement_Url() {
-		return (EAttribute) elementEClass.getEStructuralFeatures().get(3);
+	public EAttribute getExecutionStep_Url() {
+		return (EAttribute) executionStepEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -341,8 +401,8 @@ public class Execution_metamodelPackageImpl extends EPackageImpl implements Exec
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getElement_IsCurrent() {
-		return (EAttribute) elementEClass.getEStructuralFeatures().get(4);
+	public EAttribute getExecutionStep_IsCurrent() {
+		return (EAttribute) executionStepEClass.getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -350,8 +410,8 @@ public class Execution_metamodelPackageImpl extends EPackageImpl implements Exec
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getElement_Reworked() {
-		return (EAttribute) elementEClass.getEStructuralFeatures().get(5);
+	public EAttribute getExecutionStep_Reworked() {
+		return (EAttribute) executionStepEClass.getEStructuralFeatures().get(5);
 	}
 
 	/**
@@ -359,8 +419,8 @@ public class Execution_metamodelPackageImpl extends EPackageImpl implements Exec
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getElement_Executed() {
-		return (EAttribute) elementEClass.getEStructuralFeatures().get(6);
+	public EAttribute getExecutionStep_Executed() {
+		return (EAttribute) executionStepEClass.getEStructuralFeatures().get(6);
 	}
 
 	/**
@@ -368,8 +428,8 @@ public class Execution_metamodelPackageImpl extends EPackageImpl implements Exec
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getElement_Previous() {
-		return (EReference) elementEClass.getEStructuralFeatures().get(7);
+	public EReference getExecutionStep_Previous() {
+		return (EReference) executionStepEClass.getEStructuralFeatures().get(7);
 	}
 
 	/**
@@ -377,8 +437,8 @@ public class Execution_metamodelPackageImpl extends EPackageImpl implements Exec
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getElement_Next() {
-		return (EReference) elementEClass.getEStructuralFeatures().get(8);
+	public EReference getExecutionStep_Next() {
+		return (EReference) executionStepEClass.getEStructuralFeatures().get(8);
 	}
 
 	/**
@@ -386,8 +446,8 @@ public class Execution_metamodelPackageImpl extends EPackageImpl implements Exec
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getElement_CreationDate() {
-		return (EAttribute) elementEClass.getEStructuralFeatures().get(9);
+	public EAttribute getExecutionStep_CreationDate() {
+		return (EAttribute) executionStepEClass.getEStructuralFeatures().get(9);
 	}
 
 	/**
@@ -395,8 +455,8 @@ public class Execution_metamodelPackageImpl extends EPackageImpl implements Exec
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getElement_ChangeDate() {
-		return (EAttribute) elementEClass.getEStructuralFeatures().get(10);
+	public EAttribute getExecutionStep_ChangeDate() {
+		return (EAttribute) executionStepEClass.getEStructuralFeatures().get(10);
 	}
 
 	/**
@@ -404,8 +464,8 @@ public class Execution_metamodelPackageImpl extends EPackageImpl implements Exec
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getElement_ExecutionDate() {
-		return (EAttribute) elementEClass.getEStructuralFeatures().get(11);
+	public EAttribute getExecutionStep_ExecutionDate() {
+		return (EAttribute) executionStepEClass.getEStructuralFeatures().get(11);
 	}
 
 	/**
@@ -413,8 +473,8 @@ public class Execution_metamodelPackageImpl extends EPackageImpl implements Exec
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getElement_Justify() {
-		return (EAttribute) elementEClass.getEStructuralFeatures().get(12);
+	public EReference getExecutionStep_Creator() {
+		return (EReference) executionStepEClass.getEStructuralFeatures().get(12);
 	}
 
 	/**
@@ -422,8 +482,8 @@ public class Execution_metamodelPackageImpl extends EPackageImpl implements Exec
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getElement_CreatedById() {
-		return (EAttribute) elementEClass.getEStructuralFeatures().get(13);
+	public EReference getExecutionStep_Executor() {
+		return (EReference) executionStepEClass.getEStructuralFeatures().get(13);
 	}
 
 	/**
@@ -431,8 +491,8 @@ public class Execution_metamodelPackageImpl extends EPackageImpl implements Exec
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getElement_ExecutedById() {
-		return (EAttribute) elementEClass.getEStructuralFeatures().get(14);
+	public EAttribute getExecutionStep_IdStep() {
+		return (EAttribute) executionStepEClass.getEStructuralFeatures().get(14);
 	}
 
 	/**
@@ -440,8 +500,8 @@ public class Execution_metamodelPackageImpl extends EPackageImpl implements Exec
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getElement_Createdby() {
-		return (EReference) elementEClass.getEStructuralFeatures().get(15);
+	public EAttribute getExecutionStep_IdProtocol() {
+		return (EAttribute) executionStepEClass.getEStructuralFeatures().get(15);
 	}
 
 	/**
@@ -449,8 +509,8 @@ public class Execution_metamodelPackageImpl extends EPackageImpl implements Exec
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getElement_Executedby() {
-		return (EReference) elementEClass.getEStructuralFeatures().get(16);
+	public EAttribute getExecutionStep_IdExecutedProtocol() {
+		return (EAttribute) executionStepEClass.getEStructuralFeatures().get(16);
 	}
 
 	/**
@@ -458,8 +518,8 @@ public class Execution_metamodelPackageImpl extends EPackageImpl implements Exec
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getElement_Step() {
-		return (EReference) elementEClass.getEStructuralFeatures().get(17);
+	public EReference getExecutionStep_Justify() {
+		return (EReference) executionStepEClass.getEStructuralFeatures().get(17);
 	}
 
 	/**
@@ -467,26 +527,8 @@ public class Execution_metamodelPackageImpl extends EPackageImpl implements Exec
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getElement_IdStep() {
-		return (EAttribute) elementEClass.getEStructuralFeatures().get(18);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getElement_IdProtocol() {
-		return (EAttribute) elementEClass.getEStructuralFeatures().get(19);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getElement_IdExecutedProtocol() {
-		return (EAttribute) elementEClass.getEStructuralFeatures().get(20);
+	public EReference getExecutionStep_Step() {
+		return (EReference) executionStepEClass.getEStructuralFeatures().get(18);
 	}
 
 	/**
@@ -638,15 +680,6 @@ public class Execution_metamodelPackageImpl extends EPackageImpl implements Exec
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getTreatment_IdPrescribedExam() {
-		return (EAttribute) treatmentEClass.getEStructuralFeatures().get(4);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getExamination() {
 		return examinationEClass;
 	}
@@ -755,7 +788,7 @@ public class Execution_metamodelPackageImpl extends EPackageImpl implements Exec
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getPrevious_Absolute_url() {
+	public EAttribute getPrevious_UrlAbsolute() {
 		return (EAttribute) previousEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -773,7 +806,7 @@ public class Execution_metamodelPackageImpl extends EPackageImpl implements Exec
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getNext_Absolute_url() {
+	public EAttribute getNext_UrlAbsolute() {
 		return (EAttribute) nextEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -791,8 +824,8 @@ public class Execution_metamodelPackageImpl extends EPackageImpl implements Exec
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getCreatedBy() {
-		return createdByEClass;
+	public EClass getCreator() {
+		return creatorEClass;
 	}
 
 	/**
@@ -800,260 +833,8 @@ public class Execution_metamodelPackageImpl extends EPackageImpl implements Exec
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getCreatedBy_Id() {
-		return (EAttribute) createdByEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getCreatedBy_Url() {
-		return (EAttribute) createdByEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getCreatedBy_Code() {
-		return (EAttribute) createdByEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getCreatedBy_Email() {
-		return (EAttribute) createdByEClass.getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getCreatedBy_Login() {
-		return (EAttribute) createdByEClass.getEStructuralFeatures().get(4);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getCreatedBy_Name() {
-		return (EAttribute) createdByEClass.getEStructuralFeatures().get(5);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getCreatedBy_Council() {
-		return (EAttribute) createdByEClass.getEStructuralFeatures().get(6);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getCreatedBy_TypeCouncil() {
-		return (EAttribute) createdByEClass.getEStructuralFeatures().get(7);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getCreatedBy_State() {
-		return (EAttribute) createdByEClass.getEStructuralFeatures().get(8);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getStep() {
-		return stepEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getStep_Url() {
-		return (EAttribute) stepEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getStep_TypeVerbose() {
-		return (EAttribute) stepEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getStep_Id() {
-		return (EAttribute) stepEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getStep_Type() {
-		return (EAttribute) stepEClass.getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getStep_Name() {
-		return (EAttribute) stepEClass.getEStructuralFeatures().get(4);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getStep_Description() {
-		return (EAttribute) stepEClass.getEStructuralFeatures().get(5);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getStep_IsInitial() {
-		return (EAttribute) stepEClass.getEStructuralFeatures().get(6);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getStep_IsTerminal() {
-		return (EAttribute) stepEClass.getEStructuralFeatures().get(7);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getStep_Obligatory() {
-		return (EAttribute) stepEClass.getEStructuralFeatures().get(8);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getExecutedBy() {
-		return executedByEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getExecutedBy_Id() {
-		return (EAttribute) executedByEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getExecutedBy_Url() {
-		return (EAttribute) executedByEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getExecutedBy_Code() {
-		return (EAttribute) executedByEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getExecutedBy_Email() {
-		return (EAttribute) executedByEClass.getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getExecutedBy_Login() {
-		return (EAttribute) executedByEClass.getEStructuralFeatures().get(4);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getExecutedBy_Name() {
-		return (EAttribute) executedByEClass.getEStructuralFeatures().get(5);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getExecutedBy_Council() {
-		return (EAttribute) executedByEClass.getEStructuralFeatures().get(6);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getExecutedBy_TypeCouncil() {
-		return (EAttribute) executedByEClass.getEStructuralFeatures().get(7);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getExecutedBy_State() {
-		return (EAttribute) executedByEClass.getEStructuralFeatures().get(8);
+	public EClass getExecutor() {
+		return executorEClass;
 	}
 
 	/**
@@ -1547,8 +1328,8 @@ public class Execution_metamodelPackageImpl extends EPackageImpl implements Exec
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getExecution() {
-		return executionEClass;
+	public EClass getExtendedProtocol() {
+		return extendedProtocolEClass;
 	}
 
 	/**
@@ -1556,8 +1337,638 @@ public class Execution_metamodelPackageImpl extends EPackageImpl implements Exec
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getExecution_Element() {
-		return (EReference) executionEClass.getEStructuralFeatures().get(0);
+	public EReference getExtendedProtocol_Executionprotocol() {
+		return (EReference) extendedProtocolEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getExtendedProtocol_Executionstep() {
+		return (EReference) extendedProtocolEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getExecutionProtocol() {
+		return executionProtocolEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getExecutionProtocol_Id() {
+		return (EAttribute) executionProtocolEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getExecutionProtocol_Url() {
+		return (EAttribute) executionProtocolEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getExecutionProtocol_Creation() {
+		return (EAttribute) executionProtocolEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getExecutionProtocol_Conclusion() {
+		return (EAttribute) executionProtocolEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getExecutionProtocol_Completed() {
+		return (EAttribute) executionProtocolEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getExecutionProtocol_Aborted() {
+		return (EAttribute) executionProtocolEClass.getEStructuralFeatures().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getExecutionProtocol_Justify() {
+		return (EReference) executionProtocolEClass.getEStructuralFeatures().get(6);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getExecutionProtocol_LastExecutedStepDate() {
+		return (EAttribute) executionProtocolEClass.getEStructuralFeatures().get(7);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getExecutionProtocol_IdProtocol() {
+		return (EAttribute) executionProtocolEClass.getEStructuralFeatures().get(8);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getExecutionProtocol_Protocol() {
+		return (EReference) executionProtocolEClass.getEStructuralFeatures().get(9);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getExecutionProtocol_IdResponsible() {
+		return (EAttribute) executionProtocolEClass.getEStructuralFeatures().get(10);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getExecutionProtocol_IdLastProfessional() {
+		return (EAttribute) executionProtocolEClass.getEStructuralFeatures().get(11);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getExecutionProtocol_Responsible() {
+		return (EReference) executionProtocolEClass.getEStructuralFeatures().get(12);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getExecutionProtocol_Lastprofessional() {
+		return (EReference) executionProtocolEClass.getEStructuralFeatures().get(13);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getExecutionProtocol_Executedstep() {
+		return (EReference) executionProtocolEClass.getEStructuralFeatures().get(14);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getJustify() {
+		return justifyEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getJustify_Id() {
+		return (EAttribute) justifyEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getJustify_Reason() {
+		return (EAttribute) justifyEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getJustify_ReasonDisplay() {
+		return (EAttribute) justifyEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getJustify_Description() {
+		return (EAttribute) justifyEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getJustify_JustifyById() {
+		return (EAttribute) justifyEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getJustify_JustifyBy() {
+		return (EAttribute) justifyEClass.getEStructuralFeatures().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getProtocol() {
+		return protocolEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getProtocol_Id() {
+		return (EAttribute) protocolEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getProtocol_Url() {
+		return (EAttribute) protocolEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getProtocol_Code() {
+		return (EAttribute) protocolEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getProtocol_Name() {
+		return (EAttribute) protocolEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getProtocol_IdRepository() {
+		return (EAttribute) protocolEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getProtocol_Version() {
+		return (EAttribute) protocolEClass.getEStructuralFeatures().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getProtocol_Completed() {
+		return (EAttribute) protocolEClass.getEStructuralFeatures().get(6);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getResponsible() {
+		return responsibleEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getResponsible_Data() {
+		return (EReference) responsibleEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getExecutedStep() {
+		return executedStepEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getExecutedStep_Id() {
+		return (EAttribute) executedStepEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getExecutedStep_Type() {
+		return (EAttribute) executedStepEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getExecutedStep_TypeVerbose() {
+		return (EAttribute) executedStepEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getExecutedStep_Url() {
+		return (EAttribute) executedStepEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getExecutedStep_Executed() {
+		return (EAttribute) executedStepEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getExecutedStep_IsCurrent() {
+		return (EAttribute) executedStepEClass.getEStructuralFeatures().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getExecutedStep_Reworked() {
+		return (EAttribute) executedStepEClass.getEStructuralFeatures().get(6);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getExecutedStep_CreationDate() {
+		return (EAttribute) executedStepEClass.getEStructuralFeatures().get(7);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getExecutedStep_ChangeDate() {
+		return (EAttribute) executedStepEClass.getEStructuralFeatures().get(8);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getExecutedStep_ExecutionDate() {
+		return (EAttribute) executedStepEClass.getEStructuralFeatures().get(9);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getExecutedStep_IdExecutedProtocol() {
+		return (EAttribute) executedStepEClass.getEStructuralFeatures().get(10);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getExecutedStep_IdStep() {
+		return (EAttribute) executedStepEClass.getEStructuralFeatures().get(11);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getExecutedStep_IdProtocol() {
+		return (EAttribute) executedStepEClass.getEStructuralFeatures().get(12);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getExecutedStep_CreatedById() {
+		return (EAttribute) executedStepEClass.getEStructuralFeatures().get(13);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getExecutedStep_CreatedBy() {
+		return (EAttribute) executedStepEClass.getEStructuralFeatures().get(14);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getExecutedStep_ExecutedById() {
+		return (EAttribute) executedStepEClass.getEStructuralFeatures().get(15);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getExecutedStep_ExecutedBy() {
+		return (EAttribute) executedStepEClass.getEStructuralFeatures().get(16);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getExecutedStep_Step() {
+		return (EAttribute) executedStepEClass.getEStructuralFeatures().get(17);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getExecutedStep_Previous() {
+		return (EReference) executedStepEClass.getEStructuralFeatures().get(18);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getExecutedStep_Next() {
+		return (EReference) executedStepEClass.getEStructuralFeatures().get(19);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getExecutedStep_Justify() {
+		return (EReference) executedStepEClass.getEStructuralFeatures().get(20);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getLastProfessional() {
+		return lastProfessionalEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getLastProfessional_Data() {
+		return (EReference) lastProfessionalEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getData() {
+		return dataEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getData_Id() {
+		return (EAttribute) dataEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getData_Url() {
+		return (EAttribute) dataEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getData_Code() {
+		return (EAttribute) dataEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getData_Email() {
+		return (EAttribute) dataEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getData_Name() {
+		return (EAttribute) dataEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getData_TypeCouncil() {
+		return (EAttribute) dataEClass.getEStructuralFeatures().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getData_Login() {
+		return (EAttribute) dataEClass.getEStructuralFeatures().get(6);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getData_NumberCouncil() {
+		return (EAttribute) dataEClass.getEStructuralFeatures().get(7);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getData_State() {
+		return (EAttribute) dataEClass.getEStructuralFeatures().get(8);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getData_Executor() {
+		return (EReference) dataEClass.getEStructuralFeatures().get(9);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getData_Creator() {
+		return (EReference) dataEClass.getEStructuralFeatures().get(10);
 	}
 
 	/**
@@ -1589,28 +2000,26 @@ public class Execution_metamodelPackageImpl extends EPackageImpl implements Exec
 		isCreated = true;
 
 		// Create classes and their features
-		elementEClass = createEClass(ELEMENT);
-		createEAttribute(elementEClass, ELEMENT__ID);
-		createEAttribute(elementEClass, ELEMENT__TYPE);
-		createEAttribute(elementEClass, ELEMENT__TYPE_VERBOSE);
-		createEAttribute(elementEClass, ELEMENT__URL);
-		createEAttribute(elementEClass, ELEMENT__IS_CURRENT);
-		createEAttribute(elementEClass, ELEMENT__REWORKED);
-		createEAttribute(elementEClass, ELEMENT__EXECUTED);
-		createEReference(elementEClass, ELEMENT__PREVIOUS);
-		createEReference(elementEClass, ELEMENT__NEXT);
-		createEAttribute(elementEClass, ELEMENT__CREATION_DATE);
-		createEAttribute(elementEClass, ELEMENT__CHANGE_DATE);
-		createEAttribute(elementEClass, ELEMENT__EXECUTION_DATE);
-		createEAttribute(elementEClass, ELEMENT__JUSTIFY);
-		createEAttribute(elementEClass, ELEMENT__CREATED_BY_ID);
-		createEAttribute(elementEClass, ELEMENT__EXECUTED_BY_ID);
-		createEReference(elementEClass, ELEMENT__CREATEDBY);
-		createEReference(elementEClass, ELEMENT__EXECUTEDBY);
-		createEReference(elementEClass, ELEMENT__STEP);
-		createEAttribute(elementEClass, ELEMENT__ID_STEP);
-		createEAttribute(elementEClass, ELEMENT__ID_PROTOCOL);
-		createEAttribute(elementEClass, ELEMENT__ID_EXECUTED_PROTOCOL);
+		executionStepEClass = createEClass(EXECUTION_STEP);
+		createEAttribute(executionStepEClass, EXECUTION_STEP__ID);
+		createEAttribute(executionStepEClass, EXECUTION_STEP__TYPE);
+		createEAttribute(executionStepEClass, EXECUTION_STEP__TYPE_VERBOSE);
+		createEAttribute(executionStepEClass, EXECUTION_STEP__URL);
+		createEAttribute(executionStepEClass, EXECUTION_STEP__IS_CURRENT);
+		createEAttribute(executionStepEClass, EXECUTION_STEP__REWORKED);
+		createEAttribute(executionStepEClass, EXECUTION_STEP__EXECUTED);
+		createEReference(executionStepEClass, EXECUTION_STEP__PREVIOUS);
+		createEReference(executionStepEClass, EXECUTION_STEP__NEXT);
+		createEAttribute(executionStepEClass, EXECUTION_STEP__CREATION_DATE);
+		createEAttribute(executionStepEClass, EXECUTION_STEP__CHANGE_DATE);
+		createEAttribute(executionStepEClass, EXECUTION_STEP__EXECUTION_DATE);
+		createEReference(executionStepEClass, EXECUTION_STEP__CREATOR);
+		createEReference(executionStepEClass, EXECUTION_STEP__EXECUTOR);
+		createEAttribute(executionStepEClass, EXECUTION_STEP__ID_STEP);
+		createEAttribute(executionStepEClass, EXECUTION_STEP__ID_PROTOCOL);
+		createEAttribute(executionStepEClass, EXECUTION_STEP__ID_EXECUTED_PROTOCOL);
+		createEReference(executionStepEClass, EXECUTION_STEP__JUSTIFY);
+		createEReference(executionStepEClass, EXECUTION_STEP__STEP);
 
 		auxiliaryConductEClass = createEClass(AUXILIARY_CONDUCT);
 		createEReference(auxiliaryConductEClass, AUXILIARY_CONDUCT__ANSWERS);
@@ -1633,7 +2042,6 @@ public class Execution_metamodelPackageImpl extends EPackageImpl implements Exec
 		createEReference(treatmentEClass, TREATMENT__PRESCRIBEDPROCEDURE);
 		createEReference(treatmentEClass, TREATMENT__PRESCRIBEDINTERNMENT);
 		createEReference(treatmentEClass, TREATMENT__PRESCRIBEDMEDICATION);
-		createEAttribute(treatmentEClass, TREATMENT__ID_PRESCRIBED_EXAM);
 
 		examinationEClass = createEClass(EXAMINATION);
 		createEAttribute(examinationEClass, EXAMINATION__ID);
@@ -1648,44 +2056,15 @@ public class Execution_metamodelPackageImpl extends EPackageImpl implements Exec
 
 		previousEClass = createEClass(PREVIOUS);
 		createEAttribute(previousEClass, PREVIOUS__URL);
-		createEAttribute(previousEClass, PREVIOUS__ABSOLUTE_URL);
+		createEAttribute(previousEClass, PREVIOUS__URL_ABSOLUTE);
 
 		nextEClass = createEClass(NEXT);
-		createEAttribute(nextEClass, NEXT__ABSOLUTE_URL);
+		createEAttribute(nextEClass, NEXT__URL_ABSOLUTE);
 		createEAttribute(nextEClass, NEXT__URL);
 
-		createdByEClass = createEClass(CREATED_BY);
-		createEAttribute(createdByEClass, CREATED_BY__ID);
-		createEAttribute(createdByEClass, CREATED_BY__URL);
-		createEAttribute(createdByEClass, CREATED_BY__CODE);
-		createEAttribute(createdByEClass, CREATED_BY__EMAIL);
-		createEAttribute(createdByEClass, CREATED_BY__LOGIN);
-		createEAttribute(createdByEClass, CREATED_BY__NAME);
-		createEAttribute(createdByEClass, CREATED_BY__COUNCIL);
-		createEAttribute(createdByEClass, CREATED_BY__TYPE_COUNCIL);
-		createEAttribute(createdByEClass, CREATED_BY__STATE);
+		creatorEClass = createEClass(CREATOR);
 
-		stepEClass = createEClass(STEP);
-		createEAttribute(stepEClass, STEP__URL);
-		createEAttribute(stepEClass, STEP__TYPE_VERBOSE);
-		createEAttribute(stepEClass, STEP__ID);
-		createEAttribute(stepEClass, STEP__TYPE);
-		createEAttribute(stepEClass, STEP__NAME);
-		createEAttribute(stepEClass, STEP__DESCRIPTION);
-		createEAttribute(stepEClass, STEP__IS_INITIAL);
-		createEAttribute(stepEClass, STEP__IS_TERMINAL);
-		createEAttribute(stepEClass, STEP__OBLIGATORY);
-
-		executedByEClass = createEClass(EXECUTED_BY);
-		createEAttribute(executedByEClass, EXECUTED_BY__ID);
-		createEAttribute(executedByEClass, EXECUTED_BY__URL);
-		createEAttribute(executedByEClass, EXECUTED_BY__CODE);
-		createEAttribute(executedByEClass, EXECUTED_BY__EMAIL);
-		createEAttribute(executedByEClass, EXECUTED_BY__LOGIN);
-		createEAttribute(executedByEClass, EXECUTED_BY__NAME);
-		createEAttribute(executedByEClass, EXECUTED_BY__COUNCIL);
-		createEAttribute(executedByEClass, EXECUTED_BY__TYPE_COUNCIL);
-		createEAttribute(executedByEClass, EXECUTED_BY__STATE);
+		executorEClass = createEClass(EXECUTOR);
 
 		answerEClass = createEClass(ANSWER);
 		createEAttribute(answerEClass, ANSWER__ID);
@@ -1753,8 +2132,85 @@ public class Execution_metamodelPackageImpl extends EPackageImpl implements Exec
 
 		prescribedMedicamentEClass = createEClass(PRESCRIBED_MEDICAMENT);
 
-		executionEClass = createEClass(EXECUTION);
-		createEReference(executionEClass, EXECUTION__ELEMENT);
+		extendedProtocolEClass = createEClass(EXTENDED_PROTOCOL);
+		createEReference(extendedProtocolEClass, EXTENDED_PROTOCOL__EXECUTIONPROTOCOL);
+		createEReference(extendedProtocolEClass, EXTENDED_PROTOCOL__EXECUTIONSTEP);
+
+		executionProtocolEClass = createEClass(EXECUTION_PROTOCOL);
+		createEAttribute(executionProtocolEClass, EXECUTION_PROTOCOL__ID);
+		createEAttribute(executionProtocolEClass, EXECUTION_PROTOCOL__URL);
+		createEAttribute(executionProtocolEClass, EXECUTION_PROTOCOL__CREATION);
+		createEAttribute(executionProtocolEClass, EXECUTION_PROTOCOL__CONCLUSION);
+		createEAttribute(executionProtocolEClass, EXECUTION_PROTOCOL__COMPLETED);
+		createEAttribute(executionProtocolEClass, EXECUTION_PROTOCOL__ABORTED);
+		createEReference(executionProtocolEClass, EXECUTION_PROTOCOL__JUSTIFY);
+		createEAttribute(executionProtocolEClass, EXECUTION_PROTOCOL__LAST_EXECUTED_STEP_DATE);
+		createEAttribute(executionProtocolEClass, EXECUTION_PROTOCOL__ID_PROTOCOL);
+		createEReference(executionProtocolEClass, EXECUTION_PROTOCOL__PROTOCOL);
+		createEAttribute(executionProtocolEClass, EXECUTION_PROTOCOL__ID_RESPONSIBLE);
+		createEAttribute(executionProtocolEClass, EXECUTION_PROTOCOL__ID_LAST_PROFESSIONAL);
+		createEReference(executionProtocolEClass, EXECUTION_PROTOCOL__RESPONSIBLE);
+		createEReference(executionProtocolEClass, EXECUTION_PROTOCOL__LASTPROFESSIONAL);
+		createEReference(executionProtocolEClass, EXECUTION_PROTOCOL__EXECUTEDSTEP);
+
+		justifyEClass = createEClass(JUSTIFY);
+		createEAttribute(justifyEClass, JUSTIFY__ID);
+		createEAttribute(justifyEClass, JUSTIFY__REASON);
+		createEAttribute(justifyEClass, JUSTIFY__REASON_DISPLAY);
+		createEAttribute(justifyEClass, JUSTIFY__DESCRIPTION);
+		createEAttribute(justifyEClass, JUSTIFY__JUSTIFY_BY_ID);
+		createEAttribute(justifyEClass, JUSTIFY__JUSTIFY_BY);
+
+		protocolEClass = createEClass(PROTOCOL);
+		createEAttribute(protocolEClass, PROTOCOL__ID);
+		createEAttribute(protocolEClass, PROTOCOL__URL);
+		createEAttribute(protocolEClass, PROTOCOL__CODE);
+		createEAttribute(protocolEClass, PROTOCOL__NAME);
+		createEAttribute(protocolEClass, PROTOCOL__ID_REPOSITORY);
+		createEAttribute(protocolEClass, PROTOCOL__VERSION);
+		createEAttribute(protocolEClass, PROTOCOL__COMPLETED);
+
+		responsibleEClass = createEClass(RESPONSIBLE);
+		createEReference(responsibleEClass, RESPONSIBLE__DATA);
+
+		executedStepEClass = createEClass(EXECUTED_STEP);
+		createEAttribute(executedStepEClass, EXECUTED_STEP__ID);
+		createEAttribute(executedStepEClass, EXECUTED_STEP__TYPE);
+		createEAttribute(executedStepEClass, EXECUTED_STEP__TYPE_VERBOSE);
+		createEAttribute(executedStepEClass, EXECUTED_STEP__URL);
+		createEAttribute(executedStepEClass, EXECUTED_STEP__EXECUTED);
+		createEAttribute(executedStepEClass, EXECUTED_STEP__IS_CURRENT);
+		createEAttribute(executedStepEClass, EXECUTED_STEP__REWORKED);
+		createEAttribute(executedStepEClass, EXECUTED_STEP__CREATION_DATE);
+		createEAttribute(executedStepEClass, EXECUTED_STEP__CHANGE_DATE);
+		createEAttribute(executedStepEClass, EXECUTED_STEP__EXECUTION_DATE);
+		createEAttribute(executedStepEClass, EXECUTED_STEP__ID_EXECUTED_PROTOCOL);
+		createEAttribute(executedStepEClass, EXECUTED_STEP__ID_STEP);
+		createEAttribute(executedStepEClass, EXECUTED_STEP__ID_PROTOCOL);
+		createEAttribute(executedStepEClass, EXECUTED_STEP__CREATED_BY_ID);
+		createEAttribute(executedStepEClass, EXECUTED_STEP__CREATED_BY);
+		createEAttribute(executedStepEClass, EXECUTED_STEP__EXECUTED_BY_ID);
+		createEAttribute(executedStepEClass, EXECUTED_STEP__EXECUTED_BY);
+		createEAttribute(executedStepEClass, EXECUTED_STEP__STEP);
+		createEReference(executedStepEClass, EXECUTED_STEP__PREVIOUS);
+		createEReference(executedStepEClass, EXECUTED_STEP__NEXT);
+		createEReference(executedStepEClass, EXECUTED_STEP__JUSTIFY);
+
+		lastProfessionalEClass = createEClass(LAST_PROFESSIONAL);
+		createEReference(lastProfessionalEClass, LAST_PROFESSIONAL__DATA);
+
+		dataEClass = createEClass(DATA);
+		createEAttribute(dataEClass, DATA__ID);
+		createEAttribute(dataEClass, DATA__URL);
+		createEAttribute(dataEClass, DATA__CODE);
+		createEAttribute(dataEClass, DATA__EMAIL);
+		createEAttribute(dataEClass, DATA__NAME);
+		createEAttribute(dataEClass, DATA__TYPE_COUNCIL);
+		createEAttribute(dataEClass, DATA__LOGIN);
+		createEAttribute(dataEClass, DATA__NUMBER_COUNCIL);
+		createEAttribute(dataEClass, DATA__STATE);
+		createEReference(dataEClass, DATA__EXECUTOR);
+		createEReference(dataEClass, DATA__CREATOR);
 	}
 
 	/**
@@ -1781,68 +2237,79 @@ public class Execution_metamodelPackageImpl extends EPackageImpl implements Exec
 		setNsPrefix(eNS_PREFIX);
 		setNsURI(eNS_URI);
 
+		// Obtain other dependent packages
+		Protocolosv2Package theProtocolosv2Package = (Protocolosv2Package) EPackage.Registry.INSTANCE
+				.getEPackage(Protocolosv2Package.eNS_URI);
+
 		// Create type parameters
 
 		// Set bounds for type parameters
 
 		// Add supertypes to classes
-		auxiliaryConductEClass.getESuperTypes().add(this.getElement());
-		informationEClass.getESuperTypes().add(this.getElement());
-		dischargeEClass.getESuperTypes().add(this.getElement());
-		referralEClass.getESuperTypes().add(this.getElement());
-		prescriptionEClass.getESuperTypes().add(this.getElement());
-		treatmentEClass.getESuperTypes().add(this.getElement());
+		auxiliaryConductEClass.getESuperTypes().add(this.getExecutionStep());
+		informationEClass.getESuperTypes().add(this.getExecutionStep());
+		dischargeEClass.getESuperTypes().add(this.getExecutionStep());
+		referralEClass.getESuperTypes().add(this.getExecutionStep());
+		prescriptionEClass.getESuperTypes().add(this.getExecutionStep());
+		treatmentEClass.getESuperTypes().add(this.getExecutionStep());
+		extendedProtocolEClass.getESuperTypes().add(theProtocolosv2Package.getProtocol());
 
 		// Initialize classes, features, and operations; add parameters
-		initEClass(elementEClass, Element.class, "Element", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getElement_Id(), ecorePackage.getEInt(), "id", null, 0, 1, Element.class, !IS_TRANSIENT,
-				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getElement_Type(), ecorePackage.getEString(), "type", null, 0, 1, Element.class, !IS_TRANSIENT,
-				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getElement_TypeVerbose(), ecorePackage.getEString(), "typeVerbose", null, 0, 1, Element.class,
+		initEClass(executionStepEClass, ExecutionStep.class, "ExecutionStep", IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getExecutionStep_Id(), ecorePackage.getEInt(), "id", null, 0, 1, ExecutionStep.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getElement_Url(), ecorePackage.getEString(), "url", null, 0, 1, Element.class, !IS_TRANSIENT,
-				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getElement_IsCurrent(), ecorePackage.getEBoolean(), "isCurrent", "false", 0, 1, Element.class,
+		initEAttribute(getExecutionStep_Type(), ecorePackage.getEString(), "type", null, 0, 1, ExecutionStep.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getElement_Reworked(), ecorePackage.getEBoolean(), "reworked", "false", 0, 1, Element.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getElement_Executed(), ecorePackage.getEBoolean(), "executed", "false", 0, 1, Element.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getElement_Previous(), this.getPrevious(), null, "previous", null, 0, 1, Element.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
-				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getElement_Next(), this.getNext(), null, "next", null, 0, 1, Element.class, !IS_TRANSIENT,
-				!IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED,
-				IS_ORDERED);
-		initEAttribute(getElement_CreationDate(), ecorePackage.getEDate(), "creationDate", null, 0, 1, Element.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getElement_ChangeDate(), ecorePackage.getEDate(), "changeDate", null, 0, 1, Element.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getElement_ExecutionDate(), ecorePackage.getEDate(), "executionDate", null, 0, 1, Element.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getElement_Justify(), ecorePackage.getEString(), "justify", null, 0, 1, Element.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getElement_CreatedById(), ecorePackage.getEInt(), "createdById", null, 0, 1, Element.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getElement_ExecutedById(), ecorePackage.getEInt(), "executedById", null, 0, 1, Element.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getElement_Createdby(), this.getCreatedBy(), null, "createdby", null, 0, 1, Element.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
-				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getElement_Executedby(), this.getExecutedBy(), null, "executedby", null, 0, 1, Element.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
-				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getElement_Step(), this.getStep(), null, "step", null, 0, 1, Element.class, !IS_TRANSIENT,
-				!IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED,
-				IS_ORDERED);
-		initEAttribute(getElement_IdStep(), ecorePackage.getEInt(), "idStep", null, 0, 1, Element.class, !IS_TRANSIENT,
-				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getElement_IdProtocol(), ecorePackage.getEInt(), "idProtocol", null, 0, 1, Element.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getElement_IdExecutedProtocol(), ecorePackage.getEInt(), "idExecutedProtocol", null, 0, 1,
-				Element.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+		initEAttribute(getExecutionStep_TypeVerbose(), ecorePackage.getEString(), "typeVerbose", null, 0, 1,
+				ExecutionStep.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
 				!IS_DERIVED, IS_ORDERED);
+		initEAttribute(getExecutionStep_Url(), ecorePackage.getEString(), "url", null, 0, 1, ExecutionStep.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getExecutionStep_IsCurrent(), ecorePackage.getEBoolean(), "isCurrent", "false", 0, 1,
+				ExecutionStep.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
+		initEAttribute(getExecutionStep_Reworked(), ecorePackage.getEBoolean(), "reworked", "false", 0, 1,
+				ExecutionStep.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
+		initEAttribute(getExecutionStep_Executed(), ecorePackage.getEBoolean(), "executed", "false", 0, 1,
+				ExecutionStep.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
+		initEReference(getExecutionStep_Previous(), this.getPrevious(), null, "previous", null, 0, 1,
+				ExecutionStep.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getExecutionStep_Next(), this.getNext(), null, "next", null, 0, 1, ExecutionStep.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getExecutionStep_CreationDate(), ecorePackage.getEDate(), "creationDate", null, 0, 1,
+				ExecutionStep.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
+		initEAttribute(getExecutionStep_ChangeDate(), ecorePackage.getEDate(), "changeDate", null, 0, 1,
+				ExecutionStep.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
+		initEAttribute(getExecutionStep_ExecutionDate(), ecorePackage.getEDate(), "executionDate", null, 0, 1,
+				ExecutionStep.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
+		initEReference(getExecutionStep_Creator(), this.getCreator(), null, "creator", null, 1, 1, ExecutionStep.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getExecutionStep_Executor(), this.getExecutor(), null, "executor", null, 1, 1,
+				ExecutionStep.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getExecutionStep_IdStep(), ecorePackage.getEInt(), "idStep", null, 0, 1, ExecutionStep.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getExecutionStep_IdProtocol(), ecorePackage.getEInt(), "idProtocol", null, 0, 1,
+				ExecutionStep.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
+		initEAttribute(getExecutionStep_IdExecutedProtocol(), ecorePackage.getEInt(), "idExecutedProtocol", null, 0, 1,
+				ExecutionStep.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
+		initEReference(getExecutionStep_Justify(), this.getJustify(), null, "justify", null, 0, 1, ExecutionStep.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getExecutionStep_Step(), theProtocolosv2Package.getElement(), null, "step", null, 0, -1,
+				ExecutionStep.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(auxiliaryConductEClass, AuxiliaryConduct.class, "AuxiliaryConduct", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
@@ -1890,9 +2357,6 @@ public class Execution_metamodelPackageImpl extends EPackageImpl implements Exec
 		initEReference(getTreatment_Prescribedmedication(), this.getPrescribedMedication(), null,
 				"prescribedmedication", null, 0, -1, Treatment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
 				IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getTreatment_IdPrescribedExam(), ecorePackage.getEInt(), "idPrescribedExam", null, 0, 1,
-				Treatment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
-				!IS_DERIVED, IS_ORDERED);
 
 		initEClass(examinationEClass, Examination.class, "Examination", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
@@ -1923,79 +2387,19 @@ public class Execution_metamodelPackageImpl extends EPackageImpl implements Exec
 				IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getPrevious_Url(), ecorePackage.getEString(), "url", null, 0, 1, Previous.class, !IS_TRANSIENT,
 				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getPrevious_Absolute_url(), ecorePackage.getEString(), "absolute_url", null, 0, 1,
-				Previous.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
-				!IS_DERIVED, IS_ORDERED);
+		initEAttribute(getPrevious_UrlAbsolute(), ecorePackage.getEString(), "urlAbsolute", null, 0, 1, Previous.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(nextEClass, Next.class, "Next", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getNext_Absolute_url(), ecorePackage.getEString(), "absolute_url", null, 0, 1, Next.class,
+		initEAttribute(getNext_UrlAbsolute(), ecorePackage.getEString(), "urlAbsolute", null, 0, 1, Next.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getNext_Url(), ecorePackage.getEString(), "url", null, 0, 1, Next.class, !IS_TRANSIENT,
 				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(createdByEClass, CreatedBy.class, "CreatedBy", !IS_ABSTRACT, !IS_INTERFACE,
-				IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getCreatedBy_Id(), ecorePackage.getEInt(), "id", null, 0, 1, CreatedBy.class, !IS_TRANSIENT,
-				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getCreatedBy_Url(), ecorePackage.getEString(), "url", null, 0, 1, CreatedBy.class, !IS_TRANSIENT,
-				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getCreatedBy_Code(), ecorePackage.getEInt(), "code", null, 0, 1, CreatedBy.class, !IS_TRANSIENT,
-				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getCreatedBy_Email(), ecorePackage.getEString(), "email", null, 0, 1, CreatedBy.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getCreatedBy_Login(), ecorePackage.getEString(), "login", null, 0, 1, CreatedBy.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getCreatedBy_Name(), ecorePackage.getEString(), "name", null, 0, 1, CreatedBy.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getCreatedBy_Council(), ecorePackage.getEInt(), "council", null, 0, 1, CreatedBy.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getCreatedBy_TypeCouncil(), ecorePackage.getEString(), "typeCouncil", null, 0, 1,
-				CreatedBy.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
-				!IS_DERIVED, IS_ORDERED);
-		initEAttribute(getCreatedBy_State(), ecorePackage.getEString(), "state", null, 0, 1, CreatedBy.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(creatorEClass, Creator.class, "Creator", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		initEClass(stepEClass, Step.class, "Step", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getStep_Url(), ecorePackage.getEString(), "url", null, 0, 1, Step.class, !IS_TRANSIENT,
-				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getStep_TypeVerbose(), ecorePackage.getEString(), "typeVerbose", null, 0, 1, Step.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getStep_Id(), ecorePackage.getEInt(), "id", null, 0, 1, Step.class, !IS_TRANSIENT, !IS_VOLATILE,
-				IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getStep_Type(), ecorePackage.getEString(), "type", null, 0, 1, Step.class, !IS_TRANSIENT,
-				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getStep_Name(), ecorePackage.getEString(), "name", null, 0, 1, Step.class, !IS_TRANSIENT,
-				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getStep_Description(), ecorePackage.getEString(), "description", null, 0, 1, Step.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getStep_IsInitial(), ecorePackage.getEBoolean(), "isInitial", "false", 0, 1, Step.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getStep_IsTerminal(), ecorePackage.getEBoolean(), "isTerminal", "false", 0, 1, Step.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getStep_Obligatory(), ecorePackage.getEBoolean(), "obligatory", "false", 0, 1, Step.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(executedByEClass, ExecutedBy.class, "ExecutedBy", !IS_ABSTRACT, !IS_INTERFACE,
+		initEClass(executorEClass, Executor.class, "Executor", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getExecutedBy_Id(), ecorePackage.getEInt(), "id", null, 0, 1, ExecutedBy.class, !IS_TRANSIENT,
-				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getExecutedBy_Url(), ecorePackage.getEString(), "url", null, 0, 1, ExecutedBy.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getExecutedBy_Code(), ecorePackage.getEInt(), "code", null, 0, 1, ExecutedBy.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getExecutedBy_Email(), ecorePackage.getEString(), "email", null, 0, 1, ExecutedBy.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getExecutedBy_Login(), ecorePackage.getEString(), "login", null, 0, 1, ExecutedBy.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getExecutedBy_Name(), ecorePackage.getEString(), "name", null, 0, 1, ExecutedBy.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getExecutedBy_Council(), ecorePackage.getEInt(), "council", null, 0, 1, ExecutedBy.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getExecutedBy_TypeCouncil(), ecorePackage.getEString(), "typeCouncil", null, 0, 1,
-				ExecutedBy.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
-				!IS_DERIVED, IS_ORDERED);
-		initEAttribute(getExecutedBy_State(), ecorePackage.getEString(), "state", null, 0, 1, ExecutedBy.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(answerEClass, Answer.class, "Answer", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getAnswer_Id(), ecorePackage.getEInt(), "id", null, 0, 1, Answer.class, !IS_TRANSIENT,
@@ -2131,11 +2535,192 @@ public class Execution_metamodelPackageImpl extends EPackageImpl implements Exec
 		initEClass(prescribedMedicamentEClass, PrescribedMedicament.class, "PrescribedMedicament", !IS_ABSTRACT,
 				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		initEClass(executionEClass, Execution.class, "Execution", !IS_ABSTRACT, !IS_INTERFACE,
+		initEClass(extendedProtocolEClass, ExtendedProtocol.class, "ExtendedProtocol", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getExecution_Element(), this.getElement(), null, "element", null, 0, -1, Execution.class,
+		initEReference(getExtendedProtocol_Executionprotocol(), this.getExecutionProtocol(), null, "executionprotocol",
+				null, 0, -1, ExtendedProtocol.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
+				!IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getExtendedProtocol_Executionstep(), this.getExecutionStep(), null, "executionstep", null, 0, -1,
+				ExtendedProtocol.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(executionProtocolEClass, ExecutionProtocol.class, "ExecutionProtocol", IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getExecutionProtocol_Id(), ecorePackage.getEInt(), "id", null, 0, 1, ExecutionProtocol.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getExecutionProtocol_Url(), ecorePackage.getEString(), "url", null, 0, 1,
+				ExecutionProtocol.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
+		initEAttribute(getExecutionProtocol_Creation(), ecorePackage.getEDate(), "creation", null, 0, 1,
+				ExecutionProtocol.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
+		initEAttribute(getExecutionProtocol_Conclusion(), ecorePackage.getEDate(), "conclusion", null, 0, 1,
+				ExecutionProtocol.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
+		initEAttribute(getExecutionProtocol_Completed(), ecorePackage.getEBoolean(), "completed", null, 0, 1,
+				ExecutionProtocol.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
+		initEAttribute(getExecutionProtocol_Aborted(), ecorePackage.getEBoolean(), "aborted", null, 0, 1,
+				ExecutionProtocol.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
+		initEReference(getExecutionProtocol_Justify(), this.getJustify(), null, "justify", null, 0, 1,
+				ExecutionProtocol.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getExecutionProtocol_LastExecutedStepDate(), ecorePackage.getEDate(), "lastExecutedStepDate",
+				null, 0, 1, ExecutionProtocol.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getExecutionProtocol_IdProtocol(), ecorePackage.getEInt(), "idProtocol", null, 0, 1,
+				ExecutionProtocol.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
+		initEReference(getExecutionProtocol_Protocol(), this.getProtocol(), null, "protocol", null, 1, 1,
+				ExecutionProtocol.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getExecutionProtocol_IdResponsible(), ecorePackage.getEInt(), "idResponsible", null, 0, 1,
+				ExecutionProtocol.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
+		initEAttribute(getExecutionProtocol_IdLastProfessional(), ecorePackage.getEInt(), "idLastProfessional", null, 0,
+				1, ExecutionProtocol.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getExecutionProtocol_Responsible(), this.getResponsible(), null, "responsible", null, 1, 1,
+				ExecutionProtocol.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getExecutionProtocol_Lastprofessional(), this.getLastProfessional(), null, "lastprofessional",
+				null, 1, 1, ExecutionProtocol.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
+				!IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getExecutionProtocol_Executedstep(), this.getExecutedStep(), null, "executedstep", null, 1, 1,
+				ExecutionProtocol.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(justifyEClass, Justify.class, "Justify", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getJustify_Id(), ecorePackage.getEInt(), "id", null, 0, 1, Justify.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getJustify_Reason(), ecorePackage.getEString(), "reason", null, 0, 1, Justify.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getJustify_ReasonDisplay(), ecorePackage.getEString(), "reasonDisplay", null, 0, 1,
+				Justify.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
+		initEAttribute(getJustify_Description(), ecorePackage.getEString(), "description", null, 0, 1, Justify.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getJustify_JustifyById(), ecorePackage.getEInt(), "justifyById", null, 0, 1, Justify.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getJustify_JustifyBy(), ecorePackage.getEString(), "justifyBy", null, 0, 1, Justify.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(protocolEClass, Protocol.class, "Protocol", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getProtocol_Id(), ecorePackage.getEInt(), "id", null, 0, 1, Protocol.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getProtocol_Url(), ecorePackage.getEString(), "url", null, 0, 1, Protocol.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getProtocol_Code(), ecorePackage.getEString(), "code", null, 0, 1, Protocol.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getProtocol_Name(), ecorePackage.getEString(), "name", null, 0, 1, Protocol.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getProtocol_IdRepository(), ecorePackage.getEInt(), "idRepository", null, 0, 1, Protocol.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getProtocol_Version(), ecorePackage.getEInt(), "version", null, 0, 1, Protocol.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getProtocol_Completed(), ecorePackage.getEBoolean(), "completed", null, 0, 1, Protocol.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(responsibleEClass, Responsible.class, "Responsible", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getResponsible_Data(), this.getData(), null, "data", null, 1, 1, Responsible.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(executedStepEClass, ExecutedStep.class, "ExecutedStep", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getExecutedStep_Id(), ecorePackage.getEInt(), "id", null, 0, 1, ExecutedStep.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getExecutedStep_Type(), ecorePackage.getEString(), "type", null, 0, 1, ExecutedStep.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getExecutedStep_TypeVerbose(), ecorePackage.getEString(), "typeVerbose", null, 0, 1,
+				ExecutedStep.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
+		initEAttribute(getExecutedStep_Url(), ecorePackage.getEString(), "url", null, 0, 1, ExecutedStep.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getExecutedStep_Executed(), ecorePackage.getEBoolean(), "executed", "false", 0, 1,
+				ExecutedStep.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
+		initEAttribute(getExecutedStep_IsCurrent(), ecorePackage.getEBoolean(), "isCurrent", "false", 0, 1,
+				ExecutedStep.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
+		initEAttribute(getExecutedStep_Reworked(), ecorePackage.getEBoolean(), "reworked", "false", 0, 1,
+				ExecutedStep.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
+		initEAttribute(getExecutedStep_CreationDate(), ecorePackage.getEDate(), "creationDate", null, 0, 1,
+				ExecutedStep.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
+		initEAttribute(getExecutedStep_ChangeDate(), ecorePackage.getEDate(), "changeDate", null, 0, 1,
+				ExecutedStep.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
+		initEAttribute(getExecutedStep_ExecutionDate(), ecorePackage.getEDate(), "executionDate", null, 0, 1,
+				ExecutedStep.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
+		initEAttribute(getExecutedStep_IdExecutedProtocol(), ecorePackage.getEInt(), "idExecutedProtocol", null, 0, 1,
+				ExecutedStep.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
+		initEAttribute(getExecutedStep_IdStep(), ecorePackage.getEInt(), "idStep", null, 0, 1, ExecutedStep.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getExecutedStep_IdProtocol(), ecorePackage.getEInt(), "idProtocol", null, 0, 1,
+				ExecutedStep.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
+		initEAttribute(getExecutedStep_CreatedById(), ecorePackage.getEInt(), "createdById", null, 0, 1,
+				ExecutedStep.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
+		initEAttribute(getExecutedStep_CreatedBy(), ecorePackage.getEString(), "createdBy", null, 0, 1,
+				ExecutedStep.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
+		initEAttribute(getExecutedStep_ExecutedById(), ecorePackage.getEInt(), "executedById", null, 0, 1,
+				ExecutedStep.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
+		initEAttribute(getExecutedStep_ExecutedBy(), ecorePackage.getEString(), "executedBy", null, 0, 1,
+				ExecutedStep.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
+		initEAttribute(getExecutedStep_Step(), ecorePackage.getEString(), "step", null, 0, 1, ExecutedStep.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getExecutedStep_Previous(), this.getPrevious(), null, "previous", null, 0, 1, ExecutedStep.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getExecutedStep_Next(), this.getNext(), null, "next", null, 0, 1, ExecutedStep.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getExecutedStep_Justify(), this.getJustify(), null, "justify", null, 0, 1, ExecutedStep.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(lastProfessionalEClass, LastProfessional.class, "LastProfessional", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getLastProfessional_Data(), this.getData(), null, "data", null, 1, 1, LastProfessional.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(dataEClass, Data.class, "Data", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getData_Id(), ecorePackage.getEInt(), "id", null, 0, 1, Data.class, !IS_TRANSIENT, !IS_VOLATILE,
+				IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getData_Url(), ecorePackage.getEString(), "url", null, 0, 1, Data.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getData_Code(), ecorePackage.getEInt(), "code", null, 0, 1, Data.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getData_Email(), ecorePackage.getEString(), "email", null, 0, 1, Data.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getData_Name(), ecorePackage.getEString(), "name", null, 0, 1, Data.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getData_TypeCouncil(), ecorePackage.getEString(), "typeCouncil", null, 0, 1, Data.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getData_Login(), ecorePackage.getEString(), "login", null, 0, 1, Data.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getData_NumberCouncil(), ecorePackage.getEInt(), "numberCouncil", null, 0, 1, Data.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getData_State(), ecorePackage.getEString(), "state", null, 0, 1, Data.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getData_Executor(), this.getExecutor(), null, "executor", null, 1, 1, Data.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED,
+				IS_ORDERED);
+		initEReference(getData_Creator(), this.getCreator(), null, "creator", null, 1, 1, Data.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED,
+				IS_ORDERED);
 
 		// Create resource
 		createResource(eNS_URI);

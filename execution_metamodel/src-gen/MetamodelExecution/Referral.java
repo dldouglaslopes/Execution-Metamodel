@@ -12,5 +12,5 @@ package MetamodelExecution;
  * @model
  * @generated
  */
-public interface Referral extends Element {
+public interface Referral extends ExecutionStep {
 } // Referral

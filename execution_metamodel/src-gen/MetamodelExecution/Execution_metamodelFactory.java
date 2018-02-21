@@ -103,31 +103,22 @@ public interface Execution_metamodelFactory extends EFactory {
 	Next createNext();
 
 	/**
-	 * Returns a new object of class '<em>Created By</em>'.
+	 * Returns a new object of class '<em>Creator</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Created By</em>'.
+	 * @return a new object of class '<em>Creator</em>'.
 	 * @generated
 	 */
-	CreatedBy createCreatedBy();
+	Creator createCreator();
 
 	/**
-	 * Returns a new object of class '<em>Step</em>'.
+	 * Returns a new object of class '<em>Executor</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Step</em>'.
+	 * @return a new object of class '<em>Executor</em>'.
 	 * @generated
 	 */
-	Step createStep();
-
-	/**
-	 * Returns a new object of class '<em>Executed By</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Executed By</em>'.
-	 * @generated
-	 */
-	ExecutedBy createExecutedBy();
+	Executor createExecutor();
 
 	/**
 	 * Returns a new object of class '<em>Answer</em>'.
@@ -238,13 +229,58 @@ public interface Execution_metamodelFactory extends EFactory {
 	PrescribedMedicament createPrescribedMedicament();
 
 	/**
-	 * Returns a new object of class '<em>Execution</em>'.
+	 * Returns a new object of class '<em>Extended Protocol</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Execution</em>'.
+	 * @return a new object of class '<em>Extended Protocol</em>'.
 	 * @generated
 	 */
-	Execution createExecution();
+	ExtendedProtocol createExtendedProtocol();
+
+	/**
+	 * Returns a new object of class '<em>Justify</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Justify</em>'.
+	 * @generated
+	 */
+	Justify createJustify();
+
+	/**
+	 * Returns a new object of class '<em>Protocol</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Protocol</em>'.
+	 * @generated
+	 */
+	Protocol createProtocol();
+
+	/**
+	 * Returns a new object of class '<em>Responsible</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Responsible</em>'.
+	 * @generated
+	 */
+	Responsible createResponsible();
+
+	/**
+	 * Returns a new object of class '<em>Executed Step</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Executed Step</em>'.
+	 * @generated
+	 */
+	ExecutedStep createExecutedStep();
+
+	/**
+	 * Returns a new object of class '<em>Last Professional</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Last Professional</em>'.
+	 * @generated
+	 */
+	LastProfessional createLastProfessional();
 
 	/**
 	 * Returns the package supported by this factory.

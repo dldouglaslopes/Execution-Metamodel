@@ -13,7 +13,7 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link MetamodelExecution.Next#getAbsolute_url <em>Absolute url</em>}</li>
+ *   <li>{@link MetamodelExecution.Next#getUrlAbsolute <em>Url Absolute</em>}</li>
  *   <li>{@link MetamodelExecution.Next#getUrl <em>Url</em>}</li>
  * </ul>
  *
@@ -23,30 +23,30 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface Next extends EObject {
 	/**
-	 * Returns the value of the '<em><b>Absolute url</b></em>' attribute.
+	 * Returns the value of the '<em><b>Url Absolute</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Absolute url</em>' attribute isn't clear,
+	 * If the meaning of the '<em>Url Absolute</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Absolute url</em>' attribute.
-	 * @see #setAbsolute_url(String)
-	 * @see MetamodelExecution.Execution_metamodelPackage#getNext_Absolute_url()
+	 * @return the value of the '<em>Url Absolute</em>' attribute.
+	 * @see #setUrlAbsolute(String)
+	 * @see MetamodelExecution.Execution_metamodelPackage#getNext_UrlAbsolute()
 	 * @model
 	 * @generated
 	 */
-	String getAbsolute_url();
+	String getUrlAbsolute();
 
 	/**
-	 * Sets the value of the '{@link MetamodelExecution.Next#getAbsolute_url <em>Absolute url</em>}' attribute.
+	 * Sets the value of the '{@link MetamodelExecution.Next#getUrlAbsolute <em>Url Absolute</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Absolute url</em>' attribute.
-	 * @see #getAbsolute_url()
+	 * @param value the new value of the '<em>Url Absolute</em>' attribute.
+	 * @see #getUrlAbsolute()
 	 * @generated
 	 */
-	void setAbsolute_url(String value);
+	void setUrlAbsolute(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Url</b></em>' attribute.

@@ -14,7 +14,7 @@ import org.eclipse.emf.ecore.EClass;
  *
  * @generated
  */
-public class DischargeImpl extends ElementImpl implements Discharge {
+public class DischargeImpl extends ExecutionStepImpl implements Discharge {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
