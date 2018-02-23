@@ -393,17 +393,8 @@ public class Protocolosv2PackageImpl extends EPackageImpl implements Protocolosv
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getQuestion_Answers() {
-		return (EReference) questionEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EAttribute getQuestion_Url() {
-		return (EAttribute) questionEClass.getEStructuralFeatures().get(2);
+		return (EAttribute) questionEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -412,16 +403,7 @@ public class Protocolosv2PackageImpl extends EPackageImpl implements Protocolosv
 	 * @generated
 	 */
 	public EAttribute getQuestion_Id() {
-		return (EAttribute) questionEClass.getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getQuestion_Category() {
-		return (EReference) questionEClass.getEStructuralFeatures().get(4);
+		return (EAttribute) questionEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -1307,10 +1289,8 @@ public class Protocolosv2PackageImpl extends EPackageImpl implements Protocolosv
 
 		questionEClass = createEClass(QUESTION);
 		createEAttribute(questionEClass, QUESTION__TEXT);
-		createEReference(questionEClass, QUESTION__ANSWERS);
 		createEAttribute(questionEClass, QUESTION__URL);
 		createEAttribute(questionEClass, QUESTION__ID);
-		createEReference(questionEClass, QUESTION__CATEGORY);
 
 		protocolEClass = createEClass(PROTOCOL);
 		createEAttribute(protocolEClass, PROTOCOL__ID);
@@ -1492,16 +1472,10 @@ public class Protocolosv2PackageImpl extends EPackageImpl implements Protocolosv
 				IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getQuestion_Text(), ecorePackage.getEString(), "text", null, 0, 1, Question.class, !IS_TRANSIENT,
 				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getQuestion_Answers(), this.getVariable(), null, "answers", null, 0, -1, Question.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
-				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getQuestion_Url(), ecorePackage.getEString(), "url", null, 0, 1, Question.class, !IS_TRANSIENT,
 				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getQuestion_Id(), ecorePackage.getEInt(), "id", null, 0, 1, Question.class, !IS_TRANSIENT,
 				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getQuestion_Category(), this.getCategory(), this.getCategory_Question(), "category", null, 0, 1,
-				Question.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
-				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(protocolEClass, Protocol.class, "Protocol", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
@@ -1626,9 +1600,9 @@ public class Protocolosv2PackageImpl extends EPackageImpl implements Protocolosv
 				IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getCategory_Name(), ecorePackage.getEString(), "name", null, 0, 1, Category.class, !IS_TRANSIENT,
 				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getCategory_Question(), this.getQuestion(), this.getQuestion_Category(), "question", null, 0, -1,
-				Category.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
-				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getCategory_Question(), this.getQuestion(), null, "question", null, 0, -1, Category.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(examinationEClass, Examination.class, "Examination", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);

@@ -19,8 +19,8 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link MetamodelExecution.Variable#getUrl <em>Url</em>}</li>
  *   <li>{@link MetamodelExecution.Variable#getName <em>Name</em>}</li>
  *   <li>{@link MetamodelExecution.Variable#getWeight <em>Weight</em>}</li>
- *   <li>{@link MetamodelExecution.Variable#isValue <em>Value</em>}</li>
  *   <li>{@link MetamodelExecution.Variable#getLink <em>Link</em>}</li>
+ *   <li>{@link MetamodelExecution.Variable#getValue <em>Value</em>}</li>
  * </ul>
  *
  * @see MetamodelExecution.Execution_metamodelPackage#getVariable()
@@ -185,32 +185,6 @@ public interface Variable extends EObject {
 	void setWeight(int value);
 
 	/**
-	 * Returns the value of the '<em><b>Value</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Value</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Value</em>' attribute.
-	 * @see #setValue(boolean)
-	 * @see MetamodelExecution.Execution_metamodelPackage#getVariable_Value()
-	 * @model
-	 * @generated
-	 */
-	boolean isValue();
-
-	/**
-	 * Sets the value of the '{@link MetamodelExecution.Variable#isValue <em>Value</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Value</em>' attribute.
-	 * @see #isValue()
-	 * @generated
-	 */
-	void setValue(boolean value);
-
-	/**
 	 * Returns the value of the '<em><b>Link</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <p>
@@ -235,5 +209,31 @@ public interface Variable extends EObject {
 	 * @generated
 	 */
 	void setLink(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Value</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Value</em>' containment reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Value</em>' containment reference.
+	 * @see #setValue(Value)
+	 * @see MetamodelExecution.Execution_metamodelPackage#getVariable_Value()
+	 * @model containment="true" required="true"
+	 * @generated
+	 */
+	Value getValue();
+
+	/**
+	 * Sets the value of the '{@link MetamodelExecution.Variable#getValue <em>Value</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Value</em>' containment reference.
+	 * @see #getValue()
+	 * @generated
+	 */
+	void setValue(Value value);
 
 } // Variable

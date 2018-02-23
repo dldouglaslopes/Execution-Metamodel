@@ -53,7 +53,6 @@ public interface Category extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Question</b></em>' reference list.
 	 * The list contents are of type {@link protocolosv2.Question}.
-	 * It is bidirectional and its opposite is '{@link protocolosv2.Question#getCategory <em>Category</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Question</em>' reference list isn't clear,
@@ -62,8 +61,7 @@ public interface Category extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Question</em>' reference list.
 	 * @see protocolosv2.Protocolosv2Package#getCategory_Question()
-	 * @see protocolosv2.Question#getCategory
-	 * @model opposite="category"
+	 * @model
 	 * @generated
 	 */
 	EList<Question> getQuestion();

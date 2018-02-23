@@ -3,7 +3,7 @@
 package MetamodelExecution.impl;
 
 import MetamodelExecution.Execution_metamodelPackage;
-import MetamodelExecution.Protocol;
+import MetamodelExecution.Pathway;
 
 import org.eclipse.emf.common.notify.Notification;
 
@@ -14,24 +14,24 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Protocol</b></em>'.
+ * An implementation of the model object '<em><b>Pathway</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link MetamodelExecution.impl.ProtocolImpl#getId <em>Id</em>}</li>
- *   <li>{@link MetamodelExecution.impl.ProtocolImpl#getUrl <em>Url</em>}</li>
- *   <li>{@link MetamodelExecution.impl.ProtocolImpl#getCode <em>Code</em>}</li>
- *   <li>{@link MetamodelExecution.impl.ProtocolImpl#getName <em>Name</em>}</li>
- *   <li>{@link MetamodelExecution.impl.ProtocolImpl#getIdRepository <em>Id Repository</em>}</li>
- *   <li>{@link MetamodelExecution.impl.ProtocolImpl#getVersion <em>Version</em>}</li>
- *   <li>{@link MetamodelExecution.impl.ProtocolImpl#isCompleted <em>Completed</em>}</li>
+ *   <li>{@link MetamodelExecution.impl.PathwayImpl#getId <em>Id</em>}</li>
+ *   <li>{@link MetamodelExecution.impl.PathwayImpl#getUrl <em>Url</em>}</li>
+ *   <li>{@link MetamodelExecution.impl.PathwayImpl#getCode <em>Code</em>}</li>
+ *   <li>{@link MetamodelExecution.impl.PathwayImpl#getName <em>Name</em>}</li>
+ *   <li>{@link MetamodelExecution.impl.PathwayImpl#getIdRepository <em>Id Repository</em>}</li>
+ *   <li>{@link MetamodelExecution.impl.PathwayImpl#getVersion <em>Version</em>}</li>
+ *   <li>{@link MetamodelExecution.impl.PathwayImpl#isCompleted <em>Completed</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class ProtocolImpl extends MinimalEObjectImpl.Container implements Protocol {
+public class PathwayImpl extends MinimalEObjectImpl.Container implements Pathway {
 	/**
 	 * The default value of the '{@link #getId() <em>Id</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -177,7 +177,7 @@ public class ProtocolImpl extends MinimalEObjectImpl.Container implements Protoc
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ProtocolImpl() {
+	protected PathwayImpl() {
 		super();
 	}
 
@@ -188,7 +188,7 @@ public class ProtocolImpl extends MinimalEObjectImpl.Container implements Protoc
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Execution_metamodelPackage.Literals.PROTOCOL;
+		return Execution_metamodelPackage.Literals.PATHWAY;
 	}
 
 	/**
@@ -209,7 +209,7 @@ public class ProtocolImpl extends MinimalEObjectImpl.Container implements Protoc
 		int oldId = id;
 		id = newId;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.PROTOCOL__ID, oldId, id));
+			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.PATHWAY__ID, oldId, id));
 	}
 
 	/**
@@ -230,7 +230,7 @@ public class ProtocolImpl extends MinimalEObjectImpl.Container implements Protoc
 		String oldUrl = url;
 		url = newUrl;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.PROTOCOL__URL, oldUrl,
+			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.PATHWAY__URL, oldUrl,
 					url));
 	}
 
@@ -252,7 +252,7 @@ public class ProtocolImpl extends MinimalEObjectImpl.Container implements Protoc
 		String oldCode = code;
 		code = newCode;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.PROTOCOL__CODE, oldCode,
+			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.PATHWAY__CODE, oldCode,
 					code));
 	}
 
@@ -274,7 +274,7 @@ public class ProtocolImpl extends MinimalEObjectImpl.Container implements Protoc
 		String oldName = name;
 		name = newName;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.PROTOCOL__NAME, oldName,
+			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.PATHWAY__NAME, oldName,
 					name));
 	}
 
@@ -296,7 +296,7 @@ public class ProtocolImpl extends MinimalEObjectImpl.Container implements Protoc
 		int oldIdRepository = idRepository;
 		idRepository = newIdRepository;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.PROTOCOL__ID_REPOSITORY,
+			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.PATHWAY__ID_REPOSITORY,
 					oldIdRepository, idRepository));
 	}
 
@@ -318,7 +318,7 @@ public class ProtocolImpl extends MinimalEObjectImpl.Container implements Protoc
 		int oldVersion = version;
 		version = newVersion;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.PROTOCOL__VERSION,
+			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.PATHWAY__VERSION,
 					oldVersion, version));
 	}
 
@@ -340,7 +340,7 @@ public class ProtocolImpl extends MinimalEObjectImpl.Container implements Protoc
 		boolean oldCompleted = completed;
 		completed = newCompleted;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.PROTOCOL__COMPLETED,
+			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.PATHWAY__COMPLETED,
 					oldCompleted, completed));
 	}
 
@@ -352,19 +352,19 @@ public class ProtocolImpl extends MinimalEObjectImpl.Container implements Protoc
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case Execution_metamodelPackage.PROTOCOL__ID:
+		case Execution_metamodelPackage.PATHWAY__ID:
 			return getId();
-		case Execution_metamodelPackage.PROTOCOL__URL:
+		case Execution_metamodelPackage.PATHWAY__URL:
 			return getUrl();
-		case Execution_metamodelPackage.PROTOCOL__CODE:
+		case Execution_metamodelPackage.PATHWAY__CODE:
 			return getCode();
-		case Execution_metamodelPackage.PROTOCOL__NAME:
+		case Execution_metamodelPackage.PATHWAY__NAME:
 			return getName();
-		case Execution_metamodelPackage.PROTOCOL__ID_REPOSITORY:
+		case Execution_metamodelPackage.PATHWAY__ID_REPOSITORY:
 			return getIdRepository();
-		case Execution_metamodelPackage.PROTOCOL__VERSION:
+		case Execution_metamodelPackage.PATHWAY__VERSION:
 			return getVersion();
-		case Execution_metamodelPackage.PROTOCOL__COMPLETED:
+		case Execution_metamodelPackage.PATHWAY__COMPLETED:
 			return isCompleted();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -378,25 +378,25 @@ public class ProtocolImpl extends MinimalEObjectImpl.Container implements Protoc
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case Execution_metamodelPackage.PROTOCOL__ID:
+		case Execution_metamodelPackage.PATHWAY__ID:
 			setId((Integer) newValue);
 			return;
-		case Execution_metamodelPackage.PROTOCOL__URL:
+		case Execution_metamodelPackage.PATHWAY__URL:
 			setUrl((String) newValue);
 			return;
-		case Execution_metamodelPackage.PROTOCOL__CODE:
+		case Execution_metamodelPackage.PATHWAY__CODE:
 			setCode((String) newValue);
 			return;
-		case Execution_metamodelPackage.PROTOCOL__NAME:
+		case Execution_metamodelPackage.PATHWAY__NAME:
 			setName((String) newValue);
 			return;
-		case Execution_metamodelPackage.PROTOCOL__ID_REPOSITORY:
+		case Execution_metamodelPackage.PATHWAY__ID_REPOSITORY:
 			setIdRepository((Integer) newValue);
 			return;
-		case Execution_metamodelPackage.PROTOCOL__VERSION:
+		case Execution_metamodelPackage.PATHWAY__VERSION:
 			setVersion((Integer) newValue);
 			return;
-		case Execution_metamodelPackage.PROTOCOL__COMPLETED:
+		case Execution_metamodelPackage.PATHWAY__COMPLETED:
 			setCompleted((Boolean) newValue);
 			return;
 		}
@@ -411,25 +411,25 @@ public class ProtocolImpl extends MinimalEObjectImpl.Container implements Protoc
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case Execution_metamodelPackage.PROTOCOL__ID:
+		case Execution_metamodelPackage.PATHWAY__ID:
 			setId(ID_EDEFAULT);
 			return;
-		case Execution_metamodelPackage.PROTOCOL__URL:
+		case Execution_metamodelPackage.PATHWAY__URL:
 			setUrl(URL_EDEFAULT);
 			return;
-		case Execution_metamodelPackage.PROTOCOL__CODE:
+		case Execution_metamodelPackage.PATHWAY__CODE:
 			setCode(CODE_EDEFAULT);
 			return;
-		case Execution_metamodelPackage.PROTOCOL__NAME:
+		case Execution_metamodelPackage.PATHWAY__NAME:
 			setName(NAME_EDEFAULT);
 			return;
-		case Execution_metamodelPackage.PROTOCOL__ID_REPOSITORY:
+		case Execution_metamodelPackage.PATHWAY__ID_REPOSITORY:
 			setIdRepository(ID_REPOSITORY_EDEFAULT);
 			return;
-		case Execution_metamodelPackage.PROTOCOL__VERSION:
+		case Execution_metamodelPackage.PATHWAY__VERSION:
 			setVersion(VERSION_EDEFAULT);
 			return;
-		case Execution_metamodelPackage.PROTOCOL__COMPLETED:
+		case Execution_metamodelPackage.PATHWAY__COMPLETED:
 			setCompleted(COMPLETED_EDEFAULT);
 			return;
 		}
@@ -444,19 +444,19 @@ public class ProtocolImpl extends MinimalEObjectImpl.Container implements Protoc
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case Execution_metamodelPackage.PROTOCOL__ID:
+		case Execution_metamodelPackage.PATHWAY__ID:
 			return id != ID_EDEFAULT;
-		case Execution_metamodelPackage.PROTOCOL__URL:
+		case Execution_metamodelPackage.PATHWAY__URL:
 			return URL_EDEFAULT == null ? url != null : !URL_EDEFAULT.equals(url);
-		case Execution_metamodelPackage.PROTOCOL__CODE:
+		case Execution_metamodelPackage.PATHWAY__CODE:
 			return CODE_EDEFAULT == null ? code != null : !CODE_EDEFAULT.equals(code);
-		case Execution_metamodelPackage.PROTOCOL__NAME:
+		case Execution_metamodelPackage.PATHWAY__NAME:
 			return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-		case Execution_metamodelPackage.PROTOCOL__ID_REPOSITORY:
+		case Execution_metamodelPackage.PATHWAY__ID_REPOSITORY:
 			return idRepository != ID_REPOSITORY_EDEFAULT;
-		case Execution_metamodelPackage.PROTOCOL__VERSION:
+		case Execution_metamodelPackage.PATHWAY__VERSION:
 			return version != VERSION_EDEFAULT;
-		case Execution_metamodelPackage.PROTOCOL__COMPLETED:
+		case Execution_metamodelPackage.PATHWAY__COMPLETED:
 			return completed != COMPLETED_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
@@ -491,4 +491,4 @@ public class ProtocolImpl extends MinimalEObjectImpl.Container implements Protoc
 		return result.toString();
 	}
 
-} //ProtocolImpl
+} //PathwayImpl

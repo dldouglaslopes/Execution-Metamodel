@@ -5,6 +5,7 @@ package MetamodelExecution.impl;
 import MetamodelExecution.Answer;
 import MetamodelExecution.Execution_metamodelPackage;
 import MetamodelExecution.Question;
+import MetamodelExecution.Value;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
@@ -23,35 +24,35 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link MetamodelExecution.impl.AnswerImpl#getId <em>Id</em>}</li>
- *   <li>{@link MetamodelExecution.impl.AnswerImpl#getType <em>Type</em>}</li>
  *   <li>{@link MetamodelExecution.impl.AnswerImpl#getTypeVerbose <em>Type Verbose</em>}</li>
- *   <li>{@link MetamodelExecution.impl.AnswerImpl#getQuestions <em>Questions</em>}</li>
- *   <li>{@link MetamodelExecution.impl.AnswerImpl#isValue <em>Value</em>}</li>
+ *   <li>{@link MetamodelExecution.impl.AnswerImpl#getType <em>Type</em>}</li>
+ *   <li>{@link MetamodelExecution.impl.AnswerImpl#getId <em>Id</em>}</li>
+ *   <li>{@link MetamodelExecution.impl.AnswerImpl#getValue <em>Value</em>}</li>
+ *   <li>{@link MetamodelExecution.impl.AnswerImpl#getQuestion <em>Question</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class AnswerImpl extends MinimalEObjectImpl.Container implements Answer {
 	/**
-	 * The default value of the '{@link #getId() <em>Id</em>}' attribute.
+	 * The default value of the '{@link #getTypeVerbose() <em>Type Verbose</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getId()
+	 * @see #getTypeVerbose()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final int ID_EDEFAULT = 0;
+	protected static final String TYPE_VERBOSE_EDEFAULT = null;
 
 	/**
-	 * The cached value of the '{@link #getId() <em>Id</em>}' attribute.
+	 * The cached value of the '{@link #getTypeVerbose() <em>Type Verbose</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getId()
+	 * @see #getTypeVerbose()
 	 * @generated
 	 * @ordered
 	 */
-	protected int id = ID_EDEFAULT;
+	protected String typeVerbose = TYPE_VERBOSE_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getType() <em>Type</em>}' attribute.
@@ -74,54 +75,44 @@ public class AnswerImpl extends MinimalEObjectImpl.Container implements Answer {
 	protected String type = TYPE_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getTypeVerbose() <em>Type Verbose</em>}' attribute.
+	 * The default value of the '{@link #getId() <em>Id</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getTypeVerbose()
+	 * @see #getId()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String TYPE_VERBOSE_EDEFAULT = null;
+	protected static final int ID_EDEFAULT = 0;
 
 	/**
-	 * The cached value of the '{@link #getTypeVerbose() <em>Type Verbose</em>}' attribute.
+	 * The cached value of the '{@link #getId() <em>Id</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getTypeVerbose()
+	 * @see #getId()
 	 * @generated
 	 * @ordered
 	 */
-	protected String typeVerbose = TYPE_VERBOSE_EDEFAULT;
+	protected int id = ID_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getQuestions() <em>Questions</em>}' containment reference.
+	 * The cached value of the '{@link #getValue() <em>Value</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getQuestions()
+	 * @see #getValue()
 	 * @generated
 	 * @ordered
 	 */
-	protected Question questions;
+	protected Value value;
 
 	/**
-	 * The default value of the '{@link #isValue() <em>Value</em>}' attribute.
+	 * The cached value of the '{@link #getQuestion() <em>Question</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #isValue()
+	 * @see #getQuestion()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final boolean VALUE_EDEFAULT = false;
-
-	/**
-	 * The cached value of the '{@link #isValue() <em>Value</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isValue()
-	 * @generated
-	 * @ordered
-	 */
-	protected boolean value = VALUE_EDEFAULT;
+	protected Question question;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -140,49 +131,6 @@ public class AnswerImpl extends MinimalEObjectImpl.Container implements Answer {
 	@Override
 	protected EClass eStaticClass() {
 		return Execution_metamodelPackage.Literals.ANSWER;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public int getId() {
-		return id;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setId(int newId) {
-		int oldId = id;
-		id = newId;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.ANSWER__ID, oldId, id));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String getType() {
-		return type;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setType(String newType) {
-		String oldType = type;
-		type = newType;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.ANSWER__TYPE, oldType,
-					type));
 	}
 
 	/**
@@ -212,8 +160,8 @@ public class AnswerImpl extends MinimalEObjectImpl.Container implements Answer {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Question getQuestions() {
-		return questions;
+	public String getType() {
+		return type;
 	}
 
 	/**
@@ -221,12 +169,55 @@ public class AnswerImpl extends MinimalEObjectImpl.Container implements Answer {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetQuestions(Question newQuestions, NotificationChain msgs) {
-		Question oldQuestions = questions;
-		questions = newQuestions;
+	public void setType(String newType) {
+		String oldType = type;
+		type = newType;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.ANSWER__TYPE, oldType,
+					type));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public int getId() {
+		return id;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setId(int newId) {
+		int oldId = id;
+		id = newId;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.ANSWER__ID, oldId, id));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Value getValue() {
+		return value;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetValue(Value newValue, NotificationChain msgs) {
+		Value oldValue = value;
+		value = newValue;
 		if (eNotificationRequired()) {
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
-					Execution_metamodelPackage.ANSWER__QUESTIONS, oldQuestions, newQuestions);
+					Execution_metamodelPackage.ANSWER__VALUE, oldValue, newValue);
 			if (msgs == null)
 				msgs = notification;
 			else
@@ -240,21 +231,21 @@ public class AnswerImpl extends MinimalEObjectImpl.Container implements Answer {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setQuestions(Question newQuestions) {
-		if (newQuestions != questions) {
+	public void setValue(Value newValue) {
+		if (newValue != value) {
 			NotificationChain msgs = null;
-			if (questions != null)
-				msgs = ((InternalEObject) questions).eInverseRemove(this,
-						EOPPOSITE_FEATURE_BASE - Execution_metamodelPackage.ANSWER__QUESTIONS, null, msgs);
-			if (newQuestions != null)
-				msgs = ((InternalEObject) newQuestions).eInverseAdd(this,
-						EOPPOSITE_FEATURE_BASE - Execution_metamodelPackage.ANSWER__QUESTIONS, null, msgs);
-			msgs = basicSetQuestions(newQuestions, msgs);
+			if (value != null)
+				msgs = ((InternalEObject) value).eInverseRemove(this,
+						EOPPOSITE_FEATURE_BASE - Execution_metamodelPackage.ANSWER__VALUE, null, msgs);
+			if (newValue != null)
+				msgs = ((InternalEObject) newValue).eInverseAdd(this,
+						EOPPOSITE_FEATURE_BASE - Execution_metamodelPackage.ANSWER__VALUE, null, msgs);
+			msgs = basicSetValue(newValue, msgs);
 			if (msgs != null)
 				msgs.dispatch();
 		} else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.ANSWER__QUESTIONS,
-					newQuestions, newQuestions));
+			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.ANSWER__VALUE, newValue,
+					newValue));
 	}
 
 	/**
@@ -262,8 +253,8 @@ public class AnswerImpl extends MinimalEObjectImpl.Container implements Answer {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean isValue() {
-		return value;
+	public Question getQuestion() {
+		return question;
 	}
 
 	/**
@@ -271,12 +262,40 @@ public class AnswerImpl extends MinimalEObjectImpl.Container implements Answer {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setValue(boolean newValue) {
-		boolean oldValue = value;
-		value = newValue;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.ANSWER__VALUE, oldValue,
-					value));
+	public NotificationChain basicSetQuestion(Question newQuestion, NotificationChain msgs) {
+		Question oldQuestion = question;
+		question = newQuestion;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
+					Execution_metamodelPackage.ANSWER__QUESTION, oldQuestion, newQuestion);
+			if (msgs == null)
+				msgs = notification;
+			else
+				msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setQuestion(Question newQuestion) {
+		if (newQuestion != question) {
+			NotificationChain msgs = null;
+			if (question != null)
+				msgs = ((InternalEObject) question).eInverseRemove(this,
+						EOPPOSITE_FEATURE_BASE - Execution_metamodelPackage.ANSWER__QUESTION, null, msgs);
+			if (newQuestion != null)
+				msgs = ((InternalEObject) newQuestion).eInverseAdd(this,
+						EOPPOSITE_FEATURE_BASE - Execution_metamodelPackage.ANSWER__QUESTION, null, msgs);
+			msgs = basicSetQuestion(newQuestion, msgs);
+			if (msgs != null)
+				msgs.dispatch();
+		} else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.ANSWER__QUESTION,
+					newQuestion, newQuestion));
 	}
 
 	/**
@@ -287,8 +306,10 @@ public class AnswerImpl extends MinimalEObjectImpl.Container implements Answer {
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-		case Execution_metamodelPackage.ANSWER__QUESTIONS:
-			return basicSetQuestions(null, msgs);
+		case Execution_metamodelPackage.ANSWER__VALUE:
+			return basicSetValue(null, msgs);
+		case Execution_metamodelPackage.ANSWER__QUESTION:
+			return basicSetQuestion(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -301,16 +322,16 @@ public class AnswerImpl extends MinimalEObjectImpl.Container implements Answer {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case Execution_metamodelPackage.ANSWER__ID:
-			return getId();
-		case Execution_metamodelPackage.ANSWER__TYPE:
-			return getType();
 		case Execution_metamodelPackage.ANSWER__TYPE_VERBOSE:
 			return getTypeVerbose();
-		case Execution_metamodelPackage.ANSWER__QUESTIONS:
-			return getQuestions();
+		case Execution_metamodelPackage.ANSWER__TYPE:
+			return getType();
+		case Execution_metamodelPackage.ANSWER__ID:
+			return getId();
 		case Execution_metamodelPackage.ANSWER__VALUE:
-			return isValue();
+			return getValue();
+		case Execution_metamodelPackage.ANSWER__QUESTION:
+			return getQuestion();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -323,20 +344,20 @@ public class AnswerImpl extends MinimalEObjectImpl.Container implements Answer {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case Execution_metamodelPackage.ANSWER__ID:
-			setId((Integer) newValue);
+		case Execution_metamodelPackage.ANSWER__TYPE_VERBOSE:
+			setTypeVerbose((String) newValue);
 			return;
 		case Execution_metamodelPackage.ANSWER__TYPE:
 			setType((String) newValue);
 			return;
-		case Execution_metamodelPackage.ANSWER__TYPE_VERBOSE:
-			setTypeVerbose((String) newValue);
-			return;
-		case Execution_metamodelPackage.ANSWER__QUESTIONS:
-			setQuestions((Question) newValue);
+		case Execution_metamodelPackage.ANSWER__ID:
+			setId((Integer) newValue);
 			return;
 		case Execution_metamodelPackage.ANSWER__VALUE:
-			setValue((Boolean) newValue);
+			setValue((Value) newValue);
+			return;
+		case Execution_metamodelPackage.ANSWER__QUESTION:
+			setQuestion((Question) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -350,20 +371,20 @@ public class AnswerImpl extends MinimalEObjectImpl.Container implements Answer {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case Execution_metamodelPackage.ANSWER__ID:
-			setId(ID_EDEFAULT);
+		case Execution_metamodelPackage.ANSWER__TYPE_VERBOSE:
+			setTypeVerbose(TYPE_VERBOSE_EDEFAULT);
 			return;
 		case Execution_metamodelPackage.ANSWER__TYPE:
 			setType(TYPE_EDEFAULT);
 			return;
-		case Execution_metamodelPackage.ANSWER__TYPE_VERBOSE:
-			setTypeVerbose(TYPE_VERBOSE_EDEFAULT);
-			return;
-		case Execution_metamodelPackage.ANSWER__QUESTIONS:
-			setQuestions((Question) null);
+		case Execution_metamodelPackage.ANSWER__ID:
+			setId(ID_EDEFAULT);
 			return;
 		case Execution_metamodelPackage.ANSWER__VALUE:
-			setValue(VALUE_EDEFAULT);
+			setValue((Value) null);
+			return;
+		case Execution_metamodelPackage.ANSWER__QUESTION:
+			setQuestion((Question) null);
 			return;
 		}
 		super.eUnset(featureID);
@@ -377,16 +398,16 @@ public class AnswerImpl extends MinimalEObjectImpl.Container implements Answer {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case Execution_metamodelPackage.ANSWER__ID:
-			return id != ID_EDEFAULT;
-		case Execution_metamodelPackage.ANSWER__TYPE:
-			return TYPE_EDEFAULT == null ? type != null : !TYPE_EDEFAULT.equals(type);
 		case Execution_metamodelPackage.ANSWER__TYPE_VERBOSE:
 			return TYPE_VERBOSE_EDEFAULT == null ? typeVerbose != null : !TYPE_VERBOSE_EDEFAULT.equals(typeVerbose);
-		case Execution_metamodelPackage.ANSWER__QUESTIONS:
-			return questions != null;
+		case Execution_metamodelPackage.ANSWER__TYPE:
+			return TYPE_EDEFAULT == null ? type != null : !TYPE_EDEFAULT.equals(type);
+		case Execution_metamodelPackage.ANSWER__ID:
+			return id != ID_EDEFAULT;
 		case Execution_metamodelPackage.ANSWER__VALUE:
-			return value != VALUE_EDEFAULT;
+			return value != null;
+		case Execution_metamodelPackage.ANSWER__QUESTION:
+			return question != null;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -402,14 +423,12 @@ public class AnswerImpl extends MinimalEObjectImpl.Container implements Answer {
 			return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (id: ");
-		result.append(id);
+		result.append(" (typeVerbose: ");
+		result.append(typeVerbose);
 		result.append(", type: ");
 		result.append(type);
-		result.append(", typeVerbose: ");
-		result.append(typeVerbose);
-		result.append(", value: ");
-		result.append(value);
+		result.append(", id: ");
+		result.append(id);
 		result.append(')');
 		return result.toString();
 	}

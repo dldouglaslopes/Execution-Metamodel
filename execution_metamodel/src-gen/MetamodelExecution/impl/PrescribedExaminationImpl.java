@@ -37,7 +37,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link MetamodelExecution.impl.PrescribedExaminationImpl#getResult <em>Result</em>}</li>
  *   <li>{@link MetamodelExecution.impl.PrescribedExaminationImpl#getReport <em>Report</em>}</li>
  *   <li>{@link MetamodelExecution.impl.PrescribedExaminationImpl#getNumberGuide <em>Number Guide</em>}</li>
- *   <li>{@link MetamodelExecution.impl.PrescribedExaminationImpl#getPrescription <em>Prescription</em>}</li>
+ *   <li>{@link MetamodelExecution.impl.PrescribedExaminationImpl#getExaminationprescription <em>Examinationprescription</em>}</li>
  *   <li>{@link MetamodelExecution.impl.PrescribedExaminationImpl#getComplement <em>Complement</em>}</li>
  * </ul>
  *
@@ -135,14 +135,14 @@ public class PrescribedExaminationImpl extends MinimalEObjectImpl.Container impl
 	protected int numberGuide = NUMBER_GUIDE_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getPrescription() <em>Prescription</em>}' containment reference.
+	 * The cached value of the '{@link #getExaminationprescription() <em>Examinationprescription</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getPrescription()
+	 * @see #getExaminationprescription()
 	 * @generated
 	 * @ordered
 	 */
-	protected ExaminationPrescription prescription;
+	protected ExaminationPrescription examinationprescription;
 
 	/**
 	 * The cached value of the '{@link #getComplement() <em>Complement</em>}' containment reference list.
@@ -318,8 +318,8 @@ public class PrescribedExaminationImpl extends MinimalEObjectImpl.Container impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ExaminationPrescription getPrescription() {
-		return prescription;
+	public ExaminationPrescription getExaminationprescription() {
+		return examinationprescription;
 	}
 
 	/**
@@ -327,12 +327,14 @@ public class PrescribedExaminationImpl extends MinimalEObjectImpl.Container impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetPrescription(ExaminationPrescription newPrescription, NotificationChain msgs) {
-		ExaminationPrescription oldPrescription = prescription;
-		prescription = newPrescription;
+	public NotificationChain basicSetExaminationprescription(ExaminationPrescription newExaminationprescription,
+			NotificationChain msgs) {
+		ExaminationPrescription oldExaminationprescription = examinationprescription;
+		examinationprescription = newExaminationprescription;
 		if (eNotificationRequired()) {
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
-					Execution_metamodelPackage.PRESCRIBED_EXAMINATION__PRESCRIPTION, oldPrescription, newPrescription);
+					Execution_metamodelPackage.PRESCRIBED_EXAMINATION__EXAMINATIONPRESCRIPTION,
+					oldExaminationprescription, newExaminationprescription);
 			if (msgs == null)
 				msgs = notification;
 			else
@@ -346,23 +348,26 @@ public class PrescribedExaminationImpl extends MinimalEObjectImpl.Container impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setPrescription(ExaminationPrescription newPrescription) {
-		if (newPrescription != prescription) {
+	public void setExaminationprescription(ExaminationPrescription newExaminationprescription) {
+		if (newExaminationprescription != examinationprescription) {
 			NotificationChain msgs = null;
-			if (prescription != null)
-				msgs = ((InternalEObject) prescription).eInverseRemove(this,
-						EOPPOSITE_FEATURE_BASE - Execution_metamodelPackage.PRESCRIBED_EXAMINATION__PRESCRIPTION, null,
-						msgs);
-			if (newPrescription != null)
-				msgs = ((InternalEObject) newPrescription).eInverseAdd(this,
-						EOPPOSITE_FEATURE_BASE - Execution_metamodelPackage.PRESCRIBED_EXAMINATION__PRESCRIPTION, null,
-						msgs);
-			msgs = basicSetPrescription(newPrescription, msgs);
+			if (examinationprescription != null)
+				msgs = ((InternalEObject) examinationprescription).eInverseRemove(this,
+						EOPPOSITE_FEATURE_BASE
+								- Execution_metamodelPackage.PRESCRIBED_EXAMINATION__EXAMINATIONPRESCRIPTION,
+						null, msgs);
+			if (newExaminationprescription != null)
+				msgs = ((InternalEObject) newExaminationprescription).eInverseAdd(this,
+						EOPPOSITE_FEATURE_BASE
+								- Execution_metamodelPackage.PRESCRIBED_EXAMINATION__EXAMINATIONPRESCRIPTION,
+						null, msgs);
+			msgs = basicSetExaminationprescription(newExaminationprescription, msgs);
 			if (msgs != null)
 				msgs.dispatch();
 		} else if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET,
-					Execution_metamodelPackage.PRESCRIBED_EXAMINATION__PRESCRIPTION, newPrescription, newPrescription));
+					Execution_metamodelPackage.PRESCRIBED_EXAMINATION__EXAMINATIONPRESCRIPTION,
+					newExaminationprescription, newExaminationprescription));
 	}
 
 	/**
@@ -388,8 +393,8 @@ public class PrescribedExaminationImpl extends MinimalEObjectImpl.Container impl
 		switch (featureID) {
 		case Execution_metamodelPackage.PRESCRIBED_EXAMINATION__EXAMINATION:
 			return basicSetExamination(null, msgs);
-		case Execution_metamodelPackage.PRESCRIBED_EXAMINATION__PRESCRIPTION:
-			return basicSetPrescription(null, msgs);
+		case Execution_metamodelPackage.PRESCRIBED_EXAMINATION__EXAMINATIONPRESCRIPTION:
+			return basicSetExaminationprescription(null, msgs);
 		case Execution_metamodelPackage.PRESCRIBED_EXAMINATION__COMPLEMENT:
 			return ((InternalEList<?>) getComplement()).basicRemove(otherEnd, msgs);
 		}
@@ -414,8 +419,8 @@ public class PrescribedExaminationImpl extends MinimalEObjectImpl.Container impl
 			return getReport();
 		case Execution_metamodelPackage.PRESCRIBED_EXAMINATION__NUMBER_GUIDE:
 			return getNumberGuide();
-		case Execution_metamodelPackage.PRESCRIBED_EXAMINATION__PRESCRIPTION:
-			return getPrescription();
+		case Execution_metamodelPackage.PRESCRIBED_EXAMINATION__EXAMINATIONPRESCRIPTION:
+			return getExaminationprescription();
 		case Execution_metamodelPackage.PRESCRIBED_EXAMINATION__COMPLEMENT:
 			return getComplement();
 		}
@@ -446,8 +451,8 @@ public class PrescribedExaminationImpl extends MinimalEObjectImpl.Container impl
 		case Execution_metamodelPackage.PRESCRIBED_EXAMINATION__NUMBER_GUIDE:
 			setNumberGuide((Integer) newValue);
 			return;
-		case Execution_metamodelPackage.PRESCRIBED_EXAMINATION__PRESCRIPTION:
-			setPrescription((ExaminationPrescription) newValue);
+		case Execution_metamodelPackage.PRESCRIBED_EXAMINATION__EXAMINATIONPRESCRIPTION:
+			setExaminationprescription((ExaminationPrescription) newValue);
 			return;
 		case Execution_metamodelPackage.PRESCRIBED_EXAMINATION__COMPLEMENT:
 			getComplement().clear();
@@ -480,8 +485,8 @@ public class PrescribedExaminationImpl extends MinimalEObjectImpl.Container impl
 		case Execution_metamodelPackage.PRESCRIBED_EXAMINATION__NUMBER_GUIDE:
 			setNumberGuide(NUMBER_GUIDE_EDEFAULT);
 			return;
-		case Execution_metamodelPackage.PRESCRIBED_EXAMINATION__PRESCRIPTION:
-			setPrescription((ExaminationPrescription) null);
+		case Execution_metamodelPackage.PRESCRIBED_EXAMINATION__EXAMINATIONPRESCRIPTION:
+			setExaminationprescription((ExaminationPrescription) null);
 			return;
 		case Execution_metamodelPackage.PRESCRIBED_EXAMINATION__COMPLEMENT:
 			getComplement().clear();
@@ -508,8 +513,8 @@ public class PrescribedExaminationImpl extends MinimalEObjectImpl.Container impl
 			return REPORT_EDEFAULT == null ? report != null : !REPORT_EDEFAULT.equals(report);
 		case Execution_metamodelPackage.PRESCRIBED_EXAMINATION__NUMBER_GUIDE:
 			return numberGuide != NUMBER_GUIDE_EDEFAULT;
-		case Execution_metamodelPackage.PRESCRIBED_EXAMINATION__PRESCRIPTION:
-			return prescription != null;
+		case Execution_metamodelPackage.PRESCRIBED_EXAMINATION__EXAMINATIONPRESCRIPTION:
+			return examinationprescription != null;
 		case Execution_metamodelPackage.PRESCRIBED_EXAMINATION__COMPLEMENT:
 			return complement != null && !complement.isEmpty();
 		}

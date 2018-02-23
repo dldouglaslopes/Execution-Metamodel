@@ -21,7 +21,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link MetamodelExecution.Examination#getJustify <em>Justify</em>}</li>
  *   <li>{@link MetamodelExecution.Examination#getClinicalIndication <em>Clinical Indication</em>}</li>
  *   <li>{@link MetamodelExecution.Examination#getSideMemberDisplay <em>Side Member Display</em>}</li>
- *   <li>{@link MetamodelExecution.Examination#getExamination <em>Examination</em>}</li>
+ *   <li>{@link MetamodelExecution.Examination#getExam <em>Exam</em>}</li>
  * </ul>
  *
  * @see MetamodelExecution.Execution_metamodelPackage#getExamination()
@@ -238,29 +238,29 @@ public interface Examination extends EObject {
 	void setSideMemberDisplay(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Examination</b></em>' containment reference.
+	 * Returns the value of the '<em><b>Exam</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Examination</em>' containment reference isn't clear,
+	 * If the meaning of the '<em>Exam</em>' containment reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Examination</em>' containment reference.
-	 * @see #setExamination(Exam)
-	 * @see MetamodelExecution.Execution_metamodelPackage#getExamination_Examination()
+	 * @return the value of the '<em>Exam</em>' containment reference.
+	 * @see #setExam(Exam)
+	 * @see MetamodelExecution.Execution_metamodelPackage#getExamination_Exam()
 	 * @model containment="true" required="true"
 	 * @generated
 	 */
-	Exam getExamination();
+	Exam getExam();
 
 	/**
-	 * Sets the value of the '{@link MetamodelExecution.Examination#getExamination <em>Examination</em>}' containment reference.
+	 * Sets the value of the '{@link MetamodelExecution.Examination#getExam <em>Exam</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Examination</em>' containment reference.
-	 * @see #getExamination()
+	 * @param value the new value of the '<em>Exam</em>' containment reference.
+	 * @see #getExam()
 	 * @generated
 	 */
-	void setExamination(Exam value);
+	void setExam(Exam value);
 
 } // Examination

@@ -4,8 +4,8 @@ package MetamodelExecution.impl;
 
 import MetamodelExecution.Execution_metamodelPackage;
 import MetamodelExecution.Responsible;
+import MetamodelExecution.User;
 
-import MetamodelExecution.UserData;
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;
@@ -36,7 +36,7 @@ public class ResponsibleImpl extends MinimalEObjectImpl.Container implements Res
 	 * @generated
 	 * @ordered
 	 */
-	protected UserData data;
+	protected User data;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -62,10 +62,10 @@ public class ResponsibleImpl extends MinimalEObjectImpl.Container implements Res
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public UserData getData() {
+	public User getData() {
 		if (data != null && data.eIsProxy()) {
 			InternalEObject oldData = (InternalEObject) data;
-			data = (UserData) eResolveProxy(oldData);
+			data = (User) eResolveProxy(oldData);
 			if (data != oldData) {
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE,
@@ -80,7 +80,7 @@ public class ResponsibleImpl extends MinimalEObjectImpl.Container implements Res
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public UserData basicGetData() {
+	public User basicGetData() {
 		return data;
 	}
 
@@ -89,8 +89,8 @@ public class ResponsibleImpl extends MinimalEObjectImpl.Container implements Res
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setData(UserData newData) {
-		UserData oldData = data;
+	public void setData(User newData) {
+		User oldData = data;
 		data = newData;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.RESPONSIBLE__DATA, oldData,
@@ -122,7 +122,7 @@ public class ResponsibleImpl extends MinimalEObjectImpl.Container implements Res
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 		case Execution_metamodelPackage.RESPONSIBLE__DATA:
-			setData((UserData) newValue);
+			setData((User) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -137,7 +137,7 @@ public class ResponsibleImpl extends MinimalEObjectImpl.Container implements Res
 	public void eUnset(int featureID) {
 		switch (featureID) {
 		case Execution_metamodelPackage.RESPONSIBLE__DATA:
-			setData((UserData) null);
+			setData((User) null);
 			return;
 		}
 		super.eUnset(featureID);

@@ -3,7 +3,7 @@
 package MetamodelExecution.impl;
 
 import MetamodelExecution.Execution_metamodelPackage;
-import MetamodelExecution.Justify;
+import MetamodelExecution.Justification;
 
 import org.eclipse.emf.common.notify.Notification;
 
@@ -14,23 +14,23 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Justify</b></em>'.
+ * An implementation of the model object '<em><b>Justification</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link MetamodelExecution.impl.JustifyImpl#getId <em>Id</em>}</li>
- *   <li>{@link MetamodelExecution.impl.JustifyImpl#getReason <em>Reason</em>}</li>
- *   <li>{@link MetamodelExecution.impl.JustifyImpl#getReasonDisplay <em>Reason Display</em>}</li>
- *   <li>{@link MetamodelExecution.impl.JustifyImpl#getDescription <em>Description</em>}</li>
- *   <li>{@link MetamodelExecution.impl.JustifyImpl#getJustifyById <em>Justify By Id</em>}</li>
- *   <li>{@link MetamodelExecution.impl.JustifyImpl#getJustifyBy <em>Justify By</em>}</li>
+ *   <li>{@link MetamodelExecution.impl.JustificationImpl#getId <em>Id</em>}</li>
+ *   <li>{@link MetamodelExecution.impl.JustificationImpl#getReason <em>Reason</em>}</li>
+ *   <li>{@link MetamodelExecution.impl.JustificationImpl#getReasonDisplay <em>Reason Display</em>}</li>
+ *   <li>{@link MetamodelExecution.impl.JustificationImpl#getDescription <em>Description</em>}</li>
+ *   <li>{@link MetamodelExecution.impl.JustificationImpl#getJustifyById <em>Justify By Id</em>}</li>
+ *   <li>{@link MetamodelExecution.impl.JustificationImpl#getJustifyBy <em>Justify By</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class JustifyImpl extends MinimalEObjectImpl.Container implements Justify {
+public class JustificationImpl extends MinimalEObjectImpl.Container implements Justification {
 	/**
 	 * The default value of the '{@link #getId() <em>Id</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -156,7 +156,7 @@ public class JustifyImpl extends MinimalEObjectImpl.Container implements Justify
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected JustifyImpl() {
+	protected JustificationImpl() {
 		super();
 	}
 
@@ -167,7 +167,7 @@ public class JustifyImpl extends MinimalEObjectImpl.Container implements Justify
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Execution_metamodelPackage.Literals.JUSTIFY;
+		return Execution_metamodelPackage.Literals.JUSTIFICATION;
 	}
 
 	/**
@@ -188,7 +188,8 @@ public class JustifyImpl extends MinimalEObjectImpl.Container implements Justify
 		int oldId = id;
 		id = newId;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.JUSTIFY__ID, oldId, id));
+			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.JUSTIFICATION__ID, oldId,
+					id));
 	}
 
 	/**
@@ -209,8 +210,8 @@ public class JustifyImpl extends MinimalEObjectImpl.Container implements Justify
 		String oldReason = reason;
 		reason = newReason;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.JUSTIFY__REASON, oldReason,
-					reason));
+			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.JUSTIFICATION__REASON,
+					oldReason, reason));
 	}
 
 	/**
@@ -231,8 +232,8 @@ public class JustifyImpl extends MinimalEObjectImpl.Container implements Justify
 		String oldReasonDisplay = reasonDisplay;
 		reasonDisplay = newReasonDisplay;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.JUSTIFY__REASON_DISPLAY,
-					oldReasonDisplay, reasonDisplay));
+			eNotify(new ENotificationImpl(this, Notification.SET,
+					Execution_metamodelPackage.JUSTIFICATION__REASON_DISPLAY, oldReasonDisplay, reasonDisplay));
 	}
 
 	/**
@@ -253,7 +254,7 @@ public class JustifyImpl extends MinimalEObjectImpl.Container implements Justify
 		String oldDescription = description;
 		description = newDescription;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.JUSTIFY__DESCRIPTION,
+			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.JUSTIFICATION__DESCRIPTION,
 					oldDescription, description));
 	}
 
@@ -275,8 +276,8 @@ public class JustifyImpl extends MinimalEObjectImpl.Container implements Justify
 		int oldJustifyById = justifyById;
 		justifyById = newJustifyById;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.JUSTIFY__JUSTIFY_BY_ID,
-					oldJustifyById, justifyById));
+			eNotify(new ENotificationImpl(this, Notification.SET,
+					Execution_metamodelPackage.JUSTIFICATION__JUSTIFY_BY_ID, oldJustifyById, justifyById));
 	}
 
 	/**
@@ -297,7 +298,7 @@ public class JustifyImpl extends MinimalEObjectImpl.Container implements Justify
 		String oldJustifyBy = justifyBy;
 		justifyBy = newJustifyBy;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.JUSTIFY__JUSTIFY_BY,
+			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.JUSTIFICATION__JUSTIFY_BY,
 					oldJustifyBy, justifyBy));
 	}
 
@@ -309,17 +310,17 @@ public class JustifyImpl extends MinimalEObjectImpl.Container implements Justify
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case Execution_metamodelPackage.JUSTIFY__ID:
+		case Execution_metamodelPackage.JUSTIFICATION__ID:
 			return getId();
-		case Execution_metamodelPackage.JUSTIFY__REASON:
+		case Execution_metamodelPackage.JUSTIFICATION__REASON:
 			return getReason();
-		case Execution_metamodelPackage.JUSTIFY__REASON_DISPLAY:
+		case Execution_metamodelPackage.JUSTIFICATION__REASON_DISPLAY:
 			return getReasonDisplay();
-		case Execution_metamodelPackage.JUSTIFY__DESCRIPTION:
+		case Execution_metamodelPackage.JUSTIFICATION__DESCRIPTION:
 			return getDescription();
-		case Execution_metamodelPackage.JUSTIFY__JUSTIFY_BY_ID:
+		case Execution_metamodelPackage.JUSTIFICATION__JUSTIFY_BY_ID:
 			return getJustifyById();
-		case Execution_metamodelPackage.JUSTIFY__JUSTIFY_BY:
+		case Execution_metamodelPackage.JUSTIFICATION__JUSTIFY_BY:
 			return getJustifyBy();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -333,22 +334,22 @@ public class JustifyImpl extends MinimalEObjectImpl.Container implements Justify
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case Execution_metamodelPackage.JUSTIFY__ID:
+		case Execution_metamodelPackage.JUSTIFICATION__ID:
 			setId((Integer) newValue);
 			return;
-		case Execution_metamodelPackage.JUSTIFY__REASON:
+		case Execution_metamodelPackage.JUSTIFICATION__REASON:
 			setReason((String) newValue);
 			return;
-		case Execution_metamodelPackage.JUSTIFY__REASON_DISPLAY:
+		case Execution_metamodelPackage.JUSTIFICATION__REASON_DISPLAY:
 			setReasonDisplay((String) newValue);
 			return;
-		case Execution_metamodelPackage.JUSTIFY__DESCRIPTION:
+		case Execution_metamodelPackage.JUSTIFICATION__DESCRIPTION:
 			setDescription((String) newValue);
 			return;
-		case Execution_metamodelPackage.JUSTIFY__JUSTIFY_BY_ID:
+		case Execution_metamodelPackage.JUSTIFICATION__JUSTIFY_BY_ID:
 			setJustifyById((Integer) newValue);
 			return;
-		case Execution_metamodelPackage.JUSTIFY__JUSTIFY_BY:
+		case Execution_metamodelPackage.JUSTIFICATION__JUSTIFY_BY:
 			setJustifyBy((String) newValue);
 			return;
 		}
@@ -363,22 +364,22 @@ public class JustifyImpl extends MinimalEObjectImpl.Container implements Justify
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case Execution_metamodelPackage.JUSTIFY__ID:
+		case Execution_metamodelPackage.JUSTIFICATION__ID:
 			setId(ID_EDEFAULT);
 			return;
-		case Execution_metamodelPackage.JUSTIFY__REASON:
+		case Execution_metamodelPackage.JUSTIFICATION__REASON:
 			setReason(REASON_EDEFAULT);
 			return;
-		case Execution_metamodelPackage.JUSTIFY__REASON_DISPLAY:
+		case Execution_metamodelPackage.JUSTIFICATION__REASON_DISPLAY:
 			setReasonDisplay(REASON_DISPLAY_EDEFAULT);
 			return;
-		case Execution_metamodelPackage.JUSTIFY__DESCRIPTION:
+		case Execution_metamodelPackage.JUSTIFICATION__DESCRIPTION:
 			setDescription(DESCRIPTION_EDEFAULT);
 			return;
-		case Execution_metamodelPackage.JUSTIFY__JUSTIFY_BY_ID:
+		case Execution_metamodelPackage.JUSTIFICATION__JUSTIFY_BY_ID:
 			setJustifyById(JUSTIFY_BY_ID_EDEFAULT);
 			return;
-		case Execution_metamodelPackage.JUSTIFY__JUSTIFY_BY:
+		case Execution_metamodelPackage.JUSTIFICATION__JUSTIFY_BY:
 			setJustifyBy(JUSTIFY_BY_EDEFAULT);
 			return;
 		}
@@ -393,18 +394,18 @@ public class JustifyImpl extends MinimalEObjectImpl.Container implements Justify
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case Execution_metamodelPackage.JUSTIFY__ID:
+		case Execution_metamodelPackage.JUSTIFICATION__ID:
 			return id != ID_EDEFAULT;
-		case Execution_metamodelPackage.JUSTIFY__REASON:
+		case Execution_metamodelPackage.JUSTIFICATION__REASON:
 			return REASON_EDEFAULT == null ? reason != null : !REASON_EDEFAULT.equals(reason);
-		case Execution_metamodelPackage.JUSTIFY__REASON_DISPLAY:
+		case Execution_metamodelPackage.JUSTIFICATION__REASON_DISPLAY:
 			return REASON_DISPLAY_EDEFAULT == null ? reasonDisplay != null
 					: !REASON_DISPLAY_EDEFAULT.equals(reasonDisplay);
-		case Execution_metamodelPackage.JUSTIFY__DESCRIPTION:
+		case Execution_metamodelPackage.JUSTIFICATION__DESCRIPTION:
 			return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
-		case Execution_metamodelPackage.JUSTIFY__JUSTIFY_BY_ID:
+		case Execution_metamodelPackage.JUSTIFICATION__JUSTIFY_BY_ID:
 			return justifyById != JUSTIFY_BY_ID_EDEFAULT;
-		case Execution_metamodelPackage.JUSTIFY__JUSTIFY_BY:
+		case Execution_metamodelPackage.JUSTIFICATION__JUSTIFY_BY:
 			return JUSTIFY_BY_EDEFAULT == null ? justifyBy != null : !JUSTIFY_BY_EDEFAULT.equals(justifyBy);
 		}
 		return super.eIsSet(featureID);
@@ -437,4 +438,4 @@ public class JustifyImpl extends MinimalEObjectImpl.Container implements Justify
 		return result.toString();
 	}
 
-} //JustifyImpl
+} //JustificationImpl

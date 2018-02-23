@@ -31,15 +31,14 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * </p>
  * <ul>
  *   <li>{@link MetamodelExecution.impl.PrescriptionImpl#getText <em>Text</em>}</li>
- *   <li>{@link MetamodelExecution.impl.PrescriptionImpl#getIdPrescribedMedicament <em>Id Prescribed Medicament</em>}</li>
- *   <li>{@link MetamodelExecution.impl.PrescriptionImpl#getIdPrescribedItens <em>Id Prescribed Itens</em>}</li>
  *   <li>{@link MetamodelExecution.impl.PrescriptionImpl#getPrescribedmedicament <em>Prescribedmedicament</em>}</li>
  *   <li>{@link MetamodelExecution.impl.PrescriptionImpl#getPrescribedprescriptionitem <em>Prescribedprescriptionitem</em>}</li>
+ *   <li>{@link MetamodelExecution.impl.PrescriptionImpl#getPrescription <em>Prescription</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class PrescriptionImpl extends ExecutionStepImpl implements Prescription {
+public class PrescriptionImpl extends CompleteStepImpl implements Prescription {
 	/**
 	 * The default value of the '{@link #getText() <em>Text</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -61,46 +60,6 @@ public class PrescriptionImpl extends ExecutionStepImpl implements Prescription 
 	protected String text = TEXT_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getIdPrescribedMedicament() <em>Id Prescribed Medicament</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getIdPrescribedMedicament()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final int ID_PRESCRIBED_MEDICAMENT_EDEFAULT = 0;
-
-	/**
-	 * The cached value of the '{@link #getIdPrescribedMedicament() <em>Id Prescribed Medicament</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getIdPrescribedMedicament()
-	 * @generated
-	 * @ordered
-	 */
-	protected int idPrescribedMedicament = ID_PRESCRIBED_MEDICAMENT_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getIdPrescribedItens() <em>Id Prescribed Itens</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getIdPrescribedItens()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final int ID_PRESCRIBED_ITENS_EDEFAULT = 0;
-
-	/**
-	 * The cached value of the '{@link #getIdPrescribedItens() <em>Id Prescribed Itens</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getIdPrescribedItens()
-	 * @generated
-	 * @ordered
-	 */
-	protected int idPrescribedItens = ID_PRESCRIBED_ITENS_EDEFAULT;
-
-	/**
 	 * The cached value of the '{@link #getPrescribedmedicament() <em>Prescribedmedicament</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -119,6 +78,26 @@ public class PrescriptionImpl extends ExecutionStepImpl implements Prescription 
 	 * @ordered
 	 */
 	protected EList<PrescribedPrescriptionItem> prescribedprescriptionitem;
+
+	/**
+	 * The default value of the '{@link #getPrescription() <em>Prescription</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getPrescription()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String PRESCRIPTION_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getPrescription() <em>Prescription</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getPrescription()
+	 * @generated
+	 * @ordered
+	 */
+	protected String prescription = PRESCRIPTION_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -166,52 +145,6 @@ public class PrescriptionImpl extends ExecutionStepImpl implements Prescription 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public int getIdPrescribedMedicament() {
-		return idPrescribedMedicament;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setIdPrescribedMedicament(int newIdPrescribedMedicament) {
-		int oldIdPrescribedMedicament = idPrescribedMedicament;
-		idPrescribedMedicament = newIdPrescribedMedicament;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET,
-					Execution_metamodelPackage.PRESCRIPTION__ID_PRESCRIBED_MEDICAMENT, oldIdPrescribedMedicament,
-					idPrescribedMedicament));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public int getIdPrescribedItens() {
-		return idPrescribedItens;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setIdPrescribedItens(int newIdPrescribedItens) {
-		int oldIdPrescribedItens = idPrescribedItens;
-		idPrescribedItens = newIdPrescribedItens;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET,
-					Execution_metamodelPackage.PRESCRIPTION__ID_PRESCRIBED_ITENS, oldIdPrescribedItens,
-					idPrescribedItens));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EList<PrescribedMedicament> getPrescribedmedicament() {
 		if (prescribedmedicament == null) {
 			prescribedmedicament = new EObjectContainmentEList<PrescribedMedicament>(PrescribedMedicament.class, this,
@@ -232,6 +165,28 @@ public class PrescriptionImpl extends ExecutionStepImpl implements Prescription 
 					Execution_metamodelPackage.PRESCRIPTION__PRESCRIBEDPRESCRIPTIONITEM);
 		}
 		return prescribedprescriptionitem;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getPrescription() {
+		return prescription;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setPrescription(String newPrescription) {
+		String oldPrescription = prescription;
+		prescription = newPrescription;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.PRESCRIPTION__PRESCRIPTION,
+					oldPrescription, prescription));
 	}
 
 	/**
@@ -260,14 +215,12 @@ public class PrescriptionImpl extends ExecutionStepImpl implements Prescription 
 		switch (featureID) {
 		case Execution_metamodelPackage.PRESCRIPTION__TEXT:
 			return getText();
-		case Execution_metamodelPackage.PRESCRIPTION__ID_PRESCRIBED_MEDICAMENT:
-			return getIdPrescribedMedicament();
-		case Execution_metamodelPackage.PRESCRIPTION__ID_PRESCRIBED_ITENS:
-			return getIdPrescribedItens();
 		case Execution_metamodelPackage.PRESCRIPTION__PRESCRIBEDMEDICAMENT:
 			return getPrescribedmedicament();
 		case Execution_metamodelPackage.PRESCRIPTION__PRESCRIBEDPRESCRIPTIONITEM:
 			return getPrescribedprescriptionitem();
+		case Execution_metamodelPackage.PRESCRIPTION__PRESCRIPTION:
+			return getPrescription();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -284,12 +237,6 @@ public class PrescriptionImpl extends ExecutionStepImpl implements Prescription 
 		case Execution_metamodelPackage.PRESCRIPTION__TEXT:
 			setText((String) newValue);
 			return;
-		case Execution_metamodelPackage.PRESCRIPTION__ID_PRESCRIBED_MEDICAMENT:
-			setIdPrescribedMedicament((Integer) newValue);
-			return;
-		case Execution_metamodelPackage.PRESCRIPTION__ID_PRESCRIBED_ITENS:
-			setIdPrescribedItens((Integer) newValue);
-			return;
 		case Execution_metamodelPackage.PRESCRIPTION__PRESCRIBEDMEDICAMENT:
 			getPrescribedmedicament().clear();
 			getPrescribedmedicament().addAll((Collection<? extends PrescribedMedicament>) newValue);
@@ -297,6 +244,9 @@ public class PrescriptionImpl extends ExecutionStepImpl implements Prescription 
 		case Execution_metamodelPackage.PRESCRIPTION__PRESCRIBEDPRESCRIPTIONITEM:
 			getPrescribedprescriptionitem().clear();
 			getPrescribedprescriptionitem().addAll((Collection<? extends PrescribedPrescriptionItem>) newValue);
+			return;
+		case Execution_metamodelPackage.PRESCRIPTION__PRESCRIPTION:
+			setPrescription((String) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -313,17 +263,14 @@ public class PrescriptionImpl extends ExecutionStepImpl implements Prescription 
 		case Execution_metamodelPackage.PRESCRIPTION__TEXT:
 			setText(TEXT_EDEFAULT);
 			return;
-		case Execution_metamodelPackage.PRESCRIPTION__ID_PRESCRIBED_MEDICAMENT:
-			setIdPrescribedMedicament(ID_PRESCRIBED_MEDICAMENT_EDEFAULT);
-			return;
-		case Execution_metamodelPackage.PRESCRIPTION__ID_PRESCRIBED_ITENS:
-			setIdPrescribedItens(ID_PRESCRIBED_ITENS_EDEFAULT);
-			return;
 		case Execution_metamodelPackage.PRESCRIPTION__PRESCRIBEDMEDICAMENT:
 			getPrescribedmedicament().clear();
 			return;
 		case Execution_metamodelPackage.PRESCRIPTION__PRESCRIBEDPRESCRIPTIONITEM:
 			getPrescribedprescriptionitem().clear();
+			return;
+		case Execution_metamodelPackage.PRESCRIPTION__PRESCRIPTION:
+			setPrescription(PRESCRIPTION_EDEFAULT);
 			return;
 		}
 		super.eUnset(featureID);
@@ -339,14 +286,12 @@ public class PrescriptionImpl extends ExecutionStepImpl implements Prescription 
 		switch (featureID) {
 		case Execution_metamodelPackage.PRESCRIPTION__TEXT:
 			return TEXT_EDEFAULT == null ? text != null : !TEXT_EDEFAULT.equals(text);
-		case Execution_metamodelPackage.PRESCRIPTION__ID_PRESCRIBED_MEDICAMENT:
-			return idPrescribedMedicament != ID_PRESCRIBED_MEDICAMENT_EDEFAULT;
-		case Execution_metamodelPackage.PRESCRIPTION__ID_PRESCRIBED_ITENS:
-			return idPrescribedItens != ID_PRESCRIBED_ITENS_EDEFAULT;
 		case Execution_metamodelPackage.PRESCRIPTION__PRESCRIBEDMEDICAMENT:
 			return prescribedmedicament != null && !prescribedmedicament.isEmpty();
 		case Execution_metamodelPackage.PRESCRIPTION__PRESCRIBEDPRESCRIPTIONITEM:
 			return prescribedprescriptionitem != null && !prescribedprescriptionitem.isEmpty();
+		case Execution_metamodelPackage.PRESCRIPTION__PRESCRIPTION:
+			return PRESCRIPTION_EDEFAULT == null ? prescription != null : !PRESCRIPTION_EDEFAULT.equals(prescription);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -364,10 +309,8 @@ public class PrescriptionImpl extends ExecutionStepImpl implements Prescription 
 		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (text: ");
 		result.append(text);
-		result.append(", idPrescribedMedicament: ");
-		result.append(idPrescribedMedicament);
-		result.append(", idPrescribedItens: ");
-		result.append(idPrescribedItens);
+		result.append(", prescription: ");
+		result.append(prescription);
 		result.append(')');
 		return result.toString();
 	}

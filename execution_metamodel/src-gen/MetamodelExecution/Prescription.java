@@ -14,17 +14,16 @@ import org.eclipse.emf.common.util.EList;
  * </p>
  * <ul>
  *   <li>{@link MetamodelExecution.Prescription#getText <em>Text</em>}</li>
- *   <li>{@link MetamodelExecution.Prescription#getIdPrescribedMedicament <em>Id Prescribed Medicament</em>}</li>
- *   <li>{@link MetamodelExecution.Prescription#getIdPrescribedItens <em>Id Prescribed Itens</em>}</li>
  *   <li>{@link MetamodelExecution.Prescription#getPrescribedmedicament <em>Prescribedmedicament</em>}</li>
  *   <li>{@link MetamodelExecution.Prescription#getPrescribedprescriptionitem <em>Prescribedprescriptionitem</em>}</li>
+ *   <li>{@link MetamodelExecution.Prescription#getPrescription <em>Prescription</em>}</li>
  * </ul>
  *
  * @see MetamodelExecution.Execution_metamodelPackage#getPrescription()
  * @model
  * @generated
  */
-public interface Prescription extends ExecutionStep {
+public interface Prescription extends CompleteStep {
 	/**
 	 * Returns the value of the '<em><b>Text</b></em>' attribute.
 	 * <!-- begin-user-doc -->
@@ -50,58 +49,6 @@ public interface Prescription extends ExecutionStep {
 	 * @generated
 	 */
 	void setText(String value);
-
-	/**
-	 * Returns the value of the '<em><b>Id Prescribed Medicament</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Id Prescribed Medicament</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Id Prescribed Medicament</em>' attribute.
-	 * @see #setIdPrescribedMedicament(int)
-	 * @see MetamodelExecution.Execution_metamodelPackage#getPrescription_IdPrescribedMedicament()
-	 * @model
-	 * @generated
-	 */
-	int getIdPrescribedMedicament();
-
-	/**
-	 * Sets the value of the '{@link MetamodelExecution.Prescription#getIdPrescribedMedicament <em>Id Prescribed Medicament</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Id Prescribed Medicament</em>' attribute.
-	 * @see #getIdPrescribedMedicament()
-	 * @generated
-	 */
-	void setIdPrescribedMedicament(int value);
-
-	/**
-	 * Returns the value of the '<em><b>Id Prescribed Itens</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Id Prescribed Itens</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Id Prescribed Itens</em>' attribute.
-	 * @see #setIdPrescribedItens(int)
-	 * @see MetamodelExecution.Execution_metamodelPackage#getPrescription_IdPrescribedItens()
-	 * @model
-	 * @generated
-	 */
-	int getIdPrescribedItens();
-
-	/**
-	 * Sets the value of the '{@link MetamodelExecution.Prescription#getIdPrescribedItens <em>Id Prescribed Itens</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Id Prescribed Itens</em>' attribute.
-	 * @see #getIdPrescribedItens()
-	 * @generated
-	 */
-	void setIdPrescribedItens(int value);
 
 	/**
 	 * Returns the value of the '<em><b>Prescribedmedicament</b></em>' containment reference list.
@@ -134,5 +81,31 @@ public interface Prescription extends ExecutionStep {
 	 * @generated
 	 */
 	EList<PrescribedPrescriptionItem> getPrescribedprescriptionitem();
+
+	/**
+	 * Returns the value of the '<em><b>Prescription</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Prescription</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Prescription</em>' attribute.
+	 * @see #setPrescription(String)
+	 * @see MetamodelExecution.Execution_metamodelPackage#getPrescription_Prescription()
+	 * @model
+	 * @generated
+	 */
+	String getPrescription();
+
+	/**
+	 * Sets the value of the '{@link MetamodelExecution.Prescription#getPrescription <em>Prescription</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Prescription</em>' attribute.
+	 * @see #getPrescription()
+	 * @generated
+	 */
+	void setPrescription(String value);
 
 } // Prescription

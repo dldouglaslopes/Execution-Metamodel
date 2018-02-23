@@ -542,22 +542,13 @@ public interface Protocolosv2Package extends EPackage {
 	int QUESTION__TEXT = 0;
 
 	/**
-	 * The feature id for the '<em><b>Answers</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int QUESTION__ANSWERS = 1;
-
-	/**
 	 * The feature id for the '<em><b>Url</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int QUESTION__URL = 2;
+	int QUESTION__URL = 1;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -566,16 +557,7 @@ public interface Protocolosv2Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int QUESTION__ID = 3;
-
-	/**
-	 * The feature id for the '<em><b>Category</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int QUESTION__CATEGORY = 4;
+	int QUESTION__ID = 2;
 
 	/**
 	 * The number of structural features of the '<em>Question</em>' class.
@@ -584,7 +566,7 @@ public interface Protocolosv2Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int QUESTION_FEATURE_COUNT = 5;
+	int QUESTION_FEATURE_COUNT = 3;
 
 	/**
 	 * The number of operations of the '<em>Question</em>' class.
@@ -2198,17 +2180,6 @@ public interface Protocolosv2Package extends EPackage {
 	EAttribute getQuestion_Text();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link protocolosv2.Question#getAnswers <em>Answers</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Answers</em>'.
-	 * @see protocolosv2.Question#getAnswers()
-	 * @see #getQuestion()
-	 * @generated
-	 */
-	EReference getQuestion_Answers();
-
-	/**
 	 * Returns the meta object for the attribute '{@link protocolosv2.Question#getUrl <em>Url</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2229,17 +2200,6 @@ public interface Protocolosv2Package extends EPackage {
 	 * @generated
 	 */
 	EAttribute getQuestion_Id();
-
-	/**
-	 * Returns the meta object for the reference '{@link protocolosv2.Question#getCategory <em>Category</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Category</em>'.
-	 * @see protocolosv2.Question#getCategory()
-	 * @see #getQuestion()
-	 * @generated
-	 */
-	EReference getQuestion_Category();
 
 	/**
 	 * Returns the meta object for class '{@link protocolosv2.Protocol <em>Protocol</em>}'.
@@ -3385,14 +3345,6 @@ public interface Protocolosv2Package extends EPackage {
 		EAttribute QUESTION__TEXT = eINSTANCE.getQuestion_Text();
 
 		/**
-		 * The meta object literal for the '<em><b>Answers</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference QUESTION__ANSWERS = eINSTANCE.getQuestion_Answers();
-
-		/**
 		 * The meta object literal for the '<em><b>Url</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -3407,14 +3359,6 @@ public interface Protocolosv2Package extends EPackage {
 		 * @generated
 		 */
 		EAttribute QUESTION__ID = eINSTANCE.getQuestion_Id();
-
-		/**
-		 * The meta object literal for the '<em><b>Category</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference QUESTION__CATEGORY = eINSTANCE.getQuestion_Category();
 
 		/**
 		 * The meta object literal for the '{@link protocolosv2.impl.ProtocolImpl <em>Protocol</em>}' class.

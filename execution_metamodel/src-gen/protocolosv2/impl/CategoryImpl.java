@@ -5,18 +5,15 @@ package protocolosv2.impl;
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
-import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
-import org.eclipse.emf.ecore.util.EObjectWithInverseResolvingEList;
-import org.eclipse.emf.ecore.util.InternalEList;
+import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 
 import protocolosv2.Category;
 import protocolosv2.Protocolosv2Package;
@@ -114,39 +111,10 @@ public class CategoryImpl extends MinimalEObjectImpl.Container implements Catego
 	 */
 	public EList<Question> getQuestion() {
 		if (question == null) {
-			question = new EObjectWithInverseResolvingEList<Question>(Question.class, this,
-					Protocolosv2Package.CATEGORY__QUESTION, Protocolosv2Package.QUESTION__CATEGORY);
+			question = new EObjectResolvingEList<Question>(Question.class, this,
+					Protocolosv2Package.CATEGORY__QUESTION);
 		}
 		return question;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@SuppressWarnings("unchecked")
-	@Override
-	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
-		case Protocolosv2Package.CATEGORY__QUESTION:
-			return ((InternalEList<InternalEObject>) (InternalEList<?>) getQuestion()).basicAdd(otherEnd, msgs);
-		}
-		return super.eInverseAdd(otherEnd, featureID, msgs);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
-		case Protocolosv2Package.CATEGORY__QUESTION:
-			return ((InternalEList<?>) getQuestion()).basicRemove(otherEnd, msgs);
-		}
-		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
 
 	/**

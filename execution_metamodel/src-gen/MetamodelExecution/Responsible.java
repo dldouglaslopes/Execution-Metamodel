@@ -30,12 +30,12 @@ public interface Responsible extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Data</em>' reference.
-	 * @see #setData(UserData)
+	 * @see #setData(User)
 	 * @see MetamodelExecution.Execution_metamodelPackage#getResponsible_Data()
 	 * @model required="true"
 	 * @generated
 	 */
-	UserData getData();
+	User getData();
 
 	/**
 	 * Sets the value of the '{@link MetamodelExecution.Responsible#getData <em>Data</em>}' reference.
@@ -45,6 +45,6 @@ public interface Responsible extends EObject {
 	 * @see #getData()
 	 * @generated
 	 */
-	void setData(UserData value);
+	void setData(User value);
 
 } // Responsible

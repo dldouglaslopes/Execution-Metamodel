@@ -6,21 +6,14 @@ import MetamodelExecution.Execution_metamodelPackage;
 import MetamodelExecution.Question;
 import MetamodelExecution.Variable;
 
-import java.util.Collection;
-
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
-
-import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
-import org.eclipse.emf.ecore.util.EObjectContainmentEList;
-import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -102,14 +95,14 @@ public class QuestionImpl extends MinimalEObjectImpl.Container implements Questi
 	protected String text = TEXT_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getVariable() <em>Variable</em>}' containment reference list.
+	 * The cached value of the '{@link #getVariable() <em>Variable</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getVariable()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Variable> variable;
+	protected Variable variable;
 
 	/**
 	 * The default value of the '{@link #getIdCategory() <em>Id Category</em>}' attribute.
@@ -240,12 +233,49 @@ public class QuestionImpl extends MinimalEObjectImpl.Container implements Questi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Variable> getVariable() {
-		if (variable == null) {
-			variable = new EObjectContainmentEList<Variable>(Variable.class, this,
-					Execution_metamodelPackage.QUESTION__VARIABLE);
-		}
+	public Variable getVariable() {
 		return variable;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetVariable(Variable newVariable, NotificationChain msgs) {
+		Variable oldVariable = variable;
+		variable = newVariable;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
+					Execution_metamodelPackage.QUESTION__VARIABLE, oldVariable, newVariable);
+			if (msgs == null)
+				msgs = notification;
+			else
+				msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setVariable(Variable newVariable) {
+		if (newVariable != variable) {
+			NotificationChain msgs = null;
+			if (variable != null)
+				msgs = ((InternalEObject) variable).eInverseRemove(this,
+						EOPPOSITE_FEATURE_BASE - Execution_metamodelPackage.QUESTION__VARIABLE, null, msgs);
+			if (newVariable != null)
+				msgs = ((InternalEObject) newVariable).eInverseAdd(this,
+						EOPPOSITE_FEATURE_BASE - Execution_metamodelPackage.QUESTION__VARIABLE, null, msgs);
+			msgs = basicSetVariable(newVariable, msgs);
+			if (msgs != null)
+				msgs.dispatch();
+		} else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.QUESTION__VARIABLE,
+					newVariable, newVariable));
 	}
 
 	/**
@@ -301,7 +331,7 @@ public class QuestionImpl extends MinimalEObjectImpl.Container implements Questi
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 		case Execution_metamodelPackage.QUESTION__VARIABLE:
-			return ((InternalEList<?>) getVariable()).basicRemove(otherEnd, msgs);
+			return basicSetVariable(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -335,7 +365,6 @@ public class QuestionImpl extends MinimalEObjectImpl.Container implements Questi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
@@ -349,8 +378,7 @@ public class QuestionImpl extends MinimalEObjectImpl.Container implements Questi
 			setText((String) newValue);
 			return;
 		case Execution_metamodelPackage.QUESTION__VARIABLE:
-			getVariable().clear();
-			getVariable().addAll((Collection<? extends Variable>) newValue);
+			setVariable((Variable) newValue);
 			return;
 		case Execution_metamodelPackage.QUESTION__ID_CATEGORY:
 			setIdCategory((Integer) newValue);
@@ -380,7 +408,7 @@ public class QuestionImpl extends MinimalEObjectImpl.Container implements Questi
 			setText(TEXT_EDEFAULT);
 			return;
 		case Execution_metamodelPackage.QUESTION__VARIABLE:
-			getVariable().clear();
+			setVariable((Variable) null);
 			return;
 		case Execution_metamodelPackage.QUESTION__ID_CATEGORY:
 			setIdCategory(ID_CATEGORY_EDEFAULT);
@@ -407,7 +435,7 @@ public class QuestionImpl extends MinimalEObjectImpl.Container implements Questi
 		case Execution_metamodelPackage.QUESTION__TEXT:
 			return TEXT_EDEFAULT == null ? text != null : !TEXT_EDEFAULT.equals(text);
 		case Execution_metamodelPackage.QUESTION__VARIABLE:
-			return variable != null && !variable.isEmpty();
+			return variable != null;
 		case Execution_metamodelPackage.QUESTION__ID_CATEGORY:
 			return idCategory != ID_CATEGORY_EDEFAULT;
 		case Execution_metamodelPackage.QUESTION__CATEGORY:

@@ -31,7 +31,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *   <li>{@link MetamodelExecution.impl.ExaminationImpl#getJustify <em>Justify</em>}</li>
  *   <li>{@link MetamodelExecution.impl.ExaminationImpl#getClinicalIndication <em>Clinical Indication</em>}</li>
  *   <li>{@link MetamodelExecution.impl.ExaminationImpl#getSideMemberDisplay <em>Side Member Display</em>}</li>
- *   <li>{@link MetamodelExecution.impl.ExaminationImpl#getExamination <em>Examination</em>}</li>
+ *   <li>{@link MetamodelExecution.impl.ExaminationImpl#getExam <em>Exam</em>}</li>
  * </ul>
  *
  * @generated
@@ -198,14 +198,14 @@ public class ExaminationImpl extends MinimalEObjectImpl.Container implements Exa
 	protected String sideMemberDisplay = SIDE_MEMBER_DISPLAY_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getExamination() <em>Examination</em>}' containment reference.
+	 * The cached value of the '{@link #getExam() <em>Exam</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getExamination()
+	 * @see #getExam()
 	 * @generated
 	 * @ordered
 	 */
-	protected Exam examination;
+	protected Exam exam;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -409,8 +409,8 @@ public class ExaminationImpl extends MinimalEObjectImpl.Container implements Exa
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Exam getExamination() {
-		return examination;
+	public Exam getExam() {
+		return exam;
 	}
 
 	/**
@@ -418,12 +418,12 @@ public class ExaminationImpl extends MinimalEObjectImpl.Container implements Exa
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetExamination(Exam newExamination, NotificationChain msgs) {
-		Exam oldExamination = examination;
-		examination = newExamination;
+	public NotificationChain basicSetExam(Exam newExam, NotificationChain msgs) {
+		Exam oldExam = exam;
+		exam = newExam;
 		if (eNotificationRequired()) {
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
-					Execution_metamodelPackage.EXAMINATION__EXAMINATION, oldExamination, newExamination);
+					Execution_metamodelPackage.EXAMINATION__EXAM, oldExam, newExam);
 			if (msgs == null)
 				msgs = notification;
 			else
@@ -437,21 +437,21 @@ public class ExaminationImpl extends MinimalEObjectImpl.Container implements Exa
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setExamination(Exam newExamination) {
-		if (newExamination != examination) {
+	public void setExam(Exam newExam) {
+		if (newExam != exam) {
 			NotificationChain msgs = null;
-			if (examination != null)
-				msgs = ((InternalEObject) examination).eInverseRemove(this,
-						EOPPOSITE_FEATURE_BASE - Execution_metamodelPackage.EXAMINATION__EXAMINATION, null, msgs);
-			if (newExamination != null)
-				msgs = ((InternalEObject) newExamination).eInverseAdd(this,
-						EOPPOSITE_FEATURE_BASE - Execution_metamodelPackage.EXAMINATION__EXAMINATION, null, msgs);
-			msgs = basicSetExamination(newExamination, msgs);
+			if (exam != null)
+				msgs = ((InternalEObject) exam).eInverseRemove(this,
+						EOPPOSITE_FEATURE_BASE - Execution_metamodelPackage.EXAMINATION__EXAM, null, msgs);
+			if (newExam != null)
+				msgs = ((InternalEObject) newExam).eInverseAdd(this,
+						EOPPOSITE_FEATURE_BASE - Execution_metamodelPackage.EXAMINATION__EXAM, null, msgs);
+			msgs = basicSetExam(newExam, msgs);
 			if (msgs != null)
 				msgs.dispatch();
 		} else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.EXAMINATION__EXAMINATION,
-					newExamination, newExamination));
+			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.EXAMINATION__EXAM, newExam,
+					newExam));
 	}
 
 	/**
@@ -462,8 +462,8 @@ public class ExaminationImpl extends MinimalEObjectImpl.Container implements Exa
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-		case Execution_metamodelPackage.EXAMINATION__EXAMINATION:
-			return basicSetExamination(null, msgs);
+		case Execution_metamodelPackage.EXAMINATION__EXAM:
+			return basicSetExam(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -492,8 +492,8 @@ public class ExaminationImpl extends MinimalEObjectImpl.Container implements Exa
 			return getClinicalIndication();
 		case Execution_metamodelPackage.EXAMINATION__SIDE_MEMBER_DISPLAY:
 			return getSideMemberDisplay();
-		case Execution_metamodelPackage.EXAMINATION__EXAMINATION:
-			return getExamination();
+		case Execution_metamodelPackage.EXAMINATION__EXAM:
+			return getExam();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -530,8 +530,8 @@ public class ExaminationImpl extends MinimalEObjectImpl.Container implements Exa
 		case Execution_metamodelPackage.EXAMINATION__SIDE_MEMBER_DISPLAY:
 			setSideMemberDisplay((String) newValue);
 			return;
-		case Execution_metamodelPackage.EXAMINATION__EXAMINATION:
-			setExamination((Exam) newValue);
+		case Execution_metamodelPackage.EXAMINATION__EXAM:
+			setExam((Exam) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -569,8 +569,8 @@ public class ExaminationImpl extends MinimalEObjectImpl.Container implements Exa
 		case Execution_metamodelPackage.EXAMINATION__SIDE_MEMBER_DISPLAY:
 			setSideMemberDisplay(SIDE_MEMBER_DISPLAY_EDEFAULT);
 			return;
-		case Execution_metamodelPackage.EXAMINATION__EXAMINATION:
-			setExamination((Exam) null);
+		case Execution_metamodelPackage.EXAMINATION__EXAM:
+			setExam((Exam) null);
 			return;
 		}
 		super.eUnset(featureID);
@@ -602,8 +602,8 @@ public class ExaminationImpl extends MinimalEObjectImpl.Container implements Exa
 		case Execution_metamodelPackage.EXAMINATION__SIDE_MEMBER_DISPLAY:
 			return SIDE_MEMBER_DISPLAY_EDEFAULT == null ? sideMemberDisplay != null
 					: !SIDE_MEMBER_DISPLAY_EDEFAULT.equals(sideMemberDisplay);
-		case Execution_metamodelPackage.EXAMINATION__EXAMINATION:
-			return examination != null;
+		case Execution_metamodelPackage.EXAMINATION__EXAM:
+			return exam != null;
 		}
 		return super.eIsSet(featureID);
 	}

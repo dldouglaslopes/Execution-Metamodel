@@ -78,8 +78,6 @@ public class Execution_metamodelFactoryImpl extends EFactoryImpl implements Exec
 			return createCreator();
 		case Execution_metamodelPackage.EXECUTOR:
 			return createExecutor();
-		case Execution_metamodelPackage.ANSWER:
-			return createAnswer();
 		case Execution_metamodelPackage.QUESTION:
 			return createQuestion();
 		case Execution_metamodelPackage.VARIABLE:
@@ -102,20 +100,24 @@ public class Execution_metamodelFactoryImpl extends EFactoryImpl implements Exec
 			return createPrescribedPrescriptionItem();
 		case Execution_metamodelPackage.PRESCRIBED_MEDICAMENT:
 			return createPrescribedMedicament();
-		case Execution_metamodelPackage.EXTENDED_PROTOCOL:
-			return createExtendedProtocol();
-		case Execution_metamodelPackage.EXECUTION_PROTOCOL:
-			return createExecutionProtocol();
-		case Execution_metamodelPackage.JUSTIFY:
-			return createJustify();
-		case Execution_metamodelPackage.PROTOCOL:
-			return createProtocol();
+		case Execution_metamodelPackage.SHORT_EXECUTION:
+			return createShortExecution();
+		case Execution_metamodelPackage.JUSTIFICATION:
+			return createJustification();
+		case Execution_metamodelPackage.PATHWAY:
+			return createPathway();
 		case Execution_metamodelPackage.RESPONSIBLE:
 			return createResponsible();
 		case Execution_metamodelPackage.EXECUTED_STEP:
 			return createExecutedStep();
 		case Execution_metamodelPackage.LAST_PROFESSIONAL:
 			return createLastProfessional();
+		case Execution_metamodelPackage.ANSWER:
+			return createAnswer();
+		case Execution_metamodelPackage.NUMERIC:
+			return createNumeric();
+		case Execution_metamodelPackage.YES_OR_NO:
+			return createYesOrNo();
 		default:
 			throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -236,16 +238,6 @@ public class Execution_metamodelFactoryImpl extends EFactoryImpl implements Exec
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Answer createAnswer() {
-		AnswerImpl answer = new AnswerImpl();
-		return answer;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public Question createQuestion() {
 		QuestionImpl question = new QuestionImpl();
 		return question;
@@ -356,9 +348,9 @@ public class Execution_metamodelFactoryImpl extends EFactoryImpl implements Exec
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ExtendedProtocol createExtendedProtocol() {
-		ExtendedProtocolImpl extendedProtocol = new ExtendedProtocolImpl();
-		return extendedProtocol;
+	public ShortExecution createShortExecution() {
+		ShortExecutionImpl shortExecution = new ShortExecutionImpl();
+		return shortExecution;
 	}
 
 	/**
@@ -366,9 +358,9 @@ public class Execution_metamodelFactoryImpl extends EFactoryImpl implements Exec
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ExecutionProtocol createExecutionProtocol() {
-		ExecutionProtocolImpl executionProtocol = new ExecutionProtocolImpl();
-		return executionProtocol;
+	public Justification createJustification() {
+		JustificationImpl justification = new JustificationImpl();
+		return justification;
 	}
 
 	/**
@@ -376,19 +368,9 @@ public class Execution_metamodelFactoryImpl extends EFactoryImpl implements Exec
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Justify createJustify() {
-		JustifyImpl justify = new JustifyImpl();
-		return justify;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Protocol createProtocol() {
-		ProtocolImpl protocol = new ProtocolImpl();
-		return protocol;
+	public Pathway createPathway() {
+		PathwayImpl pathway = new PathwayImpl();
+		return pathway;
 	}
 
 	/**
@@ -419,6 +401,36 @@ public class Execution_metamodelFactoryImpl extends EFactoryImpl implements Exec
 	public LastProfessional createLastProfessional() {
 		LastProfessionalImpl lastProfessional = new LastProfessionalImpl();
 		return lastProfessional;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Answer createAnswer() {
+		AnswerImpl answer = new AnswerImpl();
+		return answer;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Numeric createNumeric() {
+		NumericImpl numeric = new NumericImpl();
+		return numeric;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public YesOrNo createYesOrNo() {
+		YesOrNoImpl yesOrNo = new YesOrNoImpl();
+		return yesOrNo;
 	}
 
 	/**

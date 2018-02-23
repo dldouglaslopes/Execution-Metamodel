@@ -7,8 +7,6 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 
-import protocolosv2.Protocolosv2Package;
-
 /**
  * <!-- begin-user-doc -->
  * The <b>Package</b> for the model.
@@ -59,14 +57,14 @@ public interface Execution_metamodelPackage extends EPackage {
 	Execution_metamodelPackage eINSTANCE = MetamodelExecution.impl.Execution_metamodelPackageImpl.init();
 
 	/**
-	 * The meta object id for the '{@link MetamodelExecution.impl.ExecutionStepImpl <em>Execution Step</em>}' class.
+	 * The meta object id for the '{@link MetamodelExecution.impl.ExecutionImpl <em>Execution</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see MetamodelExecution.impl.ExecutionStepImpl
-	 * @see MetamodelExecution.impl.Execution_metamodelPackageImpl#getExecutionStep()
+	 * @see MetamodelExecution.impl.ExecutionImpl
+	 * @see MetamodelExecution.impl.Execution_metamodelPackageImpl#getExecution()
 	 * @generated
 	 */
-	int EXECUTION_STEP = 0;
+	int EXECUTION = 32;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -75,25 +73,7 @@ public interface Execution_metamodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EXECUTION_STEP__ID = 0;
-
-	/**
-	 * The feature id for the '<em><b>Type</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EXECUTION_STEP__TYPE = 1;
-
-	/**
-	 * The feature id for the '<em><b>Type Verbose</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EXECUTION_STEP__TYPE_VERBOSE = 2;
+	int EXECUTION__ID = 0;
 
 	/**
 	 * The feature id for the '<em><b>Url</b></em>' attribute.
@@ -102,106 +82,7 @@ public interface Execution_metamodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EXECUTION_STEP__URL = 3;
-
-	/**
-	 * The feature id for the '<em><b>Is Current</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EXECUTION_STEP__IS_CURRENT = 4;
-
-	/**
-	 * The feature id for the '<em><b>Reworked</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EXECUTION_STEP__REWORKED = 5;
-
-	/**
-	 * The feature id for the '<em><b>Executed</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EXECUTION_STEP__EXECUTED = 6;
-
-	/**
-	 * The feature id for the '<em><b>Previous</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EXECUTION_STEP__PREVIOUS = 7;
-
-	/**
-	 * The feature id for the '<em><b>Next</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EXECUTION_STEP__NEXT = 8;
-
-	/**
-	 * The feature id for the '<em><b>Creation Date</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EXECUTION_STEP__CREATION_DATE = 9;
-
-	/**
-	 * The feature id for the '<em><b>Change Date</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EXECUTION_STEP__CHANGE_DATE = 10;
-
-	/**
-	 * The feature id for the '<em><b>Execution Date</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EXECUTION_STEP__EXECUTION_DATE = 11;
-
-	/**
-	 * The feature id for the '<em><b>Creator</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EXECUTION_STEP__CREATOR = 12;
-
-	/**
-	 * The feature id for the '<em><b>Executor</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EXECUTION_STEP__EXECUTOR = 13;
-
-	/**
-	 * The feature id for the '<em><b>Id Step</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EXECUTION_STEP__ID_STEP = 14;
+	int EXECUTION__URL = 1;
 
 	/**
 	 * The feature id for the '<em><b>Id Protocol</b></em>' attribute.
@@ -210,7 +91,188 @@ public interface Execution_metamodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EXECUTION_STEP__ID_PROTOCOL = 15;
+	int EXECUTION__ID_PROTOCOL = 2;
+
+	/**
+	 * The feature id for the '<em><b>Creation Date</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXECUTION__CREATION_DATE = 3;
+
+	/**
+	 * The feature id for the '<em><b>Justification</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXECUTION__JUSTIFICATION = 4;
+
+	/**
+	 * The number of structural features of the '<em>Execution</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXECUTION_FEATURE_COUNT = 5;
+
+	/**
+	 * The number of operations of the '<em>Execution</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXECUTION_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link MetamodelExecution.impl.StepImpl <em>Step</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see MetamodelExecution.impl.StepImpl
+	 * @see MetamodelExecution.impl.Execution_metamodelPackageImpl#getStep()
+	 * @generated
+	 */
+	int STEP = 0;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STEP__ID = EXECUTION__ID;
+
+	/**
+	 * The feature id for the '<em><b>Url</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STEP__URL = EXECUTION__URL;
+
+	/**
+	 * The feature id for the '<em><b>Id Protocol</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STEP__ID_PROTOCOL = EXECUTION__ID_PROTOCOL;
+
+	/**
+	 * The feature id for the '<em><b>Creation Date</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STEP__CREATION_DATE = EXECUTION__CREATION_DATE;
+
+	/**
+	 * The feature id for the '<em><b>Justification</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STEP__JUSTIFICATION = EXECUTION__JUSTIFICATION;
+
+	/**
+	 * The feature id for the '<em><b>Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STEP__TYPE = EXECUTION_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Type Verbose</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STEP__TYPE_VERBOSE = EXECUTION_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Is Current</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STEP__IS_CURRENT = EXECUTION_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>Reworked</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STEP__REWORKED = EXECUTION_FEATURE_COUNT + 3;
+
+	/**
+	 * The feature id for the '<em><b>Executed</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STEP__EXECUTED = EXECUTION_FEATURE_COUNT + 4;
+
+	/**
+	 * The feature id for the '<em><b>Previous</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STEP__PREVIOUS = EXECUTION_FEATURE_COUNT + 5;
+
+	/**
+	 * The feature id for the '<em><b>Next</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STEP__NEXT = EXECUTION_FEATURE_COUNT + 6;
+
+	/**
+	 * The feature id for the '<em><b>Change Date</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STEP__CHANGE_DATE = EXECUTION_FEATURE_COUNT + 7;
+
+	/**
+	 * The feature id for the '<em><b>Execution Date</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STEP__EXECUTION_DATE = EXECUTION_FEATURE_COUNT + 8;
+
+	/**
+	 * The feature id for the '<em><b>Id Step</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STEP__ID_STEP = EXECUTION_FEATURE_COUNT + 9;
 
 	/**
 	 * The feature id for the '<em><b>Id Executed Protocol</b></em>' attribute.
@@ -219,16 +281,179 @@ public interface Execution_metamodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EXECUTION_STEP__ID_EXECUTED_PROTOCOL = 16;
+	int STEP__ID_EXECUTED_PROTOCOL = EXECUTION_FEATURE_COUNT + 10;
 
 	/**
-	 * The feature id for the '<em><b>Justify</b></em>' containment reference.
+	 * The number of structural features of the '<em>Step</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int EXECUTION_STEP__JUSTIFY = 17;
+	int STEP_FEATURE_COUNT = EXECUTION_FEATURE_COUNT + 11;
+
+	/**
+	 * The number of operations of the '<em>Step</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STEP_OPERATION_COUNT = EXECUTION_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link MetamodelExecution.impl.CompleteStepImpl <em>Complete Step</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see MetamodelExecution.impl.CompleteStepImpl
+	 * @see MetamodelExecution.impl.Execution_metamodelPackageImpl#getCompleteStep()
+	 * @generated
+	 */
+	int COMPLETE_STEP = 35;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPLETE_STEP__ID = STEP__ID;
+
+	/**
+	 * The feature id for the '<em><b>Url</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPLETE_STEP__URL = STEP__URL;
+
+	/**
+	 * The feature id for the '<em><b>Id Protocol</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPLETE_STEP__ID_PROTOCOL = STEP__ID_PROTOCOL;
+
+	/**
+	 * The feature id for the '<em><b>Creation Date</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPLETE_STEP__CREATION_DATE = STEP__CREATION_DATE;
+
+	/**
+	 * The feature id for the '<em><b>Justification</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPLETE_STEP__JUSTIFICATION = STEP__JUSTIFICATION;
+
+	/**
+	 * The feature id for the '<em><b>Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPLETE_STEP__TYPE = STEP__TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Type Verbose</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPLETE_STEP__TYPE_VERBOSE = STEP__TYPE_VERBOSE;
+
+	/**
+	 * The feature id for the '<em><b>Is Current</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPLETE_STEP__IS_CURRENT = STEP__IS_CURRENT;
+
+	/**
+	 * The feature id for the '<em><b>Reworked</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPLETE_STEP__REWORKED = STEP__REWORKED;
+
+	/**
+	 * The feature id for the '<em><b>Executed</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPLETE_STEP__EXECUTED = STEP__EXECUTED;
+
+	/**
+	 * The feature id for the '<em><b>Previous</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPLETE_STEP__PREVIOUS = STEP__PREVIOUS;
+
+	/**
+	 * The feature id for the '<em><b>Next</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPLETE_STEP__NEXT = STEP__NEXT;
+
+	/**
+	 * The feature id for the '<em><b>Change Date</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPLETE_STEP__CHANGE_DATE = STEP__CHANGE_DATE;
+
+	/**
+	 * The feature id for the '<em><b>Execution Date</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPLETE_STEP__EXECUTION_DATE = STEP__EXECUTION_DATE;
+
+	/**
+	 * The feature id for the '<em><b>Id Step</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPLETE_STEP__ID_STEP = STEP__ID_STEP;
+
+	/**
+	 * The feature id for the '<em><b>Id Executed Protocol</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPLETE_STEP__ID_EXECUTED_PROTOCOL = STEP__ID_EXECUTED_PROTOCOL;
 
 	/**
 	 * The feature id for the '<em><b>Step</b></em>' containment reference list.
@@ -237,25 +462,43 @@ public interface Execution_metamodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EXECUTION_STEP__STEP = 18;
+	int COMPLETE_STEP__STEP = STEP_FEATURE_COUNT + 0;
 
 	/**
-	 * The number of structural features of the '<em>Execution Step</em>' class.
+	 * The feature id for the '<em><b>Executor</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int EXECUTION_STEP_FEATURE_COUNT = 19;
+	int COMPLETE_STEP__EXECUTOR = STEP_FEATURE_COUNT + 1;
 
 	/**
-	 * The number of operations of the '<em>Execution Step</em>' class.
+	 * The feature id for the '<em><b>Creator</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int EXECUTION_STEP_OPERATION_COUNT = 0;
+	int COMPLETE_STEP__CREATOR = STEP_FEATURE_COUNT + 2;
+
+	/**
+	 * The number of structural features of the '<em>Complete Step</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPLETE_STEP_FEATURE_COUNT = STEP_FEATURE_COUNT + 3;
+
+	/**
+	 * The number of operations of the '<em>Complete Step</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPLETE_STEP_OPERATION_COUNT = STEP_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link MetamodelExecution.impl.AuxiliaryConductImpl <em>Auxiliary Conduct</em>}' class.
@@ -274,25 +517,7 @@ public interface Execution_metamodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int AUXILIARY_CONDUCT__ID = EXECUTION_STEP__ID;
-
-	/**
-	 * The feature id for the '<em><b>Type</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int AUXILIARY_CONDUCT__TYPE = EXECUTION_STEP__TYPE;
-
-	/**
-	 * The feature id for the '<em><b>Type Verbose</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int AUXILIARY_CONDUCT__TYPE_VERBOSE = EXECUTION_STEP__TYPE_VERBOSE;
+	int AUXILIARY_CONDUCT__ID = COMPLETE_STEP__ID;
 
 	/**
 	 * The feature id for the '<em><b>Url</b></em>' attribute.
@@ -301,106 +526,7 @@ public interface Execution_metamodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int AUXILIARY_CONDUCT__URL = EXECUTION_STEP__URL;
-
-	/**
-	 * The feature id for the '<em><b>Is Current</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int AUXILIARY_CONDUCT__IS_CURRENT = EXECUTION_STEP__IS_CURRENT;
-
-	/**
-	 * The feature id for the '<em><b>Reworked</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int AUXILIARY_CONDUCT__REWORKED = EXECUTION_STEP__REWORKED;
-
-	/**
-	 * The feature id for the '<em><b>Executed</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int AUXILIARY_CONDUCT__EXECUTED = EXECUTION_STEP__EXECUTED;
-
-	/**
-	 * The feature id for the '<em><b>Previous</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int AUXILIARY_CONDUCT__PREVIOUS = EXECUTION_STEP__PREVIOUS;
-
-	/**
-	 * The feature id for the '<em><b>Next</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int AUXILIARY_CONDUCT__NEXT = EXECUTION_STEP__NEXT;
-
-	/**
-	 * The feature id for the '<em><b>Creation Date</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int AUXILIARY_CONDUCT__CREATION_DATE = EXECUTION_STEP__CREATION_DATE;
-
-	/**
-	 * The feature id for the '<em><b>Change Date</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int AUXILIARY_CONDUCT__CHANGE_DATE = EXECUTION_STEP__CHANGE_DATE;
-
-	/**
-	 * The feature id for the '<em><b>Execution Date</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int AUXILIARY_CONDUCT__EXECUTION_DATE = EXECUTION_STEP__EXECUTION_DATE;
-
-	/**
-	 * The feature id for the '<em><b>Creator</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int AUXILIARY_CONDUCT__CREATOR = EXECUTION_STEP__CREATOR;
-
-	/**
-	 * The feature id for the '<em><b>Executor</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int AUXILIARY_CONDUCT__EXECUTOR = EXECUTION_STEP__EXECUTOR;
-
-	/**
-	 * The feature id for the '<em><b>Id Step</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int AUXILIARY_CONDUCT__ID_STEP = EXECUTION_STEP__ID_STEP;
+	int AUXILIARY_CONDUCT__URL = COMPLETE_STEP__URL;
 
 	/**
 	 * The feature id for the '<em><b>Id Protocol</b></em>' attribute.
@@ -409,7 +535,115 @@ public interface Execution_metamodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int AUXILIARY_CONDUCT__ID_PROTOCOL = EXECUTION_STEP__ID_PROTOCOL;
+	int AUXILIARY_CONDUCT__ID_PROTOCOL = COMPLETE_STEP__ID_PROTOCOL;
+
+	/**
+	 * The feature id for the '<em><b>Creation Date</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int AUXILIARY_CONDUCT__CREATION_DATE = COMPLETE_STEP__CREATION_DATE;
+
+	/**
+	 * The feature id for the '<em><b>Justification</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int AUXILIARY_CONDUCT__JUSTIFICATION = COMPLETE_STEP__JUSTIFICATION;
+
+	/**
+	 * The feature id for the '<em><b>Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int AUXILIARY_CONDUCT__TYPE = COMPLETE_STEP__TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Type Verbose</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int AUXILIARY_CONDUCT__TYPE_VERBOSE = COMPLETE_STEP__TYPE_VERBOSE;
+
+	/**
+	 * The feature id for the '<em><b>Is Current</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int AUXILIARY_CONDUCT__IS_CURRENT = COMPLETE_STEP__IS_CURRENT;
+
+	/**
+	 * The feature id for the '<em><b>Reworked</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int AUXILIARY_CONDUCT__REWORKED = COMPLETE_STEP__REWORKED;
+
+	/**
+	 * The feature id for the '<em><b>Executed</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int AUXILIARY_CONDUCT__EXECUTED = COMPLETE_STEP__EXECUTED;
+
+	/**
+	 * The feature id for the '<em><b>Previous</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int AUXILIARY_CONDUCT__PREVIOUS = COMPLETE_STEP__PREVIOUS;
+
+	/**
+	 * The feature id for the '<em><b>Next</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int AUXILIARY_CONDUCT__NEXT = COMPLETE_STEP__NEXT;
+
+	/**
+	 * The feature id for the '<em><b>Change Date</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int AUXILIARY_CONDUCT__CHANGE_DATE = COMPLETE_STEP__CHANGE_DATE;
+
+	/**
+	 * The feature id for the '<em><b>Execution Date</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int AUXILIARY_CONDUCT__EXECUTION_DATE = COMPLETE_STEP__EXECUTION_DATE;
+
+	/**
+	 * The feature id for the '<em><b>Id Step</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int AUXILIARY_CONDUCT__ID_STEP = COMPLETE_STEP__ID_STEP;
 
 	/**
 	 * The feature id for the '<em><b>Id Executed Protocol</b></em>' attribute.
@@ -418,16 +652,7 @@ public interface Execution_metamodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int AUXILIARY_CONDUCT__ID_EXECUTED_PROTOCOL = EXECUTION_STEP__ID_EXECUTED_PROTOCOL;
-
-	/**
-	 * The feature id for the '<em><b>Justify</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int AUXILIARY_CONDUCT__JUSTIFY = EXECUTION_STEP__JUSTIFY;
+	int AUXILIARY_CONDUCT__ID_EXECUTED_PROTOCOL = COMPLETE_STEP__ID_EXECUTED_PROTOCOL;
 
 	/**
 	 * The feature id for the '<em><b>Step</b></em>' containment reference list.
@@ -436,16 +661,34 @@ public interface Execution_metamodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int AUXILIARY_CONDUCT__STEP = EXECUTION_STEP__STEP;
+	int AUXILIARY_CONDUCT__STEP = COMPLETE_STEP__STEP;
 
 	/**
-	 * The feature id for the '<em><b>Answers</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Executor</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int AUXILIARY_CONDUCT__ANSWERS = EXECUTION_STEP_FEATURE_COUNT + 0;
+	int AUXILIARY_CONDUCT__EXECUTOR = COMPLETE_STEP__EXECUTOR;
+
+	/**
+	 * The feature id for the '<em><b>Creator</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int AUXILIARY_CONDUCT__CREATOR = COMPLETE_STEP__CREATOR;
+
+	/**
+	 * The feature id for the '<em><b>Answer</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int AUXILIARY_CONDUCT__ANSWER = COMPLETE_STEP_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Auxiliary Conduct</em>' class.
@@ -454,7 +697,7 @@ public interface Execution_metamodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int AUXILIARY_CONDUCT_FEATURE_COUNT = EXECUTION_STEP_FEATURE_COUNT + 1;
+	int AUXILIARY_CONDUCT_FEATURE_COUNT = COMPLETE_STEP_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>Auxiliary Conduct</em>' class.
@@ -463,7 +706,7 @@ public interface Execution_metamodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int AUXILIARY_CONDUCT_OPERATION_COUNT = EXECUTION_STEP_OPERATION_COUNT + 0;
+	int AUXILIARY_CONDUCT_OPERATION_COUNT = COMPLETE_STEP_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link MetamodelExecution.impl.InformationImpl <em>Information</em>}' class.
@@ -482,25 +725,7 @@ public interface Execution_metamodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INFORMATION__ID = EXECUTION_STEP__ID;
-
-	/**
-	 * The feature id for the '<em><b>Type</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INFORMATION__TYPE = EXECUTION_STEP__TYPE;
-
-	/**
-	 * The feature id for the '<em><b>Type Verbose</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INFORMATION__TYPE_VERBOSE = EXECUTION_STEP__TYPE_VERBOSE;
+	int INFORMATION__ID = COMPLETE_STEP__ID;
 
 	/**
 	 * The feature id for the '<em><b>Url</b></em>' attribute.
@@ -509,106 +734,7 @@ public interface Execution_metamodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INFORMATION__URL = EXECUTION_STEP__URL;
-
-	/**
-	 * The feature id for the '<em><b>Is Current</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INFORMATION__IS_CURRENT = EXECUTION_STEP__IS_CURRENT;
-
-	/**
-	 * The feature id for the '<em><b>Reworked</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INFORMATION__REWORKED = EXECUTION_STEP__REWORKED;
-
-	/**
-	 * The feature id for the '<em><b>Executed</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INFORMATION__EXECUTED = EXECUTION_STEP__EXECUTED;
-
-	/**
-	 * The feature id for the '<em><b>Previous</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INFORMATION__PREVIOUS = EXECUTION_STEP__PREVIOUS;
-
-	/**
-	 * The feature id for the '<em><b>Next</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INFORMATION__NEXT = EXECUTION_STEP__NEXT;
-
-	/**
-	 * The feature id for the '<em><b>Creation Date</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INFORMATION__CREATION_DATE = EXECUTION_STEP__CREATION_DATE;
-
-	/**
-	 * The feature id for the '<em><b>Change Date</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INFORMATION__CHANGE_DATE = EXECUTION_STEP__CHANGE_DATE;
-
-	/**
-	 * The feature id for the '<em><b>Execution Date</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INFORMATION__EXECUTION_DATE = EXECUTION_STEP__EXECUTION_DATE;
-
-	/**
-	 * The feature id for the '<em><b>Creator</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INFORMATION__CREATOR = EXECUTION_STEP__CREATOR;
-
-	/**
-	 * The feature id for the '<em><b>Executor</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INFORMATION__EXECUTOR = EXECUTION_STEP__EXECUTOR;
-
-	/**
-	 * The feature id for the '<em><b>Id Step</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INFORMATION__ID_STEP = EXECUTION_STEP__ID_STEP;
+	int INFORMATION__URL = COMPLETE_STEP__URL;
 
 	/**
 	 * The feature id for the '<em><b>Id Protocol</b></em>' attribute.
@@ -617,7 +743,115 @@ public interface Execution_metamodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INFORMATION__ID_PROTOCOL = EXECUTION_STEP__ID_PROTOCOL;
+	int INFORMATION__ID_PROTOCOL = COMPLETE_STEP__ID_PROTOCOL;
+
+	/**
+	 * The feature id for the '<em><b>Creation Date</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INFORMATION__CREATION_DATE = COMPLETE_STEP__CREATION_DATE;
+
+	/**
+	 * The feature id for the '<em><b>Justification</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INFORMATION__JUSTIFICATION = COMPLETE_STEP__JUSTIFICATION;
+
+	/**
+	 * The feature id for the '<em><b>Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INFORMATION__TYPE = COMPLETE_STEP__TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Type Verbose</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INFORMATION__TYPE_VERBOSE = COMPLETE_STEP__TYPE_VERBOSE;
+
+	/**
+	 * The feature id for the '<em><b>Is Current</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INFORMATION__IS_CURRENT = COMPLETE_STEP__IS_CURRENT;
+
+	/**
+	 * The feature id for the '<em><b>Reworked</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INFORMATION__REWORKED = COMPLETE_STEP__REWORKED;
+
+	/**
+	 * The feature id for the '<em><b>Executed</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INFORMATION__EXECUTED = COMPLETE_STEP__EXECUTED;
+
+	/**
+	 * The feature id for the '<em><b>Previous</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INFORMATION__PREVIOUS = COMPLETE_STEP__PREVIOUS;
+
+	/**
+	 * The feature id for the '<em><b>Next</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INFORMATION__NEXT = COMPLETE_STEP__NEXT;
+
+	/**
+	 * The feature id for the '<em><b>Change Date</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INFORMATION__CHANGE_DATE = COMPLETE_STEP__CHANGE_DATE;
+
+	/**
+	 * The feature id for the '<em><b>Execution Date</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INFORMATION__EXECUTION_DATE = COMPLETE_STEP__EXECUTION_DATE;
+
+	/**
+	 * The feature id for the '<em><b>Id Step</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INFORMATION__ID_STEP = COMPLETE_STEP__ID_STEP;
 
 	/**
 	 * The feature id for the '<em><b>Id Executed Protocol</b></em>' attribute.
@@ -626,16 +860,7 @@ public interface Execution_metamodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INFORMATION__ID_EXECUTED_PROTOCOL = EXECUTION_STEP__ID_EXECUTED_PROTOCOL;
-
-	/**
-	 * The feature id for the '<em><b>Justify</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INFORMATION__JUSTIFY = EXECUTION_STEP__JUSTIFY;
+	int INFORMATION__ID_EXECUTED_PROTOCOL = COMPLETE_STEP__ID_EXECUTED_PROTOCOL;
 
 	/**
 	 * The feature id for the '<em><b>Step</b></em>' containment reference list.
@@ -644,7 +869,25 @@ public interface Execution_metamodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INFORMATION__STEP = EXECUTION_STEP__STEP;
+	int INFORMATION__STEP = COMPLETE_STEP__STEP;
+
+	/**
+	 * The feature id for the '<em><b>Executor</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INFORMATION__EXECUTOR = COMPLETE_STEP__EXECUTOR;
+
+	/**
+	 * The feature id for the '<em><b>Creator</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INFORMATION__CREATOR = COMPLETE_STEP__CREATOR;
 
 	/**
 	 * The number of structural features of the '<em>Information</em>' class.
@@ -653,7 +896,7 @@ public interface Execution_metamodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INFORMATION_FEATURE_COUNT = EXECUTION_STEP_FEATURE_COUNT + 0;
+	int INFORMATION_FEATURE_COUNT = COMPLETE_STEP_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>Information</em>' class.
@@ -662,7 +905,7 @@ public interface Execution_metamodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INFORMATION_OPERATION_COUNT = EXECUTION_STEP_OPERATION_COUNT + 0;
+	int INFORMATION_OPERATION_COUNT = COMPLETE_STEP_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link MetamodelExecution.impl.DischargeImpl <em>Discharge</em>}' class.
@@ -681,25 +924,7 @@ public interface Execution_metamodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DISCHARGE__ID = EXECUTION_STEP__ID;
-
-	/**
-	 * The feature id for the '<em><b>Type</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DISCHARGE__TYPE = EXECUTION_STEP__TYPE;
-
-	/**
-	 * The feature id for the '<em><b>Type Verbose</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DISCHARGE__TYPE_VERBOSE = EXECUTION_STEP__TYPE_VERBOSE;
+	int DISCHARGE__ID = COMPLETE_STEP__ID;
 
 	/**
 	 * The feature id for the '<em><b>Url</b></em>' attribute.
@@ -708,106 +933,7 @@ public interface Execution_metamodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DISCHARGE__URL = EXECUTION_STEP__URL;
-
-	/**
-	 * The feature id for the '<em><b>Is Current</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DISCHARGE__IS_CURRENT = EXECUTION_STEP__IS_CURRENT;
-
-	/**
-	 * The feature id for the '<em><b>Reworked</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DISCHARGE__REWORKED = EXECUTION_STEP__REWORKED;
-
-	/**
-	 * The feature id for the '<em><b>Executed</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DISCHARGE__EXECUTED = EXECUTION_STEP__EXECUTED;
-
-	/**
-	 * The feature id for the '<em><b>Previous</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DISCHARGE__PREVIOUS = EXECUTION_STEP__PREVIOUS;
-
-	/**
-	 * The feature id for the '<em><b>Next</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DISCHARGE__NEXT = EXECUTION_STEP__NEXT;
-
-	/**
-	 * The feature id for the '<em><b>Creation Date</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DISCHARGE__CREATION_DATE = EXECUTION_STEP__CREATION_DATE;
-
-	/**
-	 * The feature id for the '<em><b>Change Date</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DISCHARGE__CHANGE_DATE = EXECUTION_STEP__CHANGE_DATE;
-
-	/**
-	 * The feature id for the '<em><b>Execution Date</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DISCHARGE__EXECUTION_DATE = EXECUTION_STEP__EXECUTION_DATE;
-
-	/**
-	 * The feature id for the '<em><b>Creator</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DISCHARGE__CREATOR = EXECUTION_STEP__CREATOR;
-
-	/**
-	 * The feature id for the '<em><b>Executor</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DISCHARGE__EXECUTOR = EXECUTION_STEP__EXECUTOR;
-
-	/**
-	 * The feature id for the '<em><b>Id Step</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DISCHARGE__ID_STEP = EXECUTION_STEP__ID_STEP;
+	int DISCHARGE__URL = COMPLETE_STEP__URL;
 
 	/**
 	 * The feature id for the '<em><b>Id Protocol</b></em>' attribute.
@@ -816,7 +942,115 @@ public interface Execution_metamodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DISCHARGE__ID_PROTOCOL = EXECUTION_STEP__ID_PROTOCOL;
+	int DISCHARGE__ID_PROTOCOL = COMPLETE_STEP__ID_PROTOCOL;
+
+	/**
+	 * The feature id for the '<em><b>Creation Date</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DISCHARGE__CREATION_DATE = COMPLETE_STEP__CREATION_DATE;
+
+	/**
+	 * The feature id for the '<em><b>Justification</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DISCHARGE__JUSTIFICATION = COMPLETE_STEP__JUSTIFICATION;
+
+	/**
+	 * The feature id for the '<em><b>Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DISCHARGE__TYPE = COMPLETE_STEP__TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Type Verbose</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DISCHARGE__TYPE_VERBOSE = COMPLETE_STEP__TYPE_VERBOSE;
+
+	/**
+	 * The feature id for the '<em><b>Is Current</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DISCHARGE__IS_CURRENT = COMPLETE_STEP__IS_CURRENT;
+
+	/**
+	 * The feature id for the '<em><b>Reworked</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DISCHARGE__REWORKED = COMPLETE_STEP__REWORKED;
+
+	/**
+	 * The feature id for the '<em><b>Executed</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DISCHARGE__EXECUTED = COMPLETE_STEP__EXECUTED;
+
+	/**
+	 * The feature id for the '<em><b>Previous</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DISCHARGE__PREVIOUS = COMPLETE_STEP__PREVIOUS;
+
+	/**
+	 * The feature id for the '<em><b>Next</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DISCHARGE__NEXT = COMPLETE_STEP__NEXT;
+
+	/**
+	 * The feature id for the '<em><b>Change Date</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DISCHARGE__CHANGE_DATE = COMPLETE_STEP__CHANGE_DATE;
+
+	/**
+	 * The feature id for the '<em><b>Execution Date</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DISCHARGE__EXECUTION_DATE = COMPLETE_STEP__EXECUTION_DATE;
+
+	/**
+	 * The feature id for the '<em><b>Id Step</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DISCHARGE__ID_STEP = COMPLETE_STEP__ID_STEP;
 
 	/**
 	 * The feature id for the '<em><b>Id Executed Protocol</b></em>' attribute.
@@ -825,16 +1059,7 @@ public interface Execution_metamodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DISCHARGE__ID_EXECUTED_PROTOCOL = EXECUTION_STEP__ID_EXECUTED_PROTOCOL;
-
-	/**
-	 * The feature id for the '<em><b>Justify</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DISCHARGE__JUSTIFY = EXECUTION_STEP__JUSTIFY;
+	int DISCHARGE__ID_EXECUTED_PROTOCOL = COMPLETE_STEP__ID_EXECUTED_PROTOCOL;
 
 	/**
 	 * The feature id for the '<em><b>Step</b></em>' containment reference list.
@@ -843,7 +1068,25 @@ public interface Execution_metamodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DISCHARGE__STEP = EXECUTION_STEP__STEP;
+	int DISCHARGE__STEP = COMPLETE_STEP__STEP;
+
+	/**
+	 * The feature id for the '<em><b>Executor</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DISCHARGE__EXECUTOR = COMPLETE_STEP__EXECUTOR;
+
+	/**
+	 * The feature id for the '<em><b>Creator</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DISCHARGE__CREATOR = COMPLETE_STEP__CREATOR;
 
 	/**
 	 * The number of structural features of the '<em>Discharge</em>' class.
@@ -852,7 +1095,7 @@ public interface Execution_metamodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DISCHARGE_FEATURE_COUNT = EXECUTION_STEP_FEATURE_COUNT + 0;
+	int DISCHARGE_FEATURE_COUNT = COMPLETE_STEP_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>Discharge</em>' class.
@@ -861,7 +1104,7 @@ public interface Execution_metamodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DISCHARGE_OPERATION_COUNT = EXECUTION_STEP_OPERATION_COUNT + 0;
+	int DISCHARGE_OPERATION_COUNT = COMPLETE_STEP_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link MetamodelExecution.impl.ReferralImpl <em>Referral</em>}' class.
@@ -880,25 +1123,7 @@ public interface Execution_metamodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int REFERRAL__ID = EXECUTION_STEP__ID;
-
-	/**
-	 * The feature id for the '<em><b>Type</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REFERRAL__TYPE = EXECUTION_STEP__TYPE;
-
-	/**
-	 * The feature id for the '<em><b>Type Verbose</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REFERRAL__TYPE_VERBOSE = EXECUTION_STEP__TYPE_VERBOSE;
+	int REFERRAL__ID = COMPLETE_STEP__ID;
 
 	/**
 	 * The feature id for the '<em><b>Url</b></em>' attribute.
@@ -907,106 +1132,7 @@ public interface Execution_metamodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int REFERRAL__URL = EXECUTION_STEP__URL;
-
-	/**
-	 * The feature id for the '<em><b>Is Current</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REFERRAL__IS_CURRENT = EXECUTION_STEP__IS_CURRENT;
-
-	/**
-	 * The feature id for the '<em><b>Reworked</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REFERRAL__REWORKED = EXECUTION_STEP__REWORKED;
-
-	/**
-	 * The feature id for the '<em><b>Executed</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REFERRAL__EXECUTED = EXECUTION_STEP__EXECUTED;
-
-	/**
-	 * The feature id for the '<em><b>Previous</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REFERRAL__PREVIOUS = EXECUTION_STEP__PREVIOUS;
-
-	/**
-	 * The feature id for the '<em><b>Next</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REFERRAL__NEXT = EXECUTION_STEP__NEXT;
-
-	/**
-	 * The feature id for the '<em><b>Creation Date</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REFERRAL__CREATION_DATE = EXECUTION_STEP__CREATION_DATE;
-
-	/**
-	 * The feature id for the '<em><b>Change Date</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REFERRAL__CHANGE_DATE = EXECUTION_STEP__CHANGE_DATE;
-
-	/**
-	 * The feature id for the '<em><b>Execution Date</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REFERRAL__EXECUTION_DATE = EXECUTION_STEP__EXECUTION_DATE;
-
-	/**
-	 * The feature id for the '<em><b>Creator</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REFERRAL__CREATOR = EXECUTION_STEP__CREATOR;
-
-	/**
-	 * The feature id for the '<em><b>Executor</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REFERRAL__EXECUTOR = EXECUTION_STEP__EXECUTOR;
-
-	/**
-	 * The feature id for the '<em><b>Id Step</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REFERRAL__ID_STEP = EXECUTION_STEP__ID_STEP;
+	int REFERRAL__URL = COMPLETE_STEP__URL;
 
 	/**
 	 * The feature id for the '<em><b>Id Protocol</b></em>' attribute.
@@ -1015,7 +1141,115 @@ public interface Execution_metamodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int REFERRAL__ID_PROTOCOL = EXECUTION_STEP__ID_PROTOCOL;
+	int REFERRAL__ID_PROTOCOL = COMPLETE_STEP__ID_PROTOCOL;
+
+	/**
+	 * The feature id for the '<em><b>Creation Date</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REFERRAL__CREATION_DATE = COMPLETE_STEP__CREATION_DATE;
+
+	/**
+	 * The feature id for the '<em><b>Justification</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REFERRAL__JUSTIFICATION = COMPLETE_STEP__JUSTIFICATION;
+
+	/**
+	 * The feature id for the '<em><b>Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REFERRAL__TYPE = COMPLETE_STEP__TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Type Verbose</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REFERRAL__TYPE_VERBOSE = COMPLETE_STEP__TYPE_VERBOSE;
+
+	/**
+	 * The feature id for the '<em><b>Is Current</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REFERRAL__IS_CURRENT = COMPLETE_STEP__IS_CURRENT;
+
+	/**
+	 * The feature id for the '<em><b>Reworked</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REFERRAL__REWORKED = COMPLETE_STEP__REWORKED;
+
+	/**
+	 * The feature id for the '<em><b>Executed</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REFERRAL__EXECUTED = COMPLETE_STEP__EXECUTED;
+
+	/**
+	 * The feature id for the '<em><b>Previous</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REFERRAL__PREVIOUS = COMPLETE_STEP__PREVIOUS;
+
+	/**
+	 * The feature id for the '<em><b>Next</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REFERRAL__NEXT = COMPLETE_STEP__NEXT;
+
+	/**
+	 * The feature id for the '<em><b>Change Date</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REFERRAL__CHANGE_DATE = COMPLETE_STEP__CHANGE_DATE;
+
+	/**
+	 * The feature id for the '<em><b>Execution Date</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REFERRAL__EXECUTION_DATE = COMPLETE_STEP__EXECUTION_DATE;
+
+	/**
+	 * The feature id for the '<em><b>Id Step</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REFERRAL__ID_STEP = COMPLETE_STEP__ID_STEP;
 
 	/**
 	 * The feature id for the '<em><b>Id Executed Protocol</b></em>' attribute.
@@ -1024,16 +1258,7 @@ public interface Execution_metamodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int REFERRAL__ID_EXECUTED_PROTOCOL = EXECUTION_STEP__ID_EXECUTED_PROTOCOL;
-
-	/**
-	 * The feature id for the '<em><b>Justify</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REFERRAL__JUSTIFY = EXECUTION_STEP__JUSTIFY;
+	int REFERRAL__ID_EXECUTED_PROTOCOL = COMPLETE_STEP__ID_EXECUTED_PROTOCOL;
 
 	/**
 	 * The feature id for the '<em><b>Step</b></em>' containment reference list.
@@ -1042,7 +1267,25 @@ public interface Execution_metamodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int REFERRAL__STEP = EXECUTION_STEP__STEP;
+	int REFERRAL__STEP = COMPLETE_STEP__STEP;
+
+	/**
+	 * The feature id for the '<em><b>Executor</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REFERRAL__EXECUTOR = COMPLETE_STEP__EXECUTOR;
+
+	/**
+	 * The feature id for the '<em><b>Creator</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REFERRAL__CREATOR = COMPLETE_STEP__CREATOR;
 
 	/**
 	 * The number of structural features of the '<em>Referral</em>' class.
@@ -1051,7 +1294,7 @@ public interface Execution_metamodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int REFERRAL_FEATURE_COUNT = EXECUTION_STEP_FEATURE_COUNT + 0;
+	int REFERRAL_FEATURE_COUNT = COMPLETE_STEP_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>Referral</em>' class.
@@ -1060,7 +1303,7 @@ public interface Execution_metamodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int REFERRAL_OPERATION_COUNT = EXECUTION_STEP_OPERATION_COUNT + 0;
+	int REFERRAL_OPERATION_COUNT = COMPLETE_STEP_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link MetamodelExecution.impl.PrescriptionImpl <em>Prescription</em>}' class.
@@ -1079,25 +1322,7 @@ public interface Execution_metamodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PRESCRIPTION__ID = EXECUTION_STEP__ID;
-
-	/**
-	 * The feature id for the '<em><b>Type</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PRESCRIPTION__TYPE = EXECUTION_STEP__TYPE;
-
-	/**
-	 * The feature id for the '<em><b>Type Verbose</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PRESCRIPTION__TYPE_VERBOSE = EXECUTION_STEP__TYPE_VERBOSE;
+	int PRESCRIPTION__ID = COMPLETE_STEP__ID;
 
 	/**
 	 * The feature id for the '<em><b>Url</b></em>' attribute.
@@ -1106,106 +1331,7 @@ public interface Execution_metamodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PRESCRIPTION__URL = EXECUTION_STEP__URL;
-
-	/**
-	 * The feature id for the '<em><b>Is Current</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PRESCRIPTION__IS_CURRENT = EXECUTION_STEP__IS_CURRENT;
-
-	/**
-	 * The feature id for the '<em><b>Reworked</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PRESCRIPTION__REWORKED = EXECUTION_STEP__REWORKED;
-
-	/**
-	 * The feature id for the '<em><b>Executed</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PRESCRIPTION__EXECUTED = EXECUTION_STEP__EXECUTED;
-
-	/**
-	 * The feature id for the '<em><b>Previous</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PRESCRIPTION__PREVIOUS = EXECUTION_STEP__PREVIOUS;
-
-	/**
-	 * The feature id for the '<em><b>Next</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PRESCRIPTION__NEXT = EXECUTION_STEP__NEXT;
-
-	/**
-	 * The feature id for the '<em><b>Creation Date</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PRESCRIPTION__CREATION_DATE = EXECUTION_STEP__CREATION_DATE;
-
-	/**
-	 * The feature id for the '<em><b>Change Date</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PRESCRIPTION__CHANGE_DATE = EXECUTION_STEP__CHANGE_DATE;
-
-	/**
-	 * The feature id for the '<em><b>Execution Date</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PRESCRIPTION__EXECUTION_DATE = EXECUTION_STEP__EXECUTION_DATE;
-
-	/**
-	 * The feature id for the '<em><b>Creator</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PRESCRIPTION__CREATOR = EXECUTION_STEP__CREATOR;
-
-	/**
-	 * The feature id for the '<em><b>Executor</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PRESCRIPTION__EXECUTOR = EXECUTION_STEP__EXECUTOR;
-
-	/**
-	 * The feature id for the '<em><b>Id Step</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PRESCRIPTION__ID_STEP = EXECUTION_STEP__ID_STEP;
+	int PRESCRIPTION__URL = COMPLETE_STEP__URL;
 
 	/**
 	 * The feature id for the '<em><b>Id Protocol</b></em>' attribute.
@@ -1214,7 +1340,115 @@ public interface Execution_metamodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PRESCRIPTION__ID_PROTOCOL = EXECUTION_STEP__ID_PROTOCOL;
+	int PRESCRIPTION__ID_PROTOCOL = COMPLETE_STEP__ID_PROTOCOL;
+
+	/**
+	 * The feature id for the '<em><b>Creation Date</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PRESCRIPTION__CREATION_DATE = COMPLETE_STEP__CREATION_DATE;
+
+	/**
+	 * The feature id for the '<em><b>Justification</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PRESCRIPTION__JUSTIFICATION = COMPLETE_STEP__JUSTIFICATION;
+
+	/**
+	 * The feature id for the '<em><b>Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PRESCRIPTION__TYPE = COMPLETE_STEP__TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Type Verbose</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PRESCRIPTION__TYPE_VERBOSE = COMPLETE_STEP__TYPE_VERBOSE;
+
+	/**
+	 * The feature id for the '<em><b>Is Current</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PRESCRIPTION__IS_CURRENT = COMPLETE_STEP__IS_CURRENT;
+
+	/**
+	 * The feature id for the '<em><b>Reworked</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PRESCRIPTION__REWORKED = COMPLETE_STEP__REWORKED;
+
+	/**
+	 * The feature id for the '<em><b>Executed</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PRESCRIPTION__EXECUTED = COMPLETE_STEP__EXECUTED;
+
+	/**
+	 * The feature id for the '<em><b>Previous</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PRESCRIPTION__PREVIOUS = COMPLETE_STEP__PREVIOUS;
+
+	/**
+	 * The feature id for the '<em><b>Next</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PRESCRIPTION__NEXT = COMPLETE_STEP__NEXT;
+
+	/**
+	 * The feature id for the '<em><b>Change Date</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PRESCRIPTION__CHANGE_DATE = COMPLETE_STEP__CHANGE_DATE;
+
+	/**
+	 * The feature id for the '<em><b>Execution Date</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PRESCRIPTION__EXECUTION_DATE = COMPLETE_STEP__EXECUTION_DATE;
+
+	/**
+	 * The feature id for the '<em><b>Id Step</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PRESCRIPTION__ID_STEP = COMPLETE_STEP__ID_STEP;
 
 	/**
 	 * The feature id for the '<em><b>Id Executed Protocol</b></em>' attribute.
@@ -1223,16 +1457,7 @@ public interface Execution_metamodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PRESCRIPTION__ID_EXECUTED_PROTOCOL = EXECUTION_STEP__ID_EXECUTED_PROTOCOL;
-
-	/**
-	 * The feature id for the '<em><b>Justify</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PRESCRIPTION__JUSTIFY = EXECUTION_STEP__JUSTIFY;
+	int PRESCRIPTION__ID_EXECUTED_PROTOCOL = COMPLETE_STEP__ID_EXECUTED_PROTOCOL;
 
 	/**
 	 * The feature id for the '<em><b>Step</b></em>' containment reference list.
@@ -1241,7 +1466,25 @@ public interface Execution_metamodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PRESCRIPTION__STEP = EXECUTION_STEP__STEP;
+	int PRESCRIPTION__STEP = COMPLETE_STEP__STEP;
+
+	/**
+	 * The feature id for the '<em><b>Executor</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PRESCRIPTION__EXECUTOR = COMPLETE_STEP__EXECUTOR;
+
+	/**
+	 * The feature id for the '<em><b>Creator</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PRESCRIPTION__CREATOR = COMPLETE_STEP__CREATOR;
 
 	/**
 	 * The feature id for the '<em><b>Text</b></em>' attribute.
@@ -1250,25 +1493,7 @@ public interface Execution_metamodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PRESCRIPTION__TEXT = EXECUTION_STEP_FEATURE_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>Id Prescribed Medicament</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PRESCRIPTION__ID_PRESCRIBED_MEDICAMENT = EXECUTION_STEP_FEATURE_COUNT + 1;
-
-	/**
-	 * The feature id for the '<em><b>Id Prescribed Itens</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PRESCRIPTION__ID_PRESCRIBED_ITENS = EXECUTION_STEP_FEATURE_COUNT + 2;
+	int PRESCRIPTION__TEXT = COMPLETE_STEP_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Prescribedmedicament</b></em>' containment reference list.
@@ -1277,7 +1502,7 @@ public interface Execution_metamodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PRESCRIPTION__PRESCRIBEDMEDICAMENT = EXECUTION_STEP_FEATURE_COUNT + 3;
+	int PRESCRIPTION__PRESCRIBEDMEDICAMENT = COMPLETE_STEP_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Prescribedprescriptionitem</b></em>' containment reference list.
@@ -1286,7 +1511,16 @@ public interface Execution_metamodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PRESCRIPTION__PRESCRIBEDPRESCRIPTIONITEM = EXECUTION_STEP_FEATURE_COUNT + 4;
+	int PRESCRIPTION__PRESCRIBEDPRESCRIPTIONITEM = COMPLETE_STEP_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>Prescription</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PRESCRIPTION__PRESCRIPTION = COMPLETE_STEP_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of structural features of the '<em>Prescription</em>' class.
@@ -1295,7 +1529,7 @@ public interface Execution_metamodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PRESCRIPTION_FEATURE_COUNT = EXECUTION_STEP_FEATURE_COUNT + 5;
+	int PRESCRIPTION_FEATURE_COUNT = COMPLETE_STEP_FEATURE_COUNT + 4;
 
 	/**
 	 * The number of operations of the '<em>Prescription</em>' class.
@@ -1304,7 +1538,7 @@ public interface Execution_metamodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PRESCRIPTION_OPERATION_COUNT = EXECUTION_STEP_OPERATION_COUNT + 0;
+	int PRESCRIPTION_OPERATION_COUNT = COMPLETE_STEP_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link MetamodelExecution.impl.TreatmentImpl <em>Treatment</em>}' class.
@@ -1323,25 +1557,7 @@ public interface Execution_metamodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TREATMENT__ID = EXECUTION_STEP__ID;
-
-	/**
-	 * The feature id for the '<em><b>Type</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TREATMENT__TYPE = EXECUTION_STEP__TYPE;
-
-	/**
-	 * The feature id for the '<em><b>Type Verbose</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TREATMENT__TYPE_VERBOSE = EXECUTION_STEP__TYPE_VERBOSE;
+	int TREATMENT__ID = COMPLETE_STEP__ID;
 
 	/**
 	 * The feature id for the '<em><b>Url</b></em>' attribute.
@@ -1350,106 +1566,7 @@ public interface Execution_metamodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TREATMENT__URL = EXECUTION_STEP__URL;
-
-	/**
-	 * The feature id for the '<em><b>Is Current</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TREATMENT__IS_CURRENT = EXECUTION_STEP__IS_CURRENT;
-
-	/**
-	 * The feature id for the '<em><b>Reworked</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TREATMENT__REWORKED = EXECUTION_STEP__REWORKED;
-
-	/**
-	 * The feature id for the '<em><b>Executed</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TREATMENT__EXECUTED = EXECUTION_STEP__EXECUTED;
-
-	/**
-	 * The feature id for the '<em><b>Previous</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TREATMENT__PREVIOUS = EXECUTION_STEP__PREVIOUS;
-
-	/**
-	 * The feature id for the '<em><b>Next</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TREATMENT__NEXT = EXECUTION_STEP__NEXT;
-
-	/**
-	 * The feature id for the '<em><b>Creation Date</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TREATMENT__CREATION_DATE = EXECUTION_STEP__CREATION_DATE;
-
-	/**
-	 * The feature id for the '<em><b>Change Date</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TREATMENT__CHANGE_DATE = EXECUTION_STEP__CHANGE_DATE;
-
-	/**
-	 * The feature id for the '<em><b>Execution Date</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TREATMENT__EXECUTION_DATE = EXECUTION_STEP__EXECUTION_DATE;
-
-	/**
-	 * The feature id for the '<em><b>Creator</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TREATMENT__CREATOR = EXECUTION_STEP__CREATOR;
-
-	/**
-	 * The feature id for the '<em><b>Executor</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TREATMENT__EXECUTOR = EXECUTION_STEP__EXECUTOR;
-
-	/**
-	 * The feature id for the '<em><b>Id Step</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TREATMENT__ID_STEP = EXECUTION_STEP__ID_STEP;
+	int TREATMENT__URL = COMPLETE_STEP__URL;
 
 	/**
 	 * The feature id for the '<em><b>Id Protocol</b></em>' attribute.
@@ -1458,7 +1575,115 @@ public interface Execution_metamodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TREATMENT__ID_PROTOCOL = EXECUTION_STEP__ID_PROTOCOL;
+	int TREATMENT__ID_PROTOCOL = COMPLETE_STEP__ID_PROTOCOL;
+
+	/**
+	 * The feature id for the '<em><b>Creation Date</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TREATMENT__CREATION_DATE = COMPLETE_STEP__CREATION_DATE;
+
+	/**
+	 * The feature id for the '<em><b>Justification</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TREATMENT__JUSTIFICATION = COMPLETE_STEP__JUSTIFICATION;
+
+	/**
+	 * The feature id for the '<em><b>Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TREATMENT__TYPE = COMPLETE_STEP__TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Type Verbose</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TREATMENT__TYPE_VERBOSE = COMPLETE_STEP__TYPE_VERBOSE;
+
+	/**
+	 * The feature id for the '<em><b>Is Current</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TREATMENT__IS_CURRENT = COMPLETE_STEP__IS_CURRENT;
+
+	/**
+	 * The feature id for the '<em><b>Reworked</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TREATMENT__REWORKED = COMPLETE_STEP__REWORKED;
+
+	/**
+	 * The feature id for the '<em><b>Executed</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TREATMENT__EXECUTED = COMPLETE_STEP__EXECUTED;
+
+	/**
+	 * The feature id for the '<em><b>Previous</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TREATMENT__PREVIOUS = COMPLETE_STEP__PREVIOUS;
+
+	/**
+	 * The feature id for the '<em><b>Next</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TREATMENT__NEXT = COMPLETE_STEP__NEXT;
+
+	/**
+	 * The feature id for the '<em><b>Change Date</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TREATMENT__CHANGE_DATE = COMPLETE_STEP__CHANGE_DATE;
+
+	/**
+	 * The feature id for the '<em><b>Execution Date</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TREATMENT__EXECUTION_DATE = COMPLETE_STEP__EXECUTION_DATE;
+
+	/**
+	 * The feature id for the '<em><b>Id Step</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TREATMENT__ID_STEP = COMPLETE_STEP__ID_STEP;
 
 	/**
 	 * The feature id for the '<em><b>Id Executed Protocol</b></em>' attribute.
@@ -1467,16 +1692,7 @@ public interface Execution_metamodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TREATMENT__ID_EXECUTED_PROTOCOL = EXECUTION_STEP__ID_EXECUTED_PROTOCOL;
-
-	/**
-	 * The feature id for the '<em><b>Justify</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TREATMENT__JUSTIFY = EXECUTION_STEP__JUSTIFY;
+	int TREATMENT__ID_EXECUTED_PROTOCOL = COMPLETE_STEP__ID_EXECUTED_PROTOCOL;
 
 	/**
 	 * The feature id for the '<em><b>Step</b></em>' containment reference list.
@@ -1485,7 +1701,25 @@ public interface Execution_metamodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TREATMENT__STEP = EXECUTION_STEP__STEP;
+	int TREATMENT__STEP = COMPLETE_STEP__STEP;
+
+	/**
+	 * The feature id for the '<em><b>Executor</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TREATMENT__EXECUTOR = COMPLETE_STEP__EXECUTOR;
+
+	/**
+	 * The feature id for the '<em><b>Creator</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TREATMENT__CREATOR = COMPLETE_STEP__CREATOR;
 
 	/**
 	 * The feature id for the '<em><b>Prescribedexam</b></em>' containment reference.
@@ -1494,7 +1728,7 @@ public interface Execution_metamodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TREATMENT__PRESCRIBEDEXAM = EXECUTION_STEP_FEATURE_COUNT + 0;
+	int TREATMENT__PRESCRIBEDEXAM = COMPLETE_STEP_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Prescribedprocedure</b></em>' containment reference list.
@@ -1503,7 +1737,7 @@ public interface Execution_metamodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TREATMENT__PRESCRIBEDPROCEDURE = EXECUTION_STEP_FEATURE_COUNT + 1;
+	int TREATMENT__PRESCRIBEDPROCEDURE = COMPLETE_STEP_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Prescribedinternment</b></em>' containment reference list.
@@ -1512,7 +1746,7 @@ public interface Execution_metamodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TREATMENT__PRESCRIBEDINTERNMENT = EXECUTION_STEP_FEATURE_COUNT + 2;
+	int TREATMENT__PRESCRIBEDINTERNMENT = COMPLETE_STEP_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Prescribedmedication</b></em>' containment reference list.
@@ -1521,7 +1755,7 @@ public interface Execution_metamodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TREATMENT__PRESCRIBEDMEDICATION = EXECUTION_STEP_FEATURE_COUNT + 3;
+	int TREATMENT__PRESCRIBEDMEDICATION = COMPLETE_STEP_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of structural features of the '<em>Treatment</em>' class.
@@ -1530,7 +1764,7 @@ public interface Execution_metamodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TREATMENT_FEATURE_COUNT = EXECUTION_STEP_FEATURE_COUNT + 4;
+	int TREATMENT_FEATURE_COUNT = COMPLETE_STEP_FEATURE_COUNT + 4;
 
 	/**
 	 * The number of operations of the '<em>Treatment</em>' class.
@@ -1539,7 +1773,7 @@ public interface Execution_metamodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TREATMENT_OPERATION_COUNT = EXECUTION_STEP_OPERATION_COUNT + 0;
+	int TREATMENT_OPERATION_COUNT = COMPLETE_STEP_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link MetamodelExecution.impl.ExaminationImpl <em>Examination</em>}' class.
@@ -1624,13 +1858,13 @@ public interface Execution_metamodelPackage extends EPackage {
 	int EXAMINATION__SIDE_MEMBER_DISPLAY = 7;
 
 	/**
-	 * The feature id for the '<em><b>Examination</b></em>' containment reference.
+	 * The feature id for the '<em><b>Exam</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int EXAMINATION__EXAMINATION = 8;
+	int EXAMINATION__EXAM = 8;
 
 	/**
 	 * The number of structural features of the '<em>Examination</em>' class.
@@ -1799,79 +2033,6 @@ public interface Execution_metamodelPackage extends EPackage {
 	int EXECUTOR_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link MetamodelExecution.impl.AnswerImpl <em>Answer</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see MetamodelExecution.impl.AnswerImpl
-	 * @see MetamodelExecution.impl.Execution_metamodelPackageImpl#getAnswer()
-	 * @generated
-	 */
-	int ANSWER = 12;
-
-	/**
-	 * The feature id for the '<em><b>Id</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ANSWER__ID = 0;
-
-	/**
-	 * The feature id for the '<em><b>Type</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ANSWER__TYPE = 1;
-
-	/**
-	 * The feature id for the '<em><b>Type Verbose</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ANSWER__TYPE_VERBOSE = 2;
-
-	/**
-	 * The feature id for the '<em><b>Questions</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ANSWER__QUESTIONS = 3;
-
-	/**
-	 * The feature id for the '<em><b>Value</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ANSWER__VALUE = 4;
-
-	/**
-	 * The number of structural features of the '<em>Answer</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ANSWER_FEATURE_COUNT = 5;
-
-	/**
-	 * The number of operations of the '<em>Answer</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ANSWER_OPERATION_COUNT = 0;
-
-	/**
 	 * The meta object id for the '{@link MetamodelExecution.impl.QuestionImpl <em>Question</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1879,7 +2040,7 @@ public interface Execution_metamodelPackage extends EPackage {
 	 * @see MetamodelExecution.impl.Execution_metamodelPackageImpl#getQuestion()
 	 * @generated
 	 */
-	int QUESTION = 13;
+	int QUESTION = 12;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -1909,7 +2070,7 @@ public interface Execution_metamodelPackage extends EPackage {
 	int QUESTION__TEXT = 2;
 
 	/**
-	 * The feature id for the '<em><b>Variable</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Variable</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1961,7 +2122,7 @@ public interface Execution_metamodelPackage extends EPackage {
 	 * @see MetamodelExecution.impl.Execution_metamodelPackageImpl#getVariable()
 	 * @generated
 	 */
-	int VARIABLE = 14;
+	int VARIABLE = 13;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -2018,22 +2179,22 @@ public interface Execution_metamodelPackage extends EPackage {
 	int VARIABLE__WEIGHT = 5;
 
 	/**
-	 * The feature id for the '<em><b>Value</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VARIABLE__VALUE = 6;
-
-	/**
 	 * The feature id for the '<em><b>Link</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int VARIABLE__LINK = 7;
+	int VARIABLE__LINK = 6;
+
+	/**
+	 * The feature id for the '<em><b>Value</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VARIABLE__VALUE = 7;
 
 	/**
 	 * The number of structural features of the '<em>Variable</em>' class.
@@ -2061,7 +2222,7 @@ public interface Execution_metamodelPackage extends EPackage {
 	 * @see MetamodelExecution.impl.Execution_metamodelPackageImpl#getPrescribedExamination()
 	 * @generated
 	 */
-	int PRESCRIBED_EXAMINATION = 15;
+	int PRESCRIBED_EXAMINATION = 14;
 
 	/**
 	 * The feature id for the '<em><b>Examination</b></em>' containment reference.
@@ -2109,13 +2270,13 @@ public interface Execution_metamodelPackage extends EPackage {
 	int PRESCRIBED_EXAMINATION__NUMBER_GUIDE = 4;
 
 	/**
-	 * The feature id for the '<em><b>Prescription</b></em>' containment reference.
+	 * The feature id for the '<em><b>Examinationprescription</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PRESCRIBED_EXAMINATION__PRESCRIPTION = 5;
+	int PRESCRIBED_EXAMINATION__EXAMINATIONPRESCRIPTION = 5;
 
 	/**
 	 * The feature id for the '<em><b>Complement</b></em>' containment reference list.
@@ -2152,7 +2313,7 @@ public interface Execution_metamodelPackage extends EPackage {
 	 * @see MetamodelExecution.impl.Execution_metamodelPackageImpl#getExam()
 	 * @generated
 	 */
-	int EXAM = 16;
+	int EXAM = 15;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -2243,7 +2404,7 @@ public interface Execution_metamodelPackage extends EPackage {
 	 * @see MetamodelExecution.impl.Execution_metamodelPackageImpl#getPrescribedProcedure()
 	 * @generated
 	 */
-	int PRESCRIBED_PROCEDURE = 17;
+	int PRESCRIBED_PROCEDURE = 16;
 
 	/**
 	 * The number of structural features of the '<em>Prescribed Procedure</em>' class.
@@ -2271,7 +2432,7 @@ public interface Execution_metamodelPackage extends EPackage {
 	 * @see MetamodelExecution.impl.Execution_metamodelPackageImpl#getPrescribedInternment()
 	 * @generated
 	 */
-	int PRESCRIBED_INTERNMENT = 18;
+	int PRESCRIBED_INTERNMENT = 17;
 
 	/**
 	 * The number of structural features of the '<em>Prescribed Internment</em>' class.
@@ -2299,7 +2460,7 @@ public interface Execution_metamodelPackage extends EPackage {
 	 * @see MetamodelExecution.impl.Execution_metamodelPackageImpl#getPrescribedMedication()
 	 * @generated
 	 */
-	int PRESCRIBED_MEDICATION = 19;
+	int PRESCRIBED_MEDICATION = 18;
 
 	/**
 	 * The number of structural features of the '<em>Prescribed Medication</em>' class.
@@ -2327,7 +2488,7 @@ public interface Execution_metamodelPackage extends EPackage {
 	 * @see MetamodelExecution.impl.Execution_metamodelPackageImpl#getExaminationPrescription()
 	 * @generated
 	 */
-	int EXAMINATION_PRESCRIPTION = 20;
+	int EXAMINATION_PRESCRIPTION = 19;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -2391,7 +2552,7 @@ public interface Execution_metamodelPackage extends EPackage {
 	 * @see MetamodelExecution.impl.Execution_metamodelPackageImpl#getComplement()
 	 * @generated
 	 */
-	int COMPLEMENT = 21;
+	int COMPLEMENT = 20;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -2464,7 +2625,7 @@ public interface Execution_metamodelPackage extends EPackage {
 	 * @see MetamodelExecution.impl.Execution_metamodelPackageImpl#getPrescribedPrescriptionItem()
 	 * @generated
 	 */
-	int PRESCRIBED_PRESCRIPTION_ITEM = 22;
+	int PRESCRIBED_PRESCRIPTION_ITEM = 21;
 
 	/**
 	 * The number of structural features of the '<em>Prescribed Prescription Item</em>' class.
@@ -2492,7 +2653,7 @@ public interface Execution_metamodelPackage extends EPackage {
 	 * @see MetamodelExecution.impl.Execution_metamodelPackageImpl#getPrescribedMedicament()
 	 * @generated
 	 */
-	int PRESCRIBED_MEDICAMENT = 23;
+	int PRESCRIBED_MEDICAMENT = 22;
 
 	/**
 	 * The number of structural features of the '<em>Prescribed Medicament</em>' class.
@@ -2513,14 +2674,14 @@ public interface Execution_metamodelPackage extends EPackage {
 	int PRESCRIBED_MEDICAMENT_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link MetamodelExecution.impl.ExtendedProtocolImpl <em>Extended Protocol</em>}' class.
+	 * The meta object id for the '{@link MetamodelExecution.impl.ShortExecutionImpl <em>Short Execution</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see MetamodelExecution.impl.ExtendedProtocolImpl
-	 * @see MetamodelExecution.impl.Execution_metamodelPackageImpl#getExtendedProtocol()
+	 * @see MetamodelExecution.impl.ShortExecutionImpl
+	 * @see MetamodelExecution.impl.Execution_metamodelPackageImpl#getShortExecution()
 	 * @generated
 	 */
-	int EXTENDED_PROTOCOL = 24;
+	int SHORT_EXECUTION = 23;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -2529,7 +2690,7 @@ public interface Execution_metamodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EXTENDED_PROTOCOL__ID = Protocolosv2Package.PROTOCOL__ID;
+	int SHORT_EXECUTION__ID = EXECUTION__ID;
 
 	/**
 	 * The feature id for the '<em><b>Url</b></em>' attribute.
@@ -2538,179 +2699,7 @@ public interface Execution_metamodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EXTENDED_PROTOCOL__URL = Protocolosv2Package.PROTOCOL__URL;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EXTENDED_PROTOCOL__NAME = Protocolosv2Package.PROTOCOL__NAME;
-
-	/**
-	 * The feature id for the '<em><b>Code</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EXTENDED_PROTOCOL__CODE = Protocolosv2Package.PROTOCOL__CODE;
-
-	/**
-	 * The feature id for the '<em><b>Sequence</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EXTENDED_PROTOCOL__SEQUENCE = Protocolosv2Package.PROTOCOL__SEQUENCE;
-
-	/**
-	 * The feature id for the '<em><b>Category</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EXTENDED_PROTOCOL__CATEGORY = Protocolosv2Package.PROTOCOL__CATEGORY;
-
-	/**
-	 * The feature id for the '<em><b>Operation</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EXTENDED_PROTOCOL__OPERATION = Protocolosv2Package.PROTOCOL__OPERATION;
-
-	/**
-	 * The feature id for the '<em><b>Variable</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EXTENDED_PROTOCOL__VARIABLE = Protocolosv2Package.PROTOCOL__VARIABLE;
-
-	/**
-	 * The feature id for the '<em><b>Executionprotocol</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EXTENDED_PROTOCOL__EXECUTIONPROTOCOL = Protocolosv2Package.PROTOCOL_FEATURE_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>Executionstep</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EXTENDED_PROTOCOL__EXECUTIONSTEP = Protocolosv2Package.PROTOCOL_FEATURE_COUNT + 1;
-
-	/**
-	 * The number of structural features of the '<em>Extended Protocol</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EXTENDED_PROTOCOL_FEATURE_COUNT = Protocolosv2Package.PROTOCOL_FEATURE_COUNT + 2;
-
-	/**
-	 * The number of operations of the '<em>Extended Protocol</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EXTENDED_PROTOCOL_OPERATION_COUNT = Protocolosv2Package.PROTOCOL_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link MetamodelExecution.impl.ExecutionProtocolImpl <em>Execution Protocol</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see MetamodelExecution.impl.ExecutionProtocolImpl
-	 * @see MetamodelExecution.impl.Execution_metamodelPackageImpl#getExecutionProtocol()
-	 * @generated
-	 */
-	int EXECUTION_PROTOCOL = 25;
-
-	/**
-	 * The feature id for the '<em><b>Id</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EXECUTION_PROTOCOL__ID = 0;
-
-	/**
-	 * The feature id for the '<em><b>Url</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EXECUTION_PROTOCOL__URL = 1;
-
-	/**
-	 * The feature id for the '<em><b>Creation</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EXECUTION_PROTOCOL__CREATION = 2;
-
-	/**
-	 * The feature id for the '<em><b>Conclusion</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EXECUTION_PROTOCOL__CONCLUSION = 3;
-
-	/**
-	 * The feature id for the '<em><b>Completed</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EXECUTION_PROTOCOL__COMPLETED = 4;
-
-	/**
-	 * The feature id for the '<em><b>Aborted</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EXECUTION_PROTOCOL__ABORTED = 5;
-
-	/**
-	 * The feature id for the '<em><b>Justify</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EXECUTION_PROTOCOL__JUSTIFY = 6;
-
-	/**
-	 * The feature id for the '<em><b>Last Executed Step Date</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EXECUTION_PROTOCOL__LAST_EXECUTED_STEP_DATE = 7;
+	int SHORT_EXECUTION__URL = EXECUTION__URL;
 
 	/**
 	 * The feature id for the '<em><b>Id Protocol</b></em>' attribute.
@@ -2719,16 +2708,70 @@ public interface Execution_metamodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EXECUTION_PROTOCOL__ID_PROTOCOL = 8;
+	int SHORT_EXECUTION__ID_PROTOCOL = EXECUTION__ID_PROTOCOL;
 
 	/**
-	 * The feature id for the '<em><b>Protocol</b></em>' containment reference.
+	 * The feature id for the '<em><b>Creation Date</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int EXECUTION_PROTOCOL__PROTOCOL = 9;
+	int SHORT_EXECUTION__CREATION_DATE = EXECUTION__CREATION_DATE;
+
+	/**
+	 * The feature id for the '<em><b>Justification</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SHORT_EXECUTION__JUSTIFICATION = EXECUTION__JUSTIFICATION;
+
+	/**
+	 * The feature id for the '<em><b>Conclusion Date</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SHORT_EXECUTION__CONCLUSION_DATE = EXECUTION_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Completed Date</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SHORT_EXECUTION__COMPLETED_DATE = EXECUTION_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Aborted</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SHORT_EXECUTION__ABORTED = EXECUTION_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>Last Executed Step Date</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SHORT_EXECUTION__LAST_EXECUTED_STEP_DATE = EXECUTION_FEATURE_COUNT + 3;
+
+	/**
+	 * The feature id for the '<em><b>Pathway</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SHORT_EXECUTION__PATHWAY = EXECUTION_FEATURE_COUNT + 4;
 
 	/**
 	 * The feature id for the '<em><b>Id Responsible</b></em>' attribute.
@@ -2737,7 +2780,7 @@ public interface Execution_metamodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EXECUTION_PROTOCOL__ID_RESPONSIBLE = 10;
+	int SHORT_EXECUTION__ID_RESPONSIBLE = EXECUTION_FEATURE_COUNT + 5;
 
 	/**
 	 * The feature id for the '<em><b>Id Last Professional</b></em>' attribute.
@@ -2746,7 +2789,7 @@ public interface Execution_metamodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EXECUTION_PROTOCOL__ID_LAST_PROFESSIONAL = 11;
+	int SHORT_EXECUTION__ID_LAST_PROFESSIONAL = EXECUTION_FEATURE_COUNT + 6;
 
 	/**
 	 * The feature id for the '<em><b>Responsible</b></em>' containment reference.
@@ -2755,7 +2798,7 @@ public interface Execution_metamodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EXECUTION_PROTOCOL__RESPONSIBLE = 12;
+	int SHORT_EXECUTION__RESPONSIBLE = EXECUTION_FEATURE_COUNT + 7;
 
 	/**
 	 * The feature id for the '<em><b>Lastprofessional</b></em>' containment reference.
@@ -2764,7 +2807,7 @@ public interface Execution_metamodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EXECUTION_PROTOCOL__LASTPROFESSIONAL = 13;
+	int SHORT_EXECUTION__LASTPROFESSIONAL = EXECUTION_FEATURE_COUNT + 8;
 
 	/**
 	 * The feature id for the '<em><b>Executedstep</b></em>' containment reference.
@@ -2773,35 +2816,35 @@ public interface Execution_metamodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EXECUTION_PROTOCOL__EXECUTEDSTEP = 14;
+	int SHORT_EXECUTION__EXECUTEDSTEP = EXECUTION_FEATURE_COUNT + 9;
 
 	/**
-	 * The number of structural features of the '<em>Execution Protocol</em>' class.
+	 * The number of structural features of the '<em>Short Execution</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int EXECUTION_PROTOCOL_FEATURE_COUNT = 15;
+	int SHORT_EXECUTION_FEATURE_COUNT = EXECUTION_FEATURE_COUNT + 10;
 
 	/**
-	 * The number of operations of the '<em>Execution Protocol</em>' class.
+	 * The number of operations of the '<em>Short Execution</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int EXECUTION_PROTOCOL_OPERATION_COUNT = 0;
+	int SHORT_EXECUTION_OPERATION_COUNT = EXECUTION_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link MetamodelExecution.impl.JustifyImpl <em>Justify</em>}' class.
+	 * The meta object id for the '{@link MetamodelExecution.impl.JustificationImpl <em>Justification</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see MetamodelExecution.impl.JustifyImpl
-	 * @see MetamodelExecution.impl.Execution_metamodelPackageImpl#getJustify()
+	 * @see MetamodelExecution.impl.JustificationImpl
+	 * @see MetamodelExecution.impl.Execution_metamodelPackageImpl#getJustification()
 	 * @generated
 	 */
-	int JUSTIFY = 26;
+	int JUSTIFICATION = 24;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -2810,7 +2853,7 @@ public interface Execution_metamodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int JUSTIFY__ID = 0;
+	int JUSTIFICATION__ID = 0;
 
 	/**
 	 * The feature id for the '<em><b>Reason</b></em>' attribute.
@@ -2819,7 +2862,7 @@ public interface Execution_metamodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int JUSTIFY__REASON = 1;
+	int JUSTIFICATION__REASON = 1;
 
 	/**
 	 * The feature id for the '<em><b>Reason Display</b></em>' attribute.
@@ -2828,7 +2871,7 @@ public interface Execution_metamodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int JUSTIFY__REASON_DISPLAY = 2;
+	int JUSTIFICATION__REASON_DISPLAY = 2;
 
 	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -2837,7 +2880,7 @@ public interface Execution_metamodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int JUSTIFY__DESCRIPTION = 3;
+	int JUSTIFICATION__DESCRIPTION = 3;
 
 	/**
 	 * The feature id for the '<em><b>Justify By Id</b></em>' attribute.
@@ -2846,7 +2889,7 @@ public interface Execution_metamodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int JUSTIFY__JUSTIFY_BY_ID = 4;
+	int JUSTIFICATION__JUSTIFY_BY_ID = 4;
 
 	/**
 	 * The feature id for the '<em><b>Justify By</b></em>' attribute.
@@ -2855,35 +2898,35 @@ public interface Execution_metamodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int JUSTIFY__JUSTIFY_BY = 5;
+	int JUSTIFICATION__JUSTIFY_BY = 5;
 
 	/**
-	 * The number of structural features of the '<em>Justify</em>' class.
+	 * The number of structural features of the '<em>Justification</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int JUSTIFY_FEATURE_COUNT = 6;
+	int JUSTIFICATION_FEATURE_COUNT = 6;
 
 	/**
-	 * The number of operations of the '<em>Justify</em>' class.
+	 * The number of operations of the '<em>Justification</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int JUSTIFY_OPERATION_COUNT = 0;
+	int JUSTIFICATION_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link MetamodelExecution.impl.ProtocolImpl <em>Protocol</em>}' class.
+	 * The meta object id for the '{@link MetamodelExecution.impl.PathwayImpl <em>Pathway</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see MetamodelExecution.impl.ProtocolImpl
-	 * @see MetamodelExecution.impl.Execution_metamodelPackageImpl#getProtocol()
+	 * @see MetamodelExecution.impl.PathwayImpl
+	 * @see MetamodelExecution.impl.Execution_metamodelPackageImpl#getPathway()
 	 * @generated
 	 */
-	int PROTOCOL = 27;
+	int PATHWAY = 25;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -2892,7 +2935,7 @@ public interface Execution_metamodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PROTOCOL__ID = 0;
+	int PATHWAY__ID = 0;
 
 	/**
 	 * The feature id for the '<em><b>Url</b></em>' attribute.
@@ -2901,7 +2944,7 @@ public interface Execution_metamodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PROTOCOL__URL = 1;
+	int PATHWAY__URL = 1;
 
 	/**
 	 * The feature id for the '<em><b>Code</b></em>' attribute.
@@ -2910,7 +2953,7 @@ public interface Execution_metamodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PROTOCOL__CODE = 2;
+	int PATHWAY__CODE = 2;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2919,7 +2962,7 @@ public interface Execution_metamodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PROTOCOL__NAME = 3;
+	int PATHWAY__NAME = 3;
 
 	/**
 	 * The feature id for the '<em><b>Id Repository</b></em>' attribute.
@@ -2928,7 +2971,7 @@ public interface Execution_metamodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PROTOCOL__ID_REPOSITORY = 4;
+	int PATHWAY__ID_REPOSITORY = 4;
 
 	/**
 	 * The feature id for the '<em><b>Version</b></em>' attribute.
@@ -2937,7 +2980,7 @@ public interface Execution_metamodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PROTOCOL__VERSION = 5;
+	int PATHWAY__VERSION = 5;
 
 	/**
 	 * The feature id for the '<em><b>Completed</b></em>' attribute.
@@ -2946,25 +2989,25 @@ public interface Execution_metamodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PROTOCOL__COMPLETED = 6;
+	int PATHWAY__COMPLETED = 6;
 
 	/**
-	 * The number of structural features of the '<em>Protocol</em>' class.
+	 * The number of structural features of the '<em>Pathway</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PROTOCOL_FEATURE_COUNT = 7;
+	int PATHWAY_FEATURE_COUNT = 7;
 
 	/**
-	 * The number of operations of the '<em>Protocol</em>' class.
+	 * The number of operations of the '<em>Pathway</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PROTOCOL_OPERATION_COUNT = 0;
+	int PATHWAY_OPERATION_COUNT = 0;
 
 	/**
 	 * The meta object id for the '{@link MetamodelExecution.impl.ResponsibleImpl <em>Responsible</em>}' class.
@@ -2974,7 +3017,7 @@ public interface Execution_metamodelPackage extends EPackage {
 	 * @see MetamodelExecution.impl.Execution_metamodelPackageImpl#getResponsible()
 	 * @generated
 	 */
-	int RESPONSIBLE = 28;
+	int RESPONSIBLE = 26;
 
 	/**
 	 * The feature id for the '<em><b>Data</b></em>' reference.
@@ -3011,7 +3054,7 @@ public interface Execution_metamodelPackage extends EPackage {
 	 * @see MetamodelExecution.impl.Execution_metamodelPackageImpl#getExecutedStep()
 	 * @generated
 	 */
-	int EXECUTED_STEP = 29;
+	int EXECUTED_STEP = 27;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -3020,25 +3063,7 @@ public interface Execution_metamodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EXECUTED_STEP__ID = 0;
-
-	/**
-	 * The feature id for the '<em><b>Type</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EXECUTED_STEP__TYPE = 1;
-
-	/**
-	 * The feature id for the '<em><b>Type Verbose</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EXECUTED_STEP__TYPE_VERBOSE = 2;
+	int EXECUTED_STEP__ID = STEP__ID;
 
 	/**
 	 * The feature id for the '<em><b>Url</b></em>' attribute.
@@ -3047,79 +3072,7 @@ public interface Execution_metamodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EXECUTED_STEP__URL = 3;
-
-	/**
-	 * The feature id for the '<em><b>Executed</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EXECUTED_STEP__EXECUTED = 4;
-
-	/**
-	 * The feature id for the '<em><b>Is Current</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EXECUTED_STEP__IS_CURRENT = 5;
-
-	/**
-	 * The feature id for the '<em><b>Reworked</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EXECUTED_STEP__REWORKED = 6;
-
-	/**
-	 * The feature id for the '<em><b>Creation Date</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EXECUTED_STEP__CREATION_DATE = 7;
-
-	/**
-	 * The feature id for the '<em><b>Change Date</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EXECUTED_STEP__CHANGE_DATE = 8;
-
-	/**
-	 * The feature id for the '<em><b>Execution Date</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EXECUTED_STEP__EXECUTION_DATE = 9;
-
-	/**
-	 * The feature id for the '<em><b>Id Executed Protocol</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EXECUTED_STEP__ID_EXECUTED_PROTOCOL = 10;
-
-	/**
-	 * The feature id for the '<em><b>Id Step</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EXECUTED_STEP__ID_STEP = 11;
+	int EXECUTED_STEP__URL = STEP__URL;
 
 	/**
 	 * The feature id for the '<em><b>Id Protocol</b></em>' attribute.
@@ -3128,52 +3081,70 @@ public interface Execution_metamodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EXECUTED_STEP__ID_PROTOCOL = 12;
+	int EXECUTED_STEP__ID_PROTOCOL = STEP__ID_PROTOCOL;
 
 	/**
-	 * The feature id for the '<em><b>Created By Id</b></em>' attribute.
+	 * The feature id for the '<em><b>Creation Date</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int EXECUTED_STEP__CREATED_BY_ID = 13;
+	int EXECUTED_STEP__CREATION_DATE = STEP__CREATION_DATE;
 
 	/**
-	 * The feature id for the '<em><b>Created By</b></em>' attribute.
+	 * The feature id for the '<em><b>Justification</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int EXECUTED_STEP__CREATED_BY = 14;
+	int EXECUTED_STEP__JUSTIFICATION = STEP__JUSTIFICATION;
 
 	/**
-	 * The feature id for the '<em><b>Executed By Id</b></em>' attribute.
+	 * The feature id for the '<em><b>Type</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int EXECUTED_STEP__EXECUTED_BY_ID = 15;
+	int EXECUTED_STEP__TYPE = STEP__TYPE;
 
 	/**
-	 * The feature id for the '<em><b>Executed By</b></em>' attribute.
+	 * The feature id for the '<em><b>Type Verbose</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int EXECUTED_STEP__EXECUTED_BY = 16;
+	int EXECUTED_STEP__TYPE_VERBOSE = STEP__TYPE_VERBOSE;
 
 	/**
-	 * The feature id for the '<em><b>Step</b></em>' attribute.
+	 * The feature id for the '<em><b>Is Current</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int EXECUTED_STEP__STEP = 17;
+	int EXECUTED_STEP__IS_CURRENT = STEP__IS_CURRENT;
+
+	/**
+	 * The feature id for the '<em><b>Reworked</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXECUTED_STEP__REWORKED = STEP__REWORKED;
+
+	/**
+	 * The feature id for the '<em><b>Executed</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXECUTED_STEP__EXECUTED = STEP__EXECUTED;
 
 	/**
 	 * The feature id for the '<em><b>Previous</b></em>' containment reference.
@@ -3182,7 +3153,7 @@ public interface Execution_metamodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EXECUTED_STEP__PREVIOUS = 18;
+	int EXECUTED_STEP__PREVIOUS = STEP__PREVIOUS;
 
 	/**
 	 * The feature id for the '<em><b>Next</b></em>' containment reference.
@@ -3191,16 +3162,88 @@ public interface Execution_metamodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EXECUTED_STEP__NEXT = 19;
+	int EXECUTED_STEP__NEXT = STEP__NEXT;
 
 	/**
-	 * The feature id for the '<em><b>Justify</b></em>' containment reference.
+	 * The feature id for the '<em><b>Change Date</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int EXECUTED_STEP__JUSTIFY = 20;
+	int EXECUTED_STEP__CHANGE_DATE = STEP__CHANGE_DATE;
+
+	/**
+	 * The feature id for the '<em><b>Execution Date</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXECUTED_STEP__EXECUTION_DATE = STEP__EXECUTION_DATE;
+
+	/**
+	 * The feature id for the '<em><b>Id Step</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXECUTED_STEP__ID_STEP = STEP__ID_STEP;
+
+	/**
+	 * The feature id for the '<em><b>Id Executed Protocol</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXECUTED_STEP__ID_EXECUTED_PROTOCOL = STEP__ID_EXECUTED_PROTOCOL;
+
+	/**
+	 * The feature id for the '<em><b>Created By Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXECUTED_STEP__CREATED_BY_ID = STEP_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Created By</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXECUTED_STEP__CREATED_BY = STEP_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Executed By Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXECUTED_STEP__EXECUTED_BY_ID = STEP_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>Executed By</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXECUTED_STEP__EXECUTED_BY = STEP_FEATURE_COUNT + 3;
+
+	/**
+	 * The feature id for the '<em><b>Step</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXECUTED_STEP__STEP = STEP_FEATURE_COUNT + 4;
 
 	/**
 	 * The number of structural features of the '<em>Executed Step</em>' class.
@@ -3209,7 +3252,7 @@ public interface Execution_metamodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EXECUTED_STEP_FEATURE_COUNT = 21;
+	int EXECUTED_STEP_FEATURE_COUNT = STEP_FEATURE_COUNT + 5;
 
 	/**
 	 * The number of operations of the '<em>Executed Step</em>' class.
@@ -3218,7 +3261,7 @@ public interface Execution_metamodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EXECUTED_STEP_OPERATION_COUNT = 0;
+	int EXECUTED_STEP_OPERATION_COUNT = STEP_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link MetamodelExecution.impl.LastProfessionalImpl <em>Last Professional</em>}' class.
@@ -3228,7 +3271,7 @@ public interface Execution_metamodelPackage extends EPackage {
 	 * @see MetamodelExecution.impl.Execution_metamodelPackageImpl#getLastProfessional()
 	 * @generated
 	 */
-	int LAST_PROFESSIONAL = 30;
+	int LAST_PROFESSIONAL = 28;
 
 	/**
 	 * The feature id for the '<em><b>Data</b></em>' reference.
@@ -3258,14 +3301,14 @@ public interface Execution_metamodelPackage extends EPackage {
 	int LAST_PROFESSIONAL_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link MetamodelExecution.impl.UserDataImpl <em>User Data</em>}' class.
+	 * The meta object id for the '{@link MetamodelExecution.impl.UserImpl <em>User</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see MetamodelExecution.impl.UserDataImpl
-	 * @see MetamodelExecution.impl.Execution_metamodelPackageImpl#getUserData()
+	 * @see MetamodelExecution.impl.UserImpl
+	 * @see MetamodelExecution.impl.Execution_metamodelPackageImpl#getUser()
 	 * @generated
 	 */
-	int USER_DATA = 31;
+	int USER = 29;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -3274,7 +3317,7 @@ public interface Execution_metamodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int USER_DATA__ID = 0;
+	int USER__ID = 0;
 
 	/**
 	 * The feature id for the '<em><b>Url</b></em>' attribute.
@@ -3283,7 +3326,7 @@ public interface Execution_metamodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int USER_DATA__URL = 1;
+	int USER__URL = 1;
 
 	/**
 	 * The feature id for the '<em><b>Code</b></em>' attribute.
@@ -3292,7 +3335,7 @@ public interface Execution_metamodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int USER_DATA__CODE = 2;
+	int USER__CODE = 2;
 
 	/**
 	 * The feature id for the '<em><b>Email</b></em>' attribute.
@@ -3301,7 +3344,7 @@ public interface Execution_metamodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int USER_DATA__EMAIL = 3;
+	int USER__EMAIL = 3;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -3310,7 +3353,7 @@ public interface Execution_metamodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int USER_DATA__NAME = 4;
+	int USER__NAME = 4;
 
 	/**
 	 * The feature id for the '<em><b>Type Council</b></em>' attribute.
@@ -3319,7 +3362,7 @@ public interface Execution_metamodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int USER_DATA__TYPE_COUNCIL = 5;
+	int USER__TYPE_COUNCIL = 5;
 
 	/**
 	 * The feature id for the '<em><b>Login</b></em>' attribute.
@@ -3328,7 +3371,7 @@ public interface Execution_metamodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int USER_DATA__LOGIN = 6;
+	int USER__LOGIN = 6;
 
 	/**
 	 * The feature id for the '<em><b>Number Council</b></em>' attribute.
@@ -3337,7 +3380,7 @@ public interface Execution_metamodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int USER_DATA__NUMBER_COUNCIL = 7;
+	int USER__NUMBER_COUNCIL = 7;
 
 	/**
 	 * The feature id for the '<em><b>State</b></em>' attribute.
@@ -3346,7 +3389,7 @@ public interface Execution_metamodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int USER_DATA__STATE = 8;
+	int USER__STATE = 8;
 
 	/**
 	 * The feature id for the '<em><b>Executor</b></em>' reference.
@@ -3355,7 +3398,7 @@ public interface Execution_metamodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int USER_DATA__EXECUTOR = 9;
+	int USER__EXECUTOR = 9;
 
 	/**
 	 * The feature id for the '<em><b>Creator</b></em>' reference.
@@ -3364,244 +3407,331 @@ public interface Execution_metamodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int USER_DATA__CREATOR = 10;
+	int USER__CREATOR = 10;
 
 	/**
-	 * The number of structural features of the '<em>User Data</em>' class.
+	 * The number of structural features of the '<em>User</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int USER_DATA_FEATURE_COUNT = 11;
+	int USER_FEATURE_COUNT = 11;
 
 	/**
-	 * The number of operations of the '<em>User Data</em>' class.
+	 * The number of operations of the '<em>User</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int USER_DATA_OPERATION_COUNT = 0;
+	int USER_OPERATION_COUNT = 0;
 
 	/**
-	 * Returns the meta object for class '{@link MetamodelExecution.ExecutionStep <em>Execution Step</em>}'.
+	 * The meta object id for the '{@link MetamodelExecution.impl.ValueImpl <em>Value</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Execution Step</em>'.
-	 * @see MetamodelExecution.ExecutionStep
+	 * @see MetamodelExecution.impl.ValueImpl
+	 * @see MetamodelExecution.impl.Execution_metamodelPackageImpl#getValue()
 	 * @generated
 	 */
-	EClass getExecutionStep();
+	int VALUE = 30;
 
 	/**
-	 * Returns the meta object for the attribute '{@link MetamodelExecution.ExecutionStep#getId <em>Id</em>}'.
+	 * The number of structural features of the '<em>Value</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Id</em>'.
-	 * @see MetamodelExecution.ExecutionStep#getId()
-	 * @see #getExecutionStep()
 	 * @generated
+	 * @ordered
 	 */
-	EAttribute getExecutionStep_Id();
+	int VALUE_FEATURE_COUNT = 0;
 
 	/**
-	 * Returns the meta object for the attribute '{@link MetamodelExecution.ExecutionStep#getType <em>Type</em>}'.
+	 * The number of operations of the '<em>Value</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VALUE_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link MetamodelExecution.impl.AnswerImpl <em>Answer</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see MetamodelExecution.impl.AnswerImpl
+	 * @see MetamodelExecution.impl.Execution_metamodelPackageImpl#getAnswer()
+	 * @generated
+	 */
+	int ANSWER = 31;
+
+	/**
+	 * The feature id for the '<em><b>Type Verbose</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ANSWER__TYPE_VERBOSE = 0;
+
+	/**
+	 * The feature id for the '<em><b>Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ANSWER__TYPE = 1;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ANSWER__ID = 2;
+
+	/**
+	 * The feature id for the '<em><b>Value</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ANSWER__VALUE = 3;
+
+	/**
+	 * The feature id for the '<em><b>Question</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ANSWER__QUESTION = 4;
+
+	/**
+	 * The number of structural features of the '<em>Answer</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ANSWER_FEATURE_COUNT = 5;
+
+	/**
+	 * The number of operations of the '<em>Answer</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ANSWER_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link MetamodelExecution.impl.NumericImpl <em>Numeric</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see MetamodelExecution.impl.NumericImpl
+	 * @see MetamodelExecution.impl.Execution_metamodelPackageImpl#getNumeric()
+	 * @generated
+	 */
+	int NUMERIC = 33;
+
+	/**
+	 * The feature id for the '<em><b>Value</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NUMERIC__VALUE = VALUE_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Numeric</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NUMERIC_FEATURE_COUNT = VALUE_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>Numeric</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NUMERIC_OPERATION_COUNT = VALUE_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link MetamodelExecution.impl.YesOrNoImpl <em>Yes Or No</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see MetamodelExecution.impl.YesOrNoImpl
+	 * @see MetamodelExecution.impl.Execution_metamodelPackageImpl#getYesOrNo()
+	 * @generated
+	 */
+	int YES_OR_NO = 34;
+
+	/**
+	 * The feature id for the '<em><b>Value</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YES_OR_NO__VALUE = VALUE_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Yes Or No</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YES_OR_NO_FEATURE_COUNT = VALUE_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>Yes Or No</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int YES_OR_NO_OPERATION_COUNT = VALUE_OPERATION_COUNT + 0;
+
+	/**
+	 * Returns the meta object for class '{@link MetamodelExecution.Step <em>Step</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Step</em>'.
+	 * @see MetamodelExecution.Step
+	 * @generated
+	 */
+	EClass getStep();
+
+	/**
+	 * Returns the meta object for the attribute '{@link MetamodelExecution.Step#getType <em>Type</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Type</em>'.
-	 * @see MetamodelExecution.ExecutionStep#getType()
-	 * @see #getExecutionStep()
+	 * @see MetamodelExecution.Step#getType()
+	 * @see #getStep()
 	 * @generated
 	 */
-	EAttribute getExecutionStep_Type();
+	EAttribute getStep_Type();
 
 	/**
-	 * Returns the meta object for the attribute '{@link MetamodelExecution.ExecutionStep#getTypeVerbose <em>Type Verbose</em>}'.
+	 * Returns the meta object for the attribute '{@link MetamodelExecution.Step#getTypeVerbose <em>Type Verbose</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Type Verbose</em>'.
-	 * @see MetamodelExecution.ExecutionStep#getTypeVerbose()
-	 * @see #getExecutionStep()
+	 * @see MetamodelExecution.Step#getTypeVerbose()
+	 * @see #getStep()
 	 * @generated
 	 */
-	EAttribute getExecutionStep_TypeVerbose();
+	EAttribute getStep_TypeVerbose();
 
 	/**
-	 * Returns the meta object for the attribute '{@link MetamodelExecution.ExecutionStep#getUrl <em>Url</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Url</em>'.
-	 * @see MetamodelExecution.ExecutionStep#getUrl()
-	 * @see #getExecutionStep()
-	 * @generated
-	 */
-	EAttribute getExecutionStep_Url();
-
-	/**
-	 * Returns the meta object for the attribute '{@link MetamodelExecution.ExecutionStep#isIsCurrent <em>Is Current</em>}'.
+	 * Returns the meta object for the attribute '{@link MetamodelExecution.Step#isIsCurrent <em>Is Current</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Is Current</em>'.
-	 * @see MetamodelExecution.ExecutionStep#isIsCurrent()
-	 * @see #getExecutionStep()
+	 * @see MetamodelExecution.Step#isIsCurrent()
+	 * @see #getStep()
 	 * @generated
 	 */
-	EAttribute getExecutionStep_IsCurrent();
+	EAttribute getStep_IsCurrent();
 
 	/**
-	 * Returns the meta object for the attribute '{@link MetamodelExecution.ExecutionStep#isReworked <em>Reworked</em>}'.
+	 * Returns the meta object for the attribute '{@link MetamodelExecution.Step#isReworked <em>Reworked</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Reworked</em>'.
-	 * @see MetamodelExecution.ExecutionStep#isReworked()
-	 * @see #getExecutionStep()
+	 * @see MetamodelExecution.Step#isReworked()
+	 * @see #getStep()
 	 * @generated
 	 */
-	EAttribute getExecutionStep_Reworked();
+	EAttribute getStep_Reworked();
 
 	/**
-	 * Returns the meta object for the attribute '{@link MetamodelExecution.ExecutionStep#isExecuted <em>Executed</em>}'.
+	 * Returns the meta object for the attribute '{@link MetamodelExecution.Step#isExecuted <em>Executed</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Executed</em>'.
-	 * @see MetamodelExecution.ExecutionStep#isExecuted()
-	 * @see #getExecutionStep()
+	 * @see MetamodelExecution.Step#isExecuted()
+	 * @see #getStep()
 	 * @generated
 	 */
-	EAttribute getExecutionStep_Executed();
+	EAttribute getStep_Executed();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link MetamodelExecution.ExecutionStep#getPrevious <em>Previous</em>}'.
+	 * Returns the meta object for the containment reference '{@link MetamodelExecution.Step#getPrevious <em>Previous</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference '<em>Previous</em>'.
-	 * @see MetamodelExecution.ExecutionStep#getPrevious()
-	 * @see #getExecutionStep()
+	 * @see MetamodelExecution.Step#getPrevious()
+	 * @see #getStep()
 	 * @generated
 	 */
-	EReference getExecutionStep_Previous();
+	EReference getStep_Previous();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link MetamodelExecution.ExecutionStep#getNext <em>Next</em>}'.
+	 * Returns the meta object for the containment reference '{@link MetamodelExecution.Step#getNext <em>Next</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference '<em>Next</em>'.
-	 * @see MetamodelExecution.ExecutionStep#getNext()
-	 * @see #getExecutionStep()
+	 * @see MetamodelExecution.Step#getNext()
+	 * @see #getStep()
 	 * @generated
 	 */
-	EReference getExecutionStep_Next();
+	EReference getStep_Next();
 
 	/**
-	 * Returns the meta object for the attribute '{@link MetamodelExecution.ExecutionStep#getCreationDate <em>Creation Date</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Creation Date</em>'.
-	 * @see MetamodelExecution.ExecutionStep#getCreationDate()
-	 * @see #getExecutionStep()
-	 * @generated
-	 */
-	EAttribute getExecutionStep_CreationDate();
-
-	/**
-	 * Returns the meta object for the attribute '{@link MetamodelExecution.ExecutionStep#getChangeDate <em>Change Date</em>}'.
+	 * Returns the meta object for the attribute '{@link MetamodelExecution.Step#getChangeDate <em>Change Date</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Change Date</em>'.
-	 * @see MetamodelExecution.ExecutionStep#getChangeDate()
-	 * @see #getExecutionStep()
+	 * @see MetamodelExecution.Step#getChangeDate()
+	 * @see #getStep()
 	 * @generated
 	 */
-	EAttribute getExecutionStep_ChangeDate();
+	EAttribute getStep_ChangeDate();
 
 	/**
-	 * Returns the meta object for the attribute '{@link MetamodelExecution.ExecutionStep#getExecutionDate <em>Execution Date</em>}'.
+	 * Returns the meta object for the attribute '{@link MetamodelExecution.Step#getExecutionDate <em>Execution Date</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Execution Date</em>'.
-	 * @see MetamodelExecution.ExecutionStep#getExecutionDate()
-	 * @see #getExecutionStep()
+	 * @see MetamodelExecution.Step#getExecutionDate()
+	 * @see #getStep()
 	 * @generated
 	 */
-	EAttribute getExecutionStep_ExecutionDate();
+	EAttribute getStep_ExecutionDate();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link MetamodelExecution.ExecutionStep#getCreator <em>Creator</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Creator</em>'.
-	 * @see MetamodelExecution.ExecutionStep#getCreator()
-	 * @see #getExecutionStep()
-	 * @generated
-	 */
-	EReference getExecutionStep_Creator();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link MetamodelExecution.ExecutionStep#getExecutor <em>Executor</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Executor</em>'.
-	 * @see MetamodelExecution.ExecutionStep#getExecutor()
-	 * @see #getExecutionStep()
-	 * @generated
-	 */
-	EReference getExecutionStep_Executor();
-
-	/**
-	 * Returns the meta object for the attribute '{@link MetamodelExecution.ExecutionStep#getIdStep <em>Id Step</em>}'.
+	 * Returns the meta object for the attribute '{@link MetamodelExecution.Step#getIdStep <em>Id Step</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Id Step</em>'.
-	 * @see MetamodelExecution.ExecutionStep#getIdStep()
-	 * @see #getExecutionStep()
+	 * @see MetamodelExecution.Step#getIdStep()
+	 * @see #getStep()
 	 * @generated
 	 */
-	EAttribute getExecutionStep_IdStep();
+	EAttribute getStep_IdStep();
 
 	/**
-	 * Returns the meta object for the attribute '{@link MetamodelExecution.ExecutionStep#getIdProtocol <em>Id Protocol</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Id Protocol</em>'.
-	 * @see MetamodelExecution.ExecutionStep#getIdProtocol()
-	 * @see #getExecutionStep()
-	 * @generated
-	 */
-	EAttribute getExecutionStep_IdProtocol();
-
-	/**
-	 * Returns the meta object for the attribute '{@link MetamodelExecution.ExecutionStep#getIdExecutedProtocol <em>Id Executed Protocol</em>}'.
+	 * Returns the meta object for the attribute '{@link MetamodelExecution.Step#getIdExecutedProtocol <em>Id Executed Protocol</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Id Executed Protocol</em>'.
-	 * @see MetamodelExecution.ExecutionStep#getIdExecutedProtocol()
-	 * @see #getExecutionStep()
+	 * @see MetamodelExecution.Step#getIdExecutedProtocol()
+	 * @see #getStep()
 	 * @generated
 	 */
-	EAttribute getExecutionStep_IdExecutedProtocol();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link MetamodelExecution.ExecutionStep#getJustify <em>Justify</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Justify</em>'.
-	 * @see MetamodelExecution.ExecutionStep#getJustify()
-	 * @see #getExecutionStep()
-	 * @generated
-	 */
-	EReference getExecutionStep_Justify();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link MetamodelExecution.ExecutionStep#getStep <em>Step</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Step</em>'.
-	 * @see MetamodelExecution.ExecutionStep#getStep()
-	 * @see #getExecutionStep()
-	 * @generated
-	 */
-	EReference getExecutionStep_Step();
+	EAttribute getStep_IdExecutedProtocol();
 
 	/**
 	 * Returns the meta object for class '{@link MetamodelExecution.AuxiliaryConduct <em>Auxiliary Conduct</em>}'.
@@ -3614,15 +3744,15 @@ public interface Execution_metamodelPackage extends EPackage {
 	EClass getAuxiliaryConduct();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link MetamodelExecution.AuxiliaryConduct#getAnswers <em>Answers</em>}'.
+	 * Returns the meta object for the containment reference list '{@link MetamodelExecution.AuxiliaryConduct#getAnswer <em>Answer</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Answers</em>'.
-	 * @see MetamodelExecution.AuxiliaryConduct#getAnswers()
+	 * @return the meta object for the containment reference list '<em>Answer</em>'.
+	 * @see MetamodelExecution.AuxiliaryConduct#getAnswer()
 	 * @see #getAuxiliaryConduct()
 	 * @generated
 	 */
-	EReference getAuxiliaryConduct_Answers();
+	EReference getAuxiliaryConduct_Answer();
 
 	/**
 	 * Returns the meta object for class '{@link MetamodelExecution.Information <em>Information</em>}'.
@@ -3676,28 +3806,6 @@ public interface Execution_metamodelPackage extends EPackage {
 	EAttribute getPrescription_Text();
 
 	/**
-	 * Returns the meta object for the attribute '{@link MetamodelExecution.Prescription#getIdPrescribedMedicament <em>Id Prescribed Medicament</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Id Prescribed Medicament</em>'.
-	 * @see MetamodelExecution.Prescription#getIdPrescribedMedicament()
-	 * @see #getPrescription()
-	 * @generated
-	 */
-	EAttribute getPrescription_IdPrescribedMedicament();
-
-	/**
-	 * Returns the meta object for the attribute '{@link MetamodelExecution.Prescription#getIdPrescribedItens <em>Id Prescribed Itens</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Id Prescribed Itens</em>'.
-	 * @see MetamodelExecution.Prescription#getIdPrescribedItens()
-	 * @see #getPrescription()
-	 * @generated
-	 */
-	EAttribute getPrescription_IdPrescribedItens();
-
-	/**
 	 * Returns the meta object for the containment reference list '{@link MetamodelExecution.Prescription#getPrescribedmedicament <em>Prescribedmedicament</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3718,6 +3826,17 @@ public interface Execution_metamodelPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getPrescription_Prescribedprescriptionitem();
+
+	/**
+	 * Returns the meta object for the attribute '{@link MetamodelExecution.Prescription#getPrescription <em>Prescription</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Prescription</em>'.
+	 * @see MetamodelExecution.Prescription#getPrescription()
+	 * @see #getPrescription()
+	 * @generated
+	 */
+	EAttribute getPrescription_Prescription();
 
 	/**
 	 * Returns the meta object for class '{@link MetamodelExecution.Treatment <em>Treatment</em>}'.
@@ -3872,15 +3991,15 @@ public interface Execution_metamodelPackage extends EPackage {
 	EAttribute getExamination_SideMemberDisplay();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link MetamodelExecution.Examination#getExamination <em>Examination</em>}'.
+	 * Returns the meta object for the containment reference '{@link MetamodelExecution.Examination#getExam <em>Exam</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Examination</em>'.
-	 * @see MetamodelExecution.Examination#getExamination()
+	 * @return the meta object for the containment reference '<em>Exam</em>'.
+	 * @see MetamodelExecution.Examination#getExam()
 	 * @see #getExamination()
 	 * @generated
 	 */
-	EReference getExamination_Examination();
+	EReference getExamination_Exam();
 
 	/**
 	 * Returns the meta object for class '{@link MetamodelExecution.Previous <em>Previous</em>}'.
@@ -3967,71 +4086,6 @@ public interface Execution_metamodelPackage extends EPackage {
 	EClass getExecutor();
 
 	/**
-	 * Returns the meta object for class '{@link MetamodelExecution.Answer <em>Answer</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Answer</em>'.
-	 * @see MetamodelExecution.Answer
-	 * @generated
-	 */
-	EClass getAnswer();
-
-	/**
-	 * Returns the meta object for the attribute '{@link MetamodelExecution.Answer#getId <em>Id</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Id</em>'.
-	 * @see MetamodelExecution.Answer#getId()
-	 * @see #getAnswer()
-	 * @generated
-	 */
-	EAttribute getAnswer_Id();
-
-	/**
-	 * Returns the meta object for the attribute '{@link MetamodelExecution.Answer#getType <em>Type</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Type</em>'.
-	 * @see MetamodelExecution.Answer#getType()
-	 * @see #getAnswer()
-	 * @generated
-	 */
-	EAttribute getAnswer_Type();
-
-	/**
-	 * Returns the meta object for the attribute '{@link MetamodelExecution.Answer#getTypeVerbose <em>Type Verbose</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Type Verbose</em>'.
-	 * @see MetamodelExecution.Answer#getTypeVerbose()
-	 * @see #getAnswer()
-	 * @generated
-	 */
-	EAttribute getAnswer_TypeVerbose();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link MetamodelExecution.Answer#getQuestions <em>Questions</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Questions</em>'.
-	 * @see MetamodelExecution.Answer#getQuestions()
-	 * @see #getAnswer()
-	 * @generated
-	 */
-	EReference getAnswer_Questions();
-
-	/**
-	 * Returns the meta object for the attribute '{@link MetamodelExecution.Answer#isValue <em>Value</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Value</em>'.
-	 * @see MetamodelExecution.Answer#isValue()
-	 * @see #getAnswer()
-	 * @generated
-	 */
-	EAttribute getAnswer_Value();
-
-	/**
 	 * Returns the meta object for class '{@link MetamodelExecution.Question <em>Question</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4075,10 +4129,10 @@ public interface Execution_metamodelPackage extends EPackage {
 	EAttribute getQuestion_Text();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link MetamodelExecution.Question#getVariable <em>Variable</em>}'.
+	 * Returns the meta object for the containment reference '{@link MetamodelExecution.Question#getVariable <em>Variable</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Variable</em>'.
+	 * @return the meta object for the containment reference '<em>Variable</em>'.
 	 * @see MetamodelExecution.Question#getVariable()
 	 * @see #getQuestion()
 	 * @generated
@@ -4184,17 +4238,6 @@ public interface Execution_metamodelPackage extends EPackage {
 	EAttribute getVariable_Weight();
 
 	/**
-	 * Returns the meta object for the attribute '{@link MetamodelExecution.Variable#isValue <em>Value</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Value</em>'.
-	 * @see MetamodelExecution.Variable#isValue()
-	 * @see #getVariable()
-	 * @generated
-	 */
-	EAttribute getVariable_Value();
-
-	/**
 	 * Returns the meta object for the attribute '{@link MetamodelExecution.Variable#getLink <em>Link</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4204,6 +4247,17 @@ public interface Execution_metamodelPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getVariable_Link();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link MetamodelExecution.Variable#getValue <em>Value</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Value</em>'.
+	 * @see MetamodelExecution.Variable#getValue()
+	 * @see #getVariable()
+	 * @generated
+	 */
+	EReference getVariable_Value();
 
 	/**
 	 * Returns the meta object for class '{@link MetamodelExecution.PrescribedExamination <em>Prescribed Examination</em>}'.
@@ -4271,15 +4325,15 @@ public interface Execution_metamodelPackage extends EPackage {
 	EAttribute getPrescribedExamination_NumberGuide();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link MetamodelExecution.PrescribedExamination#getPrescription <em>Prescription</em>}'.
+	 * Returns the meta object for the containment reference '{@link MetamodelExecution.PrescribedExamination#getExaminationprescription <em>Examinationprescription</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Prescription</em>'.
-	 * @see MetamodelExecution.PrescribedExamination#getPrescription()
+	 * @return the meta object for the containment reference '<em>Examinationprescription</em>'.
+	 * @see MetamodelExecution.PrescribedExamination#getExaminationprescription()
 	 * @see #getPrescribedExamination()
 	 * @generated
 	 */
-	EReference getPrescribedExamination_Prescription();
+	EReference getPrescribedExamination_Examinationprescription();
 
 	/**
 	 * Returns the meta object for the containment reference list '{@link MetamodelExecution.PrescribedExamination#getComplement <em>Complement</em>}'.
@@ -4549,374 +4603,287 @@ public interface Execution_metamodelPackage extends EPackage {
 	EClass getPrescribedMedicament();
 
 	/**
-	 * Returns the meta object for class '{@link MetamodelExecution.ExtendedProtocol <em>Extended Protocol</em>}'.
+	 * Returns the meta object for class '{@link MetamodelExecution.ShortExecution <em>Short Execution</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Extended Protocol</em>'.
-	 * @see MetamodelExecution.ExtendedProtocol
+	 * @return the meta object for class '<em>Short Execution</em>'.
+	 * @see MetamodelExecution.ShortExecution
 	 * @generated
 	 */
-	EClass getExtendedProtocol();
+	EClass getShortExecution();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link MetamodelExecution.ExtendedProtocol#getExecutionprotocol <em>Executionprotocol</em>}'.
+	 * Returns the meta object for the attribute '{@link MetamodelExecution.ShortExecution#getConclusionDate <em>Conclusion Date</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Executionprotocol</em>'.
-	 * @see MetamodelExecution.ExtendedProtocol#getExecutionprotocol()
-	 * @see #getExtendedProtocol()
+	 * @return the meta object for the attribute '<em>Conclusion Date</em>'.
+	 * @see MetamodelExecution.ShortExecution#getConclusionDate()
+	 * @see #getShortExecution()
 	 * @generated
 	 */
-	EReference getExtendedProtocol_Executionprotocol();
+	EAttribute getShortExecution_ConclusionDate();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link MetamodelExecution.ExtendedProtocol#getExecutionstep <em>Executionstep</em>}'.
+	 * Returns the meta object for the attribute '{@link MetamodelExecution.ShortExecution#isCompletedDate <em>Completed Date</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Executionstep</em>'.
-	 * @see MetamodelExecution.ExtendedProtocol#getExecutionstep()
-	 * @see #getExtendedProtocol()
+	 * @return the meta object for the attribute '<em>Completed Date</em>'.
+	 * @see MetamodelExecution.ShortExecution#isCompletedDate()
+	 * @see #getShortExecution()
 	 * @generated
 	 */
-	EReference getExtendedProtocol_Executionstep();
+	EAttribute getShortExecution_CompletedDate();
 
 	/**
-	 * Returns the meta object for class '{@link MetamodelExecution.ExecutionProtocol <em>Execution Protocol</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Execution Protocol</em>'.
-	 * @see MetamodelExecution.ExecutionProtocol
-	 * @generated
-	 */
-	EClass getExecutionProtocol();
-
-	/**
-	 * Returns the meta object for the attribute '{@link MetamodelExecution.ExecutionProtocol#getId <em>Id</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Id</em>'.
-	 * @see MetamodelExecution.ExecutionProtocol#getId()
-	 * @see #getExecutionProtocol()
-	 * @generated
-	 */
-	EAttribute getExecutionProtocol_Id();
-
-	/**
-	 * Returns the meta object for the attribute '{@link MetamodelExecution.ExecutionProtocol#getUrl <em>Url</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Url</em>'.
-	 * @see MetamodelExecution.ExecutionProtocol#getUrl()
-	 * @see #getExecutionProtocol()
-	 * @generated
-	 */
-	EAttribute getExecutionProtocol_Url();
-
-	/**
-	 * Returns the meta object for the attribute '{@link MetamodelExecution.ExecutionProtocol#getCreation <em>Creation</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Creation</em>'.
-	 * @see MetamodelExecution.ExecutionProtocol#getCreation()
-	 * @see #getExecutionProtocol()
-	 * @generated
-	 */
-	EAttribute getExecutionProtocol_Creation();
-
-	/**
-	 * Returns the meta object for the attribute '{@link MetamodelExecution.ExecutionProtocol#getConclusion <em>Conclusion</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Conclusion</em>'.
-	 * @see MetamodelExecution.ExecutionProtocol#getConclusion()
-	 * @see #getExecutionProtocol()
-	 * @generated
-	 */
-	EAttribute getExecutionProtocol_Conclusion();
-
-	/**
-	 * Returns the meta object for the attribute '{@link MetamodelExecution.ExecutionProtocol#isCompleted <em>Completed</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Completed</em>'.
-	 * @see MetamodelExecution.ExecutionProtocol#isCompleted()
-	 * @see #getExecutionProtocol()
-	 * @generated
-	 */
-	EAttribute getExecutionProtocol_Completed();
-
-	/**
-	 * Returns the meta object for the attribute '{@link MetamodelExecution.ExecutionProtocol#isAborted <em>Aborted</em>}'.
+	 * Returns the meta object for the attribute '{@link MetamodelExecution.ShortExecution#isAborted <em>Aborted</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Aborted</em>'.
-	 * @see MetamodelExecution.ExecutionProtocol#isAborted()
-	 * @see #getExecutionProtocol()
+	 * @see MetamodelExecution.ShortExecution#isAborted()
+	 * @see #getShortExecution()
 	 * @generated
 	 */
-	EAttribute getExecutionProtocol_Aborted();
+	EAttribute getShortExecution_Aborted();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link MetamodelExecution.ExecutionProtocol#getJustify <em>Justify</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Justify</em>'.
-	 * @see MetamodelExecution.ExecutionProtocol#getJustify()
-	 * @see #getExecutionProtocol()
-	 * @generated
-	 */
-	EReference getExecutionProtocol_Justify();
-
-	/**
-	 * Returns the meta object for the attribute '{@link MetamodelExecution.ExecutionProtocol#getLastExecutedStepDate <em>Last Executed Step Date</em>}'.
+	 * Returns the meta object for the attribute '{@link MetamodelExecution.ShortExecution#getLastExecutedStepDate <em>Last Executed Step Date</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Last Executed Step Date</em>'.
-	 * @see MetamodelExecution.ExecutionProtocol#getLastExecutedStepDate()
-	 * @see #getExecutionProtocol()
+	 * @see MetamodelExecution.ShortExecution#getLastExecutedStepDate()
+	 * @see #getShortExecution()
 	 * @generated
 	 */
-	EAttribute getExecutionProtocol_LastExecutedStepDate();
+	EAttribute getShortExecution_LastExecutedStepDate();
 
 	/**
-	 * Returns the meta object for the attribute '{@link MetamodelExecution.ExecutionProtocol#getIdProtocol <em>Id Protocol</em>}'.
+	 * Returns the meta object for the containment reference '{@link MetamodelExecution.ShortExecution#getPathway <em>Pathway</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Id Protocol</em>'.
-	 * @see MetamodelExecution.ExecutionProtocol#getIdProtocol()
-	 * @see #getExecutionProtocol()
+	 * @return the meta object for the containment reference '<em>Pathway</em>'.
+	 * @see MetamodelExecution.ShortExecution#getPathway()
+	 * @see #getShortExecution()
 	 * @generated
 	 */
-	EAttribute getExecutionProtocol_IdProtocol();
+	EReference getShortExecution_Pathway();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link MetamodelExecution.ExecutionProtocol#getProtocol <em>Protocol</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Protocol</em>'.
-	 * @see MetamodelExecution.ExecutionProtocol#getProtocol()
-	 * @see #getExecutionProtocol()
-	 * @generated
-	 */
-	EReference getExecutionProtocol_Protocol();
-
-	/**
-	 * Returns the meta object for the attribute '{@link MetamodelExecution.ExecutionProtocol#getIdResponsible <em>Id Responsible</em>}'.
+	 * Returns the meta object for the attribute '{@link MetamodelExecution.ShortExecution#getIdResponsible <em>Id Responsible</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Id Responsible</em>'.
-	 * @see MetamodelExecution.ExecutionProtocol#getIdResponsible()
-	 * @see #getExecutionProtocol()
+	 * @see MetamodelExecution.ShortExecution#getIdResponsible()
+	 * @see #getShortExecution()
 	 * @generated
 	 */
-	EAttribute getExecutionProtocol_IdResponsible();
+	EAttribute getShortExecution_IdResponsible();
 
 	/**
-	 * Returns the meta object for the attribute '{@link MetamodelExecution.ExecutionProtocol#getIdLastProfessional <em>Id Last Professional</em>}'.
+	 * Returns the meta object for the attribute '{@link MetamodelExecution.ShortExecution#getIdLastProfessional <em>Id Last Professional</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Id Last Professional</em>'.
-	 * @see MetamodelExecution.ExecutionProtocol#getIdLastProfessional()
-	 * @see #getExecutionProtocol()
+	 * @see MetamodelExecution.ShortExecution#getIdLastProfessional()
+	 * @see #getShortExecution()
 	 * @generated
 	 */
-	EAttribute getExecutionProtocol_IdLastProfessional();
+	EAttribute getShortExecution_IdLastProfessional();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link MetamodelExecution.ExecutionProtocol#getResponsible <em>Responsible</em>}'.
+	 * Returns the meta object for the containment reference '{@link MetamodelExecution.ShortExecution#getResponsible <em>Responsible</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference '<em>Responsible</em>'.
-	 * @see MetamodelExecution.ExecutionProtocol#getResponsible()
-	 * @see #getExecutionProtocol()
+	 * @see MetamodelExecution.ShortExecution#getResponsible()
+	 * @see #getShortExecution()
 	 * @generated
 	 */
-	EReference getExecutionProtocol_Responsible();
+	EReference getShortExecution_Responsible();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link MetamodelExecution.ExecutionProtocol#getLastprofessional <em>Lastprofessional</em>}'.
+	 * Returns the meta object for the containment reference '{@link MetamodelExecution.ShortExecution#getLastprofessional <em>Lastprofessional</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference '<em>Lastprofessional</em>'.
-	 * @see MetamodelExecution.ExecutionProtocol#getLastprofessional()
-	 * @see #getExecutionProtocol()
+	 * @see MetamodelExecution.ShortExecution#getLastprofessional()
+	 * @see #getShortExecution()
 	 * @generated
 	 */
-	EReference getExecutionProtocol_Lastprofessional();
+	EReference getShortExecution_Lastprofessional();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link MetamodelExecution.ExecutionProtocol#getExecutedstep <em>Executedstep</em>}'.
+	 * Returns the meta object for the containment reference '{@link MetamodelExecution.ShortExecution#getExecutedstep <em>Executedstep</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference '<em>Executedstep</em>'.
-	 * @see MetamodelExecution.ExecutionProtocol#getExecutedstep()
-	 * @see #getExecutionProtocol()
+	 * @see MetamodelExecution.ShortExecution#getExecutedstep()
+	 * @see #getShortExecution()
 	 * @generated
 	 */
-	EReference getExecutionProtocol_Executedstep();
+	EReference getShortExecution_Executedstep();
 
 	/**
-	 * Returns the meta object for class '{@link MetamodelExecution.Justify <em>Justify</em>}'.
+	 * Returns the meta object for class '{@link MetamodelExecution.Justification <em>Justification</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Justify</em>'.
-	 * @see MetamodelExecution.Justify
+	 * @return the meta object for class '<em>Justification</em>'.
+	 * @see MetamodelExecution.Justification
 	 * @generated
 	 */
-	EClass getJustify();
+	EClass getJustification();
 
 	/**
-	 * Returns the meta object for the attribute '{@link MetamodelExecution.Justify#getId <em>Id</em>}'.
+	 * Returns the meta object for the attribute '{@link MetamodelExecution.Justification#getId <em>Id</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Id</em>'.
-	 * @see MetamodelExecution.Justify#getId()
-	 * @see #getJustify()
+	 * @see MetamodelExecution.Justification#getId()
+	 * @see #getJustification()
 	 * @generated
 	 */
-	EAttribute getJustify_Id();
+	EAttribute getJustification_Id();
 
 	/**
-	 * Returns the meta object for the attribute '{@link MetamodelExecution.Justify#getReason <em>Reason</em>}'.
+	 * Returns the meta object for the attribute '{@link MetamodelExecution.Justification#getReason <em>Reason</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Reason</em>'.
-	 * @see MetamodelExecution.Justify#getReason()
-	 * @see #getJustify()
+	 * @see MetamodelExecution.Justification#getReason()
+	 * @see #getJustification()
 	 * @generated
 	 */
-	EAttribute getJustify_Reason();
+	EAttribute getJustification_Reason();
 
 	/**
-	 * Returns the meta object for the attribute '{@link MetamodelExecution.Justify#getReasonDisplay <em>Reason Display</em>}'.
+	 * Returns the meta object for the attribute '{@link MetamodelExecution.Justification#getReasonDisplay <em>Reason Display</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Reason Display</em>'.
-	 * @see MetamodelExecution.Justify#getReasonDisplay()
-	 * @see #getJustify()
+	 * @see MetamodelExecution.Justification#getReasonDisplay()
+	 * @see #getJustification()
 	 * @generated
 	 */
-	EAttribute getJustify_ReasonDisplay();
+	EAttribute getJustification_ReasonDisplay();
 
 	/**
-	 * Returns the meta object for the attribute '{@link MetamodelExecution.Justify#getDescription <em>Description</em>}'.
+	 * Returns the meta object for the attribute '{@link MetamodelExecution.Justification#getDescription <em>Description</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Description</em>'.
-	 * @see MetamodelExecution.Justify#getDescription()
-	 * @see #getJustify()
+	 * @see MetamodelExecution.Justification#getDescription()
+	 * @see #getJustification()
 	 * @generated
 	 */
-	EAttribute getJustify_Description();
+	EAttribute getJustification_Description();
 
 	/**
-	 * Returns the meta object for the attribute '{@link MetamodelExecution.Justify#getJustifyById <em>Justify By Id</em>}'.
+	 * Returns the meta object for the attribute '{@link MetamodelExecution.Justification#getJustifyById <em>Justify By Id</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Justify By Id</em>'.
-	 * @see MetamodelExecution.Justify#getJustifyById()
-	 * @see #getJustify()
+	 * @see MetamodelExecution.Justification#getJustifyById()
+	 * @see #getJustification()
 	 * @generated
 	 */
-	EAttribute getJustify_JustifyById();
+	EAttribute getJustification_JustifyById();
 
 	/**
-	 * Returns the meta object for the attribute '{@link MetamodelExecution.Justify#getJustifyBy <em>Justify By</em>}'.
+	 * Returns the meta object for the attribute '{@link MetamodelExecution.Justification#getJustifyBy <em>Justify By</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Justify By</em>'.
-	 * @see MetamodelExecution.Justify#getJustifyBy()
-	 * @see #getJustify()
+	 * @see MetamodelExecution.Justification#getJustifyBy()
+	 * @see #getJustification()
 	 * @generated
 	 */
-	EAttribute getJustify_JustifyBy();
+	EAttribute getJustification_JustifyBy();
 
 	/**
-	 * Returns the meta object for class '{@link MetamodelExecution.Protocol <em>Protocol</em>}'.
+	 * Returns the meta object for class '{@link MetamodelExecution.Pathway <em>Pathway</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Protocol</em>'.
-	 * @see MetamodelExecution.Protocol
+	 * @return the meta object for class '<em>Pathway</em>'.
+	 * @see MetamodelExecution.Pathway
 	 * @generated
 	 */
-	EClass getProtocol();
+	EClass getPathway();
 
 	/**
-	 * Returns the meta object for the attribute '{@link MetamodelExecution.Protocol#getId <em>Id</em>}'.
+	 * Returns the meta object for the attribute '{@link MetamodelExecution.Pathway#getId <em>Id</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Id</em>'.
-	 * @see MetamodelExecution.Protocol#getId()
-	 * @see #getProtocol()
+	 * @see MetamodelExecution.Pathway#getId()
+	 * @see #getPathway()
 	 * @generated
 	 */
-	EAttribute getProtocol_Id();
+	EAttribute getPathway_Id();
 
 	/**
-	 * Returns the meta object for the attribute '{@link MetamodelExecution.Protocol#getUrl <em>Url</em>}'.
+	 * Returns the meta object for the attribute '{@link MetamodelExecution.Pathway#getUrl <em>Url</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Url</em>'.
-	 * @see MetamodelExecution.Protocol#getUrl()
-	 * @see #getProtocol()
+	 * @see MetamodelExecution.Pathway#getUrl()
+	 * @see #getPathway()
 	 * @generated
 	 */
-	EAttribute getProtocol_Url();
+	EAttribute getPathway_Url();
 
 	/**
-	 * Returns the meta object for the attribute '{@link MetamodelExecution.Protocol#getCode <em>Code</em>}'.
+	 * Returns the meta object for the attribute '{@link MetamodelExecution.Pathway#getCode <em>Code</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Code</em>'.
-	 * @see MetamodelExecution.Protocol#getCode()
-	 * @see #getProtocol()
+	 * @see MetamodelExecution.Pathway#getCode()
+	 * @see #getPathway()
 	 * @generated
 	 */
-	EAttribute getProtocol_Code();
+	EAttribute getPathway_Code();
 
 	/**
-	 * Returns the meta object for the attribute '{@link MetamodelExecution.Protocol#getName <em>Name</em>}'.
+	 * Returns the meta object for the attribute '{@link MetamodelExecution.Pathway#getName <em>Name</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see MetamodelExecution.Protocol#getName()
-	 * @see #getProtocol()
+	 * @see MetamodelExecution.Pathway#getName()
+	 * @see #getPathway()
 	 * @generated
 	 */
-	EAttribute getProtocol_Name();
+	EAttribute getPathway_Name();
 
 	/**
-	 * Returns the meta object for the attribute '{@link MetamodelExecution.Protocol#getIdRepository <em>Id Repository</em>}'.
+	 * Returns the meta object for the attribute '{@link MetamodelExecution.Pathway#getIdRepository <em>Id Repository</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Id Repository</em>'.
-	 * @see MetamodelExecution.Protocol#getIdRepository()
-	 * @see #getProtocol()
+	 * @see MetamodelExecution.Pathway#getIdRepository()
+	 * @see #getPathway()
 	 * @generated
 	 */
-	EAttribute getProtocol_IdRepository();
+	EAttribute getPathway_IdRepository();
 
 	/**
-	 * Returns the meta object for the attribute '{@link MetamodelExecution.Protocol#getVersion <em>Version</em>}'.
+	 * Returns the meta object for the attribute '{@link MetamodelExecution.Pathway#getVersion <em>Version</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Version</em>'.
-	 * @see MetamodelExecution.Protocol#getVersion()
-	 * @see #getProtocol()
+	 * @see MetamodelExecution.Pathway#getVersion()
+	 * @see #getPathway()
 	 * @generated
 	 */
-	EAttribute getProtocol_Version();
+	EAttribute getPathway_Version();
 
 	/**
-	 * Returns the meta object for the attribute '{@link MetamodelExecution.Protocol#isCompleted <em>Completed</em>}'.
+	 * Returns the meta object for the attribute '{@link MetamodelExecution.Pathway#isCompleted <em>Completed</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Completed</em>'.
-	 * @see MetamodelExecution.Protocol#isCompleted()
-	 * @see #getProtocol()
+	 * @see MetamodelExecution.Pathway#isCompleted()
+	 * @see #getPathway()
 	 * @generated
 	 */
-	EAttribute getProtocol_Completed();
+	EAttribute getPathway_Completed();
 
 	/**
 	 * Returns the meta object for class '{@link MetamodelExecution.Responsible <em>Responsible</em>}'.
@@ -4948,149 +4915,6 @@ public interface Execution_metamodelPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getExecutedStep();
-
-	/**
-	 * Returns the meta object for the attribute '{@link MetamodelExecution.ExecutedStep#getId <em>Id</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Id</em>'.
-	 * @see MetamodelExecution.ExecutedStep#getId()
-	 * @see #getExecutedStep()
-	 * @generated
-	 */
-	EAttribute getExecutedStep_Id();
-
-	/**
-	 * Returns the meta object for the attribute '{@link MetamodelExecution.ExecutedStep#getType <em>Type</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Type</em>'.
-	 * @see MetamodelExecution.ExecutedStep#getType()
-	 * @see #getExecutedStep()
-	 * @generated
-	 */
-	EAttribute getExecutedStep_Type();
-
-	/**
-	 * Returns the meta object for the attribute '{@link MetamodelExecution.ExecutedStep#getTypeVerbose <em>Type Verbose</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Type Verbose</em>'.
-	 * @see MetamodelExecution.ExecutedStep#getTypeVerbose()
-	 * @see #getExecutedStep()
-	 * @generated
-	 */
-	EAttribute getExecutedStep_TypeVerbose();
-
-	/**
-	 * Returns the meta object for the attribute '{@link MetamodelExecution.ExecutedStep#getUrl <em>Url</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Url</em>'.
-	 * @see MetamodelExecution.ExecutedStep#getUrl()
-	 * @see #getExecutedStep()
-	 * @generated
-	 */
-	EAttribute getExecutedStep_Url();
-
-	/**
-	 * Returns the meta object for the attribute '{@link MetamodelExecution.ExecutedStep#isExecuted <em>Executed</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Executed</em>'.
-	 * @see MetamodelExecution.ExecutedStep#isExecuted()
-	 * @see #getExecutedStep()
-	 * @generated
-	 */
-	EAttribute getExecutedStep_Executed();
-
-	/**
-	 * Returns the meta object for the attribute '{@link MetamodelExecution.ExecutedStep#isIsCurrent <em>Is Current</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Is Current</em>'.
-	 * @see MetamodelExecution.ExecutedStep#isIsCurrent()
-	 * @see #getExecutedStep()
-	 * @generated
-	 */
-	EAttribute getExecutedStep_IsCurrent();
-
-	/**
-	 * Returns the meta object for the attribute '{@link MetamodelExecution.ExecutedStep#isReworked <em>Reworked</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Reworked</em>'.
-	 * @see MetamodelExecution.ExecutedStep#isReworked()
-	 * @see #getExecutedStep()
-	 * @generated
-	 */
-	EAttribute getExecutedStep_Reworked();
-
-	/**
-	 * Returns the meta object for the attribute '{@link MetamodelExecution.ExecutedStep#getCreationDate <em>Creation Date</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Creation Date</em>'.
-	 * @see MetamodelExecution.ExecutedStep#getCreationDate()
-	 * @see #getExecutedStep()
-	 * @generated
-	 */
-	EAttribute getExecutedStep_CreationDate();
-
-	/**
-	 * Returns the meta object for the attribute '{@link MetamodelExecution.ExecutedStep#getChangeDate <em>Change Date</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Change Date</em>'.
-	 * @see MetamodelExecution.ExecutedStep#getChangeDate()
-	 * @see #getExecutedStep()
-	 * @generated
-	 */
-	EAttribute getExecutedStep_ChangeDate();
-
-	/**
-	 * Returns the meta object for the attribute '{@link MetamodelExecution.ExecutedStep#getExecutionDate <em>Execution Date</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Execution Date</em>'.
-	 * @see MetamodelExecution.ExecutedStep#getExecutionDate()
-	 * @see #getExecutedStep()
-	 * @generated
-	 */
-	EAttribute getExecutedStep_ExecutionDate();
-
-	/**
-	 * Returns the meta object for the attribute '{@link MetamodelExecution.ExecutedStep#getIdExecutedProtocol <em>Id Executed Protocol</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Id Executed Protocol</em>'.
-	 * @see MetamodelExecution.ExecutedStep#getIdExecutedProtocol()
-	 * @see #getExecutedStep()
-	 * @generated
-	 */
-	EAttribute getExecutedStep_IdExecutedProtocol();
-
-	/**
-	 * Returns the meta object for the attribute '{@link MetamodelExecution.ExecutedStep#getIdStep <em>Id Step</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Id Step</em>'.
-	 * @see MetamodelExecution.ExecutedStep#getIdStep()
-	 * @see #getExecutedStep()
-	 * @generated
-	 */
-	EAttribute getExecutedStep_IdStep();
-
-	/**
-	 * Returns the meta object for the attribute '{@link MetamodelExecution.ExecutedStep#getIdProtocol <em>Id Protocol</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Id Protocol</em>'.
-	 * @see MetamodelExecution.ExecutedStep#getIdProtocol()
-	 * @see #getExecutedStep()
-	 * @generated
-	 */
-	EAttribute getExecutedStep_IdProtocol();
 
 	/**
 	 * Returns the meta object for the attribute '{@link MetamodelExecution.ExecutedStep#getCreatedById <em>Created By Id</em>}'.
@@ -5148,39 +4972,6 @@ public interface Execution_metamodelPackage extends EPackage {
 	EAttribute getExecutedStep_Step();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link MetamodelExecution.ExecutedStep#getPrevious <em>Previous</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Previous</em>'.
-	 * @see MetamodelExecution.ExecutedStep#getPrevious()
-	 * @see #getExecutedStep()
-	 * @generated
-	 */
-	EReference getExecutedStep_Previous();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link MetamodelExecution.ExecutedStep#getNext <em>Next</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Next</em>'.
-	 * @see MetamodelExecution.ExecutedStep#getNext()
-	 * @see #getExecutedStep()
-	 * @generated
-	 */
-	EReference getExecutedStep_Next();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link MetamodelExecution.ExecutedStep#getJustify <em>Justify</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Justify</em>'.
-	 * @see MetamodelExecution.ExecutedStep#getJustify()
-	 * @see #getExecutedStep()
-	 * @generated
-	 */
-	EReference getExecutedStep_Justify();
-
-	/**
 	 * Returns the meta object for class '{@link MetamodelExecution.LastProfessional <em>Last Professional</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5202,135 +4993,360 @@ public interface Execution_metamodelPackage extends EPackage {
 	EReference getLastProfessional_Data();
 
 	/**
-	 * Returns the meta object for class '{@link MetamodelExecution.UserData <em>User Data</em>}'.
+	 * Returns the meta object for class '{@link MetamodelExecution.User <em>User</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>User Data</em>'.
-	 * @see MetamodelExecution.UserData
+	 * @return the meta object for class '<em>User</em>'.
+	 * @see MetamodelExecution.User
 	 * @generated
 	 */
-	EClass getUserData();
+	EClass getUser();
 
 	/**
-	 * Returns the meta object for the attribute '{@link MetamodelExecution.UserData#getId <em>Id</em>}'.
+	 * Returns the meta object for the attribute '{@link MetamodelExecution.User#getId <em>Id</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Id</em>'.
-	 * @see MetamodelExecution.UserData#getId()
-	 * @see #getUserData()
+	 * @see MetamodelExecution.User#getId()
+	 * @see #getUser()
 	 * @generated
 	 */
-	EAttribute getUserData_Id();
+	EAttribute getUser_Id();
 
 	/**
-	 * Returns the meta object for the attribute '{@link MetamodelExecution.UserData#getUrl <em>Url</em>}'.
+	 * Returns the meta object for the attribute '{@link MetamodelExecution.User#getUrl <em>Url</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Url</em>'.
-	 * @see MetamodelExecution.UserData#getUrl()
-	 * @see #getUserData()
+	 * @see MetamodelExecution.User#getUrl()
+	 * @see #getUser()
 	 * @generated
 	 */
-	EAttribute getUserData_Url();
+	EAttribute getUser_Url();
 
 	/**
-	 * Returns the meta object for the attribute '{@link MetamodelExecution.UserData#getCode <em>Code</em>}'.
+	 * Returns the meta object for the attribute '{@link MetamodelExecution.User#getCode <em>Code</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Code</em>'.
-	 * @see MetamodelExecution.UserData#getCode()
-	 * @see #getUserData()
+	 * @see MetamodelExecution.User#getCode()
+	 * @see #getUser()
 	 * @generated
 	 */
-	EAttribute getUserData_Code();
+	EAttribute getUser_Code();
 
 	/**
-	 * Returns the meta object for the attribute '{@link MetamodelExecution.UserData#getEmail <em>Email</em>}'.
+	 * Returns the meta object for the attribute '{@link MetamodelExecution.User#getEmail <em>Email</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Email</em>'.
-	 * @see MetamodelExecution.UserData#getEmail()
-	 * @see #getUserData()
+	 * @see MetamodelExecution.User#getEmail()
+	 * @see #getUser()
 	 * @generated
 	 */
-	EAttribute getUserData_Email();
+	EAttribute getUser_Email();
 
 	/**
-	 * Returns the meta object for the attribute '{@link MetamodelExecution.UserData#getName <em>Name</em>}'.
+	 * Returns the meta object for the attribute '{@link MetamodelExecution.User#getName <em>Name</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see MetamodelExecution.UserData#getName()
-	 * @see #getUserData()
+	 * @see MetamodelExecution.User#getName()
+	 * @see #getUser()
 	 * @generated
 	 */
-	EAttribute getUserData_Name();
+	EAttribute getUser_Name();
 
 	/**
-	 * Returns the meta object for the attribute '{@link MetamodelExecution.UserData#getTypeCouncil <em>Type Council</em>}'.
+	 * Returns the meta object for the attribute '{@link MetamodelExecution.User#getTypeCouncil <em>Type Council</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Type Council</em>'.
-	 * @see MetamodelExecution.UserData#getTypeCouncil()
-	 * @see #getUserData()
+	 * @see MetamodelExecution.User#getTypeCouncil()
+	 * @see #getUser()
 	 * @generated
 	 */
-	EAttribute getUserData_TypeCouncil();
+	EAttribute getUser_TypeCouncil();
 
 	/**
-	 * Returns the meta object for the attribute '{@link MetamodelExecution.UserData#getLogin <em>Login</em>}'.
+	 * Returns the meta object for the attribute '{@link MetamodelExecution.User#getLogin <em>Login</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Login</em>'.
-	 * @see MetamodelExecution.UserData#getLogin()
-	 * @see #getUserData()
+	 * @see MetamodelExecution.User#getLogin()
+	 * @see #getUser()
 	 * @generated
 	 */
-	EAttribute getUserData_Login();
+	EAttribute getUser_Login();
 
 	/**
-	 * Returns the meta object for the attribute '{@link MetamodelExecution.UserData#getNumberCouncil <em>Number Council</em>}'.
+	 * Returns the meta object for the attribute '{@link MetamodelExecution.User#getNumberCouncil <em>Number Council</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Number Council</em>'.
-	 * @see MetamodelExecution.UserData#getNumberCouncil()
-	 * @see #getUserData()
+	 * @see MetamodelExecution.User#getNumberCouncil()
+	 * @see #getUser()
 	 * @generated
 	 */
-	EAttribute getUserData_NumberCouncil();
+	EAttribute getUser_NumberCouncil();
 
 	/**
-	 * Returns the meta object for the attribute '{@link MetamodelExecution.UserData#getState <em>State</em>}'.
+	 * Returns the meta object for the attribute '{@link MetamodelExecution.User#getState <em>State</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>State</em>'.
-	 * @see MetamodelExecution.UserData#getState()
-	 * @see #getUserData()
+	 * @see MetamodelExecution.User#getState()
+	 * @see #getUser()
 	 * @generated
 	 */
-	EAttribute getUserData_State();
+	EAttribute getUser_State();
 
 	/**
-	 * Returns the meta object for the reference '{@link MetamodelExecution.UserData#getExecutor <em>Executor</em>}'.
+	 * Returns the meta object for the reference '{@link MetamodelExecution.User#getExecutor <em>Executor</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Executor</em>'.
-	 * @see MetamodelExecution.UserData#getExecutor()
-	 * @see #getUserData()
+	 * @see MetamodelExecution.User#getExecutor()
+	 * @see #getUser()
 	 * @generated
 	 */
-	EReference getUserData_Executor();
+	EReference getUser_Executor();
 
 	/**
-	 * Returns the meta object for the reference '{@link MetamodelExecution.UserData#getCreator <em>Creator</em>}'.
+	 * Returns the meta object for the reference '{@link MetamodelExecution.User#getCreator <em>Creator</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Creator</em>'.
-	 * @see MetamodelExecution.UserData#getCreator()
-	 * @see #getUserData()
+	 * @see MetamodelExecution.User#getCreator()
+	 * @see #getUser()
 	 * @generated
 	 */
-	EReference getUserData_Creator();
+	EReference getUser_Creator();
+
+	/**
+	 * Returns the meta object for class '{@link MetamodelExecution.Value <em>Value</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Value</em>'.
+	 * @see MetamodelExecution.Value
+	 * @generated
+	 */
+	EClass getValue();
+
+	/**
+	 * Returns the meta object for class '{@link MetamodelExecution.Answer <em>Answer</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Answer</em>'.
+	 * @see MetamodelExecution.Answer
+	 * @generated
+	 */
+	EClass getAnswer();
+
+	/**
+	 * Returns the meta object for the attribute '{@link MetamodelExecution.Answer#getTypeVerbose <em>Type Verbose</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Type Verbose</em>'.
+	 * @see MetamodelExecution.Answer#getTypeVerbose()
+	 * @see #getAnswer()
+	 * @generated
+	 */
+	EAttribute getAnswer_TypeVerbose();
+
+	/**
+	 * Returns the meta object for the attribute '{@link MetamodelExecution.Answer#getType <em>Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Type</em>'.
+	 * @see MetamodelExecution.Answer#getType()
+	 * @see #getAnswer()
+	 * @generated
+	 */
+	EAttribute getAnswer_Type();
+
+	/**
+	 * Returns the meta object for the attribute '{@link MetamodelExecution.Answer#getId <em>Id</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Id</em>'.
+	 * @see MetamodelExecution.Answer#getId()
+	 * @see #getAnswer()
+	 * @generated
+	 */
+	EAttribute getAnswer_Id();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link MetamodelExecution.Answer#getValue <em>Value</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Value</em>'.
+	 * @see MetamodelExecution.Answer#getValue()
+	 * @see #getAnswer()
+	 * @generated
+	 */
+	EReference getAnswer_Value();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link MetamodelExecution.Answer#getQuestion <em>Question</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Question</em>'.
+	 * @see MetamodelExecution.Answer#getQuestion()
+	 * @see #getAnswer()
+	 * @generated
+	 */
+	EReference getAnswer_Question();
+
+	/**
+	 * Returns the meta object for class '{@link MetamodelExecution.Execution <em>Execution</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Execution</em>'.
+	 * @see MetamodelExecution.Execution
+	 * @generated
+	 */
+	EClass getExecution();
+
+	/**
+	 * Returns the meta object for the attribute '{@link MetamodelExecution.Execution#getId <em>Id</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Id</em>'.
+	 * @see MetamodelExecution.Execution#getId()
+	 * @see #getExecution()
+	 * @generated
+	 */
+	EAttribute getExecution_Id();
+
+	/**
+	 * Returns the meta object for the attribute '{@link MetamodelExecution.Execution#getUrl <em>Url</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Url</em>'.
+	 * @see MetamodelExecution.Execution#getUrl()
+	 * @see #getExecution()
+	 * @generated
+	 */
+	EAttribute getExecution_Url();
+
+	/**
+	 * Returns the meta object for the attribute '{@link MetamodelExecution.Execution#getIdProtocol <em>Id Protocol</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Id Protocol</em>'.
+	 * @see MetamodelExecution.Execution#getIdProtocol()
+	 * @see #getExecution()
+	 * @generated
+	 */
+	EAttribute getExecution_IdProtocol();
+
+	/**
+	 * Returns the meta object for the attribute '{@link MetamodelExecution.Execution#getCreationDate <em>Creation Date</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Creation Date</em>'.
+	 * @see MetamodelExecution.Execution#getCreationDate()
+	 * @see #getExecution()
+	 * @generated
+	 */
+	EAttribute getExecution_CreationDate();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link MetamodelExecution.Execution#getJustification <em>Justification</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Justification</em>'.
+	 * @see MetamodelExecution.Execution#getJustification()
+	 * @see #getExecution()
+	 * @generated
+	 */
+	EReference getExecution_Justification();
+
+	/**
+	 * Returns the meta object for class '{@link MetamodelExecution.Numeric <em>Numeric</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Numeric</em>'.
+	 * @see MetamodelExecution.Numeric
+	 * @generated
+	 */
+	EClass getNumeric();
+
+	/**
+	 * Returns the meta object for the attribute '{@link MetamodelExecution.Numeric#getValue <em>Value</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Value</em>'.
+	 * @see MetamodelExecution.Numeric#getValue()
+	 * @see #getNumeric()
+	 * @generated
+	 */
+	EAttribute getNumeric_Value();
+
+	/**
+	 * Returns the meta object for class '{@link MetamodelExecution.YesOrNo <em>Yes Or No</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Yes Or No</em>'.
+	 * @see MetamodelExecution.YesOrNo
+	 * @generated
+	 */
+	EClass getYesOrNo();
+
+	/**
+	 * Returns the meta object for the attribute '{@link MetamodelExecution.YesOrNo#getValue <em>Value</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Value</em>'.
+	 * @see MetamodelExecution.YesOrNo#getValue()
+	 * @see #getYesOrNo()
+	 * @generated
+	 */
+	EAttribute getYesOrNo_Value();
+
+	/**
+	 * Returns the meta object for class '{@link MetamodelExecution.CompleteStep <em>Complete Step</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Complete Step</em>'.
+	 * @see MetamodelExecution.CompleteStep
+	 * @generated
+	 */
+	EClass getCompleteStep();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link MetamodelExecution.CompleteStep#getStep <em>Step</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Step</em>'.
+	 * @see MetamodelExecution.CompleteStep#getStep()
+	 * @see #getCompleteStep()
+	 * @generated
+	 */
+	EReference getCompleteStep_Step();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link MetamodelExecution.CompleteStep#getExecutor <em>Executor</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Executor</em>'.
+	 * @see MetamodelExecution.CompleteStep#getExecutor()
+	 * @see #getCompleteStep()
+	 * @generated
+	 */
+	EReference getCompleteStep_Executor();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link MetamodelExecution.CompleteStep#getCreator <em>Creator</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Creator</em>'.
+	 * @see MetamodelExecution.CompleteStep#getCreator()
+	 * @see #getCompleteStep()
+	 * @generated
+	 */
+	EReference getCompleteStep_Creator();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -5356,22 +5372,14 @@ public interface Execution_metamodelPackage extends EPackage {
 	 */
 	interface Literals {
 		/**
-		 * The meta object literal for the '{@link MetamodelExecution.impl.ExecutionStepImpl <em>Execution Step</em>}' class.
+		 * The meta object literal for the '{@link MetamodelExecution.impl.StepImpl <em>Step</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see MetamodelExecution.impl.ExecutionStepImpl
-		 * @see MetamodelExecution.impl.Execution_metamodelPackageImpl#getExecutionStep()
+		 * @see MetamodelExecution.impl.StepImpl
+		 * @see MetamodelExecution.impl.Execution_metamodelPackageImpl#getStep()
 		 * @generated
 		 */
-		EClass EXECUTION_STEP = eINSTANCE.getExecutionStep();
-
-		/**
-		 * The meta object literal for the '<em><b>Id</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute EXECUTION_STEP__ID = eINSTANCE.getExecutionStep_Id();
+		EClass STEP = eINSTANCE.getStep();
 
 		/**
 		 * The meta object literal for the '<em><b>Type</b></em>' attribute feature.
@@ -5379,7 +5387,7 @@ public interface Execution_metamodelPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute EXECUTION_STEP__TYPE = eINSTANCE.getExecutionStep_Type();
+		EAttribute STEP__TYPE = eINSTANCE.getStep_Type();
 
 		/**
 		 * The meta object literal for the '<em><b>Type Verbose</b></em>' attribute feature.
@@ -5387,15 +5395,7 @@ public interface Execution_metamodelPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute EXECUTION_STEP__TYPE_VERBOSE = eINSTANCE.getExecutionStep_TypeVerbose();
-
-		/**
-		 * The meta object literal for the '<em><b>Url</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute EXECUTION_STEP__URL = eINSTANCE.getExecutionStep_Url();
+		EAttribute STEP__TYPE_VERBOSE = eINSTANCE.getStep_TypeVerbose();
 
 		/**
 		 * The meta object literal for the '<em><b>Is Current</b></em>' attribute feature.
@@ -5403,7 +5403,7 @@ public interface Execution_metamodelPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute EXECUTION_STEP__IS_CURRENT = eINSTANCE.getExecutionStep_IsCurrent();
+		EAttribute STEP__IS_CURRENT = eINSTANCE.getStep_IsCurrent();
 
 		/**
 		 * The meta object literal for the '<em><b>Reworked</b></em>' attribute feature.
@@ -5411,7 +5411,7 @@ public interface Execution_metamodelPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute EXECUTION_STEP__REWORKED = eINSTANCE.getExecutionStep_Reworked();
+		EAttribute STEP__REWORKED = eINSTANCE.getStep_Reworked();
 
 		/**
 		 * The meta object literal for the '<em><b>Executed</b></em>' attribute feature.
@@ -5419,7 +5419,7 @@ public interface Execution_metamodelPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute EXECUTION_STEP__EXECUTED = eINSTANCE.getExecutionStep_Executed();
+		EAttribute STEP__EXECUTED = eINSTANCE.getStep_Executed();
 
 		/**
 		 * The meta object literal for the '<em><b>Previous</b></em>' containment reference feature.
@@ -5427,7 +5427,7 @@ public interface Execution_metamodelPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference EXECUTION_STEP__PREVIOUS = eINSTANCE.getExecutionStep_Previous();
+		EReference STEP__PREVIOUS = eINSTANCE.getStep_Previous();
 
 		/**
 		 * The meta object literal for the '<em><b>Next</b></em>' containment reference feature.
@@ -5435,15 +5435,7 @@ public interface Execution_metamodelPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference EXECUTION_STEP__NEXT = eINSTANCE.getExecutionStep_Next();
-
-		/**
-		 * The meta object literal for the '<em><b>Creation Date</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute EXECUTION_STEP__CREATION_DATE = eINSTANCE.getExecutionStep_CreationDate();
+		EReference STEP__NEXT = eINSTANCE.getStep_Next();
 
 		/**
 		 * The meta object literal for the '<em><b>Change Date</b></em>' attribute feature.
@@ -5451,7 +5443,7 @@ public interface Execution_metamodelPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute EXECUTION_STEP__CHANGE_DATE = eINSTANCE.getExecutionStep_ChangeDate();
+		EAttribute STEP__CHANGE_DATE = eINSTANCE.getStep_ChangeDate();
 
 		/**
 		 * The meta object literal for the '<em><b>Execution Date</b></em>' attribute feature.
@@ -5459,23 +5451,7 @@ public interface Execution_metamodelPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute EXECUTION_STEP__EXECUTION_DATE = eINSTANCE.getExecutionStep_ExecutionDate();
-
-		/**
-		 * The meta object literal for the '<em><b>Creator</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference EXECUTION_STEP__CREATOR = eINSTANCE.getExecutionStep_Creator();
-
-		/**
-		 * The meta object literal for the '<em><b>Executor</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference EXECUTION_STEP__EXECUTOR = eINSTANCE.getExecutionStep_Executor();
+		EAttribute STEP__EXECUTION_DATE = eINSTANCE.getStep_ExecutionDate();
 
 		/**
 		 * The meta object literal for the '<em><b>Id Step</b></em>' attribute feature.
@@ -5483,15 +5459,7 @@ public interface Execution_metamodelPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute EXECUTION_STEP__ID_STEP = eINSTANCE.getExecutionStep_IdStep();
-
-		/**
-		 * The meta object literal for the '<em><b>Id Protocol</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute EXECUTION_STEP__ID_PROTOCOL = eINSTANCE.getExecutionStep_IdProtocol();
+		EAttribute STEP__ID_STEP = eINSTANCE.getStep_IdStep();
 
 		/**
 		 * The meta object literal for the '<em><b>Id Executed Protocol</b></em>' attribute feature.
@@ -5499,23 +5467,7 @@ public interface Execution_metamodelPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute EXECUTION_STEP__ID_EXECUTED_PROTOCOL = eINSTANCE.getExecutionStep_IdExecutedProtocol();
-
-		/**
-		 * The meta object literal for the '<em><b>Justify</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference EXECUTION_STEP__JUSTIFY = eINSTANCE.getExecutionStep_Justify();
-
-		/**
-		 * The meta object literal for the '<em><b>Step</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference EXECUTION_STEP__STEP = eINSTANCE.getExecutionStep_Step();
+		EAttribute STEP__ID_EXECUTED_PROTOCOL = eINSTANCE.getStep_IdExecutedProtocol();
 
 		/**
 		 * The meta object literal for the '{@link MetamodelExecution.impl.AuxiliaryConductImpl <em>Auxiliary Conduct</em>}' class.
@@ -5528,12 +5480,12 @@ public interface Execution_metamodelPackage extends EPackage {
 		EClass AUXILIARY_CONDUCT = eINSTANCE.getAuxiliaryConduct();
 
 		/**
-		 * The meta object literal for the '<em><b>Answers</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Answer</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference AUXILIARY_CONDUCT__ANSWERS = eINSTANCE.getAuxiliaryConduct_Answers();
+		EReference AUXILIARY_CONDUCT__ANSWER = eINSTANCE.getAuxiliaryConduct_Answer();
 
 		/**
 		 * The meta object literal for the '{@link MetamodelExecution.impl.InformationImpl <em>Information</em>}' class.
@@ -5584,22 +5536,6 @@ public interface Execution_metamodelPackage extends EPackage {
 		EAttribute PRESCRIPTION__TEXT = eINSTANCE.getPrescription_Text();
 
 		/**
-		 * The meta object literal for the '<em><b>Id Prescribed Medicament</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute PRESCRIPTION__ID_PRESCRIBED_MEDICAMENT = eINSTANCE.getPrescription_IdPrescribedMedicament();
-
-		/**
-		 * The meta object literal for the '<em><b>Id Prescribed Itens</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute PRESCRIPTION__ID_PRESCRIBED_ITENS = eINSTANCE.getPrescription_IdPrescribedItens();
-
-		/**
 		 * The meta object literal for the '<em><b>Prescribedmedicament</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -5614,6 +5550,14 @@ public interface Execution_metamodelPackage extends EPackage {
 		 * @generated
 		 */
 		EReference PRESCRIPTION__PRESCRIBEDPRESCRIPTIONITEM = eINSTANCE.getPrescription_Prescribedprescriptionitem();
+
+		/**
+		 * The meta object literal for the '<em><b>Prescription</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute PRESCRIPTION__PRESCRIPTION = eINSTANCE.getPrescription_Prescription();
 
 		/**
 		 * The meta object literal for the '{@link MetamodelExecution.impl.TreatmentImpl <em>Treatment</em>}' class.
@@ -5732,12 +5676,12 @@ public interface Execution_metamodelPackage extends EPackage {
 		EAttribute EXAMINATION__SIDE_MEMBER_DISPLAY = eINSTANCE.getExamination_SideMemberDisplay();
 
 		/**
-		 * The meta object literal for the '<em><b>Examination</b></em>' containment reference feature.
+		 * The meta object literal for the '<em><b>Exam</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference EXAMINATION__EXAMINATION = eINSTANCE.getExamination_Examination();
+		EReference EXAMINATION__EXAM = eINSTANCE.getExamination_Exam();
 
 		/**
 		 * The meta object literal for the '{@link MetamodelExecution.impl.PreviousImpl <em>Previous</em>}' class.
@@ -5812,56 +5756,6 @@ public interface Execution_metamodelPackage extends EPackage {
 		EClass EXECUTOR = eINSTANCE.getExecutor();
 
 		/**
-		 * The meta object literal for the '{@link MetamodelExecution.impl.AnswerImpl <em>Answer</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see MetamodelExecution.impl.AnswerImpl
-		 * @see MetamodelExecution.impl.Execution_metamodelPackageImpl#getAnswer()
-		 * @generated
-		 */
-		EClass ANSWER = eINSTANCE.getAnswer();
-
-		/**
-		 * The meta object literal for the '<em><b>Id</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute ANSWER__ID = eINSTANCE.getAnswer_Id();
-
-		/**
-		 * The meta object literal for the '<em><b>Type</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute ANSWER__TYPE = eINSTANCE.getAnswer_Type();
-
-		/**
-		 * The meta object literal for the '<em><b>Type Verbose</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute ANSWER__TYPE_VERBOSE = eINSTANCE.getAnswer_TypeVerbose();
-
-		/**
-		 * The meta object literal for the '<em><b>Questions</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference ANSWER__QUESTIONS = eINSTANCE.getAnswer_Questions();
-
-		/**
-		 * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute ANSWER__VALUE = eINSTANCE.getAnswer_Value();
-
-		/**
 		 * The meta object literal for the '{@link MetamodelExecution.impl.QuestionImpl <em>Question</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -5896,7 +5790,7 @@ public interface Execution_metamodelPackage extends EPackage {
 		EAttribute QUESTION__TEXT = eINSTANCE.getQuestion_Text();
 
 		/**
-		 * The meta object literal for the '<em><b>Variable</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Variable</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -5978,20 +5872,20 @@ public interface Execution_metamodelPackage extends EPackage {
 		EAttribute VARIABLE__WEIGHT = eINSTANCE.getVariable_Weight();
 
 		/**
-		 * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute VARIABLE__VALUE = eINSTANCE.getVariable_Value();
-
-		/**
 		 * The meta object literal for the '<em><b>Link</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
 		EAttribute VARIABLE__LINK = eINSTANCE.getVariable_Link();
+
+		/**
+		 * The meta object literal for the '<em><b>Value</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference VARIABLE__VALUE = eINSTANCE.getVariable_Value();
 
 		/**
 		 * The meta object literal for the '{@link MetamodelExecution.impl.PrescribedExaminationImpl <em>Prescribed Examination</em>}' class.
@@ -6044,12 +5938,13 @@ public interface Execution_metamodelPackage extends EPackage {
 		EAttribute PRESCRIBED_EXAMINATION__NUMBER_GUIDE = eINSTANCE.getPrescribedExamination_NumberGuide();
 
 		/**
-		 * The meta object literal for the '<em><b>Prescription</b></em>' containment reference feature.
+		 * The meta object literal for the '<em><b>Examinationprescription</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference PRESCRIBED_EXAMINATION__PRESCRIPTION = eINSTANCE.getPrescribedExamination_Prescription();
+		EReference PRESCRIBED_EXAMINATION__EXAMINATIONPRESCRIPTION = eINSTANCE
+				.getPrescribedExamination_Examinationprescription();
 
 		/**
 		 * The meta object literal for the '<em><b>Complement</b></em>' containment reference list feature.
@@ -6268,80 +6163,30 @@ public interface Execution_metamodelPackage extends EPackage {
 		EClass PRESCRIBED_MEDICAMENT = eINSTANCE.getPrescribedMedicament();
 
 		/**
-		 * The meta object literal for the '{@link MetamodelExecution.impl.ExtendedProtocolImpl <em>Extended Protocol</em>}' class.
+		 * The meta object literal for the '{@link MetamodelExecution.impl.ShortExecutionImpl <em>Short Execution</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see MetamodelExecution.impl.ExtendedProtocolImpl
-		 * @see MetamodelExecution.impl.Execution_metamodelPackageImpl#getExtendedProtocol()
+		 * @see MetamodelExecution.impl.ShortExecutionImpl
+		 * @see MetamodelExecution.impl.Execution_metamodelPackageImpl#getShortExecution()
 		 * @generated
 		 */
-		EClass EXTENDED_PROTOCOL = eINSTANCE.getExtendedProtocol();
+		EClass SHORT_EXECUTION = eINSTANCE.getShortExecution();
 
 		/**
-		 * The meta object literal for the '<em><b>Executionprotocol</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Conclusion Date</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference EXTENDED_PROTOCOL__EXECUTIONPROTOCOL = eINSTANCE.getExtendedProtocol_Executionprotocol();
+		EAttribute SHORT_EXECUTION__CONCLUSION_DATE = eINSTANCE.getShortExecution_ConclusionDate();
 
 		/**
-		 * The meta object literal for the '<em><b>Executionstep</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Completed Date</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference EXTENDED_PROTOCOL__EXECUTIONSTEP = eINSTANCE.getExtendedProtocol_Executionstep();
-
-		/**
-		 * The meta object literal for the '{@link MetamodelExecution.impl.ExecutionProtocolImpl <em>Execution Protocol</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see MetamodelExecution.impl.ExecutionProtocolImpl
-		 * @see MetamodelExecution.impl.Execution_metamodelPackageImpl#getExecutionProtocol()
-		 * @generated
-		 */
-		EClass EXECUTION_PROTOCOL = eINSTANCE.getExecutionProtocol();
-
-		/**
-		 * The meta object literal for the '<em><b>Id</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute EXECUTION_PROTOCOL__ID = eINSTANCE.getExecutionProtocol_Id();
-
-		/**
-		 * The meta object literal for the '<em><b>Url</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute EXECUTION_PROTOCOL__URL = eINSTANCE.getExecutionProtocol_Url();
-
-		/**
-		 * The meta object literal for the '<em><b>Creation</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute EXECUTION_PROTOCOL__CREATION = eINSTANCE.getExecutionProtocol_Creation();
-
-		/**
-		 * The meta object literal for the '<em><b>Conclusion</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute EXECUTION_PROTOCOL__CONCLUSION = eINSTANCE.getExecutionProtocol_Conclusion();
-
-		/**
-		 * The meta object literal for the '<em><b>Completed</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute EXECUTION_PROTOCOL__COMPLETED = eINSTANCE.getExecutionProtocol_Completed();
+		EAttribute SHORT_EXECUTION__COMPLETED_DATE = eINSTANCE.getShortExecution_CompletedDate();
 
 		/**
 		 * The meta object literal for the '<em><b>Aborted</b></em>' attribute feature.
@@ -6349,15 +6194,7 @@ public interface Execution_metamodelPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute EXECUTION_PROTOCOL__ABORTED = eINSTANCE.getExecutionProtocol_Aborted();
-
-		/**
-		 * The meta object literal for the '<em><b>Justify</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference EXECUTION_PROTOCOL__JUSTIFY = eINSTANCE.getExecutionProtocol_Justify();
+		EAttribute SHORT_EXECUTION__ABORTED = eINSTANCE.getShortExecution_Aborted();
 
 		/**
 		 * The meta object literal for the '<em><b>Last Executed Step Date</b></em>' attribute feature.
@@ -6365,23 +6202,15 @@ public interface Execution_metamodelPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute EXECUTION_PROTOCOL__LAST_EXECUTED_STEP_DATE = eINSTANCE.getExecutionProtocol_LastExecutedStepDate();
+		EAttribute SHORT_EXECUTION__LAST_EXECUTED_STEP_DATE = eINSTANCE.getShortExecution_LastExecutedStepDate();
 
 		/**
-		 * The meta object literal for the '<em><b>Id Protocol</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Pathway</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute EXECUTION_PROTOCOL__ID_PROTOCOL = eINSTANCE.getExecutionProtocol_IdProtocol();
-
-		/**
-		 * The meta object literal for the '<em><b>Protocol</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference EXECUTION_PROTOCOL__PROTOCOL = eINSTANCE.getExecutionProtocol_Protocol();
+		EReference SHORT_EXECUTION__PATHWAY = eINSTANCE.getShortExecution_Pathway();
 
 		/**
 		 * The meta object literal for the '<em><b>Id Responsible</b></em>' attribute feature.
@@ -6389,7 +6218,7 @@ public interface Execution_metamodelPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute EXECUTION_PROTOCOL__ID_RESPONSIBLE = eINSTANCE.getExecutionProtocol_IdResponsible();
+		EAttribute SHORT_EXECUTION__ID_RESPONSIBLE = eINSTANCE.getShortExecution_IdResponsible();
 
 		/**
 		 * The meta object literal for the '<em><b>Id Last Professional</b></em>' attribute feature.
@@ -6397,7 +6226,7 @@ public interface Execution_metamodelPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute EXECUTION_PROTOCOL__ID_LAST_PROFESSIONAL = eINSTANCE.getExecutionProtocol_IdLastProfessional();
+		EAttribute SHORT_EXECUTION__ID_LAST_PROFESSIONAL = eINSTANCE.getShortExecution_IdLastProfessional();
 
 		/**
 		 * The meta object literal for the '<em><b>Responsible</b></em>' containment reference feature.
@@ -6405,7 +6234,7 @@ public interface Execution_metamodelPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference EXECUTION_PROTOCOL__RESPONSIBLE = eINSTANCE.getExecutionProtocol_Responsible();
+		EReference SHORT_EXECUTION__RESPONSIBLE = eINSTANCE.getShortExecution_Responsible();
 
 		/**
 		 * The meta object literal for the '<em><b>Lastprofessional</b></em>' containment reference feature.
@@ -6413,7 +6242,7 @@ public interface Execution_metamodelPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference EXECUTION_PROTOCOL__LASTPROFESSIONAL = eINSTANCE.getExecutionProtocol_Lastprofessional();
+		EReference SHORT_EXECUTION__LASTPROFESSIONAL = eINSTANCE.getShortExecution_Lastprofessional();
 
 		/**
 		 * The meta object literal for the '<em><b>Executedstep</b></em>' containment reference feature.
@@ -6421,17 +6250,17 @@ public interface Execution_metamodelPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference EXECUTION_PROTOCOL__EXECUTEDSTEP = eINSTANCE.getExecutionProtocol_Executedstep();
+		EReference SHORT_EXECUTION__EXECUTEDSTEP = eINSTANCE.getShortExecution_Executedstep();
 
 		/**
-		 * The meta object literal for the '{@link MetamodelExecution.impl.JustifyImpl <em>Justify</em>}' class.
+		 * The meta object literal for the '{@link MetamodelExecution.impl.JustificationImpl <em>Justification</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see MetamodelExecution.impl.JustifyImpl
-		 * @see MetamodelExecution.impl.Execution_metamodelPackageImpl#getJustify()
+		 * @see MetamodelExecution.impl.JustificationImpl
+		 * @see MetamodelExecution.impl.Execution_metamodelPackageImpl#getJustification()
 		 * @generated
 		 */
-		EClass JUSTIFY = eINSTANCE.getJustify();
+		EClass JUSTIFICATION = eINSTANCE.getJustification();
 
 		/**
 		 * The meta object literal for the '<em><b>Id</b></em>' attribute feature.
@@ -6439,7 +6268,7 @@ public interface Execution_metamodelPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute JUSTIFY__ID = eINSTANCE.getJustify_Id();
+		EAttribute JUSTIFICATION__ID = eINSTANCE.getJustification_Id();
 
 		/**
 		 * The meta object literal for the '<em><b>Reason</b></em>' attribute feature.
@@ -6447,7 +6276,7 @@ public interface Execution_metamodelPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute JUSTIFY__REASON = eINSTANCE.getJustify_Reason();
+		EAttribute JUSTIFICATION__REASON = eINSTANCE.getJustification_Reason();
 
 		/**
 		 * The meta object literal for the '<em><b>Reason Display</b></em>' attribute feature.
@@ -6455,7 +6284,7 @@ public interface Execution_metamodelPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute JUSTIFY__REASON_DISPLAY = eINSTANCE.getJustify_ReasonDisplay();
+		EAttribute JUSTIFICATION__REASON_DISPLAY = eINSTANCE.getJustification_ReasonDisplay();
 
 		/**
 		 * The meta object literal for the '<em><b>Description</b></em>' attribute feature.
@@ -6463,7 +6292,7 @@ public interface Execution_metamodelPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute JUSTIFY__DESCRIPTION = eINSTANCE.getJustify_Description();
+		EAttribute JUSTIFICATION__DESCRIPTION = eINSTANCE.getJustification_Description();
 
 		/**
 		 * The meta object literal for the '<em><b>Justify By Id</b></em>' attribute feature.
@@ -6471,7 +6300,7 @@ public interface Execution_metamodelPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute JUSTIFY__JUSTIFY_BY_ID = eINSTANCE.getJustify_JustifyById();
+		EAttribute JUSTIFICATION__JUSTIFY_BY_ID = eINSTANCE.getJustification_JustifyById();
 
 		/**
 		 * The meta object literal for the '<em><b>Justify By</b></em>' attribute feature.
@@ -6479,17 +6308,17 @@ public interface Execution_metamodelPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute JUSTIFY__JUSTIFY_BY = eINSTANCE.getJustify_JustifyBy();
+		EAttribute JUSTIFICATION__JUSTIFY_BY = eINSTANCE.getJustification_JustifyBy();
 
 		/**
-		 * The meta object literal for the '{@link MetamodelExecution.impl.ProtocolImpl <em>Protocol</em>}' class.
+		 * The meta object literal for the '{@link MetamodelExecution.impl.PathwayImpl <em>Pathway</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see MetamodelExecution.impl.ProtocolImpl
-		 * @see MetamodelExecution.impl.Execution_metamodelPackageImpl#getProtocol()
+		 * @see MetamodelExecution.impl.PathwayImpl
+		 * @see MetamodelExecution.impl.Execution_metamodelPackageImpl#getPathway()
 		 * @generated
 		 */
-		EClass PROTOCOL = eINSTANCE.getProtocol();
+		EClass PATHWAY = eINSTANCE.getPathway();
 
 		/**
 		 * The meta object literal for the '<em><b>Id</b></em>' attribute feature.
@@ -6497,7 +6326,7 @@ public interface Execution_metamodelPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute PROTOCOL__ID = eINSTANCE.getProtocol_Id();
+		EAttribute PATHWAY__ID = eINSTANCE.getPathway_Id();
 
 		/**
 		 * The meta object literal for the '<em><b>Url</b></em>' attribute feature.
@@ -6505,7 +6334,7 @@ public interface Execution_metamodelPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute PROTOCOL__URL = eINSTANCE.getProtocol_Url();
+		EAttribute PATHWAY__URL = eINSTANCE.getPathway_Url();
 
 		/**
 		 * The meta object literal for the '<em><b>Code</b></em>' attribute feature.
@@ -6513,7 +6342,7 @@ public interface Execution_metamodelPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute PROTOCOL__CODE = eINSTANCE.getProtocol_Code();
+		EAttribute PATHWAY__CODE = eINSTANCE.getPathway_Code();
 
 		/**
 		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
@@ -6521,7 +6350,7 @@ public interface Execution_metamodelPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute PROTOCOL__NAME = eINSTANCE.getProtocol_Name();
+		EAttribute PATHWAY__NAME = eINSTANCE.getPathway_Name();
 
 		/**
 		 * The meta object literal for the '<em><b>Id Repository</b></em>' attribute feature.
@@ -6529,7 +6358,7 @@ public interface Execution_metamodelPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute PROTOCOL__ID_REPOSITORY = eINSTANCE.getProtocol_IdRepository();
+		EAttribute PATHWAY__ID_REPOSITORY = eINSTANCE.getPathway_IdRepository();
 
 		/**
 		 * The meta object literal for the '<em><b>Version</b></em>' attribute feature.
@@ -6537,7 +6366,7 @@ public interface Execution_metamodelPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute PROTOCOL__VERSION = eINSTANCE.getProtocol_Version();
+		EAttribute PATHWAY__VERSION = eINSTANCE.getPathway_Version();
 
 		/**
 		 * The meta object literal for the '<em><b>Completed</b></em>' attribute feature.
@@ -6545,7 +6374,7 @@ public interface Execution_metamodelPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute PROTOCOL__COMPLETED = eINSTANCE.getProtocol_Completed();
+		EAttribute PATHWAY__COMPLETED = eINSTANCE.getPathway_Completed();
 
 		/**
 		 * The meta object literal for the '{@link MetamodelExecution.impl.ResponsibleImpl <em>Responsible</em>}' class.
@@ -6574,110 +6403,6 @@ public interface Execution_metamodelPackage extends EPackage {
 		 * @generated
 		 */
 		EClass EXECUTED_STEP = eINSTANCE.getExecutedStep();
-
-		/**
-		 * The meta object literal for the '<em><b>Id</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute EXECUTED_STEP__ID = eINSTANCE.getExecutedStep_Id();
-
-		/**
-		 * The meta object literal for the '<em><b>Type</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute EXECUTED_STEP__TYPE = eINSTANCE.getExecutedStep_Type();
-
-		/**
-		 * The meta object literal for the '<em><b>Type Verbose</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute EXECUTED_STEP__TYPE_VERBOSE = eINSTANCE.getExecutedStep_TypeVerbose();
-
-		/**
-		 * The meta object literal for the '<em><b>Url</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute EXECUTED_STEP__URL = eINSTANCE.getExecutedStep_Url();
-
-		/**
-		 * The meta object literal for the '<em><b>Executed</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute EXECUTED_STEP__EXECUTED = eINSTANCE.getExecutedStep_Executed();
-
-		/**
-		 * The meta object literal for the '<em><b>Is Current</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute EXECUTED_STEP__IS_CURRENT = eINSTANCE.getExecutedStep_IsCurrent();
-
-		/**
-		 * The meta object literal for the '<em><b>Reworked</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute EXECUTED_STEP__REWORKED = eINSTANCE.getExecutedStep_Reworked();
-
-		/**
-		 * The meta object literal for the '<em><b>Creation Date</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute EXECUTED_STEP__CREATION_DATE = eINSTANCE.getExecutedStep_CreationDate();
-
-		/**
-		 * The meta object literal for the '<em><b>Change Date</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute EXECUTED_STEP__CHANGE_DATE = eINSTANCE.getExecutedStep_ChangeDate();
-
-		/**
-		 * The meta object literal for the '<em><b>Execution Date</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute EXECUTED_STEP__EXECUTION_DATE = eINSTANCE.getExecutedStep_ExecutionDate();
-
-		/**
-		 * The meta object literal for the '<em><b>Id Executed Protocol</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute EXECUTED_STEP__ID_EXECUTED_PROTOCOL = eINSTANCE.getExecutedStep_IdExecutedProtocol();
-
-		/**
-		 * The meta object literal for the '<em><b>Id Step</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute EXECUTED_STEP__ID_STEP = eINSTANCE.getExecutedStep_IdStep();
-
-		/**
-		 * The meta object literal for the '<em><b>Id Protocol</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute EXECUTED_STEP__ID_PROTOCOL = eINSTANCE.getExecutedStep_IdProtocol();
 
 		/**
 		 * The meta object literal for the '<em><b>Created By Id</b></em>' attribute feature.
@@ -6720,30 +6445,6 @@ public interface Execution_metamodelPackage extends EPackage {
 		EAttribute EXECUTED_STEP__STEP = eINSTANCE.getExecutedStep_Step();
 
 		/**
-		 * The meta object literal for the '<em><b>Previous</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference EXECUTED_STEP__PREVIOUS = eINSTANCE.getExecutedStep_Previous();
-
-		/**
-		 * The meta object literal for the '<em><b>Next</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference EXECUTED_STEP__NEXT = eINSTANCE.getExecutedStep_Next();
-
-		/**
-		 * The meta object literal for the '<em><b>Justify</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference EXECUTED_STEP__JUSTIFY = eINSTANCE.getExecutedStep_Justify();
-
-		/**
 		 * The meta object literal for the '{@link MetamodelExecution.impl.LastProfessionalImpl <em>Last Professional</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -6762,14 +6463,14 @@ public interface Execution_metamodelPackage extends EPackage {
 		EReference LAST_PROFESSIONAL__DATA = eINSTANCE.getLastProfessional_Data();
 
 		/**
-		 * The meta object literal for the '{@link MetamodelExecution.impl.UserDataImpl <em>User Data</em>}' class.
+		 * The meta object literal for the '{@link MetamodelExecution.impl.UserImpl <em>User</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see MetamodelExecution.impl.UserDataImpl
-		 * @see MetamodelExecution.impl.Execution_metamodelPackageImpl#getUserData()
+		 * @see MetamodelExecution.impl.UserImpl
+		 * @see MetamodelExecution.impl.Execution_metamodelPackageImpl#getUser()
 		 * @generated
 		 */
-		EClass USER_DATA = eINSTANCE.getUserData();
+		EClass USER = eINSTANCE.getUser();
 
 		/**
 		 * The meta object literal for the '<em><b>Id</b></em>' attribute feature.
@@ -6777,7 +6478,7 @@ public interface Execution_metamodelPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute USER_DATA__ID = eINSTANCE.getUserData_Id();
+		EAttribute USER__ID = eINSTANCE.getUser_Id();
 
 		/**
 		 * The meta object literal for the '<em><b>Url</b></em>' attribute feature.
@@ -6785,7 +6486,7 @@ public interface Execution_metamodelPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute USER_DATA__URL = eINSTANCE.getUserData_Url();
+		EAttribute USER__URL = eINSTANCE.getUser_Url();
 
 		/**
 		 * The meta object literal for the '<em><b>Code</b></em>' attribute feature.
@@ -6793,7 +6494,7 @@ public interface Execution_metamodelPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute USER_DATA__CODE = eINSTANCE.getUserData_Code();
+		EAttribute USER__CODE = eINSTANCE.getUser_Code();
 
 		/**
 		 * The meta object literal for the '<em><b>Email</b></em>' attribute feature.
@@ -6801,7 +6502,7 @@ public interface Execution_metamodelPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute USER_DATA__EMAIL = eINSTANCE.getUserData_Email();
+		EAttribute USER__EMAIL = eINSTANCE.getUser_Email();
 
 		/**
 		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
@@ -6809,7 +6510,7 @@ public interface Execution_metamodelPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute USER_DATA__NAME = eINSTANCE.getUserData_Name();
+		EAttribute USER__NAME = eINSTANCE.getUser_Name();
 
 		/**
 		 * The meta object literal for the '<em><b>Type Council</b></em>' attribute feature.
@@ -6817,7 +6518,7 @@ public interface Execution_metamodelPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute USER_DATA__TYPE_COUNCIL = eINSTANCE.getUserData_TypeCouncil();
+		EAttribute USER__TYPE_COUNCIL = eINSTANCE.getUser_TypeCouncil();
 
 		/**
 		 * The meta object literal for the '<em><b>Login</b></em>' attribute feature.
@@ -6825,7 +6526,7 @@ public interface Execution_metamodelPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute USER_DATA__LOGIN = eINSTANCE.getUserData_Login();
+		EAttribute USER__LOGIN = eINSTANCE.getUser_Login();
 
 		/**
 		 * The meta object literal for the '<em><b>Number Council</b></em>' attribute feature.
@@ -6833,7 +6534,7 @@ public interface Execution_metamodelPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute USER_DATA__NUMBER_COUNCIL = eINSTANCE.getUserData_NumberCouncil();
+		EAttribute USER__NUMBER_COUNCIL = eINSTANCE.getUser_NumberCouncil();
 
 		/**
 		 * The meta object literal for the '<em><b>State</b></em>' attribute feature.
@@ -6841,7 +6542,7 @@ public interface Execution_metamodelPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute USER_DATA__STATE = eINSTANCE.getUserData_State();
+		EAttribute USER__STATE = eINSTANCE.getUser_State();
 
 		/**
 		 * The meta object literal for the '<em><b>Executor</b></em>' reference feature.
@@ -6849,7 +6550,7 @@ public interface Execution_metamodelPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference USER_DATA__EXECUTOR = eINSTANCE.getUserData_Executor();
+		EReference USER__EXECUTOR = eINSTANCE.getUser_Executor();
 
 		/**
 		 * The meta object literal for the '<em><b>Creator</b></em>' reference feature.
@@ -6857,7 +6558,187 @@ public interface Execution_metamodelPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference USER_DATA__CREATOR = eINSTANCE.getUserData_Creator();
+		EReference USER__CREATOR = eINSTANCE.getUser_Creator();
+
+		/**
+		 * The meta object literal for the '{@link MetamodelExecution.impl.ValueImpl <em>Value</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see MetamodelExecution.impl.ValueImpl
+		 * @see MetamodelExecution.impl.Execution_metamodelPackageImpl#getValue()
+		 * @generated
+		 */
+		EClass VALUE = eINSTANCE.getValue();
+
+		/**
+		 * The meta object literal for the '{@link MetamodelExecution.impl.AnswerImpl <em>Answer</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see MetamodelExecution.impl.AnswerImpl
+		 * @see MetamodelExecution.impl.Execution_metamodelPackageImpl#getAnswer()
+		 * @generated
+		 */
+		EClass ANSWER = eINSTANCE.getAnswer();
+
+		/**
+		 * The meta object literal for the '<em><b>Type Verbose</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ANSWER__TYPE_VERBOSE = eINSTANCE.getAnswer_TypeVerbose();
+
+		/**
+		 * The meta object literal for the '<em><b>Type</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ANSWER__TYPE = eINSTANCE.getAnswer_Type();
+
+		/**
+		 * The meta object literal for the '<em><b>Id</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ANSWER__ID = eINSTANCE.getAnswer_Id();
+
+		/**
+		 * The meta object literal for the '<em><b>Value</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference ANSWER__VALUE = eINSTANCE.getAnswer_Value();
+
+		/**
+		 * The meta object literal for the '<em><b>Question</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference ANSWER__QUESTION = eINSTANCE.getAnswer_Question();
+
+		/**
+		 * The meta object literal for the '{@link MetamodelExecution.impl.ExecutionImpl <em>Execution</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see MetamodelExecution.impl.ExecutionImpl
+		 * @see MetamodelExecution.impl.Execution_metamodelPackageImpl#getExecution()
+		 * @generated
+		 */
+		EClass EXECUTION = eINSTANCE.getExecution();
+
+		/**
+		 * The meta object literal for the '<em><b>Id</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute EXECUTION__ID = eINSTANCE.getExecution_Id();
+
+		/**
+		 * The meta object literal for the '<em><b>Url</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute EXECUTION__URL = eINSTANCE.getExecution_Url();
+
+		/**
+		 * The meta object literal for the '<em><b>Id Protocol</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute EXECUTION__ID_PROTOCOL = eINSTANCE.getExecution_IdProtocol();
+
+		/**
+		 * The meta object literal for the '<em><b>Creation Date</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute EXECUTION__CREATION_DATE = eINSTANCE.getExecution_CreationDate();
+
+		/**
+		 * The meta object literal for the '<em><b>Justification</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference EXECUTION__JUSTIFICATION = eINSTANCE.getExecution_Justification();
+
+		/**
+		 * The meta object literal for the '{@link MetamodelExecution.impl.NumericImpl <em>Numeric</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see MetamodelExecution.impl.NumericImpl
+		 * @see MetamodelExecution.impl.Execution_metamodelPackageImpl#getNumeric()
+		 * @generated
+		 */
+		EClass NUMERIC = eINSTANCE.getNumeric();
+
+		/**
+		 * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute NUMERIC__VALUE = eINSTANCE.getNumeric_Value();
+
+		/**
+		 * The meta object literal for the '{@link MetamodelExecution.impl.YesOrNoImpl <em>Yes Or No</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see MetamodelExecution.impl.YesOrNoImpl
+		 * @see MetamodelExecution.impl.Execution_metamodelPackageImpl#getYesOrNo()
+		 * @generated
+		 */
+		EClass YES_OR_NO = eINSTANCE.getYesOrNo();
+
+		/**
+		 * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute YES_OR_NO__VALUE = eINSTANCE.getYesOrNo_Value();
+
+		/**
+		 * The meta object literal for the '{@link MetamodelExecution.impl.CompleteStepImpl <em>Complete Step</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see MetamodelExecution.impl.CompleteStepImpl
+		 * @see MetamodelExecution.impl.Execution_metamodelPackageImpl#getCompleteStep()
+		 * @generated
+		 */
+		EClass COMPLETE_STEP = eINSTANCE.getCompleteStep();
+
+		/**
+		 * The meta object literal for the '<em><b>Step</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference COMPLETE_STEP__STEP = eINSTANCE.getCompleteStep_Step();
+
+		/**
+		 * The meta object literal for the '<em><b>Executor</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference COMPLETE_STEP__EXECUTOR = eINSTANCE.getCompleteStep_Executor();
+
+		/**
+		 * The meta object literal for the '<em><b>Creator</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference COMPLETE_STEP__CREATOR = eINSTANCE.getCompleteStep_Creator();
 
 	}
 

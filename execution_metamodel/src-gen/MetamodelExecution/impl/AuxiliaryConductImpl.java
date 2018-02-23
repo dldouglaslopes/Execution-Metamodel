@@ -26,21 +26,21 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link MetamodelExecution.impl.AuxiliaryConductImpl#getAnswers <em>Answers</em>}</li>
+ *   <li>{@link MetamodelExecution.impl.AuxiliaryConductImpl#getAnswer <em>Answer</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class AuxiliaryConductImpl extends ExecutionStepImpl implements AuxiliaryConduct {
+public class AuxiliaryConductImpl extends CompleteStepImpl implements AuxiliaryConduct {
 	/**
-	 * The cached value of the '{@link #getAnswers() <em>Answers</em>}' containment reference list.
+	 * The cached value of the '{@link #getAnswer() <em>Answer</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getAnswers()
+	 * @see #getAnswer()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Answer> answers;
+	protected EList<Answer> answer;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -66,12 +66,12 @@ public class AuxiliaryConductImpl extends ExecutionStepImpl implements Auxiliary
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Answer> getAnswers() {
-		if (answers == null) {
-			answers = new EObjectContainmentEList<Answer>(Answer.class, this,
-					Execution_metamodelPackage.AUXILIARY_CONDUCT__ANSWERS);
+	public EList<Answer> getAnswer() {
+		if (answer == null) {
+			answer = new EObjectContainmentEList<Answer>(Answer.class, this,
+					Execution_metamodelPackage.AUXILIARY_CONDUCT__ANSWER);
 		}
-		return answers;
+		return answer;
 	}
 
 	/**
@@ -82,8 +82,8 @@ public class AuxiliaryConductImpl extends ExecutionStepImpl implements Auxiliary
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-		case Execution_metamodelPackage.AUXILIARY_CONDUCT__ANSWERS:
-			return ((InternalEList<?>) getAnswers()).basicRemove(otherEnd, msgs);
+		case Execution_metamodelPackage.AUXILIARY_CONDUCT__ANSWER:
+			return ((InternalEList<?>) getAnswer()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -96,8 +96,8 @@ public class AuxiliaryConductImpl extends ExecutionStepImpl implements Auxiliary
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case Execution_metamodelPackage.AUXILIARY_CONDUCT__ANSWERS:
-			return getAnswers();
+		case Execution_metamodelPackage.AUXILIARY_CONDUCT__ANSWER:
+			return getAnswer();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -111,9 +111,9 @@ public class AuxiliaryConductImpl extends ExecutionStepImpl implements Auxiliary
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case Execution_metamodelPackage.AUXILIARY_CONDUCT__ANSWERS:
-			getAnswers().clear();
-			getAnswers().addAll((Collection<? extends Answer>) newValue);
+		case Execution_metamodelPackage.AUXILIARY_CONDUCT__ANSWER:
+			getAnswer().clear();
+			getAnswer().addAll((Collection<? extends Answer>) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -127,8 +127,8 @@ public class AuxiliaryConductImpl extends ExecutionStepImpl implements Auxiliary
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case Execution_metamodelPackage.AUXILIARY_CONDUCT__ANSWERS:
-			getAnswers().clear();
+		case Execution_metamodelPackage.AUXILIARY_CONDUCT__ANSWER:
+			getAnswer().clear();
 			return;
 		}
 		super.eUnset(featureID);
@@ -142,8 +142,8 @@ public class AuxiliaryConductImpl extends ExecutionStepImpl implements Auxiliary
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case Execution_metamodelPackage.AUXILIARY_CONDUCT__ANSWERS:
-			return answers != null && !answers.isEmpty();
+		case Execution_metamodelPackage.AUXILIARY_CONDUCT__ANSWER:
+			return answer != null && !answer.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

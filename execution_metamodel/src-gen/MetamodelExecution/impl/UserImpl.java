@@ -5,7 +5,7 @@ package MetamodelExecution.impl;
 import MetamodelExecution.Creator;
 import MetamodelExecution.Execution_metamodelPackage;
 import MetamodelExecution.Executor;
-import MetamodelExecution.UserData;
+import MetamodelExecution.User;
 
 import org.eclipse.emf.common.notify.Notification;
 
@@ -17,28 +17,28 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>User Data</b></em>'.
+ * An implementation of the model object '<em><b>User</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link MetamodelExecution.impl.UserDataImpl#getId <em>Id</em>}</li>
- *   <li>{@link MetamodelExecution.impl.UserDataImpl#getUrl <em>Url</em>}</li>
- *   <li>{@link MetamodelExecution.impl.UserDataImpl#getCode <em>Code</em>}</li>
- *   <li>{@link MetamodelExecution.impl.UserDataImpl#getEmail <em>Email</em>}</li>
- *   <li>{@link MetamodelExecution.impl.UserDataImpl#getName <em>Name</em>}</li>
- *   <li>{@link MetamodelExecution.impl.UserDataImpl#getTypeCouncil <em>Type Council</em>}</li>
- *   <li>{@link MetamodelExecution.impl.UserDataImpl#getLogin <em>Login</em>}</li>
- *   <li>{@link MetamodelExecution.impl.UserDataImpl#getNumberCouncil <em>Number Council</em>}</li>
- *   <li>{@link MetamodelExecution.impl.UserDataImpl#getState <em>State</em>}</li>
- *   <li>{@link MetamodelExecution.impl.UserDataImpl#getExecutor <em>Executor</em>}</li>
- *   <li>{@link MetamodelExecution.impl.UserDataImpl#getCreator <em>Creator</em>}</li>
+ *   <li>{@link MetamodelExecution.impl.UserImpl#getId <em>Id</em>}</li>
+ *   <li>{@link MetamodelExecution.impl.UserImpl#getUrl <em>Url</em>}</li>
+ *   <li>{@link MetamodelExecution.impl.UserImpl#getCode <em>Code</em>}</li>
+ *   <li>{@link MetamodelExecution.impl.UserImpl#getEmail <em>Email</em>}</li>
+ *   <li>{@link MetamodelExecution.impl.UserImpl#getName <em>Name</em>}</li>
+ *   <li>{@link MetamodelExecution.impl.UserImpl#getTypeCouncil <em>Type Council</em>}</li>
+ *   <li>{@link MetamodelExecution.impl.UserImpl#getLogin <em>Login</em>}</li>
+ *   <li>{@link MetamodelExecution.impl.UserImpl#getNumberCouncil <em>Number Council</em>}</li>
+ *   <li>{@link MetamodelExecution.impl.UserImpl#getState <em>State</em>}</li>
+ *   <li>{@link MetamodelExecution.impl.UserImpl#getExecutor <em>Executor</em>}</li>
+ *   <li>{@link MetamodelExecution.impl.UserImpl#getCreator <em>Creator</em>}</li>
  * </ul>
  *
  * @generated
  */
-public abstract class UserDataImpl extends MinimalEObjectImpl.Container implements UserData {
+public abstract class UserImpl extends MinimalEObjectImpl.Container implements User {
 	/**
 	 * The default value of the '{@link #getId() <em>Id</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -244,7 +244,7 @@ public abstract class UserDataImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected UserDataImpl() {
+	protected UserImpl() {
 		super();
 	}
 
@@ -255,7 +255,7 @@ public abstract class UserDataImpl extends MinimalEObjectImpl.Container implemen
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Execution_metamodelPackage.Literals.USER_DATA;
+		return Execution_metamodelPackage.Literals.USER;
 	}
 
 	/**
@@ -276,7 +276,7 @@ public abstract class UserDataImpl extends MinimalEObjectImpl.Container implemen
 		int oldId = id;
 		id = newId;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.USER_DATA__ID, oldId, id));
+			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.USER__ID, oldId, id));
 	}
 
 	/**
@@ -297,8 +297,7 @@ public abstract class UserDataImpl extends MinimalEObjectImpl.Container implemen
 		String oldUrl = url;
 		url = newUrl;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.USER_DATA__URL, oldUrl,
-					url));
+			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.USER__URL, oldUrl, url));
 	}
 
 	/**
@@ -319,7 +318,7 @@ public abstract class UserDataImpl extends MinimalEObjectImpl.Container implemen
 		int oldCode = code;
 		code = newCode;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.USER_DATA__CODE, oldCode,
+			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.USER__CODE, oldCode,
 					code));
 	}
 
@@ -341,7 +340,7 @@ public abstract class UserDataImpl extends MinimalEObjectImpl.Container implemen
 		String oldEmail = email;
 		email = newEmail;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.USER_DATA__EMAIL, oldEmail,
+			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.USER__EMAIL, oldEmail,
 					email));
 	}
 
@@ -363,7 +362,7 @@ public abstract class UserDataImpl extends MinimalEObjectImpl.Container implemen
 		String oldName = name;
 		name = newName;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.USER_DATA__NAME, oldName,
+			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.USER__NAME, oldName,
 					name));
 	}
 
@@ -385,7 +384,7 @@ public abstract class UserDataImpl extends MinimalEObjectImpl.Container implemen
 		String oldTypeCouncil = typeCouncil;
 		typeCouncil = newTypeCouncil;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.USER_DATA__TYPE_COUNCIL,
+			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.USER__TYPE_COUNCIL,
 					oldTypeCouncil, typeCouncil));
 	}
 
@@ -407,7 +406,7 @@ public abstract class UserDataImpl extends MinimalEObjectImpl.Container implemen
 		String oldLogin = login;
 		login = newLogin;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.USER_DATA__LOGIN, oldLogin,
+			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.USER__LOGIN, oldLogin,
 					login));
 	}
 
@@ -429,7 +428,7 @@ public abstract class UserDataImpl extends MinimalEObjectImpl.Container implemen
 		int oldNumberCouncil = numberCouncil;
 		numberCouncil = newNumberCouncil;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.USER_DATA__NUMBER_COUNCIL,
+			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.USER__NUMBER_COUNCIL,
 					oldNumberCouncil, numberCouncil));
 	}
 
@@ -451,7 +450,7 @@ public abstract class UserDataImpl extends MinimalEObjectImpl.Container implemen
 		String oldState = state;
 		state = newState;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.USER_DATA__STATE, oldState,
+			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.USER__STATE, oldState,
 					state));
 	}
 
@@ -466,8 +465,8 @@ public abstract class UserDataImpl extends MinimalEObjectImpl.Container implemen
 			executor = (Executor) eResolveProxy(oldExecutor);
 			if (executor != oldExecutor) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE,
-							Execution_metamodelPackage.USER_DATA__EXECUTOR, oldExecutor, executor));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Execution_metamodelPackage.USER__EXECUTOR,
+							oldExecutor, executor));
 			}
 		}
 		return executor;
@@ -491,7 +490,7 @@ public abstract class UserDataImpl extends MinimalEObjectImpl.Container implemen
 		Executor oldExecutor = executor;
 		executor = newExecutor;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.USER_DATA__EXECUTOR,
+			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.USER__EXECUTOR,
 					oldExecutor, executor));
 	}
 
@@ -506,8 +505,8 @@ public abstract class UserDataImpl extends MinimalEObjectImpl.Container implemen
 			creator = (Creator) eResolveProxy(oldCreator);
 			if (creator != oldCreator) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE,
-							Execution_metamodelPackage.USER_DATA__CREATOR, oldCreator, creator));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Execution_metamodelPackage.USER__CREATOR,
+							oldCreator, creator));
 			}
 		}
 		return creator;
@@ -531,8 +530,8 @@ public abstract class UserDataImpl extends MinimalEObjectImpl.Container implemen
 		Creator oldCreator = creator;
 		creator = newCreator;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.USER_DATA__CREATOR,
-					oldCreator, creator));
+			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.USER__CREATOR, oldCreator,
+					creator));
 	}
 
 	/**
@@ -543,29 +542,29 @@ public abstract class UserDataImpl extends MinimalEObjectImpl.Container implemen
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case Execution_metamodelPackage.USER_DATA__ID:
+		case Execution_metamodelPackage.USER__ID:
 			return getId();
-		case Execution_metamodelPackage.USER_DATA__URL:
+		case Execution_metamodelPackage.USER__URL:
 			return getUrl();
-		case Execution_metamodelPackage.USER_DATA__CODE:
+		case Execution_metamodelPackage.USER__CODE:
 			return getCode();
-		case Execution_metamodelPackage.USER_DATA__EMAIL:
+		case Execution_metamodelPackage.USER__EMAIL:
 			return getEmail();
-		case Execution_metamodelPackage.USER_DATA__NAME:
+		case Execution_metamodelPackage.USER__NAME:
 			return getName();
-		case Execution_metamodelPackage.USER_DATA__TYPE_COUNCIL:
+		case Execution_metamodelPackage.USER__TYPE_COUNCIL:
 			return getTypeCouncil();
-		case Execution_metamodelPackage.USER_DATA__LOGIN:
+		case Execution_metamodelPackage.USER__LOGIN:
 			return getLogin();
-		case Execution_metamodelPackage.USER_DATA__NUMBER_COUNCIL:
+		case Execution_metamodelPackage.USER__NUMBER_COUNCIL:
 			return getNumberCouncil();
-		case Execution_metamodelPackage.USER_DATA__STATE:
+		case Execution_metamodelPackage.USER__STATE:
 			return getState();
-		case Execution_metamodelPackage.USER_DATA__EXECUTOR:
+		case Execution_metamodelPackage.USER__EXECUTOR:
 			if (resolve)
 				return getExecutor();
 			return basicGetExecutor();
-		case Execution_metamodelPackage.USER_DATA__CREATOR:
+		case Execution_metamodelPackage.USER__CREATOR:
 			if (resolve)
 				return getCreator();
 			return basicGetCreator();
@@ -581,37 +580,37 @@ public abstract class UserDataImpl extends MinimalEObjectImpl.Container implemen
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case Execution_metamodelPackage.USER_DATA__ID:
+		case Execution_metamodelPackage.USER__ID:
 			setId((Integer) newValue);
 			return;
-		case Execution_metamodelPackage.USER_DATA__URL:
+		case Execution_metamodelPackage.USER__URL:
 			setUrl((String) newValue);
 			return;
-		case Execution_metamodelPackage.USER_DATA__CODE:
+		case Execution_metamodelPackage.USER__CODE:
 			setCode((Integer) newValue);
 			return;
-		case Execution_metamodelPackage.USER_DATA__EMAIL:
+		case Execution_metamodelPackage.USER__EMAIL:
 			setEmail((String) newValue);
 			return;
-		case Execution_metamodelPackage.USER_DATA__NAME:
+		case Execution_metamodelPackage.USER__NAME:
 			setName((String) newValue);
 			return;
-		case Execution_metamodelPackage.USER_DATA__TYPE_COUNCIL:
+		case Execution_metamodelPackage.USER__TYPE_COUNCIL:
 			setTypeCouncil((String) newValue);
 			return;
-		case Execution_metamodelPackage.USER_DATA__LOGIN:
+		case Execution_metamodelPackage.USER__LOGIN:
 			setLogin((String) newValue);
 			return;
-		case Execution_metamodelPackage.USER_DATA__NUMBER_COUNCIL:
+		case Execution_metamodelPackage.USER__NUMBER_COUNCIL:
 			setNumberCouncil((Integer) newValue);
 			return;
-		case Execution_metamodelPackage.USER_DATA__STATE:
+		case Execution_metamodelPackage.USER__STATE:
 			setState((String) newValue);
 			return;
-		case Execution_metamodelPackage.USER_DATA__EXECUTOR:
+		case Execution_metamodelPackage.USER__EXECUTOR:
 			setExecutor((Executor) newValue);
 			return;
-		case Execution_metamodelPackage.USER_DATA__CREATOR:
+		case Execution_metamodelPackage.USER__CREATOR:
 			setCreator((Creator) newValue);
 			return;
 		}
@@ -626,37 +625,37 @@ public abstract class UserDataImpl extends MinimalEObjectImpl.Container implemen
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case Execution_metamodelPackage.USER_DATA__ID:
+		case Execution_metamodelPackage.USER__ID:
 			setId(ID_EDEFAULT);
 			return;
-		case Execution_metamodelPackage.USER_DATA__URL:
+		case Execution_metamodelPackage.USER__URL:
 			setUrl(URL_EDEFAULT);
 			return;
-		case Execution_metamodelPackage.USER_DATA__CODE:
+		case Execution_metamodelPackage.USER__CODE:
 			setCode(CODE_EDEFAULT);
 			return;
-		case Execution_metamodelPackage.USER_DATA__EMAIL:
+		case Execution_metamodelPackage.USER__EMAIL:
 			setEmail(EMAIL_EDEFAULT);
 			return;
-		case Execution_metamodelPackage.USER_DATA__NAME:
+		case Execution_metamodelPackage.USER__NAME:
 			setName(NAME_EDEFAULT);
 			return;
-		case Execution_metamodelPackage.USER_DATA__TYPE_COUNCIL:
+		case Execution_metamodelPackage.USER__TYPE_COUNCIL:
 			setTypeCouncil(TYPE_COUNCIL_EDEFAULT);
 			return;
-		case Execution_metamodelPackage.USER_DATA__LOGIN:
+		case Execution_metamodelPackage.USER__LOGIN:
 			setLogin(LOGIN_EDEFAULT);
 			return;
-		case Execution_metamodelPackage.USER_DATA__NUMBER_COUNCIL:
+		case Execution_metamodelPackage.USER__NUMBER_COUNCIL:
 			setNumberCouncil(NUMBER_COUNCIL_EDEFAULT);
 			return;
-		case Execution_metamodelPackage.USER_DATA__STATE:
+		case Execution_metamodelPackage.USER__STATE:
 			setState(STATE_EDEFAULT);
 			return;
-		case Execution_metamodelPackage.USER_DATA__EXECUTOR:
+		case Execution_metamodelPackage.USER__EXECUTOR:
 			setExecutor((Executor) null);
 			return;
-		case Execution_metamodelPackage.USER_DATA__CREATOR:
+		case Execution_metamodelPackage.USER__CREATOR:
 			setCreator((Creator) null);
 			return;
 		}
@@ -671,27 +670,27 @@ public abstract class UserDataImpl extends MinimalEObjectImpl.Container implemen
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case Execution_metamodelPackage.USER_DATA__ID:
+		case Execution_metamodelPackage.USER__ID:
 			return id != ID_EDEFAULT;
-		case Execution_metamodelPackage.USER_DATA__URL:
+		case Execution_metamodelPackage.USER__URL:
 			return URL_EDEFAULT == null ? url != null : !URL_EDEFAULT.equals(url);
-		case Execution_metamodelPackage.USER_DATA__CODE:
+		case Execution_metamodelPackage.USER__CODE:
 			return code != CODE_EDEFAULT;
-		case Execution_metamodelPackage.USER_DATA__EMAIL:
+		case Execution_metamodelPackage.USER__EMAIL:
 			return EMAIL_EDEFAULT == null ? email != null : !EMAIL_EDEFAULT.equals(email);
-		case Execution_metamodelPackage.USER_DATA__NAME:
+		case Execution_metamodelPackage.USER__NAME:
 			return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-		case Execution_metamodelPackage.USER_DATA__TYPE_COUNCIL:
+		case Execution_metamodelPackage.USER__TYPE_COUNCIL:
 			return TYPE_COUNCIL_EDEFAULT == null ? typeCouncil != null : !TYPE_COUNCIL_EDEFAULT.equals(typeCouncil);
-		case Execution_metamodelPackage.USER_DATA__LOGIN:
+		case Execution_metamodelPackage.USER__LOGIN:
 			return LOGIN_EDEFAULT == null ? login != null : !LOGIN_EDEFAULT.equals(login);
-		case Execution_metamodelPackage.USER_DATA__NUMBER_COUNCIL:
+		case Execution_metamodelPackage.USER__NUMBER_COUNCIL:
 			return numberCouncil != NUMBER_COUNCIL_EDEFAULT;
-		case Execution_metamodelPackage.USER_DATA__STATE:
+		case Execution_metamodelPackage.USER__STATE:
 			return STATE_EDEFAULT == null ? state != null : !STATE_EDEFAULT.equals(state);
-		case Execution_metamodelPackage.USER_DATA__EXECUTOR:
+		case Execution_metamodelPackage.USER__EXECUTOR:
 			return executor != null;
-		case Execution_metamodelPackage.USER_DATA__CREATOR:
+		case Execution_metamodelPackage.USER__CREATOR:
 			return creator != null;
 		}
 		return super.eIsSet(featureID);
@@ -730,4 +729,4 @@ public abstract class UserDataImpl extends MinimalEObjectImpl.Container implemen
 		return result.toString();
 	}
 
-} //UserDataImpl
+} //UserImpl

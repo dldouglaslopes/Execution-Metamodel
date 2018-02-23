@@ -121,15 +121,6 @@ public interface Execution_metamodelFactory extends EFactory {
 	Executor createExecutor();
 
 	/**
-	 * Returns a new object of class '<em>Answer</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Answer</em>'.
-	 * @generated
-	 */
-	Answer createAnswer();
-
-	/**
 	 * Returns a new object of class '<em>Question</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -229,40 +220,31 @@ public interface Execution_metamodelFactory extends EFactory {
 	PrescribedMedicament createPrescribedMedicament();
 
 	/**
-	 * Returns a new object of class '<em>Extended Protocol</em>'.
+	 * Returns a new object of class '<em>Short Execution</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Extended Protocol</em>'.
+	 * @return a new object of class '<em>Short Execution</em>'.
 	 * @generated
 	 */
-	ExtendedProtocol createExtendedProtocol();
+	ShortExecution createShortExecution();
 
 	/**
-	 * Returns a new object of class '<em>Execution Protocol</em>'.
+	 * Returns a new object of class '<em>Justification</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Execution Protocol</em>'.
+	 * @return a new object of class '<em>Justification</em>'.
 	 * @generated
 	 */
-	ExecutionProtocol createExecutionProtocol();
+	Justification createJustification();
 
 	/**
-	 * Returns a new object of class '<em>Justify</em>'.
+	 * Returns a new object of class '<em>Pathway</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Justify</em>'.
+	 * @return a new object of class '<em>Pathway</em>'.
 	 * @generated
 	 */
-	Justify createJustify();
-
-	/**
-	 * Returns a new object of class '<em>Protocol</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Protocol</em>'.
-	 * @generated
-	 */
-	Protocol createProtocol();
+	Pathway createPathway();
 
 	/**
 	 * Returns a new object of class '<em>Responsible</em>'.
@@ -290,6 +272,33 @@ public interface Execution_metamodelFactory extends EFactory {
 	 * @generated
 	 */
 	LastProfessional createLastProfessional();
+
+	/**
+	 * Returns a new object of class '<em>Answer</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Answer</em>'.
+	 * @generated
+	 */
+	Answer createAnswer();
+
+	/**
+	 * Returns a new object of class '<em>Numeric</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Numeric</em>'.
+	 * @generated
+	 */
+	Numeric createNumeric();
+
+	/**
+	 * Returns a new object of class '<em>Yes Or No</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Yes Or No</em>'.
+	 * @generated
+	 */
+	YesOrNo createYesOrNo();
 
 	/**
 	 * Returns the package supported by this factory.

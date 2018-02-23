@@ -23,7 +23,7 @@ import org.eclipse.emf.common.util.EList;
  * @model
  * @generated
  */
-public interface Treatment extends ExecutionStep {
+public interface Treatment extends CompleteStep {
 	/**
 	 * Returns the value of the '<em><b>Prescribedexam</b></em>' containment reference.
 	 * <!-- begin-user-doc -->

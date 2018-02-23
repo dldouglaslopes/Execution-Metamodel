@@ -3,11 +3,14 @@
 package MetamodelExecution.impl;
 
 import MetamodelExecution.Execution_metamodelPackage;
+import MetamodelExecution.Value;
 import MetamodelExecution.Variable;
 
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
@@ -26,8 +29,8 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *   <li>{@link MetamodelExecution.impl.VariableImpl#getUrl <em>Url</em>}</li>
  *   <li>{@link MetamodelExecution.impl.VariableImpl#getName <em>Name</em>}</li>
  *   <li>{@link MetamodelExecution.impl.VariableImpl#getWeight <em>Weight</em>}</li>
- *   <li>{@link MetamodelExecution.impl.VariableImpl#isValue <em>Value</em>}</li>
  *   <li>{@link MetamodelExecution.impl.VariableImpl#getLink <em>Link</em>}</li>
+ *   <li>{@link MetamodelExecution.impl.VariableImpl#getValue <em>Value</em>}</li>
  * </ul>
  *
  * @generated
@@ -154,26 +157,6 @@ public class VariableImpl extends MinimalEObjectImpl.Container implements Variab
 	protected int weight = WEIGHT_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #isValue() <em>Value</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isValue()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final boolean VALUE_EDEFAULT = false;
-
-	/**
-	 * The cached value of the '{@link #isValue() <em>Value</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isValue()
-	 * @generated
-	 * @ordered
-	 */
-	protected boolean value = VALUE_EDEFAULT;
-
-	/**
 	 * The default value of the '{@link #getLink() <em>Link</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -192,6 +175,16 @@ public class VariableImpl extends MinimalEObjectImpl.Container implements Variab
 	 * @ordered
 	 */
 	protected String link = LINK_EDEFAULT;
+
+	/**
+	 * The cached value of the '{@link #getValue() <em>Value</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getValue()
+	 * @generated
+	 * @ordered
+	 */
+	protected Value value;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -348,28 +341,6 @@ public class VariableImpl extends MinimalEObjectImpl.Container implements Variab
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean isValue() {
-		return value;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setValue(boolean newValue) {
-		boolean oldValue = value;
-		value = newValue;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.VARIABLE__VALUE, oldValue,
-					value));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public String getLink() {
 		return link;
 	}
@@ -392,6 +363,70 @@ public class VariableImpl extends MinimalEObjectImpl.Container implements Variab
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public Value getValue() {
+		return value;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetValue(Value newValue, NotificationChain msgs) {
+		Value oldValue = value;
+		value = newValue;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
+					Execution_metamodelPackage.VARIABLE__VALUE, oldValue, newValue);
+			if (msgs == null)
+				msgs = notification;
+			else
+				msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setValue(Value newValue) {
+		if (newValue != value) {
+			NotificationChain msgs = null;
+			if (value != null)
+				msgs = ((InternalEObject) value).eInverseRemove(this,
+						EOPPOSITE_FEATURE_BASE - Execution_metamodelPackage.VARIABLE__VALUE, null, msgs);
+			if (newValue != null)
+				msgs = ((InternalEObject) newValue).eInverseAdd(this,
+						EOPPOSITE_FEATURE_BASE - Execution_metamodelPackage.VARIABLE__VALUE, null, msgs);
+			msgs = basicSetValue(newValue, msgs);
+			if (msgs != null)
+				msgs.dispatch();
+		} else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.VARIABLE__VALUE, newValue,
+					newValue));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+		case Execution_metamodelPackage.VARIABLE__VALUE:
+			return basicSetValue(null, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -407,10 +442,10 @@ public class VariableImpl extends MinimalEObjectImpl.Container implements Variab
 			return getName();
 		case Execution_metamodelPackage.VARIABLE__WEIGHT:
 			return getWeight();
-		case Execution_metamodelPackage.VARIABLE__VALUE:
-			return isValue();
 		case Execution_metamodelPackage.VARIABLE__LINK:
 			return getLink();
+		case Execution_metamodelPackage.VARIABLE__VALUE:
+			return getValue();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -441,11 +476,11 @@ public class VariableImpl extends MinimalEObjectImpl.Container implements Variab
 		case Execution_metamodelPackage.VARIABLE__WEIGHT:
 			setWeight((Integer) newValue);
 			return;
-		case Execution_metamodelPackage.VARIABLE__VALUE:
-			setValue((Boolean) newValue);
-			return;
 		case Execution_metamodelPackage.VARIABLE__LINK:
 			setLink((String) newValue);
+			return;
+		case Execution_metamodelPackage.VARIABLE__VALUE:
+			setValue((Value) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -477,11 +512,11 @@ public class VariableImpl extends MinimalEObjectImpl.Container implements Variab
 		case Execution_metamodelPackage.VARIABLE__WEIGHT:
 			setWeight(WEIGHT_EDEFAULT);
 			return;
-		case Execution_metamodelPackage.VARIABLE__VALUE:
-			setValue(VALUE_EDEFAULT);
-			return;
 		case Execution_metamodelPackage.VARIABLE__LINK:
 			setLink(LINK_EDEFAULT);
+			return;
+		case Execution_metamodelPackage.VARIABLE__VALUE:
+			setValue((Value) null);
 			return;
 		}
 		super.eUnset(featureID);
@@ -507,10 +542,10 @@ public class VariableImpl extends MinimalEObjectImpl.Container implements Variab
 			return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 		case Execution_metamodelPackage.VARIABLE__WEIGHT:
 			return weight != WEIGHT_EDEFAULT;
-		case Execution_metamodelPackage.VARIABLE__VALUE:
-			return value != VALUE_EDEFAULT;
 		case Execution_metamodelPackage.VARIABLE__LINK:
 			return LINK_EDEFAULT == null ? link != null : !LINK_EDEFAULT.equals(link);
+		case Execution_metamodelPackage.VARIABLE__VALUE:
+			return value != null;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -538,8 +573,6 @@ public class VariableImpl extends MinimalEObjectImpl.Container implements Variab
 		result.append(name);
 		result.append(", weight: ");
 		result.append(weight);
-		result.append(", value: ");
-		result.append(value);
 		result.append(", link: ");
 		result.append(link);
 		result.append(')');
