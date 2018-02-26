@@ -174,20 +174,6 @@ public class Execution_metamodelSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case Execution_metamodelPackage.CREATOR: {
-			Creator creator = (Creator) theEObject;
-			T result = caseCreator(creator);
-			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
-		case Execution_metamodelPackage.EXECUTOR: {
-			Executor executor = (Executor) theEObject;
-			T result = caseExecutor(executor);
-			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
 		case Execution_metamodelPackage.QUESTION: {
 			Question question = (Question) theEObject;
 			T result = caseQuestion(question);
@@ -306,16 +292,17 @@ public class Execution_metamodelSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case Execution_metamodelPackage.LAST_PROFESSIONAL: {
-			LastProfessional lastProfessional = (LastProfessional) theEObject;
-			T result = caseLastProfessional(lastProfessional);
-			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
 		case Execution_metamodelPackage.USER: {
 			User user = (User) theEObject;
 			T result = caseUser(user);
+			if (result == null)
+				result = caseCreator(user);
+			if (result == null)
+				result = caseExecutor(user);
+			if (result == null)
+				result = caseLastProfessional(user);
+			if (result == null)
+				result = caseResponsible(user);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -366,6 +353,43 @@ public class Execution_metamodelSwitch<T> extends Switch<T> {
 				result = caseStep(completeStep);
 			if (result == null)
 				result = caseExecution(completeStep);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case Execution_metamodelPackage.ELEMENT: {
+			Element element = (Element) theEObject;
+			T result = caseElement(element);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case Execution_metamodelPackage.MODELING: {
+			Modeling modeling = (Modeling) theEObject;
+			T result = caseModeling(modeling);
+			if (result == null)
+				result = caseExecution(modeling);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case Execution_metamodelPackage.CREATOR: {
+			Creator creator = (Creator) theEObject;
+			T result = caseCreator(creator);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case Execution_metamodelPackage.EXECUTOR: {
+			Executor executor = (Executor) theEObject;
+			T result = caseExecutor(executor);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case Execution_metamodelPackage.LAST_PROFESSIONAL: {
+			LastProfessional lastProfessional = (LastProfessional) theEObject;
+			T result = caseLastProfessional(lastProfessional);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -522,36 +546,6 @@ public class Execution_metamodelSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseNext(Next object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Creator</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Creator</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseCreator(Creator object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Executor</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Executor</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseExecutor(Executor object) {
 		return null;
 	}
 
@@ -796,21 +790,6 @@ public class Execution_metamodelSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Last Professional</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Last Professional</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseLastProfessional(LastProfessional object) {
-		return null;
-	}
-
-	/**
 	 * Returns the result of interpreting the object as an instance of '<em>User</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -912,6 +891,81 @@ public class Execution_metamodelSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseCompleteStep(CompleteStep object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Element</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Element</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseElement(Element object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Modeling</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Modeling</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseModeling(Modeling object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Creator</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Creator</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseCreator(Creator object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Executor</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Executor</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseExecutor(Executor object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Last Professional</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Last Professional</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseLastProfessional(LastProfessional object) {
 		return null;
 	}
 

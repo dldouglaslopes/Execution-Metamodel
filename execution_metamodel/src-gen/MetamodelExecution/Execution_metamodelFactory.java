@@ -103,24 +103,6 @@ public interface Execution_metamodelFactory extends EFactory {
 	Next createNext();
 
 	/**
-	 * Returns a new object of class '<em>Creator</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Creator</em>'.
-	 * @generated
-	 */
-	Creator createCreator();
-
-	/**
-	 * Returns a new object of class '<em>Executor</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Executor</em>'.
-	 * @generated
-	 */
-	Executor createExecutor();
-
-	/**
 	 * Returns a new object of class '<em>Question</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -265,15 +247,6 @@ public interface Execution_metamodelFactory extends EFactory {
 	ExecutedStep createExecutedStep();
 
 	/**
-	 * Returns a new object of class '<em>Last Professional</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Last Professional</em>'.
-	 * @generated
-	 */
-	LastProfessional createLastProfessional();
-
-	/**
 	 * Returns a new object of class '<em>Answer</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -299,6 +272,51 @@ public interface Execution_metamodelFactory extends EFactory {
 	 * @generated
 	 */
 	YesOrNo createYesOrNo();
+
+	/**
+	 * Returns a new object of class '<em>Element</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Element</em>'.
+	 * @generated
+	 */
+	Element createElement();
+
+	/**
+	 * Returns a new object of class '<em>Modeling</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Modeling</em>'.
+	 * @generated
+	 */
+	Modeling createModeling();
+
+	/**
+	 * Returns a new object of class '<em>Creator</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Creator</em>'.
+	 * @generated
+	 */
+	Creator createCreator();
+
+	/**
+	 * Returns a new object of class '<em>Executor</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Executor</em>'.
+	 * @generated
+	 */
+	Executor createExecutor();
+
+	/**
+	 * Returns a new object of class '<em>Last Professional</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Last Professional</em>'.
+	 * @generated
+	 */
+	LastProfessional createLastProfessional();
 
 	/**
 	 * Returns the package supported by this factory.

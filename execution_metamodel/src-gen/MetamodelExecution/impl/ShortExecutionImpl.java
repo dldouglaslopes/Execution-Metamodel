@@ -35,8 +35,8 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *   <li>{@link MetamodelExecution.impl.ShortExecutionImpl#getIdResponsible <em>Id Responsible</em>}</li>
  *   <li>{@link MetamodelExecution.impl.ShortExecutionImpl#getIdLastProfessional <em>Id Last Professional</em>}</li>
  *   <li>{@link MetamodelExecution.impl.ShortExecutionImpl#getResponsible <em>Responsible</em>}</li>
- *   <li>{@link MetamodelExecution.impl.ShortExecutionImpl#getLastprofessional <em>Lastprofessional</em>}</li>
  *   <li>{@link MetamodelExecution.impl.ShortExecutionImpl#getExecutedstep <em>Executedstep</em>}</li>
+ *   <li>{@link MetamodelExecution.impl.ShortExecutionImpl#getLastprofessional <em>Lastprofessional</em>}</li>
  * </ul>
  *
  * @generated
@@ -183,16 +183,6 @@ public class ShortExecutionImpl extends ExecutionImpl implements ShortExecution 
 	protected Responsible responsible;
 
 	/**
-	 * The cached value of the '{@link #getLastprofessional() <em>Lastprofessional</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getLastprofessional()
-	 * @generated
-	 * @ordered
-	 */
-	protected LastProfessional lastprofessional;
-
-	/**
 	 * The cached value of the '{@link #getExecutedstep() <em>Executedstep</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -201,6 +191,16 @@ public class ShortExecutionImpl extends ExecutionImpl implements ShortExecution 
 	 * @ordered
 	 */
 	protected ExecutedStep executedstep;
+
+	/**
+	 * The cached value of the '{@link #getLastprofessional() <em>Lastprofessional</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getLastprofessional()
+	 * @generated
+	 * @ordered
+	 */
+	protected LastProfessional lastprofessional;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -460,6 +460,56 @@ public class ShortExecutionImpl extends ExecutionImpl implements ShortExecution 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public ExecutedStep getExecutedstep() {
+		return executedstep;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetExecutedstep(ExecutedStep newExecutedstep, NotificationChain msgs) {
+		ExecutedStep oldExecutedstep = executedstep;
+		executedstep = newExecutedstep;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
+					Execution_metamodelPackage.SHORT_EXECUTION__EXECUTEDSTEP, oldExecutedstep, newExecutedstep);
+			if (msgs == null)
+				msgs = notification;
+			else
+				msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setExecutedstep(ExecutedStep newExecutedstep) {
+		if (newExecutedstep != executedstep) {
+			NotificationChain msgs = null;
+			if (executedstep != null)
+				msgs = ((InternalEObject) executedstep).eInverseRemove(this,
+						EOPPOSITE_FEATURE_BASE - Execution_metamodelPackage.SHORT_EXECUTION__EXECUTEDSTEP, null, msgs);
+			if (newExecutedstep != null)
+				msgs = ((InternalEObject) newExecutedstep).eInverseAdd(this,
+						EOPPOSITE_FEATURE_BASE - Execution_metamodelPackage.SHORT_EXECUTION__EXECUTEDSTEP, null, msgs);
+			msgs = basicSetExecutedstep(newExecutedstep, msgs);
+			if (msgs != null)
+				msgs.dispatch();
+		} else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET,
+					Execution_metamodelPackage.SHORT_EXECUTION__EXECUTEDSTEP, newExecutedstep, newExecutedstep));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public LastProfessional getLastprofessional() {
 		return lastprofessional;
 	}
@@ -514,56 +564,6 @@ public class ShortExecutionImpl extends ExecutionImpl implements ShortExecution 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ExecutedStep getExecutedstep() {
-		return executedstep;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public NotificationChain basicSetExecutedstep(ExecutedStep newExecutedstep, NotificationChain msgs) {
-		ExecutedStep oldExecutedstep = executedstep;
-		executedstep = newExecutedstep;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
-					Execution_metamodelPackage.SHORT_EXECUTION__EXECUTEDSTEP, oldExecutedstep, newExecutedstep);
-			if (msgs == null)
-				msgs = notification;
-			else
-				msgs.add(notification);
-		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setExecutedstep(ExecutedStep newExecutedstep) {
-		if (newExecutedstep != executedstep) {
-			NotificationChain msgs = null;
-			if (executedstep != null)
-				msgs = ((InternalEObject) executedstep).eInverseRemove(this,
-						EOPPOSITE_FEATURE_BASE - Execution_metamodelPackage.SHORT_EXECUTION__EXECUTEDSTEP, null, msgs);
-			if (newExecutedstep != null)
-				msgs = ((InternalEObject) newExecutedstep).eInverseAdd(this,
-						EOPPOSITE_FEATURE_BASE - Execution_metamodelPackage.SHORT_EXECUTION__EXECUTEDSTEP, null, msgs);
-			msgs = basicSetExecutedstep(newExecutedstep, msgs);
-			if (msgs != null)
-				msgs.dispatch();
-		} else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET,
-					Execution_metamodelPackage.SHORT_EXECUTION__EXECUTEDSTEP, newExecutedstep, newExecutedstep));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -571,10 +571,10 @@ public class ShortExecutionImpl extends ExecutionImpl implements ShortExecution 
 			return basicSetPathway(null, msgs);
 		case Execution_metamodelPackage.SHORT_EXECUTION__RESPONSIBLE:
 			return basicSetResponsible(null, msgs);
-		case Execution_metamodelPackage.SHORT_EXECUTION__LASTPROFESSIONAL:
-			return basicSetLastprofessional(null, msgs);
 		case Execution_metamodelPackage.SHORT_EXECUTION__EXECUTEDSTEP:
 			return basicSetExecutedstep(null, msgs);
+		case Execution_metamodelPackage.SHORT_EXECUTION__LASTPROFESSIONAL:
+			return basicSetLastprofessional(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -603,10 +603,10 @@ public class ShortExecutionImpl extends ExecutionImpl implements ShortExecution 
 			return getIdLastProfessional();
 		case Execution_metamodelPackage.SHORT_EXECUTION__RESPONSIBLE:
 			return getResponsible();
-		case Execution_metamodelPackage.SHORT_EXECUTION__LASTPROFESSIONAL:
-			return getLastprofessional();
 		case Execution_metamodelPackage.SHORT_EXECUTION__EXECUTEDSTEP:
 			return getExecutedstep();
+		case Execution_metamodelPackage.SHORT_EXECUTION__LASTPROFESSIONAL:
+			return getLastprofessional();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -643,11 +643,11 @@ public class ShortExecutionImpl extends ExecutionImpl implements ShortExecution 
 		case Execution_metamodelPackage.SHORT_EXECUTION__RESPONSIBLE:
 			setResponsible((Responsible) newValue);
 			return;
-		case Execution_metamodelPackage.SHORT_EXECUTION__LASTPROFESSIONAL:
-			setLastprofessional((LastProfessional) newValue);
-			return;
 		case Execution_metamodelPackage.SHORT_EXECUTION__EXECUTEDSTEP:
 			setExecutedstep((ExecutedStep) newValue);
+			return;
+		case Execution_metamodelPackage.SHORT_EXECUTION__LASTPROFESSIONAL:
+			setLastprofessional((LastProfessional) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -685,11 +685,11 @@ public class ShortExecutionImpl extends ExecutionImpl implements ShortExecution 
 		case Execution_metamodelPackage.SHORT_EXECUTION__RESPONSIBLE:
 			setResponsible((Responsible) null);
 			return;
-		case Execution_metamodelPackage.SHORT_EXECUTION__LASTPROFESSIONAL:
-			setLastprofessional((LastProfessional) null);
-			return;
 		case Execution_metamodelPackage.SHORT_EXECUTION__EXECUTEDSTEP:
 			setExecutedstep((ExecutedStep) null);
+			return;
+		case Execution_metamodelPackage.SHORT_EXECUTION__LASTPROFESSIONAL:
+			setLastprofessional((LastProfessional) null);
 			return;
 		}
 		super.eUnset(featureID);
@@ -721,10 +721,10 @@ public class ShortExecutionImpl extends ExecutionImpl implements ShortExecution 
 			return idLastProfessional != ID_LAST_PROFESSIONAL_EDEFAULT;
 		case Execution_metamodelPackage.SHORT_EXECUTION__RESPONSIBLE:
 			return responsible != null;
-		case Execution_metamodelPackage.SHORT_EXECUTION__LASTPROFESSIONAL:
-			return lastprofessional != null;
 		case Execution_metamodelPackage.SHORT_EXECUTION__EXECUTEDSTEP:
 			return executedstep != null;
+		case Execution_metamodelPackage.SHORT_EXECUTION__LASTPROFESSIONAL:
+			return lastprofessional != null;
 		}
 		return super.eIsSet(featureID);
 	}

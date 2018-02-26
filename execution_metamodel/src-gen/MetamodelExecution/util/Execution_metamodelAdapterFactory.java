@@ -117,16 +117,6 @@ public class Execution_metamodelAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
-		public Adapter caseCreator(Creator object) {
-			return createCreatorAdapter();
-		}
-
-		@Override
-		public Adapter caseExecutor(Executor object) {
-			return createExecutorAdapter();
-		}
-
-		@Override
 		public Adapter caseQuestion(Question object) {
 			return createQuestionAdapter();
 		}
@@ -207,11 +197,6 @@ public class Execution_metamodelAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
-		public Adapter caseLastProfessional(LastProfessional object) {
-			return createLastProfessionalAdapter();
-		}
-
-		@Override
 		public Adapter caseUser(User object) {
 			return createUserAdapter();
 		}
@@ -244,6 +229,31 @@ public class Execution_metamodelAdapterFactory extends AdapterFactoryImpl {
 		@Override
 		public Adapter caseCompleteStep(CompleteStep object) {
 			return createCompleteStepAdapter();
+		}
+
+		@Override
+		public Adapter caseElement(Element object) {
+			return createElementAdapter();
+		}
+
+		@Override
+		public Adapter caseModeling(Modeling object) {
+			return createModelingAdapter();
+		}
+
+		@Override
+		public Adapter caseCreator(Creator object) {
+			return createCreatorAdapter();
+		}
+
+		@Override
+		public Adapter caseExecutor(Executor object) {
+			return createExecutorAdapter();
+		}
+
+		@Override
+		public Adapter caseLastProfessional(LastProfessional object) {
+			return createLastProfessionalAdapter();
 		}
 
 		@Override
@@ -402,34 +412,6 @@ public class Execution_metamodelAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createNextAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link MetamodelExecution.Creator <em>Creator</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see MetamodelExecution.Creator
-	 * @generated
-	 */
-	public Adapter createCreatorAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link MetamodelExecution.Executor <em>Executor</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see MetamodelExecution.Executor
-	 * @generated
-	 */
-	public Adapter createExecutorAdapter() {
 		return null;
 	}
 
@@ -658,20 +640,6 @@ public class Execution_metamodelAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link MetamodelExecution.LastProfessional <em>Last Professional</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see MetamodelExecution.LastProfessional
-	 * @generated
-	 */
-	public Adapter createLastProfessionalAdapter() {
-		return null;
-	}
-
-	/**
 	 * Creates a new adapter for an object of class '{@link MetamodelExecution.User <em>User</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -766,6 +734,76 @@ public class Execution_metamodelAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createCompleteStepAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link MetamodelExecution.Element <em>Element</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see MetamodelExecution.Element
+	 * @generated
+	 */
+	public Adapter createElementAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link MetamodelExecution.Modeling <em>Modeling</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see MetamodelExecution.Modeling
+	 * @generated
+	 */
+	public Adapter createModelingAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link MetamodelExecution.Creator <em>Creator</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see MetamodelExecution.Creator
+	 * @generated
+	 */
+	public Adapter createCreatorAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link MetamodelExecution.Executor <em>Executor</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see MetamodelExecution.Executor
+	 * @generated
+	 */
+	public Adapter createExecutorAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link MetamodelExecution.LastProfessional <em>Last Professional</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see MetamodelExecution.LastProfessional
+	 * @generated
+	 */
+	public Adapter createLastProfessionalAdapter() {
 		return null;
 	}
 

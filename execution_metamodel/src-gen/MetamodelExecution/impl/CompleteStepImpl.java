@@ -4,25 +4,17 @@ package MetamodelExecution.impl;
 
 import MetamodelExecution.CompleteStep;
 import MetamodelExecution.Creator;
+import MetamodelExecution.Element;
 import MetamodelExecution.Execution_metamodelPackage;
 import MetamodelExecution.Executor;
 
-import java.util.Collection;
-
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
-
-import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-
-import org.eclipse.emf.ecore.util.EObjectContainmentEList;
-import org.eclipse.emf.ecore.util.InternalEList;
-
-import protocolosv2.Element;
 
 /**
  * <!-- begin-user-doc -->
@@ -33,32 +25,22 @@ import protocolosv2.Element;
  * </p>
  * <ul>
  *   <li>{@link MetamodelExecution.impl.CompleteStepImpl#getStep <em>Step</em>}</li>
- *   <li>{@link MetamodelExecution.impl.CompleteStepImpl#getExecutor <em>Executor</em>}</li>
  *   <li>{@link MetamodelExecution.impl.CompleteStepImpl#getCreator <em>Creator</em>}</li>
+ *   <li>{@link MetamodelExecution.impl.CompleteStepImpl#getExecutor <em>Executor</em>}</li>
  * </ul>
  *
  * @generated
  */
 public abstract class CompleteStepImpl extends StepImpl implements CompleteStep {
 	/**
-	 * The cached value of the '{@link #getStep() <em>Step</em>}' containment reference list.
+	 * The cached value of the '{@link #getStep() <em>Step</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getStep()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Element> step;
-
-	/**
-	 * The cached value of the '{@link #getExecutor() <em>Executor</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getExecutor()
-	 * @generated
-	 * @ordered
-	 */
-	protected Executor executor;
+	protected Element step;
 
 	/**
 	 * The cached value of the '{@link #getCreator() <em>Creator</em>}' containment reference.
@@ -69,6 +51,16 @@ public abstract class CompleteStepImpl extends StepImpl implements CompleteStep 
 	 * @ordered
 	 */
 	protected Creator creator;
+
+	/**
+	 * The cached value of the '{@link #getExecutor() <em>Executor</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getExecutor()
+	 * @generated
+	 * @ordered
+	 */
+	protected Executor executor;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -94,11 +86,7 @@ public abstract class CompleteStepImpl extends StepImpl implements CompleteStep 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Element> getStep() {
-		if (step == null) {
-			step = new EObjectContainmentEList<Element>(Element.class, this,
-					Execution_metamodelPackage.COMPLETE_STEP__STEP);
-		}
+	public Element getStep() {
 		return step;
 	}
 
@@ -107,21 +95,12 @@ public abstract class CompleteStepImpl extends StepImpl implements CompleteStep 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Executor getExecutor() {
-		return executor;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public NotificationChain basicSetExecutor(Executor newExecutor, NotificationChain msgs) {
-		Executor oldExecutor = executor;
-		executor = newExecutor;
+	public NotificationChain basicSetStep(Element newStep, NotificationChain msgs) {
+		Element oldStep = step;
+		step = newStep;
 		if (eNotificationRequired()) {
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
-					Execution_metamodelPackage.COMPLETE_STEP__EXECUTOR, oldExecutor, newExecutor);
+					Execution_metamodelPackage.COMPLETE_STEP__STEP, oldStep, newStep);
 			if (msgs == null)
 				msgs = notification;
 			else
@@ -135,21 +114,21 @@ public abstract class CompleteStepImpl extends StepImpl implements CompleteStep 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setExecutor(Executor newExecutor) {
-		if (newExecutor != executor) {
+	public void setStep(Element newStep) {
+		if (newStep != step) {
 			NotificationChain msgs = null;
-			if (executor != null)
-				msgs = ((InternalEObject) executor).eInverseRemove(this,
-						EOPPOSITE_FEATURE_BASE - Execution_metamodelPackage.COMPLETE_STEP__EXECUTOR, null, msgs);
-			if (newExecutor != null)
-				msgs = ((InternalEObject) newExecutor).eInverseAdd(this,
-						EOPPOSITE_FEATURE_BASE - Execution_metamodelPackage.COMPLETE_STEP__EXECUTOR, null, msgs);
-			msgs = basicSetExecutor(newExecutor, msgs);
+			if (step != null)
+				msgs = ((InternalEObject) step).eInverseRemove(this,
+						EOPPOSITE_FEATURE_BASE - Execution_metamodelPackage.COMPLETE_STEP__STEP, null, msgs);
+			if (newStep != null)
+				msgs = ((InternalEObject) newStep).eInverseAdd(this,
+						EOPPOSITE_FEATURE_BASE - Execution_metamodelPackage.COMPLETE_STEP__STEP, null, msgs);
+			msgs = basicSetStep(newStep, msgs);
 			if (msgs != null)
 				msgs.dispatch();
 		} else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.COMPLETE_STEP__EXECUTOR,
-					newExecutor, newExecutor));
+			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.COMPLETE_STEP__STEP,
+					newStep, newStep));
 	}
 
 	/**
@@ -207,15 +186,65 @@ public abstract class CompleteStepImpl extends StepImpl implements CompleteStep 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public Executor getExecutor() {
+		return executor;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetExecutor(Executor newExecutor, NotificationChain msgs) {
+		Executor oldExecutor = executor;
+		executor = newExecutor;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
+					Execution_metamodelPackage.COMPLETE_STEP__EXECUTOR, oldExecutor, newExecutor);
+			if (msgs == null)
+				msgs = notification;
+			else
+				msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setExecutor(Executor newExecutor) {
+		if (newExecutor != executor) {
+			NotificationChain msgs = null;
+			if (executor != null)
+				msgs = ((InternalEObject) executor).eInverseRemove(this,
+						EOPPOSITE_FEATURE_BASE - Execution_metamodelPackage.COMPLETE_STEP__EXECUTOR, null, msgs);
+			if (newExecutor != null)
+				msgs = ((InternalEObject) newExecutor).eInverseAdd(this,
+						EOPPOSITE_FEATURE_BASE - Execution_metamodelPackage.COMPLETE_STEP__EXECUTOR, null, msgs);
+			msgs = basicSetExecutor(newExecutor, msgs);
+			if (msgs != null)
+				msgs.dispatch();
+		} else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.COMPLETE_STEP__EXECUTOR,
+					newExecutor, newExecutor));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 		case Execution_metamodelPackage.COMPLETE_STEP__STEP:
-			return ((InternalEList<?>) getStep()).basicRemove(otherEnd, msgs);
-		case Execution_metamodelPackage.COMPLETE_STEP__EXECUTOR:
-			return basicSetExecutor(null, msgs);
+			return basicSetStep(null, msgs);
 		case Execution_metamodelPackage.COMPLETE_STEP__CREATOR:
 			return basicSetCreator(null, msgs);
+		case Execution_metamodelPackage.COMPLETE_STEP__EXECUTOR:
+			return basicSetExecutor(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -230,10 +259,10 @@ public abstract class CompleteStepImpl extends StepImpl implements CompleteStep 
 		switch (featureID) {
 		case Execution_metamodelPackage.COMPLETE_STEP__STEP:
 			return getStep();
-		case Execution_metamodelPackage.COMPLETE_STEP__EXECUTOR:
-			return getExecutor();
 		case Execution_metamodelPackage.COMPLETE_STEP__CREATOR:
 			return getCreator();
+		case Execution_metamodelPackage.COMPLETE_STEP__EXECUTOR:
+			return getExecutor();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -243,19 +272,17 @@ public abstract class CompleteStepImpl extends StepImpl implements CompleteStep 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 		case Execution_metamodelPackage.COMPLETE_STEP__STEP:
-			getStep().clear();
-			getStep().addAll((Collection<? extends Element>) newValue);
-			return;
-		case Execution_metamodelPackage.COMPLETE_STEP__EXECUTOR:
-			setExecutor((Executor) newValue);
+			setStep((Element) newValue);
 			return;
 		case Execution_metamodelPackage.COMPLETE_STEP__CREATOR:
 			setCreator((Creator) newValue);
+			return;
+		case Execution_metamodelPackage.COMPLETE_STEP__EXECUTOR:
+			setExecutor((Executor) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -270,13 +297,13 @@ public abstract class CompleteStepImpl extends StepImpl implements CompleteStep 
 	public void eUnset(int featureID) {
 		switch (featureID) {
 		case Execution_metamodelPackage.COMPLETE_STEP__STEP:
-			getStep().clear();
-			return;
-		case Execution_metamodelPackage.COMPLETE_STEP__EXECUTOR:
-			setExecutor((Executor) null);
+			setStep((Element) null);
 			return;
 		case Execution_metamodelPackage.COMPLETE_STEP__CREATOR:
 			setCreator((Creator) null);
+			return;
+		case Execution_metamodelPackage.COMPLETE_STEP__EXECUTOR:
+			setExecutor((Executor) null);
 			return;
 		}
 		super.eUnset(featureID);
@@ -291,11 +318,11 @@ public abstract class CompleteStepImpl extends StepImpl implements CompleteStep 
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 		case Execution_metamodelPackage.COMPLETE_STEP__STEP:
-			return step != null && !step.isEmpty();
-		case Execution_metamodelPackage.COMPLETE_STEP__EXECUTOR:
-			return executor != null;
+			return step != null;
 		case Execution_metamodelPackage.COMPLETE_STEP__CREATOR:
 			return creator != null;
+		case Execution_metamodelPackage.COMPLETE_STEP__EXECUTOR:
+			return executor != null;
 		}
 		return super.eIsSet(featureID);
 	}

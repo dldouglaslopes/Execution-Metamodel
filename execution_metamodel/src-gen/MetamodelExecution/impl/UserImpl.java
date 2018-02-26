@@ -2,18 +2,14 @@
  */
 package MetamodelExecution.impl;
 
-import MetamodelExecution.Creator;
 import MetamodelExecution.Execution_metamodelPackage;
-import MetamodelExecution.Executor;
 import MetamodelExecution.User;
 
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -32,13 +28,11 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *   <li>{@link MetamodelExecution.impl.UserImpl#getLogin <em>Login</em>}</li>
  *   <li>{@link MetamodelExecution.impl.UserImpl#getNumberCouncil <em>Number Council</em>}</li>
  *   <li>{@link MetamodelExecution.impl.UserImpl#getState <em>State</em>}</li>
- *   <li>{@link MetamodelExecution.impl.UserImpl#getExecutor <em>Executor</em>}</li>
- *   <li>{@link MetamodelExecution.impl.UserImpl#getCreator <em>Creator</em>}</li>
  * </ul>
  *
  * @generated
  */
-public abstract class UserImpl extends MinimalEObjectImpl.Container implements User {
+public abstract class UserImpl extends CreatorImpl implements User {
 	/**
 	 * The default value of the '{@link #getId() <em>Id</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -218,26 +212,6 @@ public abstract class UserImpl extends MinimalEObjectImpl.Container implements U
 	 * @ordered
 	 */
 	protected String state = STATE_EDEFAULT;
-
-	/**
-	 * The cached value of the '{@link #getExecutor() <em>Executor</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getExecutor()
-	 * @generated
-	 * @ordered
-	 */
-	protected Executor executor;
-
-	/**
-	 * The cached value of the '{@link #getCreator() <em>Creator</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getCreator()
-	 * @generated
-	 * @ordered
-	 */
-	protected Creator creator;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -459,86 +433,6 @@ public abstract class UserImpl extends MinimalEObjectImpl.Container implements U
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Executor getExecutor() {
-		if (executor != null && executor.eIsProxy()) {
-			InternalEObject oldExecutor = (InternalEObject) executor;
-			executor = (Executor) eResolveProxy(oldExecutor);
-			if (executor != oldExecutor) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Execution_metamodelPackage.USER__EXECUTOR,
-							oldExecutor, executor));
-			}
-		}
-		return executor;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Executor basicGetExecutor() {
-		return executor;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setExecutor(Executor newExecutor) {
-		Executor oldExecutor = executor;
-		executor = newExecutor;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.USER__EXECUTOR,
-					oldExecutor, executor));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Creator getCreator() {
-		if (creator != null && creator.eIsProxy()) {
-			InternalEObject oldCreator = (InternalEObject) creator;
-			creator = (Creator) eResolveProxy(oldCreator);
-			if (creator != oldCreator) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Execution_metamodelPackage.USER__CREATOR,
-							oldCreator, creator));
-			}
-		}
-		return creator;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Creator basicGetCreator() {
-		return creator;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setCreator(Creator newCreator) {
-		Creator oldCreator = creator;
-		creator = newCreator;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.USER__CREATOR, oldCreator,
-					creator));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -560,14 +454,6 @@ public abstract class UserImpl extends MinimalEObjectImpl.Container implements U
 			return getNumberCouncil();
 		case Execution_metamodelPackage.USER__STATE:
 			return getState();
-		case Execution_metamodelPackage.USER__EXECUTOR:
-			if (resolve)
-				return getExecutor();
-			return basicGetExecutor();
-		case Execution_metamodelPackage.USER__CREATOR:
-			if (resolve)
-				return getCreator();
-			return basicGetCreator();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -606,12 +492,6 @@ public abstract class UserImpl extends MinimalEObjectImpl.Container implements U
 			return;
 		case Execution_metamodelPackage.USER__STATE:
 			setState((String) newValue);
-			return;
-		case Execution_metamodelPackage.USER__EXECUTOR:
-			setExecutor((Executor) newValue);
-			return;
-		case Execution_metamodelPackage.USER__CREATOR:
-			setCreator((Creator) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -652,12 +532,6 @@ public abstract class UserImpl extends MinimalEObjectImpl.Container implements U
 		case Execution_metamodelPackage.USER__STATE:
 			setState(STATE_EDEFAULT);
 			return;
-		case Execution_metamodelPackage.USER__EXECUTOR:
-			setExecutor((Executor) null);
-			return;
-		case Execution_metamodelPackage.USER__CREATOR:
-			setCreator((Creator) null);
-			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -688,10 +562,6 @@ public abstract class UserImpl extends MinimalEObjectImpl.Container implements U
 			return numberCouncil != NUMBER_COUNCIL_EDEFAULT;
 		case Execution_metamodelPackage.USER__STATE:
 			return STATE_EDEFAULT == null ? state != null : !STATE_EDEFAULT.equals(state);
-		case Execution_metamodelPackage.USER__EXECUTOR:
-			return executor != null;
-		case Execution_metamodelPackage.USER__CREATOR:
-			return creator != null;
 		}
 		return super.eIsSet(featureID);
 	}

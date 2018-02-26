@@ -21,8 +21,8 @@ import java.util.Date;
  *   <li>{@link MetamodelExecution.ShortExecution#getIdResponsible <em>Id Responsible</em>}</li>
  *   <li>{@link MetamodelExecution.ShortExecution#getIdLastProfessional <em>Id Last Professional</em>}</li>
  *   <li>{@link MetamodelExecution.ShortExecution#getResponsible <em>Responsible</em>}</li>
- *   <li>{@link MetamodelExecution.ShortExecution#getLastprofessional <em>Lastprofessional</em>}</li>
  *   <li>{@link MetamodelExecution.ShortExecution#getExecutedstep <em>Executedstep</em>}</li>
+ *   <li>{@link MetamodelExecution.ShortExecution#getLastprofessional <em>Lastprofessional</em>}</li>
  * </ul>
  *
  * @see MetamodelExecution.Execution_metamodelPackage#getShortExecution()
@@ -240,32 +240,6 @@ public interface ShortExecution extends Execution {
 	void setResponsible(Responsible value);
 
 	/**
-	 * Returns the value of the '<em><b>Lastprofessional</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Lastprofessional</em>' containment reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Lastprofessional</em>' containment reference.
-	 * @see #setLastprofessional(LastProfessional)
-	 * @see MetamodelExecution.Execution_metamodelPackage#getShortExecution_Lastprofessional()
-	 * @model containment="true" required="true"
-	 * @generated
-	 */
-	LastProfessional getLastprofessional();
-
-	/**
-	 * Sets the value of the '{@link MetamodelExecution.ShortExecution#getLastprofessional <em>Lastprofessional</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Lastprofessional</em>' containment reference.
-	 * @see #getLastprofessional()
-	 * @generated
-	 */
-	void setLastprofessional(LastProfessional value);
-
-	/**
 	 * Returns the value of the '<em><b>Executedstep</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
@@ -290,5 +264,31 @@ public interface ShortExecution extends Execution {
 	 * @generated
 	 */
 	void setExecutedstep(ExecutedStep value);
+
+	/**
+	 * Returns the value of the '<em><b>Lastprofessional</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Lastprofessional</em>' containment reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Lastprofessional</em>' containment reference.
+	 * @see #setLastprofessional(LastProfessional)
+	 * @see MetamodelExecution.Execution_metamodelPackage#getShortExecution_Lastprofessional()
+	 * @model containment="true" required="true"
+	 * @generated
+	 */
+	LastProfessional getLastprofessional();
+
+	/**
+	 * Sets the value of the '{@link MetamodelExecution.ShortExecution#getLastprofessional <em>Lastprofessional</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Lastprofessional</em>' containment reference.
+	 * @see #getLastprofessional()
+	 * @generated
+	 */
+	void setLastprofessional(LastProfessional value);
 
 } // ShortExecution

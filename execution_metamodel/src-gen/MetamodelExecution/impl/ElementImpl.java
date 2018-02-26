@@ -1,26 +1,16 @@
 /**
  */
-package protocolosv2.impl;
+package MetamodelExecution.impl;
 
-import java.util.Collection;
+import MetamodelExecution.Element;
+import MetamodelExecution.Execution_metamodelPackage;
 
 import org.eclipse.emf.common.notify.Notification;
-import org.eclipse.emf.common.notify.NotificationChain;
-
-import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
-import org.eclipse.emf.ecore.util.EObjectWithInverseResolvingEList;
-import org.eclipse.emf.ecore.util.InternalEList;
-
-import protocolosv2.Element;
-import protocolosv2.Protocolosv2Package;
-import protocolosv2.Sequence;
 
 /**
  * <!-- begin-user-doc -->
@@ -30,22 +20,20 @@ import protocolosv2.Sequence;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link protocolosv2.impl.ElementImpl#getId <em>Id</em>}</li>
- *   <li>{@link protocolosv2.impl.ElementImpl#getType <em>Type</em>}</li>
- *   <li>{@link protocolosv2.impl.ElementImpl#getType_verbose <em>Type verbose</em>}</li>
- *   <li>{@link protocolosv2.impl.ElementImpl#getUrl <em>Url</em>}</li>
- *   <li>{@link protocolosv2.impl.ElementImpl#getName <em>Name</em>}</li>
- *   <li>{@link protocolosv2.impl.ElementImpl#getDescription <em>Description</em>}</li>
- *   <li>{@link protocolosv2.impl.ElementImpl#isIsInitial <em>Is Initial</em>}</li>
- *   <li>{@link protocolosv2.impl.ElementImpl#isIsTerminal <em>Is Terminal</em>}</li>
- *   <li>{@link protocolosv2.impl.ElementImpl#getInputSequences <em>Input Sequences</em>}</li>
- *   <li>{@link protocolosv2.impl.ElementImpl#getOutputSequences <em>Output Sequences</em>}</li>
- *   <li>{@link protocolosv2.impl.ElementImpl#isMandatory <em>Mandatory</em>}</li>
+ *   <li>{@link MetamodelExecution.impl.ElementImpl#getId <em>Id</em>}</li>
+ *   <li>{@link MetamodelExecution.impl.ElementImpl#getType <em>Type</em>}</li>
+ *   <li>{@link MetamodelExecution.impl.ElementImpl#getTypeVerbose <em>Type Verbose</em>}</li>
+ *   <li>{@link MetamodelExecution.impl.ElementImpl#getUrl <em>Url</em>}</li>
+ *   <li>{@link MetamodelExecution.impl.ElementImpl#getName <em>Name</em>}</li>
+ *   <li>{@link MetamodelExecution.impl.ElementImpl#getDescription <em>Description</em>}</li>
+ *   <li>{@link MetamodelExecution.impl.ElementImpl#isIsInitial <em>Is Initial</em>}</li>
+ *   <li>{@link MetamodelExecution.impl.ElementImpl#isIsTerminal <em>Is Terminal</em>}</li>
+ *   <li>{@link MetamodelExecution.impl.ElementImpl#isMandatory <em>Mandatory</em>}</li>
  * </ul>
  *
  * @generated
  */
-public abstract class ElementImpl extends MinimalEObjectImpl.Container implements Element {
+public class ElementImpl extends MinimalEObjectImpl.Container implements Element {
 	/**
 	 * The default value of the '{@link #getId() <em>Id</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -87,24 +75,24 @@ public abstract class ElementImpl extends MinimalEObjectImpl.Container implement
 	protected String type = TYPE_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getType_verbose() <em>Type verbose</em>}' attribute.
+	 * The default value of the '{@link #getTypeVerbose() <em>Type Verbose</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getType_verbose()
+	 * @see #getTypeVerbose()
 	 * @generated
 	 * @ordered
 	 */
 	protected static final String TYPE_VERBOSE_EDEFAULT = null;
 
 	/**
-	 * The cached value of the '{@link #getType_verbose() <em>Type verbose</em>}' attribute.
+	 * The cached value of the '{@link #getTypeVerbose() <em>Type Verbose</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getType_verbose()
+	 * @see #getTypeVerbose()
 	 * @generated
 	 * @ordered
 	 */
-	protected String type_verbose = TYPE_VERBOSE_EDEFAULT;
+	protected String typeVerbose = TYPE_VERBOSE_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getUrl() <em>Url</em>}' attribute.
@@ -207,26 +195,6 @@ public abstract class ElementImpl extends MinimalEObjectImpl.Container implement
 	protected boolean isTerminal = IS_TERMINAL_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getInputSequences() <em>Input Sequences</em>}' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getInputSequences()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<Sequence> inputSequences;
-
-	/**
-	 * The cached value of the '{@link #getOutputSequences() <em>Output Sequences</em>}' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getOutputSequences()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<Sequence> outputSequences;
-
-	/**
 	 * The default value of the '{@link #isMandatory() <em>Mandatory</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -262,7 +230,7 @@ public abstract class ElementImpl extends MinimalEObjectImpl.Container implement
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Protocolosv2Package.Literals.ELEMENT;
+		return Execution_metamodelPackage.Literals.ELEMENT;
 	}
 
 	/**
@@ -283,7 +251,7 @@ public abstract class ElementImpl extends MinimalEObjectImpl.Container implement
 		int oldId = id;
 		id = newId;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Protocolosv2Package.ELEMENT__ID, oldId, id));
+			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.ELEMENT__ID, oldId, id));
 	}
 
 	/**
@@ -304,7 +272,8 @@ public abstract class ElementImpl extends MinimalEObjectImpl.Container implement
 		String oldType = type;
 		type = newType;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Protocolosv2Package.ELEMENT__TYPE, oldType, type));
+			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.ELEMENT__TYPE, oldType,
+					type));
 	}
 
 	/**
@@ -312,8 +281,8 @@ public abstract class ElementImpl extends MinimalEObjectImpl.Container implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getType_verbose() {
-		return type_verbose;
+	public String getTypeVerbose() {
+		return typeVerbose;
 	}
 
 	/**
@@ -321,12 +290,12 @@ public abstract class ElementImpl extends MinimalEObjectImpl.Container implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setType_verbose(String newType_verbose) {
-		String oldType_verbose = type_verbose;
-		type_verbose = newType_verbose;
+	public void setTypeVerbose(String newTypeVerbose) {
+		String oldTypeVerbose = typeVerbose;
+		typeVerbose = newTypeVerbose;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Protocolosv2Package.ELEMENT__TYPE_VERBOSE,
-					oldType_verbose, type_verbose));
+			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.ELEMENT__TYPE_VERBOSE,
+					oldTypeVerbose, typeVerbose));
 	}
 
 	/**
@@ -347,7 +316,8 @@ public abstract class ElementImpl extends MinimalEObjectImpl.Container implement
 		String oldUrl = url;
 		url = newUrl;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Protocolosv2Package.ELEMENT__URL, oldUrl, url));
+			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.ELEMENT__URL, oldUrl,
+					url));
 	}
 
 	/**
@@ -368,7 +338,8 @@ public abstract class ElementImpl extends MinimalEObjectImpl.Container implement
 		String oldName = name;
 		name = newName;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Protocolosv2Package.ELEMENT__NAME, oldName, name));
+			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.ELEMENT__NAME, oldName,
+					name));
 	}
 
 	/**
@@ -389,7 +360,7 @@ public abstract class ElementImpl extends MinimalEObjectImpl.Container implement
 		String oldDescription = description;
 		description = newDescription;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Protocolosv2Package.ELEMENT__DESCRIPTION,
+			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.ELEMENT__DESCRIPTION,
 					oldDescription, description));
 	}
 
@@ -411,8 +382,8 @@ public abstract class ElementImpl extends MinimalEObjectImpl.Container implement
 		boolean oldIsInitial = isInitial;
 		isInitial = newIsInitial;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Protocolosv2Package.ELEMENT__IS_INITIAL, oldIsInitial,
-					isInitial));
+			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.ELEMENT__IS_INITIAL,
+					oldIsInitial, isInitial));
 	}
 
 	/**
@@ -433,34 +404,8 @@ public abstract class ElementImpl extends MinimalEObjectImpl.Container implement
 		boolean oldIsTerminal = isTerminal;
 		isTerminal = newIsTerminal;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Protocolosv2Package.ELEMENT__IS_TERMINAL,
+			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.ELEMENT__IS_TERMINAL,
 					oldIsTerminal, isTerminal));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EList<Sequence> getInputSequences() {
-		if (inputSequences == null) {
-			inputSequences = new EObjectWithInverseResolvingEList<Sequence>(Sequence.class, this,
-					Protocolosv2Package.ELEMENT__INPUT_SEQUENCES, Protocolosv2Package.SEQUENCE__INPUT_STEP);
-		}
-		return inputSequences;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EList<Sequence> getOutputSequences() {
-		if (outputSequences == null) {
-			outputSequences = new EObjectWithInverseResolvingEList<Sequence>(Sequence.class, this,
-					Protocolosv2Package.ELEMENT__OUTPUT_SEQUENCES, Protocolosv2Package.SEQUENCE__OUTPUT_STEP);
-		}
-		return outputSequences;
 	}
 
 	/**
@@ -481,41 +426,8 @@ public abstract class ElementImpl extends MinimalEObjectImpl.Container implement
 		boolean oldMandatory = mandatory;
 		mandatory = newMandatory;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Protocolosv2Package.ELEMENT__MANDATORY, oldMandatory,
-					mandatory));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@SuppressWarnings("unchecked")
-	@Override
-	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
-		case Protocolosv2Package.ELEMENT__INPUT_SEQUENCES:
-			return ((InternalEList<InternalEObject>) (InternalEList<?>) getInputSequences()).basicAdd(otherEnd, msgs);
-		case Protocolosv2Package.ELEMENT__OUTPUT_SEQUENCES:
-			return ((InternalEList<InternalEObject>) (InternalEList<?>) getOutputSequences()).basicAdd(otherEnd, msgs);
-		}
-		return super.eInverseAdd(otherEnd, featureID, msgs);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
-		case Protocolosv2Package.ELEMENT__INPUT_SEQUENCES:
-			return ((InternalEList<?>) getInputSequences()).basicRemove(otherEnd, msgs);
-		case Protocolosv2Package.ELEMENT__OUTPUT_SEQUENCES:
-			return ((InternalEList<?>) getOutputSequences()).basicRemove(otherEnd, msgs);
-		}
-		return super.eInverseRemove(otherEnd, featureID, msgs);
+			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.ELEMENT__MANDATORY,
+					oldMandatory, mandatory));
 	}
 
 	/**
@@ -526,27 +438,23 @@ public abstract class ElementImpl extends MinimalEObjectImpl.Container implement
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case Protocolosv2Package.ELEMENT__ID:
+		case Execution_metamodelPackage.ELEMENT__ID:
 			return getId();
-		case Protocolosv2Package.ELEMENT__TYPE:
+		case Execution_metamodelPackage.ELEMENT__TYPE:
 			return getType();
-		case Protocolosv2Package.ELEMENT__TYPE_VERBOSE:
-			return getType_verbose();
-		case Protocolosv2Package.ELEMENT__URL:
+		case Execution_metamodelPackage.ELEMENT__TYPE_VERBOSE:
+			return getTypeVerbose();
+		case Execution_metamodelPackage.ELEMENT__URL:
 			return getUrl();
-		case Protocolosv2Package.ELEMENT__NAME:
+		case Execution_metamodelPackage.ELEMENT__NAME:
 			return getName();
-		case Protocolosv2Package.ELEMENT__DESCRIPTION:
+		case Execution_metamodelPackage.ELEMENT__DESCRIPTION:
 			return getDescription();
-		case Protocolosv2Package.ELEMENT__IS_INITIAL:
+		case Execution_metamodelPackage.ELEMENT__IS_INITIAL:
 			return isIsInitial();
-		case Protocolosv2Package.ELEMENT__IS_TERMINAL:
+		case Execution_metamodelPackage.ELEMENT__IS_TERMINAL:
 			return isIsTerminal();
-		case Protocolosv2Package.ELEMENT__INPUT_SEQUENCES:
-			return getInputSequences();
-		case Protocolosv2Package.ELEMENT__OUTPUT_SEQUENCES:
-			return getOutputSequences();
-		case Protocolosv2Package.ELEMENT__MANDATORY:
+		case Execution_metamodelPackage.ELEMENT__MANDATORY:
 			return isMandatory();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -557,43 +465,34 @@ public abstract class ElementImpl extends MinimalEObjectImpl.Container implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case Protocolosv2Package.ELEMENT__ID:
+		case Execution_metamodelPackage.ELEMENT__ID:
 			setId((Integer) newValue);
 			return;
-		case Protocolosv2Package.ELEMENT__TYPE:
+		case Execution_metamodelPackage.ELEMENT__TYPE:
 			setType((String) newValue);
 			return;
-		case Protocolosv2Package.ELEMENT__TYPE_VERBOSE:
-			setType_verbose((String) newValue);
+		case Execution_metamodelPackage.ELEMENT__TYPE_VERBOSE:
+			setTypeVerbose((String) newValue);
 			return;
-		case Protocolosv2Package.ELEMENT__URL:
+		case Execution_metamodelPackage.ELEMENT__URL:
 			setUrl((String) newValue);
 			return;
-		case Protocolosv2Package.ELEMENT__NAME:
+		case Execution_metamodelPackage.ELEMENT__NAME:
 			setName((String) newValue);
 			return;
-		case Protocolosv2Package.ELEMENT__DESCRIPTION:
+		case Execution_metamodelPackage.ELEMENT__DESCRIPTION:
 			setDescription((String) newValue);
 			return;
-		case Protocolosv2Package.ELEMENT__IS_INITIAL:
+		case Execution_metamodelPackage.ELEMENT__IS_INITIAL:
 			setIsInitial((Boolean) newValue);
 			return;
-		case Protocolosv2Package.ELEMENT__IS_TERMINAL:
+		case Execution_metamodelPackage.ELEMENT__IS_TERMINAL:
 			setIsTerminal((Boolean) newValue);
 			return;
-		case Protocolosv2Package.ELEMENT__INPUT_SEQUENCES:
-			getInputSequences().clear();
-			getInputSequences().addAll((Collection<? extends Sequence>) newValue);
-			return;
-		case Protocolosv2Package.ELEMENT__OUTPUT_SEQUENCES:
-			getOutputSequences().clear();
-			getOutputSequences().addAll((Collection<? extends Sequence>) newValue);
-			return;
-		case Protocolosv2Package.ELEMENT__MANDATORY:
+		case Execution_metamodelPackage.ELEMENT__MANDATORY:
 			setMandatory((Boolean) newValue);
 			return;
 		}
@@ -608,37 +507,31 @@ public abstract class ElementImpl extends MinimalEObjectImpl.Container implement
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case Protocolosv2Package.ELEMENT__ID:
+		case Execution_metamodelPackage.ELEMENT__ID:
 			setId(ID_EDEFAULT);
 			return;
-		case Protocolosv2Package.ELEMENT__TYPE:
+		case Execution_metamodelPackage.ELEMENT__TYPE:
 			setType(TYPE_EDEFAULT);
 			return;
-		case Protocolosv2Package.ELEMENT__TYPE_VERBOSE:
-			setType_verbose(TYPE_VERBOSE_EDEFAULT);
+		case Execution_metamodelPackage.ELEMENT__TYPE_VERBOSE:
+			setTypeVerbose(TYPE_VERBOSE_EDEFAULT);
 			return;
-		case Protocolosv2Package.ELEMENT__URL:
+		case Execution_metamodelPackage.ELEMENT__URL:
 			setUrl(URL_EDEFAULT);
 			return;
-		case Protocolosv2Package.ELEMENT__NAME:
+		case Execution_metamodelPackage.ELEMENT__NAME:
 			setName(NAME_EDEFAULT);
 			return;
-		case Protocolosv2Package.ELEMENT__DESCRIPTION:
+		case Execution_metamodelPackage.ELEMENT__DESCRIPTION:
 			setDescription(DESCRIPTION_EDEFAULT);
 			return;
-		case Protocolosv2Package.ELEMENT__IS_INITIAL:
+		case Execution_metamodelPackage.ELEMENT__IS_INITIAL:
 			setIsInitial(IS_INITIAL_EDEFAULT);
 			return;
-		case Protocolosv2Package.ELEMENT__IS_TERMINAL:
+		case Execution_metamodelPackage.ELEMENT__IS_TERMINAL:
 			setIsTerminal(IS_TERMINAL_EDEFAULT);
 			return;
-		case Protocolosv2Package.ELEMENT__INPUT_SEQUENCES:
-			getInputSequences().clear();
-			return;
-		case Protocolosv2Package.ELEMENT__OUTPUT_SEQUENCES:
-			getOutputSequences().clear();
-			return;
-		case Protocolosv2Package.ELEMENT__MANDATORY:
+		case Execution_metamodelPackage.ELEMENT__MANDATORY:
 			setMandatory(MANDATORY_EDEFAULT);
 			return;
 		}
@@ -653,27 +546,23 @@ public abstract class ElementImpl extends MinimalEObjectImpl.Container implement
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case Protocolosv2Package.ELEMENT__ID:
+		case Execution_metamodelPackage.ELEMENT__ID:
 			return id != ID_EDEFAULT;
-		case Protocolosv2Package.ELEMENT__TYPE:
+		case Execution_metamodelPackage.ELEMENT__TYPE:
 			return TYPE_EDEFAULT == null ? type != null : !TYPE_EDEFAULT.equals(type);
-		case Protocolosv2Package.ELEMENT__TYPE_VERBOSE:
-			return TYPE_VERBOSE_EDEFAULT == null ? type_verbose != null : !TYPE_VERBOSE_EDEFAULT.equals(type_verbose);
-		case Protocolosv2Package.ELEMENT__URL:
+		case Execution_metamodelPackage.ELEMENT__TYPE_VERBOSE:
+			return TYPE_VERBOSE_EDEFAULT == null ? typeVerbose != null : !TYPE_VERBOSE_EDEFAULT.equals(typeVerbose);
+		case Execution_metamodelPackage.ELEMENT__URL:
 			return URL_EDEFAULT == null ? url != null : !URL_EDEFAULT.equals(url);
-		case Protocolosv2Package.ELEMENT__NAME:
+		case Execution_metamodelPackage.ELEMENT__NAME:
 			return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-		case Protocolosv2Package.ELEMENT__DESCRIPTION:
+		case Execution_metamodelPackage.ELEMENT__DESCRIPTION:
 			return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
-		case Protocolosv2Package.ELEMENT__IS_INITIAL:
+		case Execution_metamodelPackage.ELEMENT__IS_INITIAL:
 			return isInitial != IS_INITIAL_EDEFAULT;
-		case Protocolosv2Package.ELEMENT__IS_TERMINAL:
+		case Execution_metamodelPackage.ELEMENT__IS_TERMINAL:
 			return isTerminal != IS_TERMINAL_EDEFAULT;
-		case Protocolosv2Package.ELEMENT__INPUT_SEQUENCES:
-			return inputSequences != null && !inputSequences.isEmpty();
-		case Protocolosv2Package.ELEMENT__OUTPUT_SEQUENCES:
-			return outputSequences != null && !outputSequences.isEmpty();
-		case Protocolosv2Package.ELEMENT__MANDATORY:
+		case Execution_metamodelPackage.ELEMENT__MANDATORY:
 			return mandatory != MANDATORY_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
@@ -694,8 +583,8 @@ public abstract class ElementImpl extends MinimalEObjectImpl.Container implement
 		result.append(id);
 		result.append(", type: ");
 		result.append(type);
-		result.append(", type_verbose: ");
-		result.append(type_verbose);
+		result.append(", typeVerbose: ");
+		result.append(typeVerbose);
 		result.append(", url: ");
 		result.append(url);
 		result.append(", name: ");

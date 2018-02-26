@@ -2,8 +2,6 @@
  */
 package MetamodelExecution;
 
-import org.eclipse.emf.ecore.EObject;
-
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>User</b></em>'.
@@ -22,15 +20,13 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link MetamodelExecution.User#getLogin <em>Login</em>}</li>
  *   <li>{@link MetamodelExecution.User#getNumberCouncil <em>Number Council</em>}</li>
  *   <li>{@link MetamodelExecution.User#getState <em>State</em>}</li>
- *   <li>{@link MetamodelExecution.User#getExecutor <em>Executor</em>}</li>
- *   <li>{@link MetamodelExecution.User#getCreator <em>Creator</em>}</li>
  * </ul>
  *
  * @see MetamodelExecution.Execution_metamodelPackage#getUser()
  * @model abstract="true"
  * @generated
  */
-public interface User extends EObject {
+public interface User extends Creator, Executor, LastProfessional, Responsible {
 	/**
 	 * Returns the value of the '<em><b>Id</b></em>' attribute.
 	 * <!-- begin-user-doc -->
@@ -264,57 +260,5 @@ public interface User extends EObject {
 	 * @generated
 	 */
 	void setState(String value);
-
-	/**
-	 * Returns the value of the '<em><b>Executor</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Executor</em>' reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Executor</em>' reference.
-	 * @see #setExecutor(Executor)
-	 * @see MetamodelExecution.Execution_metamodelPackage#getUser_Executor()
-	 * @model required="true"
-	 * @generated
-	 */
-	Executor getExecutor();
-
-	/**
-	 * Sets the value of the '{@link MetamodelExecution.User#getExecutor <em>Executor</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Executor</em>' reference.
-	 * @see #getExecutor()
-	 * @generated
-	 */
-	void setExecutor(Executor value);
-
-	/**
-	 * Returns the value of the '<em><b>Creator</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Creator</em>' reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Creator</em>' reference.
-	 * @see #setCreator(Creator)
-	 * @see MetamodelExecution.Execution_metamodelPackage#getUser_Creator()
-	 * @model required="true"
-	 * @generated
-	 */
-	Creator getCreator();
-
-	/**
-	 * Sets the value of the '{@link MetamodelExecution.User#getCreator <em>Creator</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Creator</em>' reference.
-	 * @see #getCreator()
-	 * @generated
-	 */
-	void setCreator(Creator value);
 
 } // User

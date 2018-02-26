@@ -59,8 +59,6 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute execution_metamodel.ecore#//Next/urlAbsolute"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute execution_metamodel.ecore#//Next/url"/>
     </genClasses>
-    <genClasses ecoreClass="execution_metamodel.ecore#//Creator"/>
-    <genClasses ecoreClass="execution_metamodel.ecore#//Executor"/>
     <genClasses ecoreClass="execution_metamodel.ecore#//Question">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute execution_metamodel.ecore#//Question/id"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute execution_metamodel.ecore#//Question/url"/>
@@ -124,8 +122,8 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute execution_metamodel.ecore#//ShortExecution/idResponsible"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute execution_metamodel.ecore#//ShortExecution/idLastProfessional"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference execution_metamodel.ecore#//ShortExecution/responsible"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference execution_metamodel.ecore#//ShortExecution/lastprofessional"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference execution_metamodel.ecore#//ShortExecution/executedstep"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference execution_metamodel.ecore#//ShortExecution/lastprofessional"/>
     </genClasses>
     <genClasses ecoreClass="execution_metamodel.ecore#//Justification">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute execution_metamodel.ecore#//Justification/id"/>
@@ -144,18 +142,13 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute execution_metamodel.ecore#//Pathway/version"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute execution_metamodel.ecore#//Pathway/completed"/>
     </genClasses>
-    <genClasses ecoreClass="execution_metamodel.ecore#//Responsible">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference execution_metamodel.ecore#//Responsible/data"/>
-    </genClasses>
+    <genClasses ecoreClass="execution_metamodel.ecore#//Responsible"/>
     <genClasses ecoreClass="execution_metamodel.ecore#//ExecutedStep">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute execution_metamodel.ecore#//ExecutedStep/createdById"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute execution_metamodel.ecore#//ExecutedStep/createdBy"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute execution_metamodel.ecore#//ExecutedStep/executedById"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute execution_metamodel.ecore#//ExecutedStep/executedBy"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute execution_metamodel.ecore#//ExecutedStep/step"/>
-    </genClasses>
-    <genClasses ecoreClass="execution_metamodel.ecore#//LastProfessional">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference execution_metamodel.ecore#//LastProfessional/data"/>
     </genClasses>
     <genClasses ecoreClass="execution_metamodel.ecore#//User">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute execution_metamodel.ecore#//User/id"/>
@@ -167,8 +160,6 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute execution_metamodel.ecore#//User/login"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute execution_metamodel.ecore#//User/numberCouncil"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute execution_metamodel.ecore#//User/state"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference execution_metamodel.ecore#//User/executor"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference execution_metamodel.ecore#//User/creator"/>
     </genClasses>
     <genClasses image="false" ecoreClass="execution_metamodel.ecore#//Value"/>
     <genClasses ecoreClass="execution_metamodel.ecore#//Answer">
@@ -193,152 +184,28 @@
     </genClasses>
     <genClasses ecoreClass="execution_metamodel.ecore#//CompleteStep">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference execution_metamodel.ecore#//CompleteStep/step"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference execution_metamodel.ecore#//CompleteStep/executor"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference execution_metamodel.ecore#//CompleteStep/creator"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference execution_metamodel.ecore#//CompleteStep/executor"/>
     </genClasses>
-  </genPackages>
-  <genPackages prefix="Protocolosv2" ecorePackage="protocolosv2.ecore#/">
-    <genEnums typeSafeEnumCompatible="false" ecoreEnum="protocolosv2.ecore#//Operator">
-      <genEnumLiterals ecoreEnumLiteral="protocolosv2.ecore#//Operator/not"/>
-      <genEnumLiterals ecoreEnumLiteral="protocolosv2.ecore#//Operator/and"/>
-      <genEnumLiterals ecoreEnumLiteral="protocolosv2.ecore#//Operator/or"/>
-      <genEnumLiterals ecoreEnumLiteral="protocolosv2.ecore#//Operator/implies"/>
-      <genEnumLiterals ecoreEnumLiteral="protocolosv2.ecore#//Operator/equal"/>
-      <genEnumLiterals ecoreEnumLiteral="protocolosv2.ecore#//Operator/biggerThan"/>
-      <genEnumLiterals ecoreEnumLiteral="protocolosv2.ecore#//Operator/smallerThan"/>
-      <genEnumLiterals ecoreEnumLiteral="protocolosv2.ecore#//Operator/equalOrGreater"/>
-      <genEnumLiterals ecoreEnumLiteral="protocolosv2.ecore#//Operator/equalOrSmaller"/>
-      <genEnumLiterals ecoreEnumLiteral="protocolosv2.ecore#//Operator/xor"/>
-      <genEnumLiterals ecoreEnumLiteral="protocolosv2.ecore#//Operator/sum"/>
-      <genEnumLiterals ecoreEnumLiteral="protocolosv2.ecore#//Operator/minus"/>
-      <genEnumLiterals ecoreEnumLiteral="protocolosv2.ecore#//Operator/multiplication"/>
-      <genEnumLiterals ecoreEnumLiteral="protocolosv2.ecore#//Operator/division"/>
-      <genEnumLiterals ecoreEnumLiteral="protocolosv2.ecore#//Operator/affirmation"/>
-    </genEnums>
-    <genEnums typeSafeEnumCompatible="false" ecoreEnum="protocolosv2.ecore#//NewEnum2"/>
-    <genClasses image="false" ecoreClass="protocolosv2.ecore#//Variable"/>
-    <genClasses ecoreClass="protocolosv2.ecore#//Numeric">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute protocolosv2.ecore#//Numeric/id"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute protocolosv2.ecore#//Numeric/weight"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute protocolosv2.ecore#//Numeric/value"/>
+    <genClasses ecoreClass="execution_metamodel.ecore#//Element">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute execution_metamodel.ecore#//Element/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute execution_metamodel.ecore#//Element/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute execution_metamodel.ecore#//Element/typeVerbose"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute execution_metamodel.ecore#//Element/url"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute execution_metamodel.ecore#//Element/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute execution_metamodel.ecore#//Element/description"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute execution_metamodel.ecore#//Element/isInitial"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute execution_metamodel.ecore#//Element/isTerminal"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute execution_metamodel.ecore#//Element/mandatory"/>
     </genClasses>
-    <genClasses ecoreClass="protocolosv2.ecore#//YesOrNo">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute protocolosv2.ecore#//YesOrNo/id"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute protocolosv2.ecore#//YesOrNo/weight"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute protocolosv2.ecore#//YesOrNo/value"/>
+    <genClasses ecoreClass="execution_metamodel.ecore#//Modeling">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference execution_metamodel.ecore#//Modeling/element"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute execution_metamodel.ecore#//Modeling/completed"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute execution_metamodel.ecore#//Modeling/version"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute execution_metamodel.ecore#//Modeling/idRepository"/>
     </genClasses>
-    <genClasses ecoreClass="protocolosv2.ecore#//AuxiliaryConduct">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference protocolosv2.ecore#//AuxiliaryConduct/questions"/>
-    </genClasses>
-    <genClasses ecoreClass="protocolosv2.ecore#//Question">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute protocolosv2.ecore#//Question/text"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute protocolosv2.ecore#//Question/url"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute protocolosv2.ecore#//Question/id"/>
-    </genClasses>
-    <genClasses ecoreClass="protocolosv2.ecore#//Protocol">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute protocolosv2.ecore#//Protocol/id"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute protocolosv2.ecore#//Protocol/url"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute protocolosv2.ecore#//Protocol/name"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute protocolosv2.ecore#//Protocol/code"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference protocolosv2.ecore#//Protocol/sequence"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference protocolosv2.ecore#//Protocol/category"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference protocolosv2.ecore#//Protocol/operation"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference protocolosv2.ecore#//Protocol/variable"/>
-    </genClasses>
-    <genClasses image="false" ecoreClass="protocolosv2.ecore#//Element">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute protocolosv2.ecore#//Element/id"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute protocolosv2.ecore#//Element/type"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute protocolosv2.ecore#//Element/type_verbose"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute protocolosv2.ecore#//Element/url"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute protocolosv2.ecore#//Element/name"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute protocolosv2.ecore#//Element/description"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute protocolosv2.ecore#//Element/isInitial"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute protocolosv2.ecore#//Element/isTerminal"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference protocolosv2.ecore#//Element/inputSequences"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference protocolosv2.ecore#//Element/outputSequences"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute protocolosv2.ecore#//Element/mandatory"/>
-    </genClasses>
-    <genClasses ecoreClass="protocolosv2.ecore#//Prescription">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference protocolosv2.ecore#//Prescription/medication"/>
-    </genClasses>
-    <genClasses ecoreClass="protocolosv2.ecore#//Discharge"/>
-    <genClasses ecoreClass="protocolosv2.ecore#//Referral">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference protocolosv2.ecore#//Referral/protocol"/>
-    </genClasses>
-    <genClasses ecoreClass="protocolosv2.ecore#//Treatment">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference protocolosv2.ecore#//Treatment/examination"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference protocolosv2.ecore#//Treatment/medication"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference protocolosv2.ecore#//Treatment/admission"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference protocolosv2.ecore#//Treatment/procedure"/>
-    </genClasses>
-    <genClasses ecoreClass="protocolosv2.ecore#//Information">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute protocolosv2.ecore#//Information/text"/>
-    </genClasses>
-    <genClasses ecoreClass="protocolosv2.ecore#//Sequence">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference protocolosv2.ecore#//Sequence/inputStep"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference protocolosv2.ecore#//Sequence/outputStep"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute protocolosv2.ecore#//Sequence/id"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute protocolosv2.ecore#//Sequence/type"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute protocolosv2.ecore#//Sequence/type_verbose"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute protocolosv2.ecore#//Sequence/url"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute protocolosv2.ecore#//Sequence/name"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute protocolosv2.ecore#//Sequence/description"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference protocolosv2.ecore#//Sequence/operation"/>
-    </genClasses>
-    <genClasses ecoreClass="protocolosv2.ecore#//Operation">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute protocolosv2.ecore#//Operation/Operator"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference protocolosv2.ecore#//Operation/operand"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute protocolosv2.ecore#//Operation/id"/>
-    </genClasses>
-    <genClasses ecoreClass="protocolosv2.ecore#//Category">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute protocolosv2.ecore#//Category/name"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference protocolosv2.ecore#//Category/question"/>
-    </genClasses>
-    <genClasses ecoreClass="protocolosv2.ecore#//Examination">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute protocolosv2.ecore#//Examination/url"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute protocolosv2.ecore#//Examination/exam_id"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute protocolosv2.ecore#//Examination/limb_side"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute protocolosv2.ecore#//Examination/quantity"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute protocolosv2.ecore#//Examination/reason"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute protocolosv2.ecore#//Examination/clinical_indication"/>
-    </genClasses>
-    <genClasses ecoreClass="protocolosv2.ecore#//Medication">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute protocolosv2.ecore#//Medication/url"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute protocolosv2.ecore#//Medication/code"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute protocolosv2.ecore#//Medication/med_id"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute protocolosv2.ecore#//Medication/id"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute protocolosv2.ecore#//Medication/name"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute protocolosv2.ecore#//Medication/description"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute protocolosv2.ecore#//Medication/brand"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute protocolosv2.ecore#//Medication/standardized"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute protocolosv2.ecore#//Medication/controlled"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute protocolosv2.ecore#//Medication/consigned"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute protocolosv2.ecore#//Medication/critical"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute protocolosv2.ecore#//Medication/invasive"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute protocolosv2.ecore#//Medication/outpatient"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute protocolosv2.ecore#//Medication/unit"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute protocolosv2.ecore#//Medication/access"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute protocolosv2.ecore#//Medication/daily_dosage"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute protocolosv2.ecore#//Medication/cycles"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute protocolosv2.ecore#//Medication/treatement_time"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute protocolosv2.ecore#//Medication/frequency"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute protocolosv2.ecore#//Medication/standard"/>
-    </genClasses>
-    <genClasses ecoreClass="protocolosv2.ecore#//Procedure">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute protocolosv2.ecore#//Procedure/url"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute protocolosv2.ecore#//Procedure/procedure"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute protocolosv2.ecore#//Procedure/frequency"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute protocolosv2.ecore#//Procedure/quantity"/>
-    </genClasses>
-    <genClasses ecoreClass="protocolosv2.ecore#//Admission">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute protocolosv2.ecore#//Admission/url"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute protocolosv2.ecore#//Admission/admission"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute protocolosv2.ecore#//Admission/reason"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute protocolosv2.ecore#//Admission/clinical_indication"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute protocolosv2.ecore#//Admission/quantity"/>
-    </genClasses>
-    <genClasses ecoreClass="protocolosv2.ecore#//Operand">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute protocolosv2.ecore#//Operand/name"/>
-    </genClasses>
+    <genClasses ecoreClass="execution_metamodel.ecore#//Creator"/>
+    <genClasses ecoreClass="execution_metamodel.ecore#//Executor"/>
+    <genClasses ecoreClass="execution_metamodel.ecore#//LastProfessional"/>
   </genPackages>
 </genmodel:GenModel>

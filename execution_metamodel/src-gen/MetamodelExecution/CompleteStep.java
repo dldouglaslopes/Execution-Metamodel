@@ -2,10 +2,6 @@
  */
 package MetamodelExecution;
 
-import org.eclipse.emf.common.util.EList;
-
-import protocolosv2.Element;
-
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Complete Step</b></em>'.
@@ -16,8 +12,8 @@ import protocolosv2.Element;
  * </p>
  * <ul>
  *   <li>{@link MetamodelExecution.CompleteStep#getStep <em>Step</em>}</li>
- *   <li>{@link MetamodelExecution.CompleteStep#getExecutor <em>Executor</em>}</li>
  *   <li>{@link MetamodelExecution.CompleteStep#getCreator <em>Creator</em>}</li>
+ *   <li>{@link MetamodelExecution.CompleteStep#getExecutor <em>Executor</em>}</li>
  * </ul>
  *
  * @see MetamodelExecution.Execution_metamodelPackage#getCompleteStep()
@@ -26,46 +22,30 @@ import protocolosv2.Element;
  */
 public interface CompleteStep extends Step {
 	/**
-	 * Returns the value of the '<em><b>Step</b></em>' containment reference list.
-	 * The list contents are of type {@link protocolosv2.Element}.
+	 * Returns the value of the '<em><b>Step</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Step</em>' containment reference list isn't clear,
+	 * If the meaning of the '<em>Step</em>' containment reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Step</em>' containment reference list.
+	 * @return the value of the '<em>Step</em>' containment reference.
+	 * @see #setStep(Element)
 	 * @see MetamodelExecution.Execution_metamodelPackage#getCompleteStep_Step()
-	 * @model containment="true"
-	 * @generated
-	 */
-	EList<Element> getStep();
-
-	/**
-	 * Returns the value of the '<em><b>Executor</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Executor</em>' containment reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Executor</em>' containment reference.
-	 * @see #setExecutor(Executor)
-	 * @see MetamodelExecution.Execution_metamodelPackage#getCompleteStep_Executor()
 	 * @model containment="true" required="true"
 	 * @generated
 	 */
-	Executor getExecutor();
+	Element getStep();
 
 	/**
-	 * Sets the value of the '{@link MetamodelExecution.CompleteStep#getExecutor <em>Executor</em>}' containment reference.
+	 * Sets the value of the '{@link MetamodelExecution.CompleteStep#getStep <em>Step</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Executor</em>' containment reference.
-	 * @see #getExecutor()
+	 * @param value the new value of the '<em>Step</em>' containment reference.
+	 * @see #getStep()
 	 * @generated
 	 */
-	void setExecutor(Executor value);
+	void setStep(Element value);
 
 	/**
 	 * Returns the value of the '<em><b>Creator</b></em>' containment reference.
@@ -92,5 +72,31 @@ public interface CompleteStep extends Step {
 	 * @generated
 	 */
 	void setCreator(Creator value);
+
+	/**
+	 * Returns the value of the '<em><b>Executor</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Executor</em>' containment reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Executor</em>' containment reference.
+	 * @see #setExecutor(Executor)
+	 * @see MetamodelExecution.Execution_metamodelPackage#getCompleteStep_Executor()
+	 * @model containment="true" required="true"
+	 * @generated
+	 */
+	Executor getExecutor();
+
+	/**
+	 * Sets the value of the '{@link MetamodelExecution.CompleteStep#getExecutor <em>Executor</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Executor</em>' containment reference.
+	 * @see #getExecutor()
+	 * @generated
+	 */
+	void setExecutor(Executor value);
 
 } // CompleteStep

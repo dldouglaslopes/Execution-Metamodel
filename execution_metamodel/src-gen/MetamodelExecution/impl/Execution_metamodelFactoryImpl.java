@@ -74,10 +74,6 @@ public class Execution_metamodelFactoryImpl extends EFactoryImpl implements Exec
 			return createPrevious();
 		case Execution_metamodelPackage.NEXT:
 			return createNext();
-		case Execution_metamodelPackage.CREATOR:
-			return createCreator();
-		case Execution_metamodelPackage.EXECUTOR:
-			return createExecutor();
 		case Execution_metamodelPackage.QUESTION:
 			return createQuestion();
 		case Execution_metamodelPackage.VARIABLE:
@@ -110,14 +106,22 @@ public class Execution_metamodelFactoryImpl extends EFactoryImpl implements Exec
 			return createResponsible();
 		case Execution_metamodelPackage.EXECUTED_STEP:
 			return createExecutedStep();
-		case Execution_metamodelPackage.LAST_PROFESSIONAL:
-			return createLastProfessional();
 		case Execution_metamodelPackage.ANSWER:
 			return createAnswer();
 		case Execution_metamodelPackage.NUMERIC:
 			return createNumeric();
 		case Execution_metamodelPackage.YES_OR_NO:
 			return createYesOrNo();
+		case Execution_metamodelPackage.ELEMENT:
+			return createElement();
+		case Execution_metamodelPackage.MODELING:
+			return createModeling();
+		case Execution_metamodelPackage.CREATOR:
+			return createCreator();
+		case Execution_metamodelPackage.EXECUTOR:
+			return createExecutor();
+		case Execution_metamodelPackage.LAST_PROFESSIONAL:
+			return createLastProfessional();
 		default:
 			throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -211,26 +215,6 @@ public class Execution_metamodelFactoryImpl extends EFactoryImpl implements Exec
 	public Next createNext() {
 		NextImpl next = new NextImpl();
 		return next;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Creator createCreator() {
-		CreatorImpl creator = new CreatorImpl();
-		return creator;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Executor createExecutor() {
-		ExecutorImpl executor = new ExecutorImpl();
-		return executor;
 	}
 
 	/**
@@ -398,16 +382,6 @@ public class Execution_metamodelFactoryImpl extends EFactoryImpl implements Exec
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public LastProfessional createLastProfessional() {
-		LastProfessionalImpl lastProfessional = new LastProfessionalImpl();
-		return lastProfessional;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public Answer createAnswer() {
 		AnswerImpl answer = new AnswerImpl();
 		return answer;
@@ -431,6 +405,56 @@ public class Execution_metamodelFactoryImpl extends EFactoryImpl implements Exec
 	public YesOrNo createYesOrNo() {
 		YesOrNoImpl yesOrNo = new YesOrNoImpl();
 		return yesOrNo;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Element createElement() {
+		ElementImpl element = new ElementImpl();
+		return element;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Modeling createModeling() {
+		ModelingImpl modeling = new ModelingImpl();
+		return modeling;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Creator createCreator() {
+		CreatorImpl creator = new CreatorImpl();
+		return creator;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Executor createExecutor() {
+		ExecutorImpl executor = new ExecutorImpl();
+		return executor;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public LastProfessional createLastProfessional() {
+		LastProfessionalImpl lastProfessional = new LastProfessionalImpl();
+		return lastProfessional;
 	}
 
 	/**

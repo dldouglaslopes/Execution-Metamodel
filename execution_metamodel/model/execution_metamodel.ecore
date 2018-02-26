@@ -64,8 +64,6 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="urlAbsolute" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="url" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Creator"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Executor"/>
   <eClassifiers xsi:type="ecore:EClass" name="Question">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="url" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -137,10 +135,10 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="idLastProfessional" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="responsible" lowerBound="1"
         eType="#//Responsible" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="lastprofessional" lowerBound="1"
-        eType="#//LastProfessional" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="executedstep" lowerBound="1"
         eType="#//ExecutedStep" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="lastprofessional" lowerBound="1"
+        eType="#//LastProfessional" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Justification">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
@@ -159,9 +157,7 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="version" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="completed" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Responsible">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="data" lowerBound="1" eType="#//User"/>
-  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Responsible"/>
   <eClassifiers xsi:type="ecore:EClass" name="ExecutedStep" eSuperTypes="#//Step">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="createdById" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="createdBy" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -169,10 +165,7 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="executedBy" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="step" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="LastProfessional">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="data" lowerBound="1" eType="#//User"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="User" abstract="true">
+  <eClassifiers xsi:type="ecore:EClass" name="User" abstract="true" eSuperTypes="#//Creator #//Executor #//LastProfessional #//Responsible">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="url" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="code" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
@@ -182,10 +175,6 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="login" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="numberCouncil" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="state" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="executor" lowerBound="1"
-        eType="#//Executor"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="creator" lowerBound="1"
-        eType="#//Creator"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Value" abstract="true"/>
   <eClassifiers xsi:type="ecore:EClass" name="Answer">
@@ -212,11 +201,32 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBooleanObject"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="CompleteStep" abstract="true" eSuperTypes="#//Step">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="step" upperBound="-1" eType="ecore:EClass protocolosv2.ecore#//Element"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="step" lowerBound="1" eType="#//Element"
         containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="executor" lowerBound="1"
-        eType="#//Executor" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="creator" lowerBound="1"
         eType="#//Creator" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="executor" lowerBound="1"
+        eType="#//Executor" containment="true"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Element">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="typeVerbose" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="url" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="isInitial" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="isTerminal" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="mandatory" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Modeling" eSuperTypes="#//Execution">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="element" upperBound="-1"
+        eType="#//Element" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="completed" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//Boolean"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="version" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="idRepository" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Creator"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Executor"/>
+  <eClassifiers xsi:type="ecore:EClass" name="LastProfessional"/>
 </ecore:EPackage>
