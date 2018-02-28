@@ -3,6 +3,7 @@
 package MetamodelExecution.impl;
 
 import MetamodelExecution.Execution_metamodelPackage;
+import MetamodelExecution.Justification;
 import MetamodelExecution.Next;
 import MetamodelExecution.Previous;
 import MetamodelExecution.Step;
@@ -36,6 +37,11 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *   <li>{@link MetamodelExecution.impl.StepImpl#getExecutionDate <em>Execution Date</em>}</li>
  *   <li>{@link MetamodelExecution.impl.StepImpl#getIdStep <em>Id Step</em>}</li>
  *   <li>{@link MetamodelExecution.impl.StepImpl#getIdExecutedProtocol <em>Id Executed Protocol</em>}</li>
+ *   <li>{@link MetamodelExecution.impl.StepImpl#getIdPathway <em>Id Pathway</em>}</li>
+ *   <li>{@link MetamodelExecution.impl.StepImpl#getId <em>Id</em>}</li>
+ *   <li>{@link MetamodelExecution.impl.StepImpl#getCreationDate <em>Creation Date</em>}</li>
+ *   <li>{@link MetamodelExecution.impl.StepImpl#getUrl <em>Url</em>}</li>
+ *   <li>{@link MetamodelExecution.impl.StepImpl#getJustification <em>Justification</em>}</li>
  * </ul>
  *
  * @generated
@@ -240,6 +246,96 @@ public abstract class StepImpl extends ExecutionImpl implements Step {
 	 * @ordered
 	 */
 	protected int idExecutedProtocol = ID_EXECUTED_PROTOCOL_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getIdPathway() <em>Id Pathway</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getIdPathway()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final int ID_PATHWAY_EDEFAULT = 0;
+
+	/**
+	 * The cached value of the '{@link #getIdPathway() <em>Id Pathway</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getIdPathway()
+	 * @generated
+	 * @ordered
+	 */
+	protected int idPathway = ID_PATHWAY_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getId() <em>Id</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getId()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final int ID_EDEFAULT = 0;
+
+	/**
+	 * The cached value of the '{@link #getId() <em>Id</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getId()
+	 * @generated
+	 * @ordered
+	 */
+	protected int id = ID_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getCreationDate() <em>Creation Date</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getCreationDate()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final Date CREATION_DATE_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getCreationDate() <em>Creation Date</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getCreationDate()
+	 * @generated
+	 * @ordered
+	 */
+	protected Date creationDate = CREATION_DATE_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getUrl() <em>Url</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getUrl()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String URL_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getUrl() <em>Url</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getUrl()
+	 * @generated
+	 * @ordered
+	 */
+	protected String url = URL_EDEFAULT;
+
+	/**
+	 * The cached value of the '{@link #getJustification() <em>Justification</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getJustification()
+	 * @generated
+	 * @ordered
+	 */
+	protected Justification justification;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -563,6 +659,142 @@ public abstract class StepImpl extends ExecutionImpl implements Step {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public int getIdPathway() {
+		return idPathway;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setIdPathway(int newIdPathway) {
+		int oldIdPathway = idPathway;
+		idPathway = newIdPathway;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.STEP__ID_PATHWAY,
+					oldIdPathway, idPathway));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public int getId() {
+		return id;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setId(int newId) {
+		int oldId = id;
+		id = newId;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.STEP__ID, oldId, id));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Date getCreationDate() {
+		return creationDate;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setCreationDate(Date newCreationDate) {
+		Date oldCreationDate = creationDate;
+		creationDate = newCreationDate;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.STEP__CREATION_DATE,
+					oldCreationDate, creationDate));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getUrl() {
+		return url;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setUrl(String newUrl) {
+		String oldUrl = url;
+		url = newUrl;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.STEP__URL, oldUrl, url));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Justification getJustification() {
+		return justification;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetJustification(Justification newJustification, NotificationChain msgs) {
+		Justification oldJustification = justification;
+		justification = newJustification;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
+					Execution_metamodelPackage.STEP__JUSTIFICATION, oldJustification, newJustification);
+			if (msgs == null)
+				msgs = notification;
+			else
+				msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setJustification(Justification newJustification) {
+		if (newJustification != justification) {
+			NotificationChain msgs = null;
+			if (justification != null)
+				msgs = ((InternalEObject) justification).eInverseRemove(this,
+						EOPPOSITE_FEATURE_BASE - Execution_metamodelPackage.STEP__JUSTIFICATION, null, msgs);
+			if (newJustification != null)
+				msgs = ((InternalEObject) newJustification).eInverseAdd(this,
+						EOPPOSITE_FEATURE_BASE - Execution_metamodelPackage.STEP__JUSTIFICATION, null, msgs);
+			msgs = basicSetJustification(newJustification, msgs);
+			if (msgs != null)
+				msgs.dispatch();
+		} else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.STEP__JUSTIFICATION,
+					newJustification, newJustification));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -570,6 +802,8 @@ public abstract class StepImpl extends ExecutionImpl implements Step {
 			return basicSetPrevious(null, msgs);
 		case Execution_metamodelPackage.STEP__NEXT:
 			return basicSetNext(null, msgs);
+		case Execution_metamodelPackage.STEP__JUSTIFICATION:
+			return basicSetJustification(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -604,6 +838,16 @@ public abstract class StepImpl extends ExecutionImpl implements Step {
 			return getIdStep();
 		case Execution_metamodelPackage.STEP__ID_EXECUTED_PROTOCOL:
 			return getIdExecutedProtocol();
+		case Execution_metamodelPackage.STEP__ID_PATHWAY:
+			return getIdPathway();
+		case Execution_metamodelPackage.STEP__ID:
+			return getId();
+		case Execution_metamodelPackage.STEP__CREATION_DATE:
+			return getCreationDate();
+		case Execution_metamodelPackage.STEP__URL:
+			return getUrl();
+		case Execution_metamodelPackage.STEP__JUSTIFICATION:
+			return getJustification();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -648,6 +892,21 @@ public abstract class StepImpl extends ExecutionImpl implements Step {
 			return;
 		case Execution_metamodelPackage.STEP__ID_EXECUTED_PROTOCOL:
 			setIdExecutedProtocol((Integer) newValue);
+			return;
+		case Execution_metamodelPackage.STEP__ID_PATHWAY:
+			setIdPathway((Integer) newValue);
+			return;
+		case Execution_metamodelPackage.STEP__ID:
+			setId((Integer) newValue);
+			return;
+		case Execution_metamodelPackage.STEP__CREATION_DATE:
+			setCreationDate((Date) newValue);
+			return;
+		case Execution_metamodelPackage.STEP__URL:
+			setUrl((String) newValue);
+			return;
+		case Execution_metamodelPackage.STEP__JUSTIFICATION:
+			setJustification((Justification) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -694,6 +953,21 @@ public abstract class StepImpl extends ExecutionImpl implements Step {
 		case Execution_metamodelPackage.STEP__ID_EXECUTED_PROTOCOL:
 			setIdExecutedProtocol(ID_EXECUTED_PROTOCOL_EDEFAULT);
 			return;
+		case Execution_metamodelPackage.STEP__ID_PATHWAY:
+			setIdPathway(ID_PATHWAY_EDEFAULT);
+			return;
+		case Execution_metamodelPackage.STEP__ID:
+			setId(ID_EDEFAULT);
+			return;
+		case Execution_metamodelPackage.STEP__CREATION_DATE:
+			setCreationDate(CREATION_DATE_EDEFAULT);
+			return;
+		case Execution_metamodelPackage.STEP__URL:
+			setUrl(URL_EDEFAULT);
+			return;
+		case Execution_metamodelPackage.STEP__JUSTIFICATION:
+			setJustification((Justification) null);
+			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -729,6 +1003,16 @@ public abstract class StepImpl extends ExecutionImpl implements Step {
 			return idStep != ID_STEP_EDEFAULT;
 		case Execution_metamodelPackage.STEP__ID_EXECUTED_PROTOCOL:
 			return idExecutedProtocol != ID_EXECUTED_PROTOCOL_EDEFAULT;
+		case Execution_metamodelPackage.STEP__ID_PATHWAY:
+			return idPathway != ID_PATHWAY_EDEFAULT;
+		case Execution_metamodelPackage.STEP__ID:
+			return id != ID_EDEFAULT;
+		case Execution_metamodelPackage.STEP__CREATION_DATE:
+			return CREATION_DATE_EDEFAULT == null ? creationDate != null : !CREATION_DATE_EDEFAULT.equals(creationDate);
+		case Execution_metamodelPackage.STEP__URL:
+			return URL_EDEFAULT == null ? url != null : !URL_EDEFAULT.equals(url);
+		case Execution_metamodelPackage.STEP__JUSTIFICATION:
+			return justification != null;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -762,6 +1046,14 @@ public abstract class StepImpl extends ExecutionImpl implements Step {
 		result.append(idStep);
 		result.append(", idExecutedProtocol: ");
 		result.append(idExecutedProtocol);
+		result.append(", idPathway: ");
+		result.append(idPathway);
+		result.append(", id: ");
+		result.append(id);
+		result.append(", creationDate: ");
+		result.append(creationDate);
+		result.append(", url: ");
+		result.append(url);
 		result.append(')');
 		return result.toString();
 	}

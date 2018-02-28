@@ -256,6 +256,15 @@ public interface Execution_metamodelFactory extends EFactory {
 	Answer createAnswer();
 
 	/**
+	 * Returns a new object of class '<em>Execution</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Execution</em>'.
+	 * @generated
+	 */
+	Execution createExecution();
+
+	/**
 	 * Returns a new object of class '<em>Numeric</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

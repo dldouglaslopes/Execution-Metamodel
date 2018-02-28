@@ -24,6 +24,11 @@ import java.util.Date;
  *   <li>{@link MetamodelExecution.Step#getExecutionDate <em>Execution Date</em>}</li>
  *   <li>{@link MetamodelExecution.Step#getIdStep <em>Id Step</em>}</li>
  *   <li>{@link MetamodelExecution.Step#getIdExecutedProtocol <em>Id Executed Protocol</em>}</li>
+ *   <li>{@link MetamodelExecution.Step#getIdPathway <em>Id Pathway</em>}</li>
+ *   <li>{@link MetamodelExecution.Step#getId <em>Id</em>}</li>
+ *   <li>{@link MetamodelExecution.Step#getCreationDate <em>Creation Date</em>}</li>
+ *   <li>{@link MetamodelExecution.Step#getUrl <em>Url</em>}</li>
+ *   <li>{@link MetamodelExecution.Step#getJustification <em>Justification</em>}</li>
  * </ul>
  *
  * @see MetamodelExecution.Execution_metamodelPackage#getStep()
@@ -319,5 +324,135 @@ public interface Step extends Execution {
 	 * @generated
 	 */
 	void setIdExecutedProtocol(int value);
+
+	/**
+	 * Returns the value of the '<em><b>Id Pathway</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Id Pathway</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Id Pathway</em>' attribute.
+	 * @see #setIdPathway(int)
+	 * @see MetamodelExecution.Execution_metamodelPackage#getStep_IdPathway()
+	 * @model
+	 * @generated
+	 */
+	int getIdPathway();
+
+	/**
+	 * Sets the value of the '{@link MetamodelExecution.Step#getIdPathway <em>Id Pathway</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Id Pathway</em>' attribute.
+	 * @see #getIdPathway()
+	 * @generated
+	 */
+	void setIdPathway(int value);
+
+	/**
+	 * Returns the value of the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Id</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Id</em>' attribute.
+	 * @see #setId(int)
+	 * @see MetamodelExecution.Execution_metamodelPackage#getStep_Id()
+	 * @model
+	 * @generated
+	 */
+	int getId();
+
+	/**
+	 * Sets the value of the '{@link MetamodelExecution.Step#getId <em>Id</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Id</em>' attribute.
+	 * @see #getId()
+	 * @generated
+	 */
+	void setId(int value);
+
+	/**
+	 * Returns the value of the '<em><b>Creation Date</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Creation Date</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Creation Date</em>' attribute.
+	 * @see #setCreationDate(Date)
+	 * @see MetamodelExecution.Execution_metamodelPackage#getStep_CreationDate()
+	 * @model
+	 * @generated
+	 */
+	Date getCreationDate();
+
+	/**
+	 * Sets the value of the '{@link MetamodelExecution.Step#getCreationDate <em>Creation Date</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Creation Date</em>' attribute.
+	 * @see #getCreationDate()
+	 * @generated
+	 */
+	void setCreationDate(Date value);
+
+	/**
+	 * Returns the value of the '<em><b>Url</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Url</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Url</em>' attribute.
+	 * @see #setUrl(String)
+	 * @see MetamodelExecution.Execution_metamodelPackage#getStep_Url()
+	 * @model
+	 * @generated
+	 */
+	String getUrl();
+
+	/**
+	 * Sets the value of the '{@link MetamodelExecution.Step#getUrl <em>Url</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Url</em>' attribute.
+	 * @see #getUrl()
+	 * @generated
+	 */
+	void setUrl(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Justification</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Justification</em>' containment reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Justification</em>' containment reference.
+	 * @see #setJustification(Justification)
+	 * @see MetamodelExecution.Execution_metamodelPackage#getStep_Justification()
+	 * @model containment="true"
+	 * @generated
+	 */
+	Justification getJustification();
+
+	/**
+	 * Sets the value of the '{@link MetamodelExecution.Step#getJustification <em>Justification</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Justification</em>' containment reference.
+	 * @see #getJustification()
+	 * @generated
+	 */
+	void setJustification(Justification value);
 
 } // Step

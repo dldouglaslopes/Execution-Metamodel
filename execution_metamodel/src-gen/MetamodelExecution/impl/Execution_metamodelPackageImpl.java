@@ -505,6 +505,51 @@ public class Execution_metamodelPackageImpl extends EPackageImpl implements Exec
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getStep_IdPathway() {
+		return (EAttribute) stepEClass.getEStructuralFeatures().get(11);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getStep_Id() {
+		return (EAttribute) stepEClass.getEStructuralFeatures().get(12);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getStep_CreationDate() {
+		return (EAttribute) stepEClass.getEStructuralFeatures().get(13);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getStep_Url() {
+		return (EAttribute) stepEClass.getEStructuralFeatures().get(14);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getStep_Justification() {
+		return (EReference) stepEClass.getEStructuralFeatures().get(15);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getAuxiliaryConduct() {
 		return auxiliaryConductEClass;
 	}
@@ -1315,6 +1360,15 @@ public class Execution_metamodelPackageImpl extends EPackageImpl implements Exec
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getShortExecution_Justification() {
+		return (EReference) shortExecutionEClass.getEStructuralFeatures().get(10);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getJustification() {
 		return justificationEClass;
 	}
@@ -1360,7 +1414,7 @@ public class Execution_metamodelPackageImpl extends EPackageImpl implements Exec
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getJustification_JustifyById() {
+	public EAttribute getJustification_JustifiedById() {
 		return (EAttribute) justificationEClass.getEStructuralFeatures().get(4);
 	}
 
@@ -1369,7 +1423,7 @@ public class Execution_metamodelPackageImpl extends EPackageImpl implements Exec
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getJustification_JustifyBy() {
+	public EAttribute getJustification_JustifiedBy() {
 		return (EAttribute) justificationEClass.getEStructuralFeatures().get(5);
 	}
 
@@ -1675,51 +1729,6 @@ public class Execution_metamodelPackageImpl extends EPackageImpl implements Exec
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getExecution_Id() {
-		return (EAttribute) executionEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getExecution_Url() {
-		return (EAttribute) executionEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getExecution_IdProtocol() {
-		return (EAttribute) executionEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getExecution_CreationDate() {
-		return (EAttribute) executionEClass.getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getExecution_Justification() {
-		return (EReference) executionEClass.getEStructuralFeatures().get(4);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getNumeric() {
 		return numericEClass;
 	}
@@ -1990,6 +1999,11 @@ public class Execution_metamodelPackageImpl extends EPackageImpl implements Exec
 		createEAttribute(stepEClass, STEP__EXECUTION_DATE);
 		createEAttribute(stepEClass, STEP__ID_STEP);
 		createEAttribute(stepEClass, STEP__ID_EXECUTED_PROTOCOL);
+		createEAttribute(stepEClass, STEP__ID_PATHWAY);
+		createEAttribute(stepEClass, STEP__ID);
+		createEAttribute(stepEClass, STEP__CREATION_DATE);
+		createEAttribute(stepEClass, STEP__URL);
+		createEReference(stepEClass, STEP__JUSTIFICATION);
 
 		auxiliaryConductEClass = createEClass(AUXILIARY_CONDUCT);
 		createEReference(auxiliaryConductEClass, AUXILIARY_CONDUCT__ANSWER);
@@ -2101,14 +2115,15 @@ public class Execution_metamodelPackageImpl extends EPackageImpl implements Exec
 		createEReference(shortExecutionEClass, SHORT_EXECUTION__RESPONSIBLE);
 		createEReference(shortExecutionEClass, SHORT_EXECUTION__EXECUTEDSTEP);
 		createEReference(shortExecutionEClass, SHORT_EXECUTION__LASTPROFESSIONAL);
+		createEReference(shortExecutionEClass, SHORT_EXECUTION__JUSTIFICATION);
 
 		justificationEClass = createEClass(JUSTIFICATION);
 		createEAttribute(justificationEClass, JUSTIFICATION__ID);
 		createEAttribute(justificationEClass, JUSTIFICATION__REASON);
 		createEAttribute(justificationEClass, JUSTIFICATION__REASON_DISPLAY);
 		createEAttribute(justificationEClass, JUSTIFICATION__DESCRIPTION);
-		createEAttribute(justificationEClass, JUSTIFICATION__JUSTIFY_BY_ID);
-		createEAttribute(justificationEClass, JUSTIFICATION__JUSTIFY_BY);
+		createEAttribute(justificationEClass, JUSTIFICATION__JUSTIFIED_BY_ID);
+		createEAttribute(justificationEClass, JUSTIFICATION__JUSTIFIED_BY);
 
 		pathwayEClass = createEClass(PATHWAY);
 		createEAttribute(pathwayEClass, PATHWAY__ID);
@@ -2149,11 +2164,6 @@ public class Execution_metamodelPackageImpl extends EPackageImpl implements Exec
 		createEReference(answerEClass, ANSWER__QUESTION);
 
 		executionEClass = createEClass(EXECUTION);
-		createEAttribute(executionEClass, EXECUTION__ID);
-		createEAttribute(executionEClass, EXECUTION__URL);
-		createEAttribute(executionEClass, EXECUTION__ID_PROTOCOL);
-		createEAttribute(executionEClass, EXECUTION__CREATION_DATE);
-		createEReference(executionEClass, EXECUTION__JUSTIFICATION);
 
 		numericEClass = createEClass(NUMERIC);
 		createEAttribute(numericEClass, NUMERIC__VALUE);
@@ -2268,6 +2278,17 @@ public class Execution_metamodelPackageImpl extends EPackageImpl implements Exec
 		initEAttribute(getStep_IdExecutedProtocol(), ecorePackage.getEInt(), "idExecutedProtocol", null, 0, 1,
 				Step.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED,
 				IS_ORDERED);
+		initEAttribute(getStep_IdPathway(), ecorePackage.getEInt(), "idPathway", null, 0, 1, Step.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getStep_Id(), ecorePackage.getEInt(), "id", null, 0, 1, Step.class, !IS_TRANSIENT, !IS_VOLATILE,
+				IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getStep_CreationDate(), ecorePackage.getEDate(), "creationDate", null, 0, 1, Step.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getStep_Url(), ecorePackage.getEString(), "url", null, 0, 1, Step.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getStep_Justification(), this.getJustification(), null, "justification", null, 0, 1, Step.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(auxiliaryConductEClass, AuxiliaryConduct.class, "AuxiliaryConduct", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
@@ -2505,6 +2526,9 @@ public class Execution_metamodelPackageImpl extends EPackageImpl implements Exec
 		initEReference(getShortExecution_Lastprofessional(), this.getLastProfessional(), null, "lastprofessional", null,
 				1, 1, ShortExecution.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
 				!IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getShortExecution_Justification(), this.getJustification(), null, "justification", null, 0, 1,
+				ShortExecution.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(justificationEClass, Justification.class, "Justification", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
@@ -2518,10 +2542,10 @@ public class Execution_metamodelPackageImpl extends EPackageImpl implements Exec
 		initEAttribute(getJustification_Description(), ecorePackage.getEString(), "description", null, 0, 1,
 				Justification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
 				!IS_DERIVED, IS_ORDERED);
-		initEAttribute(getJustification_JustifyById(), ecorePackage.getEInt(), "justifyById", null, 0, 1,
+		initEAttribute(getJustification_JustifiedById(), ecorePackage.getEInt(), "justifiedById", null, 0, 1,
 				Justification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
 				!IS_DERIVED, IS_ORDERED);
-		initEAttribute(getJustification_JustifyBy(), ecorePackage.getEString(), "justifyBy", null, 0, 1,
+		initEAttribute(getJustification_JustifiedBy(), ecorePackage.getEString(), "justifiedBy", null, 0, 1,
 				Justification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
 				!IS_DERIVED, IS_ORDERED);
 
@@ -2597,20 +2621,8 @@ public class Execution_metamodelPackageImpl extends EPackageImpl implements Exec
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(executionEClass, Execution.class, "Execution", IS_ABSTRACT, !IS_INTERFACE,
+		initEClass(executionEClass, Execution.class, "Execution", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getExecution_Id(), ecorePackage.getEInt(), "id", null, 0, 1, Execution.class, !IS_TRANSIENT,
-				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getExecution_Url(), ecorePackage.getEString(), "url", null, 0, 1, Execution.class, !IS_TRANSIENT,
-				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getExecution_IdProtocol(), ecorePackage.getEInt(), "idProtocol", null, 0, 1, Execution.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getExecution_CreationDate(), ecorePackage.getEDate(), "creationDate", null, 0, 1,
-				Execution.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
-				!IS_DERIVED, IS_ORDERED);
-		initEReference(getExecution_Justification(), this.getJustification(), null, "justification", null, 0, 1,
-				Execution.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
-				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(numericEClass, Numeric.class, "Numeric", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getNumeric_Value(), ecorePackage.getEDoubleObject(), "value", null, 0, 1, Numeric.class,

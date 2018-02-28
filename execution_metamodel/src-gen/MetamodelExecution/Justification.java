@@ -17,8 +17,8 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link MetamodelExecution.Justification#getReason <em>Reason</em>}</li>
  *   <li>{@link MetamodelExecution.Justification#getReasonDisplay <em>Reason Display</em>}</li>
  *   <li>{@link MetamodelExecution.Justification#getDescription <em>Description</em>}</li>
- *   <li>{@link MetamodelExecution.Justification#getJustifyById <em>Justify By Id</em>}</li>
- *   <li>{@link MetamodelExecution.Justification#getJustifyBy <em>Justify By</em>}</li>
+ *   <li>{@link MetamodelExecution.Justification#getJustifiedById <em>Justified By Id</em>}</li>
+ *   <li>{@link MetamodelExecution.Justification#getJustifiedBy <em>Justified By</em>}</li>
  * </ul>
  *
  * @see MetamodelExecution.Execution_metamodelPackage#getJustification()
@@ -131,55 +131,55 @@ public interface Justification extends EObject {
 	void setDescription(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Justify By Id</b></em>' attribute.
+	 * Returns the value of the '<em><b>Justified By Id</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Justify By Id</em>' attribute isn't clear,
+	 * If the meaning of the '<em>Justified By Id</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Justify By Id</em>' attribute.
-	 * @see #setJustifyById(int)
-	 * @see MetamodelExecution.Execution_metamodelPackage#getJustification_JustifyById()
+	 * @return the value of the '<em>Justified By Id</em>' attribute.
+	 * @see #setJustifiedById(int)
+	 * @see MetamodelExecution.Execution_metamodelPackage#getJustification_JustifiedById()
 	 * @model
 	 * @generated
 	 */
-	int getJustifyById();
+	int getJustifiedById();
 
 	/**
-	 * Sets the value of the '{@link MetamodelExecution.Justification#getJustifyById <em>Justify By Id</em>}' attribute.
+	 * Sets the value of the '{@link MetamodelExecution.Justification#getJustifiedById <em>Justified By Id</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Justify By Id</em>' attribute.
-	 * @see #getJustifyById()
+	 * @param value the new value of the '<em>Justified By Id</em>' attribute.
+	 * @see #getJustifiedById()
 	 * @generated
 	 */
-	void setJustifyById(int value);
+	void setJustifiedById(int value);
 
 	/**
-	 * Returns the value of the '<em><b>Justify By</b></em>' attribute.
+	 * Returns the value of the '<em><b>Justified By</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Justify By</em>' attribute isn't clear,
+	 * If the meaning of the '<em>Justified By</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Justify By</em>' attribute.
-	 * @see #setJustifyBy(String)
-	 * @see MetamodelExecution.Execution_metamodelPackage#getJustification_JustifyBy()
+	 * @return the value of the '<em>Justified By</em>' attribute.
+	 * @see #setJustifiedBy(String)
+	 * @see MetamodelExecution.Execution_metamodelPackage#getJustification_JustifiedBy()
 	 * @model
 	 * @generated
 	 */
-	String getJustifyBy();
+	String getJustifiedBy();
 
 	/**
-	 * Sets the value of the '{@link MetamodelExecution.Justification#getJustifyBy <em>Justify By</em>}' attribute.
+	 * Sets the value of the '{@link MetamodelExecution.Justification#getJustifiedBy <em>Justified By</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Justify By</em>' attribute.
-	 * @see #getJustifyBy()
+	 * @param value the new value of the '<em>Justified By</em>' attribute.
+	 * @see #getJustifiedBy()
 	 * @generated
 	 */
-	void setJustifyBy(String value);
+	void setJustifiedBy(String value);
 
 } // Justification

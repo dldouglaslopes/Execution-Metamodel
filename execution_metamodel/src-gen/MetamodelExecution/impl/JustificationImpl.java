@@ -24,8 +24,8 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *   <li>{@link MetamodelExecution.impl.JustificationImpl#getReason <em>Reason</em>}</li>
  *   <li>{@link MetamodelExecution.impl.JustificationImpl#getReasonDisplay <em>Reason Display</em>}</li>
  *   <li>{@link MetamodelExecution.impl.JustificationImpl#getDescription <em>Description</em>}</li>
- *   <li>{@link MetamodelExecution.impl.JustificationImpl#getJustifyById <em>Justify By Id</em>}</li>
- *   <li>{@link MetamodelExecution.impl.JustificationImpl#getJustifyBy <em>Justify By</em>}</li>
+ *   <li>{@link MetamodelExecution.impl.JustificationImpl#getJustifiedById <em>Justified By Id</em>}</li>
+ *   <li>{@link MetamodelExecution.impl.JustificationImpl#getJustifiedBy <em>Justified By</em>}</li>
  * </ul>
  *
  * @generated
@@ -112,44 +112,44 @@ public class JustificationImpl extends MinimalEObjectImpl.Container implements J
 	protected String description = DESCRIPTION_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getJustifyById() <em>Justify By Id</em>}' attribute.
+	 * The default value of the '{@link #getJustifiedById() <em>Justified By Id</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getJustifyById()
+	 * @see #getJustifiedById()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final int JUSTIFY_BY_ID_EDEFAULT = 0;
+	protected static final int JUSTIFIED_BY_ID_EDEFAULT = 0;
 
 	/**
-	 * The cached value of the '{@link #getJustifyById() <em>Justify By Id</em>}' attribute.
+	 * The cached value of the '{@link #getJustifiedById() <em>Justified By Id</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getJustifyById()
+	 * @see #getJustifiedById()
 	 * @generated
 	 * @ordered
 	 */
-	protected int justifyById = JUSTIFY_BY_ID_EDEFAULT;
+	protected int justifiedById = JUSTIFIED_BY_ID_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getJustifyBy() <em>Justify By</em>}' attribute.
+	 * The default value of the '{@link #getJustifiedBy() <em>Justified By</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getJustifyBy()
+	 * @see #getJustifiedBy()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String JUSTIFY_BY_EDEFAULT = null;
+	protected static final String JUSTIFIED_BY_EDEFAULT = null;
 
 	/**
-	 * The cached value of the '{@link #getJustifyBy() <em>Justify By</em>}' attribute.
+	 * The cached value of the '{@link #getJustifiedBy() <em>Justified By</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getJustifyBy()
+	 * @see #getJustifiedBy()
 	 * @generated
 	 * @ordered
 	 */
-	protected String justifyBy = JUSTIFY_BY_EDEFAULT;
+	protected String justifiedBy = JUSTIFIED_BY_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -263,8 +263,8 @@ public class JustificationImpl extends MinimalEObjectImpl.Container implements J
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public int getJustifyById() {
-		return justifyById;
+	public int getJustifiedById() {
+		return justifiedById;
 	}
 
 	/**
@@ -272,12 +272,12 @@ public class JustificationImpl extends MinimalEObjectImpl.Container implements J
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setJustifyById(int newJustifyById) {
-		int oldJustifyById = justifyById;
-		justifyById = newJustifyById;
+	public void setJustifiedById(int newJustifiedById) {
+		int oldJustifiedById = justifiedById;
+		justifiedById = newJustifiedById;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET,
-					Execution_metamodelPackage.JUSTIFICATION__JUSTIFY_BY_ID, oldJustifyById, justifyById));
+					Execution_metamodelPackage.JUSTIFICATION__JUSTIFIED_BY_ID, oldJustifiedById, justifiedById));
 	}
 
 	/**
@@ -285,8 +285,8 @@ public class JustificationImpl extends MinimalEObjectImpl.Container implements J
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getJustifyBy() {
-		return justifyBy;
+	public String getJustifiedBy() {
+		return justifiedBy;
 	}
 
 	/**
@@ -294,12 +294,12 @@ public class JustificationImpl extends MinimalEObjectImpl.Container implements J
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setJustifyBy(String newJustifyBy) {
-		String oldJustifyBy = justifyBy;
-		justifyBy = newJustifyBy;
+	public void setJustifiedBy(String newJustifiedBy) {
+		String oldJustifiedBy = justifiedBy;
+		justifiedBy = newJustifiedBy;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.JUSTIFICATION__JUSTIFY_BY,
-					oldJustifyBy, justifyBy));
+			eNotify(new ENotificationImpl(this, Notification.SET,
+					Execution_metamodelPackage.JUSTIFICATION__JUSTIFIED_BY, oldJustifiedBy, justifiedBy));
 	}
 
 	/**
@@ -318,10 +318,10 @@ public class JustificationImpl extends MinimalEObjectImpl.Container implements J
 			return getReasonDisplay();
 		case Execution_metamodelPackage.JUSTIFICATION__DESCRIPTION:
 			return getDescription();
-		case Execution_metamodelPackage.JUSTIFICATION__JUSTIFY_BY_ID:
-			return getJustifyById();
-		case Execution_metamodelPackage.JUSTIFICATION__JUSTIFY_BY:
-			return getJustifyBy();
+		case Execution_metamodelPackage.JUSTIFICATION__JUSTIFIED_BY_ID:
+			return getJustifiedById();
+		case Execution_metamodelPackage.JUSTIFICATION__JUSTIFIED_BY:
+			return getJustifiedBy();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -346,11 +346,11 @@ public class JustificationImpl extends MinimalEObjectImpl.Container implements J
 		case Execution_metamodelPackage.JUSTIFICATION__DESCRIPTION:
 			setDescription((String) newValue);
 			return;
-		case Execution_metamodelPackage.JUSTIFICATION__JUSTIFY_BY_ID:
-			setJustifyById((Integer) newValue);
+		case Execution_metamodelPackage.JUSTIFICATION__JUSTIFIED_BY_ID:
+			setJustifiedById((Integer) newValue);
 			return;
-		case Execution_metamodelPackage.JUSTIFICATION__JUSTIFY_BY:
-			setJustifyBy((String) newValue);
+		case Execution_metamodelPackage.JUSTIFICATION__JUSTIFIED_BY:
+			setJustifiedBy((String) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -376,11 +376,11 @@ public class JustificationImpl extends MinimalEObjectImpl.Container implements J
 		case Execution_metamodelPackage.JUSTIFICATION__DESCRIPTION:
 			setDescription(DESCRIPTION_EDEFAULT);
 			return;
-		case Execution_metamodelPackage.JUSTIFICATION__JUSTIFY_BY_ID:
-			setJustifyById(JUSTIFY_BY_ID_EDEFAULT);
+		case Execution_metamodelPackage.JUSTIFICATION__JUSTIFIED_BY_ID:
+			setJustifiedById(JUSTIFIED_BY_ID_EDEFAULT);
 			return;
-		case Execution_metamodelPackage.JUSTIFICATION__JUSTIFY_BY:
-			setJustifyBy(JUSTIFY_BY_EDEFAULT);
+		case Execution_metamodelPackage.JUSTIFICATION__JUSTIFIED_BY:
+			setJustifiedBy(JUSTIFIED_BY_EDEFAULT);
 			return;
 		}
 		super.eUnset(featureID);
@@ -403,10 +403,10 @@ public class JustificationImpl extends MinimalEObjectImpl.Container implements J
 					: !REASON_DISPLAY_EDEFAULT.equals(reasonDisplay);
 		case Execution_metamodelPackage.JUSTIFICATION__DESCRIPTION:
 			return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
-		case Execution_metamodelPackage.JUSTIFICATION__JUSTIFY_BY_ID:
-			return justifyById != JUSTIFY_BY_ID_EDEFAULT;
-		case Execution_metamodelPackage.JUSTIFICATION__JUSTIFY_BY:
-			return JUSTIFY_BY_EDEFAULT == null ? justifyBy != null : !JUSTIFY_BY_EDEFAULT.equals(justifyBy);
+		case Execution_metamodelPackage.JUSTIFICATION__JUSTIFIED_BY_ID:
+			return justifiedById != JUSTIFIED_BY_ID_EDEFAULT;
+		case Execution_metamodelPackage.JUSTIFICATION__JUSTIFIED_BY:
+			return JUSTIFIED_BY_EDEFAULT == null ? justifiedBy != null : !JUSTIFIED_BY_EDEFAULT.equals(justifiedBy);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -430,10 +430,10 @@ public class JustificationImpl extends MinimalEObjectImpl.Container implements J
 		result.append(reasonDisplay);
 		result.append(", description: ");
 		result.append(description);
-		result.append(", justifyById: ");
-		result.append(justifyById);
-		result.append(", justifyBy: ");
-		result.append(justifyBy);
+		result.append(", justifiedById: ");
+		result.append(justifiedById);
+		result.append(", justifiedBy: ");
+		result.append(justifiedBy);
 		result.append(')');
 		return result.toString();
 	}

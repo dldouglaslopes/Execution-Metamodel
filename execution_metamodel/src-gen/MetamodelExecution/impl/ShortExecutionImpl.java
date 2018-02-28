@@ -4,6 +4,7 @@ package MetamodelExecution.impl;
 
 import MetamodelExecution.ExecutedStep;
 import MetamodelExecution.Execution_metamodelPackage;
+import MetamodelExecution.Justification;
 import MetamodelExecution.LastProfessional;
 import MetamodelExecution.Pathway;
 import MetamodelExecution.Responsible;
@@ -37,6 +38,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *   <li>{@link MetamodelExecution.impl.ShortExecutionImpl#getResponsible <em>Responsible</em>}</li>
  *   <li>{@link MetamodelExecution.impl.ShortExecutionImpl#getExecutedstep <em>Executedstep</em>}</li>
  *   <li>{@link MetamodelExecution.impl.ShortExecutionImpl#getLastprofessional <em>Lastprofessional</em>}</li>
+ *   <li>{@link MetamodelExecution.impl.ShortExecutionImpl#getJustification <em>Justification</em>}</li>
  * </ul>
  *
  * @generated
@@ -201,6 +203,16 @@ public class ShortExecutionImpl extends ExecutionImpl implements ShortExecution 
 	 * @ordered
 	 */
 	protected LastProfessional lastprofessional;
+
+	/**
+	 * The cached value of the '{@link #getJustification() <em>Justification</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getJustification()
+	 * @generated
+	 * @ordered
+	 */
+	protected Justification justification;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -564,6 +576,56 @@ public class ShortExecutionImpl extends ExecutionImpl implements ShortExecution 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public Justification getJustification() {
+		return justification;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetJustification(Justification newJustification, NotificationChain msgs) {
+		Justification oldJustification = justification;
+		justification = newJustification;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
+					Execution_metamodelPackage.SHORT_EXECUTION__JUSTIFICATION, oldJustification, newJustification);
+			if (msgs == null)
+				msgs = notification;
+			else
+				msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setJustification(Justification newJustification) {
+		if (newJustification != justification) {
+			NotificationChain msgs = null;
+			if (justification != null)
+				msgs = ((InternalEObject) justification).eInverseRemove(this,
+						EOPPOSITE_FEATURE_BASE - Execution_metamodelPackage.SHORT_EXECUTION__JUSTIFICATION, null, msgs);
+			if (newJustification != null)
+				msgs = ((InternalEObject) newJustification).eInverseAdd(this,
+						EOPPOSITE_FEATURE_BASE - Execution_metamodelPackage.SHORT_EXECUTION__JUSTIFICATION, null, msgs);
+			msgs = basicSetJustification(newJustification, msgs);
+			if (msgs != null)
+				msgs.dispatch();
+		} else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET,
+					Execution_metamodelPackage.SHORT_EXECUTION__JUSTIFICATION, newJustification, newJustification));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -575,6 +637,8 @@ public class ShortExecutionImpl extends ExecutionImpl implements ShortExecution 
 			return basicSetExecutedstep(null, msgs);
 		case Execution_metamodelPackage.SHORT_EXECUTION__LASTPROFESSIONAL:
 			return basicSetLastprofessional(null, msgs);
+		case Execution_metamodelPackage.SHORT_EXECUTION__JUSTIFICATION:
+			return basicSetJustification(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -607,6 +671,8 @@ public class ShortExecutionImpl extends ExecutionImpl implements ShortExecution 
 			return getExecutedstep();
 		case Execution_metamodelPackage.SHORT_EXECUTION__LASTPROFESSIONAL:
 			return getLastprofessional();
+		case Execution_metamodelPackage.SHORT_EXECUTION__JUSTIFICATION:
+			return getJustification();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -648,6 +714,9 @@ public class ShortExecutionImpl extends ExecutionImpl implements ShortExecution 
 			return;
 		case Execution_metamodelPackage.SHORT_EXECUTION__LASTPROFESSIONAL:
 			setLastprofessional((LastProfessional) newValue);
+			return;
+		case Execution_metamodelPackage.SHORT_EXECUTION__JUSTIFICATION:
+			setJustification((Justification) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -691,6 +760,9 @@ public class ShortExecutionImpl extends ExecutionImpl implements ShortExecution 
 		case Execution_metamodelPackage.SHORT_EXECUTION__LASTPROFESSIONAL:
 			setLastprofessional((LastProfessional) null);
 			return;
+		case Execution_metamodelPackage.SHORT_EXECUTION__JUSTIFICATION:
+			setJustification((Justification) null);
+			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -725,6 +797,8 @@ public class ShortExecutionImpl extends ExecutionImpl implements ShortExecution 
 			return executedstep != null;
 		case Execution_metamodelPackage.SHORT_EXECUTION__LASTPROFESSIONAL:
 			return lastprofessional != null;
+		case Execution_metamodelPackage.SHORT_EXECUTION__JUSTIFICATION:
+			return justification != null;
 		}
 		return super.eIsSet(featureID);
 	}
