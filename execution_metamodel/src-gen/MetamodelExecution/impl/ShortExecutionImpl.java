@@ -19,6 +19,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -29,7 +30,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * </p>
  * <ul>
  *   <li>{@link MetamodelExecution.impl.ShortExecutionImpl#getConclusionDate <em>Conclusion Date</em>}</li>
- *   <li>{@link MetamodelExecution.impl.ShortExecutionImpl#isCompletedDate <em>Completed Date</em>}</li>
+ *   <li>{@link MetamodelExecution.impl.ShortExecutionImpl#isCompleted <em>Completed</em>}</li>
  *   <li>{@link MetamodelExecution.impl.ShortExecutionImpl#isAborted <em>Aborted</em>}</li>
  *   <li>{@link MetamodelExecution.impl.ShortExecutionImpl#getLastExecutedStepDate <em>Last Executed Step Date</em>}</li>
  *   <li>{@link MetamodelExecution.impl.ShortExecutionImpl#getPathway <em>Pathway</em>}</li>
@@ -39,11 +40,15 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *   <li>{@link MetamodelExecution.impl.ShortExecutionImpl#getExecutedstep <em>Executedstep</em>}</li>
  *   <li>{@link MetamodelExecution.impl.ShortExecutionImpl#getLastprofessional <em>Lastprofessional</em>}</li>
  *   <li>{@link MetamodelExecution.impl.ShortExecutionImpl#getJustification <em>Justification</em>}</li>
+ *   <li>{@link MetamodelExecution.impl.ShortExecutionImpl#getCreationDate <em>Creation Date</em>}</li>
+ *   <li>{@link MetamodelExecution.impl.ShortExecutionImpl#getIdPathway <em>Id Pathway</em>}</li>
+ *   <li>{@link MetamodelExecution.impl.ShortExecutionImpl#getId <em>Id</em>}</li>
+ *   <li>{@link MetamodelExecution.impl.ShortExecutionImpl#getUrl <em>Url</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class ShortExecutionImpl extends ExecutionImpl implements ShortExecution {
+public class ShortExecutionImpl extends MinimalEObjectImpl.Container implements ShortExecution {
 	/**
 	 * The default value of the '{@link #getConclusionDate() <em>Conclusion Date</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -65,24 +70,24 @@ public class ShortExecutionImpl extends ExecutionImpl implements ShortExecution 
 	protected Date conclusionDate = CONCLUSION_DATE_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #isCompletedDate() <em>Completed Date</em>}' attribute.
+	 * The default value of the '{@link #isCompleted() <em>Completed</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #isCompletedDate()
+	 * @see #isCompleted()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final boolean COMPLETED_DATE_EDEFAULT = false;
+	protected static final boolean COMPLETED_EDEFAULT = false;
 
 	/**
-	 * The cached value of the '{@link #isCompletedDate() <em>Completed Date</em>}' attribute.
+	 * The cached value of the '{@link #isCompleted() <em>Completed</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #isCompletedDate()
+	 * @see #isCompleted()
 	 * @generated
 	 * @ordered
 	 */
-	protected boolean completedDate = COMPLETED_DATE_EDEFAULT;
+	protected boolean completed = COMPLETED_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #isAborted() <em>Aborted</em>}' attribute.
@@ -112,7 +117,7 @@ public class ShortExecutionImpl extends ExecutionImpl implements ShortExecution 
 	 * @generated
 	 * @ordered
 	 */
-	protected static final Date LAST_EXECUTED_STEP_DATE_EDEFAULT = null;
+	protected static final String LAST_EXECUTED_STEP_DATE_EDEFAULT = null;
 
 	/**
 	 * The cached value of the '{@link #getLastExecutedStepDate() <em>Last Executed Step Date</em>}' attribute.
@@ -122,7 +127,7 @@ public class ShortExecutionImpl extends ExecutionImpl implements ShortExecution 
 	 * @generated
 	 * @ordered
 	 */
-	protected Date lastExecutedStepDate = LAST_EXECUTED_STEP_DATE_EDEFAULT;
+	protected String lastExecutedStepDate = LAST_EXECUTED_STEP_DATE_EDEFAULT;
 
 	/**
 	 * The cached value of the '{@link #getPathway() <em>Pathway</em>}' containment reference.
@@ -215,6 +220,86 @@ public class ShortExecutionImpl extends ExecutionImpl implements ShortExecution 
 	protected Justification justification;
 
 	/**
+	 * The default value of the '{@link #getCreationDate() <em>Creation Date</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getCreationDate()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final Date CREATION_DATE_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getCreationDate() <em>Creation Date</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getCreationDate()
+	 * @generated
+	 * @ordered
+	 */
+	protected Date creationDate = CREATION_DATE_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getIdPathway() <em>Id Pathway</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getIdPathway()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final int ID_PATHWAY_EDEFAULT = 0;
+
+	/**
+	 * The cached value of the '{@link #getIdPathway() <em>Id Pathway</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getIdPathway()
+	 * @generated
+	 * @ordered
+	 */
+	protected int idPathway = ID_PATHWAY_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getId() <em>Id</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getId()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final int ID_EDEFAULT = 0;
+
+	/**
+	 * The cached value of the '{@link #getId() <em>Id</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getId()
+	 * @generated
+	 * @ordered
+	 */
+	protected int id = ID_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getUrl() <em>Url</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getUrl()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String URL_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getUrl() <em>Url</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getUrl()
+	 * @generated
+	 * @ordered
+	 */
+	protected String url = URL_EDEFAULT;
+
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -260,8 +345,8 @@ public class ShortExecutionImpl extends ExecutionImpl implements ShortExecution 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean isCompletedDate() {
-		return completedDate;
+	public boolean isCompleted() {
+		return completed;
 	}
 
 	/**
@@ -269,12 +354,12 @@ public class ShortExecutionImpl extends ExecutionImpl implements ShortExecution 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setCompletedDate(boolean newCompletedDate) {
-		boolean oldCompletedDate = completedDate;
-		completedDate = newCompletedDate;
+	public void setCompleted(boolean newCompleted) {
+		boolean oldCompleted = completed;
+		completed = newCompleted;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET,
-					Execution_metamodelPackage.SHORT_EXECUTION__COMPLETED_DATE, oldCompletedDate, completedDate));
+			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.SHORT_EXECUTION__COMPLETED,
+					oldCompleted, completed));
 	}
 
 	/**
@@ -304,7 +389,7 @@ public class ShortExecutionImpl extends ExecutionImpl implements ShortExecution 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Date getLastExecutedStepDate() {
+	public String getLastExecutedStepDate() {
 		return lastExecutedStepDate;
 	}
 
@@ -313,8 +398,8 @@ public class ShortExecutionImpl extends ExecutionImpl implements ShortExecution 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setLastExecutedStepDate(Date newLastExecutedStepDate) {
-		Date oldLastExecutedStepDate = lastExecutedStepDate;
+	public void setLastExecutedStepDate(String newLastExecutedStepDate) {
+		String oldLastExecutedStepDate = lastExecutedStepDate;
 		lastExecutedStepDate = newLastExecutedStepDate;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET,
@@ -626,6 +711,94 @@ public class ShortExecutionImpl extends ExecutionImpl implements ShortExecution 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public Date getCreationDate() {
+		return creationDate;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setCreationDate(Date newCreationDate) {
+		Date oldCreationDate = creationDate;
+		creationDate = newCreationDate;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET,
+					Execution_metamodelPackage.SHORT_EXECUTION__CREATION_DATE, oldCreationDate, creationDate));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public int getIdPathway() {
+		return idPathway;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setIdPathway(int newIdPathway) {
+		int oldIdPathway = idPathway;
+		idPathway = newIdPathway;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET,
+					Execution_metamodelPackage.SHORT_EXECUTION__ID_PATHWAY, oldIdPathway, idPathway));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public int getId() {
+		return id;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setId(int newId) {
+		int oldId = id;
+		id = newId;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.SHORT_EXECUTION__ID, oldId,
+					id));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getUrl() {
+		return url;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setUrl(String newUrl) {
+		String oldUrl = url;
+		url = newUrl;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.SHORT_EXECUTION__URL,
+					oldUrl, url));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -653,8 +826,8 @@ public class ShortExecutionImpl extends ExecutionImpl implements ShortExecution 
 		switch (featureID) {
 		case Execution_metamodelPackage.SHORT_EXECUTION__CONCLUSION_DATE:
 			return getConclusionDate();
-		case Execution_metamodelPackage.SHORT_EXECUTION__COMPLETED_DATE:
-			return isCompletedDate();
+		case Execution_metamodelPackage.SHORT_EXECUTION__COMPLETED:
+			return isCompleted();
 		case Execution_metamodelPackage.SHORT_EXECUTION__ABORTED:
 			return isAborted();
 		case Execution_metamodelPackage.SHORT_EXECUTION__LAST_EXECUTED_STEP_DATE:
@@ -673,6 +846,14 @@ public class ShortExecutionImpl extends ExecutionImpl implements ShortExecution 
 			return getLastprofessional();
 		case Execution_metamodelPackage.SHORT_EXECUTION__JUSTIFICATION:
 			return getJustification();
+		case Execution_metamodelPackage.SHORT_EXECUTION__CREATION_DATE:
+			return getCreationDate();
+		case Execution_metamodelPackage.SHORT_EXECUTION__ID_PATHWAY:
+			return getIdPathway();
+		case Execution_metamodelPackage.SHORT_EXECUTION__ID:
+			return getId();
+		case Execution_metamodelPackage.SHORT_EXECUTION__URL:
+			return getUrl();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -688,14 +869,14 @@ public class ShortExecutionImpl extends ExecutionImpl implements ShortExecution 
 		case Execution_metamodelPackage.SHORT_EXECUTION__CONCLUSION_DATE:
 			setConclusionDate((Date) newValue);
 			return;
-		case Execution_metamodelPackage.SHORT_EXECUTION__COMPLETED_DATE:
-			setCompletedDate((Boolean) newValue);
+		case Execution_metamodelPackage.SHORT_EXECUTION__COMPLETED:
+			setCompleted((Boolean) newValue);
 			return;
 		case Execution_metamodelPackage.SHORT_EXECUTION__ABORTED:
 			setAborted((Boolean) newValue);
 			return;
 		case Execution_metamodelPackage.SHORT_EXECUTION__LAST_EXECUTED_STEP_DATE:
-			setLastExecutedStepDate((Date) newValue);
+			setLastExecutedStepDate((String) newValue);
 			return;
 		case Execution_metamodelPackage.SHORT_EXECUTION__PATHWAY:
 			setPathway((Pathway) newValue);
@@ -718,6 +899,18 @@ public class ShortExecutionImpl extends ExecutionImpl implements ShortExecution 
 		case Execution_metamodelPackage.SHORT_EXECUTION__JUSTIFICATION:
 			setJustification((Justification) newValue);
 			return;
+		case Execution_metamodelPackage.SHORT_EXECUTION__CREATION_DATE:
+			setCreationDate((Date) newValue);
+			return;
+		case Execution_metamodelPackage.SHORT_EXECUTION__ID_PATHWAY:
+			setIdPathway((Integer) newValue);
+			return;
+		case Execution_metamodelPackage.SHORT_EXECUTION__ID:
+			setId((Integer) newValue);
+			return;
+		case Execution_metamodelPackage.SHORT_EXECUTION__URL:
+			setUrl((String) newValue);
+			return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -733,8 +926,8 @@ public class ShortExecutionImpl extends ExecutionImpl implements ShortExecution 
 		case Execution_metamodelPackage.SHORT_EXECUTION__CONCLUSION_DATE:
 			setConclusionDate(CONCLUSION_DATE_EDEFAULT);
 			return;
-		case Execution_metamodelPackage.SHORT_EXECUTION__COMPLETED_DATE:
-			setCompletedDate(COMPLETED_DATE_EDEFAULT);
+		case Execution_metamodelPackage.SHORT_EXECUTION__COMPLETED:
+			setCompleted(COMPLETED_EDEFAULT);
 			return;
 		case Execution_metamodelPackage.SHORT_EXECUTION__ABORTED:
 			setAborted(ABORTED_EDEFAULT);
@@ -763,6 +956,18 @@ public class ShortExecutionImpl extends ExecutionImpl implements ShortExecution 
 		case Execution_metamodelPackage.SHORT_EXECUTION__JUSTIFICATION:
 			setJustification((Justification) null);
 			return;
+		case Execution_metamodelPackage.SHORT_EXECUTION__CREATION_DATE:
+			setCreationDate(CREATION_DATE_EDEFAULT);
+			return;
+		case Execution_metamodelPackage.SHORT_EXECUTION__ID_PATHWAY:
+			setIdPathway(ID_PATHWAY_EDEFAULT);
+			return;
+		case Execution_metamodelPackage.SHORT_EXECUTION__ID:
+			setId(ID_EDEFAULT);
+			return;
+		case Execution_metamodelPackage.SHORT_EXECUTION__URL:
+			setUrl(URL_EDEFAULT);
+			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -778,8 +983,8 @@ public class ShortExecutionImpl extends ExecutionImpl implements ShortExecution 
 		case Execution_metamodelPackage.SHORT_EXECUTION__CONCLUSION_DATE:
 			return CONCLUSION_DATE_EDEFAULT == null ? conclusionDate != null
 					: !CONCLUSION_DATE_EDEFAULT.equals(conclusionDate);
-		case Execution_metamodelPackage.SHORT_EXECUTION__COMPLETED_DATE:
-			return completedDate != COMPLETED_DATE_EDEFAULT;
+		case Execution_metamodelPackage.SHORT_EXECUTION__COMPLETED:
+			return completed != COMPLETED_EDEFAULT;
 		case Execution_metamodelPackage.SHORT_EXECUTION__ABORTED:
 			return aborted != ABORTED_EDEFAULT;
 		case Execution_metamodelPackage.SHORT_EXECUTION__LAST_EXECUTED_STEP_DATE:
@@ -799,6 +1004,14 @@ public class ShortExecutionImpl extends ExecutionImpl implements ShortExecution 
 			return lastprofessional != null;
 		case Execution_metamodelPackage.SHORT_EXECUTION__JUSTIFICATION:
 			return justification != null;
+		case Execution_metamodelPackage.SHORT_EXECUTION__CREATION_DATE:
+			return CREATION_DATE_EDEFAULT == null ? creationDate != null : !CREATION_DATE_EDEFAULT.equals(creationDate);
+		case Execution_metamodelPackage.SHORT_EXECUTION__ID_PATHWAY:
+			return idPathway != ID_PATHWAY_EDEFAULT;
+		case Execution_metamodelPackage.SHORT_EXECUTION__ID:
+			return id != ID_EDEFAULT;
+		case Execution_metamodelPackage.SHORT_EXECUTION__URL:
+			return URL_EDEFAULT == null ? url != null : !URL_EDEFAULT.equals(url);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -816,8 +1029,8 @@ public class ShortExecutionImpl extends ExecutionImpl implements ShortExecution 
 		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (conclusionDate: ");
 		result.append(conclusionDate);
-		result.append(", completedDate: ");
-		result.append(completedDate);
+		result.append(", completed: ");
+		result.append(completed);
 		result.append(", aborted: ");
 		result.append(aborted);
 		result.append(", lastExecutedStepDate: ");
@@ -826,6 +1039,14 @@ public class ShortExecutionImpl extends ExecutionImpl implements ShortExecution 
 		result.append(idResponsible);
 		result.append(", idLastProfessional: ");
 		result.append(idLastProfessional);
+		result.append(", creationDate: ");
+		result.append(creationDate);
+		result.append(", idPathway: ");
+		result.append(idPathway);
+		result.append(", id: ");
+		result.append(id);
+		result.append(", url: ");
+		result.append(url);
 		result.append(')');
 		return result.toString();
 	}

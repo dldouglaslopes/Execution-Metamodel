@@ -4,6 +4,8 @@ package MetamodelExecution;
 
 import java.util.Date;
 
+import org.eclipse.emf.ecore.EObject;
+
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Short Execution</b></em>'.
@@ -14,7 +16,7 @@ import java.util.Date;
  * </p>
  * <ul>
  *   <li>{@link MetamodelExecution.ShortExecution#getConclusionDate <em>Conclusion Date</em>}</li>
- *   <li>{@link MetamodelExecution.ShortExecution#isCompletedDate <em>Completed Date</em>}</li>
+ *   <li>{@link MetamodelExecution.ShortExecution#isCompleted <em>Completed</em>}</li>
  *   <li>{@link MetamodelExecution.ShortExecution#isAborted <em>Aborted</em>}</li>
  *   <li>{@link MetamodelExecution.ShortExecution#getLastExecutedStepDate <em>Last Executed Step Date</em>}</li>
  *   <li>{@link MetamodelExecution.ShortExecution#getPathway <em>Pathway</em>}</li>
@@ -24,13 +26,17 @@ import java.util.Date;
  *   <li>{@link MetamodelExecution.ShortExecution#getExecutedstep <em>Executedstep</em>}</li>
  *   <li>{@link MetamodelExecution.ShortExecution#getLastprofessional <em>Lastprofessional</em>}</li>
  *   <li>{@link MetamodelExecution.ShortExecution#getJustification <em>Justification</em>}</li>
+ *   <li>{@link MetamodelExecution.ShortExecution#getCreationDate <em>Creation Date</em>}</li>
+ *   <li>{@link MetamodelExecution.ShortExecution#getIdPathway <em>Id Pathway</em>}</li>
+ *   <li>{@link MetamodelExecution.ShortExecution#getId <em>Id</em>}</li>
+ *   <li>{@link MetamodelExecution.ShortExecution#getUrl <em>Url</em>}</li>
  * </ul>
  *
  * @see MetamodelExecution.Execution_metamodelPackage#getShortExecution()
  * @model
  * @generated
  */
-public interface ShortExecution extends Execution {
+public interface ShortExecution extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Conclusion Date</b></em>' attribute.
 	 * <!-- begin-user-doc -->
@@ -58,31 +64,31 @@ public interface ShortExecution extends Execution {
 	void setConclusionDate(Date value);
 
 	/**
-	 * Returns the value of the '<em><b>Completed Date</b></em>' attribute.
+	 * Returns the value of the '<em><b>Completed</b></em>' attribute.
 	 * The default value is <code>"false"</code>.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Completed Date</em>' attribute isn't clear,
+	 * If the meaning of the '<em>Completed</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Completed Date</em>' attribute.
-	 * @see #setCompletedDate(boolean)
-	 * @see MetamodelExecution.Execution_metamodelPackage#getShortExecution_CompletedDate()
+	 * @return the value of the '<em>Completed</em>' attribute.
+	 * @see #setCompleted(boolean)
+	 * @see MetamodelExecution.Execution_metamodelPackage#getShortExecution_Completed()
 	 * @model default="false"
 	 * @generated
 	 */
-	boolean isCompletedDate();
+	boolean isCompleted();
 
 	/**
-	 * Sets the value of the '{@link MetamodelExecution.ShortExecution#isCompletedDate <em>Completed Date</em>}' attribute.
+	 * Sets the value of the '{@link MetamodelExecution.ShortExecution#isCompleted <em>Completed</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Completed Date</em>' attribute.
-	 * @see #isCompletedDate()
+	 * @param value the new value of the '<em>Completed</em>' attribute.
+	 * @see #isCompleted()
 	 * @generated
 	 */
-	void setCompletedDate(boolean value);
+	void setCompleted(boolean value);
 
 	/**
 	 * Returns the value of the '<em><b>Aborted</b></em>' attribute.
@@ -119,12 +125,12 @@ public interface ShortExecution extends Execution {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Last Executed Step Date</em>' attribute.
-	 * @see #setLastExecutedStepDate(Date)
+	 * @see #setLastExecutedStepDate(String)
 	 * @see MetamodelExecution.Execution_metamodelPackage#getShortExecution_LastExecutedStepDate()
 	 * @model
 	 * @generated
 	 */
-	Date getLastExecutedStepDate();
+	String getLastExecutedStepDate();
 
 	/**
 	 * Sets the value of the '{@link MetamodelExecution.ShortExecution#getLastExecutedStepDate <em>Last Executed Step Date</em>}' attribute.
@@ -134,7 +140,7 @@ public interface ShortExecution extends Execution {
 	 * @see #getLastExecutedStepDate()
 	 * @generated
 	 */
-	void setLastExecutedStepDate(Date value);
+	void setLastExecutedStepDate(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Pathway</b></em>' containment reference.
@@ -317,5 +323,109 @@ public interface ShortExecution extends Execution {
 	 * @generated
 	 */
 	void setJustification(Justification value);
+
+	/**
+	 * Returns the value of the '<em><b>Creation Date</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Creation Date</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Creation Date</em>' attribute.
+	 * @see #setCreationDate(Date)
+	 * @see MetamodelExecution.Execution_metamodelPackage#getShortExecution_CreationDate()
+	 * @model
+	 * @generated
+	 */
+	Date getCreationDate();
+
+	/**
+	 * Sets the value of the '{@link MetamodelExecution.ShortExecution#getCreationDate <em>Creation Date</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Creation Date</em>' attribute.
+	 * @see #getCreationDate()
+	 * @generated
+	 */
+	void setCreationDate(Date value);
+
+	/**
+	 * Returns the value of the '<em><b>Id Pathway</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Id Pathway</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Id Pathway</em>' attribute.
+	 * @see #setIdPathway(int)
+	 * @see MetamodelExecution.Execution_metamodelPackage#getShortExecution_IdPathway()
+	 * @model
+	 * @generated
+	 */
+	int getIdPathway();
+
+	/**
+	 * Sets the value of the '{@link MetamodelExecution.ShortExecution#getIdPathway <em>Id Pathway</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Id Pathway</em>' attribute.
+	 * @see #getIdPathway()
+	 * @generated
+	 */
+	void setIdPathway(int value);
+
+	/**
+	 * Returns the value of the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Id</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Id</em>' attribute.
+	 * @see #setId(int)
+	 * @see MetamodelExecution.Execution_metamodelPackage#getShortExecution_Id()
+	 * @model
+	 * @generated
+	 */
+	int getId();
+
+	/**
+	 * Sets the value of the '{@link MetamodelExecution.ShortExecution#getId <em>Id</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Id</em>' attribute.
+	 * @see #getId()
+	 * @generated
+	 */
+	void setId(int value);
+
+	/**
+	 * Returns the value of the '<em><b>Url</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Url</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Url</em>' attribute.
+	 * @see #setUrl(String)
+	 * @see MetamodelExecution.Execution_metamodelPackage#getShortExecution_Url()
+	 * @model
+	 * @generated
+	 */
+	String getUrl();
+
+	/**
+	 * Sets the value of the '{@link MetamodelExecution.ShortExecution#getUrl <em>Url</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Url</em>' attribute.
+	 * @see #getUrl()
+	 * @generated
+	 */
+	void setUrl(String value);
 
 } // ShortExecution

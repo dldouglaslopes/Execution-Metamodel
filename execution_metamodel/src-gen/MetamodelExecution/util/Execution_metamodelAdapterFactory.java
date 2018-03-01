@@ -212,11 +212,6 @@ public class Execution_metamodelAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
-		public Adapter caseExecution(Execution object) {
-			return createExecutionAdapter();
-		}
-
-		@Override
 		public Adapter caseNumeric(Numeric object) {
 			return createNumericAdapter();
 		}
@@ -678,20 +673,6 @@ public class Execution_metamodelAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createAnswerAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link MetamodelExecution.Execution <em>Execution</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see MetamodelExecution.Execution
-	 * @generated
-	 */
-	public Adapter createExecutionAdapter() {
 		return null;
 	}
 

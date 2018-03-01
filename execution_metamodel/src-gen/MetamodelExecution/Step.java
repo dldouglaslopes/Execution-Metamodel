@@ -4,6 +4,8 @@ package MetamodelExecution;
 
 import java.util.Date;
 
+import org.eclipse.emf.ecore.EObject;
+
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Step</b></em>'.
@@ -25,9 +27,7 @@ import java.util.Date;
  *   <li>{@link MetamodelExecution.Step#getIdStep <em>Id Step</em>}</li>
  *   <li>{@link MetamodelExecution.Step#getIdExecutedProtocol <em>Id Executed Protocol</em>}</li>
  *   <li>{@link MetamodelExecution.Step#getIdPathway <em>Id Pathway</em>}</li>
- *   <li>{@link MetamodelExecution.Step#getId <em>Id</em>}</li>
  *   <li>{@link MetamodelExecution.Step#getCreationDate <em>Creation Date</em>}</li>
- *   <li>{@link MetamodelExecution.Step#getUrl <em>Url</em>}</li>
  *   <li>{@link MetamodelExecution.Step#getJustification <em>Justification</em>}</li>
  * </ul>
  *
@@ -35,7 +35,7 @@ import java.util.Date;
  * @model abstract="true"
  * @generated
  */
-public interface Step extends Execution {
+public interface Step extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Type</b></em>' attribute.
 	 * <!-- begin-user-doc -->
@@ -352,32 +352,6 @@ public interface Step extends Execution {
 	void setIdPathway(int value);
 
 	/**
-	 * Returns the value of the '<em><b>Id</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Id</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Id</em>' attribute.
-	 * @see #setId(int)
-	 * @see MetamodelExecution.Execution_metamodelPackage#getStep_Id()
-	 * @model
-	 * @generated
-	 */
-	int getId();
-
-	/**
-	 * Sets the value of the '{@link MetamodelExecution.Step#getId <em>Id</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Id</em>' attribute.
-	 * @see #getId()
-	 * @generated
-	 */
-	void setId(int value);
-
-	/**
 	 * Returns the value of the '<em><b>Creation Date</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <p>
@@ -402,32 +376,6 @@ public interface Step extends Execution {
 	 * @generated
 	 */
 	void setCreationDate(Date value);
-
-	/**
-	 * Returns the value of the '<em><b>Url</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Url</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Url</em>' attribute.
-	 * @see #setUrl(String)
-	 * @see MetamodelExecution.Execution_metamodelPackage#getStep_Url()
-	 * @model
-	 * @generated
-	 */
-	String getUrl();
-
-	/**
-	 * Sets the value of the '{@link MetamodelExecution.Step#getUrl <em>Url</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Url</em>' attribute.
-	 * @see #getUrl()
-	 * @generated
-	 */
-	void setUrl(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Justification</b></em>' containment reference.

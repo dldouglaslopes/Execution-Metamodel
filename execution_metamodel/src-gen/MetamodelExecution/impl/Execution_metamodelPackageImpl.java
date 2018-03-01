@@ -13,7 +13,6 @@ import MetamodelExecution.Exam;
 import MetamodelExecution.Examination;
 import MetamodelExecution.ExaminationPrescription;
 import MetamodelExecution.ExecutedStep;
-import MetamodelExecution.Execution;
 import MetamodelExecution.Execution_metamodelFactory;
 import MetamodelExecution.Execution_metamodelPackage;
 import MetamodelExecution.Executor;
@@ -267,13 +266,6 @@ public class Execution_metamodelPackageImpl extends EPackageImpl implements Exec
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass executionEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	private EClass numericEClass = null;
 
 	/**
@@ -514,7 +506,7 @@ public class Execution_metamodelPackageImpl extends EPackageImpl implements Exec
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getStep_Id() {
+	public EAttribute getStep_CreationDate() {
 		return (EAttribute) stepEClass.getEStructuralFeatures().get(12);
 	}
 
@@ -523,26 +515,8 @@ public class Execution_metamodelPackageImpl extends EPackageImpl implements Exec
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getStep_CreationDate() {
-		return (EAttribute) stepEClass.getEStructuralFeatures().get(13);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getStep_Url() {
-		return (EAttribute) stepEClass.getEStructuralFeatures().get(14);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EReference getStep_Justification() {
-		return (EReference) stepEClass.getEStructuralFeatures().get(15);
+		return (EReference) stepEClass.getEStructuralFeatures().get(13);
 	}
 
 	/**
@@ -1279,7 +1253,7 @@ public class Execution_metamodelPackageImpl extends EPackageImpl implements Exec
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getShortExecution_CompletedDate() {
+	public EAttribute getShortExecution_Completed() {
 		return (EAttribute) shortExecutionEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -1362,6 +1336,42 @@ public class Execution_metamodelPackageImpl extends EPackageImpl implements Exec
 	 */
 	public EReference getShortExecution_Justification() {
 		return (EReference) shortExecutionEClass.getEStructuralFeatures().get(10);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getShortExecution_CreationDate() {
+		return (EAttribute) shortExecutionEClass.getEStructuralFeatures().get(11);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getShortExecution_IdPathway() {
+		return (EAttribute) shortExecutionEClass.getEStructuralFeatures().get(12);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getShortExecution_Id() {
+		return (EAttribute) shortExecutionEClass.getEStructuralFeatures().get(13);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getShortExecution_Url() {
+		return (EAttribute) shortExecutionEClass.getEStructuralFeatures().get(14);
 	}
 
 	/**
@@ -1720,15 +1730,6 @@ public class Execution_metamodelPackageImpl extends EPackageImpl implements Exec
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getExecution() {
-		return executionEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getNumeric() {
 		return numericEClass;
 	}
@@ -1936,6 +1937,42 @@ public class Execution_metamodelPackageImpl extends EPackageImpl implements Exec
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getModeling_Code() {
+		return (EAttribute) modelingEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getModeling_Name() {
+		return (EAttribute) modelingEClass.getEStructuralFeatures().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getModeling_Id() {
+		return (EAttribute) modelingEClass.getEStructuralFeatures().get(6);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getModeling_Url() {
+		return (EAttribute) modelingEClass.getEStructuralFeatures().get(7);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getCreator() {
 		return creatorEClass;
 	}
@@ -2000,9 +2037,7 @@ public class Execution_metamodelPackageImpl extends EPackageImpl implements Exec
 		createEAttribute(stepEClass, STEP__ID_STEP);
 		createEAttribute(stepEClass, STEP__ID_EXECUTED_PROTOCOL);
 		createEAttribute(stepEClass, STEP__ID_PATHWAY);
-		createEAttribute(stepEClass, STEP__ID);
 		createEAttribute(stepEClass, STEP__CREATION_DATE);
-		createEAttribute(stepEClass, STEP__URL);
 		createEReference(stepEClass, STEP__JUSTIFICATION);
 
 		auxiliaryConductEClass = createEClass(AUXILIARY_CONDUCT);
@@ -2106,7 +2141,7 @@ public class Execution_metamodelPackageImpl extends EPackageImpl implements Exec
 
 		shortExecutionEClass = createEClass(SHORT_EXECUTION);
 		createEAttribute(shortExecutionEClass, SHORT_EXECUTION__CONCLUSION_DATE);
-		createEAttribute(shortExecutionEClass, SHORT_EXECUTION__COMPLETED_DATE);
+		createEAttribute(shortExecutionEClass, SHORT_EXECUTION__COMPLETED);
 		createEAttribute(shortExecutionEClass, SHORT_EXECUTION__ABORTED);
 		createEAttribute(shortExecutionEClass, SHORT_EXECUTION__LAST_EXECUTED_STEP_DATE);
 		createEReference(shortExecutionEClass, SHORT_EXECUTION__PATHWAY);
@@ -2116,6 +2151,10 @@ public class Execution_metamodelPackageImpl extends EPackageImpl implements Exec
 		createEReference(shortExecutionEClass, SHORT_EXECUTION__EXECUTEDSTEP);
 		createEReference(shortExecutionEClass, SHORT_EXECUTION__LASTPROFESSIONAL);
 		createEReference(shortExecutionEClass, SHORT_EXECUTION__JUSTIFICATION);
+		createEAttribute(shortExecutionEClass, SHORT_EXECUTION__CREATION_DATE);
+		createEAttribute(shortExecutionEClass, SHORT_EXECUTION__ID_PATHWAY);
+		createEAttribute(shortExecutionEClass, SHORT_EXECUTION__ID);
+		createEAttribute(shortExecutionEClass, SHORT_EXECUTION__URL);
 
 		justificationEClass = createEClass(JUSTIFICATION);
 		createEAttribute(justificationEClass, JUSTIFICATION__ID);
@@ -2163,8 +2202,6 @@ public class Execution_metamodelPackageImpl extends EPackageImpl implements Exec
 		createEReference(answerEClass, ANSWER__VALUE);
 		createEReference(answerEClass, ANSWER__QUESTION);
 
-		executionEClass = createEClass(EXECUTION);
-
 		numericEClass = createEClass(NUMERIC);
 		createEAttribute(numericEClass, NUMERIC__VALUE);
 
@@ -2192,6 +2229,10 @@ public class Execution_metamodelPackageImpl extends EPackageImpl implements Exec
 		createEAttribute(modelingEClass, MODELING__COMPLETED);
 		createEAttribute(modelingEClass, MODELING__VERSION);
 		createEAttribute(modelingEClass, MODELING__ID_REPOSITORY);
+		createEAttribute(modelingEClass, MODELING__CODE);
+		createEAttribute(modelingEClass, MODELING__NAME);
+		createEAttribute(modelingEClass, MODELING__ID);
+		createEAttribute(modelingEClass, MODELING__URL);
 
 		creatorEClass = createEClass(CREATOR);
 
@@ -2233,14 +2274,12 @@ public class Execution_metamodelPackageImpl extends EPackageImpl implements Exec
 		// Set bounds for type parameters
 
 		// Add supertypes to classes
-		stepEClass.getESuperTypes().add(this.getExecution());
 		auxiliaryConductEClass.getESuperTypes().add(this.getCompleteStep());
 		informationEClass.getESuperTypes().add(this.getCompleteStep());
 		dischargeEClass.getESuperTypes().add(this.getCompleteStep());
 		referralEClass.getESuperTypes().add(this.getCompleteStep());
 		prescriptionEClass.getESuperTypes().add(this.getCompleteStep());
 		treatmentEClass.getESuperTypes().add(this.getCompleteStep());
-		shortExecutionEClass.getESuperTypes().add(this.getExecution());
 		executedStepEClass.getESuperTypes().add(this.getStep());
 		userEClass.getESuperTypes().add(this.getCreator());
 		userEClass.getESuperTypes().add(this.getExecutor());
@@ -2249,7 +2288,6 @@ public class Execution_metamodelPackageImpl extends EPackageImpl implements Exec
 		numericEClass.getESuperTypes().add(this.getValue());
 		yesOrNoEClass.getESuperTypes().add(this.getValue());
 		completeStepEClass.getESuperTypes().add(this.getStep());
-		modelingEClass.getESuperTypes().add(this.getExecution());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(stepEClass, Step.class, "Step", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -2280,12 +2318,8 @@ public class Execution_metamodelPackageImpl extends EPackageImpl implements Exec
 				IS_ORDERED);
 		initEAttribute(getStep_IdPathway(), ecorePackage.getEInt(), "idPathway", null, 0, 1, Step.class, !IS_TRANSIENT,
 				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getStep_Id(), ecorePackage.getEInt(), "id", null, 0, 1, Step.class, !IS_TRANSIENT, !IS_VOLATILE,
-				IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getStep_CreationDate(), ecorePackage.getEDate(), "creationDate", null, 0, 1, Step.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getStep_Url(), ecorePackage.getEString(), "url", null, 0, 1, Step.class, !IS_TRANSIENT,
-				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getStep_Justification(), this.getJustification(), null, "justification", null, 0, 1, Step.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -2499,14 +2533,14 @@ public class Execution_metamodelPackageImpl extends EPackageImpl implements Exec
 		initEAttribute(getShortExecution_ConclusionDate(), ecorePackage.getEDate(), "conclusionDate", null, 0, 1,
 				ShortExecution.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
 				!IS_DERIVED, IS_ORDERED);
-		initEAttribute(getShortExecution_CompletedDate(), ecorePackage.getEBoolean(), "completedDate", "false", 0, 1,
+		initEAttribute(getShortExecution_Completed(), ecorePackage.getEBoolean(), "completed", "false", 0, 1,
 				ShortExecution.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
 				!IS_DERIVED, IS_ORDERED);
 		initEAttribute(getShortExecution_Aborted(), ecorePackage.getEBoolean(), "aborted", null, 0, 1,
 				ShortExecution.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
 				!IS_DERIVED, IS_ORDERED);
-		initEAttribute(getShortExecution_LastExecutedStepDate(), ecorePackage.getEDate(), "lastExecutedStepDate", null,
-				0, 1, ShortExecution.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
+		initEAttribute(getShortExecution_LastExecutedStepDate(), ecorePackage.getEString(), "lastExecutedStepDate",
+				null, 0, 1, ShortExecution.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getShortExecution_Pathway(), this.getPathway(), null, "pathway", null, 1, 1,
 				ShortExecution.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
@@ -2529,6 +2563,16 @@ public class Execution_metamodelPackageImpl extends EPackageImpl implements Exec
 		initEReference(getShortExecution_Justification(), this.getJustification(), null, "justification", null, 0, 1,
 				ShortExecution.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getShortExecution_CreationDate(), ecorePackage.getEDate(), "creationDate", null, 0, 1,
+				ShortExecution.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
+		initEAttribute(getShortExecution_IdPathway(), ecorePackage.getEInt(), "idPathway", null, 0, 1,
+				ShortExecution.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
+		initEAttribute(getShortExecution_Id(), ecorePackage.getEInt(), "id", null, 0, 1, ShortExecution.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getShortExecution_Url(), ecorePackage.getEString(), "url", null, 0, 1, ShortExecution.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(justificationEClass, Justification.class, "Justification", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
@@ -2621,9 +2665,6 @@ public class Execution_metamodelPackageImpl extends EPackageImpl implements Exec
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(executionEClass, Execution.class, "Execution", !IS_ABSTRACT, !IS_INTERFACE,
-				IS_GENERATED_INSTANCE_CLASS);
-
 		initEClass(numericEClass, Numeric.class, "Numeric", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getNumeric_Value(), ecorePackage.getEDoubleObject(), "value", null, 0, 1, Numeric.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -2675,6 +2716,14 @@ public class Execution_metamodelPackageImpl extends EPackageImpl implements Exec
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getModeling_IdRepository(), ecorePackage.getEInt(), "idRepository", null, 0, 1, Modeling.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getModeling_Code(), ecorePackage.getEString(), "code", null, 0, 1, Modeling.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getModeling_Name(), ecorePackage.getEString(), "name", null, 0, 1, Modeling.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getModeling_Id(), ecorePackage.getEInt(), "id", null, 0, 1, Modeling.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getModeling_Url(), ecorePackage.getEString(), "url", null, 0, 1, Modeling.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(creatorEClass, Creator.class, "Creator", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 

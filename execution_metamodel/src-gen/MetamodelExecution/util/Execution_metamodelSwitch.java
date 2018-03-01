@@ -70,8 +70,6 @@ public class Execution_metamodelSwitch<T> extends Switch<T> {
 			Step step = (Step) theEObject;
 			T result = caseStep(step);
 			if (result == null)
-				result = caseExecution(step);
-			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
 		}
@@ -82,8 +80,6 @@ public class Execution_metamodelSwitch<T> extends Switch<T> {
 				result = caseCompleteStep(auxiliaryConduct);
 			if (result == null)
 				result = caseStep(auxiliaryConduct);
-			if (result == null)
-				result = caseExecution(auxiliaryConduct);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -96,8 +92,6 @@ public class Execution_metamodelSwitch<T> extends Switch<T> {
 			if (result == null)
 				result = caseStep(information);
 			if (result == null)
-				result = caseExecution(information);
-			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
 		}
@@ -108,8 +102,6 @@ public class Execution_metamodelSwitch<T> extends Switch<T> {
 				result = caseCompleteStep(discharge);
 			if (result == null)
 				result = caseStep(discharge);
-			if (result == null)
-				result = caseExecution(discharge);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -122,8 +114,6 @@ public class Execution_metamodelSwitch<T> extends Switch<T> {
 			if (result == null)
 				result = caseStep(referral);
 			if (result == null)
-				result = caseExecution(referral);
-			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
 		}
@@ -135,8 +125,6 @@ public class Execution_metamodelSwitch<T> extends Switch<T> {
 			if (result == null)
 				result = caseStep(prescription);
 			if (result == null)
-				result = caseExecution(prescription);
-			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
 		}
@@ -147,8 +135,6 @@ public class Execution_metamodelSwitch<T> extends Switch<T> {
 				result = caseCompleteStep(treatment);
 			if (result == null)
 				result = caseStep(treatment);
-			if (result == null)
-				result = caseExecution(treatment);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -255,8 +241,6 @@ public class Execution_metamodelSwitch<T> extends Switch<T> {
 			ShortExecution shortExecution = (ShortExecution) theEObject;
 			T result = caseShortExecution(shortExecution);
 			if (result == null)
-				result = caseExecution(shortExecution);
-			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
 		}
@@ -286,8 +270,6 @@ public class Execution_metamodelSwitch<T> extends Switch<T> {
 			T result = caseExecutedStep(executedStep);
 			if (result == null)
 				result = caseStep(executedStep);
-			if (result == null)
-				result = caseExecution(executedStep);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -321,13 +303,6 @@ public class Execution_metamodelSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case Execution_metamodelPackage.EXECUTION: {
-			Execution execution = (Execution) theEObject;
-			T result = caseExecution(execution);
-			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
 		case Execution_metamodelPackage.NUMERIC: {
 			Numeric numeric = (Numeric) theEObject;
 			T result = caseNumeric(numeric);
@@ -352,8 +327,6 @@ public class Execution_metamodelSwitch<T> extends Switch<T> {
 			if (result == null)
 				result = caseStep(completeStep);
 			if (result == null)
-				result = caseExecution(completeStep);
-			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
 		}
@@ -367,8 +340,6 @@ public class Execution_metamodelSwitch<T> extends Switch<T> {
 		case Execution_metamodelPackage.MODELING: {
 			Modeling modeling = (Modeling) theEObject;
 			T result = caseModeling(modeling);
-			if (result == null)
-				result = caseExecution(modeling);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -831,21 +802,6 @@ public class Execution_metamodelSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseAnswer(Answer object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Execution</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Execution</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseExecution(Execution object) {
 		return null;
 	}
 

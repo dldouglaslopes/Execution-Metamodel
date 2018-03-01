@@ -108,8 +108,6 @@ public class Execution_metamodelFactoryImpl extends EFactoryImpl implements Exec
 			return createExecutedStep();
 		case Execution_metamodelPackage.ANSWER:
 			return createAnswer();
-		case Execution_metamodelPackage.EXECUTION:
-			return createExecution();
 		case Execution_metamodelPackage.NUMERIC:
 			return createNumeric();
 		case Execution_metamodelPackage.YES_OR_NO:
@@ -387,16 +385,6 @@ public class Execution_metamodelFactoryImpl extends EFactoryImpl implements Exec
 	public Answer createAnswer() {
 		AnswerImpl answer = new AnswerImpl();
 		return answer;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Execution createExecution() {
-		ExecutionImpl execution = new ExecutionImpl();
-		return execution;
 	}
 
 	/**
