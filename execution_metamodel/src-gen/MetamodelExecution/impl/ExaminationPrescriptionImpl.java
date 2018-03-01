@@ -5,8 +5,6 @@ package MetamodelExecution.impl;
 import MetamodelExecution.ExaminationPrescription;
 import MetamodelExecution.Execution_metamodelPackage;
 
-import java.util.Date;
-
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;
@@ -99,7 +97,7 @@ public class ExaminationPrescriptionImpl extends MinimalEObjectImpl.Container im
 	 * @generated
 	 * @ordered
 	 */
-	protected static final Date REQUEST_DATE_EDEFAULT = null;
+	protected static final String REQUEST_DATE_EDEFAULT = null;
 
 	/**
 	 * The cached value of the '{@link #getRequestDate() <em>Request Date</em>}' attribute.
@@ -109,7 +107,7 @@ public class ExaminationPrescriptionImpl extends MinimalEObjectImpl.Container im
 	 * @generated
 	 * @ordered
 	 */
-	protected Date requestDate = REQUEST_DATE_EDEFAULT;
+	protected String requestDate = REQUEST_DATE_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -201,7 +199,7 @@ public class ExaminationPrescriptionImpl extends MinimalEObjectImpl.Container im
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Date getRequestDate() {
+	public String getRequestDate() {
 		return requestDate;
 	}
 
@@ -210,8 +208,8 @@ public class ExaminationPrescriptionImpl extends MinimalEObjectImpl.Container im
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setRequestDate(Date newRequestDate) {
-		Date oldRequestDate = requestDate;
+	public void setRequestDate(String newRequestDate) {
+		String oldRequestDate = requestDate;
 		requestDate = newRequestDate;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET,
@@ -256,7 +254,7 @@ public class ExaminationPrescriptionImpl extends MinimalEObjectImpl.Container im
 			setMessage((String) newValue);
 			return;
 		case Execution_metamodelPackage.EXAMINATION_PRESCRIPTION__REQUEST_DATE:
-			setRequestDate((Date) newValue);
+			setRequestDate((String) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);

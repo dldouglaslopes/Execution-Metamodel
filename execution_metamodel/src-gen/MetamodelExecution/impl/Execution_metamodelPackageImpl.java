@@ -2502,7 +2502,7 @@ public class Execution_metamodelPackageImpl extends EPackageImpl implements Exec
 		initEAttribute(getExaminationPrescription_Message(), ecorePackage.getEString(), "message", null, 0, 1,
 				ExaminationPrescription.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getExaminationPrescription_RequestDate(), ecorePackage.getEDate(), "requestDate", null, 0, 1,
+		initEAttribute(getExaminationPrescription_RequestDate(), ecorePackage.getEString(), "requestDate", null, 0, 1,
 				ExaminationPrescription.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 

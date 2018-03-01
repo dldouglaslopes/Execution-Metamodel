@@ -2,8 +2,6 @@
  */
 package MetamodelExecution;
 
-import java.util.Date;
-
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -113,12 +111,12 @@ public interface ExaminationPrescription extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Request Date</em>' attribute.
-	 * @see #setRequestDate(Date)
+	 * @see #setRequestDate(String)
 	 * @see MetamodelExecution.Execution_metamodelPackage#getExaminationPrescription_RequestDate()
 	 * @model
 	 * @generated
 	 */
-	Date getRequestDate();
+	String getRequestDate();
 
 	/**
 	 * Sets the value of the '{@link MetamodelExecution.ExaminationPrescription#getRequestDate <em>Request Date</em>}' attribute.
@@ -128,6 +126,6 @@ public interface ExaminationPrescription extends EObject {
 	 * @see #getRequestDate()
 	 * @generated
 	 */
-	void setRequestDate(Date value);
+	void setRequestDate(String value);
 
 } // ExaminationPrescription

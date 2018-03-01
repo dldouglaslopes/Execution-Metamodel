@@ -8,13 +8,13 @@
     <semanticResources>teste.xmi</semanticResources>
     <ownedViews xmi:type="viewpoint:DView" xmi:id="_GcLDoBEVEei_MO2ar4s9Jg">
       <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']"/>
-      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" xmi:id="_GdhHcBEVEei_MO2ar4s9Jg" name="execution_metamodel" repPath="#_GdEbgBEVEei_MO2ar4s9Jg">
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" xmi:id="_GdhHcBEVEei_MO2ar4s9Jg" name="ExecutionMetamodel" repPath="#_GdEbgBEVEei_MO2ar4s9Jg">
         <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']"/>
         <target xmi:type="ecore:EPackage" href="execution_metamodel.ecore#/"/>
       </ownedRepresentationDescriptors>
     </ownedViews>
   </viewpoint:DAnalysis>
-  <diagram:DSemanticDiagram xmi:id="_GdXWcBEVEei_MO2ar4s9Jg" name="execution_metamodel" uid="_GdEbgBEVEei_MO2ar4s9Jg">
+  <diagram:DSemanticDiagram xmi:id="_GdXWcBEVEei_MO2ar4s9Jg" name="ExecutionMetamodel" uid="_GdEbgBEVEei_MO2ar4s9Jg">
     <ownedAnnotationEntries xmi:type="description:AnnotationEntry" xmi:id="_GdXWcREVEei_MO2ar4s9Jg" source="DANNOTATION_CUSTOMIZATION_KEY">
       <data xmi:type="diagram:ComputedStyleDescriptionRegistry" xmi:id="_GdXWchEVEei_MO2ar4s9Jg">
         <computedStyleDescriptions xmi:type="style:EdgeStyleDescription" xmi:id="_czmYohEVEei_MO2ar4s9Jg" sourceArrow="FillDiamond" routingStyle="manhattan">
@@ -2098,7 +2098,7 @@
         </ownedStyle>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']"/>
       </ownedElements>
-      <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_czcnrhEVEei_MO2ar4s9Jg" name="requestDate : EDate" tooltipText="">
+      <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_czcnrhEVEei_MO2ar4s9Jg" name="requestDate : EString" tooltipText="">
         <target xmi:type="ecore:EAttribute" href="execution_metamodel.ecore#//ExaminationPrescription/requestDate"/>
         <semanticElements xmi:type="ecore:EAttribute" href="execution_metamodel.ecore#//ExaminationPrescription/requestDate"/>
         <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_czcnrxEVEei_MO2ar4s9Jg" labelAlignment="LEFT">
