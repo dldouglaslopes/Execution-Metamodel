@@ -14,7 +14,7 @@ import org.eclipse.emf.ecore.EClass;
  *
  * @generated
  */
-public class InformationImpl extends CompleteStepImpl implements Information {
+public class InformationImpl extends ExecutionImpl implements Information {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

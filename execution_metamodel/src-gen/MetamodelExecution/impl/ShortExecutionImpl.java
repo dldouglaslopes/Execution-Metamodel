@@ -4,7 +4,6 @@ package MetamodelExecution.impl;
 
 import MetamodelExecution.ExecutedStep;
 import MetamodelExecution.Execution_metamodelPackage;
-import MetamodelExecution.Justification;
 import MetamodelExecution.LastProfessional;
 import MetamodelExecution.Pathway;
 import MetamodelExecution.Responsible;
@@ -39,7 +38,6 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *   <li>{@link MetamodelExecution.impl.ShortExecutionImpl#getResponsible <em>Responsible</em>}</li>
  *   <li>{@link MetamodelExecution.impl.ShortExecutionImpl#getExecutedstep <em>Executedstep</em>}</li>
  *   <li>{@link MetamodelExecution.impl.ShortExecutionImpl#getLastprofessional <em>Lastprofessional</em>}</li>
- *   <li>{@link MetamodelExecution.impl.ShortExecutionImpl#getJustification <em>Justification</em>}</li>
  *   <li>{@link MetamodelExecution.impl.ShortExecutionImpl#getCreationDate <em>Creation Date</em>}</li>
  *   <li>{@link MetamodelExecution.impl.ShortExecutionImpl#getIdPathway <em>Id Pathway</em>}</li>
  *   <li>{@link MetamodelExecution.impl.ShortExecutionImpl#getId <em>Id</em>}</li>
@@ -208,16 +206,6 @@ public class ShortExecutionImpl extends MinimalEObjectImpl.Container implements 
 	 * @ordered
 	 */
 	protected LastProfessional lastprofessional;
-
-	/**
-	 * The cached value of the '{@link #getJustification() <em>Justification</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getJustification()
-	 * @generated
-	 * @ordered
-	 */
-	protected Justification justification;
 
 	/**
 	 * The default value of the '{@link #getCreationDate() <em>Creation Date</em>}' attribute.
@@ -661,56 +649,6 @@ public class ShortExecutionImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Justification getJustification() {
-		return justification;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public NotificationChain basicSetJustification(Justification newJustification, NotificationChain msgs) {
-		Justification oldJustification = justification;
-		justification = newJustification;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
-					Execution_metamodelPackage.SHORT_EXECUTION__JUSTIFICATION, oldJustification, newJustification);
-			if (msgs == null)
-				msgs = notification;
-			else
-				msgs.add(notification);
-		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setJustification(Justification newJustification) {
-		if (newJustification != justification) {
-			NotificationChain msgs = null;
-			if (justification != null)
-				msgs = ((InternalEObject) justification).eInverseRemove(this,
-						EOPPOSITE_FEATURE_BASE - Execution_metamodelPackage.SHORT_EXECUTION__JUSTIFICATION, null, msgs);
-			if (newJustification != null)
-				msgs = ((InternalEObject) newJustification).eInverseAdd(this,
-						EOPPOSITE_FEATURE_BASE - Execution_metamodelPackage.SHORT_EXECUTION__JUSTIFICATION, null, msgs);
-			msgs = basicSetJustification(newJustification, msgs);
-			if (msgs != null)
-				msgs.dispatch();
-		} else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET,
-					Execution_metamodelPackage.SHORT_EXECUTION__JUSTIFICATION, newJustification, newJustification));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public Date getCreationDate() {
 		return creationDate;
 	}
@@ -810,8 +748,6 @@ public class ShortExecutionImpl extends MinimalEObjectImpl.Container implements 
 			return basicSetExecutedstep(null, msgs);
 		case Execution_metamodelPackage.SHORT_EXECUTION__LASTPROFESSIONAL:
 			return basicSetLastprofessional(null, msgs);
-		case Execution_metamodelPackage.SHORT_EXECUTION__JUSTIFICATION:
-			return basicSetJustification(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -844,8 +780,6 @@ public class ShortExecutionImpl extends MinimalEObjectImpl.Container implements 
 			return getExecutedstep();
 		case Execution_metamodelPackage.SHORT_EXECUTION__LASTPROFESSIONAL:
 			return getLastprofessional();
-		case Execution_metamodelPackage.SHORT_EXECUTION__JUSTIFICATION:
-			return getJustification();
 		case Execution_metamodelPackage.SHORT_EXECUTION__CREATION_DATE:
 			return getCreationDate();
 		case Execution_metamodelPackage.SHORT_EXECUTION__ID_PATHWAY:
@@ -895,9 +829,6 @@ public class ShortExecutionImpl extends MinimalEObjectImpl.Container implements 
 			return;
 		case Execution_metamodelPackage.SHORT_EXECUTION__LASTPROFESSIONAL:
 			setLastprofessional((LastProfessional) newValue);
-			return;
-		case Execution_metamodelPackage.SHORT_EXECUTION__JUSTIFICATION:
-			setJustification((Justification) newValue);
 			return;
 		case Execution_metamodelPackage.SHORT_EXECUTION__CREATION_DATE:
 			setCreationDate((Date) newValue);
@@ -953,9 +884,6 @@ public class ShortExecutionImpl extends MinimalEObjectImpl.Container implements 
 		case Execution_metamodelPackage.SHORT_EXECUTION__LASTPROFESSIONAL:
 			setLastprofessional((LastProfessional) null);
 			return;
-		case Execution_metamodelPackage.SHORT_EXECUTION__JUSTIFICATION:
-			setJustification((Justification) null);
-			return;
 		case Execution_metamodelPackage.SHORT_EXECUTION__CREATION_DATE:
 			setCreationDate(CREATION_DATE_EDEFAULT);
 			return;
@@ -1002,8 +930,6 @@ public class ShortExecutionImpl extends MinimalEObjectImpl.Container implements 
 			return executedstep != null;
 		case Execution_metamodelPackage.SHORT_EXECUTION__LASTPROFESSIONAL:
 			return lastprofessional != null;
-		case Execution_metamodelPackage.SHORT_EXECUTION__JUSTIFICATION:
-			return justification != null;
 		case Execution_metamodelPackage.SHORT_EXECUTION__CREATION_DATE:
 			return CREATION_DATE_EDEFAULT == null ? creationDate != null : !CREATION_DATE_EDEFAULT.equals(creationDate);
 		case Execution_metamodelPackage.SHORT_EXECUTION__ID_PATHWAY:

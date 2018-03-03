@@ -25,7 +25,6 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link MetamodelExecution.ShortExecution#getResponsible <em>Responsible</em>}</li>
  *   <li>{@link MetamodelExecution.ShortExecution#getExecutedstep <em>Executedstep</em>}</li>
  *   <li>{@link MetamodelExecution.ShortExecution#getLastprofessional <em>Lastprofessional</em>}</li>
- *   <li>{@link MetamodelExecution.ShortExecution#getJustification <em>Justification</em>}</li>
  *   <li>{@link MetamodelExecution.ShortExecution#getCreationDate <em>Creation Date</em>}</li>
  *   <li>{@link MetamodelExecution.ShortExecution#getIdPathway <em>Id Pathway</em>}</li>
  *   <li>{@link MetamodelExecution.ShortExecution#getId <em>Id</em>}</li>
@@ -297,32 +296,6 @@ public interface ShortExecution extends EObject {
 	 * @generated
 	 */
 	void setLastprofessional(LastProfessional value);
-
-	/**
-	 * Returns the value of the '<em><b>Justification</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Justification</em>' containment reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Justification</em>' containment reference.
-	 * @see #setJustification(Justification)
-	 * @see MetamodelExecution.Execution_metamodelPackage#getShortExecution_Justification()
-	 * @model containment="true"
-	 * @generated
-	 */
-	Justification getJustification();
-
-	/**
-	 * Sets the value of the '{@link MetamodelExecution.ShortExecution#getJustification <em>Justification</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Justification</em>' containment reference.
-	 * @see #getJustification()
-	 * @generated
-	 */
-	void setJustification(Justification value);
 
 	/**
 	 * Returns the value of the '<em><b>Creation Date</b></em>' attribute.

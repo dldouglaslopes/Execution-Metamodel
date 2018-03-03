@@ -3,18 +3,11 @@
 package MetamodelExecution.impl;
 
 import MetamodelExecution.Execution_metamodelPackage;
-import MetamodelExecution.Justification;
-import MetamodelExecution.Next;
-import MetamodelExecution.Previous;
 import MetamodelExecution.Step;
 
-import java.util.Date;
-
 import org.eclipse.emf.common.notify.Notification;
-import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
@@ -27,25 +20,40 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * The following features are implemented:
  * </p>
  * <ul>
+ *   <li>{@link MetamodelExecution.impl.StepImpl#getId <em>Id</em>}</li>
  *   <li>{@link MetamodelExecution.impl.StepImpl#getType <em>Type</em>}</li>
  *   <li>{@link MetamodelExecution.impl.StepImpl#getTypeVerbose <em>Type Verbose</em>}</li>
- *   <li>{@link MetamodelExecution.impl.StepImpl#isIsCurrent <em>Is Current</em>}</li>
- *   <li>{@link MetamodelExecution.impl.StepImpl#isReworked <em>Reworked</em>}</li>
- *   <li>{@link MetamodelExecution.impl.StepImpl#isExecuted <em>Executed</em>}</li>
- *   <li>{@link MetamodelExecution.impl.StepImpl#getPrevious <em>Previous</em>}</li>
- *   <li>{@link MetamodelExecution.impl.StepImpl#getNext <em>Next</em>}</li>
- *   <li>{@link MetamodelExecution.impl.StepImpl#getChangeDate <em>Change Date</em>}</li>
- *   <li>{@link MetamodelExecution.impl.StepImpl#getExecutionDate <em>Execution Date</em>}</li>
- *   <li>{@link MetamodelExecution.impl.StepImpl#getIdStep <em>Id Step</em>}</li>
- *   <li>{@link MetamodelExecution.impl.StepImpl#getIdExecutedProtocol <em>Id Executed Protocol</em>}</li>
- *   <li>{@link MetamodelExecution.impl.StepImpl#getIdPathway <em>Id Pathway</em>}</li>
- *   <li>{@link MetamodelExecution.impl.StepImpl#getCreationDate <em>Creation Date</em>}</li>
- *   <li>{@link MetamodelExecution.impl.StepImpl#getJustification <em>Justification</em>}</li>
+ *   <li>{@link MetamodelExecution.impl.StepImpl#getUrl <em>Url</em>}</li>
+ *   <li>{@link MetamodelExecution.impl.StepImpl#getName <em>Name</em>}</li>
+ *   <li>{@link MetamodelExecution.impl.StepImpl#getDescription <em>Description</em>}</li>
+ *   <li>{@link MetamodelExecution.impl.StepImpl#isIsInitial <em>Is Initial</em>}</li>
+ *   <li>{@link MetamodelExecution.impl.StepImpl#isIsTerminal <em>Is Terminal</em>}</li>
+ *   <li>{@link MetamodelExecution.impl.StepImpl#isMandatory <em>Mandatory</em>}</li>
  * </ul>
  *
  * @generated
  */
-public abstract class StepImpl extends MinimalEObjectImpl.Container implements Step {
+public class StepImpl extends MinimalEObjectImpl.Container implements Step {
+	/**
+	 * The default value of the '{@link #getId() <em>Id</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getId()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final int ID_EDEFAULT = 0;
+
+	/**
+	 * The cached value of the '{@link #getId() <em>Id</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getId()
+	 * @generated
+	 * @ordered
+	 */
+	protected int id = ID_EDEFAULT;
+
 	/**
 	 * The default value of the '{@link #getType() <em>Type</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -87,214 +95,124 @@ public abstract class StepImpl extends MinimalEObjectImpl.Container implements S
 	protected String typeVerbose = TYPE_VERBOSE_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #isIsCurrent() <em>Is Current</em>}' attribute.
+	 * The default value of the '{@link #getUrl() <em>Url</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #isIsCurrent()
+	 * @see #getUrl()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final boolean IS_CURRENT_EDEFAULT = false;
+	protected static final String URL_EDEFAULT = null;
 
 	/**
-	 * The cached value of the '{@link #isIsCurrent() <em>Is Current</em>}' attribute.
+	 * The cached value of the '{@link #getUrl() <em>Url</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #isIsCurrent()
+	 * @see #getUrl()
 	 * @generated
 	 * @ordered
 	 */
-	protected boolean isCurrent = IS_CURRENT_EDEFAULT;
+	protected String url = URL_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #isReworked() <em>Reworked</em>}' attribute.
+	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #isReworked()
+	 * @see #getName()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final boolean REWORKED_EDEFAULT = false;
+	protected static final String NAME_EDEFAULT = null;
 
 	/**
-	 * The cached value of the '{@link #isReworked() <em>Reworked</em>}' attribute.
+	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #isReworked()
+	 * @see #getName()
 	 * @generated
 	 * @ordered
 	 */
-	protected boolean reworked = REWORKED_EDEFAULT;
+	protected String name = NAME_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #isExecuted() <em>Executed</em>}' attribute.
+	 * The default value of the '{@link #getDescription() <em>Description</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #isExecuted()
+	 * @see #getDescription()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final boolean EXECUTED_EDEFAULT = false;
+	protected static final String DESCRIPTION_EDEFAULT = null;
 
 	/**
-	 * The cached value of the '{@link #isExecuted() <em>Executed</em>}' attribute.
+	 * The cached value of the '{@link #getDescription() <em>Description</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #isExecuted()
+	 * @see #getDescription()
 	 * @generated
 	 * @ordered
 	 */
-	protected boolean executed = EXECUTED_EDEFAULT;
+	protected String description = DESCRIPTION_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getPrevious() <em>Previous</em>}' containment reference.
+	 * The default value of the '{@link #isIsInitial() <em>Is Initial</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getPrevious()
+	 * @see #isIsInitial()
 	 * @generated
 	 * @ordered
 	 */
-	protected Previous previous;
+	protected static final boolean IS_INITIAL_EDEFAULT = false;
 
 	/**
-	 * The cached value of the '{@link #getNext() <em>Next</em>}' containment reference.
+	 * The cached value of the '{@link #isIsInitial() <em>Is Initial</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getNext()
+	 * @see #isIsInitial()
 	 * @generated
 	 * @ordered
 	 */
-	protected Next next;
+	protected boolean isInitial = IS_INITIAL_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getChangeDate() <em>Change Date</em>}' attribute.
+	 * The default value of the '{@link #isIsTerminal() <em>Is Terminal</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getChangeDate()
+	 * @see #isIsTerminal()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final Date CHANGE_DATE_EDEFAULT = null;
+	protected static final boolean IS_TERMINAL_EDEFAULT = false;
 
 	/**
-	 * The cached value of the '{@link #getChangeDate() <em>Change Date</em>}' attribute.
+	 * The cached value of the '{@link #isIsTerminal() <em>Is Terminal</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getChangeDate()
+	 * @see #isIsTerminal()
 	 * @generated
 	 * @ordered
 	 */
-	protected Date changeDate = CHANGE_DATE_EDEFAULT;
+	protected boolean isTerminal = IS_TERMINAL_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getExecutionDate() <em>Execution Date</em>}' attribute.
+	 * The default value of the '{@link #isMandatory() <em>Mandatory</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getExecutionDate()
+	 * @see #isMandatory()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final Date EXECUTION_DATE_EDEFAULT = null;
+	protected static final boolean MANDATORY_EDEFAULT = false;
 
 	/**
-	 * The cached value of the '{@link #getExecutionDate() <em>Execution Date</em>}' attribute.
+	 * The cached value of the '{@link #isMandatory() <em>Mandatory</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getExecutionDate()
+	 * @see #isMandatory()
 	 * @generated
 	 * @ordered
 	 */
-	protected Date executionDate = EXECUTION_DATE_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getIdStep() <em>Id Step</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getIdStep()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final int ID_STEP_EDEFAULT = 0;
-
-	/**
-	 * The cached value of the '{@link #getIdStep() <em>Id Step</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getIdStep()
-	 * @generated
-	 * @ordered
-	 */
-	protected int idStep = ID_STEP_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getIdExecutedProtocol() <em>Id Executed Protocol</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getIdExecutedProtocol()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final int ID_EXECUTED_PROTOCOL_EDEFAULT = 0;
-
-	/**
-	 * The cached value of the '{@link #getIdExecutedProtocol() <em>Id Executed Protocol</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getIdExecutedProtocol()
-	 * @generated
-	 * @ordered
-	 */
-	protected int idExecutedProtocol = ID_EXECUTED_PROTOCOL_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getIdPathway() <em>Id Pathway</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getIdPathway()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final int ID_PATHWAY_EDEFAULT = 0;
-
-	/**
-	 * The cached value of the '{@link #getIdPathway() <em>Id Pathway</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getIdPathway()
-	 * @generated
-	 * @ordered
-	 */
-	protected int idPathway = ID_PATHWAY_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getCreationDate() <em>Creation Date</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getCreationDate()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final Date CREATION_DATE_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getCreationDate() <em>Creation Date</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getCreationDate()
-	 * @generated
-	 * @ordered
-	 */
-	protected Date creationDate = CREATION_DATE_EDEFAULT;
-
-	/**
-	 * The cached value of the '{@link #getJustification() <em>Justification</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getJustification()
-	 * @generated
-	 * @ordered
-	 */
-	protected Justification justification;
+	protected boolean mandatory = MANDATORY_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -313,6 +231,27 @@ public abstract class StepImpl extends MinimalEObjectImpl.Container implements S
 	@Override
 	protected EClass eStaticClass() {
 		return Execution_metamodelPackage.Literals.STEP;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public int getId() {
+		return id;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setId(int newId) {
+		int oldId = id;
+		id = newId;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.STEP__ID, oldId, id));
 	}
 
 	/**
@@ -364,8 +303,8 @@ public abstract class StepImpl extends MinimalEObjectImpl.Container implements S
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean isIsCurrent() {
-		return isCurrent;
+	public String getUrl() {
+		return url;
 	}
 
 	/**
@@ -373,12 +312,11 @@ public abstract class StepImpl extends MinimalEObjectImpl.Container implements S
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setIsCurrent(boolean newIsCurrent) {
-		boolean oldIsCurrent = isCurrent;
-		isCurrent = newIsCurrent;
+	public void setUrl(String newUrl) {
+		String oldUrl = url;
+		url = newUrl;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.STEP__IS_CURRENT,
-					oldIsCurrent, isCurrent));
+			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.STEP__URL, oldUrl, url));
 	}
 
 	/**
@@ -386,8 +324,8 @@ public abstract class StepImpl extends MinimalEObjectImpl.Container implements S
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean isReworked() {
-		return reworked;
+	public String getName() {
+		return name;
 	}
 
 	/**
@@ -395,12 +333,12 @@ public abstract class StepImpl extends MinimalEObjectImpl.Container implements S
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setReworked(boolean newReworked) {
-		boolean oldReworked = reworked;
-		reworked = newReworked;
+	public void setName(String newName) {
+		String oldName = name;
+		name = newName;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.STEP__REWORKED,
-					oldReworked, reworked));
+			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.STEP__NAME, oldName,
+					name));
 	}
 
 	/**
@@ -408,8 +346,8 @@ public abstract class StepImpl extends MinimalEObjectImpl.Container implements S
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean isExecuted() {
-		return executed;
+	public String getDescription() {
+		return description;
 	}
 
 	/**
@@ -417,12 +355,12 @@ public abstract class StepImpl extends MinimalEObjectImpl.Container implements S
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setExecuted(boolean newExecuted) {
-		boolean oldExecuted = executed;
-		executed = newExecuted;
+	public void setDescription(String newDescription) {
+		String oldDescription = description;
+		description = newDescription;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.STEP__EXECUTED,
-					oldExecuted, executed));
+			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.STEP__DESCRIPTION,
+					oldDescription, description));
 	}
 
 	/**
@@ -430,8 +368,8 @@ public abstract class StepImpl extends MinimalEObjectImpl.Container implements S
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Previous getPrevious() {
-		return previous;
+	public boolean isIsInitial() {
+		return isInitial;
 	}
 
 	/**
@@ -439,112 +377,12 @@ public abstract class StepImpl extends MinimalEObjectImpl.Container implements S
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetPrevious(Previous newPrevious, NotificationChain msgs) {
-		Previous oldPrevious = previous;
-		previous = newPrevious;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
-					Execution_metamodelPackage.STEP__PREVIOUS, oldPrevious, newPrevious);
-			if (msgs == null)
-				msgs = notification;
-			else
-				msgs.add(notification);
-		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setPrevious(Previous newPrevious) {
-		if (newPrevious != previous) {
-			NotificationChain msgs = null;
-			if (previous != null)
-				msgs = ((InternalEObject) previous).eInverseRemove(this,
-						EOPPOSITE_FEATURE_BASE - Execution_metamodelPackage.STEP__PREVIOUS, null, msgs);
-			if (newPrevious != null)
-				msgs = ((InternalEObject) newPrevious).eInverseAdd(this,
-						EOPPOSITE_FEATURE_BASE - Execution_metamodelPackage.STEP__PREVIOUS, null, msgs);
-			msgs = basicSetPrevious(newPrevious, msgs);
-			if (msgs != null)
-				msgs.dispatch();
-		} else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.STEP__PREVIOUS,
-					newPrevious, newPrevious));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Next getNext() {
-		return next;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public NotificationChain basicSetNext(Next newNext, NotificationChain msgs) {
-		Next oldNext = next;
-		next = newNext;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
-					Execution_metamodelPackage.STEP__NEXT, oldNext, newNext);
-			if (msgs == null)
-				msgs = notification;
-			else
-				msgs.add(notification);
-		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setNext(Next newNext) {
-		if (newNext != next) {
-			NotificationChain msgs = null;
-			if (next != null)
-				msgs = ((InternalEObject) next).eInverseRemove(this,
-						EOPPOSITE_FEATURE_BASE - Execution_metamodelPackage.STEP__NEXT, null, msgs);
-			if (newNext != null)
-				msgs = ((InternalEObject) newNext).eInverseAdd(this,
-						EOPPOSITE_FEATURE_BASE - Execution_metamodelPackage.STEP__NEXT, null, msgs);
-			msgs = basicSetNext(newNext, msgs);
-			if (msgs != null)
-				msgs.dispatch();
-		} else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.STEP__NEXT, newNext,
-					newNext));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Date getChangeDate() {
-		return changeDate;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setChangeDate(Date newChangeDate) {
-		Date oldChangeDate = changeDate;
-		changeDate = newChangeDate;
+	public void setIsInitial(boolean newIsInitial) {
+		boolean oldIsInitial = isInitial;
+		isInitial = newIsInitial;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.STEP__CHANGE_DATE,
-					oldChangeDate, changeDate));
+			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.STEP__IS_INITIAL,
+					oldIsInitial, isInitial));
 	}
 
 	/**
@@ -552,8 +390,8 @@ public abstract class StepImpl extends MinimalEObjectImpl.Container implements S
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Date getExecutionDate() {
-		return executionDate;
+	public boolean isIsTerminal() {
+		return isTerminal;
 	}
 
 	/**
@@ -561,12 +399,12 @@ public abstract class StepImpl extends MinimalEObjectImpl.Container implements S
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setExecutionDate(Date newExecutionDate) {
-		Date oldExecutionDate = executionDate;
-		executionDate = newExecutionDate;
+	public void setIsTerminal(boolean newIsTerminal) {
+		boolean oldIsTerminal = isTerminal;
+		isTerminal = newIsTerminal;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.STEP__EXECUTION_DATE,
-					oldExecutionDate, executionDate));
+			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.STEP__IS_TERMINAL,
+					oldIsTerminal, isTerminal));
 	}
 
 	/**
@@ -574,8 +412,8 @@ public abstract class StepImpl extends MinimalEObjectImpl.Container implements S
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public int getIdStep() {
-		return idStep;
+	public boolean isMandatory() {
+		return mandatory;
 	}
 
 	/**
@@ -583,146 +421,12 @@ public abstract class StepImpl extends MinimalEObjectImpl.Container implements S
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setIdStep(int newIdStep) {
-		int oldIdStep = idStep;
-		idStep = newIdStep;
+	public void setMandatory(boolean newMandatory) {
+		boolean oldMandatory = mandatory;
+		mandatory = newMandatory;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.STEP__ID_STEP, oldIdStep,
-					idStep));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public int getIdExecutedProtocol() {
-		return idExecutedProtocol;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setIdExecutedProtocol(int newIdExecutedProtocol) {
-		int oldIdExecutedProtocol = idExecutedProtocol;
-		idExecutedProtocol = newIdExecutedProtocol;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.STEP__ID_EXECUTED_PROTOCOL,
-					oldIdExecutedProtocol, idExecutedProtocol));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public int getIdPathway() {
-		return idPathway;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setIdPathway(int newIdPathway) {
-		int oldIdPathway = idPathway;
-		idPathway = newIdPathway;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.STEP__ID_PATHWAY,
-					oldIdPathway, idPathway));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Date getCreationDate() {
-		return creationDate;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setCreationDate(Date newCreationDate) {
-		Date oldCreationDate = creationDate;
-		creationDate = newCreationDate;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.STEP__CREATION_DATE,
-					oldCreationDate, creationDate));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Justification getJustification() {
-		return justification;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public NotificationChain basicSetJustification(Justification newJustification, NotificationChain msgs) {
-		Justification oldJustification = justification;
-		justification = newJustification;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
-					Execution_metamodelPackage.STEP__JUSTIFICATION, oldJustification, newJustification);
-			if (msgs == null)
-				msgs = notification;
-			else
-				msgs.add(notification);
-		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setJustification(Justification newJustification) {
-		if (newJustification != justification) {
-			NotificationChain msgs = null;
-			if (justification != null)
-				msgs = ((InternalEObject) justification).eInverseRemove(this,
-						EOPPOSITE_FEATURE_BASE - Execution_metamodelPackage.STEP__JUSTIFICATION, null, msgs);
-			if (newJustification != null)
-				msgs = ((InternalEObject) newJustification).eInverseAdd(this,
-						EOPPOSITE_FEATURE_BASE - Execution_metamodelPackage.STEP__JUSTIFICATION, null, msgs);
-			msgs = basicSetJustification(newJustification, msgs);
-			if (msgs != null)
-				msgs.dispatch();
-		} else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.STEP__JUSTIFICATION,
-					newJustification, newJustification));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
-		case Execution_metamodelPackage.STEP__PREVIOUS:
-			return basicSetPrevious(null, msgs);
-		case Execution_metamodelPackage.STEP__NEXT:
-			return basicSetNext(null, msgs);
-		case Execution_metamodelPackage.STEP__JUSTIFICATION:
-			return basicSetJustification(null, msgs);
-		}
-		return super.eInverseRemove(otherEnd, featureID, msgs);
+			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.STEP__MANDATORY,
+					oldMandatory, mandatory));
 	}
 
 	/**
@@ -733,34 +437,24 @@ public abstract class StepImpl extends MinimalEObjectImpl.Container implements S
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
+		case Execution_metamodelPackage.STEP__ID:
+			return getId();
 		case Execution_metamodelPackage.STEP__TYPE:
 			return getType();
 		case Execution_metamodelPackage.STEP__TYPE_VERBOSE:
 			return getTypeVerbose();
-		case Execution_metamodelPackage.STEP__IS_CURRENT:
-			return isIsCurrent();
-		case Execution_metamodelPackage.STEP__REWORKED:
-			return isReworked();
-		case Execution_metamodelPackage.STEP__EXECUTED:
-			return isExecuted();
-		case Execution_metamodelPackage.STEP__PREVIOUS:
-			return getPrevious();
-		case Execution_metamodelPackage.STEP__NEXT:
-			return getNext();
-		case Execution_metamodelPackage.STEP__CHANGE_DATE:
-			return getChangeDate();
-		case Execution_metamodelPackage.STEP__EXECUTION_DATE:
-			return getExecutionDate();
-		case Execution_metamodelPackage.STEP__ID_STEP:
-			return getIdStep();
-		case Execution_metamodelPackage.STEP__ID_EXECUTED_PROTOCOL:
-			return getIdExecutedProtocol();
-		case Execution_metamodelPackage.STEP__ID_PATHWAY:
-			return getIdPathway();
-		case Execution_metamodelPackage.STEP__CREATION_DATE:
-			return getCreationDate();
-		case Execution_metamodelPackage.STEP__JUSTIFICATION:
-			return getJustification();
+		case Execution_metamodelPackage.STEP__URL:
+			return getUrl();
+		case Execution_metamodelPackage.STEP__NAME:
+			return getName();
+		case Execution_metamodelPackage.STEP__DESCRIPTION:
+			return getDescription();
+		case Execution_metamodelPackage.STEP__IS_INITIAL:
+			return isIsInitial();
+		case Execution_metamodelPackage.STEP__IS_TERMINAL:
+			return isIsTerminal();
+		case Execution_metamodelPackage.STEP__MANDATORY:
+			return isMandatory();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -773,47 +467,32 @@ public abstract class StepImpl extends MinimalEObjectImpl.Container implements S
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
+		case Execution_metamodelPackage.STEP__ID:
+			setId((Integer) newValue);
+			return;
 		case Execution_metamodelPackage.STEP__TYPE:
 			setType((String) newValue);
 			return;
 		case Execution_metamodelPackage.STEP__TYPE_VERBOSE:
 			setTypeVerbose((String) newValue);
 			return;
-		case Execution_metamodelPackage.STEP__IS_CURRENT:
-			setIsCurrent((Boolean) newValue);
+		case Execution_metamodelPackage.STEP__URL:
+			setUrl((String) newValue);
 			return;
-		case Execution_metamodelPackage.STEP__REWORKED:
-			setReworked((Boolean) newValue);
+		case Execution_metamodelPackage.STEP__NAME:
+			setName((String) newValue);
 			return;
-		case Execution_metamodelPackage.STEP__EXECUTED:
-			setExecuted((Boolean) newValue);
+		case Execution_metamodelPackage.STEP__DESCRIPTION:
+			setDescription((String) newValue);
 			return;
-		case Execution_metamodelPackage.STEP__PREVIOUS:
-			setPrevious((Previous) newValue);
+		case Execution_metamodelPackage.STEP__IS_INITIAL:
+			setIsInitial((Boolean) newValue);
 			return;
-		case Execution_metamodelPackage.STEP__NEXT:
-			setNext((Next) newValue);
+		case Execution_metamodelPackage.STEP__IS_TERMINAL:
+			setIsTerminal((Boolean) newValue);
 			return;
-		case Execution_metamodelPackage.STEP__CHANGE_DATE:
-			setChangeDate((Date) newValue);
-			return;
-		case Execution_metamodelPackage.STEP__EXECUTION_DATE:
-			setExecutionDate((Date) newValue);
-			return;
-		case Execution_metamodelPackage.STEP__ID_STEP:
-			setIdStep((Integer) newValue);
-			return;
-		case Execution_metamodelPackage.STEP__ID_EXECUTED_PROTOCOL:
-			setIdExecutedProtocol((Integer) newValue);
-			return;
-		case Execution_metamodelPackage.STEP__ID_PATHWAY:
-			setIdPathway((Integer) newValue);
-			return;
-		case Execution_metamodelPackage.STEP__CREATION_DATE:
-			setCreationDate((Date) newValue);
-			return;
-		case Execution_metamodelPackage.STEP__JUSTIFICATION:
-			setJustification((Justification) newValue);
+		case Execution_metamodelPackage.STEP__MANDATORY:
+			setMandatory((Boolean) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -827,47 +506,32 @@ public abstract class StepImpl extends MinimalEObjectImpl.Container implements S
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
+		case Execution_metamodelPackage.STEP__ID:
+			setId(ID_EDEFAULT);
+			return;
 		case Execution_metamodelPackage.STEP__TYPE:
 			setType(TYPE_EDEFAULT);
 			return;
 		case Execution_metamodelPackage.STEP__TYPE_VERBOSE:
 			setTypeVerbose(TYPE_VERBOSE_EDEFAULT);
 			return;
-		case Execution_metamodelPackage.STEP__IS_CURRENT:
-			setIsCurrent(IS_CURRENT_EDEFAULT);
+		case Execution_metamodelPackage.STEP__URL:
+			setUrl(URL_EDEFAULT);
 			return;
-		case Execution_metamodelPackage.STEP__REWORKED:
-			setReworked(REWORKED_EDEFAULT);
+		case Execution_metamodelPackage.STEP__NAME:
+			setName(NAME_EDEFAULT);
 			return;
-		case Execution_metamodelPackage.STEP__EXECUTED:
-			setExecuted(EXECUTED_EDEFAULT);
+		case Execution_metamodelPackage.STEP__DESCRIPTION:
+			setDescription(DESCRIPTION_EDEFAULT);
 			return;
-		case Execution_metamodelPackage.STEP__PREVIOUS:
-			setPrevious((Previous) null);
+		case Execution_metamodelPackage.STEP__IS_INITIAL:
+			setIsInitial(IS_INITIAL_EDEFAULT);
 			return;
-		case Execution_metamodelPackage.STEP__NEXT:
-			setNext((Next) null);
+		case Execution_metamodelPackage.STEP__IS_TERMINAL:
+			setIsTerminal(IS_TERMINAL_EDEFAULT);
 			return;
-		case Execution_metamodelPackage.STEP__CHANGE_DATE:
-			setChangeDate(CHANGE_DATE_EDEFAULT);
-			return;
-		case Execution_metamodelPackage.STEP__EXECUTION_DATE:
-			setExecutionDate(EXECUTION_DATE_EDEFAULT);
-			return;
-		case Execution_metamodelPackage.STEP__ID_STEP:
-			setIdStep(ID_STEP_EDEFAULT);
-			return;
-		case Execution_metamodelPackage.STEP__ID_EXECUTED_PROTOCOL:
-			setIdExecutedProtocol(ID_EXECUTED_PROTOCOL_EDEFAULT);
-			return;
-		case Execution_metamodelPackage.STEP__ID_PATHWAY:
-			setIdPathway(ID_PATHWAY_EDEFAULT);
-			return;
-		case Execution_metamodelPackage.STEP__CREATION_DATE:
-			setCreationDate(CREATION_DATE_EDEFAULT);
-			return;
-		case Execution_metamodelPackage.STEP__JUSTIFICATION:
-			setJustification((Justification) null);
+		case Execution_metamodelPackage.STEP__MANDATORY:
+			setMandatory(MANDATORY_EDEFAULT);
 			return;
 		}
 		super.eUnset(featureID);
@@ -881,35 +545,24 @@ public abstract class StepImpl extends MinimalEObjectImpl.Container implements S
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
+		case Execution_metamodelPackage.STEP__ID:
+			return id != ID_EDEFAULT;
 		case Execution_metamodelPackage.STEP__TYPE:
 			return TYPE_EDEFAULT == null ? type != null : !TYPE_EDEFAULT.equals(type);
 		case Execution_metamodelPackage.STEP__TYPE_VERBOSE:
 			return TYPE_VERBOSE_EDEFAULT == null ? typeVerbose != null : !TYPE_VERBOSE_EDEFAULT.equals(typeVerbose);
-		case Execution_metamodelPackage.STEP__IS_CURRENT:
-			return isCurrent != IS_CURRENT_EDEFAULT;
-		case Execution_metamodelPackage.STEP__REWORKED:
-			return reworked != REWORKED_EDEFAULT;
-		case Execution_metamodelPackage.STEP__EXECUTED:
-			return executed != EXECUTED_EDEFAULT;
-		case Execution_metamodelPackage.STEP__PREVIOUS:
-			return previous != null;
-		case Execution_metamodelPackage.STEP__NEXT:
-			return next != null;
-		case Execution_metamodelPackage.STEP__CHANGE_DATE:
-			return CHANGE_DATE_EDEFAULT == null ? changeDate != null : !CHANGE_DATE_EDEFAULT.equals(changeDate);
-		case Execution_metamodelPackage.STEP__EXECUTION_DATE:
-			return EXECUTION_DATE_EDEFAULT == null ? executionDate != null
-					: !EXECUTION_DATE_EDEFAULT.equals(executionDate);
-		case Execution_metamodelPackage.STEP__ID_STEP:
-			return idStep != ID_STEP_EDEFAULT;
-		case Execution_metamodelPackage.STEP__ID_EXECUTED_PROTOCOL:
-			return idExecutedProtocol != ID_EXECUTED_PROTOCOL_EDEFAULT;
-		case Execution_metamodelPackage.STEP__ID_PATHWAY:
-			return idPathway != ID_PATHWAY_EDEFAULT;
-		case Execution_metamodelPackage.STEP__CREATION_DATE:
-			return CREATION_DATE_EDEFAULT == null ? creationDate != null : !CREATION_DATE_EDEFAULT.equals(creationDate);
-		case Execution_metamodelPackage.STEP__JUSTIFICATION:
-			return justification != null;
+		case Execution_metamodelPackage.STEP__URL:
+			return URL_EDEFAULT == null ? url != null : !URL_EDEFAULT.equals(url);
+		case Execution_metamodelPackage.STEP__NAME:
+			return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+		case Execution_metamodelPackage.STEP__DESCRIPTION:
+			return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
+		case Execution_metamodelPackage.STEP__IS_INITIAL:
+			return isInitial != IS_INITIAL_EDEFAULT;
+		case Execution_metamodelPackage.STEP__IS_TERMINAL:
+			return isTerminal != IS_TERMINAL_EDEFAULT;
+		case Execution_metamodelPackage.STEP__MANDATORY:
+			return mandatory != MANDATORY_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -925,28 +578,24 @@ public abstract class StepImpl extends MinimalEObjectImpl.Container implements S
 			return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (type: ");
+		result.append(" (id: ");
+		result.append(id);
+		result.append(", type: ");
 		result.append(type);
 		result.append(", typeVerbose: ");
 		result.append(typeVerbose);
-		result.append(", isCurrent: ");
-		result.append(isCurrent);
-		result.append(", reworked: ");
-		result.append(reworked);
-		result.append(", executed: ");
-		result.append(executed);
-		result.append(", changeDate: ");
-		result.append(changeDate);
-		result.append(", executionDate: ");
-		result.append(executionDate);
-		result.append(", idStep: ");
-		result.append(idStep);
-		result.append(", idExecutedProtocol: ");
-		result.append(idExecutedProtocol);
-		result.append(", idPathway: ");
-		result.append(idPathway);
-		result.append(", creationDate: ");
-		result.append(creationDate);
+		result.append(", url: ");
+		result.append(url);
+		result.append(", name: ");
+		result.append(name);
+		result.append(", description: ");
+		result.append(description);
+		result.append(", isInitial: ");
+		result.append(isInitial);
+		result.append(", isTerminal: ");
+		result.append(isTerminal);
+		result.append(", mandatory: ");
+		result.append(mandatory);
 		result.append(')');
 		return result.toString();
 	}

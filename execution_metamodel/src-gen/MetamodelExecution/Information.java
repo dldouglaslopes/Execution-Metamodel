@@ -12,5 +12,5 @@ package MetamodelExecution;
  * @model
  * @generated
  */
-public interface Information extends CompleteStep {
+public interface Information extends Execution {
 } // Information

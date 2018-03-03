@@ -2,6 +2,8 @@
  */
 package MetamodelExecution;
 
+import org.eclipse.emf.ecore.EObject;
+
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>User</b></em>'.
@@ -26,7 +28,7 @@ package MetamodelExecution;
  * @model abstract="true"
  * @generated
  */
-public interface User extends Creator, Executor, LastProfessional, Responsible {
+public interface User extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Id</b></em>' attribute.
 	 * <!-- begin-user-doc -->

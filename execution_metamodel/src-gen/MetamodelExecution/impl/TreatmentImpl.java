@@ -40,7 +40,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *
  * @generated
  */
-public class TreatmentImpl extends CompleteStepImpl implements Treatment {
+public class TreatmentImpl extends ExecutionImpl implements Treatment {
 	/**
 	 * The cached value of the '{@link #getPrescribedexam() <em>Prescribedexam</em>}' containment reference.
 	 * <!-- begin-user-doc -->

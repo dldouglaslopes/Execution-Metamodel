@@ -2,8 +2,6 @@
  */
 package MetamodelExecution;
 
-import org.eclipse.emf.ecore.EObject;
-
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Creator</b></em>'.
@@ -14,5 +12,5 @@ import org.eclipse.emf.ecore.EObject;
  * @model
  * @generated
  */
-public interface Creator extends EObject {
+public interface Creator extends User {
 } // Creator

@@ -7,8 +7,6 @@ import MetamodelExecution.Executor;
 
 import org.eclipse.emf.ecore.EClass;
 
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
 /**
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Executor</b></em>'.
@@ -16,7 +14,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *
  * @generated
  */
-public class ExecutorImpl extends MinimalEObjectImpl.Container implements Executor {
+public class ExecutorImpl extends UserImpl implements Executor {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

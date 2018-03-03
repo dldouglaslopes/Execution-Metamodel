@@ -7,8 +7,6 @@ import MetamodelExecution.Execution_metamodelPackage;
 
 import org.eclipse.emf.ecore.EClass;
 
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
 /**
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Creator</b></em>'.
@@ -16,7 +14,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *
  * @generated
  */
-public class CreatorImpl extends MinimalEObjectImpl.Container implements Creator {
+public class CreatorImpl extends UserImpl implements Creator {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

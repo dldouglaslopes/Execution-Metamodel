@@ -112,10 +112,8 @@ public class Execution_metamodelFactoryImpl extends EFactoryImpl implements Exec
 			return createNumeric();
 		case Execution_metamodelPackage.YES_OR_NO:
 			return createYesOrNo();
-		case Execution_metamodelPackage.ELEMENT:
-			return createElement();
-		case Execution_metamodelPackage.MODELING:
-			return createModeling();
+		case Execution_metamodelPackage.STEP:
+			return createStep();
 		case Execution_metamodelPackage.CREATOR:
 			return createCreator();
 		case Execution_metamodelPackage.EXECUTOR:
@@ -412,19 +410,9 @@ public class Execution_metamodelFactoryImpl extends EFactoryImpl implements Exec
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Element createElement() {
-		ElementImpl element = new ElementImpl();
-		return element;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Modeling createModeling() {
-		ModelingImpl modeling = new ModelingImpl();
-		return modeling;
+	public Step createStep() {
+		StepImpl step = new StepImpl();
+		return step;
 	}
 
 	/**

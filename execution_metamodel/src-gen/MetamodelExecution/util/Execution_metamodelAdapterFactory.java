@@ -67,11 +67,6 @@ public class Execution_metamodelAdapterFactory extends AdapterFactoryImpl {
 	 */
 	protected Execution_metamodelSwitch<Adapter> modelSwitch = new Execution_metamodelSwitch<Adapter>() {
 		@Override
-		public Adapter caseStep(Step object) {
-			return createStepAdapter();
-		}
-
-		@Override
 		public Adapter caseAuxiliaryConduct(AuxiliaryConduct object) {
 			return createAuxiliaryConductAdapter();
 		}
@@ -222,18 +217,8 @@ public class Execution_metamodelAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
-		public Adapter caseCompleteStep(CompleteStep object) {
-			return createCompleteStepAdapter();
-		}
-
-		@Override
-		public Adapter caseElement(Element object) {
-			return createElementAdapter();
-		}
-
-		@Override
-		public Adapter caseModeling(Modeling object) {
-			return createModelingAdapter();
+		public Adapter caseStep(Step object) {
+			return createStepAdapter();
 		}
 
 		@Override
@@ -249,6 +234,11 @@ public class Execution_metamodelAdapterFactory extends AdapterFactoryImpl {
 		@Override
 		public Adapter caseLastProfessional(LastProfessional object) {
 			return createLastProfessionalAdapter();
+		}
+
+		@Override
+		public Adapter caseExecution(Execution object) {
+			return createExecutionAdapter();
 		}
 
 		@Override
@@ -268,20 +258,6 @@ public class Execution_metamodelAdapterFactory extends AdapterFactoryImpl {
 	@Override
 	public Adapter createAdapter(Notifier target) {
 		return modelSwitch.doSwitch((EObject) target);
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link MetamodelExecution.Step <em>Step</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see MetamodelExecution.Step
-	 * @generated
-	 */
-	public Adapter createStepAdapter() {
-		return null;
 	}
 
 	/**
@@ -705,44 +681,16 @@ public class Execution_metamodelAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link MetamodelExecution.CompleteStep <em>Complete Step</em>}'.
+	 * Creates a new adapter for an object of class '{@link MetamodelExecution.Step <em>Step</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see MetamodelExecution.CompleteStep
+	 * @see MetamodelExecution.Step
 	 * @generated
 	 */
-	public Adapter createCompleteStepAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link MetamodelExecution.Element <em>Element</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see MetamodelExecution.Element
-	 * @generated
-	 */
-	public Adapter createElementAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link MetamodelExecution.Modeling <em>Modeling</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see MetamodelExecution.Modeling
-	 * @generated
-	 */
-	public Adapter createModelingAdapter() {
+	public Adapter createStepAdapter() {
 		return null;
 	}
 
@@ -785,6 +733,20 @@ public class Execution_metamodelAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createLastProfessionalAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link MetamodelExecution.Execution <em>Execution</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see MetamodelExecution.Execution
+	 * @generated
+	 */
+	public Adapter createExecutionAdapter() {
 		return null;
 	}
 

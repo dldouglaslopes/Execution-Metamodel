@@ -274,22 +274,13 @@ public interface Execution_metamodelFactory extends EFactory {
 	YesOrNo createYesOrNo();
 
 	/**
-	 * Returns a new object of class '<em>Element</em>'.
+	 * Returns a new object of class '<em>Step</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Element</em>'.
+	 * @return a new object of class '<em>Step</em>'.
 	 * @generated
 	 */
-	Element createElement();
-
-	/**
-	 * Returns a new object of class '<em>Modeling</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Modeling</em>'.
-	 * @generated
-	 */
-	Modeling createModeling();
+	Step createStep();
 
 	/**
 	 * Returns a new object of class '<em>Creator</em>'.
