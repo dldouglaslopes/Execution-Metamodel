@@ -70,10 +70,6 @@ public class Execution_metamodelFactoryImpl extends EFactoryImpl implements Exec
 			return createTreatment();
 		case Execution_metamodelPackage.EXAMINATION:
 			return createExamination();
-		case Execution_metamodelPackage.PREVIOUS:
-			return createPrevious();
-		case Execution_metamodelPackage.NEXT:
-			return createNext();
 		case Execution_metamodelPackage.PRESCRIBED_EXAMINATION:
 			return createPrescribedExamination();
 		case Execution_metamodelPackage.EXAM:
@@ -90,16 +86,12 @@ public class Execution_metamodelFactoryImpl extends EFactoryImpl implements Exec
 			return createPrescribedPrescriptionItem();
 		case Execution_metamodelPackage.PRESCRIBED_MEDICAMENT:
 			return createPrescribedMedicament();
-		case Execution_metamodelPackage.SHORT_EXECUTION:
-			return createShortExecution();
 		case Execution_metamodelPackage.JUSTIFICATION:
 			return createJustification();
 		case Execution_metamodelPackage.PATHWAY:
 			return createPathway();
 		case Execution_metamodelPackage.RESPONSIBLE:
 			return createResponsible();
-		case Execution_metamodelPackage.EXECUTED_STEP:
-			return createExecutedStep();
 		case Execution_metamodelPackage.ANSWER:
 			return createAnswer();
 		case Execution_metamodelPackage.NUMERIC:
@@ -126,6 +118,8 @@ public class Execution_metamodelFactoryImpl extends EFactoryImpl implements Exec
 			return createQuestion();
 		case Execution_metamodelPackage.TESTE:
 			return createteste();
+		case Execution_metamodelPackage.EXECUTION:
+			return createExecution();
 		default:
 			throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -199,26 +193,6 @@ public class Execution_metamodelFactoryImpl extends EFactoryImpl implements Exec
 	public Examination createExamination() {
 		ExaminationImpl examination = new ExaminationImpl();
 		return examination;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Previous createPrevious() {
-		PreviousImpl previous = new PreviousImpl();
-		return previous;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Next createNext() {
-		NextImpl next = new NextImpl();
-		return next;
 	}
 
 	/**
@@ -306,16 +280,6 @@ public class Execution_metamodelFactoryImpl extends EFactoryImpl implements Exec
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ShortExecution createShortExecution() {
-		ShortExecutionImpl shortExecution = new ShortExecutionImpl();
-		return shortExecution;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public Justification createJustification() {
 		JustificationImpl justification = new JustificationImpl();
 		return justification;
@@ -339,16 +303,6 @@ public class Execution_metamodelFactoryImpl extends EFactoryImpl implements Exec
 	public Responsible createResponsible() {
 		ResponsibleImpl responsible = new ResponsibleImpl();
 		return responsible;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public ExecutedStep createExecutedStep() {
-		ExecutedStepImpl executedStep = new ExecutedStepImpl();
-		return executedStep;
 	}
 
 	/**
@@ -479,6 +433,16 @@ public class Execution_metamodelFactoryImpl extends EFactoryImpl implements Exec
 	public teste createteste() {
 		testeImpl teste = new testeImpl();
 		return teste;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Execution createExecution() {
+		ExecutionImpl execution = new ExecutionImpl();
+		return execution;
 	}
 
 	/**

@@ -4,6 +4,8 @@ package MetamodelExecution;
 
 import java.util.Date;
 
+import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -15,34 +17,44 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
+ *   <li>{@link MetamodelExecution.Execution#getElement <em>Element</em>}</li>
  *   <li>{@link MetamodelExecution.Execution#getId <em>Id</em>}</li>
- *   <li>{@link MetamodelExecution.Execution#getType <em>Type</em>}</li>
- *   <li>{@link MetamodelExecution.Execution#getTypeVerbose <em>Type Verbose</em>}</li>
  *   <li>{@link MetamodelExecution.Execution#getUrl <em>Url</em>}</li>
- *   <li>{@link MetamodelExecution.Execution#isIsCurrent <em>Is Current</em>}</li>
- *   <li>{@link MetamodelExecution.Execution#isReworked <em>Reworked</em>}</li>
- *   <li>{@link MetamodelExecution.Execution#isExecuted <em>Executed</em>}</li>
  *   <li>{@link MetamodelExecution.Execution#getCreationDate <em>Creation Date</em>}</li>
- *   <li>{@link MetamodelExecution.Execution#getModificationDate <em>Modification Date</em>}</li>
- *   <li>{@link MetamodelExecution.Execution#getExecutionDate <em>Execution Date</em>}</li>
- *   <li>{@link MetamodelExecution.Execution#getCreatedById <em>Created By Id</em>}</li>
- *   <li>{@link MetamodelExecution.Execution#getExecutedById <em>Executed By Id</em>}</li>
- *   <li>{@link MetamodelExecution.Execution#getIdStep <em>Id Step</em>}</li>
+ *   <li>{@link MetamodelExecution.Execution#getConclusionDate <em>Conclusion Date</em>}</li>
+ *   <li>{@link MetamodelExecution.Execution#isCompleted <em>Completed</em>}</li>
+ *   <li>{@link MetamodelExecution.Execution#isAborted <em>Aborted</em>}</li>
+ *   <li>{@link MetamodelExecution.Execution#getLastExecutedStepDate <em>Last Executed Step Date</em>}</li>
  *   <li>{@link MetamodelExecution.Execution#getIdPathway <em>Id Pathway</em>}</li>
- *   <li>{@link MetamodelExecution.Execution#getIdExecutedPathway <em>Id Executed Pathway</em>}</li>
- *   <li>{@link MetamodelExecution.Execution#getJustification <em>Justification</em>}</li>
- *   <li>{@link MetamodelExecution.Execution#getStep <em>Step</em>}</li>
- *   <li>{@link MetamodelExecution.Execution#getPrevious <em>Previous</em>}</li>
- *   <li>{@link MetamodelExecution.Execution#getNext <em>Next</em>}</li>
- *   <li>{@link MetamodelExecution.Execution#getCreator <em>Creator</em>}</li>
- *   <li>{@link MetamodelExecution.Execution#getExecutor <em>Executor</em>}</li>
+ *   <li>{@link MetamodelExecution.Execution#getIdLastProfessional <em>Id Last Professional</em>}</li>
+ *   <li>{@link MetamodelExecution.Execution#getIdResponsible <em>Id Responsible</em>}</li>
+ *   <li>{@link MetamodelExecution.Execution#getIdsExecutedStep <em>Ids Executed Step</em>}</li>
+ *   <li>{@link MetamodelExecution.Execution#getPathway <em>Pathway</em>}</li>
+ *   <li>{@link MetamodelExecution.Execution#getResponsible <em>Responsible</em>}</li>
+ *   <li>{@link MetamodelExecution.Execution#getLastprofessional <em>Lastprofessional</em>}</li>
  * </ul>
  *
  * @see MetamodelExecution.Execution_metamodelPackage#getExecution()
- * @model abstract="true"
+ * @model
  * @generated
  */
 public interface Execution extends EObject {
+	/**
+	 * Returns the value of the '<em><b>Element</b></em>' containment reference list.
+	 * The list contents are of type {@link MetamodelExecution.Element}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Element</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Element</em>' containment reference list.
+	 * @see MetamodelExecution.Execution_metamodelPackage#getExecution_Element()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<Element> getElement();
+
 	/**
 	 * Returns the value of the '<em><b>Id</b></em>' attribute.
 	 * <!-- begin-user-doc -->
@@ -68,58 +80,6 @@ public interface Execution extends EObject {
 	 * @generated
 	 */
 	void setId(int value);
-
-	/**
-	 * Returns the value of the '<em><b>Type</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Type</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Type</em>' attribute.
-	 * @see #setType(String)
-	 * @see MetamodelExecution.Execution_metamodelPackage#getExecution_Type()
-	 * @model
-	 * @generated
-	 */
-	String getType();
-
-	/**
-	 * Sets the value of the '{@link MetamodelExecution.Execution#getType <em>Type</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Type</em>' attribute.
-	 * @see #getType()
-	 * @generated
-	 */
-	void setType(String value);
-
-	/**
-	 * Returns the value of the '<em><b>Type Verbose</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Type Verbose</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Type Verbose</em>' attribute.
-	 * @see #setTypeVerbose(String)
-	 * @see MetamodelExecution.Execution_metamodelPackage#getExecution_TypeVerbose()
-	 * @model
-	 * @generated
-	 */
-	String getTypeVerbose();
-
-	/**
-	 * Sets the value of the '{@link MetamodelExecution.Execution#getTypeVerbose <em>Type Verbose</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Type Verbose</em>' attribute.
-	 * @see #getTypeVerbose()
-	 * @generated
-	 */
-	void setTypeVerbose(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Url</b></em>' attribute.
@@ -148,87 +108,6 @@ public interface Execution extends EObject {
 	void setUrl(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Is Current</b></em>' attribute.
-	 * The default value is <code>"false"</code>.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Is Current</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Is Current</em>' attribute.
-	 * @see #setIsCurrent(boolean)
-	 * @see MetamodelExecution.Execution_metamodelPackage#getExecution_IsCurrent()
-	 * @model default="false"
-	 * @generated
-	 */
-	boolean isIsCurrent();
-
-	/**
-	 * Sets the value of the '{@link MetamodelExecution.Execution#isIsCurrent <em>Is Current</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Is Current</em>' attribute.
-	 * @see #isIsCurrent()
-	 * @generated
-	 */
-	void setIsCurrent(boolean value);
-
-	/**
-	 * Returns the value of the '<em><b>Reworked</b></em>' attribute.
-	 * The default value is <code>"false"</code>.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Reworked</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Reworked</em>' attribute.
-	 * @see #setReworked(boolean)
-	 * @see MetamodelExecution.Execution_metamodelPackage#getExecution_Reworked()
-	 * @model default="false"
-	 * @generated
-	 */
-	boolean isReworked();
-
-	/**
-	 * Sets the value of the '{@link MetamodelExecution.Execution#isReworked <em>Reworked</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Reworked</em>' attribute.
-	 * @see #isReworked()
-	 * @generated
-	 */
-	void setReworked(boolean value);
-
-	/**
-	 * Returns the value of the '<em><b>Executed</b></em>' attribute.
-	 * The default value is <code>"false"</code>.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Executed</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Executed</em>' attribute.
-	 * @see #setExecuted(boolean)
-	 * @see MetamodelExecution.Execution_metamodelPackage#getExecution_Executed()
-	 * @model default="false"
-	 * @generated
-	 */
-	boolean isExecuted();
-
-	/**
-	 * Sets the value of the '{@link MetamodelExecution.Execution#isExecuted <em>Executed</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Executed</em>' attribute.
-	 * @see #isExecuted()
-	 * @generated
-	 */
-	void setExecuted(boolean value);
-
-	/**
 	 * Returns the value of the '<em><b>Creation Date</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <p>
@@ -255,134 +134,109 @@ public interface Execution extends EObject {
 	void setCreationDate(Date value);
 
 	/**
-	 * Returns the value of the '<em><b>Modification Date</b></em>' attribute.
+	 * Returns the value of the '<em><b>Conclusion Date</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Modification Date</em>' attribute isn't clear,
+	 * If the meaning of the '<em>Conclusion Date</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Modification Date</em>' attribute.
-	 * @see #setModificationDate(Date)
-	 * @see MetamodelExecution.Execution_metamodelPackage#getExecution_ModificationDate()
+	 * @return the value of the '<em>Conclusion Date</em>' attribute.
+	 * @see #setConclusionDate(Date)
+	 * @see MetamodelExecution.Execution_metamodelPackage#getExecution_ConclusionDate()
 	 * @model
 	 * @generated
 	 */
-	Date getModificationDate();
+	Date getConclusionDate();
 
 	/**
-	 * Sets the value of the '{@link MetamodelExecution.Execution#getModificationDate <em>Modification Date</em>}' attribute.
+	 * Sets the value of the '{@link MetamodelExecution.Execution#getConclusionDate <em>Conclusion Date</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Modification Date</em>' attribute.
-	 * @see #getModificationDate()
+	 * @param value the new value of the '<em>Conclusion Date</em>' attribute.
+	 * @see #getConclusionDate()
 	 * @generated
 	 */
-	void setModificationDate(Date value);
+	void setConclusionDate(Date value);
 
 	/**
-	 * Returns the value of the '<em><b>Execution Date</b></em>' attribute.
+	 * Returns the value of the '<em><b>Completed</b></em>' attribute.
+	 * The default value is <code>"false"</code>.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Execution Date</em>' attribute isn't clear,
+	 * If the meaning of the '<em>Completed</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Execution Date</em>' attribute.
-	 * @see #setExecutionDate(Date)
-	 * @see MetamodelExecution.Execution_metamodelPackage#getExecution_ExecutionDate()
-	 * @model
+	 * @return the value of the '<em>Completed</em>' attribute.
+	 * @see #setCompleted(boolean)
+	 * @see MetamodelExecution.Execution_metamodelPackage#getExecution_Completed()
+	 * @model default="false"
 	 * @generated
 	 */
-	Date getExecutionDate();
+	boolean isCompleted();
 
 	/**
-	 * Sets the value of the '{@link MetamodelExecution.Execution#getExecutionDate <em>Execution Date</em>}' attribute.
+	 * Sets the value of the '{@link MetamodelExecution.Execution#isCompleted <em>Completed</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Execution Date</em>' attribute.
-	 * @see #getExecutionDate()
+	 * @param value the new value of the '<em>Completed</em>' attribute.
+	 * @see #isCompleted()
 	 * @generated
 	 */
-	void setExecutionDate(Date value);
+	void setCompleted(boolean value);
 
 	/**
-	 * Returns the value of the '<em><b>Created By Id</b></em>' attribute.
+	 * Returns the value of the '<em><b>Aborted</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Created By Id</em>' attribute isn't clear,
+	 * If the meaning of the '<em>Aborted</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Created By Id</em>' attribute.
-	 * @see #setCreatedById(int)
-	 * @see MetamodelExecution.Execution_metamodelPackage#getExecution_CreatedById()
+	 * @return the value of the '<em>Aborted</em>' attribute.
+	 * @see #setAborted(boolean)
+	 * @see MetamodelExecution.Execution_metamodelPackage#getExecution_Aborted()
 	 * @model
 	 * @generated
 	 */
-	int getCreatedById();
+	boolean isAborted();
 
 	/**
-	 * Sets the value of the '{@link MetamodelExecution.Execution#getCreatedById <em>Created By Id</em>}' attribute.
+	 * Sets the value of the '{@link MetamodelExecution.Execution#isAborted <em>Aborted</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Created By Id</em>' attribute.
-	 * @see #getCreatedById()
+	 * @param value the new value of the '<em>Aborted</em>' attribute.
+	 * @see #isAborted()
 	 * @generated
 	 */
-	void setCreatedById(int value);
+	void setAborted(boolean value);
 
 	/**
-	 * Returns the value of the '<em><b>Executed By Id</b></em>' attribute.
+	 * Returns the value of the '<em><b>Last Executed Step Date</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Executed By Id</em>' attribute isn't clear,
+	 * If the meaning of the '<em>Last Executed Step Date</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Executed By Id</em>' attribute.
-	 * @see #setExecutedById(int)
-	 * @see MetamodelExecution.Execution_metamodelPackage#getExecution_ExecutedById()
+	 * @return the value of the '<em>Last Executed Step Date</em>' attribute.
+	 * @see #setLastExecutedStepDate(String)
+	 * @see MetamodelExecution.Execution_metamodelPackage#getExecution_LastExecutedStepDate()
 	 * @model
 	 * @generated
 	 */
-	int getExecutedById();
+	String getLastExecutedStepDate();
 
 	/**
-	 * Sets the value of the '{@link MetamodelExecution.Execution#getExecutedById <em>Executed By Id</em>}' attribute.
+	 * Sets the value of the '{@link MetamodelExecution.Execution#getLastExecutedStepDate <em>Last Executed Step Date</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Executed By Id</em>' attribute.
-	 * @see #getExecutedById()
+	 * @param value the new value of the '<em>Last Executed Step Date</em>' attribute.
+	 * @see #getLastExecutedStepDate()
 	 * @generated
 	 */
-	void setExecutedById(int value);
-
-	/**
-	 * Returns the value of the '<em><b>Id Step</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Id Step</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Id Step</em>' attribute.
-	 * @see #setIdStep(int)
-	 * @see MetamodelExecution.Execution_metamodelPackage#getExecution_IdStep()
-	 * @model
-	 * @generated
-	 */
-	int getIdStep();
-
-	/**
-	 * Sets the value of the '{@link MetamodelExecution.Execution#getIdStep <em>Id Step</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Id Step</em>' attribute.
-	 * @see #getIdStep()
-	 * @generated
-	 */
-	void setIdStep(int value);
+	void setLastExecutedStepDate(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Id Pathway</b></em>' attribute.
@@ -411,185 +265,149 @@ public interface Execution extends EObject {
 	void setIdPathway(int value);
 
 	/**
-	 * Returns the value of the '<em><b>Id Executed Pathway</b></em>' attribute.
+	 * Returns the value of the '<em><b>Id Last Professional</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Id Executed Pathway</em>' attribute isn't clear,
+	 * If the meaning of the '<em>Id Last Professional</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Id Executed Pathway</em>' attribute.
-	 * @see #setIdExecutedPathway(int)
-	 * @see MetamodelExecution.Execution_metamodelPackage#getExecution_IdExecutedPathway()
+	 * @return the value of the '<em>Id Last Professional</em>' attribute.
+	 * @see #setIdLastProfessional(int)
+	 * @see MetamodelExecution.Execution_metamodelPackage#getExecution_IdLastProfessional()
 	 * @model
 	 * @generated
 	 */
-	int getIdExecutedPathway();
+	int getIdLastProfessional();
 
 	/**
-	 * Sets the value of the '{@link MetamodelExecution.Execution#getIdExecutedPathway <em>Id Executed Pathway</em>}' attribute.
+	 * Sets the value of the '{@link MetamodelExecution.Execution#getIdLastProfessional <em>Id Last Professional</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Id Executed Pathway</em>' attribute.
-	 * @see #getIdExecutedPathway()
+	 * @param value the new value of the '<em>Id Last Professional</em>' attribute.
+	 * @see #getIdLastProfessional()
 	 * @generated
 	 */
-	void setIdExecutedPathway(int value);
+	void setIdLastProfessional(int value);
 
 	/**
-	 * Returns the value of the '<em><b>Justification</b></em>' containment reference.
+	 * Returns the value of the '<em><b>Id Responsible</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Justification</em>' containment reference isn't clear,
+	 * If the meaning of the '<em>Id Responsible</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Justification</em>' containment reference.
-	 * @see #setJustification(Justification)
-	 * @see MetamodelExecution.Execution_metamodelPackage#getExecution_Justification()
-	 * @model containment="true"
+	 * @return the value of the '<em>Id Responsible</em>' attribute.
+	 * @see #setIdResponsible(int)
+	 * @see MetamodelExecution.Execution_metamodelPackage#getExecution_IdResponsible()
+	 * @model
 	 * @generated
 	 */
-	Justification getJustification();
+	int getIdResponsible();
 
 	/**
-	 * Sets the value of the '{@link MetamodelExecution.Execution#getJustification <em>Justification</em>}' containment reference.
+	 * Sets the value of the '{@link MetamodelExecution.Execution#getIdResponsible <em>Id Responsible</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Justification</em>' containment reference.
-	 * @see #getJustification()
+	 * @param value the new value of the '<em>Id Responsible</em>' attribute.
+	 * @see #getIdResponsible()
 	 * @generated
 	 */
-	void setJustification(Justification value);
+	void setIdResponsible(int value);
 
 	/**
-	 * Returns the value of the '<em><b>Step</b></em>' containment reference.
+	 * Returns the value of the '<em><b>Ids Executed Step</b></em>' attribute list.
+	 * The list contents are of type {@link java.lang.Integer}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Step</em>' containment reference isn't clear,
+	 * If the meaning of the '<em>Ids Executed Step</em>' attribute list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Step</em>' containment reference.
-	 * @see #setStep(Step)
-	 * @see MetamodelExecution.Execution_metamodelPackage#getExecution_Step()
+	 * @return the value of the '<em>Ids Executed Step</em>' attribute list.
+	 * @see MetamodelExecution.Execution_metamodelPackage#getExecution_IdsExecutedStep()
+	 * @model
+	 * @generated
+	 */
+	EList<Integer> getIdsExecutedStep();
+
+	/**
+	 * Returns the value of the '<em><b>Pathway</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Pathway</em>' containment reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Pathway</em>' containment reference.
+	 * @see #setPathway(Pathway)
+	 * @see MetamodelExecution.Execution_metamodelPackage#getExecution_Pathway()
 	 * @model containment="true" required="true"
 	 * @generated
 	 */
-	Step getStep();
+	Pathway getPathway();
 
 	/**
-	 * Sets the value of the '{@link MetamodelExecution.Execution#getStep <em>Step</em>}' containment reference.
+	 * Sets the value of the '{@link MetamodelExecution.Execution#getPathway <em>Pathway</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Step</em>' containment reference.
-	 * @see #getStep()
+	 * @param value the new value of the '<em>Pathway</em>' containment reference.
+	 * @see #getPathway()
 	 * @generated
 	 */
-	void setStep(Step value);
+	void setPathway(Pathway value);
 
 	/**
-	 * Returns the value of the '<em><b>Previous</b></em>' containment reference.
+	 * Returns the value of the '<em><b>Responsible</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Previous</em>' containment reference isn't clear,
+	 * If the meaning of the '<em>Responsible</em>' containment reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Previous</em>' containment reference.
-	 * @see #setPrevious(Previous)
-	 * @see MetamodelExecution.Execution_metamodelPackage#getExecution_Previous()
-	 * @model containment="true"
-	 * @generated
-	 */
-	Previous getPrevious();
-
-	/**
-	 * Sets the value of the '{@link MetamodelExecution.Execution#getPrevious <em>Previous</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Previous</em>' containment reference.
-	 * @see #getPrevious()
-	 * @generated
-	 */
-	void setPrevious(Previous value);
-
-	/**
-	 * Returns the value of the '<em><b>Next</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Next</em>' containment reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Next</em>' containment reference.
-	 * @see #setNext(Next)
-	 * @see MetamodelExecution.Execution_metamodelPackage#getExecution_Next()
-	 * @model containment="true"
-	 * @generated
-	 */
-	Next getNext();
-
-	/**
-	 * Sets the value of the '{@link MetamodelExecution.Execution#getNext <em>Next</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Next</em>' containment reference.
-	 * @see #getNext()
-	 * @generated
-	 */
-	void setNext(Next value);
-
-	/**
-	 * Returns the value of the '<em><b>Creator</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Creator</em>' containment reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Creator</em>' containment reference.
-	 * @see #setCreator(Creator)
-	 * @see MetamodelExecution.Execution_metamodelPackage#getExecution_Creator()
+	 * @return the value of the '<em>Responsible</em>' containment reference.
+	 * @see #setResponsible(Responsible)
+	 * @see MetamodelExecution.Execution_metamodelPackage#getExecution_Responsible()
 	 * @model containment="true" required="true"
 	 * @generated
 	 */
-	Creator getCreator();
+	Responsible getResponsible();
 
 	/**
-	 * Sets the value of the '{@link MetamodelExecution.Execution#getCreator <em>Creator</em>}' containment reference.
+	 * Sets the value of the '{@link MetamodelExecution.Execution#getResponsible <em>Responsible</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Creator</em>' containment reference.
-	 * @see #getCreator()
+	 * @param value the new value of the '<em>Responsible</em>' containment reference.
+	 * @see #getResponsible()
 	 * @generated
 	 */
-	void setCreator(Creator value);
+	void setResponsible(Responsible value);
 
 	/**
-	 * Returns the value of the '<em><b>Executor</b></em>' containment reference.
+	 * Returns the value of the '<em><b>Lastprofessional</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Executor</em>' containment reference isn't clear,
+	 * If the meaning of the '<em>Lastprofessional</em>' containment reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Executor</em>' containment reference.
-	 * @see #setExecutor(Executor)
-	 * @see MetamodelExecution.Execution_metamodelPackage#getExecution_Executor()
+	 * @return the value of the '<em>Lastprofessional</em>' containment reference.
+	 * @see #setLastprofessional(LastProfessional)
+	 * @see MetamodelExecution.Execution_metamodelPackage#getExecution_Lastprofessional()
 	 * @model containment="true" required="true"
 	 * @generated
 	 */
-	Executor getExecutor();
+	LastProfessional getLastprofessional();
 
 	/**
-	 * Sets the value of the '{@link MetamodelExecution.Execution#getExecutor <em>Executor</em>}' containment reference.
+	 * Sets the value of the '{@link MetamodelExecution.Execution#getLastprofessional <em>Lastprofessional</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Executor</em>' containment reference.
-	 * @see #getExecutor()
+	 * @param value the new value of the '<em>Lastprofessional</em>' containment reference.
+	 * @see #getLastprofessional()
 	 * @generated
 	 */
-	void setExecutor(Executor value);
+	void setLastprofessional(LastProfessional value);
 
 } // Execution

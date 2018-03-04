@@ -85,24 +85,6 @@ public interface Execution_metamodelFactory extends EFactory {
 	Examination createExamination();
 
 	/**
-	 * Returns a new object of class '<em>Previous</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Previous</em>'.
-	 * @generated
-	 */
-	Previous createPrevious();
-
-	/**
-	 * Returns a new object of class '<em>Next</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Next</em>'.
-	 * @generated
-	 */
-	Next createNext();
-
-	/**
 	 * Returns a new object of class '<em>Prescribed Examination</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -175,15 +157,6 @@ public interface Execution_metamodelFactory extends EFactory {
 	PrescribedMedicament createPrescribedMedicament();
 
 	/**
-	 * Returns a new object of class '<em>Short Execution</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Short Execution</em>'.
-	 * @generated
-	 */
-	ShortExecution createShortExecution();
-
-	/**
 	 * Returns a new object of class '<em>Justification</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -209,15 +182,6 @@ public interface Execution_metamodelFactory extends EFactory {
 	 * @generated
 	 */
 	Responsible createResponsible();
-
-	/**
-	 * Returns a new object of class '<em>Executed Step</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Executed Step</em>'.
-	 * @generated
-	 */
-	ExecutedStep createExecutedStep();
 
 	/**
 	 * Returns a new object of class '<em>Answer</em>'.
@@ -335,6 +299,15 @@ public interface Execution_metamodelFactory extends EFactory {
 	 * @generated
 	 */
 	teste createteste();
+
+	/**
+	 * Returns a new object of class '<em>Execution</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Execution</em>'.
+	 * @generated
+	 */
+	Execution createExecution();
 
 	/**
 	 * Returns the package supported by this factory.

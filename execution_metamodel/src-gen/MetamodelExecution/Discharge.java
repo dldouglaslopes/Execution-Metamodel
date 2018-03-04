@@ -12,5 +12,5 @@ package MetamodelExecution;
  * @model
  * @generated
  */
-public interface Discharge extends Execution {
+public interface Discharge extends Element {
 } // Discharge

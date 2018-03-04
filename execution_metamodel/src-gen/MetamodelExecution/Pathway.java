@@ -17,9 +17,9 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link MetamodelExecution.Pathway#getUrl <em>Url</em>}</li>
  *   <li>{@link MetamodelExecution.Pathway#getCode <em>Code</em>}</li>
  *   <li>{@link MetamodelExecution.Pathway#getName <em>Name</em>}</li>
- *   <li>{@link MetamodelExecution.Pathway#getIdRepository <em>Id Repository</em>}</li>
  *   <li>{@link MetamodelExecution.Pathway#getVersion <em>Version</em>}</li>
  *   <li>{@link MetamodelExecution.Pathway#isCompleted <em>Completed</em>}</li>
+ *   <li>{@link MetamodelExecution.Pathway#getIdRepository <em>Id Repository</em>}</li>
  * </ul>
  *
  * @see MetamodelExecution.Execution_metamodelPackage#getPathway()
@@ -132,32 +132,6 @@ public interface Pathway extends EObject {
 	void setName(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Id Repository</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Id Repository</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Id Repository</em>' attribute.
-	 * @see #setIdRepository(int)
-	 * @see MetamodelExecution.Execution_metamodelPackage#getPathway_IdRepository()
-	 * @model
-	 * @generated
-	 */
-	int getIdRepository();
-
-	/**
-	 * Sets the value of the '{@link MetamodelExecution.Pathway#getIdRepository <em>Id Repository</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Id Repository</em>' attribute.
-	 * @see #getIdRepository()
-	 * @generated
-	 */
-	void setIdRepository(int value);
-
-	/**
 	 * Returns the value of the '<em><b>Version</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <p>
@@ -208,5 +182,31 @@ public interface Pathway extends EObject {
 	 * @generated
 	 */
 	void setCompleted(boolean value);
+
+	/**
+	 * Returns the value of the '<em><b>Id Repository</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Id Repository</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Id Repository</em>' attribute.
+	 * @see #setIdRepository(int)
+	 * @see MetamodelExecution.Execution_metamodelPackage#getPathway_IdRepository()
+	 * @model
+	 * @generated
+	 */
+	int getIdRepository();
+
+	/**
+	 * Sets the value of the '{@link MetamodelExecution.Pathway#getIdRepository <em>Id Repository</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Id Repository</em>' attribute.
+	 * @see #getIdRepository()
+	 * @generated
+	 */
+	void setIdRepository(int value);
 
 } // Pathway

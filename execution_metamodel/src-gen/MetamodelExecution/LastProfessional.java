@@ -2,8 +2,6 @@
  */
 package MetamodelExecution;
 
-import org.eclipse.emf.ecore.EObject;
-
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Last Professional</b></em>'.
@@ -14,5 +12,5 @@ import org.eclipse.emf.ecore.EObject;
  * @model
  * @generated
  */
-public interface LastProfessional extends EObject {
+public interface LastProfessional extends User {
 } // LastProfessional

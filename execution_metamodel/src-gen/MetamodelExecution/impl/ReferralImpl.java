@@ -14,7 +14,7 @@ import org.eclipse.emf.ecore.EClass;
  *
  * @generated
  */
-public class ReferralImpl extends ExecutionImpl implements Referral {
+public class ReferralImpl extends ElementImpl implements Referral {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

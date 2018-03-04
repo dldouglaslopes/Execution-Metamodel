@@ -7,8 +7,6 @@ import MetamodelExecution.Responsible;
 
 import org.eclipse.emf.ecore.EClass;
 
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
 /**
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Responsible</b></em>'.
@@ -16,7 +14,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *
  * @generated
  */
-public class ResponsibleImpl extends MinimalEObjectImpl.Container implements Responsible {
+public class ResponsibleImpl extends UserImpl implements Responsible {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

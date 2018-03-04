@@ -7,8 +7,6 @@ import MetamodelExecution.LastProfessional;
 
 import org.eclipse.emf.ecore.EClass;
 
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
 /**
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Last Professional</b></em>'.
@@ -16,7 +14,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *
  * @generated
  */
-public class LastProfessionalImpl extends MinimalEObjectImpl.Container implements LastProfessional {
+public class LastProfessionalImpl extends UserImpl implements LastProfessional {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

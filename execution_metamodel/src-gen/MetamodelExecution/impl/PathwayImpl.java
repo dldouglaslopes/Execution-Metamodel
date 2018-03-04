@@ -24,9 +24,9 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *   <li>{@link MetamodelExecution.impl.PathwayImpl#getUrl <em>Url</em>}</li>
  *   <li>{@link MetamodelExecution.impl.PathwayImpl#getCode <em>Code</em>}</li>
  *   <li>{@link MetamodelExecution.impl.PathwayImpl#getName <em>Name</em>}</li>
- *   <li>{@link MetamodelExecution.impl.PathwayImpl#getIdRepository <em>Id Repository</em>}</li>
  *   <li>{@link MetamodelExecution.impl.PathwayImpl#getVersion <em>Version</em>}</li>
  *   <li>{@link MetamodelExecution.impl.PathwayImpl#isCompleted <em>Completed</em>}</li>
+ *   <li>{@link MetamodelExecution.impl.PathwayImpl#getIdRepository <em>Id Repository</em>}</li>
  * </ul>
  *
  * @generated
@@ -113,26 +113,6 @@ public class PathwayImpl extends MinimalEObjectImpl.Container implements Pathway
 	protected String name = NAME_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getIdRepository() <em>Id Repository</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getIdRepository()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final int ID_REPOSITORY_EDEFAULT = 0;
-
-	/**
-	 * The cached value of the '{@link #getIdRepository() <em>Id Repository</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getIdRepository()
-	 * @generated
-	 * @ordered
-	 */
-	protected int idRepository = ID_REPOSITORY_EDEFAULT;
-
-	/**
 	 * The default value of the '{@link #getVersion() <em>Version</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -171,6 +151,26 @@ public class PathwayImpl extends MinimalEObjectImpl.Container implements Pathway
 	 * @ordered
 	 */
 	protected boolean completed = COMPLETED_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getIdRepository() <em>Id Repository</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getIdRepository()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final int ID_REPOSITORY_EDEFAULT = 0;
+
+	/**
+	 * The cached value of the '{@link #getIdRepository() <em>Id Repository</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getIdRepository()
+	 * @generated
+	 * @ordered
+	 */
+	protected int idRepository = ID_REPOSITORY_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -283,28 +283,6 @@ public class PathwayImpl extends MinimalEObjectImpl.Container implements Pathway
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public int getIdRepository() {
-		return idRepository;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setIdRepository(int newIdRepository) {
-		int oldIdRepository = idRepository;
-		idRepository = newIdRepository;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.PATHWAY__ID_REPOSITORY,
-					oldIdRepository, idRepository));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public int getVersion() {
 		return version;
 	}
@@ -349,6 +327,28 @@ public class PathwayImpl extends MinimalEObjectImpl.Container implements Pathway
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public int getIdRepository() {
+		return idRepository;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setIdRepository(int newIdRepository) {
+		int oldIdRepository = idRepository;
+		idRepository = newIdRepository;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.PATHWAY__ID_REPOSITORY,
+					oldIdRepository, idRepository));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -360,12 +360,12 @@ public class PathwayImpl extends MinimalEObjectImpl.Container implements Pathway
 			return getCode();
 		case Execution_metamodelPackage.PATHWAY__NAME:
 			return getName();
-		case Execution_metamodelPackage.PATHWAY__ID_REPOSITORY:
-			return getIdRepository();
 		case Execution_metamodelPackage.PATHWAY__VERSION:
 			return getVersion();
 		case Execution_metamodelPackage.PATHWAY__COMPLETED:
 			return isCompleted();
+		case Execution_metamodelPackage.PATHWAY__ID_REPOSITORY:
+			return getIdRepository();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -390,14 +390,14 @@ public class PathwayImpl extends MinimalEObjectImpl.Container implements Pathway
 		case Execution_metamodelPackage.PATHWAY__NAME:
 			setName((String) newValue);
 			return;
-		case Execution_metamodelPackage.PATHWAY__ID_REPOSITORY:
-			setIdRepository((Integer) newValue);
-			return;
 		case Execution_metamodelPackage.PATHWAY__VERSION:
 			setVersion((Integer) newValue);
 			return;
 		case Execution_metamodelPackage.PATHWAY__COMPLETED:
 			setCompleted((Boolean) newValue);
+			return;
+		case Execution_metamodelPackage.PATHWAY__ID_REPOSITORY:
+			setIdRepository((Integer) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -423,14 +423,14 @@ public class PathwayImpl extends MinimalEObjectImpl.Container implements Pathway
 		case Execution_metamodelPackage.PATHWAY__NAME:
 			setName(NAME_EDEFAULT);
 			return;
-		case Execution_metamodelPackage.PATHWAY__ID_REPOSITORY:
-			setIdRepository(ID_REPOSITORY_EDEFAULT);
-			return;
 		case Execution_metamodelPackage.PATHWAY__VERSION:
 			setVersion(VERSION_EDEFAULT);
 			return;
 		case Execution_metamodelPackage.PATHWAY__COMPLETED:
 			setCompleted(COMPLETED_EDEFAULT);
+			return;
+		case Execution_metamodelPackage.PATHWAY__ID_REPOSITORY:
+			setIdRepository(ID_REPOSITORY_EDEFAULT);
 			return;
 		}
 		super.eUnset(featureID);
@@ -452,12 +452,12 @@ public class PathwayImpl extends MinimalEObjectImpl.Container implements Pathway
 			return CODE_EDEFAULT == null ? code != null : !CODE_EDEFAULT.equals(code);
 		case Execution_metamodelPackage.PATHWAY__NAME:
 			return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-		case Execution_metamodelPackage.PATHWAY__ID_REPOSITORY:
-			return idRepository != ID_REPOSITORY_EDEFAULT;
 		case Execution_metamodelPackage.PATHWAY__VERSION:
 			return version != VERSION_EDEFAULT;
 		case Execution_metamodelPackage.PATHWAY__COMPLETED:
 			return completed != COMPLETED_EDEFAULT;
+		case Execution_metamodelPackage.PATHWAY__ID_REPOSITORY:
+			return idRepository != ID_REPOSITORY_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -481,12 +481,12 @@ public class PathwayImpl extends MinimalEObjectImpl.Container implements Pathway
 		result.append(code);
 		result.append(", name: ");
 		result.append(name);
-		result.append(", idRepository: ");
-		result.append(idRepository);
 		result.append(", version: ");
 		result.append(version);
 		result.append(", completed: ");
 		result.append(completed);
+		result.append(", idRepository: ");
+		result.append(idRepository);
 		result.append(')');
 		return result.toString();
 	}

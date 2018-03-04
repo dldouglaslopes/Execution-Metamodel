@@ -2,8 +2,6 @@
  */
 package MetamodelExecution;
 
-import org.eclipse.emf.ecore.EObject;
-
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Responsible</b></em>'.
@@ -14,5 +12,5 @@ import org.eclipse.emf.ecore.EObject;
  * @model
  * @generated
  */
-public interface Responsible extends EObject {
+public interface Responsible extends User {
 } // Responsible

@@ -102,16 +102,6 @@ public class Execution_metamodelAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
-		public Adapter casePrevious(Previous object) {
-			return createPreviousAdapter();
-		}
-
-		@Override
-		public Adapter caseNext(Next object) {
-			return createNextAdapter();
-		}
-
-		@Override
 		public Adapter casePrescribedExamination(PrescribedExamination object) {
 			return createPrescribedExaminationAdapter();
 		}
@@ -152,11 +142,6 @@ public class Execution_metamodelAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
-		public Adapter caseShortExecution(ShortExecution object) {
-			return createShortExecutionAdapter();
-		}
-
-		@Override
 		public Adapter caseJustification(Justification object) {
 			return createJustificationAdapter();
 		}
@@ -169,11 +154,6 @@ public class Execution_metamodelAdapterFactory extends AdapterFactoryImpl {
 		@Override
 		public Adapter caseResponsible(Responsible object) {
 			return createResponsibleAdapter();
-		}
-
-		@Override
-		public Adapter caseExecutedStep(ExecutedStep object) {
-			return createExecutedStepAdapter();
 		}
 
 		@Override
@@ -222,8 +202,8 @@ public class Execution_metamodelAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
-		public Adapter caseExecution(Execution object) {
-			return createExecutionAdapter();
+		public Adapter caseElement(Element object) {
+			return createElementAdapter();
 		}
 
 		@Override
@@ -254,6 +234,11 @@ public class Execution_metamodelAdapterFactory extends AdapterFactoryImpl {
 		@Override
 		public Adapter caseteste(teste object) {
 			return createtesteAdapter();
+		}
+
+		@Override
+		public Adapter caseExecution(Execution object) {
+			return createExecutionAdapter();
 		}
 
 		@Override
@@ -379,34 +364,6 @@ public class Execution_metamodelAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link MetamodelExecution.Previous <em>Previous</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see MetamodelExecution.Previous
-	 * @generated
-	 */
-	public Adapter createPreviousAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link MetamodelExecution.Next <em>Next</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see MetamodelExecution.Next
-	 * @generated
-	 */
-	public Adapter createNextAdapter() {
-		return null;
-	}
-
-	/**
 	 * Creates a new adapter for an object of class '{@link MetamodelExecution.PrescribedExamination <em>Prescribed Examination</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -519,20 +476,6 @@ public class Execution_metamodelAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link MetamodelExecution.ShortExecution <em>Short Execution</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see MetamodelExecution.ShortExecution
-	 * @generated
-	 */
-	public Adapter createShortExecutionAdapter() {
-		return null;
-	}
-
-	/**
 	 * Creates a new adapter for an object of class '{@link MetamodelExecution.Justification <em>Justification</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -571,20 +514,6 @@ public class Execution_metamodelAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createResponsibleAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link MetamodelExecution.ExecutedStep <em>Executed Step</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see MetamodelExecution.ExecutedStep
-	 * @generated
-	 */
-	public Adapter createExecutedStepAdapter() {
 		return null;
 	}
 
@@ -715,16 +644,16 @@ public class Execution_metamodelAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link MetamodelExecution.Execution <em>Execution</em>}'.
+	 * Creates a new adapter for an object of class '{@link MetamodelExecution.Element <em>Element</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see MetamodelExecution.Execution
+	 * @see MetamodelExecution.Element
 	 * @generated
 	 */
-	public Adapter createExecutionAdapter() {
+	public Adapter createElementAdapter() {
 		return null;
 	}
 
@@ -809,6 +738,20 @@ public class Execution_metamodelAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createtesteAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link MetamodelExecution.Execution <em>Execution</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see MetamodelExecution.Execution
+	 * @generated
+	 */
+	public Adapter createExecutionAdapter() {
 		return null;
 	}
 
