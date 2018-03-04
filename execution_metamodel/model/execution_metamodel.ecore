@@ -15,7 +15,12 @@
         eType="#//PrescribedMedicament" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="prescribedprescriptionitem"
         upperBound="-1" eType="#//PrescribedPrescriptionItem" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="prescription" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="idsPrescribedMedication"
+        upperBound="-1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="idsPrescribedPrescriptionItem"
+        upperBound="-1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="prescriptioninfo" upperBound="-1"
+        eType="#//PrescriptionInfo" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Treatment" eSuperTypes="#//Execution">
     <eStructuralFeatures xsi:type="ecore:EReference" name="prescribedexam" eType="#//PrescribedExamination"
@@ -26,58 +31,47 @@
         eType="#//PrescribedInternment" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="prescribedmedication" upperBound="-1"
         eType="#//PrescribedMedication" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="idsPrescribedExamination"
+        upperBound="-1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="idsPrescribedProcedure"
+        upperBound="-1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="idsPrescribedInternment"
+        upperBound="-1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="idsPrecribedMedication"
+        upperBound="-1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Examination">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="url" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="idExam" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="sideMember" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="idExamination" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="sideLimb" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="quantity" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="justify" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="justification" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="clinicalIndication" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="sideMemberDisplay" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="sideLimbDisplay" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="exam" lowerBound="1" eType="#//Exam"
         containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Previous">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="url" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="urlAbsolute" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="absoluteUrl" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Next">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="urlAbsolute" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="absoluteUrl" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="url" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Question">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="url" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="text" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="variable" lowerBound="1"
-        eType="#//Variable" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="idCategory" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="category" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Variable">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="typeVerbose" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="url" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="weight" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="link" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="value" lowerBound="1" eType="#//Value"
-        containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="PrescribedExamination">
     <eStructuralFeatures xsi:type="ecore:EReference" name="examination" lowerBound="1"
         eType="#//Examination" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="result" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="report" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="numberGuide" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="examinationprescription"
-        lowerBound="1" eType="#//ExaminationPrescription" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="complement" upperBound="-1"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="complement" lowerBound="1"
         eType="#//Complement" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="result" eType="#//Result"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="prescriptionexam" upperBound="-1"
+        eType="#//PrescriptionExam" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Exam">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
@@ -91,18 +85,14 @@
   <eClassifiers xsi:type="ecore:EClass" name="PrescribedProcedure"/>
   <eClassifiers xsi:type="ecore:EClass" name="PrescribedInternment"/>
   <eClassifiers xsi:type="ecore:EClass" name="PrescribedMedication"/>
-  <eClassifiers xsi:type="ecore:EClass" name="ExaminationPrescription">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="success" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="message" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="requestDate" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Complement">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="sideMember" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="sideMemberDisplay" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="quantity" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="sideLimb" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="sideLimbDisplay" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="clinicalIndication" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="justification" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="quantity" upperBound="-1"
+        eType="#//Quantity" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="PrescribedPrescriptionItem"/>
   <eClassifiers xsi:type="ecore:EClass" name="PrescribedMedicament"/>
@@ -179,19 +169,19 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Value" abstract="true"/>
   <eClassifiers xsi:type="ecore:EClass" name="Answer">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="typeVerbose" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="typeVerbose" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="value" lowerBound="1" eType="#//Value"
         containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="question" lowerBound="1"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="question" upperBound="-1"
         eType="#//Question" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Numeric" eSuperTypes="#//Value">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDoubleObject"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="YesOrNo" eSuperTypes="#//Value">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBooleanObject"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBigDecimal"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Step">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
@@ -219,7 +209,7 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="executed" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
         defaultValueLiteral="false"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="creationDate" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="changeDate" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="modificationDate" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="executionDate" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="createdById" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="executedById" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
@@ -238,4 +228,15 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="executor" lowerBound="1"
         eType="#//Executor" containment="true"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Result"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Quantity"/>
+  <eClassifiers xsi:type="ecore:EClass" name="PrescriptionExam">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="success" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="message" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="requestDate" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PrescriptionInfo"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Question" eSuperTypes="pathwayMetamodel.ecore#//Question"/>
+  <eClassifiers xsi:type="ecore:EClass" name="teste"/>
 </ecore:EPackage>

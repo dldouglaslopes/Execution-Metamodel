@@ -19,59 +19,47 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute execution_metamodel.ecore#//Prescription/text"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference execution_metamodel.ecore#//Prescription/prescribedmedicament"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference execution_metamodel.ecore#//Prescription/prescribedprescriptionitem"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute execution_metamodel.ecore#//Prescription/prescription"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute execution_metamodel.ecore#//Prescription/idsPrescribedMedication"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute execution_metamodel.ecore#//Prescription/idsPrescribedPrescriptionItem"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference execution_metamodel.ecore#//Prescription/prescriptioninfo"/>
     </genClasses>
     <genClasses ecoreClass="execution_metamodel.ecore#//Treatment">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference execution_metamodel.ecore#//Treatment/prescribedexam"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference execution_metamodel.ecore#//Treatment/prescribedprocedure"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference execution_metamodel.ecore#//Treatment/prescribedinternment"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference execution_metamodel.ecore#//Treatment/prescribedmedication"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute execution_metamodel.ecore#//Treatment/idsPrescribedExamination"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute execution_metamodel.ecore#//Treatment/idsPrescribedProcedure"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute execution_metamodel.ecore#//Treatment/idsPrescribedInternment"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute execution_metamodel.ecore#//Treatment/idsPrecribedMedication"/>
     </genClasses>
     <genClasses ecoreClass="execution_metamodel.ecore#//Examination">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute execution_metamodel.ecore#//Examination/id"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute execution_metamodel.ecore#//Examination/url"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute execution_metamodel.ecore#//Examination/idExam"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute execution_metamodel.ecore#//Examination/sideMember"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute execution_metamodel.ecore#//Examination/idExamination"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute execution_metamodel.ecore#//Examination/sideLimb"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute execution_metamodel.ecore#//Examination/quantity"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute execution_metamodel.ecore#//Examination/justify"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute execution_metamodel.ecore#//Examination/justification"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute execution_metamodel.ecore#//Examination/clinicalIndication"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute execution_metamodel.ecore#//Examination/sideMemberDisplay"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute execution_metamodel.ecore#//Examination/sideLimbDisplay"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference execution_metamodel.ecore#//Examination/exam"/>
     </genClasses>
     <genClasses ecoreClass="execution_metamodel.ecore#//Previous">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute execution_metamodel.ecore#//Previous/url"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute execution_metamodel.ecore#//Previous/urlAbsolute"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute execution_metamodel.ecore#//Previous/absoluteUrl"/>
     </genClasses>
     <genClasses ecoreClass="execution_metamodel.ecore#//Next">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute execution_metamodel.ecore#//Next/urlAbsolute"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute execution_metamodel.ecore#//Next/absoluteUrl"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute execution_metamodel.ecore#//Next/url"/>
-    </genClasses>
-    <genClasses ecoreClass="execution_metamodel.ecore#//Question">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute execution_metamodel.ecore#//Question/id"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute execution_metamodel.ecore#//Question/url"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute execution_metamodel.ecore#//Question/text"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference execution_metamodel.ecore#//Question/variable"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute execution_metamodel.ecore#//Question/idCategory"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute execution_metamodel.ecore#//Question/category"/>
-    </genClasses>
-    <genClasses ecoreClass="execution_metamodel.ecore#//Variable">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute execution_metamodel.ecore#//Variable/id"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute execution_metamodel.ecore#//Variable/type"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute execution_metamodel.ecore#//Variable/typeVerbose"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute execution_metamodel.ecore#//Variable/url"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute execution_metamodel.ecore#//Variable/name"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute execution_metamodel.ecore#//Variable/weight"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute execution_metamodel.ecore#//Variable/link"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference execution_metamodel.ecore#//Variable/value"/>
     </genClasses>
     <genClasses ecoreClass="execution_metamodel.ecore#//PrescribedExamination">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference execution_metamodel.ecore#//PrescribedExamination/examination"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute execution_metamodel.ecore#//PrescribedExamination/id"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute execution_metamodel.ecore#//PrescribedExamination/result"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute execution_metamodel.ecore#//PrescribedExamination/report"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute execution_metamodel.ecore#//PrescribedExamination/numberGuide"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference execution_metamodel.ecore#//PrescribedExamination/examinationprescription"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference execution_metamodel.ecore#//PrescribedExamination/complement"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference execution_metamodel.ecore#//PrescribedExamination/result"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference execution_metamodel.ecore#//PrescribedExamination/prescriptionexam"/>
     </genClasses>
     <genClasses ecoreClass="execution_metamodel.ecore#//Exam">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute execution_metamodel.ecore#//Exam/id"/>
@@ -85,18 +73,13 @@
     <genClasses ecoreClass="execution_metamodel.ecore#//PrescribedProcedure"/>
     <genClasses ecoreClass="execution_metamodel.ecore#//PrescribedInternment"/>
     <genClasses ecoreClass="execution_metamodel.ecore#//PrescribedMedication"/>
-    <genClasses ecoreClass="execution_metamodel.ecore#//ExaminationPrescription">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute execution_metamodel.ecore#//ExaminationPrescription/id"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute execution_metamodel.ecore#//ExaminationPrescription/success"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute execution_metamodel.ecore#//ExaminationPrescription/message"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute execution_metamodel.ecore#//ExaminationPrescription/requestDate"/>
-    </genClasses>
     <genClasses ecoreClass="execution_metamodel.ecore#//Complement">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute execution_metamodel.ecore#//Complement/id"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute execution_metamodel.ecore#//Complement/sideMember"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute execution_metamodel.ecore#//Complement/sideMemberDisplay"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute execution_metamodel.ecore#//Complement/quantity"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute execution_metamodel.ecore#//Complement/sideLimb"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute execution_metamodel.ecore#//Complement/sideLimbDisplay"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute execution_metamodel.ecore#//Complement/clinicalIndication"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute execution_metamodel.ecore#//Complement/justification"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference execution_metamodel.ecore#//Complement/quantity"/>
     </genClasses>
     <genClasses ecoreClass="execution_metamodel.ecore#//PrescribedPrescriptionItem"/>
     <genClasses ecoreClass="execution_metamodel.ecore#//PrescribedMedicament"/>
@@ -165,9 +148,9 @@
     </genClasses>
     <genClasses image="false" ecoreClass="execution_metamodel.ecore#//Value"/>
     <genClasses ecoreClass="execution_metamodel.ecore#//Answer">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute execution_metamodel.ecore#//Answer/typeVerbose"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute execution_metamodel.ecore#//Answer/type"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute execution_metamodel.ecore#//Answer/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute execution_metamodel.ecore#//Answer/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute execution_metamodel.ecore#//Answer/typeVerbose"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference execution_metamodel.ecore#//Answer/value"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference execution_metamodel.ecore#//Answer/question"/>
     </genClasses>
@@ -200,7 +183,7 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute execution_metamodel.ecore#//Execution/reworked"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute execution_metamodel.ecore#//Execution/executed"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute execution_metamodel.ecore#//Execution/creationDate"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute execution_metamodel.ecore#//Execution/changeDate"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute execution_metamodel.ecore#//Execution/modificationDate"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute execution_metamodel.ecore#//Execution/executionDate"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute execution_metamodel.ecore#//Execution/createdById"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute execution_metamodel.ecore#//Execution/executedById"/>
@@ -213,6 +196,166 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference execution_metamodel.ecore#//Execution/next"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference execution_metamodel.ecore#//Execution/creator"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference execution_metamodel.ecore#//Execution/executor"/>
+    </genClasses>
+    <genClasses ecoreClass="execution_metamodel.ecore#//Result"/>
+    <genClasses ecoreClass="execution_metamodel.ecore#//Quantity"/>
+    <genClasses ecoreClass="execution_metamodel.ecore#//PrescriptionExam">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute execution_metamodel.ecore#//PrescriptionExam/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute execution_metamodel.ecore#//PrescriptionExam/success"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute execution_metamodel.ecore#//PrescriptionExam/message"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute execution_metamodel.ecore#//PrescriptionExam/requestDate"/>
+    </genClasses>
+    <genClasses ecoreClass="execution_metamodel.ecore#//PrescriptionInfo"/>
+    <genClasses ecoreClass="execution_metamodel.ecore#//Question"/>
+    <genClasses ecoreClass="execution_metamodel.ecore#//teste"/>
+  </genPackages>
+  <genPackages prefix="PathwayMetamodel" ecorePackage="pathwayMetamodel.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="pathwayMetamodel.ecore#//Operator">
+      <genEnumLiterals ecoreEnumLiteral="pathwayMetamodel.ecore#//Operator/not"/>
+      <genEnumLiterals ecoreEnumLiteral="pathwayMetamodel.ecore#//Operator/and"/>
+      <genEnumLiterals ecoreEnumLiteral="pathwayMetamodel.ecore#//Operator/or"/>
+      <genEnumLiterals ecoreEnumLiteral="pathwayMetamodel.ecore#//Operator/implies"/>
+      <genEnumLiterals ecoreEnumLiteral="pathwayMetamodel.ecore#//Operator/equal"/>
+      <genEnumLiterals ecoreEnumLiteral="pathwayMetamodel.ecore#//Operator/greaterThan"/>
+      <genEnumLiterals ecoreEnumLiteral="pathwayMetamodel.ecore#//Operator/lessThan"/>
+      <genEnumLiterals ecoreEnumLiteral="pathwayMetamodel.ecore#//Operator/greaterOrEqual"/>
+      <genEnumLiterals ecoreEnumLiteral="pathwayMetamodel.ecore#//Operator/lessOrEqual"/>
+      <genEnumLiterals ecoreEnumLiteral="pathwayMetamodel.ecore#//Operator/xor"/>
+      <genEnumLiterals ecoreEnumLiteral="pathwayMetamodel.ecore#//Operator/addition"/>
+      <genEnumLiterals ecoreEnumLiteral="pathwayMetamodel.ecore#//Operator/subtraction"/>
+      <genEnumLiterals ecoreEnumLiteral="pathwayMetamodel.ecore#//Operator/multiplication"/>
+      <genEnumLiterals ecoreEnumLiteral="pathwayMetamodel.ecore#//Operator/division"/>
+      <genEnumLiterals ecoreEnumLiteral="pathwayMetamodel.ecore#//Operator/affirmation"/>
+    </genEnums>
+    <genClasses ecoreClass="pathwayMetamodel.ecore#//Operation">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pathwayMetamodel.ecore#//Operation/Operator"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference pathwayMetamodel.ecore#//Operation/operand"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pathwayMetamodel.ecore#//Operation/id"/>
+    </genClasses>
+    <genClasses ecoreClass="pathwayMetamodel.ecore#//AuxiliaryConduct">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference pathwayMetamodel.ecore#//AuxiliaryConduct/questions"/>
+    </genClasses>
+    <genClasses ecoreClass="pathwayMetamodel.ecore#//Question">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pathwayMetamodel.ecore#//Question/text"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference pathwayMetamodel.ecore#//Question/variable"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pathwayMetamodel.ecore#//Question/url"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pathwayMetamodel.ecore#//Question/id"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference pathwayMetamodel.ecore#//Question/category"/>
+    </genClasses>
+    <genClasses ecoreClass="pathwayMetamodel.ecore#//Discharge"/>
+    <genClasses image="false" ecoreClass="pathwayMetamodel.ecore#//Element">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pathwayMetamodel.ecore#//Element/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pathwayMetamodel.ecore#//Element/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pathwayMetamodel.ecore#//Element/type_verbose"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pathwayMetamodel.ecore#//Element/url"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pathwayMetamodel.ecore#//Element/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pathwayMetamodel.ecore#//Element/description"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pathwayMetamodel.ecore#//Element/isInitial"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pathwayMetamodel.ecore#//Element/isTerminal"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference pathwayMetamodel.ecore#//Element/inputSequences"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference pathwayMetamodel.ecore#//Element/outputSequences"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pathwayMetamodel.ecore#//Element/mandatory"/>
+    </genClasses>
+    <genClasses ecoreClass="pathwayMetamodel.ecore#//Examination">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pathwayMetamodel.ecore#//Examination/url"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pathwayMetamodel.ecore#//Examination/exam_id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pathwayMetamodel.ecore#//Examination/limb_side"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pathwayMetamodel.ecore#//Examination/quantity"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pathwayMetamodel.ecore#//Examination/reason"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pathwayMetamodel.ecore#//Examination/clinical_indication"/>
+    </genClasses>
+    <genClasses ecoreClass="pathwayMetamodel.ecore#//Operand">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pathwayMetamodel.ecore#//Operand/name"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="pathwayMetamodel.ecore#//Variable"/>
+    <genClasses ecoreClass="pathwayMetamodel.ecore#//YesOrNo">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pathwayMetamodel.ecore#//YesOrNo/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pathwayMetamodel.ecore#//YesOrNo/weight"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pathwayMetamodel.ecore#//YesOrNo/value"/>
+    </genClasses>
+    <genClasses ecoreClass="pathwayMetamodel.ecore#//Numeric">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pathwayMetamodel.ecore#//Numeric/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pathwayMetamodel.ecore#//Numeric/weight"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pathwayMetamodel.ecore#//Numeric/value"/>
+    </genClasses>
+    <genClasses ecoreClass="pathwayMetamodel.ecore#//Referral">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pathwayMetamodel.ecore#//Referral/pathways"/>
+    </genClasses>
+    <genClasses ecoreClass="pathwayMetamodel.ecore#//Treatment">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference pathwayMetamodel.ecore#//Treatment/examination"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference pathwayMetamodel.ecore#//Treatment/medication"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference pathwayMetamodel.ecore#//Treatment/admission"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference pathwayMetamodel.ecore#//Treatment/procedure"/>
+    </genClasses>
+    <genClasses ecoreClass="pathwayMetamodel.ecore#//Prescription">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference pathwayMetamodel.ecore#//Prescription/medication"/>
+    </genClasses>
+    <genClasses ecoreClass="pathwayMetamodel.ecore#//Admission">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pathwayMetamodel.ecore#//Admission/url"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pathwayMetamodel.ecore#//Admission/admission"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pathwayMetamodel.ecore#//Admission/reason"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pathwayMetamodel.ecore#//Admission/clinical_indication"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pathwayMetamodel.ecore#//Admission/quantity"/>
+    </genClasses>
+    <genClasses ecoreClass="pathwayMetamodel.ecore#//Sequence">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference pathwayMetamodel.ecore#//Sequence/inputStep"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference pathwayMetamodel.ecore#//Sequence/outputStep"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pathwayMetamodel.ecore#//Sequence/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pathwayMetamodel.ecore#//Sequence/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pathwayMetamodel.ecore#//Sequence/type_verbose"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pathwayMetamodel.ecore#//Sequence/url"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pathwayMetamodel.ecore#//Sequence/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pathwayMetamodel.ecore#//Sequence/description"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference pathwayMetamodel.ecore#//Sequence/operation"/>
+    </genClasses>
+    <genClasses ecoreClass="pathwayMetamodel.ecore#//Medication">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pathwayMetamodel.ecore#//Medication/url"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pathwayMetamodel.ecore#//Medication/code"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pathwayMetamodel.ecore#//Medication/med_id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pathwayMetamodel.ecore#//Medication/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pathwayMetamodel.ecore#//Medication/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pathwayMetamodel.ecore#//Medication/description"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pathwayMetamodel.ecore#//Medication/brand"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pathwayMetamodel.ecore#//Medication/standardized"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pathwayMetamodel.ecore#//Medication/controlled"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pathwayMetamodel.ecore#//Medication/consigned"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pathwayMetamodel.ecore#//Medication/critical"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pathwayMetamodel.ecore#//Medication/invasive"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pathwayMetamodel.ecore#//Medication/outpatient"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pathwayMetamodel.ecore#//Medication/unit"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pathwayMetamodel.ecore#//Medication/access"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pathwayMetamodel.ecore#//Medication/daily_dosage"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pathwayMetamodel.ecore#//Medication/cycles"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pathwayMetamodel.ecore#//Medication/treatement_time"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pathwayMetamodel.ecore#//Medication/frequency"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pathwayMetamodel.ecore#//Medication/standard"/>
+    </genClasses>
+    <genClasses ecoreClass="pathwayMetamodel.ecore#//Pathway">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pathwayMetamodel.ecore#//Pathway/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pathwayMetamodel.ecore#//Pathway/url"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pathwayMetamodel.ecore#//Pathway/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pathwayMetamodel.ecore#//Pathway/code"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference pathwayMetamodel.ecore#//Pathway/element"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference pathwayMetamodel.ecore#//Pathway/sequence"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference pathwayMetamodel.ecore#//Pathway/category"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference pathwayMetamodel.ecore#//Pathway/operation"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference pathwayMetamodel.ecore#//Pathway/variable"/>
+    </genClasses>
+    <genClasses ecoreClass="pathwayMetamodel.ecore#//Information">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pathwayMetamodel.ecore#//Information/text"/>
+    </genClasses>
+    <genClasses ecoreClass="pathwayMetamodel.ecore#//Category">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pathwayMetamodel.ecore#//Category/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference pathwayMetamodel.ecore#//Category/question"/>
+    </genClasses>
+    <genClasses ecoreClass="pathwayMetamodel.ecore#//Procedure">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pathwayMetamodel.ecore#//Procedure/url"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pathwayMetamodel.ecore#//Procedure/procedure"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pathwayMetamodel.ecore#//Procedure/frequency"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pathwayMetamodel.ecore#//Procedure/quantity"/>
+    </genClasses>
+    <genClasses ecoreClass="pathwayMetamodel.ecore#//Action">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pathwayMetamodel.ecore#//Action/service"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

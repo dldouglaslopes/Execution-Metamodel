@@ -5,6 +5,8 @@ package MetamodelExecution.impl;
 import MetamodelExecution.Execution_metamodelPackage;
 import MetamodelExecution.YesOrNo;
 
+import java.math.BigDecimal;
+
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;
@@ -33,7 +35,7 @@ public class YesOrNoImpl extends ValueImpl implements YesOrNo {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final Boolean VALUE_EDEFAULT = null;
+	protected static final BigDecimal VALUE_EDEFAULT = null;
 
 	/**
 	 * The cached value of the '{@link #getValue() <em>Value</em>}' attribute.
@@ -43,7 +45,7 @@ public class YesOrNoImpl extends ValueImpl implements YesOrNo {
 	 * @generated
 	 * @ordered
 	 */
-	protected Boolean value = VALUE_EDEFAULT;
+	protected BigDecimal value = VALUE_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -69,7 +71,7 @@ public class YesOrNoImpl extends ValueImpl implements YesOrNo {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Boolean getValue() {
+	public BigDecimal getValue() {
 		return value;
 	}
 
@@ -78,8 +80,8 @@ public class YesOrNoImpl extends ValueImpl implements YesOrNo {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setValue(Boolean newValue) {
-		Boolean oldValue = value;
+	public void setValue(BigDecimal newValue) {
+		BigDecimal oldValue = value;
 		value = newValue;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.YES_OR_NO__VALUE, oldValue,
@@ -109,7 +111,7 @@ public class YesOrNoImpl extends ValueImpl implements YesOrNo {
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 		case Execution_metamodelPackage.YES_OR_NO__VALUE:
-			setValue((Boolean) newValue);
+			setValue((BigDecimal) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);

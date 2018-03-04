@@ -74,10 +74,6 @@ public class Execution_metamodelFactoryImpl extends EFactoryImpl implements Exec
 			return createPrevious();
 		case Execution_metamodelPackage.NEXT:
 			return createNext();
-		case Execution_metamodelPackage.QUESTION:
-			return createQuestion();
-		case Execution_metamodelPackage.VARIABLE:
-			return createVariable();
 		case Execution_metamodelPackage.PRESCRIBED_EXAMINATION:
 			return createPrescribedExamination();
 		case Execution_metamodelPackage.EXAM:
@@ -88,8 +84,6 @@ public class Execution_metamodelFactoryImpl extends EFactoryImpl implements Exec
 			return createPrescribedInternment();
 		case Execution_metamodelPackage.PRESCRIBED_MEDICATION:
 			return createPrescribedMedication();
-		case Execution_metamodelPackage.EXAMINATION_PRESCRIPTION:
-			return createExaminationPrescription();
 		case Execution_metamodelPackage.COMPLEMENT:
 			return createComplement();
 		case Execution_metamodelPackage.PRESCRIBED_PRESCRIPTION_ITEM:
@@ -120,6 +114,18 @@ public class Execution_metamodelFactoryImpl extends EFactoryImpl implements Exec
 			return createExecutor();
 		case Execution_metamodelPackage.LAST_PROFESSIONAL:
 			return createLastProfessional();
+		case Execution_metamodelPackage.RESULT:
+			return createResult();
+		case Execution_metamodelPackage.QUANTITY:
+			return createQuantity();
+		case Execution_metamodelPackage.PRESCRIPTION_EXAM:
+			return createPrescriptionExam();
+		case Execution_metamodelPackage.PRESCRIPTION_INFO:
+			return createPrescriptionInfo();
+		case Execution_metamodelPackage.QUESTION:
+			return createQuestion();
+		case Execution_metamodelPackage.TESTE:
+			return createteste();
 		default:
 			throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -220,26 +226,6 @@ public class Execution_metamodelFactoryImpl extends EFactoryImpl implements Exec
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Question createQuestion() {
-		QuestionImpl question = new QuestionImpl();
-		return question;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Variable createVariable() {
-		VariableImpl variable = new VariableImpl();
-		return variable;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public PrescribedExamination createPrescribedExamination() {
 		PrescribedExaminationImpl prescribedExamination = new PrescribedExaminationImpl();
 		return prescribedExamination;
@@ -283,16 +269,6 @@ public class Execution_metamodelFactoryImpl extends EFactoryImpl implements Exec
 	public PrescribedMedication createPrescribedMedication() {
 		PrescribedMedicationImpl prescribedMedication = new PrescribedMedicationImpl();
 		return prescribedMedication;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public ExaminationPrescription createExaminationPrescription() {
-		ExaminationPrescriptionImpl examinationPrescription = new ExaminationPrescriptionImpl();
-		return examinationPrescription;
 	}
 
 	/**
@@ -443,6 +419,66 @@ public class Execution_metamodelFactoryImpl extends EFactoryImpl implements Exec
 	public LastProfessional createLastProfessional() {
 		LastProfessionalImpl lastProfessional = new LastProfessionalImpl();
 		return lastProfessional;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Result createResult() {
+		ResultImpl result = new ResultImpl();
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Quantity createQuantity() {
+		QuantityImpl quantity = new QuantityImpl();
+		return quantity;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public PrescriptionExam createPrescriptionExam() {
+		PrescriptionExamImpl prescriptionExam = new PrescriptionExamImpl();
+		return prescriptionExam;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public PrescriptionInfo createPrescriptionInfo() {
+		PrescriptionInfoImpl prescriptionInfo = new PrescriptionInfoImpl();
+		return prescriptionInfo;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Question createQuestion() {
+		QuestionImpl question = new QuestionImpl();
+		return question;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public teste createteste() {
+		testeImpl teste = new testeImpl();
+		return teste;
 	}
 
 	/**

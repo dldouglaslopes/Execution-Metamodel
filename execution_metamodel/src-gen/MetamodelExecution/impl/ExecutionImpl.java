@@ -38,7 +38,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *   <li>{@link MetamodelExecution.impl.ExecutionImpl#isReworked <em>Reworked</em>}</li>
  *   <li>{@link MetamodelExecution.impl.ExecutionImpl#isExecuted <em>Executed</em>}</li>
  *   <li>{@link MetamodelExecution.impl.ExecutionImpl#getCreationDate <em>Creation Date</em>}</li>
- *   <li>{@link MetamodelExecution.impl.ExecutionImpl#getChangeDate <em>Change Date</em>}</li>
+ *   <li>{@link MetamodelExecution.impl.ExecutionImpl#getModificationDate <em>Modification Date</em>}</li>
  *   <li>{@link MetamodelExecution.impl.ExecutionImpl#getExecutionDate <em>Execution Date</em>}</li>
  *   <li>{@link MetamodelExecution.impl.ExecutionImpl#getCreatedById <em>Created By Id</em>}</li>
  *   <li>{@link MetamodelExecution.impl.ExecutionImpl#getExecutedById <em>Executed By Id</em>}</li>
@@ -217,24 +217,24 @@ public abstract class ExecutionImpl extends MinimalEObjectImpl.Container impleme
 	protected Date creationDate = CREATION_DATE_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getChangeDate() <em>Change Date</em>}' attribute.
+	 * The default value of the '{@link #getModificationDate() <em>Modification Date</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getChangeDate()
+	 * @see #getModificationDate()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final Date CHANGE_DATE_EDEFAULT = null;
+	protected static final Date MODIFICATION_DATE_EDEFAULT = null;
 
 	/**
-	 * The cached value of the '{@link #getChangeDate() <em>Change Date</em>}' attribute.
+	 * The cached value of the '{@link #getModificationDate() <em>Modification Date</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getChangeDate()
+	 * @see #getModificationDate()
 	 * @generated
 	 * @ordered
 	 */
-	protected Date changeDate = CHANGE_DATE_EDEFAULT;
+	protected Date modificationDate = MODIFICATION_DATE_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getExecutionDate() <em>Execution Date</em>}' attribute.
@@ -615,8 +615,8 @@ public abstract class ExecutionImpl extends MinimalEObjectImpl.Container impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Date getChangeDate() {
-		return changeDate;
+	public Date getModificationDate() {
+		return modificationDate;
 	}
 
 	/**
@@ -624,12 +624,12 @@ public abstract class ExecutionImpl extends MinimalEObjectImpl.Container impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setChangeDate(Date newChangeDate) {
-		Date oldChangeDate = changeDate;
-		changeDate = newChangeDate;
+	public void setModificationDate(Date newModificationDate) {
+		Date oldModificationDate = modificationDate;
+		modificationDate = newModificationDate;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.EXECUTION__CHANGE_DATE,
-					oldChangeDate, changeDate));
+			eNotify(new ENotificationImpl(this, Notification.SET,
+					Execution_metamodelPackage.EXECUTION__MODIFICATION_DATE, oldModificationDate, modificationDate));
 	}
 
 	/**
@@ -1113,8 +1113,8 @@ public abstract class ExecutionImpl extends MinimalEObjectImpl.Container impleme
 			return isExecuted();
 		case Execution_metamodelPackage.EXECUTION__CREATION_DATE:
 			return getCreationDate();
-		case Execution_metamodelPackage.EXECUTION__CHANGE_DATE:
-			return getChangeDate();
+		case Execution_metamodelPackage.EXECUTION__MODIFICATION_DATE:
+			return getModificationDate();
 		case Execution_metamodelPackage.EXECUTION__EXECUTION_DATE:
 			return getExecutionDate();
 		case Execution_metamodelPackage.EXECUTION__CREATED_BY_ID:
@@ -1175,8 +1175,8 @@ public abstract class ExecutionImpl extends MinimalEObjectImpl.Container impleme
 		case Execution_metamodelPackage.EXECUTION__CREATION_DATE:
 			setCreationDate((Date) newValue);
 			return;
-		case Execution_metamodelPackage.EXECUTION__CHANGE_DATE:
-			setChangeDate((Date) newValue);
+		case Execution_metamodelPackage.EXECUTION__MODIFICATION_DATE:
+			setModificationDate((Date) newValue);
 			return;
 		case Execution_metamodelPackage.EXECUTION__EXECUTION_DATE:
 			setExecutionDate((Date) newValue);
@@ -1250,8 +1250,8 @@ public abstract class ExecutionImpl extends MinimalEObjectImpl.Container impleme
 		case Execution_metamodelPackage.EXECUTION__CREATION_DATE:
 			setCreationDate(CREATION_DATE_EDEFAULT);
 			return;
-		case Execution_metamodelPackage.EXECUTION__CHANGE_DATE:
-			setChangeDate(CHANGE_DATE_EDEFAULT);
+		case Execution_metamodelPackage.EXECUTION__MODIFICATION_DATE:
+			setModificationDate(MODIFICATION_DATE_EDEFAULT);
 			return;
 		case Execution_metamodelPackage.EXECUTION__EXECUTION_DATE:
 			setExecutionDate(EXECUTION_DATE_EDEFAULT);
@@ -1317,8 +1317,9 @@ public abstract class ExecutionImpl extends MinimalEObjectImpl.Container impleme
 			return executed != EXECUTED_EDEFAULT;
 		case Execution_metamodelPackage.EXECUTION__CREATION_DATE:
 			return CREATION_DATE_EDEFAULT == null ? creationDate != null : !CREATION_DATE_EDEFAULT.equals(creationDate);
-		case Execution_metamodelPackage.EXECUTION__CHANGE_DATE:
-			return CHANGE_DATE_EDEFAULT == null ? changeDate != null : !CHANGE_DATE_EDEFAULT.equals(changeDate);
+		case Execution_metamodelPackage.EXECUTION__MODIFICATION_DATE:
+			return MODIFICATION_DATE_EDEFAULT == null ? modificationDate != null
+					: !MODIFICATION_DATE_EDEFAULT.equals(modificationDate);
 		case Execution_metamodelPackage.EXECUTION__EXECUTION_DATE:
 			return EXECUTION_DATE_EDEFAULT == null ? executionDate != null
 					: !EXECUTION_DATE_EDEFAULT.equals(executionDate);
@@ -1375,8 +1376,8 @@ public abstract class ExecutionImpl extends MinimalEObjectImpl.Container impleme
 		result.append(executed);
 		result.append(", creationDate: ");
 		result.append(creationDate);
-		result.append(", changeDate: ");
-		result.append(changeDate);
+		result.append(", modificationDate: ");
+		result.append(modificationDate);
 		result.append(", executionDate: ");
 		result.append(executionDate);
 		result.append(", createdById: ");

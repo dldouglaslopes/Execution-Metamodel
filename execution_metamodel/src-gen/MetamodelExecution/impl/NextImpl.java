@@ -20,7 +20,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link MetamodelExecution.impl.NextImpl#getUrlAbsolute <em>Url Absolute</em>}</li>
+ *   <li>{@link MetamodelExecution.impl.NextImpl#getAbsoluteUrl <em>Absolute Url</em>}</li>
  *   <li>{@link MetamodelExecution.impl.NextImpl#getUrl <em>Url</em>}</li>
  * </ul>
  *
@@ -28,24 +28,24 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  */
 public class NextImpl extends MinimalEObjectImpl.Container implements Next {
 	/**
-	 * The default value of the '{@link #getUrlAbsolute() <em>Url Absolute</em>}' attribute.
+	 * The default value of the '{@link #getAbsoluteUrl() <em>Absolute Url</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getUrlAbsolute()
+	 * @see #getAbsoluteUrl()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String URL_ABSOLUTE_EDEFAULT = null;
+	protected static final String ABSOLUTE_URL_EDEFAULT = null;
 
 	/**
-	 * The cached value of the '{@link #getUrlAbsolute() <em>Url Absolute</em>}' attribute.
+	 * The cached value of the '{@link #getAbsoluteUrl() <em>Absolute Url</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getUrlAbsolute()
+	 * @see #getAbsoluteUrl()
 	 * @generated
 	 * @ordered
 	 */
-	protected String urlAbsolute = URL_ABSOLUTE_EDEFAULT;
+	protected String absoluteUrl = ABSOLUTE_URL_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getUrl() <em>Url</em>}' attribute.
@@ -91,8 +91,8 @@ public class NextImpl extends MinimalEObjectImpl.Container implements Next {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getUrlAbsolute() {
-		return urlAbsolute;
+	public String getAbsoluteUrl() {
+		return absoluteUrl;
 	}
 
 	/**
@@ -100,12 +100,12 @@ public class NextImpl extends MinimalEObjectImpl.Container implements Next {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setUrlAbsolute(String newUrlAbsolute) {
-		String oldUrlAbsolute = urlAbsolute;
-		urlAbsolute = newUrlAbsolute;
+	public void setAbsoluteUrl(String newAbsoluteUrl) {
+		String oldAbsoluteUrl = absoluteUrl;
+		absoluteUrl = newAbsoluteUrl;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.NEXT__URL_ABSOLUTE,
-					oldUrlAbsolute, urlAbsolute));
+			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.NEXT__ABSOLUTE_URL,
+					oldAbsoluteUrl, absoluteUrl));
 	}
 
 	/**
@@ -137,8 +137,8 @@ public class NextImpl extends MinimalEObjectImpl.Container implements Next {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case Execution_metamodelPackage.NEXT__URL_ABSOLUTE:
-			return getUrlAbsolute();
+		case Execution_metamodelPackage.NEXT__ABSOLUTE_URL:
+			return getAbsoluteUrl();
 		case Execution_metamodelPackage.NEXT__URL:
 			return getUrl();
 		}
@@ -153,8 +153,8 @@ public class NextImpl extends MinimalEObjectImpl.Container implements Next {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case Execution_metamodelPackage.NEXT__URL_ABSOLUTE:
-			setUrlAbsolute((String) newValue);
+		case Execution_metamodelPackage.NEXT__ABSOLUTE_URL:
+			setAbsoluteUrl((String) newValue);
 			return;
 		case Execution_metamodelPackage.NEXT__URL:
 			setUrl((String) newValue);
@@ -171,8 +171,8 @@ public class NextImpl extends MinimalEObjectImpl.Container implements Next {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case Execution_metamodelPackage.NEXT__URL_ABSOLUTE:
-			setUrlAbsolute(URL_ABSOLUTE_EDEFAULT);
+		case Execution_metamodelPackage.NEXT__ABSOLUTE_URL:
+			setAbsoluteUrl(ABSOLUTE_URL_EDEFAULT);
 			return;
 		case Execution_metamodelPackage.NEXT__URL:
 			setUrl(URL_EDEFAULT);
@@ -189,8 +189,8 @@ public class NextImpl extends MinimalEObjectImpl.Container implements Next {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case Execution_metamodelPackage.NEXT__URL_ABSOLUTE:
-			return URL_ABSOLUTE_EDEFAULT == null ? urlAbsolute != null : !URL_ABSOLUTE_EDEFAULT.equals(urlAbsolute);
+		case Execution_metamodelPackage.NEXT__ABSOLUTE_URL:
+			return ABSOLUTE_URL_EDEFAULT == null ? absoluteUrl != null : !ABSOLUTE_URL_EDEFAULT.equals(absoluteUrl);
 		case Execution_metamodelPackage.NEXT__URL:
 			return URL_EDEFAULT == null ? url != null : !URL_EDEFAULT.equals(url);
 		}
@@ -208,8 +208,8 @@ public class NextImpl extends MinimalEObjectImpl.Container implements Next {
 			return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (urlAbsolute: ");
-		result.append(urlAbsolute);
+		result.append(" (absoluteUrl: ");
+		result.append(absoluteUrl);
 		result.append(", url: ");
 		result.append(url);
 		result.append(')');

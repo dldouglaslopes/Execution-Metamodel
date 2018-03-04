@@ -17,11 +17,11 @@ import org.eclipse.emf.ecore.EObject;
  * <ul>
  *   <li>{@link MetamodelExecution.PrescribedExamination#getExamination <em>Examination</em>}</li>
  *   <li>{@link MetamodelExecution.PrescribedExamination#getId <em>Id</em>}</li>
- *   <li>{@link MetamodelExecution.PrescribedExamination#getResult <em>Result</em>}</li>
  *   <li>{@link MetamodelExecution.PrescribedExamination#getReport <em>Report</em>}</li>
  *   <li>{@link MetamodelExecution.PrescribedExamination#getNumberGuide <em>Number Guide</em>}</li>
- *   <li>{@link MetamodelExecution.PrescribedExamination#getExaminationprescription <em>Examinationprescription</em>}</li>
  *   <li>{@link MetamodelExecution.PrescribedExamination#getComplement <em>Complement</em>}</li>
+ *   <li>{@link MetamodelExecution.PrescribedExamination#getResult <em>Result</em>}</li>
+ *   <li>{@link MetamodelExecution.PrescribedExamination#getPrescriptionexam <em>Prescriptionexam</em>}</li>
  * </ul>
  *
  * @see MetamodelExecution.Execution_metamodelPackage#getPrescribedExamination()
@@ -82,32 +82,6 @@ public interface PrescribedExamination extends EObject {
 	void setId(int value);
 
 	/**
-	 * Returns the value of the '<em><b>Result</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Result</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Result</em>' attribute.
-	 * @see #setResult(String)
-	 * @see MetamodelExecution.Execution_metamodelPackage#getPrescribedExamination_Result()
-	 * @model
-	 * @generated
-	 */
-	String getResult();
-
-	/**
-	 * Sets the value of the '{@link MetamodelExecution.PrescribedExamination#getResult <em>Result</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Result</em>' attribute.
-	 * @see #getResult()
-	 * @generated
-	 */
-	void setResult(String value);
-
-	/**
 	 * Returns the value of the '<em><b>Report</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <p>
@@ -160,45 +134,71 @@ public interface PrescribedExamination extends EObject {
 	void setNumberGuide(int value);
 
 	/**
-	 * Returns the value of the '<em><b>Examinationprescription</b></em>' containment reference.
+	 * Returns the value of the '<em><b>Complement</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Examinationprescription</em>' containment reference isn't clear,
+	 * If the meaning of the '<em>Complement</em>' containment reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Examinationprescription</em>' containment reference.
-	 * @see #setExaminationprescription(ExaminationPrescription)
-	 * @see MetamodelExecution.Execution_metamodelPackage#getPrescribedExamination_Examinationprescription()
+	 * @return the value of the '<em>Complement</em>' containment reference.
+	 * @see #setComplement(Complement)
+	 * @see MetamodelExecution.Execution_metamodelPackage#getPrescribedExamination_Complement()
 	 * @model containment="true" required="true"
 	 * @generated
 	 */
-	ExaminationPrescription getExaminationprescription();
+	Complement getComplement();
 
 	/**
-	 * Sets the value of the '{@link MetamodelExecution.PrescribedExamination#getExaminationprescription <em>Examinationprescription</em>}' containment reference.
+	 * Sets the value of the '{@link MetamodelExecution.PrescribedExamination#getComplement <em>Complement</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Examinationprescription</em>' containment reference.
-	 * @see #getExaminationprescription()
+	 * @param value the new value of the '<em>Complement</em>' containment reference.
+	 * @see #getComplement()
 	 * @generated
 	 */
-	void setExaminationprescription(ExaminationPrescription value);
+	void setComplement(Complement value);
 
 	/**
-	 * Returns the value of the '<em><b>Complement</b></em>' containment reference list.
-	 * The list contents are of type {@link MetamodelExecution.Complement}.
+	 * Returns the value of the '<em><b>Result</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Complement</em>' containment reference list isn't clear,
+	 * If the meaning of the '<em>Result</em>' containment reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Complement</em>' containment reference list.
-	 * @see MetamodelExecution.Execution_metamodelPackage#getPrescribedExamination_Complement()
+	 * @return the value of the '<em>Result</em>' containment reference.
+	 * @see #setResult(Result)
+	 * @see MetamodelExecution.Execution_metamodelPackage#getPrescribedExamination_Result()
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<Complement> getComplement();
+	Result getResult();
+
+	/**
+	 * Sets the value of the '{@link MetamodelExecution.PrescribedExamination#getResult <em>Result</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Result</em>' containment reference.
+	 * @see #getResult()
+	 * @generated
+	 */
+	void setResult(Result value);
+
+	/**
+	 * Returns the value of the '<em><b>Prescriptionexam</b></em>' containment reference list.
+	 * The list contents are of type {@link MetamodelExecution.PrescriptionExam}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Prescriptionexam</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Prescriptionexam</em>' containment reference list.
+	 * @see MetamodelExecution.Execution_metamodelPackage#getPrescribedExamination_Prescriptionexam()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<PrescriptionExam> getPrescriptionexam();
 
 } // PrescribedExamination

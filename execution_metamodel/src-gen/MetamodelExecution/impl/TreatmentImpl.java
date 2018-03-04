@@ -21,6 +21,7 @@ import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
+import org.eclipse.emf.ecore.util.EDataTypeUniqueEList;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
@@ -36,6 +37,10 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link MetamodelExecution.impl.TreatmentImpl#getPrescribedprocedure <em>Prescribedprocedure</em>}</li>
  *   <li>{@link MetamodelExecution.impl.TreatmentImpl#getPrescribedinternment <em>Prescribedinternment</em>}</li>
  *   <li>{@link MetamodelExecution.impl.TreatmentImpl#getPrescribedmedication <em>Prescribedmedication</em>}</li>
+ *   <li>{@link MetamodelExecution.impl.TreatmentImpl#getIdsPrescribedExamination <em>Ids Prescribed Examination</em>}</li>
+ *   <li>{@link MetamodelExecution.impl.TreatmentImpl#getIdsPrescribedProcedure <em>Ids Prescribed Procedure</em>}</li>
+ *   <li>{@link MetamodelExecution.impl.TreatmentImpl#getIdsPrescribedInternment <em>Ids Prescribed Internment</em>}</li>
+ *   <li>{@link MetamodelExecution.impl.TreatmentImpl#getIdsPrecribedMedication <em>Ids Precribed Medication</em>}</li>
  * </ul>
  *
  * @generated
@@ -80,6 +85,46 @@ public class TreatmentImpl extends ExecutionImpl implements Treatment {
 	 * @ordered
 	 */
 	protected EList<PrescribedMedication> prescribedmedication;
+
+	/**
+	 * The cached value of the '{@link #getIdsPrescribedExamination() <em>Ids Prescribed Examination</em>}' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getIdsPrescribedExamination()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Integer> idsPrescribedExamination;
+
+	/**
+	 * The cached value of the '{@link #getIdsPrescribedProcedure() <em>Ids Prescribed Procedure</em>}' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getIdsPrescribedProcedure()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Integer> idsPrescribedProcedure;
+
+	/**
+	 * The cached value of the '{@link #getIdsPrescribedInternment() <em>Ids Prescribed Internment</em>}' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getIdsPrescribedInternment()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Integer> idsPrescribedInternment;
+
+	/**
+	 * The cached value of the '{@link #getIdsPrecribedMedication() <em>Ids Precribed Medication</em>}' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getIdsPrecribedMedication()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Integer> idsPrecribedMedication;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -194,6 +239,58 @@ public class TreatmentImpl extends ExecutionImpl implements Treatment {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EList<Integer> getIdsPrescribedExamination() {
+		if (idsPrescribedExamination == null) {
+			idsPrescribedExamination = new EDataTypeUniqueEList<Integer>(Integer.class, this,
+					Execution_metamodelPackage.TREATMENT__IDS_PRESCRIBED_EXAMINATION);
+		}
+		return idsPrescribedExamination;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<Integer> getIdsPrescribedProcedure() {
+		if (idsPrescribedProcedure == null) {
+			idsPrescribedProcedure = new EDataTypeUniqueEList<Integer>(Integer.class, this,
+					Execution_metamodelPackage.TREATMENT__IDS_PRESCRIBED_PROCEDURE);
+		}
+		return idsPrescribedProcedure;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<Integer> getIdsPrescribedInternment() {
+		if (idsPrescribedInternment == null) {
+			idsPrescribedInternment = new EDataTypeUniqueEList<Integer>(Integer.class, this,
+					Execution_metamodelPackage.TREATMENT__IDS_PRESCRIBED_INTERNMENT);
+		}
+		return idsPrescribedInternment;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<Integer> getIdsPrecribedMedication() {
+		if (idsPrecribedMedication == null) {
+			idsPrecribedMedication = new EDataTypeUniqueEList<Integer>(Integer.class, this,
+					Execution_metamodelPackage.TREATMENT__IDS_PRECRIBED_MEDICATION);
+		}
+		return idsPrecribedMedication;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -225,6 +322,14 @@ public class TreatmentImpl extends ExecutionImpl implements Treatment {
 			return getPrescribedinternment();
 		case Execution_metamodelPackage.TREATMENT__PRESCRIBEDMEDICATION:
 			return getPrescribedmedication();
+		case Execution_metamodelPackage.TREATMENT__IDS_PRESCRIBED_EXAMINATION:
+			return getIdsPrescribedExamination();
+		case Execution_metamodelPackage.TREATMENT__IDS_PRESCRIBED_PROCEDURE:
+			return getIdsPrescribedProcedure();
+		case Execution_metamodelPackage.TREATMENT__IDS_PRESCRIBED_INTERNMENT:
+			return getIdsPrescribedInternment();
+		case Execution_metamodelPackage.TREATMENT__IDS_PRECRIBED_MEDICATION:
+			return getIdsPrecribedMedication();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -253,6 +358,22 @@ public class TreatmentImpl extends ExecutionImpl implements Treatment {
 			getPrescribedmedication().clear();
 			getPrescribedmedication().addAll((Collection<? extends PrescribedMedication>) newValue);
 			return;
+		case Execution_metamodelPackage.TREATMENT__IDS_PRESCRIBED_EXAMINATION:
+			getIdsPrescribedExamination().clear();
+			getIdsPrescribedExamination().addAll((Collection<? extends Integer>) newValue);
+			return;
+		case Execution_metamodelPackage.TREATMENT__IDS_PRESCRIBED_PROCEDURE:
+			getIdsPrescribedProcedure().clear();
+			getIdsPrescribedProcedure().addAll((Collection<? extends Integer>) newValue);
+			return;
+		case Execution_metamodelPackage.TREATMENT__IDS_PRESCRIBED_INTERNMENT:
+			getIdsPrescribedInternment().clear();
+			getIdsPrescribedInternment().addAll((Collection<? extends Integer>) newValue);
+			return;
+		case Execution_metamodelPackage.TREATMENT__IDS_PRECRIBED_MEDICATION:
+			getIdsPrecribedMedication().clear();
+			getIdsPrecribedMedication().addAll((Collection<? extends Integer>) newValue);
+			return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -277,6 +398,18 @@ public class TreatmentImpl extends ExecutionImpl implements Treatment {
 		case Execution_metamodelPackage.TREATMENT__PRESCRIBEDMEDICATION:
 			getPrescribedmedication().clear();
 			return;
+		case Execution_metamodelPackage.TREATMENT__IDS_PRESCRIBED_EXAMINATION:
+			getIdsPrescribedExamination().clear();
+			return;
+		case Execution_metamodelPackage.TREATMENT__IDS_PRESCRIBED_PROCEDURE:
+			getIdsPrescribedProcedure().clear();
+			return;
+		case Execution_metamodelPackage.TREATMENT__IDS_PRESCRIBED_INTERNMENT:
+			getIdsPrescribedInternment().clear();
+			return;
+		case Execution_metamodelPackage.TREATMENT__IDS_PRECRIBED_MEDICATION:
+			getIdsPrecribedMedication().clear();
+			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -297,8 +430,39 @@ public class TreatmentImpl extends ExecutionImpl implements Treatment {
 			return prescribedinternment != null && !prescribedinternment.isEmpty();
 		case Execution_metamodelPackage.TREATMENT__PRESCRIBEDMEDICATION:
 			return prescribedmedication != null && !prescribedmedication.isEmpty();
+		case Execution_metamodelPackage.TREATMENT__IDS_PRESCRIBED_EXAMINATION:
+			return idsPrescribedExamination != null && !idsPrescribedExamination.isEmpty();
+		case Execution_metamodelPackage.TREATMENT__IDS_PRESCRIBED_PROCEDURE:
+			return idsPrescribedProcedure != null && !idsPrescribedProcedure.isEmpty();
+		case Execution_metamodelPackage.TREATMENT__IDS_PRESCRIBED_INTERNMENT:
+			return idsPrescribedInternment != null && !idsPrescribedInternment.isEmpty();
+		case Execution_metamodelPackage.TREATMENT__IDS_PRECRIBED_MEDICATION:
+			return idsPrecribedMedication != null && !idsPrecribedMedication.isEmpty();
 		}
 		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String toString() {
+		if (eIsProxy())
+			return super.toString();
+
+		StringBuffer result = new StringBuffer(super.toString());
+		result.append(" (idsPrescribedExamination: ");
+		result.append(idsPrescribedExamination);
+		result.append(", idsPrescribedProcedure: ");
+		result.append(idsPrescribedProcedure);
+		result.append(", idsPrescribedInternment: ");
+		result.append(idsPrescribedInternment);
+		result.append(", idsPrecribedMedication: ");
+		result.append(idsPrecribedMedication);
+		result.append(')');
+		return result.toString();
 	}
 
 } //TreatmentImpl

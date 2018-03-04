@@ -7,14 +7,21 @@ import MetamodelExecution.Execution_metamodelPackage;
 import MetamodelExecution.Question;
 import MetamodelExecution.Value;
 
+import java.util.Collection;
+
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
+import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -24,9 +31,9 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link MetamodelExecution.impl.AnswerImpl#getTypeVerbose <em>Type Verbose</em>}</li>
- *   <li>{@link MetamodelExecution.impl.AnswerImpl#getType <em>Type</em>}</li>
  *   <li>{@link MetamodelExecution.impl.AnswerImpl#getId <em>Id</em>}</li>
+ *   <li>{@link MetamodelExecution.impl.AnswerImpl#getType <em>Type</em>}</li>
+ *   <li>{@link MetamodelExecution.impl.AnswerImpl#getTypeVerbose <em>Type Verbose</em>}</li>
  *   <li>{@link MetamodelExecution.impl.AnswerImpl#getValue <em>Value</em>}</li>
  *   <li>{@link MetamodelExecution.impl.AnswerImpl#getQuestion <em>Question</em>}</li>
  * </ul>
@@ -35,24 +42,24 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  */
 public class AnswerImpl extends MinimalEObjectImpl.Container implements Answer {
 	/**
-	 * The default value of the '{@link #getTypeVerbose() <em>Type Verbose</em>}' attribute.
+	 * The default value of the '{@link #getId() <em>Id</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getTypeVerbose()
+	 * @see #getId()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String TYPE_VERBOSE_EDEFAULT = null;
+	protected static final int ID_EDEFAULT = 0;
 
 	/**
-	 * The cached value of the '{@link #getTypeVerbose() <em>Type Verbose</em>}' attribute.
+	 * The cached value of the '{@link #getId() <em>Id</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getTypeVerbose()
+	 * @see #getId()
 	 * @generated
 	 * @ordered
 	 */
-	protected String typeVerbose = TYPE_VERBOSE_EDEFAULT;
+	protected int id = ID_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getType() <em>Type</em>}' attribute.
@@ -75,24 +82,24 @@ public class AnswerImpl extends MinimalEObjectImpl.Container implements Answer {
 	protected String type = TYPE_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getId() <em>Id</em>}' attribute.
+	 * The default value of the '{@link #getTypeVerbose() <em>Type Verbose</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getId()
+	 * @see #getTypeVerbose()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final int ID_EDEFAULT = 0;
+	protected static final String TYPE_VERBOSE_EDEFAULT = null;
 
 	/**
-	 * The cached value of the '{@link #getId() <em>Id</em>}' attribute.
+	 * The cached value of the '{@link #getTypeVerbose() <em>Type Verbose</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getId()
+	 * @see #getTypeVerbose()
 	 * @generated
 	 * @ordered
 	 */
-	protected int id = ID_EDEFAULT;
+	protected String typeVerbose = TYPE_VERBOSE_EDEFAULT;
 
 	/**
 	 * The cached value of the '{@link #getValue() <em>Value</em>}' containment reference.
@@ -105,14 +112,14 @@ public class AnswerImpl extends MinimalEObjectImpl.Container implements Answer {
 	protected Value value;
 
 	/**
-	 * The cached value of the '{@link #getQuestion() <em>Question</em>}' containment reference.
+	 * The cached value of the '{@link #getQuestion() <em>Question</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getQuestion()
 	 * @generated
 	 * @ordered
 	 */
-	protected Question question;
+	protected EList<Question> question;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -138,8 +145,8 @@ public class AnswerImpl extends MinimalEObjectImpl.Container implements Answer {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getTypeVerbose() {
-		return typeVerbose;
+	public int getId() {
+		return id;
 	}
 
 	/**
@@ -147,12 +154,11 @@ public class AnswerImpl extends MinimalEObjectImpl.Container implements Answer {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setTypeVerbose(String newTypeVerbose) {
-		String oldTypeVerbose = typeVerbose;
-		typeVerbose = newTypeVerbose;
+	public void setId(int newId) {
+		int oldId = id;
+		id = newId;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.ANSWER__TYPE_VERBOSE,
-					oldTypeVerbose, typeVerbose));
+			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.ANSWER__ID, oldId, id));
 	}
 
 	/**
@@ -182,8 +188,8 @@ public class AnswerImpl extends MinimalEObjectImpl.Container implements Answer {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public int getId() {
-		return id;
+	public String getTypeVerbose() {
+		return typeVerbose;
 	}
 
 	/**
@@ -191,11 +197,12 @@ public class AnswerImpl extends MinimalEObjectImpl.Container implements Answer {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setId(int newId) {
-		int oldId = id;
-		id = newId;
+	public void setTypeVerbose(String newTypeVerbose) {
+		String oldTypeVerbose = typeVerbose;
+		typeVerbose = newTypeVerbose;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.ANSWER__ID, oldId, id));
+			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.ANSWER__TYPE_VERBOSE,
+					oldTypeVerbose, typeVerbose));
 	}
 
 	/**
@@ -253,49 +260,12 @@ public class AnswerImpl extends MinimalEObjectImpl.Container implements Answer {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Question getQuestion() {
-		return question;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public NotificationChain basicSetQuestion(Question newQuestion, NotificationChain msgs) {
-		Question oldQuestion = question;
-		question = newQuestion;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
-					Execution_metamodelPackage.ANSWER__QUESTION, oldQuestion, newQuestion);
-			if (msgs == null)
-				msgs = notification;
-			else
-				msgs.add(notification);
+	public EList<Question> getQuestion() {
+		if (question == null) {
+			question = new EObjectContainmentEList<Question>(Question.class, this,
+					Execution_metamodelPackage.ANSWER__QUESTION);
 		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setQuestion(Question newQuestion) {
-		if (newQuestion != question) {
-			NotificationChain msgs = null;
-			if (question != null)
-				msgs = ((InternalEObject) question).eInverseRemove(this,
-						EOPPOSITE_FEATURE_BASE - Execution_metamodelPackage.ANSWER__QUESTION, null, msgs);
-			if (newQuestion != null)
-				msgs = ((InternalEObject) newQuestion).eInverseAdd(this,
-						EOPPOSITE_FEATURE_BASE - Execution_metamodelPackage.ANSWER__QUESTION, null, msgs);
-			msgs = basicSetQuestion(newQuestion, msgs);
-			if (msgs != null)
-				msgs.dispatch();
-		} else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.ANSWER__QUESTION,
-					newQuestion, newQuestion));
+		return question;
 	}
 
 	/**
@@ -309,7 +279,7 @@ public class AnswerImpl extends MinimalEObjectImpl.Container implements Answer {
 		case Execution_metamodelPackage.ANSWER__VALUE:
 			return basicSetValue(null, msgs);
 		case Execution_metamodelPackage.ANSWER__QUESTION:
-			return basicSetQuestion(null, msgs);
+			return ((InternalEList<?>) getQuestion()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -322,12 +292,12 @@ public class AnswerImpl extends MinimalEObjectImpl.Container implements Answer {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case Execution_metamodelPackage.ANSWER__TYPE_VERBOSE:
-			return getTypeVerbose();
-		case Execution_metamodelPackage.ANSWER__TYPE:
-			return getType();
 		case Execution_metamodelPackage.ANSWER__ID:
 			return getId();
+		case Execution_metamodelPackage.ANSWER__TYPE:
+			return getType();
+		case Execution_metamodelPackage.ANSWER__TYPE_VERBOSE:
+			return getTypeVerbose();
 		case Execution_metamodelPackage.ANSWER__VALUE:
 			return getValue();
 		case Execution_metamodelPackage.ANSWER__QUESTION:
@@ -341,23 +311,25 @@ public class AnswerImpl extends MinimalEObjectImpl.Container implements Answer {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case Execution_metamodelPackage.ANSWER__TYPE_VERBOSE:
-			setTypeVerbose((String) newValue);
+		case Execution_metamodelPackage.ANSWER__ID:
+			setId((Integer) newValue);
 			return;
 		case Execution_metamodelPackage.ANSWER__TYPE:
 			setType((String) newValue);
 			return;
-		case Execution_metamodelPackage.ANSWER__ID:
-			setId((Integer) newValue);
+		case Execution_metamodelPackage.ANSWER__TYPE_VERBOSE:
+			setTypeVerbose((String) newValue);
 			return;
 		case Execution_metamodelPackage.ANSWER__VALUE:
 			setValue((Value) newValue);
 			return;
 		case Execution_metamodelPackage.ANSWER__QUESTION:
-			setQuestion((Question) newValue);
+			getQuestion().clear();
+			getQuestion().addAll((Collection<? extends Question>) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -371,20 +343,20 @@ public class AnswerImpl extends MinimalEObjectImpl.Container implements Answer {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case Execution_metamodelPackage.ANSWER__TYPE_VERBOSE:
-			setTypeVerbose(TYPE_VERBOSE_EDEFAULT);
+		case Execution_metamodelPackage.ANSWER__ID:
+			setId(ID_EDEFAULT);
 			return;
 		case Execution_metamodelPackage.ANSWER__TYPE:
 			setType(TYPE_EDEFAULT);
 			return;
-		case Execution_metamodelPackage.ANSWER__ID:
-			setId(ID_EDEFAULT);
+		case Execution_metamodelPackage.ANSWER__TYPE_VERBOSE:
+			setTypeVerbose(TYPE_VERBOSE_EDEFAULT);
 			return;
 		case Execution_metamodelPackage.ANSWER__VALUE:
 			setValue((Value) null);
 			return;
 		case Execution_metamodelPackage.ANSWER__QUESTION:
-			setQuestion((Question) null);
+			getQuestion().clear();
 			return;
 		}
 		super.eUnset(featureID);
@@ -398,16 +370,16 @@ public class AnswerImpl extends MinimalEObjectImpl.Container implements Answer {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case Execution_metamodelPackage.ANSWER__TYPE_VERBOSE:
-			return TYPE_VERBOSE_EDEFAULT == null ? typeVerbose != null : !TYPE_VERBOSE_EDEFAULT.equals(typeVerbose);
-		case Execution_metamodelPackage.ANSWER__TYPE:
-			return TYPE_EDEFAULT == null ? type != null : !TYPE_EDEFAULT.equals(type);
 		case Execution_metamodelPackage.ANSWER__ID:
 			return id != ID_EDEFAULT;
+		case Execution_metamodelPackage.ANSWER__TYPE:
+			return TYPE_EDEFAULT == null ? type != null : !TYPE_EDEFAULT.equals(type);
+		case Execution_metamodelPackage.ANSWER__TYPE_VERBOSE:
+			return TYPE_VERBOSE_EDEFAULT == null ? typeVerbose != null : !TYPE_VERBOSE_EDEFAULT.equals(typeVerbose);
 		case Execution_metamodelPackage.ANSWER__VALUE:
 			return value != null;
 		case Execution_metamodelPackage.ANSWER__QUESTION:
-			return question != null;
+			return question != null && !question.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}
@@ -423,12 +395,12 @@ public class AnswerImpl extends MinimalEObjectImpl.Container implements Answer {
 			return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (typeVerbose: ");
-		result.append(typeVerbose);
+		result.append(" (id: ");
+		result.append(id);
 		result.append(", type: ");
 		result.append(type);
-		result.append(", id: ");
-		result.append(id);
+		result.append(", typeVerbose: ");
+		result.append(typeVerbose);
 		result.append(')');
 		return result.toString();
 	}

@@ -2,6 +2,8 @@
  */
 package MetamodelExecution;
 
+import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -13,9 +15,9 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link MetamodelExecution.Answer#getTypeVerbose <em>Type Verbose</em>}</li>
- *   <li>{@link MetamodelExecution.Answer#getType <em>Type</em>}</li>
  *   <li>{@link MetamodelExecution.Answer#getId <em>Id</em>}</li>
+ *   <li>{@link MetamodelExecution.Answer#getType <em>Type</em>}</li>
+ *   <li>{@link MetamodelExecution.Answer#getTypeVerbose <em>Type Verbose</em>}</li>
  *   <li>{@link MetamodelExecution.Answer#getValue <em>Value</em>}</li>
  *   <li>{@link MetamodelExecution.Answer#getQuestion <em>Question</em>}</li>
  * </ul>
@@ -26,30 +28,30 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface Answer extends EObject {
 	/**
-	 * Returns the value of the '<em><b>Type Verbose</b></em>' attribute.
+	 * Returns the value of the '<em><b>Id</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Type Verbose</em>' attribute isn't clear,
+	 * If the meaning of the '<em>Id</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Type Verbose</em>' attribute.
-	 * @see #setTypeVerbose(String)
-	 * @see MetamodelExecution.Execution_metamodelPackage#getAnswer_TypeVerbose()
+	 * @return the value of the '<em>Id</em>' attribute.
+	 * @see #setId(int)
+	 * @see MetamodelExecution.Execution_metamodelPackage#getAnswer_Id()
 	 * @model
 	 * @generated
 	 */
-	String getTypeVerbose();
+	int getId();
 
 	/**
-	 * Sets the value of the '{@link MetamodelExecution.Answer#getTypeVerbose <em>Type Verbose</em>}' attribute.
+	 * Sets the value of the '{@link MetamodelExecution.Answer#getId <em>Id</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Type Verbose</em>' attribute.
-	 * @see #getTypeVerbose()
+	 * @param value the new value of the '<em>Id</em>' attribute.
+	 * @see #getId()
 	 * @generated
 	 */
-	void setTypeVerbose(String value);
+	void setId(int value);
 
 	/**
 	 * Returns the value of the '<em><b>Type</b></em>' attribute.
@@ -78,30 +80,30 @@ public interface Answer extends EObject {
 	void setType(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Id</b></em>' attribute.
+	 * Returns the value of the '<em><b>Type Verbose</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Id</em>' attribute isn't clear,
+	 * If the meaning of the '<em>Type Verbose</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Id</em>' attribute.
-	 * @see #setId(int)
-	 * @see MetamodelExecution.Execution_metamodelPackage#getAnswer_Id()
+	 * @return the value of the '<em>Type Verbose</em>' attribute.
+	 * @see #setTypeVerbose(String)
+	 * @see MetamodelExecution.Execution_metamodelPackage#getAnswer_TypeVerbose()
 	 * @model
 	 * @generated
 	 */
-	int getId();
+	String getTypeVerbose();
 
 	/**
-	 * Sets the value of the '{@link MetamodelExecution.Answer#getId <em>Id</em>}' attribute.
+	 * Sets the value of the '{@link MetamodelExecution.Answer#getTypeVerbose <em>Type Verbose</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Id</em>' attribute.
-	 * @see #getId()
+	 * @param value the new value of the '<em>Type Verbose</em>' attribute.
+	 * @see #getTypeVerbose()
 	 * @generated
 	 */
-	void setId(int value);
+	void setTypeVerbose(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Value</b></em>' containment reference.
@@ -130,29 +132,19 @@ public interface Answer extends EObject {
 	void setValue(Value value);
 
 	/**
-	 * Returns the value of the '<em><b>Question</b></em>' containment reference.
+	 * Returns the value of the '<em><b>Question</b></em>' containment reference list.
+	 * The list contents are of type {@link MetamodelExecution.Question}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Question</em>' containment reference isn't clear,
+	 * If the meaning of the '<em>Question</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Question</em>' containment reference.
-	 * @see #setQuestion(Question)
+	 * @return the value of the '<em>Question</em>' containment reference list.
 	 * @see MetamodelExecution.Execution_metamodelPackage#getAnswer_Question()
-	 * @model containment="true" required="true"
+	 * @model containment="true"
 	 * @generated
 	 */
-	Question getQuestion();
-
-	/**
-	 * Sets the value of the '{@link MetamodelExecution.Answer#getQuestion <em>Question</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Question</em>' containment reference.
-	 * @see #getQuestion()
-	 * @generated
-	 */
-	void setQuestion(Question value);
+	EList<Question> getQuestion();
 
 } // Answer

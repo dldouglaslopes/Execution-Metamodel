@@ -15,12 +15,12 @@ import org.eclipse.emf.ecore.EObject;
  * <ul>
  *   <li>{@link MetamodelExecution.Examination#getId <em>Id</em>}</li>
  *   <li>{@link MetamodelExecution.Examination#getUrl <em>Url</em>}</li>
- *   <li>{@link MetamodelExecution.Examination#getIdExam <em>Id Exam</em>}</li>
- *   <li>{@link MetamodelExecution.Examination#getSideMember <em>Side Member</em>}</li>
+ *   <li>{@link MetamodelExecution.Examination#getIdExamination <em>Id Examination</em>}</li>
+ *   <li>{@link MetamodelExecution.Examination#getSideLimb <em>Side Limb</em>}</li>
  *   <li>{@link MetamodelExecution.Examination#getQuantity <em>Quantity</em>}</li>
- *   <li>{@link MetamodelExecution.Examination#getJustify <em>Justify</em>}</li>
+ *   <li>{@link MetamodelExecution.Examination#getJustification <em>Justification</em>}</li>
  *   <li>{@link MetamodelExecution.Examination#getClinicalIndication <em>Clinical Indication</em>}</li>
- *   <li>{@link MetamodelExecution.Examination#getSideMemberDisplay <em>Side Member Display</em>}</li>
+ *   <li>{@link MetamodelExecution.Examination#getSideLimbDisplay <em>Side Limb Display</em>}</li>
  *   <li>{@link MetamodelExecution.Examination#getExam <em>Exam</em>}</li>
  * </ul>
  *
@@ -82,56 +82,56 @@ public interface Examination extends EObject {
 	void setUrl(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Id Exam</b></em>' attribute.
+	 * Returns the value of the '<em><b>Id Examination</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Id Exam</em>' attribute isn't clear,
+	 * If the meaning of the '<em>Id Examination</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Id Exam</em>' attribute.
-	 * @see #setIdExam(int)
-	 * @see MetamodelExecution.Execution_metamodelPackage#getExamination_IdExam()
+	 * @return the value of the '<em>Id Examination</em>' attribute.
+	 * @see #setIdExamination(int)
+	 * @see MetamodelExecution.Execution_metamodelPackage#getExamination_IdExamination()
 	 * @model
 	 * @generated
 	 */
-	int getIdExam();
+	int getIdExamination();
 
 	/**
-	 * Sets the value of the '{@link MetamodelExecution.Examination#getIdExam <em>Id Exam</em>}' attribute.
+	 * Sets the value of the '{@link MetamodelExecution.Examination#getIdExamination <em>Id Examination</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Id Exam</em>' attribute.
-	 * @see #getIdExam()
+	 * @param value the new value of the '<em>Id Examination</em>' attribute.
+	 * @see #getIdExamination()
 	 * @generated
 	 */
-	void setIdExam(int value);
+	void setIdExamination(int value);
 
 	/**
-	 * Returns the value of the '<em><b>Side Member</b></em>' attribute.
+	 * Returns the value of the '<em><b>Side Limb</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Side Member</em>' attribute isn't clear,
+	 * If the meaning of the '<em>Side Limb</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Side Member</em>' attribute.
-	 * @see #setSideMember(String)
-	 * @see MetamodelExecution.Execution_metamodelPackage#getExamination_SideMember()
+	 * @return the value of the '<em>Side Limb</em>' attribute.
+	 * @see #setSideLimb(String)
+	 * @see MetamodelExecution.Execution_metamodelPackage#getExamination_SideLimb()
 	 * @model
 	 * @generated
 	 */
-	String getSideMember();
+	String getSideLimb();
 
 	/**
-	 * Sets the value of the '{@link MetamodelExecution.Examination#getSideMember <em>Side Member</em>}' attribute.
+	 * Sets the value of the '{@link MetamodelExecution.Examination#getSideLimb <em>Side Limb</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Side Member</em>' attribute.
-	 * @see #getSideMember()
+	 * @param value the new value of the '<em>Side Limb</em>' attribute.
+	 * @see #getSideLimb()
 	 * @generated
 	 */
-	void setSideMember(String value);
+	void setSideLimb(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Quantity</b></em>' attribute.
@@ -160,30 +160,30 @@ public interface Examination extends EObject {
 	void setQuantity(int value);
 
 	/**
-	 * Returns the value of the '<em><b>Justify</b></em>' attribute.
+	 * Returns the value of the '<em><b>Justification</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Justify</em>' attribute isn't clear,
+	 * If the meaning of the '<em>Justification</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Justify</em>' attribute.
-	 * @see #setJustify(String)
-	 * @see MetamodelExecution.Execution_metamodelPackage#getExamination_Justify()
+	 * @return the value of the '<em>Justification</em>' attribute.
+	 * @see #setJustification(String)
+	 * @see MetamodelExecution.Execution_metamodelPackage#getExamination_Justification()
 	 * @model
 	 * @generated
 	 */
-	String getJustify();
+	String getJustification();
 
 	/**
-	 * Sets the value of the '{@link MetamodelExecution.Examination#getJustify <em>Justify</em>}' attribute.
+	 * Sets the value of the '{@link MetamodelExecution.Examination#getJustification <em>Justification</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Justify</em>' attribute.
-	 * @see #getJustify()
+	 * @param value the new value of the '<em>Justification</em>' attribute.
+	 * @see #getJustification()
 	 * @generated
 	 */
-	void setJustify(String value);
+	void setJustification(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Clinical Indication</b></em>' attribute.
@@ -212,30 +212,30 @@ public interface Examination extends EObject {
 	void setClinicalIndication(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Side Member Display</b></em>' attribute.
+	 * Returns the value of the '<em><b>Side Limb Display</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Side Member Display</em>' attribute isn't clear,
+	 * If the meaning of the '<em>Side Limb Display</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Side Member Display</em>' attribute.
-	 * @see #setSideMemberDisplay(String)
-	 * @see MetamodelExecution.Execution_metamodelPackage#getExamination_SideMemberDisplay()
+	 * @return the value of the '<em>Side Limb Display</em>' attribute.
+	 * @see #setSideLimbDisplay(String)
+	 * @see MetamodelExecution.Execution_metamodelPackage#getExamination_SideLimbDisplay()
 	 * @model
 	 * @generated
 	 */
-	String getSideMemberDisplay();
+	String getSideLimbDisplay();
 
 	/**
-	 * Sets the value of the '{@link MetamodelExecution.Examination#getSideMemberDisplay <em>Side Member Display</em>}' attribute.
+	 * Sets the value of the '{@link MetamodelExecution.Examination#getSideLimbDisplay <em>Side Limb Display</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Side Member Display</em>' attribute.
-	 * @see #getSideMemberDisplay()
+	 * @param value the new value of the '<em>Side Limb Display</em>' attribute.
+	 * @see #getSideLimbDisplay()
 	 * @generated
 	 */
-	void setSideMemberDisplay(String value);
+	void setSideLimbDisplay(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Exam</b></em>' containment reference.

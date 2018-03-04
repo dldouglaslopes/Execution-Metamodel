@@ -21,7 +21,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * </p>
  * <ul>
  *   <li>{@link MetamodelExecution.impl.PreviousImpl#getUrl <em>Url</em>}</li>
- *   <li>{@link MetamodelExecution.impl.PreviousImpl#getUrlAbsolute <em>Url Absolute</em>}</li>
+ *   <li>{@link MetamodelExecution.impl.PreviousImpl#getAbsoluteUrl <em>Absolute Url</em>}</li>
  * </ul>
  *
  * @generated
@@ -48,24 +48,24 @@ public class PreviousImpl extends MinimalEObjectImpl.Container implements Previo
 	protected String url = URL_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getUrlAbsolute() <em>Url Absolute</em>}' attribute.
+	 * The default value of the '{@link #getAbsoluteUrl() <em>Absolute Url</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getUrlAbsolute()
+	 * @see #getAbsoluteUrl()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String URL_ABSOLUTE_EDEFAULT = null;
+	protected static final String ABSOLUTE_URL_EDEFAULT = null;
 
 	/**
-	 * The cached value of the '{@link #getUrlAbsolute() <em>Url Absolute</em>}' attribute.
+	 * The cached value of the '{@link #getAbsoluteUrl() <em>Absolute Url</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getUrlAbsolute()
+	 * @see #getAbsoluteUrl()
 	 * @generated
 	 * @ordered
 	 */
-	protected String urlAbsolute = URL_ABSOLUTE_EDEFAULT;
+	protected String absoluteUrl = ABSOLUTE_URL_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -113,8 +113,8 @@ public class PreviousImpl extends MinimalEObjectImpl.Container implements Previo
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getUrlAbsolute() {
-		return urlAbsolute;
+	public String getAbsoluteUrl() {
+		return absoluteUrl;
 	}
 
 	/**
@@ -122,12 +122,12 @@ public class PreviousImpl extends MinimalEObjectImpl.Container implements Previo
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setUrlAbsolute(String newUrlAbsolute) {
-		String oldUrlAbsolute = urlAbsolute;
-		urlAbsolute = newUrlAbsolute;
+	public void setAbsoluteUrl(String newAbsoluteUrl) {
+		String oldAbsoluteUrl = absoluteUrl;
+		absoluteUrl = newAbsoluteUrl;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.PREVIOUS__URL_ABSOLUTE,
-					oldUrlAbsolute, urlAbsolute));
+			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.PREVIOUS__ABSOLUTE_URL,
+					oldAbsoluteUrl, absoluteUrl));
 	}
 
 	/**
@@ -140,8 +140,8 @@ public class PreviousImpl extends MinimalEObjectImpl.Container implements Previo
 		switch (featureID) {
 		case Execution_metamodelPackage.PREVIOUS__URL:
 			return getUrl();
-		case Execution_metamodelPackage.PREVIOUS__URL_ABSOLUTE:
-			return getUrlAbsolute();
+		case Execution_metamodelPackage.PREVIOUS__ABSOLUTE_URL:
+			return getAbsoluteUrl();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -157,8 +157,8 @@ public class PreviousImpl extends MinimalEObjectImpl.Container implements Previo
 		case Execution_metamodelPackage.PREVIOUS__URL:
 			setUrl((String) newValue);
 			return;
-		case Execution_metamodelPackage.PREVIOUS__URL_ABSOLUTE:
-			setUrlAbsolute((String) newValue);
+		case Execution_metamodelPackage.PREVIOUS__ABSOLUTE_URL:
+			setAbsoluteUrl((String) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -175,8 +175,8 @@ public class PreviousImpl extends MinimalEObjectImpl.Container implements Previo
 		case Execution_metamodelPackage.PREVIOUS__URL:
 			setUrl(URL_EDEFAULT);
 			return;
-		case Execution_metamodelPackage.PREVIOUS__URL_ABSOLUTE:
-			setUrlAbsolute(URL_ABSOLUTE_EDEFAULT);
+		case Execution_metamodelPackage.PREVIOUS__ABSOLUTE_URL:
+			setAbsoluteUrl(ABSOLUTE_URL_EDEFAULT);
 			return;
 		}
 		super.eUnset(featureID);
@@ -192,8 +192,8 @@ public class PreviousImpl extends MinimalEObjectImpl.Container implements Previo
 		switch (featureID) {
 		case Execution_metamodelPackage.PREVIOUS__URL:
 			return URL_EDEFAULT == null ? url != null : !URL_EDEFAULT.equals(url);
-		case Execution_metamodelPackage.PREVIOUS__URL_ABSOLUTE:
-			return URL_ABSOLUTE_EDEFAULT == null ? urlAbsolute != null : !URL_ABSOLUTE_EDEFAULT.equals(urlAbsolute);
+		case Execution_metamodelPackage.PREVIOUS__ABSOLUTE_URL:
+			return ABSOLUTE_URL_EDEFAULT == null ? absoluteUrl != null : !ABSOLUTE_URL_EDEFAULT.equals(absoluteUrl);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -211,8 +211,8 @@ public class PreviousImpl extends MinimalEObjectImpl.Container implements Previo
 		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (url: ");
 		result.append(url);
-		result.append(", urlAbsolute: ");
-		result.append(urlAbsolute);
+		result.append(", absoluteUrl: ");
+		result.append(absoluteUrl);
 		result.append(')');
 		return result.toString();
 	}

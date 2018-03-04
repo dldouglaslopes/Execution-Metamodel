@@ -16,7 +16,9 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link MetamodelExecution.Prescription#getText <em>Text</em>}</li>
  *   <li>{@link MetamodelExecution.Prescription#getPrescribedmedicament <em>Prescribedmedicament</em>}</li>
  *   <li>{@link MetamodelExecution.Prescription#getPrescribedprescriptionitem <em>Prescribedprescriptionitem</em>}</li>
- *   <li>{@link MetamodelExecution.Prescription#getPrescription <em>Prescription</em>}</li>
+ *   <li>{@link MetamodelExecution.Prescription#getIdsPrescribedMedication <em>Ids Prescribed Medication</em>}</li>
+ *   <li>{@link MetamodelExecution.Prescription#getIdsPrescribedPrescriptionItem <em>Ids Prescribed Prescription Item</em>}</li>
+ *   <li>{@link MetamodelExecution.Prescription#getPrescriptioninfo <em>Prescriptioninfo</em>}</li>
  * </ul>
  *
  * @see MetamodelExecution.Execution_metamodelPackage#getPrescription()
@@ -83,29 +85,51 @@ public interface Prescription extends Execution {
 	EList<PrescribedPrescriptionItem> getPrescribedprescriptionitem();
 
 	/**
-	 * Returns the value of the '<em><b>Prescription</b></em>' attribute.
+	 * Returns the value of the '<em><b>Ids Prescribed Medication</b></em>' attribute list.
+	 * The list contents are of type {@link java.lang.Integer}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Prescription</em>' attribute isn't clear,
+	 * If the meaning of the '<em>Ids Prescribed Medication</em>' attribute list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Prescription</em>' attribute.
-	 * @see #setPrescription(String)
-	 * @see MetamodelExecution.Execution_metamodelPackage#getPrescription_Prescription()
+	 * @return the value of the '<em>Ids Prescribed Medication</em>' attribute list.
+	 * @see MetamodelExecution.Execution_metamodelPackage#getPrescription_IdsPrescribedMedication()
 	 * @model
 	 * @generated
 	 */
-	String getPrescription();
+	EList<Integer> getIdsPrescribedMedication();
 
 	/**
-	 * Sets the value of the '{@link MetamodelExecution.Prescription#getPrescription <em>Prescription</em>}' attribute.
+	 * Returns the value of the '<em><b>Ids Prescribed Prescription Item</b></em>' attribute list.
+	 * The list contents are of type {@link java.lang.Integer}.
 	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Ids Prescribed Prescription Item</em>' attribute list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Prescription</em>' attribute.
-	 * @see #getPrescription()
+	 * @return the value of the '<em>Ids Prescribed Prescription Item</em>' attribute list.
+	 * @see MetamodelExecution.Execution_metamodelPackage#getPrescription_IdsPrescribedPrescriptionItem()
+	 * @model
 	 * @generated
 	 */
-	void setPrescription(String value);
+	EList<Integer> getIdsPrescribedPrescriptionItem();
+
+	/**
+	 * Returns the value of the '<em><b>Prescriptioninfo</b></em>' containment reference list.
+	 * The list contents are of type {@link MetamodelExecution.PrescriptionInfo}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Prescriptioninfo</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Prescriptioninfo</em>' containment reference list.
+	 * @see MetamodelExecution.Execution_metamodelPackage#getPrescription_Prescriptioninfo()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<PrescriptionInfo> getPrescriptioninfo();
 
 } // Prescription

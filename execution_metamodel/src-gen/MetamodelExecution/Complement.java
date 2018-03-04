@@ -2,6 +2,8 @@
  */
 package MetamodelExecution;
 
+import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -14,10 +16,11 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  * <ul>
  *   <li>{@link MetamodelExecution.Complement#getId <em>Id</em>}</li>
- *   <li>{@link MetamodelExecution.Complement#getSideMember <em>Side Member</em>}</li>
- *   <li>{@link MetamodelExecution.Complement#getSideMemberDisplay <em>Side Member Display</em>}</li>
- *   <li>{@link MetamodelExecution.Complement#getQuantity <em>Quantity</em>}</li>
+ *   <li>{@link MetamodelExecution.Complement#getSideLimb <em>Side Limb</em>}</li>
+ *   <li>{@link MetamodelExecution.Complement#getSideLimbDisplay <em>Side Limb Display</em>}</li>
  *   <li>{@link MetamodelExecution.Complement#getClinicalIndication <em>Clinical Indication</em>}</li>
+ *   <li>{@link MetamodelExecution.Complement#getJustification <em>Justification</em>}</li>
+ *   <li>{@link MetamodelExecution.Complement#getQuantity <em>Quantity</em>}</li>
  * </ul>
  *
  * @see MetamodelExecution.Execution_metamodelPackage#getComplement()
@@ -52,82 +55,56 @@ public interface Complement extends EObject {
 	void setId(int value);
 
 	/**
-	 * Returns the value of the '<em><b>Side Member</b></em>' attribute.
+	 * Returns the value of the '<em><b>Side Limb</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Side Member</em>' attribute isn't clear,
+	 * If the meaning of the '<em>Side Limb</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Side Member</em>' attribute.
-	 * @see #setSideMember(String)
-	 * @see MetamodelExecution.Execution_metamodelPackage#getComplement_SideMember()
+	 * @return the value of the '<em>Side Limb</em>' attribute.
+	 * @see #setSideLimb(String)
+	 * @see MetamodelExecution.Execution_metamodelPackage#getComplement_SideLimb()
 	 * @model
 	 * @generated
 	 */
-	String getSideMember();
+	String getSideLimb();
 
 	/**
-	 * Sets the value of the '{@link MetamodelExecution.Complement#getSideMember <em>Side Member</em>}' attribute.
+	 * Sets the value of the '{@link MetamodelExecution.Complement#getSideLimb <em>Side Limb</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Side Member</em>' attribute.
-	 * @see #getSideMember()
+	 * @param value the new value of the '<em>Side Limb</em>' attribute.
+	 * @see #getSideLimb()
 	 * @generated
 	 */
-	void setSideMember(String value);
+	void setSideLimb(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Side Member Display</b></em>' attribute.
+	 * Returns the value of the '<em><b>Side Limb Display</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Side Member Display</em>' attribute isn't clear,
+	 * If the meaning of the '<em>Side Limb Display</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Side Member Display</em>' attribute.
-	 * @see #setSideMemberDisplay(String)
-	 * @see MetamodelExecution.Execution_metamodelPackage#getComplement_SideMemberDisplay()
+	 * @return the value of the '<em>Side Limb Display</em>' attribute.
+	 * @see #setSideLimbDisplay(String)
+	 * @see MetamodelExecution.Execution_metamodelPackage#getComplement_SideLimbDisplay()
 	 * @model
 	 * @generated
 	 */
-	String getSideMemberDisplay();
+	String getSideLimbDisplay();
 
 	/**
-	 * Sets the value of the '{@link MetamodelExecution.Complement#getSideMemberDisplay <em>Side Member Display</em>}' attribute.
+	 * Sets the value of the '{@link MetamodelExecution.Complement#getSideLimbDisplay <em>Side Limb Display</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Side Member Display</em>' attribute.
-	 * @see #getSideMemberDisplay()
+	 * @param value the new value of the '<em>Side Limb Display</em>' attribute.
+	 * @see #getSideLimbDisplay()
 	 * @generated
 	 */
-	void setSideMemberDisplay(String value);
-
-	/**
-	 * Returns the value of the '<em><b>Quantity</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Quantity</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Quantity</em>' attribute.
-	 * @see #setQuantity(int)
-	 * @see MetamodelExecution.Execution_metamodelPackage#getComplement_Quantity()
-	 * @model
-	 * @generated
-	 */
-	int getQuantity();
-
-	/**
-	 * Sets the value of the '{@link MetamodelExecution.Complement#getQuantity <em>Quantity</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Quantity</em>' attribute.
-	 * @see #getQuantity()
-	 * @generated
-	 */
-	void setQuantity(int value);
+	void setSideLimbDisplay(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Clinical Indication</b></em>' attribute.
@@ -154,5 +131,47 @@ public interface Complement extends EObject {
 	 * @generated
 	 */
 	void setClinicalIndication(int value);
+
+	/**
+	 * Returns the value of the '<em><b>Justification</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Justification</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Justification</em>' attribute.
+	 * @see #setJustification(String)
+	 * @see MetamodelExecution.Execution_metamodelPackage#getComplement_Justification()
+	 * @model
+	 * @generated
+	 */
+	String getJustification();
+
+	/**
+	 * Sets the value of the '{@link MetamodelExecution.Complement#getJustification <em>Justification</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Justification</em>' attribute.
+	 * @see #getJustification()
+	 * @generated
+	 */
+	void setJustification(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Quantity</b></em>' containment reference list.
+	 * The list contents are of type {@link MetamodelExecution.Quantity}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Quantity</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Quantity</em>' containment reference list.
+	 * @see MetamodelExecution.Execution_metamodelPackage#getComplement_Quantity()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<Quantity> getQuantity();
 
 } // Complement

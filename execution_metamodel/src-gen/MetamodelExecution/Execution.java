@@ -23,7 +23,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link MetamodelExecution.Execution#isReworked <em>Reworked</em>}</li>
  *   <li>{@link MetamodelExecution.Execution#isExecuted <em>Executed</em>}</li>
  *   <li>{@link MetamodelExecution.Execution#getCreationDate <em>Creation Date</em>}</li>
- *   <li>{@link MetamodelExecution.Execution#getChangeDate <em>Change Date</em>}</li>
+ *   <li>{@link MetamodelExecution.Execution#getModificationDate <em>Modification Date</em>}</li>
  *   <li>{@link MetamodelExecution.Execution#getExecutionDate <em>Execution Date</em>}</li>
  *   <li>{@link MetamodelExecution.Execution#getCreatedById <em>Created By Id</em>}</li>
  *   <li>{@link MetamodelExecution.Execution#getExecutedById <em>Executed By Id</em>}</li>
@@ -255,30 +255,30 @@ public interface Execution extends EObject {
 	void setCreationDate(Date value);
 
 	/**
-	 * Returns the value of the '<em><b>Change Date</b></em>' attribute.
+	 * Returns the value of the '<em><b>Modification Date</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Change Date</em>' attribute isn't clear,
+	 * If the meaning of the '<em>Modification Date</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Change Date</em>' attribute.
-	 * @see #setChangeDate(Date)
-	 * @see MetamodelExecution.Execution_metamodelPackage#getExecution_ChangeDate()
+	 * @return the value of the '<em>Modification Date</em>' attribute.
+	 * @see #setModificationDate(Date)
+	 * @see MetamodelExecution.Execution_metamodelPackage#getExecution_ModificationDate()
 	 * @model
 	 * @generated
 	 */
-	Date getChangeDate();
+	Date getModificationDate();
 
 	/**
-	 * Sets the value of the '{@link MetamodelExecution.Execution#getChangeDate <em>Change Date</em>}' attribute.
+	 * Sets the value of the '{@link MetamodelExecution.Execution#getModificationDate <em>Modification Date</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Change Date</em>' attribute.
-	 * @see #getChangeDate()
+	 * @param value the new value of the '<em>Modification Date</em>' attribute.
+	 * @see #getModificationDate()
 	 * @generated
 	 */
-	void setChangeDate(Date value);
+	void setModificationDate(Date value);
 
 	/**
 	 * Returns the value of the '<em><b>Execution Date</b></em>' attribute.

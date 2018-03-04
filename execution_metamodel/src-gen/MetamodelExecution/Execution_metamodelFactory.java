@@ -103,24 +103,6 @@ public interface Execution_metamodelFactory extends EFactory {
 	Next createNext();
 
 	/**
-	 * Returns a new object of class '<em>Question</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Question</em>'.
-	 * @generated
-	 */
-	Question createQuestion();
-
-	/**
-	 * Returns a new object of class '<em>Variable</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Variable</em>'.
-	 * @generated
-	 */
-	Variable createVariable();
-
-	/**
 	 * Returns a new object of class '<em>Prescribed Examination</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -164,15 +146,6 @@ public interface Execution_metamodelFactory extends EFactory {
 	 * @generated
 	 */
 	PrescribedMedication createPrescribedMedication();
-
-	/**
-	 * Returns a new object of class '<em>Examination Prescription</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Examination Prescription</em>'.
-	 * @generated
-	 */
-	ExaminationPrescription createExaminationPrescription();
 
 	/**
 	 * Returns a new object of class '<em>Complement</em>'.
@@ -308,6 +281,60 @@ public interface Execution_metamodelFactory extends EFactory {
 	 * @generated
 	 */
 	LastProfessional createLastProfessional();
+
+	/**
+	 * Returns a new object of class '<em>Result</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Result</em>'.
+	 * @generated
+	 */
+	Result createResult();
+
+	/**
+	 * Returns a new object of class '<em>Quantity</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Quantity</em>'.
+	 * @generated
+	 */
+	Quantity createQuantity();
+
+	/**
+	 * Returns a new object of class '<em>Prescription Exam</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Prescription Exam</em>'.
+	 * @generated
+	 */
+	PrescriptionExam createPrescriptionExam();
+
+	/**
+	 * Returns a new object of class '<em>Prescription Info</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Prescription Info</em>'.
+	 * @generated
+	 */
+	PrescriptionInfo createPrescriptionInfo();
+
+	/**
+	 * Returns a new object of class '<em>Question</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Question</em>'.
+	 * @generated
+	 */
+	Question createQuestion();
+
+	/**
+	 * Returns a new object of class '<em>teste</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>teste</em>'.
+	 * @generated
+	 */
+	teste createteste();
 
 	/**
 	 * Returns the package supported by this factory.
