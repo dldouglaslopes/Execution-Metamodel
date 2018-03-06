@@ -50,6 +50,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link MetamodelExecution.impl.ExecutionImpl#getPathway <em>Pathway</em>}</li>
  *   <li>{@link MetamodelExecution.impl.ExecutionImpl#getResponsible <em>Responsible</em>}</li>
  *   <li>{@link MetamodelExecution.impl.ExecutionImpl#getLastprofessional <em>Lastprofessional</em>}</li>
+ *   <li>{@link MetamodelExecution.impl.ExecutionImpl#getName <em>Name</em>}</li>
  * </ul>
  *
  * @generated
@@ -304,6 +305,26 @@ public class ExecutionImpl extends MinimalEObjectImpl.Container implements Execu
 	 * @ordered
 	 */
 	protected LastProfessional lastprofessional;
+
+	/**
+	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getName()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String NAME_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getName()
+	 * @generated
+	 * @ordered
+	 */
+	protected String name = NAME_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -726,6 +747,28 @@ public class ExecutionImpl extends MinimalEObjectImpl.Container implements Execu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public String getName() {
+		return name;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setName(String newName) {
+		String oldName = name;
+		name = newName;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.EXECUTION__NAME, oldName,
+					name));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -779,6 +822,8 @@ public class ExecutionImpl extends MinimalEObjectImpl.Container implements Execu
 			return getResponsible();
 		case Execution_metamodelPackage.EXECUTION__LASTPROFESSIONAL:
 			return getLastprofessional();
+		case Execution_metamodelPackage.EXECUTION__NAME:
+			return getName();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -839,6 +884,9 @@ public class ExecutionImpl extends MinimalEObjectImpl.Container implements Execu
 		case Execution_metamodelPackage.EXECUTION__LASTPROFESSIONAL:
 			setLastprofessional((LastProfessional) newValue);
 			return;
+		case Execution_metamodelPackage.EXECUTION__NAME:
+			setName((String) newValue);
+			return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -896,6 +944,9 @@ public class ExecutionImpl extends MinimalEObjectImpl.Container implements Execu
 		case Execution_metamodelPackage.EXECUTION__LASTPROFESSIONAL:
 			setLastprofessional((LastProfessional) null);
 			return;
+		case Execution_metamodelPackage.EXECUTION__NAME:
+			setName(NAME_EDEFAULT);
+			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -940,6 +991,8 @@ public class ExecutionImpl extends MinimalEObjectImpl.Container implements Execu
 			return responsible != null;
 		case Execution_metamodelPackage.EXECUTION__LASTPROFESSIONAL:
 			return lastprofessional != null;
+		case Execution_metamodelPackage.EXECUTION__NAME:
+			return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -977,6 +1030,8 @@ public class ExecutionImpl extends MinimalEObjectImpl.Container implements Execu
 		result.append(idResponsible);
 		result.append(", idsExecutedStep: ");
 		result.append(idsExecutedStep);
+		result.append(", name: ");
+		result.append(name);
 		result.append(')');
 		return result.toString();
 	}

@@ -11,15 +11,12 @@ import MetamodelExecution.Treatment;
 
 import java.util.Collection;
 
-import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
-
-import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 import org.eclipse.emf.ecore.util.EDataTypeUniqueEList;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
@@ -47,14 +44,14 @@ import org.eclipse.emf.ecore.util.InternalEList;
  */
 public class TreatmentImpl extends ElementImpl implements Treatment {
 	/**
-	 * The cached value of the '{@link #getPrescribedexam() <em>Prescribedexam</em>}' containment reference.
+	 * The cached value of the '{@link #getPrescribedexam() <em>Prescribedexam</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getPrescribedexam()
 	 * @generated
 	 * @ordered
 	 */
-	protected PrescribedExamination prescribedexam;
+	protected EList<PrescribedExamination> prescribedexam;
 
 	/**
 	 * The cached value of the '{@link #getPrescribedprocedure() <em>Prescribedprocedure</em>}' containment reference list.
@@ -150,49 +147,12 @@ public class TreatmentImpl extends ElementImpl implements Treatment {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public PrescribedExamination getPrescribedexam() {
-		return prescribedexam;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public NotificationChain basicSetPrescribedexam(PrescribedExamination newPrescribedexam, NotificationChain msgs) {
-		PrescribedExamination oldPrescribedexam = prescribedexam;
-		prescribedexam = newPrescribedexam;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
-					Execution_metamodelPackage.TREATMENT__PRESCRIBEDEXAM, oldPrescribedexam, newPrescribedexam);
-			if (msgs == null)
-				msgs = notification;
-			else
-				msgs.add(notification);
+	public EList<PrescribedExamination> getPrescribedexam() {
+		if (prescribedexam == null) {
+			prescribedexam = new EObjectContainmentEList<PrescribedExamination>(PrescribedExamination.class, this,
+					Execution_metamodelPackage.TREATMENT__PRESCRIBEDEXAM);
 		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setPrescribedexam(PrescribedExamination newPrescribedexam) {
-		if (newPrescribedexam != prescribedexam) {
-			NotificationChain msgs = null;
-			if (prescribedexam != null)
-				msgs = ((InternalEObject) prescribedexam).eInverseRemove(this,
-						EOPPOSITE_FEATURE_BASE - Execution_metamodelPackage.TREATMENT__PRESCRIBEDEXAM, null, msgs);
-			if (newPrescribedexam != null)
-				msgs = ((InternalEObject) newPrescribedexam).eInverseAdd(this,
-						EOPPOSITE_FEATURE_BASE - Execution_metamodelPackage.TREATMENT__PRESCRIBEDEXAM, null, msgs);
-			msgs = basicSetPrescribedexam(newPrescribedexam, msgs);
-			if (msgs != null)
-				msgs.dispatch();
-		} else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.TREATMENT__PRESCRIBEDEXAM,
-					newPrescribedexam, newPrescribedexam));
+		return prescribedexam;
 	}
 
 	/**
@@ -295,7 +255,7 @@ public class TreatmentImpl extends ElementImpl implements Treatment {
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 		case Execution_metamodelPackage.TREATMENT__PRESCRIBEDEXAM:
-			return basicSetPrescribedexam(null, msgs);
+			return ((InternalEList<?>) getPrescribedexam()).basicRemove(otherEnd, msgs);
 		case Execution_metamodelPackage.TREATMENT__PRESCRIBEDPROCEDURE:
 			return ((InternalEList<?>) getPrescribedprocedure()).basicRemove(otherEnd, msgs);
 		case Execution_metamodelPackage.TREATMENT__PRESCRIBEDINTERNMENT:
@@ -344,7 +304,8 @@ public class TreatmentImpl extends ElementImpl implements Treatment {
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 		case Execution_metamodelPackage.TREATMENT__PRESCRIBEDEXAM:
-			setPrescribedexam((PrescribedExamination) newValue);
+			getPrescribedexam().clear();
+			getPrescribedexam().addAll((Collection<? extends PrescribedExamination>) newValue);
 			return;
 		case Execution_metamodelPackage.TREATMENT__PRESCRIBEDPROCEDURE:
 			getPrescribedprocedure().clear();
@@ -387,7 +348,7 @@ public class TreatmentImpl extends ElementImpl implements Treatment {
 	public void eUnset(int featureID) {
 		switch (featureID) {
 		case Execution_metamodelPackage.TREATMENT__PRESCRIBEDEXAM:
-			setPrescribedexam((PrescribedExamination) null);
+			getPrescribedexam().clear();
 			return;
 		case Execution_metamodelPackage.TREATMENT__PRESCRIBEDPROCEDURE:
 			getPrescribedprocedure().clear();
@@ -423,7 +384,7 @@ public class TreatmentImpl extends ElementImpl implements Treatment {
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 		case Execution_metamodelPackage.TREATMENT__PRESCRIBEDEXAM:
-			return prescribedexam != null;
+			return prescribedexam != null && !prescribedexam.isEmpty();
 		case Execution_metamodelPackage.TREATMENT__PRESCRIBEDPROCEDURE:
 			return prescribedprocedure != null && !prescribedprocedure.isEmpty();
 		case Execution_metamodelPackage.TREATMENT__PRESCRIBEDINTERNMENT:

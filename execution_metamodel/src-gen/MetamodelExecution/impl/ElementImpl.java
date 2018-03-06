@@ -41,12 +41,11 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *   <li>{@link MetamodelExecution.impl.ElementImpl#getCreatedById <em>Created By Id</em>}</li>
  *   <li>{@link MetamodelExecution.impl.ElementImpl#getExecutedById <em>Executed By Id</em>}</li>
  *   <li>{@link MetamodelExecution.impl.ElementImpl#getIdStep <em>Id Step</em>}</li>
- *   <li>{@link MetamodelExecution.impl.ElementImpl#getIdPathway <em>Id Pathway</em>}</li>
- *   <li>{@link MetamodelExecution.impl.ElementImpl#getIdExecutedPathway <em>Id Executed Pathway</em>}</li>
  *   <li>{@link MetamodelExecution.impl.ElementImpl#getJustification <em>Justification</em>}</li>
  *   <li>{@link MetamodelExecution.impl.ElementImpl#getStep <em>Step</em>}</li>
  *   <li>{@link MetamodelExecution.impl.ElementImpl#getCreator <em>Creator</em>}</li>
  *   <li>{@link MetamodelExecution.impl.ElementImpl#getExecutor <em>Executor</em>}</li>
+ *   <li>{@link MetamodelExecution.impl.ElementImpl#getName <em>Name</em>}</li>
  * </ul>
  *
  * @generated
@@ -313,46 +312,6 @@ public abstract class ElementImpl extends MinimalEObjectImpl.Container implement
 	protected int idStep = ID_STEP_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getIdPathway() <em>Id Pathway</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getIdPathway()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final int ID_PATHWAY_EDEFAULT = 0;
-
-	/**
-	 * The cached value of the '{@link #getIdPathway() <em>Id Pathway</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getIdPathway()
-	 * @generated
-	 * @ordered
-	 */
-	protected int idPathway = ID_PATHWAY_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getIdExecutedPathway() <em>Id Executed Pathway</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getIdExecutedPathway()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final int ID_EXECUTED_PATHWAY_EDEFAULT = 0;
-
-	/**
-	 * The cached value of the '{@link #getIdExecutedPathway() <em>Id Executed Pathway</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getIdExecutedPathway()
-	 * @generated
-	 * @ordered
-	 */
-	protected int idExecutedPathway = ID_EXECUTED_PATHWAY_EDEFAULT;
-
-	/**
 	 * The cached value of the '{@link #getJustification() <em>Justification</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -391,6 +350,26 @@ public abstract class ElementImpl extends MinimalEObjectImpl.Container implement
 	 * @ordered
 	 */
 	protected Executor executor;
+
+	/**
+	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getName()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String NAME_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getName()
+	 * @generated
+	 * @ordered
+	 */
+	protected String name = NAME_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -701,50 +680,6 @@ public abstract class ElementImpl extends MinimalEObjectImpl.Container implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public int getIdPathway() {
-		return idPathway;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setIdPathway(int newIdPathway) {
-		int oldIdPathway = idPathway;
-		idPathway = newIdPathway;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.ELEMENT__ID_PATHWAY,
-					oldIdPathway, idPathway));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public int getIdExecutedPathway() {
-		return idExecutedPathway;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setIdExecutedPathway(int newIdExecutedPathway) {
-		int oldIdExecutedPathway = idExecutedPathway;
-		idExecutedPathway = newIdExecutedPathway;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET,
-					Execution_metamodelPackage.ELEMENT__ID_EXECUTED_PATHWAY, oldIdExecutedPathway, idExecutedPathway));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public Justification getJustification() {
 		return justification;
 	}
@@ -945,6 +880,28 @@ public abstract class ElementImpl extends MinimalEObjectImpl.Container implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public String getName() {
+		return name;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setName(String newName) {
+		String oldName = name;
+		name = newName;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.ELEMENT__NAME, oldName,
+					name));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -994,10 +951,6 @@ public abstract class ElementImpl extends MinimalEObjectImpl.Container implement
 			return getExecutedById();
 		case Execution_metamodelPackage.ELEMENT__ID_STEP:
 			return getIdStep();
-		case Execution_metamodelPackage.ELEMENT__ID_PATHWAY:
-			return getIdPathway();
-		case Execution_metamodelPackage.ELEMENT__ID_EXECUTED_PATHWAY:
-			return getIdExecutedPathway();
 		case Execution_metamodelPackage.ELEMENT__JUSTIFICATION:
 			return getJustification();
 		case Execution_metamodelPackage.ELEMENT__STEP:
@@ -1006,6 +959,8 @@ public abstract class ElementImpl extends MinimalEObjectImpl.Container implement
 			return getCreator();
 		case Execution_metamodelPackage.ELEMENT__EXECUTOR:
 			return getExecutor();
+		case Execution_metamodelPackage.ELEMENT__NAME:
+			return getName();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -1057,12 +1012,6 @@ public abstract class ElementImpl extends MinimalEObjectImpl.Container implement
 		case Execution_metamodelPackage.ELEMENT__ID_STEP:
 			setIdStep((Integer) newValue);
 			return;
-		case Execution_metamodelPackage.ELEMENT__ID_PATHWAY:
-			setIdPathway((Integer) newValue);
-			return;
-		case Execution_metamodelPackage.ELEMENT__ID_EXECUTED_PATHWAY:
-			setIdExecutedPathway((Integer) newValue);
-			return;
 		case Execution_metamodelPackage.ELEMENT__JUSTIFICATION:
 			setJustification((Justification) newValue);
 			return;
@@ -1074,6 +1023,9 @@ public abstract class ElementImpl extends MinimalEObjectImpl.Container implement
 			return;
 		case Execution_metamodelPackage.ELEMENT__EXECUTOR:
 			setExecutor((Executor) newValue);
+			return;
+		case Execution_metamodelPackage.ELEMENT__NAME:
+			setName((String) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -1126,12 +1078,6 @@ public abstract class ElementImpl extends MinimalEObjectImpl.Container implement
 		case Execution_metamodelPackage.ELEMENT__ID_STEP:
 			setIdStep(ID_STEP_EDEFAULT);
 			return;
-		case Execution_metamodelPackage.ELEMENT__ID_PATHWAY:
-			setIdPathway(ID_PATHWAY_EDEFAULT);
-			return;
-		case Execution_metamodelPackage.ELEMENT__ID_EXECUTED_PATHWAY:
-			setIdExecutedPathway(ID_EXECUTED_PATHWAY_EDEFAULT);
-			return;
 		case Execution_metamodelPackage.ELEMENT__JUSTIFICATION:
 			setJustification((Justification) null);
 			return;
@@ -1143,6 +1089,9 @@ public abstract class ElementImpl extends MinimalEObjectImpl.Container implement
 			return;
 		case Execution_metamodelPackage.ELEMENT__EXECUTOR:
 			setExecutor((Executor) null);
+			return;
+		case Execution_metamodelPackage.ELEMENT__NAME:
+			setName(NAME_EDEFAULT);
 			return;
 		}
 		super.eUnset(featureID);
@@ -1184,10 +1133,6 @@ public abstract class ElementImpl extends MinimalEObjectImpl.Container implement
 			return executedById != EXECUTED_BY_ID_EDEFAULT;
 		case Execution_metamodelPackage.ELEMENT__ID_STEP:
 			return idStep != ID_STEP_EDEFAULT;
-		case Execution_metamodelPackage.ELEMENT__ID_PATHWAY:
-			return idPathway != ID_PATHWAY_EDEFAULT;
-		case Execution_metamodelPackage.ELEMENT__ID_EXECUTED_PATHWAY:
-			return idExecutedPathway != ID_EXECUTED_PATHWAY_EDEFAULT;
 		case Execution_metamodelPackage.ELEMENT__JUSTIFICATION:
 			return justification != null;
 		case Execution_metamodelPackage.ELEMENT__STEP:
@@ -1196,6 +1141,8 @@ public abstract class ElementImpl extends MinimalEObjectImpl.Container implement
 			return creator != null;
 		case Execution_metamodelPackage.ELEMENT__EXECUTOR:
 			return executor != null;
+		case Execution_metamodelPackage.ELEMENT__NAME:
+			return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -1237,10 +1184,8 @@ public abstract class ElementImpl extends MinimalEObjectImpl.Container implement
 		result.append(executedById);
 		result.append(", idStep: ");
 		result.append(idStep);
-		result.append(", idPathway: ");
-		result.append(idPathway);
-		result.append(", idExecutedPathway: ");
-		result.append(idExecutedPathway);
+		result.append(", name: ");
+		result.append(name);
 		result.append(')');
 		return result.toString();
 	}

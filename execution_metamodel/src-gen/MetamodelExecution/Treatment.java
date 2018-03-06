@@ -29,30 +29,20 @@ import org.eclipse.emf.common.util.EList;
  */
 public interface Treatment extends Element {
 	/**
-	 * Returns the value of the '<em><b>Prescribedexam</b></em>' containment reference.
+	 * Returns the value of the '<em><b>Prescribedexam</b></em>' containment reference list.
+	 * The list contents are of type {@link MetamodelExecution.PrescribedExamination}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Prescribedexam</em>' containment reference isn't clear,
+	 * If the meaning of the '<em>Prescribedexam</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Prescribedexam</em>' containment reference.
-	 * @see #setPrescribedexam(PrescribedExamination)
+	 * @return the value of the '<em>Prescribedexam</em>' containment reference list.
 	 * @see MetamodelExecution.Execution_metamodelPackage#getTreatment_Prescribedexam()
 	 * @model containment="true"
 	 * @generated
 	 */
-	PrescribedExamination getPrescribedexam();
-
-	/**
-	 * Sets the value of the '{@link MetamodelExecution.Treatment#getPrescribedexam <em>Prescribedexam</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Prescribedexam</em>' containment reference.
-	 * @see #getPrescribedexam()
-	 * @generated
-	 */
-	void setPrescribedexam(PrescribedExamination value);
+	EList<PrescribedExamination> getPrescribedexam();
 
 	/**
 	 * Returns the value of the '<em><b>Prescribedprocedure</b></em>' containment reference list.

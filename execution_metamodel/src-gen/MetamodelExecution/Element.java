@@ -28,12 +28,11 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link MetamodelExecution.Element#getCreatedById <em>Created By Id</em>}</li>
  *   <li>{@link MetamodelExecution.Element#getExecutedById <em>Executed By Id</em>}</li>
  *   <li>{@link MetamodelExecution.Element#getIdStep <em>Id Step</em>}</li>
- *   <li>{@link MetamodelExecution.Element#getIdPathway <em>Id Pathway</em>}</li>
- *   <li>{@link MetamodelExecution.Element#getIdExecutedPathway <em>Id Executed Pathway</em>}</li>
  *   <li>{@link MetamodelExecution.Element#getJustification <em>Justification</em>}</li>
  *   <li>{@link MetamodelExecution.Element#getStep <em>Step</em>}</li>
  *   <li>{@link MetamodelExecution.Element#getCreator <em>Creator</em>}</li>
  *   <li>{@link MetamodelExecution.Element#getExecutor <em>Executor</em>}</li>
+ *   <li>{@link MetamodelExecution.Element#getName <em>Name</em>}</li>
  * </ul>
  *
  * @see MetamodelExecution.Execution_metamodelPackage#getElement()
@@ -383,58 +382,6 @@ public interface Element extends EObject {
 	void setIdStep(int value);
 
 	/**
-	 * Returns the value of the '<em><b>Id Pathway</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Id Pathway</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Id Pathway</em>' attribute.
-	 * @see #setIdPathway(int)
-	 * @see MetamodelExecution.Execution_metamodelPackage#getElement_IdPathway()
-	 * @model
-	 * @generated
-	 */
-	int getIdPathway();
-
-	/**
-	 * Sets the value of the '{@link MetamodelExecution.Element#getIdPathway <em>Id Pathway</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Id Pathway</em>' attribute.
-	 * @see #getIdPathway()
-	 * @generated
-	 */
-	void setIdPathway(int value);
-
-	/**
-	 * Returns the value of the '<em><b>Id Executed Pathway</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Id Executed Pathway</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Id Executed Pathway</em>' attribute.
-	 * @see #setIdExecutedPathway(int)
-	 * @see MetamodelExecution.Execution_metamodelPackage#getElement_IdExecutedPathway()
-	 * @model
-	 * @generated
-	 */
-	int getIdExecutedPathway();
-
-	/**
-	 * Sets the value of the '{@link MetamodelExecution.Element#getIdExecutedPathway <em>Id Executed Pathway</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Id Executed Pathway</em>' attribute.
-	 * @see #getIdExecutedPathway()
-	 * @generated
-	 */
-	void setIdExecutedPathway(int value);
-
-	/**
 	 * Returns the value of the '<em><b>Justification</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
@@ -537,5 +484,31 @@ public interface Element extends EObject {
 	 * @generated
 	 */
 	void setExecutor(Executor value);
+
+	/**
+	 * Returns the value of the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Name</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Name</em>' attribute.
+	 * @see #setName(String)
+	 * @see MetamodelExecution.Execution_metamodelPackage#getElement_Name()
+	 * @model
+	 * @generated
+	 */
+	String getName();
+
+	/**
+	 * Sets the value of the '{@link MetamodelExecution.Element#getName <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Name</em>' attribute.
+	 * @see #getName()
+	 * @generated
+	 */
+	void setName(String value);
 
 } // Element

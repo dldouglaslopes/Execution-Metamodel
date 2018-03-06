@@ -23,8 +23,8 @@
         eType="#//PrescriptionInfo" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Treatment" eSuperTypes="#//Element">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="prescribedexam" eType="#//PrescribedExamination"
-        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="prescribedexam" upperBound="-1"
+        eType="#//PrescribedExamination" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="prescribedprocedure" upperBound="-1"
         eType="#//PrescribedProcedure" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="prescribedinternment" upperBound="-1"
@@ -131,7 +131,7 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDoubleObject"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="YesOrNo" eSuperTypes="#//Value">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBigDecimal"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBooleanObject"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Step">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
@@ -164,8 +164,6 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="createdById" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="executedById" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="idStep" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="idPathway" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="idExecutedPathway" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="justification" eType="#//Justification"
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="step" lowerBound="1" eType="#//Step"
@@ -174,6 +172,7 @@
         eType="#//Creator" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="executor" lowerBound="1"
         eType="#//Executor" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Result"/>
   <eClassifiers xsi:type="ecore:EClass" name="Quantity"/>
@@ -208,5 +207,6 @@
         eType="#//Responsible" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="lastprofessional" lowerBound="1"
         eType="#//LastProfessional" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
 </ecore:EPackage>

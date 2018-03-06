@@ -1487,26 +1487,8 @@ public class Execution_metamodelPackageImpl extends EPackageImpl implements Exec
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getElement_IdPathway() {
-		return (EAttribute) elementEClass.getEStructuralFeatures().get(13);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getElement_IdExecutedPathway() {
-		return (EAttribute) elementEClass.getEStructuralFeatures().get(14);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EReference getElement_Justification() {
-		return (EReference) elementEClass.getEStructuralFeatures().get(15);
+		return (EReference) elementEClass.getEStructuralFeatures().get(13);
 	}
 
 	/**
@@ -1515,7 +1497,7 @@ public class Execution_metamodelPackageImpl extends EPackageImpl implements Exec
 	 * @generated
 	 */
 	public EReference getElement_Step() {
-		return (EReference) elementEClass.getEStructuralFeatures().get(16);
+		return (EReference) elementEClass.getEStructuralFeatures().get(14);
 	}
 
 	/**
@@ -1524,7 +1506,7 @@ public class Execution_metamodelPackageImpl extends EPackageImpl implements Exec
 	 * @generated
 	 */
 	public EReference getElement_Creator() {
-		return (EReference) elementEClass.getEStructuralFeatures().get(17);
+		return (EReference) elementEClass.getEStructuralFeatures().get(15);
 	}
 
 	/**
@@ -1533,7 +1515,16 @@ public class Execution_metamodelPackageImpl extends EPackageImpl implements Exec
 	 * @generated
 	 */
 	public EReference getElement_Executor() {
-		return (EReference) elementEClass.getEStructuralFeatures().get(18);
+		return (EReference) elementEClass.getEStructuralFeatures().get(16);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getElement_Name() {
+		return (EAttribute) elementEClass.getEStructuralFeatures().get(17);
 	}
 
 	/**
@@ -1775,6 +1766,15 @@ public class Execution_metamodelPackageImpl extends EPackageImpl implements Exec
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getExecution_Name() {
+		return (EAttribute) executionEClass.getEStructuralFeatures().get(15);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public Execution_metamodelFactory getExecution_metamodelFactory() {
 		return (Execution_metamodelFactory) getEFactoryInstance();
 	}
@@ -1949,12 +1949,11 @@ public class Execution_metamodelPackageImpl extends EPackageImpl implements Exec
 		createEAttribute(elementEClass, ELEMENT__CREATED_BY_ID);
 		createEAttribute(elementEClass, ELEMENT__EXECUTED_BY_ID);
 		createEAttribute(elementEClass, ELEMENT__ID_STEP);
-		createEAttribute(elementEClass, ELEMENT__ID_PATHWAY);
-		createEAttribute(elementEClass, ELEMENT__ID_EXECUTED_PATHWAY);
 		createEReference(elementEClass, ELEMENT__JUSTIFICATION);
 		createEReference(elementEClass, ELEMENT__STEP);
 		createEReference(elementEClass, ELEMENT__CREATOR);
 		createEReference(elementEClass, ELEMENT__EXECUTOR);
+		createEAttribute(elementEClass, ELEMENT__NAME);
 
 		resultEClass = createEClass(RESULT);
 
@@ -1988,6 +1987,7 @@ public class Execution_metamodelPackageImpl extends EPackageImpl implements Exec
 		createEReference(executionEClass, EXECUTION__PATHWAY);
 		createEReference(executionEClass, EXECUTION__RESPONSIBLE);
 		createEReference(executionEClass, EXECUTION__LASTPROFESSIONAL);
+		createEAttribute(executionEClass, EXECUTION__NAME);
 	}
 
 	/**
@@ -2076,7 +2076,7 @@ public class Execution_metamodelPackageImpl extends EPackageImpl implements Exec
 		initEClass(treatmentEClass, Treatment.class, "Treatment", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getTreatment_Prescribedexam(), this.getPrescribedExamination(), null, "prescribedexam", null, 0,
-				1, Treatment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
+				-1, Treatment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getTreatment_Prescribedprocedure(), this.getPrescribedProcedure(), null, "prescribedprocedure",
 				null, 0, -1, Treatment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
@@ -2279,7 +2279,7 @@ public class Execution_metamodelPackageImpl extends EPackageImpl implements Exec
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(yesOrNoEClass, YesOrNo.class, "YesOrNo", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getYesOrNo_Value(), ecorePackage.getEBigDecimal(), "value", null, 0, 1, YesOrNo.class,
+		initEAttribute(getYesOrNo_Value(), ecorePackage.getEBooleanObject(), "value", null, 0, 1, YesOrNo.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(stepEClass, Step.class, "Step", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -2338,11 +2338,6 @@ public class Execution_metamodelPackageImpl extends EPackageImpl implements Exec
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getElement_IdStep(), ecorePackage.getEInt(), "idStep", null, 0, 1, Element.class, !IS_TRANSIENT,
 				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getElement_IdPathway(), ecorePackage.getEInt(), "idPathway", null, 0, 1, Element.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getElement_IdExecutedPathway(), ecorePackage.getEInt(), "idExecutedPathway", null, 0, 1,
-				Element.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
-				!IS_DERIVED, IS_ORDERED);
 		initEReference(getElement_Justification(), this.getJustification(), null, "justification", null, 0, 1,
 				Element.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -2355,6 +2350,8 @@ public class Execution_metamodelPackageImpl extends EPackageImpl implements Exec
 		initEReference(getElement_Executor(), this.getExecutor(), null, "executor", null, 1, 1, Element.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getElement_Name(), ecorePackage.getEString(), "name", null, 0, 1, Element.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(resultEClass, Result.class, "Result", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -2426,6 +2423,8 @@ public class Execution_metamodelPackageImpl extends EPackageImpl implements Exec
 		initEReference(getExecution_Lastprofessional(), this.getLastProfessional(), null, "lastprofessional", null, 1,
 				1, Execution.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getExecution_Name(), ecorePackage.getEString(), "name", null, 0, 1, Execution.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Create resource
 		createResource(eNS_URI);

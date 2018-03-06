@@ -2,8 +2,6 @@
  */
 package MetamodelExecution;
 
-import java.math.BigDecimal;
-
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Yes Or No</b></em>'.
@@ -30,12 +28,12 @@ public interface YesOrNo extends Value {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Value</em>' attribute.
-	 * @see #setValue(BigDecimal)
+	 * @see #setValue(Boolean)
 	 * @see MetamodelExecution.Execution_metamodelPackage#getYesOrNo_Value()
 	 * @model
 	 * @generated
 	 */
-	BigDecimal getValue();
+	Boolean getValue();
 
 	/**
 	 * Sets the value of the '{@link MetamodelExecution.YesOrNo#getValue <em>Value</em>}' attribute.
@@ -45,6 +43,6 @@ public interface YesOrNo extends Value {
 	 * @see #getValue()
 	 * @generated
 	 */
-	void setValue(BigDecimal value);
+	void setValue(Boolean value);
 
 } // YesOrNo
