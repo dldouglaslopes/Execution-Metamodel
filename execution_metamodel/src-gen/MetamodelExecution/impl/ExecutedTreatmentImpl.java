@@ -2,12 +2,12 @@
  */
 package MetamodelExecution.impl;
 
+import MetamodelExecution.ExecutedTreatment;
 import MetamodelExecution.Execution_metamodelPackage;
 import MetamodelExecution.PrescribedExamination;
 import MetamodelExecution.PrescribedInternment;
 import MetamodelExecution.PrescribedMedication;
 import MetamodelExecution.PrescribedProcedure;
-import MetamodelExecution.Treatment;
 
 import java.util.Collection;
 
@@ -24,25 +24,25 @@ import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Treatment</b></em>'.
+ * An implementation of the model object '<em><b>Executed Treatment</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link MetamodelExecution.impl.TreatmentImpl#getPrescribedexam <em>Prescribedexam</em>}</li>
- *   <li>{@link MetamodelExecution.impl.TreatmentImpl#getPrescribedprocedure <em>Prescribedprocedure</em>}</li>
- *   <li>{@link MetamodelExecution.impl.TreatmentImpl#getPrescribedinternment <em>Prescribedinternment</em>}</li>
- *   <li>{@link MetamodelExecution.impl.TreatmentImpl#getPrescribedmedication <em>Prescribedmedication</em>}</li>
- *   <li>{@link MetamodelExecution.impl.TreatmentImpl#getIdsPrescribedExamination <em>Ids Prescribed Examination</em>}</li>
- *   <li>{@link MetamodelExecution.impl.TreatmentImpl#getIdsPrescribedProcedure <em>Ids Prescribed Procedure</em>}</li>
- *   <li>{@link MetamodelExecution.impl.TreatmentImpl#getIdsPrescribedInternment <em>Ids Prescribed Internment</em>}</li>
- *   <li>{@link MetamodelExecution.impl.TreatmentImpl#getIdsPrecribedMedication <em>Ids Precribed Medication</em>}</li>
+ *   <li>{@link MetamodelExecution.impl.ExecutedTreatmentImpl#getPrescribedexam <em>Prescribedexam</em>}</li>
+ *   <li>{@link MetamodelExecution.impl.ExecutedTreatmentImpl#getPrescribedprocedure <em>Prescribedprocedure</em>}</li>
+ *   <li>{@link MetamodelExecution.impl.ExecutedTreatmentImpl#getPrescribedinternment <em>Prescribedinternment</em>}</li>
+ *   <li>{@link MetamodelExecution.impl.ExecutedTreatmentImpl#getPrescribedmedication <em>Prescribedmedication</em>}</li>
+ *   <li>{@link MetamodelExecution.impl.ExecutedTreatmentImpl#getIdsPrescribedExamination <em>Ids Prescribed Examination</em>}</li>
+ *   <li>{@link MetamodelExecution.impl.ExecutedTreatmentImpl#getIdsPrescribedProcedure <em>Ids Prescribed Procedure</em>}</li>
+ *   <li>{@link MetamodelExecution.impl.ExecutedTreatmentImpl#getIdsPrescribedInternment <em>Ids Prescribed Internment</em>}</li>
+ *   <li>{@link MetamodelExecution.impl.ExecutedTreatmentImpl#getIdsPrecribedMedication <em>Ids Precribed Medication</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class TreatmentImpl extends ElementImpl implements Treatment {
+public class ExecutedTreatmentImpl extends ExecutedElementImpl implements ExecutedTreatment {
 	/**
 	 * The cached value of the '{@link #getPrescribedexam() <em>Prescribedexam</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
@@ -128,7 +128,7 @@ public class TreatmentImpl extends ElementImpl implements Treatment {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected TreatmentImpl() {
+	protected ExecutedTreatmentImpl() {
 		super();
 	}
 
@@ -139,7 +139,7 @@ public class TreatmentImpl extends ElementImpl implements Treatment {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Execution_metamodelPackage.Literals.TREATMENT;
+		return Execution_metamodelPackage.Literals.EXECUTED_TREATMENT;
 	}
 
 	/**
@@ -150,7 +150,7 @@ public class TreatmentImpl extends ElementImpl implements Treatment {
 	public EList<PrescribedExamination> getPrescribedexam() {
 		if (prescribedexam == null) {
 			prescribedexam = new EObjectContainmentEList<PrescribedExamination>(PrescribedExamination.class, this,
-					Execution_metamodelPackage.TREATMENT__PRESCRIBEDEXAM);
+					Execution_metamodelPackage.EXECUTED_TREATMENT__PRESCRIBEDEXAM);
 		}
 		return prescribedexam;
 	}
@@ -163,7 +163,7 @@ public class TreatmentImpl extends ElementImpl implements Treatment {
 	public EList<PrescribedProcedure> getPrescribedprocedure() {
 		if (prescribedprocedure == null) {
 			prescribedprocedure = new EObjectContainmentEList<PrescribedProcedure>(PrescribedProcedure.class, this,
-					Execution_metamodelPackage.TREATMENT__PRESCRIBEDPROCEDURE);
+					Execution_metamodelPackage.EXECUTED_TREATMENT__PRESCRIBEDPROCEDURE);
 		}
 		return prescribedprocedure;
 	}
@@ -176,7 +176,7 @@ public class TreatmentImpl extends ElementImpl implements Treatment {
 	public EList<PrescribedInternment> getPrescribedinternment() {
 		if (prescribedinternment == null) {
 			prescribedinternment = new EObjectContainmentEList<PrescribedInternment>(PrescribedInternment.class, this,
-					Execution_metamodelPackage.TREATMENT__PRESCRIBEDINTERNMENT);
+					Execution_metamodelPackage.EXECUTED_TREATMENT__PRESCRIBEDINTERNMENT);
 		}
 		return prescribedinternment;
 	}
@@ -189,7 +189,7 @@ public class TreatmentImpl extends ElementImpl implements Treatment {
 	public EList<PrescribedMedication> getPrescribedmedication() {
 		if (prescribedmedication == null) {
 			prescribedmedication = new EObjectContainmentEList<PrescribedMedication>(PrescribedMedication.class, this,
-					Execution_metamodelPackage.TREATMENT__PRESCRIBEDMEDICATION);
+					Execution_metamodelPackage.EXECUTED_TREATMENT__PRESCRIBEDMEDICATION);
 		}
 		return prescribedmedication;
 	}
@@ -202,7 +202,7 @@ public class TreatmentImpl extends ElementImpl implements Treatment {
 	public EList<Integer> getIdsPrescribedExamination() {
 		if (idsPrescribedExamination == null) {
 			idsPrescribedExamination = new EDataTypeUniqueEList<Integer>(Integer.class, this,
-					Execution_metamodelPackage.TREATMENT__IDS_PRESCRIBED_EXAMINATION);
+					Execution_metamodelPackage.EXECUTED_TREATMENT__IDS_PRESCRIBED_EXAMINATION);
 		}
 		return idsPrescribedExamination;
 	}
@@ -215,7 +215,7 @@ public class TreatmentImpl extends ElementImpl implements Treatment {
 	public EList<Integer> getIdsPrescribedProcedure() {
 		if (idsPrescribedProcedure == null) {
 			idsPrescribedProcedure = new EDataTypeUniqueEList<Integer>(Integer.class, this,
-					Execution_metamodelPackage.TREATMENT__IDS_PRESCRIBED_PROCEDURE);
+					Execution_metamodelPackage.EXECUTED_TREATMENT__IDS_PRESCRIBED_PROCEDURE);
 		}
 		return idsPrescribedProcedure;
 	}
@@ -228,7 +228,7 @@ public class TreatmentImpl extends ElementImpl implements Treatment {
 	public EList<Integer> getIdsPrescribedInternment() {
 		if (idsPrescribedInternment == null) {
 			idsPrescribedInternment = new EDataTypeUniqueEList<Integer>(Integer.class, this,
-					Execution_metamodelPackage.TREATMENT__IDS_PRESCRIBED_INTERNMENT);
+					Execution_metamodelPackage.EXECUTED_TREATMENT__IDS_PRESCRIBED_INTERNMENT);
 		}
 		return idsPrescribedInternment;
 	}
@@ -241,7 +241,7 @@ public class TreatmentImpl extends ElementImpl implements Treatment {
 	public EList<Integer> getIdsPrecribedMedication() {
 		if (idsPrecribedMedication == null) {
 			idsPrecribedMedication = new EDataTypeUniqueEList<Integer>(Integer.class, this,
-					Execution_metamodelPackage.TREATMENT__IDS_PRECRIBED_MEDICATION);
+					Execution_metamodelPackage.EXECUTED_TREATMENT__IDS_PRECRIBED_MEDICATION);
 		}
 		return idsPrecribedMedication;
 	}
@@ -254,13 +254,13 @@ public class TreatmentImpl extends ElementImpl implements Treatment {
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-		case Execution_metamodelPackage.TREATMENT__PRESCRIBEDEXAM:
+		case Execution_metamodelPackage.EXECUTED_TREATMENT__PRESCRIBEDEXAM:
 			return ((InternalEList<?>) getPrescribedexam()).basicRemove(otherEnd, msgs);
-		case Execution_metamodelPackage.TREATMENT__PRESCRIBEDPROCEDURE:
+		case Execution_metamodelPackage.EXECUTED_TREATMENT__PRESCRIBEDPROCEDURE:
 			return ((InternalEList<?>) getPrescribedprocedure()).basicRemove(otherEnd, msgs);
-		case Execution_metamodelPackage.TREATMENT__PRESCRIBEDINTERNMENT:
+		case Execution_metamodelPackage.EXECUTED_TREATMENT__PRESCRIBEDINTERNMENT:
 			return ((InternalEList<?>) getPrescribedinternment()).basicRemove(otherEnd, msgs);
-		case Execution_metamodelPackage.TREATMENT__PRESCRIBEDMEDICATION:
+		case Execution_metamodelPackage.EXECUTED_TREATMENT__PRESCRIBEDMEDICATION:
 			return ((InternalEList<?>) getPrescribedmedication()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -274,21 +274,21 @@ public class TreatmentImpl extends ElementImpl implements Treatment {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case Execution_metamodelPackage.TREATMENT__PRESCRIBEDEXAM:
+		case Execution_metamodelPackage.EXECUTED_TREATMENT__PRESCRIBEDEXAM:
 			return getPrescribedexam();
-		case Execution_metamodelPackage.TREATMENT__PRESCRIBEDPROCEDURE:
+		case Execution_metamodelPackage.EXECUTED_TREATMENT__PRESCRIBEDPROCEDURE:
 			return getPrescribedprocedure();
-		case Execution_metamodelPackage.TREATMENT__PRESCRIBEDINTERNMENT:
+		case Execution_metamodelPackage.EXECUTED_TREATMENT__PRESCRIBEDINTERNMENT:
 			return getPrescribedinternment();
-		case Execution_metamodelPackage.TREATMENT__PRESCRIBEDMEDICATION:
+		case Execution_metamodelPackage.EXECUTED_TREATMENT__PRESCRIBEDMEDICATION:
 			return getPrescribedmedication();
-		case Execution_metamodelPackage.TREATMENT__IDS_PRESCRIBED_EXAMINATION:
+		case Execution_metamodelPackage.EXECUTED_TREATMENT__IDS_PRESCRIBED_EXAMINATION:
 			return getIdsPrescribedExamination();
-		case Execution_metamodelPackage.TREATMENT__IDS_PRESCRIBED_PROCEDURE:
+		case Execution_metamodelPackage.EXECUTED_TREATMENT__IDS_PRESCRIBED_PROCEDURE:
 			return getIdsPrescribedProcedure();
-		case Execution_metamodelPackage.TREATMENT__IDS_PRESCRIBED_INTERNMENT:
+		case Execution_metamodelPackage.EXECUTED_TREATMENT__IDS_PRESCRIBED_INTERNMENT:
 			return getIdsPrescribedInternment();
-		case Execution_metamodelPackage.TREATMENT__IDS_PRECRIBED_MEDICATION:
+		case Execution_metamodelPackage.EXECUTED_TREATMENT__IDS_PRECRIBED_MEDICATION:
 			return getIdsPrecribedMedication();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -303,35 +303,35 @@ public class TreatmentImpl extends ElementImpl implements Treatment {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case Execution_metamodelPackage.TREATMENT__PRESCRIBEDEXAM:
+		case Execution_metamodelPackage.EXECUTED_TREATMENT__PRESCRIBEDEXAM:
 			getPrescribedexam().clear();
 			getPrescribedexam().addAll((Collection<? extends PrescribedExamination>) newValue);
 			return;
-		case Execution_metamodelPackage.TREATMENT__PRESCRIBEDPROCEDURE:
+		case Execution_metamodelPackage.EXECUTED_TREATMENT__PRESCRIBEDPROCEDURE:
 			getPrescribedprocedure().clear();
 			getPrescribedprocedure().addAll((Collection<? extends PrescribedProcedure>) newValue);
 			return;
-		case Execution_metamodelPackage.TREATMENT__PRESCRIBEDINTERNMENT:
+		case Execution_metamodelPackage.EXECUTED_TREATMENT__PRESCRIBEDINTERNMENT:
 			getPrescribedinternment().clear();
 			getPrescribedinternment().addAll((Collection<? extends PrescribedInternment>) newValue);
 			return;
-		case Execution_metamodelPackage.TREATMENT__PRESCRIBEDMEDICATION:
+		case Execution_metamodelPackage.EXECUTED_TREATMENT__PRESCRIBEDMEDICATION:
 			getPrescribedmedication().clear();
 			getPrescribedmedication().addAll((Collection<? extends PrescribedMedication>) newValue);
 			return;
-		case Execution_metamodelPackage.TREATMENT__IDS_PRESCRIBED_EXAMINATION:
+		case Execution_metamodelPackage.EXECUTED_TREATMENT__IDS_PRESCRIBED_EXAMINATION:
 			getIdsPrescribedExamination().clear();
 			getIdsPrescribedExamination().addAll((Collection<? extends Integer>) newValue);
 			return;
-		case Execution_metamodelPackage.TREATMENT__IDS_PRESCRIBED_PROCEDURE:
+		case Execution_metamodelPackage.EXECUTED_TREATMENT__IDS_PRESCRIBED_PROCEDURE:
 			getIdsPrescribedProcedure().clear();
 			getIdsPrescribedProcedure().addAll((Collection<? extends Integer>) newValue);
 			return;
-		case Execution_metamodelPackage.TREATMENT__IDS_PRESCRIBED_INTERNMENT:
+		case Execution_metamodelPackage.EXECUTED_TREATMENT__IDS_PRESCRIBED_INTERNMENT:
 			getIdsPrescribedInternment().clear();
 			getIdsPrescribedInternment().addAll((Collection<? extends Integer>) newValue);
 			return;
-		case Execution_metamodelPackage.TREATMENT__IDS_PRECRIBED_MEDICATION:
+		case Execution_metamodelPackage.EXECUTED_TREATMENT__IDS_PRECRIBED_MEDICATION:
 			getIdsPrecribedMedication().clear();
 			getIdsPrecribedMedication().addAll((Collection<? extends Integer>) newValue);
 			return;
@@ -347,28 +347,28 @@ public class TreatmentImpl extends ElementImpl implements Treatment {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case Execution_metamodelPackage.TREATMENT__PRESCRIBEDEXAM:
+		case Execution_metamodelPackage.EXECUTED_TREATMENT__PRESCRIBEDEXAM:
 			getPrescribedexam().clear();
 			return;
-		case Execution_metamodelPackage.TREATMENT__PRESCRIBEDPROCEDURE:
+		case Execution_metamodelPackage.EXECUTED_TREATMENT__PRESCRIBEDPROCEDURE:
 			getPrescribedprocedure().clear();
 			return;
-		case Execution_metamodelPackage.TREATMENT__PRESCRIBEDINTERNMENT:
+		case Execution_metamodelPackage.EXECUTED_TREATMENT__PRESCRIBEDINTERNMENT:
 			getPrescribedinternment().clear();
 			return;
-		case Execution_metamodelPackage.TREATMENT__PRESCRIBEDMEDICATION:
+		case Execution_metamodelPackage.EXECUTED_TREATMENT__PRESCRIBEDMEDICATION:
 			getPrescribedmedication().clear();
 			return;
-		case Execution_metamodelPackage.TREATMENT__IDS_PRESCRIBED_EXAMINATION:
+		case Execution_metamodelPackage.EXECUTED_TREATMENT__IDS_PRESCRIBED_EXAMINATION:
 			getIdsPrescribedExamination().clear();
 			return;
-		case Execution_metamodelPackage.TREATMENT__IDS_PRESCRIBED_PROCEDURE:
+		case Execution_metamodelPackage.EXECUTED_TREATMENT__IDS_PRESCRIBED_PROCEDURE:
 			getIdsPrescribedProcedure().clear();
 			return;
-		case Execution_metamodelPackage.TREATMENT__IDS_PRESCRIBED_INTERNMENT:
+		case Execution_metamodelPackage.EXECUTED_TREATMENT__IDS_PRESCRIBED_INTERNMENT:
 			getIdsPrescribedInternment().clear();
 			return;
-		case Execution_metamodelPackage.TREATMENT__IDS_PRECRIBED_MEDICATION:
+		case Execution_metamodelPackage.EXECUTED_TREATMENT__IDS_PRECRIBED_MEDICATION:
 			getIdsPrecribedMedication().clear();
 			return;
 		}
@@ -383,21 +383,21 @@ public class TreatmentImpl extends ElementImpl implements Treatment {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case Execution_metamodelPackage.TREATMENT__PRESCRIBEDEXAM:
+		case Execution_metamodelPackage.EXECUTED_TREATMENT__PRESCRIBEDEXAM:
 			return prescribedexam != null && !prescribedexam.isEmpty();
-		case Execution_metamodelPackage.TREATMENT__PRESCRIBEDPROCEDURE:
+		case Execution_metamodelPackage.EXECUTED_TREATMENT__PRESCRIBEDPROCEDURE:
 			return prescribedprocedure != null && !prescribedprocedure.isEmpty();
-		case Execution_metamodelPackage.TREATMENT__PRESCRIBEDINTERNMENT:
+		case Execution_metamodelPackage.EXECUTED_TREATMENT__PRESCRIBEDINTERNMENT:
 			return prescribedinternment != null && !prescribedinternment.isEmpty();
-		case Execution_metamodelPackage.TREATMENT__PRESCRIBEDMEDICATION:
+		case Execution_metamodelPackage.EXECUTED_TREATMENT__PRESCRIBEDMEDICATION:
 			return prescribedmedication != null && !prescribedmedication.isEmpty();
-		case Execution_metamodelPackage.TREATMENT__IDS_PRESCRIBED_EXAMINATION:
+		case Execution_metamodelPackage.EXECUTED_TREATMENT__IDS_PRESCRIBED_EXAMINATION:
 			return idsPrescribedExamination != null && !idsPrescribedExamination.isEmpty();
-		case Execution_metamodelPackage.TREATMENT__IDS_PRESCRIBED_PROCEDURE:
+		case Execution_metamodelPackage.EXECUTED_TREATMENT__IDS_PRESCRIBED_PROCEDURE:
 			return idsPrescribedProcedure != null && !idsPrescribedProcedure.isEmpty();
-		case Execution_metamodelPackage.TREATMENT__IDS_PRESCRIBED_INTERNMENT:
+		case Execution_metamodelPackage.EXECUTED_TREATMENT__IDS_PRESCRIBED_INTERNMENT:
 			return idsPrescribedInternment != null && !idsPrescribedInternment.isEmpty();
-		case Execution_metamodelPackage.TREATMENT__IDS_PRECRIBED_MEDICATION:
+		case Execution_metamodelPackage.EXECUTED_TREATMENT__IDS_PRECRIBED_MEDICATION:
 			return idsPrecribedMedication != null && !idsPrecribedMedication.isEmpty();
 		}
 		return super.eIsSet(featureID);
@@ -426,4 +426,4 @@ public class TreatmentImpl extends ElementImpl implements Treatment {
 		return result.toString();
 	}
 
-} //TreatmentImpl
+} //ExecutedTreatmentImpl

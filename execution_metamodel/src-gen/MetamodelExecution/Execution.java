@@ -42,7 +42,7 @@ import org.eclipse.emf.ecore.EObject;
 public interface Execution extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Element</b></em>' containment reference list.
-	 * The list contents are of type {@link MetamodelExecution.Element}.
+	 * The list contents are of type {@link MetamodelExecution.ExecutedElement}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Element</em>' containment reference list isn't clear,
@@ -54,7 +54,7 @@ public interface Execution extends EObject {
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<Element> getElement();
+	EList<ExecutedElement> getElement();
 
 	/**
 	 * Returns the value of the '<em><b>Id</b></em>' attribute.

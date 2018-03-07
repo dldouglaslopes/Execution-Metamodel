@@ -56,18 +56,18 @@ public class Execution_metamodelFactoryImpl extends EFactoryImpl implements Exec
 	@Override
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
-		case Execution_metamodelPackage.AUXILIARY_CONDUCT:
-			return createAuxiliaryConduct();
-		case Execution_metamodelPackage.INFORMATION:
-			return createInformation();
-		case Execution_metamodelPackage.DISCHARGE:
-			return createDischarge();
-		case Execution_metamodelPackage.REFERRAL:
-			return createReferral();
-		case Execution_metamodelPackage.PRESCRIPTION:
-			return createPrescription();
-		case Execution_metamodelPackage.TREATMENT:
-			return createTreatment();
+		case Execution_metamodelPackage.EXECUTED_AUXILIARY_CONDUCT:
+			return createExecutedAuxiliaryConduct();
+		case Execution_metamodelPackage.EXECUTED_INFORMATION:
+			return createExecutedInformation();
+		case Execution_metamodelPackage.EXECUTED_DISCHARGE:
+			return createExecutedDischarge();
+		case Execution_metamodelPackage.EXECUTED_REFERRAL:
+			return createExecutedReferral();
+		case Execution_metamodelPackage.EXECUTED_PRESCRIPTION:
+			return createExecutedPrescription();
+		case Execution_metamodelPackage.EXECUTED_TREATMENT:
+			return createExecutedTreatment();
 		case Execution_metamodelPackage.EXAMINATION:
 			return createExamination();
 		case Execution_metamodelPackage.PRESCRIBED_EXAMINATION:
@@ -116,8 +116,6 @@ public class Execution_metamodelFactoryImpl extends EFactoryImpl implements Exec
 			return createPrescriptionInfo();
 		case Execution_metamodelPackage.QUESTION:
 			return createQuestion();
-		case Execution_metamodelPackage.TESTE:
-			return createteste();
 		case Execution_metamodelPackage.EXECUTION:
 			return createExecution();
 		default:
@@ -130,9 +128,9 @@ public class Execution_metamodelFactoryImpl extends EFactoryImpl implements Exec
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public AuxiliaryConduct createAuxiliaryConduct() {
-		AuxiliaryConductImpl auxiliaryConduct = new AuxiliaryConductImpl();
-		return auxiliaryConduct;
+	public ExecutedAuxiliaryConduct createExecutedAuxiliaryConduct() {
+		ExecutedAuxiliaryConductImpl executedAuxiliaryConduct = new ExecutedAuxiliaryConductImpl();
+		return executedAuxiliaryConduct;
 	}
 
 	/**
@@ -140,9 +138,9 @@ public class Execution_metamodelFactoryImpl extends EFactoryImpl implements Exec
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Information createInformation() {
-		InformationImpl information = new InformationImpl();
-		return information;
+	public ExecutedInformation createExecutedInformation() {
+		ExecutedInformationImpl executedInformation = new ExecutedInformationImpl();
+		return executedInformation;
 	}
 
 	/**
@@ -150,9 +148,9 @@ public class Execution_metamodelFactoryImpl extends EFactoryImpl implements Exec
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Discharge createDischarge() {
-		DischargeImpl discharge = new DischargeImpl();
-		return discharge;
+	public ExecutedDischarge createExecutedDischarge() {
+		ExecutedDischargeImpl executedDischarge = new ExecutedDischargeImpl();
+		return executedDischarge;
 	}
 
 	/**
@@ -160,9 +158,9 @@ public class Execution_metamodelFactoryImpl extends EFactoryImpl implements Exec
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Referral createReferral() {
-		ReferralImpl referral = new ReferralImpl();
-		return referral;
+	public ExecutedReferral createExecutedReferral() {
+		ExecutedReferralImpl executedReferral = new ExecutedReferralImpl();
+		return executedReferral;
 	}
 
 	/**
@@ -170,9 +168,9 @@ public class Execution_metamodelFactoryImpl extends EFactoryImpl implements Exec
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Prescription createPrescription() {
-		PrescriptionImpl prescription = new PrescriptionImpl();
-		return prescription;
+	public ExecutedPrescription createExecutedPrescription() {
+		ExecutedPrescriptionImpl executedPrescription = new ExecutedPrescriptionImpl();
+		return executedPrescription;
 	}
 
 	/**
@@ -180,9 +178,9 @@ public class Execution_metamodelFactoryImpl extends EFactoryImpl implements Exec
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Treatment createTreatment() {
-		TreatmentImpl treatment = new TreatmentImpl();
-		return treatment;
+	public ExecutedTreatment createExecutedTreatment() {
+		ExecutedTreatmentImpl executedTreatment = new ExecutedTreatmentImpl();
+		return executedTreatment;
 	}
 
 	/**
@@ -423,16 +421,6 @@ public class Execution_metamodelFactoryImpl extends EFactoryImpl implements Exec
 	public Question createQuestion() {
 		QuestionImpl question = new QuestionImpl();
 		return question;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public teste createteste() {
-		testeImpl teste = new testeImpl();
-		return teste;
 	}
 
 	/**

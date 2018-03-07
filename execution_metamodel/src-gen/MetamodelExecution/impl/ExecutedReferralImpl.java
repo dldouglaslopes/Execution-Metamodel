@@ -2,25 +2,25 @@
  */
 package MetamodelExecution.impl;
 
+import MetamodelExecution.ExecutedReferral;
 import MetamodelExecution.Execution_metamodelPackage;
-import MetamodelExecution.Referral;
 
 import org.eclipse.emf.ecore.EClass;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Referral</b></em>'.
+ * An implementation of the model object '<em><b>Executed Referral</b></em>'.
  * <!-- end-user-doc -->
  *
  * @generated
  */
-public class ReferralImpl extends ElementImpl implements Referral {
+public class ExecutedReferralImpl extends ExecutedElementImpl implements ExecutedReferral {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ReferralImpl() {
+	protected ExecutedReferralImpl() {
 		super();
 	}
 
@@ -31,7 +31,7 @@ public class ReferralImpl extends ElementImpl implements Referral {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Execution_metamodelPackage.Literals.REFERRAL;
+		return Execution_metamodelPackage.Literals.EXECUTED_REFERRAL;
 	}
 
-} //ReferralImpl
+} //ExecutedReferralImpl

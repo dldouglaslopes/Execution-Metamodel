@@ -2,7 +2,7 @@
  */
 package MetamodelExecution.impl;
 
-import MetamodelExecution.Element;
+import MetamodelExecution.ExecutedElement;
 import MetamodelExecution.Execution;
 import MetamodelExecution.Execution_metamodelPackage;
 import MetamodelExecution.LastProfessional;
@@ -64,7 +64,7 @@ public class ExecutionImpl extends MinimalEObjectImpl.Container implements Execu
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Element> element;
+	protected EList<ExecutedElement> element;
 
 	/**
 	 * The default value of the '{@link #getId() <em>Id</em>}' attribute.
@@ -350,9 +350,9 @@ public class ExecutionImpl extends MinimalEObjectImpl.Container implements Execu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Element> getElement() {
+	public EList<ExecutedElement> getElement() {
 		if (element == null) {
-			element = new EObjectContainmentEList<Element>(Element.class, this,
+			element = new EObjectContainmentEList<ExecutedElement>(ExecutedElement.class, this,
 					Execution_metamodelPackage.EXECUTION__ELEMENT);
 		}
 		return element;
@@ -839,7 +839,7 @@ public class ExecutionImpl extends MinimalEObjectImpl.Container implements Execu
 		switch (featureID) {
 		case Execution_metamodelPackage.EXECUTION__ELEMENT:
 			getElement().clear();
-			getElement().addAll((Collection<? extends Element>) newValue);
+			getElement().addAll((Collection<? extends ExecutedElement>) newValue);
 			return;
 		case Execution_metamodelPackage.EXECUTION__ID:
 			setId((Integer) newValue);

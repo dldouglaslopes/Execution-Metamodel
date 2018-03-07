@@ -2,27 +2,25 @@
  */
 package MetamodelExecution.impl;
 
+import MetamodelExecution.ExecutedInformation;
 import MetamodelExecution.Execution_metamodelPackage;
-import MetamodelExecution.teste;
 
 import org.eclipse.emf.ecore.EClass;
 
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>teste</b></em>'.
+ * An implementation of the model object '<em><b>Executed Information</b></em>'.
  * <!-- end-user-doc -->
  *
  * @generated
  */
-public class testeImpl extends MinimalEObjectImpl.Container implements teste {
+public class ExecutedInformationImpl extends ExecutedElementImpl implements ExecutedInformation {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected testeImpl() {
+	protected ExecutedInformationImpl() {
 		super();
 	}
 
@@ -33,7 +31,7 @@ public class testeImpl extends MinimalEObjectImpl.Container implements teste {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Execution_metamodelPackage.Literals.TESTE;
+		return Execution_metamodelPackage.Literals.EXECUTED_INFORMATION;
 	}
 
-} //testeImpl
+} //ExecutedInformationImpl

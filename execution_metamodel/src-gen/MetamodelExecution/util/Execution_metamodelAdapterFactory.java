@@ -67,33 +67,33 @@ public class Execution_metamodelAdapterFactory extends AdapterFactoryImpl {
 	 */
 	protected Execution_metamodelSwitch<Adapter> modelSwitch = new Execution_metamodelSwitch<Adapter>() {
 		@Override
-		public Adapter caseAuxiliaryConduct(AuxiliaryConduct object) {
-			return createAuxiliaryConductAdapter();
+		public Adapter caseExecutedAuxiliaryConduct(ExecutedAuxiliaryConduct object) {
+			return createExecutedAuxiliaryConductAdapter();
 		}
 
 		@Override
-		public Adapter caseInformation(Information object) {
-			return createInformationAdapter();
+		public Adapter caseExecutedInformation(ExecutedInformation object) {
+			return createExecutedInformationAdapter();
 		}
 
 		@Override
-		public Adapter caseDischarge(Discharge object) {
-			return createDischargeAdapter();
+		public Adapter caseExecutedDischarge(ExecutedDischarge object) {
+			return createExecutedDischargeAdapter();
 		}
 
 		@Override
-		public Adapter caseReferral(Referral object) {
-			return createReferralAdapter();
+		public Adapter caseExecutedReferral(ExecutedReferral object) {
+			return createExecutedReferralAdapter();
 		}
 
 		@Override
-		public Adapter casePrescription(Prescription object) {
-			return createPrescriptionAdapter();
+		public Adapter caseExecutedPrescription(ExecutedPrescription object) {
+			return createExecutedPrescriptionAdapter();
 		}
 
 		@Override
-		public Adapter caseTreatment(Treatment object) {
-			return createTreatmentAdapter();
+		public Adapter caseExecutedTreatment(ExecutedTreatment object) {
+			return createExecutedTreatmentAdapter();
 		}
 
 		@Override
@@ -202,8 +202,8 @@ public class Execution_metamodelAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
-		public Adapter caseElement(Element object) {
-			return createElementAdapter();
+		public Adapter caseExecutedElement(ExecutedElement object) {
+			return createExecutedElementAdapter();
 		}
 
 		@Override
@@ -229,11 +229,6 @@ public class Execution_metamodelAdapterFactory extends AdapterFactoryImpl {
 		@Override
 		public Adapter caseQuestion(Question object) {
 			return createQuestionAdapter();
-		}
-
-		@Override
-		public Adapter caseteste(teste object) {
-			return createtesteAdapter();
 		}
 
 		@Override
@@ -266,86 +261,86 @@ public class Execution_metamodelAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link MetamodelExecution.AuxiliaryConduct <em>Auxiliary Conduct</em>}'.
+	 * Creates a new adapter for an object of class '{@link MetamodelExecution.ExecutedAuxiliaryConduct <em>Executed Auxiliary Conduct</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see MetamodelExecution.AuxiliaryConduct
+	 * @see MetamodelExecution.ExecutedAuxiliaryConduct
 	 * @generated
 	 */
-	public Adapter createAuxiliaryConductAdapter() {
+	public Adapter createExecutedAuxiliaryConductAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link MetamodelExecution.Information <em>Information</em>}'.
+	 * Creates a new adapter for an object of class '{@link MetamodelExecution.ExecutedInformation <em>Executed Information</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see MetamodelExecution.Information
+	 * @see MetamodelExecution.ExecutedInformation
 	 * @generated
 	 */
-	public Adapter createInformationAdapter() {
+	public Adapter createExecutedInformationAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link MetamodelExecution.Discharge <em>Discharge</em>}'.
+	 * Creates a new adapter for an object of class '{@link MetamodelExecution.ExecutedDischarge <em>Executed Discharge</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see MetamodelExecution.Discharge
+	 * @see MetamodelExecution.ExecutedDischarge
 	 * @generated
 	 */
-	public Adapter createDischargeAdapter() {
+	public Adapter createExecutedDischargeAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link MetamodelExecution.Referral <em>Referral</em>}'.
+	 * Creates a new adapter for an object of class '{@link MetamodelExecution.ExecutedReferral <em>Executed Referral</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see MetamodelExecution.Referral
+	 * @see MetamodelExecution.ExecutedReferral
 	 * @generated
 	 */
-	public Adapter createReferralAdapter() {
+	public Adapter createExecutedReferralAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link MetamodelExecution.Prescription <em>Prescription</em>}'.
+	 * Creates a new adapter for an object of class '{@link MetamodelExecution.ExecutedPrescription <em>Executed Prescription</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see MetamodelExecution.Prescription
+	 * @see MetamodelExecution.ExecutedPrescription
 	 * @generated
 	 */
-	public Adapter createPrescriptionAdapter() {
+	public Adapter createExecutedPrescriptionAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link MetamodelExecution.Treatment <em>Treatment</em>}'.
+	 * Creates a new adapter for an object of class '{@link MetamodelExecution.ExecutedTreatment <em>Executed Treatment</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see MetamodelExecution.Treatment
+	 * @see MetamodelExecution.ExecutedTreatment
 	 * @generated
 	 */
-	public Adapter createTreatmentAdapter() {
+	public Adapter createExecutedTreatmentAdapter() {
 		return null;
 	}
 
@@ -644,16 +639,16 @@ public class Execution_metamodelAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link MetamodelExecution.Element <em>Element</em>}'.
+	 * Creates a new adapter for an object of class '{@link MetamodelExecution.ExecutedElement <em>Executed Element</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see MetamodelExecution.Element
+	 * @see MetamodelExecution.ExecutedElement
 	 * @generated
 	 */
-	public Adapter createElementAdapter() {
+	public Adapter createExecutedElementAdapter() {
 		return null;
 	}
 
@@ -724,20 +719,6 @@ public class Execution_metamodelAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createQuestionAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link MetamodelExecution.teste <em>teste</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see MetamodelExecution.teste
-	 * @generated
-	 */
-	public Adapter createtesteAdapter() {
 		return null;
 	}
 

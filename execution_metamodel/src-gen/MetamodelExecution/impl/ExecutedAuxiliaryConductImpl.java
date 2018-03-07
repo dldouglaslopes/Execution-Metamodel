@@ -3,7 +3,7 @@
 package MetamodelExecution.impl;
 
 import MetamodelExecution.Answer;
-import MetamodelExecution.AuxiliaryConduct;
+import MetamodelExecution.ExecutedAuxiliaryConduct;
 import MetamodelExecution.Execution_metamodelPackage;
 
 import java.util.Collection;
@@ -20,18 +20,18 @@ import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Auxiliary Conduct</b></em>'.
+ * An implementation of the model object '<em><b>Executed Auxiliary Conduct</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link MetamodelExecution.impl.AuxiliaryConductImpl#getAnswer <em>Answer</em>}</li>
+ *   <li>{@link MetamodelExecution.impl.ExecutedAuxiliaryConductImpl#getAnswer <em>Answer</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class AuxiliaryConductImpl extends ElementImpl implements AuxiliaryConduct {
+public class ExecutedAuxiliaryConductImpl extends ExecutedElementImpl implements ExecutedAuxiliaryConduct {
 	/**
 	 * The cached value of the '{@link #getAnswer() <em>Answer</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
@@ -47,7 +47,7 @@ public class AuxiliaryConductImpl extends ElementImpl implements AuxiliaryConduc
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected AuxiliaryConductImpl() {
+	protected ExecutedAuxiliaryConductImpl() {
 		super();
 	}
 
@@ -58,7 +58,7 @@ public class AuxiliaryConductImpl extends ElementImpl implements AuxiliaryConduc
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Execution_metamodelPackage.Literals.AUXILIARY_CONDUCT;
+		return Execution_metamodelPackage.Literals.EXECUTED_AUXILIARY_CONDUCT;
 	}
 
 	/**
@@ -69,7 +69,7 @@ public class AuxiliaryConductImpl extends ElementImpl implements AuxiliaryConduc
 	public EList<Answer> getAnswer() {
 		if (answer == null) {
 			answer = new EObjectContainmentEList<Answer>(Answer.class, this,
-					Execution_metamodelPackage.AUXILIARY_CONDUCT__ANSWER);
+					Execution_metamodelPackage.EXECUTED_AUXILIARY_CONDUCT__ANSWER);
 		}
 		return answer;
 	}
@@ -82,7 +82,7 @@ public class AuxiliaryConductImpl extends ElementImpl implements AuxiliaryConduc
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-		case Execution_metamodelPackage.AUXILIARY_CONDUCT__ANSWER:
+		case Execution_metamodelPackage.EXECUTED_AUXILIARY_CONDUCT__ANSWER:
 			return ((InternalEList<?>) getAnswer()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -96,7 +96,7 @@ public class AuxiliaryConductImpl extends ElementImpl implements AuxiliaryConduc
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case Execution_metamodelPackage.AUXILIARY_CONDUCT__ANSWER:
+		case Execution_metamodelPackage.EXECUTED_AUXILIARY_CONDUCT__ANSWER:
 			return getAnswer();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -111,7 +111,7 @@ public class AuxiliaryConductImpl extends ElementImpl implements AuxiliaryConduc
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case Execution_metamodelPackage.AUXILIARY_CONDUCT__ANSWER:
+		case Execution_metamodelPackage.EXECUTED_AUXILIARY_CONDUCT__ANSWER:
 			getAnswer().clear();
 			getAnswer().addAll((Collection<? extends Answer>) newValue);
 			return;
@@ -127,7 +127,7 @@ public class AuxiliaryConductImpl extends ElementImpl implements AuxiliaryConduc
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case Execution_metamodelPackage.AUXILIARY_CONDUCT__ANSWER:
+		case Execution_metamodelPackage.EXECUTED_AUXILIARY_CONDUCT__ANSWER:
 			getAnswer().clear();
 			return;
 		}
@@ -142,10 +142,10 @@ public class AuxiliaryConductImpl extends ElementImpl implements AuxiliaryConduc
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case Execution_metamodelPackage.AUXILIARY_CONDUCT__ANSWER:
+		case Execution_metamodelPackage.EXECUTED_AUXILIARY_CONDUCT__ANSWER:
 			return answer != null && !answer.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}
 
-} //AuxiliaryConductImpl
+} //ExecutedAuxiliaryConductImpl

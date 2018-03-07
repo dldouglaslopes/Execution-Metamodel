@@ -66,56 +66,56 @@ public class Execution_metamodelSwitch<T> extends Switch<T> {
 	@Override
 	protected T doSwitch(int classifierID, EObject theEObject) {
 		switch (classifierID) {
-		case Execution_metamodelPackage.AUXILIARY_CONDUCT: {
-			AuxiliaryConduct auxiliaryConduct = (AuxiliaryConduct) theEObject;
-			T result = caseAuxiliaryConduct(auxiliaryConduct);
+		case Execution_metamodelPackage.EXECUTED_AUXILIARY_CONDUCT: {
+			ExecutedAuxiliaryConduct executedAuxiliaryConduct = (ExecutedAuxiliaryConduct) theEObject;
+			T result = caseExecutedAuxiliaryConduct(executedAuxiliaryConduct);
 			if (result == null)
-				result = caseElement(auxiliaryConduct);
-			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
-		case Execution_metamodelPackage.INFORMATION: {
-			Information information = (Information) theEObject;
-			T result = caseInformation(information);
-			if (result == null)
-				result = caseElement(information);
+				result = caseExecutedElement(executedAuxiliaryConduct);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case Execution_metamodelPackage.DISCHARGE: {
-			Discharge discharge = (Discharge) theEObject;
-			T result = caseDischarge(discharge);
+		case Execution_metamodelPackage.EXECUTED_INFORMATION: {
+			ExecutedInformation executedInformation = (ExecutedInformation) theEObject;
+			T result = caseExecutedInformation(executedInformation);
 			if (result == null)
-				result = caseElement(discharge);
-			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
-		case Execution_metamodelPackage.REFERRAL: {
-			Referral referral = (Referral) theEObject;
-			T result = caseReferral(referral);
-			if (result == null)
-				result = caseElement(referral);
+				result = caseExecutedElement(executedInformation);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case Execution_metamodelPackage.PRESCRIPTION: {
-			Prescription prescription = (Prescription) theEObject;
-			T result = casePrescription(prescription);
+		case Execution_metamodelPackage.EXECUTED_DISCHARGE: {
+			ExecutedDischarge executedDischarge = (ExecutedDischarge) theEObject;
+			T result = caseExecutedDischarge(executedDischarge);
 			if (result == null)
-				result = caseElement(prescription);
+				result = caseExecutedElement(executedDischarge);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case Execution_metamodelPackage.TREATMENT: {
-			Treatment treatment = (Treatment) theEObject;
-			T result = caseTreatment(treatment);
+		case Execution_metamodelPackage.EXECUTED_REFERRAL: {
+			ExecutedReferral executedReferral = (ExecutedReferral) theEObject;
+			T result = caseExecutedReferral(executedReferral);
 			if (result == null)
-				result = caseElement(treatment);
+				result = caseExecutedElement(executedReferral);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case Execution_metamodelPackage.EXECUTED_PRESCRIPTION: {
+			ExecutedPrescription executedPrescription = (ExecutedPrescription) theEObject;
+			T result = caseExecutedPrescription(executedPrescription);
+			if (result == null)
+				result = caseExecutedElement(executedPrescription);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case Execution_metamodelPackage.EXECUTED_TREATMENT: {
+			ExecutedTreatment executedTreatment = (ExecutedTreatment) theEObject;
+			T result = caseExecutedTreatment(executedTreatment);
+			if (result == null)
+				result = caseExecutedElement(executedTreatment);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -279,9 +279,9 @@ public class Execution_metamodelSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case Execution_metamodelPackage.ELEMENT: {
-			Element element = (Element) theEObject;
-			T result = caseElement(element);
+		case Execution_metamodelPackage.EXECUTED_ELEMENT: {
+			ExecutedElement executedElement = (ExecutedElement) theEObject;
+			T result = caseExecutedElement(executedElement);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -323,13 +323,6 @@ public class Execution_metamodelSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case Execution_metamodelPackage.TESTE: {
-			teste teste = (teste) theEObject;
-			T result = caseteste(teste);
-			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
 		case Execution_metamodelPackage.EXECUTION: {
 			Execution execution = (Execution) theEObject;
 			T result = caseExecution(execution);
@@ -343,92 +336,92 @@ public class Execution_metamodelSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Auxiliary Conduct</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Executed Auxiliary Conduct</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Auxiliary Conduct</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Executed Auxiliary Conduct</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseAuxiliaryConduct(AuxiliaryConduct object) {
+	public T caseExecutedAuxiliaryConduct(ExecutedAuxiliaryConduct object) {
 		return null;
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Information</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Executed Information</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Information</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Executed Information</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseInformation(Information object) {
+	public T caseExecutedInformation(ExecutedInformation object) {
 		return null;
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Discharge</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Executed Discharge</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Discharge</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Executed Discharge</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseDischarge(Discharge object) {
+	public T caseExecutedDischarge(ExecutedDischarge object) {
 		return null;
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Referral</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Executed Referral</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Referral</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Executed Referral</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseReferral(Referral object) {
+	public T caseExecutedReferral(ExecutedReferral object) {
 		return null;
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Prescription</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Executed Prescription</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Prescription</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Executed Prescription</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T casePrescription(Prescription object) {
+	public T caseExecutedPrescription(ExecutedPrescription object) {
 		return null;
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Treatment</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Executed Treatment</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Treatment</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Executed Treatment</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseTreatment(Treatment object) {
+	public T caseExecutedTreatment(ExecutedTreatment object) {
 		return null;
 	}
 
@@ -748,17 +741,17 @@ public class Execution_metamodelSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Element</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Executed Element</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Element</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Executed Element</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseElement(Element object) {
+	public T caseExecutedElement(ExecutedElement object) {
 		return null;
 	}
 
@@ -834,21 +827,6 @@ public class Execution_metamodelSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseQuestion(Question object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>teste</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>teste</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseteste(teste object) {
 		return null;
 	}
 

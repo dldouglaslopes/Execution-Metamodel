@@ -22,58 +22,58 @@ public interface Execution_metamodelFactory extends EFactory {
 	Execution_metamodelFactory eINSTANCE = MetamodelExecution.impl.Execution_metamodelFactoryImpl.init();
 
 	/**
-	 * Returns a new object of class '<em>Auxiliary Conduct</em>'.
+	 * Returns a new object of class '<em>Executed Auxiliary Conduct</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Auxiliary Conduct</em>'.
+	 * @return a new object of class '<em>Executed Auxiliary Conduct</em>'.
 	 * @generated
 	 */
-	AuxiliaryConduct createAuxiliaryConduct();
+	ExecutedAuxiliaryConduct createExecutedAuxiliaryConduct();
 
 	/**
-	 * Returns a new object of class '<em>Information</em>'.
+	 * Returns a new object of class '<em>Executed Information</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Information</em>'.
+	 * @return a new object of class '<em>Executed Information</em>'.
 	 * @generated
 	 */
-	Information createInformation();
+	ExecutedInformation createExecutedInformation();
 
 	/**
-	 * Returns a new object of class '<em>Discharge</em>'.
+	 * Returns a new object of class '<em>Executed Discharge</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Discharge</em>'.
+	 * @return a new object of class '<em>Executed Discharge</em>'.
 	 * @generated
 	 */
-	Discharge createDischarge();
+	ExecutedDischarge createExecutedDischarge();
 
 	/**
-	 * Returns a new object of class '<em>Referral</em>'.
+	 * Returns a new object of class '<em>Executed Referral</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Referral</em>'.
+	 * @return a new object of class '<em>Executed Referral</em>'.
 	 * @generated
 	 */
-	Referral createReferral();
+	ExecutedReferral createExecutedReferral();
 
 	/**
-	 * Returns a new object of class '<em>Prescription</em>'.
+	 * Returns a new object of class '<em>Executed Prescription</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Prescription</em>'.
+	 * @return a new object of class '<em>Executed Prescription</em>'.
 	 * @generated
 	 */
-	Prescription createPrescription();
+	ExecutedPrescription createExecutedPrescription();
 
 	/**
-	 * Returns a new object of class '<em>Treatment</em>'.
+	 * Returns a new object of class '<em>Executed Treatment</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Treatment</em>'.
+	 * @return a new object of class '<em>Executed Treatment</em>'.
 	 * @generated
 	 */
-	Treatment createTreatment();
+	ExecutedTreatment createExecutedTreatment();
 
 	/**
 	 * Returns a new object of class '<em>Examination</em>'.
@@ -290,15 +290,6 @@ public interface Execution_metamodelFactory extends EFactory {
 	 * @generated
 	 */
 	Question createQuestion();
-
-	/**
-	 * Returns a new object of class '<em>teste</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>teste</em>'.
-	 * @generated
-	 */
-	teste createteste();
 
 	/**
 	 * Returns a new object of class '<em>Execution</em>'.
