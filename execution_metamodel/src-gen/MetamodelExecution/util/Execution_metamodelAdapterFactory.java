@@ -67,33 +67,33 @@ public class Execution_metamodelAdapterFactory extends AdapterFactoryImpl {
 	 */
 	protected Execution_metamodelSwitch<Adapter> modelSwitch = new Execution_metamodelSwitch<Adapter>() {
 		@Override
-		public Adapter caseExecutedAuxiliaryConduct(ExecutedAuxiliaryConduct object) {
-			return createExecutedAuxiliaryConductAdapter();
+		public Adapter caseEAuxiliaryConduct(EAuxiliaryConduct object) {
+			return createEAuxiliaryConductAdapter();
 		}
 
 		@Override
-		public Adapter caseExecutedInformation(ExecutedInformation object) {
-			return createExecutedInformationAdapter();
+		public Adapter caseEInformation(EInformation object) {
+			return createEInformationAdapter();
 		}
 
 		@Override
-		public Adapter caseExecutedDischarge(ExecutedDischarge object) {
-			return createExecutedDischargeAdapter();
+		public Adapter caseEDischarge(EDischarge object) {
+			return createEDischargeAdapter();
 		}
 
 		@Override
-		public Adapter caseExecutedReferral(ExecutedReferral object) {
-			return createExecutedReferralAdapter();
+		public Adapter caseEReferral(EReferral object) {
+			return createEReferralAdapter();
 		}
 
 		@Override
-		public Adapter caseExecutedPrescription(ExecutedPrescription object) {
-			return createExecutedPrescriptionAdapter();
+		public Adapter caseEPrescription(EPrescription object) {
+			return createEPrescriptionAdapter();
 		}
 
 		@Override
-		public Adapter caseExecutedTreatment(ExecutedTreatment object) {
-			return createExecutedTreatmentAdapter();
+		public Adapter caseETreatment(ETreatment object) {
+			return createETreatmentAdapter();
 		}
 
 		@Override
@@ -202,8 +202,8 @@ public class Execution_metamodelAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
-		public Adapter caseExecutedElement(ExecutedElement object) {
-			return createExecutedElementAdapter();
+		public Adapter caseEElement(EElement object) {
+			return createEElementAdapter();
 		}
 
 		@Override
@@ -232,8 +232,8 @@ public class Execution_metamodelAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
-		public Adapter caseExecution(Execution object) {
-			return createExecutionAdapter();
+		public Adapter caseEPathway(EPathway object) {
+			return createEPathwayAdapter();
 		}
 
 		@Override
@@ -261,86 +261,86 @@ public class Execution_metamodelAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link MetamodelExecution.ExecutedAuxiliaryConduct <em>Executed Auxiliary Conduct</em>}'.
+	 * Creates a new adapter for an object of class '{@link MetamodelExecution.EAuxiliaryConduct <em>EAuxiliary Conduct</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see MetamodelExecution.ExecutedAuxiliaryConduct
+	 * @see MetamodelExecution.EAuxiliaryConduct
 	 * @generated
 	 */
-	public Adapter createExecutedAuxiliaryConductAdapter() {
+	public Adapter createEAuxiliaryConductAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link MetamodelExecution.ExecutedInformation <em>Executed Information</em>}'.
+	 * Creates a new adapter for an object of class '{@link MetamodelExecution.EInformation <em>EInformation</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see MetamodelExecution.ExecutedInformation
+	 * @see MetamodelExecution.EInformation
 	 * @generated
 	 */
-	public Adapter createExecutedInformationAdapter() {
+	public Adapter createEInformationAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link MetamodelExecution.ExecutedDischarge <em>Executed Discharge</em>}'.
+	 * Creates a new adapter for an object of class '{@link MetamodelExecution.EDischarge <em>EDischarge</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see MetamodelExecution.ExecutedDischarge
+	 * @see MetamodelExecution.EDischarge
 	 * @generated
 	 */
-	public Adapter createExecutedDischargeAdapter() {
+	public Adapter createEDischargeAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link MetamodelExecution.ExecutedReferral <em>Executed Referral</em>}'.
+	 * Creates a new adapter for an object of class '{@link MetamodelExecution.EReferral <em>EReferral</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see MetamodelExecution.ExecutedReferral
+	 * @see MetamodelExecution.EReferral
 	 * @generated
 	 */
-	public Adapter createExecutedReferralAdapter() {
+	public Adapter createEReferralAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link MetamodelExecution.ExecutedPrescription <em>Executed Prescription</em>}'.
+	 * Creates a new adapter for an object of class '{@link MetamodelExecution.EPrescription <em>EPrescription</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see MetamodelExecution.ExecutedPrescription
+	 * @see MetamodelExecution.EPrescription
 	 * @generated
 	 */
-	public Adapter createExecutedPrescriptionAdapter() {
+	public Adapter createEPrescriptionAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link MetamodelExecution.ExecutedTreatment <em>Executed Treatment</em>}'.
+	 * Creates a new adapter for an object of class '{@link MetamodelExecution.ETreatment <em>ETreatment</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see MetamodelExecution.ExecutedTreatment
+	 * @see MetamodelExecution.ETreatment
 	 * @generated
 	 */
-	public Adapter createExecutedTreatmentAdapter() {
+	public Adapter createETreatmentAdapter() {
 		return null;
 	}
 
@@ -639,16 +639,16 @@ public class Execution_metamodelAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link MetamodelExecution.ExecutedElement <em>Executed Element</em>}'.
+	 * Creates a new adapter for an object of class '{@link MetamodelExecution.EElement <em>EElement</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see MetamodelExecution.ExecutedElement
+	 * @see MetamodelExecution.EElement
 	 * @generated
 	 */
-	public Adapter createExecutedElementAdapter() {
+	public Adapter createEElementAdapter() {
 		return null;
 	}
 
@@ -723,16 +723,16 @@ public class Execution_metamodelAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link MetamodelExecution.Execution <em>Execution</em>}'.
+	 * Creates a new adapter for an object of class '{@link MetamodelExecution.EPathway <em>EPathway</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see MetamodelExecution.Execution
+	 * @see MetamodelExecution.EPathway
 	 * @generated
 	 */
-	public Adapter createExecutionAdapter() {
+	public Adapter createEPathwayAdapter() {
 		return null;
 	}
 

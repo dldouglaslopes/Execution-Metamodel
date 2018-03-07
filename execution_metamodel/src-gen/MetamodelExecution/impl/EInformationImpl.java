@@ -2,25 +2,25 @@
  */
 package MetamodelExecution.impl;
 
-import MetamodelExecution.ExecutedDischarge;
+import MetamodelExecution.EInformation;
 import MetamodelExecution.Execution_metamodelPackage;
 
 import org.eclipse.emf.ecore.EClass;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Executed Discharge</b></em>'.
+ * An implementation of the model object '<em><b>EInformation</b></em>'.
  * <!-- end-user-doc -->
  *
  * @generated
  */
-public class ExecutedDischargeImpl extends ExecutedElementImpl implements ExecutedDischarge {
+public class EInformationImpl extends EElementImpl implements EInformation {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ExecutedDischargeImpl() {
+	protected EInformationImpl() {
 		super();
 	}
 
@@ -31,7 +31,7 @@ public class ExecutedDischargeImpl extends ExecutedElementImpl implements Execut
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Execution_metamodelPackage.Literals.EXECUTED_DISCHARGE;
+		return Execution_metamodelPackage.Literals.EINFORMATION;
 	}
 
-} //ExecutedDischargeImpl
+} //EInformationImpl

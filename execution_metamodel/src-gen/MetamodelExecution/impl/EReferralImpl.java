@@ -2,25 +2,25 @@
  */
 package MetamodelExecution.impl;
 
-import MetamodelExecution.ExecutedInformation;
+import MetamodelExecution.EReferral;
 import MetamodelExecution.Execution_metamodelPackage;
 
 import org.eclipse.emf.ecore.EClass;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Executed Information</b></em>'.
+ * An implementation of the model object '<em><b>EReferral</b></em>'.
  * <!-- end-user-doc -->
  *
  * @generated
  */
-public class ExecutedInformationImpl extends ExecutedElementImpl implements ExecutedInformation {
+public class EReferralImpl extends EElementImpl implements EReferral {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ExecutedInformationImpl() {
+	protected EReferralImpl() {
 		super();
 	}
 
@@ -31,7 +31,7 @@ public class ExecutedInformationImpl extends ExecutedElementImpl implements Exec
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Execution_metamodelPackage.Literals.EXECUTED_INFORMATION;
+		return Execution_metamodelPackage.Literals.EREFERRAL;
 	}
 
-} //ExecutedInformationImpl
+} //EReferralImpl

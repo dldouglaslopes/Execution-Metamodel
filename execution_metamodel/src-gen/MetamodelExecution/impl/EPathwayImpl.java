@@ -2,8 +2,8 @@
  */
 package MetamodelExecution.impl;
 
-import MetamodelExecution.ExecutedElement;
-import MetamodelExecution.Execution;
+import MetamodelExecution.EElement;
+import MetamodelExecution.EPathway;
 import MetamodelExecution.Execution_metamodelPackage;
 import MetamodelExecution.LastProfessional;
 import MetamodelExecution.Pathway;
@@ -29,33 +29,33 @@ import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Execution</b></em>'.
+ * An implementation of the model object '<em><b>EPathway</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link MetamodelExecution.impl.ExecutionImpl#getElement <em>Element</em>}</li>
- *   <li>{@link MetamodelExecution.impl.ExecutionImpl#getId <em>Id</em>}</li>
- *   <li>{@link MetamodelExecution.impl.ExecutionImpl#getUrl <em>Url</em>}</li>
- *   <li>{@link MetamodelExecution.impl.ExecutionImpl#getCreationDate <em>Creation Date</em>}</li>
- *   <li>{@link MetamodelExecution.impl.ExecutionImpl#getConclusionDate <em>Conclusion Date</em>}</li>
- *   <li>{@link MetamodelExecution.impl.ExecutionImpl#isCompleted <em>Completed</em>}</li>
- *   <li>{@link MetamodelExecution.impl.ExecutionImpl#isAborted <em>Aborted</em>}</li>
- *   <li>{@link MetamodelExecution.impl.ExecutionImpl#getLastExecutedStepDate <em>Last Executed Step Date</em>}</li>
- *   <li>{@link MetamodelExecution.impl.ExecutionImpl#getIdPathway <em>Id Pathway</em>}</li>
- *   <li>{@link MetamodelExecution.impl.ExecutionImpl#getIdLastProfessional <em>Id Last Professional</em>}</li>
- *   <li>{@link MetamodelExecution.impl.ExecutionImpl#getIdResponsible <em>Id Responsible</em>}</li>
- *   <li>{@link MetamodelExecution.impl.ExecutionImpl#getIdsExecutedStep <em>Ids Executed Step</em>}</li>
- *   <li>{@link MetamodelExecution.impl.ExecutionImpl#getPathway <em>Pathway</em>}</li>
- *   <li>{@link MetamodelExecution.impl.ExecutionImpl#getResponsible <em>Responsible</em>}</li>
- *   <li>{@link MetamodelExecution.impl.ExecutionImpl#getLastprofessional <em>Lastprofessional</em>}</li>
- *   <li>{@link MetamodelExecution.impl.ExecutionImpl#getName <em>Name</em>}</li>
+ *   <li>{@link MetamodelExecution.impl.EPathwayImpl#getElement <em>Element</em>}</li>
+ *   <li>{@link MetamodelExecution.impl.EPathwayImpl#getId <em>Id</em>}</li>
+ *   <li>{@link MetamodelExecution.impl.EPathwayImpl#getUrl <em>Url</em>}</li>
+ *   <li>{@link MetamodelExecution.impl.EPathwayImpl#getCreationDate <em>Creation Date</em>}</li>
+ *   <li>{@link MetamodelExecution.impl.EPathwayImpl#getConclusionDate <em>Conclusion Date</em>}</li>
+ *   <li>{@link MetamodelExecution.impl.EPathwayImpl#isCompleted <em>Completed</em>}</li>
+ *   <li>{@link MetamodelExecution.impl.EPathwayImpl#isAborted <em>Aborted</em>}</li>
+ *   <li>{@link MetamodelExecution.impl.EPathwayImpl#getLastExecutedStepDate <em>Last Executed Step Date</em>}</li>
+ *   <li>{@link MetamodelExecution.impl.EPathwayImpl#getIdPathway <em>Id Pathway</em>}</li>
+ *   <li>{@link MetamodelExecution.impl.EPathwayImpl#getIdLastProfessional <em>Id Last Professional</em>}</li>
+ *   <li>{@link MetamodelExecution.impl.EPathwayImpl#getIdResponsible <em>Id Responsible</em>}</li>
+ *   <li>{@link MetamodelExecution.impl.EPathwayImpl#getIdsExecutedStep <em>Ids Executed Step</em>}</li>
+ *   <li>{@link MetamodelExecution.impl.EPathwayImpl#getPathway <em>Pathway</em>}</li>
+ *   <li>{@link MetamodelExecution.impl.EPathwayImpl#getResponsible <em>Responsible</em>}</li>
+ *   <li>{@link MetamodelExecution.impl.EPathwayImpl#getLastprofessional <em>Lastprofessional</em>}</li>
+ *   <li>{@link MetamodelExecution.impl.EPathwayImpl#getName <em>Name</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class ExecutionImpl extends MinimalEObjectImpl.Container implements Execution {
+public class EPathwayImpl extends MinimalEObjectImpl.Container implements EPathway {
 	/**
 	 * The cached value of the '{@link #getElement() <em>Element</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
@@ -64,7 +64,7 @@ public class ExecutionImpl extends MinimalEObjectImpl.Container implements Execu
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<ExecutedElement> element;
+	protected EList<EElement> element;
 
 	/**
 	 * The default value of the '{@link #getId() <em>Id</em>}' attribute.
@@ -331,7 +331,7 @@ public class ExecutionImpl extends MinimalEObjectImpl.Container implements Execu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ExecutionImpl() {
+	protected EPathwayImpl() {
 		super();
 	}
 
@@ -342,7 +342,7 @@ public class ExecutionImpl extends MinimalEObjectImpl.Container implements Execu
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Execution_metamodelPackage.Literals.EXECUTION;
+		return Execution_metamodelPackage.Literals.EPATHWAY;
 	}
 
 	/**
@@ -350,10 +350,10 @@ public class ExecutionImpl extends MinimalEObjectImpl.Container implements Execu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<ExecutedElement> getElement() {
+	public EList<EElement> getElement() {
 		if (element == null) {
-			element = new EObjectContainmentEList<ExecutedElement>(ExecutedElement.class, this,
-					Execution_metamodelPackage.EXECUTION__ELEMENT);
+			element = new EObjectContainmentEList<EElement>(EElement.class, this,
+					Execution_metamodelPackage.EPATHWAY__ELEMENT);
 		}
 		return element;
 	}
@@ -376,7 +376,7 @@ public class ExecutionImpl extends MinimalEObjectImpl.Container implements Execu
 		int oldId = id;
 		id = newId;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.EXECUTION__ID, oldId, id));
+			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.EPATHWAY__ID, oldId, id));
 	}
 
 	/**
@@ -397,7 +397,7 @@ public class ExecutionImpl extends MinimalEObjectImpl.Container implements Execu
 		String oldUrl = url;
 		url = newUrl;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.EXECUTION__URL, oldUrl,
+			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.EPATHWAY__URL, oldUrl,
 					url));
 	}
 
@@ -419,7 +419,7 @@ public class ExecutionImpl extends MinimalEObjectImpl.Container implements Execu
 		Date oldCreationDate = creationDate;
 		creationDate = newCreationDate;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.EXECUTION__CREATION_DATE,
+			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.EPATHWAY__CREATION_DATE,
 					oldCreationDate, creationDate));
 	}
 
@@ -441,7 +441,7 @@ public class ExecutionImpl extends MinimalEObjectImpl.Container implements Execu
 		Date oldConclusionDate = conclusionDate;
 		conclusionDate = newConclusionDate;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.EXECUTION__CONCLUSION_DATE,
+			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.EPATHWAY__CONCLUSION_DATE,
 					oldConclusionDate, conclusionDate));
 	}
 
@@ -463,7 +463,7 @@ public class ExecutionImpl extends MinimalEObjectImpl.Container implements Execu
 		boolean oldCompleted = completed;
 		completed = newCompleted;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.EXECUTION__COMPLETED,
+			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.EPATHWAY__COMPLETED,
 					oldCompleted, completed));
 	}
 
@@ -485,7 +485,7 @@ public class ExecutionImpl extends MinimalEObjectImpl.Container implements Execu
 		boolean oldAborted = aborted;
 		aborted = newAborted;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.EXECUTION__ABORTED,
+			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.EPATHWAY__ABORTED,
 					oldAborted, aborted));
 	}
 
@@ -508,7 +508,7 @@ public class ExecutionImpl extends MinimalEObjectImpl.Container implements Execu
 		lastExecutedStepDate = newLastExecutedStepDate;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET,
-					Execution_metamodelPackage.EXECUTION__LAST_EXECUTED_STEP_DATE, oldLastExecutedStepDate,
+					Execution_metamodelPackage.EPATHWAY__LAST_EXECUTED_STEP_DATE, oldLastExecutedStepDate,
 					lastExecutedStepDate));
 	}
 
@@ -530,7 +530,7 @@ public class ExecutionImpl extends MinimalEObjectImpl.Container implements Execu
 		int oldIdPathway = idPathway;
 		idPathway = newIdPathway;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.EXECUTION__ID_PATHWAY,
+			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.EPATHWAY__ID_PATHWAY,
 					oldIdPathway, idPathway));
 	}
 
@@ -553,7 +553,7 @@ public class ExecutionImpl extends MinimalEObjectImpl.Container implements Execu
 		idLastProfessional = newIdLastProfessional;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET,
-					Execution_metamodelPackage.EXECUTION__ID_LAST_PROFESSIONAL, oldIdLastProfessional,
+					Execution_metamodelPackage.EPATHWAY__ID_LAST_PROFESSIONAL, oldIdLastProfessional,
 					idLastProfessional));
 	}
 
@@ -575,7 +575,7 @@ public class ExecutionImpl extends MinimalEObjectImpl.Container implements Execu
 		int oldIdResponsible = idResponsible;
 		idResponsible = newIdResponsible;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.EXECUTION__ID_RESPONSIBLE,
+			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.EPATHWAY__ID_RESPONSIBLE,
 					oldIdResponsible, idResponsible));
 	}
 
@@ -587,7 +587,7 @@ public class ExecutionImpl extends MinimalEObjectImpl.Container implements Execu
 	public EList<Integer> getIdsExecutedStep() {
 		if (idsExecutedStep == null) {
 			idsExecutedStep = new EDataTypeUniqueEList<Integer>(Integer.class, this,
-					Execution_metamodelPackage.EXECUTION__IDS_EXECUTED_STEP);
+					Execution_metamodelPackage.EPATHWAY__IDS_EXECUTED_STEP);
 		}
 		return idsExecutedStep;
 	}
@@ -611,7 +611,7 @@ public class ExecutionImpl extends MinimalEObjectImpl.Container implements Execu
 		pathway = newPathway;
 		if (eNotificationRequired()) {
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
-					Execution_metamodelPackage.EXECUTION__PATHWAY, oldPathway, newPathway);
+					Execution_metamodelPackage.EPATHWAY__PATHWAY, oldPathway, newPathway);
 			if (msgs == null)
 				msgs = notification;
 			else
@@ -630,15 +630,15 @@ public class ExecutionImpl extends MinimalEObjectImpl.Container implements Execu
 			NotificationChain msgs = null;
 			if (pathway != null)
 				msgs = ((InternalEObject) pathway).eInverseRemove(this,
-						EOPPOSITE_FEATURE_BASE - Execution_metamodelPackage.EXECUTION__PATHWAY, null, msgs);
+						EOPPOSITE_FEATURE_BASE - Execution_metamodelPackage.EPATHWAY__PATHWAY, null, msgs);
 			if (newPathway != null)
 				msgs = ((InternalEObject) newPathway).eInverseAdd(this,
-						EOPPOSITE_FEATURE_BASE - Execution_metamodelPackage.EXECUTION__PATHWAY, null, msgs);
+						EOPPOSITE_FEATURE_BASE - Execution_metamodelPackage.EPATHWAY__PATHWAY, null, msgs);
 			msgs = basicSetPathway(newPathway, msgs);
 			if (msgs != null)
 				msgs.dispatch();
 		} else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.EXECUTION__PATHWAY,
+			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.EPATHWAY__PATHWAY,
 					newPathway, newPathway));
 	}
 
@@ -661,7 +661,7 @@ public class ExecutionImpl extends MinimalEObjectImpl.Container implements Execu
 		responsible = newResponsible;
 		if (eNotificationRequired()) {
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
-					Execution_metamodelPackage.EXECUTION__RESPONSIBLE, oldResponsible, newResponsible);
+					Execution_metamodelPackage.EPATHWAY__RESPONSIBLE, oldResponsible, newResponsible);
 			if (msgs == null)
 				msgs = notification;
 			else
@@ -680,15 +680,15 @@ public class ExecutionImpl extends MinimalEObjectImpl.Container implements Execu
 			NotificationChain msgs = null;
 			if (responsible != null)
 				msgs = ((InternalEObject) responsible).eInverseRemove(this,
-						EOPPOSITE_FEATURE_BASE - Execution_metamodelPackage.EXECUTION__RESPONSIBLE, null, msgs);
+						EOPPOSITE_FEATURE_BASE - Execution_metamodelPackage.EPATHWAY__RESPONSIBLE, null, msgs);
 			if (newResponsible != null)
 				msgs = ((InternalEObject) newResponsible).eInverseAdd(this,
-						EOPPOSITE_FEATURE_BASE - Execution_metamodelPackage.EXECUTION__RESPONSIBLE, null, msgs);
+						EOPPOSITE_FEATURE_BASE - Execution_metamodelPackage.EPATHWAY__RESPONSIBLE, null, msgs);
 			msgs = basicSetResponsible(newResponsible, msgs);
 			if (msgs != null)
 				msgs.dispatch();
 		} else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.EXECUTION__RESPONSIBLE,
+			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.EPATHWAY__RESPONSIBLE,
 					newResponsible, newResponsible));
 	}
 
@@ -711,7 +711,7 @@ public class ExecutionImpl extends MinimalEObjectImpl.Container implements Execu
 		lastprofessional = newLastprofessional;
 		if (eNotificationRequired()) {
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
-					Execution_metamodelPackage.EXECUTION__LASTPROFESSIONAL, oldLastprofessional, newLastprofessional);
+					Execution_metamodelPackage.EPATHWAY__LASTPROFESSIONAL, oldLastprofessional, newLastprofessional);
 			if (msgs == null)
 				msgs = notification;
 			else
@@ -730,16 +730,16 @@ public class ExecutionImpl extends MinimalEObjectImpl.Container implements Execu
 			NotificationChain msgs = null;
 			if (lastprofessional != null)
 				msgs = ((InternalEObject) lastprofessional).eInverseRemove(this,
-						EOPPOSITE_FEATURE_BASE - Execution_metamodelPackage.EXECUTION__LASTPROFESSIONAL, null, msgs);
+						EOPPOSITE_FEATURE_BASE - Execution_metamodelPackage.EPATHWAY__LASTPROFESSIONAL, null, msgs);
 			if (newLastprofessional != null)
 				msgs = ((InternalEObject) newLastprofessional).eInverseAdd(this,
-						EOPPOSITE_FEATURE_BASE - Execution_metamodelPackage.EXECUTION__LASTPROFESSIONAL, null, msgs);
+						EOPPOSITE_FEATURE_BASE - Execution_metamodelPackage.EPATHWAY__LASTPROFESSIONAL, null, msgs);
 			msgs = basicSetLastprofessional(newLastprofessional, msgs);
 			if (msgs != null)
 				msgs.dispatch();
 		} else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET,
-					Execution_metamodelPackage.EXECUTION__LASTPROFESSIONAL, newLastprofessional, newLastprofessional));
+			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.EPATHWAY__LASTPROFESSIONAL,
+					newLastprofessional, newLastprofessional));
 	}
 
 	/**
@@ -760,7 +760,7 @@ public class ExecutionImpl extends MinimalEObjectImpl.Container implements Execu
 		String oldName = name;
 		name = newName;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.EXECUTION__NAME, oldName,
+			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.EPATHWAY__NAME, oldName,
 					name));
 	}
 
@@ -772,13 +772,13 @@ public class ExecutionImpl extends MinimalEObjectImpl.Container implements Execu
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-		case Execution_metamodelPackage.EXECUTION__ELEMENT:
+		case Execution_metamodelPackage.EPATHWAY__ELEMENT:
 			return ((InternalEList<?>) getElement()).basicRemove(otherEnd, msgs);
-		case Execution_metamodelPackage.EXECUTION__PATHWAY:
+		case Execution_metamodelPackage.EPATHWAY__PATHWAY:
 			return basicSetPathway(null, msgs);
-		case Execution_metamodelPackage.EXECUTION__RESPONSIBLE:
+		case Execution_metamodelPackage.EPATHWAY__RESPONSIBLE:
 			return basicSetResponsible(null, msgs);
-		case Execution_metamodelPackage.EXECUTION__LASTPROFESSIONAL:
+		case Execution_metamodelPackage.EPATHWAY__LASTPROFESSIONAL:
 			return basicSetLastprofessional(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -792,37 +792,37 @@ public class ExecutionImpl extends MinimalEObjectImpl.Container implements Execu
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case Execution_metamodelPackage.EXECUTION__ELEMENT:
+		case Execution_metamodelPackage.EPATHWAY__ELEMENT:
 			return getElement();
-		case Execution_metamodelPackage.EXECUTION__ID:
+		case Execution_metamodelPackage.EPATHWAY__ID:
 			return getId();
-		case Execution_metamodelPackage.EXECUTION__URL:
+		case Execution_metamodelPackage.EPATHWAY__URL:
 			return getUrl();
-		case Execution_metamodelPackage.EXECUTION__CREATION_DATE:
+		case Execution_metamodelPackage.EPATHWAY__CREATION_DATE:
 			return getCreationDate();
-		case Execution_metamodelPackage.EXECUTION__CONCLUSION_DATE:
+		case Execution_metamodelPackage.EPATHWAY__CONCLUSION_DATE:
 			return getConclusionDate();
-		case Execution_metamodelPackage.EXECUTION__COMPLETED:
+		case Execution_metamodelPackage.EPATHWAY__COMPLETED:
 			return isCompleted();
-		case Execution_metamodelPackage.EXECUTION__ABORTED:
+		case Execution_metamodelPackage.EPATHWAY__ABORTED:
 			return isAborted();
-		case Execution_metamodelPackage.EXECUTION__LAST_EXECUTED_STEP_DATE:
+		case Execution_metamodelPackage.EPATHWAY__LAST_EXECUTED_STEP_DATE:
 			return getLastExecutedStepDate();
-		case Execution_metamodelPackage.EXECUTION__ID_PATHWAY:
+		case Execution_metamodelPackage.EPATHWAY__ID_PATHWAY:
 			return getIdPathway();
-		case Execution_metamodelPackage.EXECUTION__ID_LAST_PROFESSIONAL:
+		case Execution_metamodelPackage.EPATHWAY__ID_LAST_PROFESSIONAL:
 			return getIdLastProfessional();
-		case Execution_metamodelPackage.EXECUTION__ID_RESPONSIBLE:
+		case Execution_metamodelPackage.EPATHWAY__ID_RESPONSIBLE:
 			return getIdResponsible();
-		case Execution_metamodelPackage.EXECUTION__IDS_EXECUTED_STEP:
+		case Execution_metamodelPackage.EPATHWAY__IDS_EXECUTED_STEP:
 			return getIdsExecutedStep();
-		case Execution_metamodelPackage.EXECUTION__PATHWAY:
+		case Execution_metamodelPackage.EPATHWAY__PATHWAY:
 			return getPathway();
-		case Execution_metamodelPackage.EXECUTION__RESPONSIBLE:
+		case Execution_metamodelPackage.EPATHWAY__RESPONSIBLE:
 			return getResponsible();
-		case Execution_metamodelPackage.EXECUTION__LASTPROFESSIONAL:
+		case Execution_metamodelPackage.EPATHWAY__LASTPROFESSIONAL:
 			return getLastprofessional();
-		case Execution_metamodelPackage.EXECUTION__NAME:
+		case Execution_metamodelPackage.EPATHWAY__NAME:
 			return getName();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -837,54 +837,54 @@ public class ExecutionImpl extends MinimalEObjectImpl.Container implements Execu
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case Execution_metamodelPackage.EXECUTION__ELEMENT:
+		case Execution_metamodelPackage.EPATHWAY__ELEMENT:
 			getElement().clear();
-			getElement().addAll((Collection<? extends ExecutedElement>) newValue);
+			getElement().addAll((Collection<? extends EElement>) newValue);
 			return;
-		case Execution_metamodelPackage.EXECUTION__ID:
+		case Execution_metamodelPackage.EPATHWAY__ID:
 			setId((Integer) newValue);
 			return;
-		case Execution_metamodelPackage.EXECUTION__URL:
+		case Execution_metamodelPackage.EPATHWAY__URL:
 			setUrl((String) newValue);
 			return;
-		case Execution_metamodelPackage.EXECUTION__CREATION_DATE:
+		case Execution_metamodelPackage.EPATHWAY__CREATION_DATE:
 			setCreationDate((Date) newValue);
 			return;
-		case Execution_metamodelPackage.EXECUTION__CONCLUSION_DATE:
+		case Execution_metamodelPackage.EPATHWAY__CONCLUSION_DATE:
 			setConclusionDate((Date) newValue);
 			return;
-		case Execution_metamodelPackage.EXECUTION__COMPLETED:
+		case Execution_metamodelPackage.EPATHWAY__COMPLETED:
 			setCompleted((Boolean) newValue);
 			return;
-		case Execution_metamodelPackage.EXECUTION__ABORTED:
+		case Execution_metamodelPackage.EPATHWAY__ABORTED:
 			setAborted((Boolean) newValue);
 			return;
-		case Execution_metamodelPackage.EXECUTION__LAST_EXECUTED_STEP_DATE:
+		case Execution_metamodelPackage.EPATHWAY__LAST_EXECUTED_STEP_DATE:
 			setLastExecutedStepDate((String) newValue);
 			return;
-		case Execution_metamodelPackage.EXECUTION__ID_PATHWAY:
+		case Execution_metamodelPackage.EPATHWAY__ID_PATHWAY:
 			setIdPathway((Integer) newValue);
 			return;
-		case Execution_metamodelPackage.EXECUTION__ID_LAST_PROFESSIONAL:
+		case Execution_metamodelPackage.EPATHWAY__ID_LAST_PROFESSIONAL:
 			setIdLastProfessional((Integer) newValue);
 			return;
-		case Execution_metamodelPackage.EXECUTION__ID_RESPONSIBLE:
+		case Execution_metamodelPackage.EPATHWAY__ID_RESPONSIBLE:
 			setIdResponsible((Integer) newValue);
 			return;
-		case Execution_metamodelPackage.EXECUTION__IDS_EXECUTED_STEP:
+		case Execution_metamodelPackage.EPATHWAY__IDS_EXECUTED_STEP:
 			getIdsExecutedStep().clear();
 			getIdsExecutedStep().addAll((Collection<? extends Integer>) newValue);
 			return;
-		case Execution_metamodelPackage.EXECUTION__PATHWAY:
+		case Execution_metamodelPackage.EPATHWAY__PATHWAY:
 			setPathway((Pathway) newValue);
 			return;
-		case Execution_metamodelPackage.EXECUTION__RESPONSIBLE:
+		case Execution_metamodelPackage.EPATHWAY__RESPONSIBLE:
 			setResponsible((Responsible) newValue);
 			return;
-		case Execution_metamodelPackage.EXECUTION__LASTPROFESSIONAL:
+		case Execution_metamodelPackage.EPATHWAY__LASTPROFESSIONAL:
 			setLastprofessional((LastProfessional) newValue);
 			return;
-		case Execution_metamodelPackage.EXECUTION__NAME:
+		case Execution_metamodelPackage.EPATHWAY__NAME:
 			setName((String) newValue);
 			return;
 		}
@@ -899,52 +899,52 @@ public class ExecutionImpl extends MinimalEObjectImpl.Container implements Execu
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case Execution_metamodelPackage.EXECUTION__ELEMENT:
+		case Execution_metamodelPackage.EPATHWAY__ELEMENT:
 			getElement().clear();
 			return;
-		case Execution_metamodelPackage.EXECUTION__ID:
+		case Execution_metamodelPackage.EPATHWAY__ID:
 			setId(ID_EDEFAULT);
 			return;
-		case Execution_metamodelPackage.EXECUTION__URL:
+		case Execution_metamodelPackage.EPATHWAY__URL:
 			setUrl(URL_EDEFAULT);
 			return;
-		case Execution_metamodelPackage.EXECUTION__CREATION_DATE:
+		case Execution_metamodelPackage.EPATHWAY__CREATION_DATE:
 			setCreationDate(CREATION_DATE_EDEFAULT);
 			return;
-		case Execution_metamodelPackage.EXECUTION__CONCLUSION_DATE:
+		case Execution_metamodelPackage.EPATHWAY__CONCLUSION_DATE:
 			setConclusionDate(CONCLUSION_DATE_EDEFAULT);
 			return;
-		case Execution_metamodelPackage.EXECUTION__COMPLETED:
+		case Execution_metamodelPackage.EPATHWAY__COMPLETED:
 			setCompleted(COMPLETED_EDEFAULT);
 			return;
-		case Execution_metamodelPackage.EXECUTION__ABORTED:
+		case Execution_metamodelPackage.EPATHWAY__ABORTED:
 			setAborted(ABORTED_EDEFAULT);
 			return;
-		case Execution_metamodelPackage.EXECUTION__LAST_EXECUTED_STEP_DATE:
+		case Execution_metamodelPackage.EPATHWAY__LAST_EXECUTED_STEP_DATE:
 			setLastExecutedStepDate(LAST_EXECUTED_STEP_DATE_EDEFAULT);
 			return;
-		case Execution_metamodelPackage.EXECUTION__ID_PATHWAY:
+		case Execution_metamodelPackage.EPATHWAY__ID_PATHWAY:
 			setIdPathway(ID_PATHWAY_EDEFAULT);
 			return;
-		case Execution_metamodelPackage.EXECUTION__ID_LAST_PROFESSIONAL:
+		case Execution_metamodelPackage.EPATHWAY__ID_LAST_PROFESSIONAL:
 			setIdLastProfessional(ID_LAST_PROFESSIONAL_EDEFAULT);
 			return;
-		case Execution_metamodelPackage.EXECUTION__ID_RESPONSIBLE:
+		case Execution_metamodelPackage.EPATHWAY__ID_RESPONSIBLE:
 			setIdResponsible(ID_RESPONSIBLE_EDEFAULT);
 			return;
-		case Execution_metamodelPackage.EXECUTION__IDS_EXECUTED_STEP:
+		case Execution_metamodelPackage.EPATHWAY__IDS_EXECUTED_STEP:
 			getIdsExecutedStep().clear();
 			return;
-		case Execution_metamodelPackage.EXECUTION__PATHWAY:
+		case Execution_metamodelPackage.EPATHWAY__PATHWAY:
 			setPathway((Pathway) null);
 			return;
-		case Execution_metamodelPackage.EXECUTION__RESPONSIBLE:
+		case Execution_metamodelPackage.EPATHWAY__RESPONSIBLE:
 			setResponsible((Responsible) null);
 			return;
-		case Execution_metamodelPackage.EXECUTION__LASTPROFESSIONAL:
+		case Execution_metamodelPackage.EPATHWAY__LASTPROFESSIONAL:
 			setLastprofessional((LastProfessional) null);
 			return;
-		case Execution_metamodelPackage.EXECUTION__NAME:
+		case Execution_metamodelPackage.EPATHWAY__NAME:
 			setName(NAME_EDEFAULT);
 			return;
 		}
@@ -959,39 +959,39 @@ public class ExecutionImpl extends MinimalEObjectImpl.Container implements Execu
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case Execution_metamodelPackage.EXECUTION__ELEMENT:
+		case Execution_metamodelPackage.EPATHWAY__ELEMENT:
 			return element != null && !element.isEmpty();
-		case Execution_metamodelPackage.EXECUTION__ID:
+		case Execution_metamodelPackage.EPATHWAY__ID:
 			return id != ID_EDEFAULT;
-		case Execution_metamodelPackage.EXECUTION__URL:
+		case Execution_metamodelPackage.EPATHWAY__URL:
 			return URL_EDEFAULT == null ? url != null : !URL_EDEFAULT.equals(url);
-		case Execution_metamodelPackage.EXECUTION__CREATION_DATE:
+		case Execution_metamodelPackage.EPATHWAY__CREATION_DATE:
 			return CREATION_DATE_EDEFAULT == null ? creationDate != null : !CREATION_DATE_EDEFAULT.equals(creationDate);
-		case Execution_metamodelPackage.EXECUTION__CONCLUSION_DATE:
+		case Execution_metamodelPackage.EPATHWAY__CONCLUSION_DATE:
 			return CONCLUSION_DATE_EDEFAULT == null ? conclusionDate != null
 					: !CONCLUSION_DATE_EDEFAULT.equals(conclusionDate);
-		case Execution_metamodelPackage.EXECUTION__COMPLETED:
+		case Execution_metamodelPackage.EPATHWAY__COMPLETED:
 			return completed != COMPLETED_EDEFAULT;
-		case Execution_metamodelPackage.EXECUTION__ABORTED:
+		case Execution_metamodelPackage.EPATHWAY__ABORTED:
 			return aborted != ABORTED_EDEFAULT;
-		case Execution_metamodelPackage.EXECUTION__LAST_EXECUTED_STEP_DATE:
+		case Execution_metamodelPackage.EPATHWAY__LAST_EXECUTED_STEP_DATE:
 			return LAST_EXECUTED_STEP_DATE_EDEFAULT == null ? lastExecutedStepDate != null
 					: !LAST_EXECUTED_STEP_DATE_EDEFAULT.equals(lastExecutedStepDate);
-		case Execution_metamodelPackage.EXECUTION__ID_PATHWAY:
+		case Execution_metamodelPackage.EPATHWAY__ID_PATHWAY:
 			return idPathway != ID_PATHWAY_EDEFAULT;
-		case Execution_metamodelPackage.EXECUTION__ID_LAST_PROFESSIONAL:
+		case Execution_metamodelPackage.EPATHWAY__ID_LAST_PROFESSIONAL:
 			return idLastProfessional != ID_LAST_PROFESSIONAL_EDEFAULT;
-		case Execution_metamodelPackage.EXECUTION__ID_RESPONSIBLE:
+		case Execution_metamodelPackage.EPATHWAY__ID_RESPONSIBLE:
 			return idResponsible != ID_RESPONSIBLE_EDEFAULT;
-		case Execution_metamodelPackage.EXECUTION__IDS_EXECUTED_STEP:
+		case Execution_metamodelPackage.EPATHWAY__IDS_EXECUTED_STEP:
 			return idsExecutedStep != null && !idsExecutedStep.isEmpty();
-		case Execution_metamodelPackage.EXECUTION__PATHWAY:
+		case Execution_metamodelPackage.EPATHWAY__PATHWAY:
 			return pathway != null;
-		case Execution_metamodelPackage.EXECUTION__RESPONSIBLE:
+		case Execution_metamodelPackage.EPATHWAY__RESPONSIBLE:
 			return responsible != null;
-		case Execution_metamodelPackage.EXECUTION__LASTPROFESSIONAL:
+		case Execution_metamodelPackage.EPATHWAY__LASTPROFESSIONAL:
 			return lastprofessional != null;
-		case Execution_metamodelPackage.EXECUTION__NAME:
+		case Execution_metamodelPackage.EPATHWAY__NAME:
 			return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 		}
 		return super.eIsSet(featureID);
@@ -1036,4 +1036,4 @@ public class ExecutionImpl extends MinimalEObjectImpl.Container implements Execu
 		return result.toString();
 	}
 
-} //ExecutionImpl
+} //EPathwayImpl

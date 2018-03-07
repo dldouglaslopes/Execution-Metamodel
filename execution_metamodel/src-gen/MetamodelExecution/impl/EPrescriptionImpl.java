@@ -2,7 +2,7 @@
  */
 package MetamodelExecution.impl;
 
-import MetamodelExecution.ExecutedPrescription;
+import MetamodelExecution.EPrescription;
 import MetamodelExecution.Execution_metamodelPackage;
 import MetamodelExecution.PrescribedMedicament;
 import MetamodelExecution.PrescribedPrescriptionItem;
@@ -26,23 +26,23 @@ import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Executed Prescription</b></em>'.
+ * An implementation of the model object '<em><b>EPrescription</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link MetamodelExecution.impl.ExecutedPrescriptionImpl#getText <em>Text</em>}</li>
- *   <li>{@link MetamodelExecution.impl.ExecutedPrescriptionImpl#getPrescribedmedicament <em>Prescribedmedicament</em>}</li>
- *   <li>{@link MetamodelExecution.impl.ExecutedPrescriptionImpl#getPrescribedprescriptionitem <em>Prescribedprescriptionitem</em>}</li>
- *   <li>{@link MetamodelExecution.impl.ExecutedPrescriptionImpl#getIdsPrescribedMedication <em>Ids Prescribed Medication</em>}</li>
- *   <li>{@link MetamodelExecution.impl.ExecutedPrescriptionImpl#getIdsPrescribedPrescriptionItem <em>Ids Prescribed Prescription Item</em>}</li>
- *   <li>{@link MetamodelExecution.impl.ExecutedPrescriptionImpl#getPrescriptioninfo <em>Prescriptioninfo</em>}</li>
+ *   <li>{@link MetamodelExecution.impl.EPrescriptionImpl#getText <em>Text</em>}</li>
+ *   <li>{@link MetamodelExecution.impl.EPrescriptionImpl#getPrescribedmedicament <em>Prescribedmedicament</em>}</li>
+ *   <li>{@link MetamodelExecution.impl.EPrescriptionImpl#getPrescribedprescriptionitem <em>Prescribedprescriptionitem</em>}</li>
+ *   <li>{@link MetamodelExecution.impl.EPrescriptionImpl#getIdsPrescribedMedication <em>Ids Prescribed Medication</em>}</li>
+ *   <li>{@link MetamodelExecution.impl.EPrescriptionImpl#getIdsPrescribedPrescriptionItem <em>Ids Prescribed Prescription Item</em>}</li>
+ *   <li>{@link MetamodelExecution.impl.EPrescriptionImpl#getPrescriptioninfo <em>Prescriptioninfo</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class ExecutedPrescriptionImpl extends ExecutedElementImpl implements ExecutedPrescription {
+public class EPrescriptionImpl extends EElementImpl implements EPrescription {
 	/**
 	 * The default value of the '{@link #getText() <em>Text</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -118,7 +118,7 @@ public class ExecutedPrescriptionImpl extends ExecutedElementImpl implements Exe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ExecutedPrescriptionImpl() {
+	protected EPrescriptionImpl() {
 		super();
 	}
 
@@ -129,7 +129,7 @@ public class ExecutedPrescriptionImpl extends ExecutedElementImpl implements Exe
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Execution_metamodelPackage.Literals.EXECUTED_PRESCRIPTION;
+		return Execution_metamodelPackage.Literals.EPRESCRIPTION;
 	}
 
 	/**
@@ -150,8 +150,8 @@ public class ExecutedPrescriptionImpl extends ExecutedElementImpl implements Exe
 		String oldText = text;
 		text = newText;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET,
-					Execution_metamodelPackage.EXECUTED_PRESCRIPTION__TEXT, oldText, text));
+			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.EPRESCRIPTION__TEXT,
+					oldText, text));
 	}
 
 	/**
@@ -162,7 +162,7 @@ public class ExecutedPrescriptionImpl extends ExecutedElementImpl implements Exe
 	public EList<PrescribedMedicament> getPrescribedmedicament() {
 		if (prescribedmedicament == null) {
 			prescribedmedicament = new EObjectContainmentEList<PrescribedMedicament>(PrescribedMedicament.class, this,
-					Execution_metamodelPackage.EXECUTED_PRESCRIPTION__PRESCRIBEDMEDICAMENT);
+					Execution_metamodelPackage.EPRESCRIPTION__PRESCRIBEDMEDICAMENT);
 		}
 		return prescribedmedicament;
 	}
@@ -176,7 +176,7 @@ public class ExecutedPrescriptionImpl extends ExecutedElementImpl implements Exe
 		if (prescribedprescriptionitem == null) {
 			prescribedprescriptionitem = new EObjectContainmentEList<PrescribedPrescriptionItem>(
 					PrescribedPrescriptionItem.class, this,
-					Execution_metamodelPackage.EXECUTED_PRESCRIPTION__PRESCRIBEDPRESCRIPTIONITEM);
+					Execution_metamodelPackage.EPRESCRIPTION__PRESCRIBEDPRESCRIPTIONITEM);
 		}
 		return prescribedprescriptionitem;
 	}
@@ -189,7 +189,7 @@ public class ExecutedPrescriptionImpl extends ExecutedElementImpl implements Exe
 	public EList<Integer> getIdsPrescribedMedication() {
 		if (idsPrescribedMedication == null) {
 			idsPrescribedMedication = new EDataTypeUniqueEList<Integer>(Integer.class, this,
-					Execution_metamodelPackage.EXECUTED_PRESCRIPTION__IDS_PRESCRIBED_MEDICATION);
+					Execution_metamodelPackage.EPRESCRIPTION__IDS_PRESCRIBED_MEDICATION);
 		}
 		return idsPrescribedMedication;
 	}
@@ -202,7 +202,7 @@ public class ExecutedPrescriptionImpl extends ExecutedElementImpl implements Exe
 	public EList<Integer> getIdsPrescribedPrescriptionItem() {
 		if (idsPrescribedPrescriptionItem == null) {
 			idsPrescribedPrescriptionItem = new EDataTypeUniqueEList<Integer>(Integer.class, this,
-					Execution_metamodelPackage.EXECUTED_PRESCRIPTION__IDS_PRESCRIBED_PRESCRIPTION_ITEM);
+					Execution_metamodelPackage.EPRESCRIPTION__IDS_PRESCRIBED_PRESCRIPTION_ITEM);
 		}
 		return idsPrescribedPrescriptionItem;
 	}
@@ -215,7 +215,7 @@ public class ExecutedPrescriptionImpl extends ExecutedElementImpl implements Exe
 	public EList<PrescriptionInfo> getPrescriptioninfo() {
 		if (prescriptioninfo == null) {
 			prescriptioninfo = new EObjectContainmentEList<PrescriptionInfo>(PrescriptionInfo.class, this,
-					Execution_metamodelPackage.EXECUTED_PRESCRIPTION__PRESCRIPTIONINFO);
+					Execution_metamodelPackage.EPRESCRIPTION__PRESCRIPTIONINFO);
 		}
 		return prescriptioninfo;
 	}
@@ -228,11 +228,11 @@ public class ExecutedPrescriptionImpl extends ExecutedElementImpl implements Exe
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-		case Execution_metamodelPackage.EXECUTED_PRESCRIPTION__PRESCRIBEDMEDICAMENT:
+		case Execution_metamodelPackage.EPRESCRIPTION__PRESCRIBEDMEDICAMENT:
 			return ((InternalEList<?>) getPrescribedmedicament()).basicRemove(otherEnd, msgs);
-		case Execution_metamodelPackage.EXECUTED_PRESCRIPTION__PRESCRIBEDPRESCRIPTIONITEM:
+		case Execution_metamodelPackage.EPRESCRIPTION__PRESCRIBEDPRESCRIPTIONITEM:
 			return ((InternalEList<?>) getPrescribedprescriptionitem()).basicRemove(otherEnd, msgs);
-		case Execution_metamodelPackage.EXECUTED_PRESCRIPTION__PRESCRIPTIONINFO:
+		case Execution_metamodelPackage.EPRESCRIPTION__PRESCRIPTIONINFO:
 			return ((InternalEList<?>) getPrescriptioninfo()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -246,17 +246,17 @@ public class ExecutedPrescriptionImpl extends ExecutedElementImpl implements Exe
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case Execution_metamodelPackage.EXECUTED_PRESCRIPTION__TEXT:
+		case Execution_metamodelPackage.EPRESCRIPTION__TEXT:
 			return getText();
-		case Execution_metamodelPackage.EXECUTED_PRESCRIPTION__PRESCRIBEDMEDICAMENT:
+		case Execution_metamodelPackage.EPRESCRIPTION__PRESCRIBEDMEDICAMENT:
 			return getPrescribedmedicament();
-		case Execution_metamodelPackage.EXECUTED_PRESCRIPTION__PRESCRIBEDPRESCRIPTIONITEM:
+		case Execution_metamodelPackage.EPRESCRIPTION__PRESCRIBEDPRESCRIPTIONITEM:
 			return getPrescribedprescriptionitem();
-		case Execution_metamodelPackage.EXECUTED_PRESCRIPTION__IDS_PRESCRIBED_MEDICATION:
+		case Execution_metamodelPackage.EPRESCRIPTION__IDS_PRESCRIBED_MEDICATION:
 			return getIdsPrescribedMedication();
-		case Execution_metamodelPackage.EXECUTED_PRESCRIPTION__IDS_PRESCRIBED_PRESCRIPTION_ITEM:
+		case Execution_metamodelPackage.EPRESCRIPTION__IDS_PRESCRIBED_PRESCRIPTION_ITEM:
 			return getIdsPrescribedPrescriptionItem();
-		case Execution_metamodelPackage.EXECUTED_PRESCRIPTION__PRESCRIPTIONINFO:
+		case Execution_metamodelPackage.EPRESCRIPTION__PRESCRIPTIONINFO:
 			return getPrescriptioninfo();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -271,26 +271,26 @@ public class ExecutedPrescriptionImpl extends ExecutedElementImpl implements Exe
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case Execution_metamodelPackage.EXECUTED_PRESCRIPTION__TEXT:
+		case Execution_metamodelPackage.EPRESCRIPTION__TEXT:
 			setText((String) newValue);
 			return;
-		case Execution_metamodelPackage.EXECUTED_PRESCRIPTION__PRESCRIBEDMEDICAMENT:
+		case Execution_metamodelPackage.EPRESCRIPTION__PRESCRIBEDMEDICAMENT:
 			getPrescribedmedicament().clear();
 			getPrescribedmedicament().addAll((Collection<? extends PrescribedMedicament>) newValue);
 			return;
-		case Execution_metamodelPackage.EXECUTED_PRESCRIPTION__PRESCRIBEDPRESCRIPTIONITEM:
+		case Execution_metamodelPackage.EPRESCRIPTION__PRESCRIBEDPRESCRIPTIONITEM:
 			getPrescribedprescriptionitem().clear();
 			getPrescribedprescriptionitem().addAll((Collection<? extends PrescribedPrescriptionItem>) newValue);
 			return;
-		case Execution_metamodelPackage.EXECUTED_PRESCRIPTION__IDS_PRESCRIBED_MEDICATION:
+		case Execution_metamodelPackage.EPRESCRIPTION__IDS_PRESCRIBED_MEDICATION:
 			getIdsPrescribedMedication().clear();
 			getIdsPrescribedMedication().addAll((Collection<? extends Integer>) newValue);
 			return;
-		case Execution_metamodelPackage.EXECUTED_PRESCRIPTION__IDS_PRESCRIBED_PRESCRIPTION_ITEM:
+		case Execution_metamodelPackage.EPRESCRIPTION__IDS_PRESCRIBED_PRESCRIPTION_ITEM:
 			getIdsPrescribedPrescriptionItem().clear();
 			getIdsPrescribedPrescriptionItem().addAll((Collection<? extends Integer>) newValue);
 			return;
-		case Execution_metamodelPackage.EXECUTED_PRESCRIPTION__PRESCRIPTIONINFO:
+		case Execution_metamodelPackage.EPRESCRIPTION__PRESCRIPTIONINFO:
 			getPrescriptioninfo().clear();
 			getPrescriptioninfo().addAll((Collection<? extends PrescriptionInfo>) newValue);
 			return;
@@ -306,22 +306,22 @@ public class ExecutedPrescriptionImpl extends ExecutedElementImpl implements Exe
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case Execution_metamodelPackage.EXECUTED_PRESCRIPTION__TEXT:
+		case Execution_metamodelPackage.EPRESCRIPTION__TEXT:
 			setText(TEXT_EDEFAULT);
 			return;
-		case Execution_metamodelPackage.EXECUTED_PRESCRIPTION__PRESCRIBEDMEDICAMENT:
+		case Execution_metamodelPackage.EPRESCRIPTION__PRESCRIBEDMEDICAMENT:
 			getPrescribedmedicament().clear();
 			return;
-		case Execution_metamodelPackage.EXECUTED_PRESCRIPTION__PRESCRIBEDPRESCRIPTIONITEM:
+		case Execution_metamodelPackage.EPRESCRIPTION__PRESCRIBEDPRESCRIPTIONITEM:
 			getPrescribedprescriptionitem().clear();
 			return;
-		case Execution_metamodelPackage.EXECUTED_PRESCRIPTION__IDS_PRESCRIBED_MEDICATION:
+		case Execution_metamodelPackage.EPRESCRIPTION__IDS_PRESCRIBED_MEDICATION:
 			getIdsPrescribedMedication().clear();
 			return;
-		case Execution_metamodelPackage.EXECUTED_PRESCRIPTION__IDS_PRESCRIBED_PRESCRIPTION_ITEM:
+		case Execution_metamodelPackage.EPRESCRIPTION__IDS_PRESCRIBED_PRESCRIPTION_ITEM:
 			getIdsPrescribedPrescriptionItem().clear();
 			return;
-		case Execution_metamodelPackage.EXECUTED_PRESCRIPTION__PRESCRIPTIONINFO:
+		case Execution_metamodelPackage.EPRESCRIPTION__PRESCRIPTIONINFO:
 			getPrescriptioninfo().clear();
 			return;
 		}
@@ -336,17 +336,17 @@ public class ExecutedPrescriptionImpl extends ExecutedElementImpl implements Exe
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case Execution_metamodelPackage.EXECUTED_PRESCRIPTION__TEXT:
+		case Execution_metamodelPackage.EPRESCRIPTION__TEXT:
 			return TEXT_EDEFAULT == null ? text != null : !TEXT_EDEFAULT.equals(text);
-		case Execution_metamodelPackage.EXECUTED_PRESCRIPTION__PRESCRIBEDMEDICAMENT:
+		case Execution_metamodelPackage.EPRESCRIPTION__PRESCRIBEDMEDICAMENT:
 			return prescribedmedicament != null && !prescribedmedicament.isEmpty();
-		case Execution_metamodelPackage.EXECUTED_PRESCRIPTION__PRESCRIBEDPRESCRIPTIONITEM:
+		case Execution_metamodelPackage.EPRESCRIPTION__PRESCRIBEDPRESCRIPTIONITEM:
 			return prescribedprescriptionitem != null && !prescribedprescriptionitem.isEmpty();
-		case Execution_metamodelPackage.EXECUTED_PRESCRIPTION__IDS_PRESCRIBED_MEDICATION:
+		case Execution_metamodelPackage.EPRESCRIPTION__IDS_PRESCRIBED_MEDICATION:
 			return idsPrescribedMedication != null && !idsPrescribedMedication.isEmpty();
-		case Execution_metamodelPackage.EXECUTED_PRESCRIPTION__IDS_PRESCRIBED_PRESCRIPTION_ITEM:
+		case Execution_metamodelPackage.EPRESCRIPTION__IDS_PRESCRIBED_PRESCRIPTION_ITEM:
 			return idsPrescribedPrescriptionItem != null && !idsPrescribedPrescriptionItem.isEmpty();
-		case Execution_metamodelPackage.EXECUTED_PRESCRIPTION__PRESCRIPTIONINFO:
+		case Execution_metamodelPackage.EPRESCRIPTION__PRESCRIPTIONINFO:
 			return prescriptioninfo != null && !prescriptioninfo.isEmpty();
 		}
 		return super.eIsSet(featureID);
@@ -373,4 +373,4 @@ public class ExecutedPrescriptionImpl extends ExecutedElementImpl implements Exe
 		return result.toString();
 	}
 
-} //ExecutedPrescriptionImpl
+} //EPrescriptionImpl

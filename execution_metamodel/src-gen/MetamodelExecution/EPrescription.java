@@ -6,26 +6,26 @@ import org.eclipse.emf.common.util.EList;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>Executed Prescription</b></em>'.
+ * A representation of the model object '<em><b>EPrescription</b></em>'.
  * <!-- end-user-doc -->
  *
  * <p>
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link MetamodelExecution.ExecutedPrescription#getText <em>Text</em>}</li>
- *   <li>{@link MetamodelExecution.ExecutedPrescription#getPrescribedmedicament <em>Prescribedmedicament</em>}</li>
- *   <li>{@link MetamodelExecution.ExecutedPrescription#getPrescribedprescriptionitem <em>Prescribedprescriptionitem</em>}</li>
- *   <li>{@link MetamodelExecution.ExecutedPrescription#getIdsPrescribedMedication <em>Ids Prescribed Medication</em>}</li>
- *   <li>{@link MetamodelExecution.ExecutedPrescription#getIdsPrescribedPrescriptionItem <em>Ids Prescribed Prescription Item</em>}</li>
- *   <li>{@link MetamodelExecution.ExecutedPrescription#getPrescriptioninfo <em>Prescriptioninfo</em>}</li>
+ *   <li>{@link MetamodelExecution.EPrescription#getText <em>Text</em>}</li>
+ *   <li>{@link MetamodelExecution.EPrescription#getPrescribedmedicament <em>Prescribedmedicament</em>}</li>
+ *   <li>{@link MetamodelExecution.EPrescription#getPrescribedprescriptionitem <em>Prescribedprescriptionitem</em>}</li>
+ *   <li>{@link MetamodelExecution.EPrescription#getIdsPrescribedMedication <em>Ids Prescribed Medication</em>}</li>
+ *   <li>{@link MetamodelExecution.EPrescription#getIdsPrescribedPrescriptionItem <em>Ids Prescribed Prescription Item</em>}</li>
+ *   <li>{@link MetamodelExecution.EPrescription#getPrescriptioninfo <em>Prescriptioninfo</em>}</li>
  * </ul>
  *
- * @see MetamodelExecution.Execution_metamodelPackage#getExecutedPrescription()
+ * @see MetamodelExecution.Execution_metamodelPackage#getEPrescription()
  * @model
  * @generated
  */
-public interface ExecutedPrescription extends ExecutedElement {
+public interface EPrescription extends EElement {
 	/**
 	 * Returns the value of the '<em><b>Text</b></em>' attribute.
 	 * <!-- begin-user-doc -->
@@ -36,14 +36,14 @@ public interface ExecutedPrescription extends ExecutedElement {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Text</em>' attribute.
 	 * @see #setText(String)
-	 * @see MetamodelExecution.Execution_metamodelPackage#getExecutedPrescription_Text()
+	 * @see MetamodelExecution.Execution_metamodelPackage#getEPrescription_Text()
 	 * @model
 	 * @generated
 	 */
 	String getText();
 
 	/**
-	 * Sets the value of the '{@link MetamodelExecution.ExecutedPrescription#getText <em>Text</em>}' attribute.
+	 * Sets the value of the '{@link MetamodelExecution.EPrescription#getText <em>Text</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Text</em>' attribute.
@@ -62,7 +62,7 @@ public interface ExecutedPrescription extends ExecutedElement {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Prescribedmedicament</em>' containment reference list.
-	 * @see MetamodelExecution.Execution_metamodelPackage#getExecutedPrescription_Prescribedmedicament()
+	 * @see MetamodelExecution.Execution_metamodelPackage#getEPrescription_Prescribedmedicament()
 	 * @model containment="true"
 	 * @generated
 	 */
@@ -78,7 +78,7 @@ public interface ExecutedPrescription extends ExecutedElement {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Prescribedprescriptionitem</em>' containment reference list.
-	 * @see MetamodelExecution.Execution_metamodelPackage#getExecutedPrescription_Prescribedprescriptionitem()
+	 * @see MetamodelExecution.Execution_metamodelPackage#getEPrescription_Prescribedprescriptionitem()
 	 * @model containment="true"
 	 * @generated
 	 */
@@ -94,7 +94,7 @@ public interface ExecutedPrescription extends ExecutedElement {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Ids Prescribed Medication</em>' attribute list.
-	 * @see MetamodelExecution.Execution_metamodelPackage#getExecutedPrescription_IdsPrescribedMedication()
+	 * @see MetamodelExecution.Execution_metamodelPackage#getEPrescription_IdsPrescribedMedication()
 	 * @model
 	 * @generated
 	 */
@@ -110,7 +110,7 @@ public interface ExecutedPrescription extends ExecutedElement {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Ids Prescribed Prescription Item</em>' attribute list.
-	 * @see MetamodelExecution.Execution_metamodelPackage#getExecutedPrescription_IdsPrescribedPrescriptionItem()
+	 * @see MetamodelExecution.Execution_metamodelPackage#getEPrescription_IdsPrescribedPrescriptionItem()
 	 * @model
 	 * @generated
 	 */
@@ -126,10 +126,10 @@ public interface ExecutedPrescription extends ExecutedElement {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Prescriptioninfo</em>' containment reference list.
-	 * @see MetamodelExecution.Execution_metamodelPackage#getExecutedPrescription_Prescriptioninfo()
+	 * @see MetamodelExecution.Execution_metamodelPackage#getEPrescription_Prescriptioninfo()
 	 * @model containment="true"
 	 * @generated
 	 */
 	EList<PrescriptionInfo> getPrescriptioninfo();
 
-} // ExecutedPrescription
+} // EPrescription

@@ -6,21 +6,21 @@ import org.eclipse.emf.common.util.EList;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>Executed Auxiliary Conduct</b></em>'.
+ * A representation of the model object '<em><b>EAuxiliary Conduct</b></em>'.
  * <!-- end-user-doc -->
  *
  * <p>
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link MetamodelExecution.ExecutedAuxiliaryConduct#getAnswer <em>Answer</em>}</li>
+ *   <li>{@link MetamodelExecution.EAuxiliaryConduct#getAnswer <em>Answer</em>}</li>
  * </ul>
  *
- * @see MetamodelExecution.Execution_metamodelPackage#getExecutedAuxiliaryConduct()
+ * @see MetamodelExecution.Execution_metamodelPackage#getEAuxiliaryConduct()
  * @model
  * @generated
  */
-public interface ExecutedAuxiliaryConduct extends ExecutedElement {
+public interface EAuxiliaryConduct extends EElement {
 	/**
 	 * Returns the value of the '<em><b>Answer</b></em>' containment reference list.
 	 * The list contents are of type {@link MetamodelExecution.Answer}.
@@ -31,10 +31,10 @@ public interface ExecutedAuxiliaryConduct extends ExecutedElement {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Answer</em>' containment reference list.
-	 * @see MetamodelExecution.Execution_metamodelPackage#getExecutedAuxiliaryConduct_Answer()
+	 * @see MetamodelExecution.Execution_metamodelPackage#getEAuxiliaryConduct_Answer()
 	 * @model containment="true"
 	 * @generated
 	 */
 	EList<Answer> getAnswer();
 
-} // ExecutedAuxiliaryConduct
+} // EAuxiliaryConduct

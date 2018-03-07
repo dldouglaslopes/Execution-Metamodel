@@ -10,39 +10,39 @@ import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>Execution</b></em>'.
+ * A representation of the model object '<em><b>EPathway</b></em>'.
  * <!-- end-user-doc -->
  *
  * <p>
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link MetamodelExecution.Execution#getElement <em>Element</em>}</li>
- *   <li>{@link MetamodelExecution.Execution#getId <em>Id</em>}</li>
- *   <li>{@link MetamodelExecution.Execution#getUrl <em>Url</em>}</li>
- *   <li>{@link MetamodelExecution.Execution#getCreationDate <em>Creation Date</em>}</li>
- *   <li>{@link MetamodelExecution.Execution#getConclusionDate <em>Conclusion Date</em>}</li>
- *   <li>{@link MetamodelExecution.Execution#isCompleted <em>Completed</em>}</li>
- *   <li>{@link MetamodelExecution.Execution#isAborted <em>Aborted</em>}</li>
- *   <li>{@link MetamodelExecution.Execution#getLastExecutedStepDate <em>Last Executed Step Date</em>}</li>
- *   <li>{@link MetamodelExecution.Execution#getIdPathway <em>Id Pathway</em>}</li>
- *   <li>{@link MetamodelExecution.Execution#getIdLastProfessional <em>Id Last Professional</em>}</li>
- *   <li>{@link MetamodelExecution.Execution#getIdResponsible <em>Id Responsible</em>}</li>
- *   <li>{@link MetamodelExecution.Execution#getIdsExecutedStep <em>Ids Executed Step</em>}</li>
- *   <li>{@link MetamodelExecution.Execution#getPathway <em>Pathway</em>}</li>
- *   <li>{@link MetamodelExecution.Execution#getResponsible <em>Responsible</em>}</li>
- *   <li>{@link MetamodelExecution.Execution#getLastprofessional <em>Lastprofessional</em>}</li>
- *   <li>{@link MetamodelExecution.Execution#getName <em>Name</em>}</li>
+ *   <li>{@link MetamodelExecution.EPathway#getElement <em>Element</em>}</li>
+ *   <li>{@link MetamodelExecution.EPathway#getId <em>Id</em>}</li>
+ *   <li>{@link MetamodelExecution.EPathway#getUrl <em>Url</em>}</li>
+ *   <li>{@link MetamodelExecution.EPathway#getCreationDate <em>Creation Date</em>}</li>
+ *   <li>{@link MetamodelExecution.EPathway#getConclusionDate <em>Conclusion Date</em>}</li>
+ *   <li>{@link MetamodelExecution.EPathway#isCompleted <em>Completed</em>}</li>
+ *   <li>{@link MetamodelExecution.EPathway#isAborted <em>Aborted</em>}</li>
+ *   <li>{@link MetamodelExecution.EPathway#getLastExecutedStepDate <em>Last Executed Step Date</em>}</li>
+ *   <li>{@link MetamodelExecution.EPathway#getIdPathway <em>Id Pathway</em>}</li>
+ *   <li>{@link MetamodelExecution.EPathway#getIdLastProfessional <em>Id Last Professional</em>}</li>
+ *   <li>{@link MetamodelExecution.EPathway#getIdResponsible <em>Id Responsible</em>}</li>
+ *   <li>{@link MetamodelExecution.EPathway#getIdsExecutedStep <em>Ids Executed Step</em>}</li>
+ *   <li>{@link MetamodelExecution.EPathway#getPathway <em>Pathway</em>}</li>
+ *   <li>{@link MetamodelExecution.EPathway#getResponsible <em>Responsible</em>}</li>
+ *   <li>{@link MetamodelExecution.EPathway#getLastprofessional <em>Lastprofessional</em>}</li>
+ *   <li>{@link MetamodelExecution.EPathway#getName <em>Name</em>}</li>
  * </ul>
  *
- * @see MetamodelExecution.Execution_metamodelPackage#getExecution()
+ * @see MetamodelExecution.Execution_metamodelPackage#getEPathway()
  * @model
  * @generated
  */
-public interface Execution extends EObject {
+public interface EPathway extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Element</b></em>' containment reference list.
-	 * The list contents are of type {@link MetamodelExecution.ExecutedElement}.
+	 * The list contents are of type {@link MetamodelExecution.EElement}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Element</em>' containment reference list isn't clear,
@@ -50,11 +50,11 @@ public interface Execution extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Element</em>' containment reference list.
-	 * @see MetamodelExecution.Execution_metamodelPackage#getExecution_Element()
+	 * @see MetamodelExecution.Execution_metamodelPackage#getEPathway_Element()
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<ExecutedElement> getElement();
+	EList<EElement> getElement();
 
 	/**
 	 * Returns the value of the '<em><b>Id</b></em>' attribute.
@@ -66,14 +66,14 @@ public interface Execution extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Id</em>' attribute.
 	 * @see #setId(int)
-	 * @see MetamodelExecution.Execution_metamodelPackage#getExecution_Id()
+	 * @see MetamodelExecution.Execution_metamodelPackage#getEPathway_Id()
 	 * @model
 	 * @generated
 	 */
 	int getId();
 
 	/**
-	 * Sets the value of the '{@link MetamodelExecution.Execution#getId <em>Id</em>}' attribute.
+	 * Sets the value of the '{@link MetamodelExecution.EPathway#getId <em>Id</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Id</em>' attribute.
@@ -92,14 +92,14 @@ public interface Execution extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Url</em>' attribute.
 	 * @see #setUrl(String)
-	 * @see MetamodelExecution.Execution_metamodelPackage#getExecution_Url()
+	 * @see MetamodelExecution.Execution_metamodelPackage#getEPathway_Url()
 	 * @model
 	 * @generated
 	 */
 	String getUrl();
 
 	/**
-	 * Sets the value of the '{@link MetamodelExecution.Execution#getUrl <em>Url</em>}' attribute.
+	 * Sets the value of the '{@link MetamodelExecution.EPathway#getUrl <em>Url</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Url</em>' attribute.
@@ -118,14 +118,14 @@ public interface Execution extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Creation Date</em>' attribute.
 	 * @see #setCreationDate(Date)
-	 * @see MetamodelExecution.Execution_metamodelPackage#getExecution_CreationDate()
+	 * @see MetamodelExecution.Execution_metamodelPackage#getEPathway_CreationDate()
 	 * @model
 	 * @generated
 	 */
 	Date getCreationDate();
 
 	/**
-	 * Sets the value of the '{@link MetamodelExecution.Execution#getCreationDate <em>Creation Date</em>}' attribute.
+	 * Sets the value of the '{@link MetamodelExecution.EPathway#getCreationDate <em>Creation Date</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Creation Date</em>' attribute.
@@ -144,14 +144,14 @@ public interface Execution extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Conclusion Date</em>' attribute.
 	 * @see #setConclusionDate(Date)
-	 * @see MetamodelExecution.Execution_metamodelPackage#getExecution_ConclusionDate()
+	 * @see MetamodelExecution.Execution_metamodelPackage#getEPathway_ConclusionDate()
 	 * @model
 	 * @generated
 	 */
 	Date getConclusionDate();
 
 	/**
-	 * Sets the value of the '{@link MetamodelExecution.Execution#getConclusionDate <em>Conclusion Date</em>}' attribute.
+	 * Sets the value of the '{@link MetamodelExecution.EPathway#getConclusionDate <em>Conclusion Date</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Conclusion Date</em>' attribute.
@@ -171,14 +171,14 @@ public interface Execution extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Completed</em>' attribute.
 	 * @see #setCompleted(boolean)
-	 * @see MetamodelExecution.Execution_metamodelPackage#getExecution_Completed()
+	 * @see MetamodelExecution.Execution_metamodelPackage#getEPathway_Completed()
 	 * @model default="false"
 	 * @generated
 	 */
 	boolean isCompleted();
 
 	/**
-	 * Sets the value of the '{@link MetamodelExecution.Execution#isCompleted <em>Completed</em>}' attribute.
+	 * Sets the value of the '{@link MetamodelExecution.EPathway#isCompleted <em>Completed</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Completed</em>' attribute.
@@ -197,14 +197,14 @@ public interface Execution extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Aborted</em>' attribute.
 	 * @see #setAborted(boolean)
-	 * @see MetamodelExecution.Execution_metamodelPackage#getExecution_Aborted()
+	 * @see MetamodelExecution.Execution_metamodelPackage#getEPathway_Aborted()
 	 * @model
 	 * @generated
 	 */
 	boolean isAborted();
 
 	/**
-	 * Sets the value of the '{@link MetamodelExecution.Execution#isAborted <em>Aborted</em>}' attribute.
+	 * Sets the value of the '{@link MetamodelExecution.EPathway#isAborted <em>Aborted</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Aborted</em>' attribute.
@@ -223,14 +223,14 @@ public interface Execution extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Last Executed Step Date</em>' attribute.
 	 * @see #setLastExecutedStepDate(String)
-	 * @see MetamodelExecution.Execution_metamodelPackage#getExecution_LastExecutedStepDate()
+	 * @see MetamodelExecution.Execution_metamodelPackage#getEPathway_LastExecutedStepDate()
 	 * @model
 	 * @generated
 	 */
 	String getLastExecutedStepDate();
 
 	/**
-	 * Sets the value of the '{@link MetamodelExecution.Execution#getLastExecutedStepDate <em>Last Executed Step Date</em>}' attribute.
+	 * Sets the value of the '{@link MetamodelExecution.EPathway#getLastExecutedStepDate <em>Last Executed Step Date</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Last Executed Step Date</em>' attribute.
@@ -249,14 +249,14 @@ public interface Execution extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Id Pathway</em>' attribute.
 	 * @see #setIdPathway(int)
-	 * @see MetamodelExecution.Execution_metamodelPackage#getExecution_IdPathway()
+	 * @see MetamodelExecution.Execution_metamodelPackage#getEPathway_IdPathway()
 	 * @model
 	 * @generated
 	 */
 	int getIdPathway();
 
 	/**
-	 * Sets the value of the '{@link MetamodelExecution.Execution#getIdPathway <em>Id Pathway</em>}' attribute.
+	 * Sets the value of the '{@link MetamodelExecution.EPathway#getIdPathway <em>Id Pathway</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Id Pathway</em>' attribute.
@@ -275,14 +275,14 @@ public interface Execution extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Id Last Professional</em>' attribute.
 	 * @see #setIdLastProfessional(int)
-	 * @see MetamodelExecution.Execution_metamodelPackage#getExecution_IdLastProfessional()
+	 * @see MetamodelExecution.Execution_metamodelPackage#getEPathway_IdLastProfessional()
 	 * @model
 	 * @generated
 	 */
 	int getIdLastProfessional();
 
 	/**
-	 * Sets the value of the '{@link MetamodelExecution.Execution#getIdLastProfessional <em>Id Last Professional</em>}' attribute.
+	 * Sets the value of the '{@link MetamodelExecution.EPathway#getIdLastProfessional <em>Id Last Professional</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Id Last Professional</em>' attribute.
@@ -301,14 +301,14 @@ public interface Execution extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Id Responsible</em>' attribute.
 	 * @see #setIdResponsible(int)
-	 * @see MetamodelExecution.Execution_metamodelPackage#getExecution_IdResponsible()
+	 * @see MetamodelExecution.Execution_metamodelPackage#getEPathway_IdResponsible()
 	 * @model
 	 * @generated
 	 */
 	int getIdResponsible();
 
 	/**
-	 * Sets the value of the '{@link MetamodelExecution.Execution#getIdResponsible <em>Id Responsible</em>}' attribute.
+	 * Sets the value of the '{@link MetamodelExecution.EPathway#getIdResponsible <em>Id Responsible</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Id Responsible</em>' attribute.
@@ -327,7 +327,7 @@ public interface Execution extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Ids Executed Step</em>' attribute list.
-	 * @see MetamodelExecution.Execution_metamodelPackage#getExecution_IdsExecutedStep()
+	 * @see MetamodelExecution.Execution_metamodelPackage#getEPathway_IdsExecutedStep()
 	 * @model
 	 * @generated
 	 */
@@ -343,14 +343,14 @@ public interface Execution extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Pathway</em>' containment reference.
 	 * @see #setPathway(Pathway)
-	 * @see MetamodelExecution.Execution_metamodelPackage#getExecution_Pathway()
+	 * @see MetamodelExecution.Execution_metamodelPackage#getEPathway_Pathway()
 	 * @model containment="true" required="true"
 	 * @generated
 	 */
 	Pathway getPathway();
 
 	/**
-	 * Sets the value of the '{@link MetamodelExecution.Execution#getPathway <em>Pathway</em>}' containment reference.
+	 * Sets the value of the '{@link MetamodelExecution.EPathway#getPathway <em>Pathway</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Pathway</em>' containment reference.
@@ -369,14 +369,14 @@ public interface Execution extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Responsible</em>' containment reference.
 	 * @see #setResponsible(Responsible)
-	 * @see MetamodelExecution.Execution_metamodelPackage#getExecution_Responsible()
+	 * @see MetamodelExecution.Execution_metamodelPackage#getEPathway_Responsible()
 	 * @model containment="true" required="true"
 	 * @generated
 	 */
 	Responsible getResponsible();
 
 	/**
-	 * Sets the value of the '{@link MetamodelExecution.Execution#getResponsible <em>Responsible</em>}' containment reference.
+	 * Sets the value of the '{@link MetamodelExecution.EPathway#getResponsible <em>Responsible</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Responsible</em>' containment reference.
@@ -395,14 +395,14 @@ public interface Execution extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Lastprofessional</em>' containment reference.
 	 * @see #setLastprofessional(LastProfessional)
-	 * @see MetamodelExecution.Execution_metamodelPackage#getExecution_Lastprofessional()
+	 * @see MetamodelExecution.Execution_metamodelPackage#getEPathway_Lastprofessional()
 	 * @model containment="true" required="true"
 	 * @generated
 	 */
 	LastProfessional getLastprofessional();
 
 	/**
-	 * Sets the value of the '{@link MetamodelExecution.Execution#getLastprofessional <em>Lastprofessional</em>}' containment reference.
+	 * Sets the value of the '{@link MetamodelExecution.EPathway#getLastprofessional <em>Lastprofessional</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Lastprofessional</em>' containment reference.
@@ -421,14 +421,14 @@ public interface Execution extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Name</em>' attribute.
 	 * @see #setName(String)
-	 * @see MetamodelExecution.Execution_metamodelPackage#getExecution_Name()
+	 * @see MetamodelExecution.Execution_metamodelPackage#getEPathway_Name()
 	 * @model
 	 * @generated
 	 */
 	String getName();
 
 	/**
-	 * Sets the value of the '{@link MetamodelExecution.Execution#getName <em>Name</em>}' attribute.
+	 * Sets the value of the '{@link MetamodelExecution.EPathway#getName <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Name</em>' attribute.
@@ -437,4 +437,4 @@ public interface Execution extends EObject {
 	 */
 	void setName(String value);
 
-} // Execution
+} // EPathway

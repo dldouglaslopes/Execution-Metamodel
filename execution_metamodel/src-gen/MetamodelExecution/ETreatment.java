@@ -6,28 +6,28 @@ import org.eclipse.emf.common.util.EList;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>Executed Treatment</b></em>'.
+ * A representation of the model object '<em><b>ETreatment</b></em>'.
  * <!-- end-user-doc -->
  *
  * <p>
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link MetamodelExecution.ExecutedTreatment#getPrescribedexam <em>Prescribedexam</em>}</li>
- *   <li>{@link MetamodelExecution.ExecutedTreatment#getPrescribedprocedure <em>Prescribedprocedure</em>}</li>
- *   <li>{@link MetamodelExecution.ExecutedTreatment#getPrescribedinternment <em>Prescribedinternment</em>}</li>
- *   <li>{@link MetamodelExecution.ExecutedTreatment#getPrescribedmedication <em>Prescribedmedication</em>}</li>
- *   <li>{@link MetamodelExecution.ExecutedTreatment#getIdsPrescribedExamination <em>Ids Prescribed Examination</em>}</li>
- *   <li>{@link MetamodelExecution.ExecutedTreatment#getIdsPrescribedProcedure <em>Ids Prescribed Procedure</em>}</li>
- *   <li>{@link MetamodelExecution.ExecutedTreatment#getIdsPrescribedInternment <em>Ids Prescribed Internment</em>}</li>
- *   <li>{@link MetamodelExecution.ExecutedTreatment#getIdsPrecribedMedication <em>Ids Precribed Medication</em>}</li>
+ *   <li>{@link MetamodelExecution.ETreatment#getPrescribedexam <em>Prescribedexam</em>}</li>
+ *   <li>{@link MetamodelExecution.ETreatment#getPrescribedprocedure <em>Prescribedprocedure</em>}</li>
+ *   <li>{@link MetamodelExecution.ETreatment#getPrescribedinternment <em>Prescribedinternment</em>}</li>
+ *   <li>{@link MetamodelExecution.ETreatment#getPrescribedmedication <em>Prescribedmedication</em>}</li>
+ *   <li>{@link MetamodelExecution.ETreatment#getIdsPrescribedExamination <em>Ids Prescribed Examination</em>}</li>
+ *   <li>{@link MetamodelExecution.ETreatment#getIdsPrescribedProcedure <em>Ids Prescribed Procedure</em>}</li>
+ *   <li>{@link MetamodelExecution.ETreatment#getIdsPrescribedInternment <em>Ids Prescribed Internment</em>}</li>
+ *   <li>{@link MetamodelExecution.ETreatment#getIdsPrecribedMedication <em>Ids Precribed Medication</em>}</li>
  * </ul>
  *
- * @see MetamodelExecution.Execution_metamodelPackage#getExecutedTreatment()
+ * @see MetamodelExecution.Execution_metamodelPackage#getETreatment()
  * @model
  * @generated
  */
-public interface ExecutedTreatment extends ExecutedElement {
+public interface ETreatment extends EElement {
 	/**
 	 * Returns the value of the '<em><b>Prescribedexam</b></em>' containment reference list.
 	 * The list contents are of type {@link MetamodelExecution.PrescribedExamination}.
@@ -38,7 +38,7 @@ public interface ExecutedTreatment extends ExecutedElement {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Prescribedexam</em>' containment reference list.
-	 * @see MetamodelExecution.Execution_metamodelPackage#getExecutedTreatment_Prescribedexam()
+	 * @see MetamodelExecution.Execution_metamodelPackage#getETreatment_Prescribedexam()
 	 * @model containment="true"
 	 * @generated
 	 */
@@ -54,7 +54,7 @@ public interface ExecutedTreatment extends ExecutedElement {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Prescribedprocedure</em>' containment reference list.
-	 * @see MetamodelExecution.Execution_metamodelPackage#getExecutedTreatment_Prescribedprocedure()
+	 * @see MetamodelExecution.Execution_metamodelPackage#getETreatment_Prescribedprocedure()
 	 * @model containment="true"
 	 * @generated
 	 */
@@ -70,7 +70,7 @@ public interface ExecutedTreatment extends ExecutedElement {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Prescribedinternment</em>' containment reference list.
-	 * @see MetamodelExecution.Execution_metamodelPackage#getExecutedTreatment_Prescribedinternment()
+	 * @see MetamodelExecution.Execution_metamodelPackage#getETreatment_Prescribedinternment()
 	 * @model containment="true"
 	 * @generated
 	 */
@@ -86,7 +86,7 @@ public interface ExecutedTreatment extends ExecutedElement {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Prescribedmedication</em>' containment reference list.
-	 * @see MetamodelExecution.Execution_metamodelPackage#getExecutedTreatment_Prescribedmedication()
+	 * @see MetamodelExecution.Execution_metamodelPackage#getETreatment_Prescribedmedication()
 	 * @model containment="true"
 	 * @generated
 	 */
@@ -102,7 +102,7 @@ public interface ExecutedTreatment extends ExecutedElement {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Ids Prescribed Examination</em>' attribute list.
-	 * @see MetamodelExecution.Execution_metamodelPackage#getExecutedTreatment_IdsPrescribedExamination()
+	 * @see MetamodelExecution.Execution_metamodelPackage#getETreatment_IdsPrescribedExamination()
 	 * @model
 	 * @generated
 	 */
@@ -118,7 +118,7 @@ public interface ExecutedTreatment extends ExecutedElement {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Ids Prescribed Procedure</em>' attribute list.
-	 * @see MetamodelExecution.Execution_metamodelPackage#getExecutedTreatment_IdsPrescribedProcedure()
+	 * @see MetamodelExecution.Execution_metamodelPackage#getETreatment_IdsPrescribedProcedure()
 	 * @model
 	 * @generated
 	 */
@@ -134,7 +134,7 @@ public interface ExecutedTreatment extends ExecutedElement {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Ids Prescribed Internment</em>' attribute list.
-	 * @see MetamodelExecution.Execution_metamodelPackage#getExecutedTreatment_IdsPrescribedInternment()
+	 * @see MetamodelExecution.Execution_metamodelPackage#getETreatment_IdsPrescribedInternment()
 	 * @model
 	 * @generated
 	 */
@@ -150,10 +150,10 @@ public interface ExecutedTreatment extends ExecutedElement {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Ids Precribed Medication</em>' attribute list.
-	 * @see MetamodelExecution.Execution_metamodelPackage#getExecutedTreatment_IdsPrecribedMedication()
+	 * @see MetamodelExecution.Execution_metamodelPackage#getETreatment_IdsPrecribedMedication()
 	 * @model
 	 * @generated
 	 */
 	EList<Integer> getIdsPrecribedMedication();
 
-} // ExecutedTreatment
+} // ETreatment

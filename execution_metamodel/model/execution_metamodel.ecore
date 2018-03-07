@@ -2,14 +2,14 @@
 <ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="MetamodelExecution" nsURI="http://www.example.org/MetamodelExecution"
     nsPrefix="MetamodelExecution">
-  <eClassifiers xsi:type="ecore:EClass" name="ExecutedAuxiliaryConduct" eSuperTypes="#//ExecutedElement">
+  <eClassifiers xsi:type="ecore:EClass" name="EAuxiliaryConduct" eSuperTypes="#//EElement">
     <eStructuralFeatures xsi:type="ecore:EReference" name="answer" upperBound="-1"
         eType="#//Answer" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ExecutedInformation" eSuperTypes="#//ExecutedElement"/>
-  <eClassifiers xsi:type="ecore:EClass" name="ExecutedDischarge" eSuperTypes="#//ExecutedElement"/>
-  <eClassifiers xsi:type="ecore:EClass" name="ExecutedReferral" eSuperTypes="#//ExecutedElement"/>
-  <eClassifiers xsi:type="ecore:EClass" name="ExecutedPrescription" eSuperTypes="#//ExecutedElement">
+  <eClassifiers xsi:type="ecore:EClass" name="EInformation" eSuperTypes="#//EElement"/>
+  <eClassifiers xsi:type="ecore:EClass" name="EDischarge" eSuperTypes="#//EElement"/>
+  <eClassifiers xsi:type="ecore:EClass" name="EReferral" eSuperTypes="#//EElement"/>
+  <eClassifiers xsi:type="ecore:EClass" name="EPrescription" eSuperTypes="#//EElement">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="text" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="prescribedmedicament" upperBound="-1"
         eType="#//PrescribedMedicament" containment="true"/>
@@ -22,7 +22,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="prescriptioninfo" upperBound="-1"
         eType="#//PrescriptionInfo" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ExecutedTreatment" eSuperTypes="#//ExecutedElement">
+  <eClassifiers xsi:type="ecore:EClass" name="ETreatment" eSuperTypes="#//EElement">
     <eStructuralFeatures xsi:type="ecore:EReference" name="prescribedexam" upperBound="-1"
         eType="#//PrescribedExamination" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="prescribedprocedure" upperBound="-1"
@@ -145,7 +145,7 @@
   <eClassifiers xsi:type="ecore:EClass" name="Creator" eSuperTypes="#//User"/>
   <eClassifiers xsi:type="ecore:EClass" name="Executor" eSuperTypes="#//User"/>
   <eClassifiers xsi:type="ecore:EClass" name="LastProfessional" eSuperTypes="#//User"/>
-  <eClassifiers xsi:type="ecore:EClass" name="ExecutedElement" abstract="true">
+  <eClassifiers xsi:type="ecore:EClass" name="EElement" abstract="true">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="typeVerbose" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -182,9 +182,9 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="PrescriptionInfo"/>
   <eClassifiers xsi:type="ecore:EClass" name="Question" eSuperTypes="pathwayMetamodel.ecore#//Question"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Execution">
+  <eClassifiers xsi:type="ecore:EClass" name="EPathway">
     <eStructuralFeatures xsi:type="ecore:EReference" name="element" upperBound="-1"
-        eType="#//ExecutedElement" containment="true"/>
+        eType="#//EElement" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="url" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="creationDate" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>

@@ -3,7 +3,7 @@
 package MetamodelExecution.impl;
 
 import MetamodelExecution.Creator;
-import MetamodelExecution.ExecutedElement;
+import MetamodelExecution.EElement;
 import MetamodelExecution.Execution_metamodelPackage;
 import MetamodelExecution.Executor;
 import MetamodelExecution.Justification;
@@ -22,35 +22,35 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Executed Element</b></em>'.
+ * An implementation of the model object '<em><b>EElement</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link MetamodelExecution.impl.ExecutedElementImpl#getId <em>Id</em>}</li>
- *   <li>{@link MetamodelExecution.impl.ExecutedElementImpl#getType <em>Type</em>}</li>
- *   <li>{@link MetamodelExecution.impl.ExecutedElementImpl#getTypeVerbose <em>Type Verbose</em>}</li>
- *   <li>{@link MetamodelExecution.impl.ExecutedElementImpl#getUrl <em>Url</em>}</li>
- *   <li>{@link MetamodelExecution.impl.ExecutedElementImpl#isIsCurrent <em>Is Current</em>}</li>
- *   <li>{@link MetamodelExecution.impl.ExecutedElementImpl#isReworked <em>Reworked</em>}</li>
- *   <li>{@link MetamodelExecution.impl.ExecutedElementImpl#isExecuted <em>Executed</em>}</li>
- *   <li>{@link MetamodelExecution.impl.ExecutedElementImpl#getCreationDate <em>Creation Date</em>}</li>
- *   <li>{@link MetamodelExecution.impl.ExecutedElementImpl#getModificationDate <em>Modification Date</em>}</li>
- *   <li>{@link MetamodelExecution.impl.ExecutedElementImpl#getExecutionDate <em>Execution Date</em>}</li>
- *   <li>{@link MetamodelExecution.impl.ExecutedElementImpl#getCreatedById <em>Created By Id</em>}</li>
- *   <li>{@link MetamodelExecution.impl.ExecutedElementImpl#getExecutedById <em>Executed By Id</em>}</li>
- *   <li>{@link MetamodelExecution.impl.ExecutedElementImpl#getIdStep <em>Id Step</em>}</li>
- *   <li>{@link MetamodelExecution.impl.ExecutedElementImpl#getJustification <em>Justification</em>}</li>
- *   <li>{@link MetamodelExecution.impl.ExecutedElementImpl#getStep <em>Step</em>}</li>
- *   <li>{@link MetamodelExecution.impl.ExecutedElementImpl#getCreator <em>Creator</em>}</li>
- *   <li>{@link MetamodelExecution.impl.ExecutedElementImpl#getExecutor <em>Executor</em>}</li>
- *   <li>{@link MetamodelExecution.impl.ExecutedElementImpl#getName <em>Name</em>}</li>
+ *   <li>{@link MetamodelExecution.impl.EElementImpl#getId <em>Id</em>}</li>
+ *   <li>{@link MetamodelExecution.impl.EElementImpl#getType <em>Type</em>}</li>
+ *   <li>{@link MetamodelExecution.impl.EElementImpl#getTypeVerbose <em>Type Verbose</em>}</li>
+ *   <li>{@link MetamodelExecution.impl.EElementImpl#getUrl <em>Url</em>}</li>
+ *   <li>{@link MetamodelExecution.impl.EElementImpl#isIsCurrent <em>Is Current</em>}</li>
+ *   <li>{@link MetamodelExecution.impl.EElementImpl#isReworked <em>Reworked</em>}</li>
+ *   <li>{@link MetamodelExecution.impl.EElementImpl#isExecuted <em>Executed</em>}</li>
+ *   <li>{@link MetamodelExecution.impl.EElementImpl#getCreationDate <em>Creation Date</em>}</li>
+ *   <li>{@link MetamodelExecution.impl.EElementImpl#getModificationDate <em>Modification Date</em>}</li>
+ *   <li>{@link MetamodelExecution.impl.EElementImpl#getExecutionDate <em>Execution Date</em>}</li>
+ *   <li>{@link MetamodelExecution.impl.EElementImpl#getCreatedById <em>Created By Id</em>}</li>
+ *   <li>{@link MetamodelExecution.impl.EElementImpl#getExecutedById <em>Executed By Id</em>}</li>
+ *   <li>{@link MetamodelExecution.impl.EElementImpl#getIdStep <em>Id Step</em>}</li>
+ *   <li>{@link MetamodelExecution.impl.EElementImpl#getJustification <em>Justification</em>}</li>
+ *   <li>{@link MetamodelExecution.impl.EElementImpl#getStep <em>Step</em>}</li>
+ *   <li>{@link MetamodelExecution.impl.EElementImpl#getCreator <em>Creator</em>}</li>
+ *   <li>{@link MetamodelExecution.impl.EElementImpl#getExecutor <em>Executor</em>}</li>
+ *   <li>{@link MetamodelExecution.impl.EElementImpl#getName <em>Name</em>}</li>
  * </ul>
  *
  * @generated
  */
-public abstract class ExecutedElementImpl extends MinimalEObjectImpl.Container implements ExecutedElement {
+public abstract class EElementImpl extends MinimalEObjectImpl.Container implements EElement {
 	/**
 	 * The default value of the '{@link #getId() <em>Id</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -376,7 +376,7 @@ public abstract class ExecutedElementImpl extends MinimalEObjectImpl.Container i
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ExecutedElementImpl() {
+	protected EElementImpl() {
 		super();
 	}
 
@@ -387,7 +387,7 @@ public abstract class ExecutedElementImpl extends MinimalEObjectImpl.Container i
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Execution_metamodelPackage.Literals.EXECUTED_ELEMENT;
+		return Execution_metamodelPackage.Literals.EELEMENT;
 	}
 
 	/**
@@ -408,8 +408,7 @@ public abstract class ExecutedElementImpl extends MinimalEObjectImpl.Container i
 		int oldId = id;
 		id = newId;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.EXECUTED_ELEMENT__ID,
-					oldId, id));
+			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.EELEMENT__ID, oldId, id));
 	}
 
 	/**
@@ -430,8 +429,8 @@ public abstract class ExecutedElementImpl extends MinimalEObjectImpl.Container i
 		String oldType = type;
 		type = newType;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.EXECUTED_ELEMENT__TYPE,
-					oldType, type));
+			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.EELEMENT__TYPE, oldType,
+					type));
 	}
 
 	/**
@@ -452,8 +451,8 @@ public abstract class ExecutedElementImpl extends MinimalEObjectImpl.Container i
 		String oldTypeVerbose = typeVerbose;
 		typeVerbose = newTypeVerbose;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET,
-					Execution_metamodelPackage.EXECUTED_ELEMENT__TYPE_VERBOSE, oldTypeVerbose, typeVerbose));
+			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.EELEMENT__TYPE_VERBOSE,
+					oldTypeVerbose, typeVerbose));
 	}
 
 	/**
@@ -474,8 +473,8 @@ public abstract class ExecutedElementImpl extends MinimalEObjectImpl.Container i
 		String oldUrl = url;
 		url = newUrl;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.EXECUTED_ELEMENT__URL,
-					oldUrl, url));
+			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.EELEMENT__URL, oldUrl,
+					url));
 	}
 
 	/**
@@ -496,8 +495,8 @@ public abstract class ExecutedElementImpl extends MinimalEObjectImpl.Container i
 		boolean oldIsCurrent = isCurrent;
 		isCurrent = newIsCurrent;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET,
-					Execution_metamodelPackage.EXECUTED_ELEMENT__IS_CURRENT, oldIsCurrent, isCurrent));
+			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.EELEMENT__IS_CURRENT,
+					oldIsCurrent, isCurrent));
 	}
 
 	/**
@@ -518,7 +517,7 @@ public abstract class ExecutedElementImpl extends MinimalEObjectImpl.Container i
 		boolean oldReworked = reworked;
 		reworked = newReworked;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.EXECUTED_ELEMENT__REWORKED,
+			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.EELEMENT__REWORKED,
 					oldReworked, reworked));
 	}
 
@@ -540,7 +539,7 @@ public abstract class ExecutedElementImpl extends MinimalEObjectImpl.Container i
 		boolean oldExecuted = executed;
 		executed = newExecuted;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.EXECUTED_ELEMENT__EXECUTED,
+			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.EELEMENT__EXECUTED,
 					oldExecuted, executed));
 	}
 
@@ -562,8 +561,8 @@ public abstract class ExecutedElementImpl extends MinimalEObjectImpl.Container i
 		Date oldCreationDate = creationDate;
 		creationDate = newCreationDate;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET,
-					Execution_metamodelPackage.EXECUTED_ELEMENT__CREATION_DATE, oldCreationDate, creationDate));
+			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.EELEMENT__CREATION_DATE,
+					oldCreationDate, creationDate));
 	}
 
 	/**
@@ -585,8 +584,7 @@ public abstract class ExecutedElementImpl extends MinimalEObjectImpl.Container i
 		modificationDate = newModificationDate;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET,
-					Execution_metamodelPackage.EXECUTED_ELEMENT__MODIFICATION_DATE, oldModificationDate,
-					modificationDate));
+					Execution_metamodelPackage.EELEMENT__MODIFICATION_DATE, oldModificationDate, modificationDate));
 	}
 
 	/**
@@ -607,8 +605,8 @@ public abstract class ExecutedElementImpl extends MinimalEObjectImpl.Container i
 		Date oldExecutionDate = executionDate;
 		executionDate = newExecutionDate;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET,
-					Execution_metamodelPackage.EXECUTED_ELEMENT__EXECUTION_DATE, oldExecutionDate, executionDate));
+			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.EELEMENT__EXECUTION_DATE,
+					oldExecutionDate, executionDate));
 	}
 
 	/**
@@ -629,8 +627,8 @@ public abstract class ExecutedElementImpl extends MinimalEObjectImpl.Container i
 		int oldCreatedById = createdById;
 		createdById = newCreatedById;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET,
-					Execution_metamodelPackage.EXECUTED_ELEMENT__CREATED_BY_ID, oldCreatedById, createdById));
+			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.EELEMENT__CREATED_BY_ID,
+					oldCreatedById, createdById));
 	}
 
 	/**
@@ -651,8 +649,8 @@ public abstract class ExecutedElementImpl extends MinimalEObjectImpl.Container i
 		int oldExecutedById = executedById;
 		executedById = newExecutedById;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET,
-					Execution_metamodelPackage.EXECUTED_ELEMENT__EXECUTED_BY_ID, oldExecutedById, executedById));
+			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.EELEMENT__EXECUTED_BY_ID,
+					oldExecutedById, executedById));
 	}
 
 	/**
@@ -673,7 +671,7 @@ public abstract class ExecutedElementImpl extends MinimalEObjectImpl.Container i
 		int oldIdStep = idStep;
 		idStep = newIdStep;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.EXECUTED_ELEMENT__ID_STEP,
+			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.EELEMENT__ID_STEP,
 					oldIdStep, idStep));
 	}
 
@@ -696,7 +694,7 @@ public abstract class ExecutedElementImpl extends MinimalEObjectImpl.Container i
 		justification = newJustification;
 		if (eNotificationRequired()) {
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
-					Execution_metamodelPackage.EXECUTED_ELEMENT__JUSTIFICATION, oldJustification, newJustification);
+					Execution_metamodelPackage.EELEMENT__JUSTIFICATION, oldJustification, newJustification);
 			if (msgs == null)
 				msgs = notification;
 			else
@@ -715,18 +713,16 @@ public abstract class ExecutedElementImpl extends MinimalEObjectImpl.Container i
 			NotificationChain msgs = null;
 			if (justification != null)
 				msgs = ((InternalEObject) justification).eInverseRemove(this,
-						EOPPOSITE_FEATURE_BASE - Execution_metamodelPackage.EXECUTED_ELEMENT__JUSTIFICATION, null,
-						msgs);
+						EOPPOSITE_FEATURE_BASE - Execution_metamodelPackage.EELEMENT__JUSTIFICATION, null, msgs);
 			if (newJustification != null)
 				msgs = ((InternalEObject) newJustification).eInverseAdd(this,
-						EOPPOSITE_FEATURE_BASE - Execution_metamodelPackage.EXECUTED_ELEMENT__JUSTIFICATION, null,
-						msgs);
+						EOPPOSITE_FEATURE_BASE - Execution_metamodelPackage.EELEMENT__JUSTIFICATION, null, msgs);
 			msgs = basicSetJustification(newJustification, msgs);
 			if (msgs != null)
 				msgs.dispatch();
 		} else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET,
-					Execution_metamodelPackage.EXECUTED_ELEMENT__JUSTIFICATION, newJustification, newJustification));
+			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.EELEMENT__JUSTIFICATION,
+					newJustification, newJustification));
 	}
 
 	/**
@@ -748,7 +744,7 @@ public abstract class ExecutedElementImpl extends MinimalEObjectImpl.Container i
 		step = newStep;
 		if (eNotificationRequired()) {
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
-					Execution_metamodelPackage.EXECUTED_ELEMENT__STEP, oldStep, newStep);
+					Execution_metamodelPackage.EELEMENT__STEP, oldStep, newStep);
 			if (msgs == null)
 				msgs = notification;
 			else
@@ -767,16 +763,16 @@ public abstract class ExecutedElementImpl extends MinimalEObjectImpl.Container i
 			NotificationChain msgs = null;
 			if (step != null)
 				msgs = ((InternalEObject) step).eInverseRemove(this,
-						EOPPOSITE_FEATURE_BASE - Execution_metamodelPackage.EXECUTED_ELEMENT__STEP, null, msgs);
+						EOPPOSITE_FEATURE_BASE - Execution_metamodelPackage.EELEMENT__STEP, null, msgs);
 			if (newStep != null)
 				msgs = ((InternalEObject) newStep).eInverseAdd(this,
-						EOPPOSITE_FEATURE_BASE - Execution_metamodelPackage.EXECUTED_ELEMENT__STEP, null, msgs);
+						EOPPOSITE_FEATURE_BASE - Execution_metamodelPackage.EELEMENT__STEP, null, msgs);
 			msgs = basicSetStep(newStep, msgs);
 			if (msgs != null)
 				msgs.dispatch();
 		} else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.EXECUTED_ELEMENT__STEP,
-					newStep, newStep));
+			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.EELEMENT__STEP, newStep,
+					newStep));
 	}
 
 	/**
@@ -798,7 +794,7 @@ public abstract class ExecutedElementImpl extends MinimalEObjectImpl.Container i
 		creator = newCreator;
 		if (eNotificationRequired()) {
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
-					Execution_metamodelPackage.EXECUTED_ELEMENT__CREATOR, oldCreator, newCreator);
+					Execution_metamodelPackage.EELEMENT__CREATOR, oldCreator, newCreator);
 			if (msgs == null)
 				msgs = notification;
 			else
@@ -817,15 +813,15 @@ public abstract class ExecutedElementImpl extends MinimalEObjectImpl.Container i
 			NotificationChain msgs = null;
 			if (creator != null)
 				msgs = ((InternalEObject) creator).eInverseRemove(this,
-						EOPPOSITE_FEATURE_BASE - Execution_metamodelPackage.EXECUTED_ELEMENT__CREATOR, null, msgs);
+						EOPPOSITE_FEATURE_BASE - Execution_metamodelPackage.EELEMENT__CREATOR, null, msgs);
 			if (newCreator != null)
 				msgs = ((InternalEObject) newCreator).eInverseAdd(this,
-						EOPPOSITE_FEATURE_BASE - Execution_metamodelPackage.EXECUTED_ELEMENT__CREATOR, null, msgs);
+						EOPPOSITE_FEATURE_BASE - Execution_metamodelPackage.EELEMENT__CREATOR, null, msgs);
 			msgs = basicSetCreator(newCreator, msgs);
 			if (msgs != null)
 				msgs.dispatch();
 		} else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.EXECUTED_ELEMENT__CREATOR,
+			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.EELEMENT__CREATOR,
 					newCreator, newCreator));
 	}
 
@@ -848,7 +844,7 @@ public abstract class ExecutedElementImpl extends MinimalEObjectImpl.Container i
 		executor = newExecutor;
 		if (eNotificationRequired()) {
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
-					Execution_metamodelPackage.EXECUTED_ELEMENT__EXECUTOR, oldExecutor, newExecutor);
+					Execution_metamodelPackage.EELEMENT__EXECUTOR, oldExecutor, newExecutor);
 			if (msgs == null)
 				msgs = notification;
 			else
@@ -867,15 +863,15 @@ public abstract class ExecutedElementImpl extends MinimalEObjectImpl.Container i
 			NotificationChain msgs = null;
 			if (executor != null)
 				msgs = ((InternalEObject) executor).eInverseRemove(this,
-						EOPPOSITE_FEATURE_BASE - Execution_metamodelPackage.EXECUTED_ELEMENT__EXECUTOR, null, msgs);
+						EOPPOSITE_FEATURE_BASE - Execution_metamodelPackage.EELEMENT__EXECUTOR, null, msgs);
 			if (newExecutor != null)
 				msgs = ((InternalEObject) newExecutor).eInverseAdd(this,
-						EOPPOSITE_FEATURE_BASE - Execution_metamodelPackage.EXECUTED_ELEMENT__EXECUTOR, null, msgs);
+						EOPPOSITE_FEATURE_BASE - Execution_metamodelPackage.EELEMENT__EXECUTOR, null, msgs);
 			msgs = basicSetExecutor(newExecutor, msgs);
 			if (msgs != null)
 				msgs.dispatch();
 		} else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.EXECUTED_ELEMENT__EXECUTOR,
+			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.EELEMENT__EXECUTOR,
 					newExecutor, newExecutor));
 	}
 
@@ -897,8 +893,8 @@ public abstract class ExecutedElementImpl extends MinimalEObjectImpl.Container i
 		String oldName = name;
 		name = newName;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.EXECUTED_ELEMENT__NAME,
-					oldName, name));
+			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.EELEMENT__NAME, oldName,
+					name));
 	}
 
 	/**
@@ -909,13 +905,13 @@ public abstract class ExecutedElementImpl extends MinimalEObjectImpl.Container i
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-		case Execution_metamodelPackage.EXECUTED_ELEMENT__JUSTIFICATION:
+		case Execution_metamodelPackage.EELEMENT__JUSTIFICATION:
 			return basicSetJustification(null, msgs);
-		case Execution_metamodelPackage.EXECUTED_ELEMENT__STEP:
+		case Execution_metamodelPackage.EELEMENT__STEP:
 			return basicSetStep(null, msgs);
-		case Execution_metamodelPackage.EXECUTED_ELEMENT__CREATOR:
+		case Execution_metamodelPackage.EELEMENT__CREATOR:
 			return basicSetCreator(null, msgs);
-		case Execution_metamodelPackage.EXECUTED_ELEMENT__EXECUTOR:
+		case Execution_metamodelPackage.EELEMENT__EXECUTOR:
 			return basicSetExecutor(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -929,41 +925,41 @@ public abstract class ExecutedElementImpl extends MinimalEObjectImpl.Container i
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case Execution_metamodelPackage.EXECUTED_ELEMENT__ID:
+		case Execution_metamodelPackage.EELEMENT__ID:
 			return getId();
-		case Execution_metamodelPackage.EXECUTED_ELEMENT__TYPE:
+		case Execution_metamodelPackage.EELEMENT__TYPE:
 			return getType();
-		case Execution_metamodelPackage.EXECUTED_ELEMENT__TYPE_VERBOSE:
+		case Execution_metamodelPackage.EELEMENT__TYPE_VERBOSE:
 			return getTypeVerbose();
-		case Execution_metamodelPackage.EXECUTED_ELEMENT__URL:
+		case Execution_metamodelPackage.EELEMENT__URL:
 			return getUrl();
-		case Execution_metamodelPackage.EXECUTED_ELEMENT__IS_CURRENT:
+		case Execution_metamodelPackage.EELEMENT__IS_CURRENT:
 			return isIsCurrent();
-		case Execution_metamodelPackage.EXECUTED_ELEMENT__REWORKED:
+		case Execution_metamodelPackage.EELEMENT__REWORKED:
 			return isReworked();
-		case Execution_metamodelPackage.EXECUTED_ELEMENT__EXECUTED:
+		case Execution_metamodelPackage.EELEMENT__EXECUTED:
 			return isExecuted();
-		case Execution_metamodelPackage.EXECUTED_ELEMENT__CREATION_DATE:
+		case Execution_metamodelPackage.EELEMENT__CREATION_DATE:
 			return getCreationDate();
-		case Execution_metamodelPackage.EXECUTED_ELEMENT__MODIFICATION_DATE:
+		case Execution_metamodelPackage.EELEMENT__MODIFICATION_DATE:
 			return getModificationDate();
-		case Execution_metamodelPackage.EXECUTED_ELEMENT__EXECUTION_DATE:
+		case Execution_metamodelPackage.EELEMENT__EXECUTION_DATE:
 			return getExecutionDate();
-		case Execution_metamodelPackage.EXECUTED_ELEMENT__CREATED_BY_ID:
+		case Execution_metamodelPackage.EELEMENT__CREATED_BY_ID:
 			return getCreatedById();
-		case Execution_metamodelPackage.EXECUTED_ELEMENT__EXECUTED_BY_ID:
+		case Execution_metamodelPackage.EELEMENT__EXECUTED_BY_ID:
 			return getExecutedById();
-		case Execution_metamodelPackage.EXECUTED_ELEMENT__ID_STEP:
+		case Execution_metamodelPackage.EELEMENT__ID_STEP:
 			return getIdStep();
-		case Execution_metamodelPackage.EXECUTED_ELEMENT__JUSTIFICATION:
+		case Execution_metamodelPackage.EELEMENT__JUSTIFICATION:
 			return getJustification();
-		case Execution_metamodelPackage.EXECUTED_ELEMENT__STEP:
+		case Execution_metamodelPackage.EELEMENT__STEP:
 			return getStep();
-		case Execution_metamodelPackage.EXECUTED_ELEMENT__CREATOR:
+		case Execution_metamodelPackage.EELEMENT__CREATOR:
 			return getCreator();
-		case Execution_metamodelPackage.EXECUTED_ELEMENT__EXECUTOR:
+		case Execution_metamodelPackage.EELEMENT__EXECUTOR:
 			return getExecutor();
-		case Execution_metamodelPackage.EXECUTED_ELEMENT__NAME:
+		case Execution_metamodelPackage.EELEMENT__NAME:
 			return getName();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -977,58 +973,58 @@ public abstract class ExecutedElementImpl extends MinimalEObjectImpl.Container i
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case Execution_metamodelPackage.EXECUTED_ELEMENT__ID:
+		case Execution_metamodelPackage.EELEMENT__ID:
 			setId((Integer) newValue);
 			return;
-		case Execution_metamodelPackage.EXECUTED_ELEMENT__TYPE:
+		case Execution_metamodelPackage.EELEMENT__TYPE:
 			setType((String) newValue);
 			return;
-		case Execution_metamodelPackage.EXECUTED_ELEMENT__TYPE_VERBOSE:
+		case Execution_metamodelPackage.EELEMENT__TYPE_VERBOSE:
 			setTypeVerbose((String) newValue);
 			return;
-		case Execution_metamodelPackage.EXECUTED_ELEMENT__URL:
+		case Execution_metamodelPackage.EELEMENT__URL:
 			setUrl((String) newValue);
 			return;
-		case Execution_metamodelPackage.EXECUTED_ELEMENT__IS_CURRENT:
+		case Execution_metamodelPackage.EELEMENT__IS_CURRENT:
 			setIsCurrent((Boolean) newValue);
 			return;
-		case Execution_metamodelPackage.EXECUTED_ELEMENT__REWORKED:
+		case Execution_metamodelPackage.EELEMENT__REWORKED:
 			setReworked((Boolean) newValue);
 			return;
-		case Execution_metamodelPackage.EXECUTED_ELEMENT__EXECUTED:
+		case Execution_metamodelPackage.EELEMENT__EXECUTED:
 			setExecuted((Boolean) newValue);
 			return;
-		case Execution_metamodelPackage.EXECUTED_ELEMENT__CREATION_DATE:
+		case Execution_metamodelPackage.EELEMENT__CREATION_DATE:
 			setCreationDate((Date) newValue);
 			return;
-		case Execution_metamodelPackage.EXECUTED_ELEMENT__MODIFICATION_DATE:
+		case Execution_metamodelPackage.EELEMENT__MODIFICATION_DATE:
 			setModificationDate((Date) newValue);
 			return;
-		case Execution_metamodelPackage.EXECUTED_ELEMENT__EXECUTION_DATE:
+		case Execution_metamodelPackage.EELEMENT__EXECUTION_DATE:
 			setExecutionDate((Date) newValue);
 			return;
-		case Execution_metamodelPackage.EXECUTED_ELEMENT__CREATED_BY_ID:
+		case Execution_metamodelPackage.EELEMENT__CREATED_BY_ID:
 			setCreatedById((Integer) newValue);
 			return;
-		case Execution_metamodelPackage.EXECUTED_ELEMENT__EXECUTED_BY_ID:
+		case Execution_metamodelPackage.EELEMENT__EXECUTED_BY_ID:
 			setExecutedById((Integer) newValue);
 			return;
-		case Execution_metamodelPackage.EXECUTED_ELEMENT__ID_STEP:
+		case Execution_metamodelPackage.EELEMENT__ID_STEP:
 			setIdStep((Integer) newValue);
 			return;
-		case Execution_metamodelPackage.EXECUTED_ELEMENT__JUSTIFICATION:
+		case Execution_metamodelPackage.EELEMENT__JUSTIFICATION:
 			setJustification((Justification) newValue);
 			return;
-		case Execution_metamodelPackage.EXECUTED_ELEMENT__STEP:
+		case Execution_metamodelPackage.EELEMENT__STEP:
 			setStep((Step) newValue);
 			return;
-		case Execution_metamodelPackage.EXECUTED_ELEMENT__CREATOR:
+		case Execution_metamodelPackage.EELEMENT__CREATOR:
 			setCreator((Creator) newValue);
 			return;
-		case Execution_metamodelPackage.EXECUTED_ELEMENT__EXECUTOR:
+		case Execution_metamodelPackage.EELEMENT__EXECUTOR:
 			setExecutor((Executor) newValue);
 			return;
-		case Execution_metamodelPackage.EXECUTED_ELEMENT__NAME:
+		case Execution_metamodelPackage.EELEMENT__NAME:
 			setName((String) newValue);
 			return;
 		}
@@ -1043,58 +1039,58 @@ public abstract class ExecutedElementImpl extends MinimalEObjectImpl.Container i
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case Execution_metamodelPackage.EXECUTED_ELEMENT__ID:
+		case Execution_metamodelPackage.EELEMENT__ID:
 			setId(ID_EDEFAULT);
 			return;
-		case Execution_metamodelPackage.EXECUTED_ELEMENT__TYPE:
+		case Execution_metamodelPackage.EELEMENT__TYPE:
 			setType(TYPE_EDEFAULT);
 			return;
-		case Execution_metamodelPackage.EXECUTED_ELEMENT__TYPE_VERBOSE:
+		case Execution_metamodelPackage.EELEMENT__TYPE_VERBOSE:
 			setTypeVerbose(TYPE_VERBOSE_EDEFAULT);
 			return;
-		case Execution_metamodelPackage.EXECUTED_ELEMENT__URL:
+		case Execution_metamodelPackage.EELEMENT__URL:
 			setUrl(URL_EDEFAULT);
 			return;
-		case Execution_metamodelPackage.EXECUTED_ELEMENT__IS_CURRENT:
+		case Execution_metamodelPackage.EELEMENT__IS_CURRENT:
 			setIsCurrent(IS_CURRENT_EDEFAULT);
 			return;
-		case Execution_metamodelPackage.EXECUTED_ELEMENT__REWORKED:
+		case Execution_metamodelPackage.EELEMENT__REWORKED:
 			setReworked(REWORKED_EDEFAULT);
 			return;
-		case Execution_metamodelPackage.EXECUTED_ELEMENT__EXECUTED:
+		case Execution_metamodelPackage.EELEMENT__EXECUTED:
 			setExecuted(EXECUTED_EDEFAULT);
 			return;
-		case Execution_metamodelPackage.EXECUTED_ELEMENT__CREATION_DATE:
+		case Execution_metamodelPackage.EELEMENT__CREATION_DATE:
 			setCreationDate(CREATION_DATE_EDEFAULT);
 			return;
-		case Execution_metamodelPackage.EXECUTED_ELEMENT__MODIFICATION_DATE:
+		case Execution_metamodelPackage.EELEMENT__MODIFICATION_DATE:
 			setModificationDate(MODIFICATION_DATE_EDEFAULT);
 			return;
-		case Execution_metamodelPackage.EXECUTED_ELEMENT__EXECUTION_DATE:
+		case Execution_metamodelPackage.EELEMENT__EXECUTION_DATE:
 			setExecutionDate(EXECUTION_DATE_EDEFAULT);
 			return;
-		case Execution_metamodelPackage.EXECUTED_ELEMENT__CREATED_BY_ID:
+		case Execution_metamodelPackage.EELEMENT__CREATED_BY_ID:
 			setCreatedById(CREATED_BY_ID_EDEFAULT);
 			return;
-		case Execution_metamodelPackage.EXECUTED_ELEMENT__EXECUTED_BY_ID:
+		case Execution_metamodelPackage.EELEMENT__EXECUTED_BY_ID:
 			setExecutedById(EXECUTED_BY_ID_EDEFAULT);
 			return;
-		case Execution_metamodelPackage.EXECUTED_ELEMENT__ID_STEP:
+		case Execution_metamodelPackage.EELEMENT__ID_STEP:
 			setIdStep(ID_STEP_EDEFAULT);
 			return;
-		case Execution_metamodelPackage.EXECUTED_ELEMENT__JUSTIFICATION:
+		case Execution_metamodelPackage.EELEMENT__JUSTIFICATION:
 			setJustification((Justification) null);
 			return;
-		case Execution_metamodelPackage.EXECUTED_ELEMENT__STEP:
+		case Execution_metamodelPackage.EELEMENT__STEP:
 			setStep((Step) null);
 			return;
-		case Execution_metamodelPackage.EXECUTED_ELEMENT__CREATOR:
+		case Execution_metamodelPackage.EELEMENT__CREATOR:
 			setCreator((Creator) null);
 			return;
-		case Execution_metamodelPackage.EXECUTED_ELEMENT__EXECUTOR:
+		case Execution_metamodelPackage.EELEMENT__EXECUTOR:
 			setExecutor((Executor) null);
 			return;
-		case Execution_metamodelPackage.EXECUTED_ELEMENT__NAME:
+		case Execution_metamodelPackage.EELEMENT__NAME:
 			setName(NAME_EDEFAULT);
 			return;
 		}
@@ -1109,43 +1105,43 @@ public abstract class ExecutedElementImpl extends MinimalEObjectImpl.Container i
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case Execution_metamodelPackage.EXECUTED_ELEMENT__ID:
+		case Execution_metamodelPackage.EELEMENT__ID:
 			return id != ID_EDEFAULT;
-		case Execution_metamodelPackage.EXECUTED_ELEMENT__TYPE:
+		case Execution_metamodelPackage.EELEMENT__TYPE:
 			return TYPE_EDEFAULT == null ? type != null : !TYPE_EDEFAULT.equals(type);
-		case Execution_metamodelPackage.EXECUTED_ELEMENT__TYPE_VERBOSE:
+		case Execution_metamodelPackage.EELEMENT__TYPE_VERBOSE:
 			return TYPE_VERBOSE_EDEFAULT == null ? typeVerbose != null : !TYPE_VERBOSE_EDEFAULT.equals(typeVerbose);
-		case Execution_metamodelPackage.EXECUTED_ELEMENT__URL:
+		case Execution_metamodelPackage.EELEMENT__URL:
 			return URL_EDEFAULT == null ? url != null : !URL_EDEFAULT.equals(url);
-		case Execution_metamodelPackage.EXECUTED_ELEMENT__IS_CURRENT:
+		case Execution_metamodelPackage.EELEMENT__IS_CURRENT:
 			return isCurrent != IS_CURRENT_EDEFAULT;
-		case Execution_metamodelPackage.EXECUTED_ELEMENT__REWORKED:
+		case Execution_metamodelPackage.EELEMENT__REWORKED:
 			return reworked != REWORKED_EDEFAULT;
-		case Execution_metamodelPackage.EXECUTED_ELEMENT__EXECUTED:
+		case Execution_metamodelPackage.EELEMENT__EXECUTED:
 			return executed != EXECUTED_EDEFAULT;
-		case Execution_metamodelPackage.EXECUTED_ELEMENT__CREATION_DATE:
+		case Execution_metamodelPackage.EELEMENT__CREATION_DATE:
 			return CREATION_DATE_EDEFAULT == null ? creationDate != null : !CREATION_DATE_EDEFAULT.equals(creationDate);
-		case Execution_metamodelPackage.EXECUTED_ELEMENT__MODIFICATION_DATE:
+		case Execution_metamodelPackage.EELEMENT__MODIFICATION_DATE:
 			return MODIFICATION_DATE_EDEFAULT == null ? modificationDate != null
 					: !MODIFICATION_DATE_EDEFAULT.equals(modificationDate);
-		case Execution_metamodelPackage.EXECUTED_ELEMENT__EXECUTION_DATE:
+		case Execution_metamodelPackage.EELEMENT__EXECUTION_DATE:
 			return EXECUTION_DATE_EDEFAULT == null ? executionDate != null
 					: !EXECUTION_DATE_EDEFAULT.equals(executionDate);
-		case Execution_metamodelPackage.EXECUTED_ELEMENT__CREATED_BY_ID:
+		case Execution_metamodelPackage.EELEMENT__CREATED_BY_ID:
 			return createdById != CREATED_BY_ID_EDEFAULT;
-		case Execution_metamodelPackage.EXECUTED_ELEMENT__EXECUTED_BY_ID:
+		case Execution_metamodelPackage.EELEMENT__EXECUTED_BY_ID:
 			return executedById != EXECUTED_BY_ID_EDEFAULT;
-		case Execution_metamodelPackage.EXECUTED_ELEMENT__ID_STEP:
+		case Execution_metamodelPackage.EELEMENT__ID_STEP:
 			return idStep != ID_STEP_EDEFAULT;
-		case Execution_metamodelPackage.EXECUTED_ELEMENT__JUSTIFICATION:
+		case Execution_metamodelPackage.EELEMENT__JUSTIFICATION:
 			return justification != null;
-		case Execution_metamodelPackage.EXECUTED_ELEMENT__STEP:
+		case Execution_metamodelPackage.EELEMENT__STEP:
 			return step != null;
-		case Execution_metamodelPackage.EXECUTED_ELEMENT__CREATOR:
+		case Execution_metamodelPackage.EELEMENT__CREATOR:
 			return creator != null;
-		case Execution_metamodelPackage.EXECUTED_ELEMENT__EXECUTOR:
+		case Execution_metamodelPackage.EELEMENT__EXECUTOR:
 			return executor != null;
-		case Execution_metamodelPackage.EXECUTED_ELEMENT__NAME:
+		case Execution_metamodelPackage.EELEMENT__NAME:
 			return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 		}
 		return super.eIsSet(featureID);
@@ -1194,4 +1190,4 @@ public abstract class ExecutedElementImpl extends MinimalEObjectImpl.Container i
 		return result.toString();
 	}
 
-} //ExecutedElementImpl
+} //EElementImpl

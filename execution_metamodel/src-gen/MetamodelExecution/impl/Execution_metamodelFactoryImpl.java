@@ -56,18 +56,18 @@ public class Execution_metamodelFactoryImpl extends EFactoryImpl implements Exec
 	@Override
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
-		case Execution_metamodelPackage.EXECUTED_AUXILIARY_CONDUCT:
-			return createExecutedAuxiliaryConduct();
-		case Execution_metamodelPackage.EXECUTED_INFORMATION:
-			return createExecutedInformation();
-		case Execution_metamodelPackage.EXECUTED_DISCHARGE:
-			return createExecutedDischarge();
-		case Execution_metamodelPackage.EXECUTED_REFERRAL:
-			return createExecutedReferral();
-		case Execution_metamodelPackage.EXECUTED_PRESCRIPTION:
-			return createExecutedPrescription();
-		case Execution_metamodelPackage.EXECUTED_TREATMENT:
-			return createExecutedTreatment();
+		case Execution_metamodelPackage.EAUXILIARY_CONDUCT:
+			return createEAuxiliaryConduct();
+		case Execution_metamodelPackage.EINFORMATION:
+			return createEInformation();
+		case Execution_metamodelPackage.EDISCHARGE:
+			return createEDischarge();
+		case Execution_metamodelPackage.EREFERRAL:
+			return createEReferral();
+		case Execution_metamodelPackage.EPRESCRIPTION:
+			return createEPrescription();
+		case Execution_metamodelPackage.ETREATMENT:
+			return createETreatment();
 		case Execution_metamodelPackage.EXAMINATION:
 			return createExamination();
 		case Execution_metamodelPackage.PRESCRIBED_EXAMINATION:
@@ -116,8 +116,8 @@ public class Execution_metamodelFactoryImpl extends EFactoryImpl implements Exec
 			return createPrescriptionInfo();
 		case Execution_metamodelPackage.QUESTION:
 			return createQuestion();
-		case Execution_metamodelPackage.EXECUTION:
-			return createExecution();
+		case Execution_metamodelPackage.EPATHWAY:
+			return createEPathway();
 		default:
 			throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -128,9 +128,9 @@ public class Execution_metamodelFactoryImpl extends EFactoryImpl implements Exec
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ExecutedAuxiliaryConduct createExecutedAuxiliaryConduct() {
-		ExecutedAuxiliaryConductImpl executedAuxiliaryConduct = new ExecutedAuxiliaryConductImpl();
-		return executedAuxiliaryConduct;
+	public EAuxiliaryConduct createEAuxiliaryConduct() {
+		EAuxiliaryConductImpl eAuxiliaryConduct = new EAuxiliaryConductImpl();
+		return eAuxiliaryConduct;
 	}
 
 	/**
@@ -138,9 +138,9 @@ public class Execution_metamodelFactoryImpl extends EFactoryImpl implements Exec
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ExecutedInformation createExecutedInformation() {
-		ExecutedInformationImpl executedInformation = new ExecutedInformationImpl();
-		return executedInformation;
+	public EInformation createEInformation() {
+		EInformationImpl eInformation = new EInformationImpl();
+		return eInformation;
 	}
 
 	/**
@@ -148,9 +148,9 @@ public class Execution_metamodelFactoryImpl extends EFactoryImpl implements Exec
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ExecutedDischarge createExecutedDischarge() {
-		ExecutedDischargeImpl executedDischarge = new ExecutedDischargeImpl();
-		return executedDischarge;
+	public EDischarge createEDischarge() {
+		EDischargeImpl eDischarge = new EDischargeImpl();
+		return eDischarge;
 	}
 
 	/**
@@ -158,9 +158,9 @@ public class Execution_metamodelFactoryImpl extends EFactoryImpl implements Exec
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ExecutedReferral createExecutedReferral() {
-		ExecutedReferralImpl executedReferral = new ExecutedReferralImpl();
-		return executedReferral;
+	public EReferral createEReferral() {
+		EReferralImpl eReferral = new EReferralImpl();
+		return eReferral;
 	}
 
 	/**
@@ -168,9 +168,9 @@ public class Execution_metamodelFactoryImpl extends EFactoryImpl implements Exec
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ExecutedPrescription createExecutedPrescription() {
-		ExecutedPrescriptionImpl executedPrescription = new ExecutedPrescriptionImpl();
-		return executedPrescription;
+	public EPrescription createEPrescription() {
+		EPrescriptionImpl ePrescription = new EPrescriptionImpl();
+		return ePrescription;
 	}
 
 	/**
@@ -178,9 +178,9 @@ public class Execution_metamodelFactoryImpl extends EFactoryImpl implements Exec
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ExecutedTreatment createExecutedTreatment() {
-		ExecutedTreatmentImpl executedTreatment = new ExecutedTreatmentImpl();
-		return executedTreatment;
+	public ETreatment createETreatment() {
+		ETreatmentImpl eTreatment = new ETreatmentImpl();
+		return eTreatment;
 	}
 
 	/**
@@ -428,9 +428,9 @@ public class Execution_metamodelFactoryImpl extends EFactoryImpl implements Exec
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Execution createExecution() {
-		ExecutionImpl execution = new ExecutionImpl();
-		return execution;
+	public EPathway createEPathway() {
+		EPathwayImpl ePathway = new EPathwayImpl();
+		return ePathway;
 	}
 
 	/**
