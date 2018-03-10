@@ -1954,13 +1954,22 @@ public interface Execution_metamodelPackage extends EPackage {
 	int COMPLEMENT__JUSTIFICATION = 4;
 
 	/**
+	 * The feature id for the '<em><b>Quantity</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPLEMENT__QUANTITY = 5;
+
+	/**
 	 * The number of structural features of the '<em>Complement</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int COMPLEMENT_FEATURE_COUNT = 5;
+	int COMPLEMENT_FEATURE_COUNT = 6;
 
 	/**
 	 * The number of operations of the '<em>Complement</em>' class.
@@ -3058,34 +3067,6 @@ public interface Execution_metamodelPackage extends EPackage {
 	int RESULT_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link MetamodelExecution.impl.QuantityImpl <em>Quantity</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see MetamodelExecution.impl.QuantityImpl
-	 * @see MetamodelExecution.impl.Execution_metamodelPackageImpl#getQuantity()
-	 * @generated
-	 */
-	int QUANTITY = 29;
-
-	/**
-	 * The number of structural features of the '<em>Quantity</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int QUANTITY_FEATURE_COUNT = 0;
-
-	/**
-	 * The number of operations of the '<em>Quantity</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int QUANTITY_OPERATION_COUNT = 0;
-
-	/**
 	 * The meta object id for the '{@link MetamodelExecution.impl.PrescriptionExamImpl <em>Prescription Exam</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3093,7 +3074,7 @@ public interface Execution_metamodelPackage extends EPackage {
 	 * @see MetamodelExecution.impl.Execution_metamodelPackageImpl#getPrescriptionExam()
 	 * @generated
 	 */
-	int PRESCRIPTION_EXAM = 30;
+	int PRESCRIPTION_EXAM = 29;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -3157,7 +3138,7 @@ public interface Execution_metamodelPackage extends EPackage {
 	 * @see MetamodelExecution.impl.Execution_metamodelPackageImpl#getPrescriptionInfo()
 	 * @generated
 	 */
-	int PRESCRIPTION_INFO = 31;
+	int PRESCRIPTION_INFO = 30;
 
 	/**
 	 * The number of structural features of the '<em>Prescription Info</em>' class.
@@ -3185,7 +3166,7 @@ public interface Execution_metamodelPackage extends EPackage {
 	 * @see MetamodelExecution.impl.Execution_metamodelPackageImpl#getQuestion()
 	 * @generated
 	 */
-	int QUESTION = 32;
+	int QUESTION = 31;
 
 	/**
 	 * The feature id for the '<em><b>Text</b></em>' attribute.
@@ -3258,7 +3239,7 @@ public interface Execution_metamodelPackage extends EPackage {
 	 * @see MetamodelExecution.impl.Execution_metamodelPackageImpl#getEPathway()
 	 * @generated
 	 */
-	int EPATHWAY = 33;
+	int EPATHWAY = 32;
 
 	/**
 	 * The feature id for the '<em><b>Element</b></em>' containment reference list.
@@ -3421,6 +3402,34 @@ public interface Execution_metamodelPackage extends EPackage {
 	 * @ordered
 	 */
 	int EPATHWAY_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link MetamodelExecution.impl.QuantityImpl <em>Quantity</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see MetamodelExecution.impl.QuantityImpl
+	 * @see MetamodelExecution.impl.Execution_metamodelPackageImpl#getQuantity()
+	 * @generated
+	 */
+	int QUANTITY = 33;
+
+	/**
+	 * The number of structural features of the '<em>Quantity</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int QUANTITY_FEATURE_COUNT = 0;
+
+	/**
+	 * The number of operations of the '<em>Quantity</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int QUANTITY_OPERATION_COUNT = 0;
 
 	/**
 	 * Returns the meta object for class '{@link MetamodelExecution.EAuxiliaryConduct <em>EAuxiliary Conduct</em>}'.
@@ -4024,6 +4033,17 @@ public interface Execution_metamodelPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getComplement_Justification();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link MetamodelExecution.Complement#getQuantity <em>Quantity</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Quantity</em>'.
+	 * @see MetamodelExecution.Complement#getQuantity()
+	 * @see #getComplement()
+	 * @generated
+	 */
+	EReference getComplement_Quantity();
 
 	/**
 	 * Returns the meta object for class '{@link MetamodelExecution.PrescribedPrescriptionItem <em>Prescribed Prescription Item</em>}'.
@@ -4802,16 +4822,6 @@ public interface Execution_metamodelPackage extends EPackage {
 	EClass getResult();
 
 	/**
-	 * Returns the meta object for class '{@link MetamodelExecution.Quantity <em>Quantity</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Quantity</em>'.
-	 * @see MetamodelExecution.Quantity
-	 * @generated
-	 */
-	EClass getQuantity();
-
-	/**
 	 * Returns the meta object for class '{@link MetamodelExecution.PrescriptionExam <em>Prescription Exam</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5070,6 +5080,16 @@ public interface Execution_metamodelPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getEPathway_Name();
+
+	/**
+	 * Returns the meta object for class '{@link MetamodelExecution.Quantity <em>Quantity</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Quantity</em>'.
+	 * @see MetamodelExecution.Quantity
+	 * @generated
+	 */
+	EClass getQuantity();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -5568,6 +5588,14 @@ public interface Execution_metamodelPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute COMPLEMENT__JUSTIFICATION = eINSTANCE.getComplement_Justification();
+
+		/**
+		 * The meta object literal for the '<em><b>Quantity</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference COMPLEMENT__QUANTITY = eINSTANCE.getComplement_Quantity();
 
 		/**
 		 * The meta object literal for the '{@link MetamodelExecution.impl.PrescribedPrescriptionItemImpl <em>Prescribed Prescription Item</em>}' class.
@@ -6178,16 +6206,6 @@ public interface Execution_metamodelPackage extends EPackage {
 		EClass RESULT = eINSTANCE.getResult();
 
 		/**
-		 * The meta object literal for the '{@link MetamodelExecution.impl.QuantityImpl <em>Quantity</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see MetamodelExecution.impl.QuantityImpl
-		 * @see MetamodelExecution.impl.Execution_metamodelPackageImpl#getQuantity()
-		 * @generated
-		 */
-		EClass QUANTITY = eINSTANCE.getQuantity();
-
-		/**
 		 * The meta object literal for the '{@link MetamodelExecution.impl.PrescriptionExamImpl <em>Prescription Exam</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -6386,6 +6404,16 @@ public interface Execution_metamodelPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute EPATHWAY__NAME = eINSTANCE.getEPathway_Name();
+
+		/**
+		 * The meta object literal for the '{@link MetamodelExecution.impl.QuantityImpl <em>Quantity</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see MetamodelExecution.impl.QuantityImpl
+		 * @see MetamodelExecution.impl.Execution_metamodelPackageImpl#getQuantity()
+		 * @generated
+		 */
+		EClass QUANTITY = eINSTANCE.getQuantity();
 
 	}
 

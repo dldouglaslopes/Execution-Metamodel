@@ -2,6 +2,8 @@
  */
 package MetamodelExecution;
 
+import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -18,6 +20,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link MetamodelExecution.Complement#getSideLimbDisplay <em>Side Limb Display</em>}</li>
  *   <li>{@link MetamodelExecution.Complement#getClinicalIndication <em>Clinical Indication</em>}</li>
  *   <li>{@link MetamodelExecution.Complement#getJustification <em>Justification</em>}</li>
+ *   <li>{@link MetamodelExecution.Complement#getQuantity <em>Quantity</em>}</li>
  * </ul>
  *
  * @see MetamodelExecution.Execution_metamodelPackage#getComplement()
@@ -112,12 +115,12 @@ public interface Complement extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Clinical Indication</em>' attribute.
-	 * @see #setClinicalIndication(int)
+	 * @see #setClinicalIndication(String)
 	 * @see MetamodelExecution.Execution_metamodelPackage#getComplement_ClinicalIndication()
 	 * @model
 	 * @generated
 	 */
-	int getClinicalIndication();
+	String getClinicalIndication();
 
 	/**
 	 * Sets the value of the '{@link MetamodelExecution.Complement#getClinicalIndication <em>Clinical Indication</em>}' attribute.
@@ -127,7 +130,7 @@ public interface Complement extends EObject {
 	 * @see #getClinicalIndication()
 	 * @generated
 	 */
-	void setClinicalIndication(int value);
+	void setClinicalIndication(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Justification</b></em>' attribute.
@@ -154,5 +157,21 @@ public interface Complement extends EObject {
 	 * @generated
 	 */
 	void setJustification(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Quantity</b></em>' containment reference list.
+	 * The list contents are of type {@link MetamodelExecution.Quantity}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Quantity</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Quantity</em>' containment reference list.
+	 * @see MetamodelExecution.Execution_metamodelPackage#getComplement_Quantity()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<Quantity> getQuantity();
 
 } // Complement

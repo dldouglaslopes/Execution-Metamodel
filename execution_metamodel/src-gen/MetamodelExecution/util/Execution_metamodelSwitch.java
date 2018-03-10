@@ -293,13 +293,6 @@ public class Execution_metamodelSwitch<T> extends Switch<T> {
 				theResult = defaultCase(theEObject);
 			return theResult;
 		}
-		case Execution_metamodelPackage.QUANTITY: {
-			Quantity quantity = (Quantity) theEObject;
-			T result = caseQuantity(quantity);
-			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
 		case Execution_metamodelPackage.PRESCRIPTION_EXAM: {
 			PrescriptionExam prescriptionExam = (PrescriptionExam) theEObject;
 			T result = casePrescriptionExam(prescriptionExam);
@@ -326,6 +319,13 @@ public class Execution_metamodelSwitch<T> extends Switch<T> {
 		case Execution_metamodelPackage.EPATHWAY: {
 			EPathway ePathway = (EPathway) theEObject;
 			T result = caseEPathway(ePathway);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case Execution_metamodelPackage.QUANTITY: {
+			Quantity quantity = (Quantity) theEObject;
+			T result = caseQuantity(quantity);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -771,21 +771,6 @@ public class Execution_metamodelSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Quantity</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Quantity</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseQuantity(Quantity object) {
-		return null;
-	}
-
-	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Prescription Exam</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -842,6 +827,21 @@ public class Execution_metamodelSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseEPathway(EPathway object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Quantity</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Quantity</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseQuantity(Quantity object) {
 		return null;
 	}
 

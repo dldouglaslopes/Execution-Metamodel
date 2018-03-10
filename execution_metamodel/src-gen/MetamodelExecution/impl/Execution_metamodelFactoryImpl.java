@@ -108,8 +108,6 @@ public class Execution_metamodelFactoryImpl extends EFactoryImpl implements Exec
 			return createLastProfessional();
 		case Execution_metamodelPackage.RESULT:
 			return createResult();
-		case Execution_metamodelPackage.QUANTITY:
-			return createQuantity();
 		case Execution_metamodelPackage.PRESCRIPTION_EXAM:
 			return createPrescriptionExam();
 		case Execution_metamodelPackage.PRESCRIPTION_INFO:
@@ -118,6 +116,8 @@ public class Execution_metamodelFactoryImpl extends EFactoryImpl implements Exec
 			return createQuestion();
 		case Execution_metamodelPackage.EPATHWAY:
 			return createEPathway();
+		case Execution_metamodelPackage.QUANTITY:
+			return createQuantity();
 		default:
 			throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -388,16 +388,6 @@ public class Execution_metamodelFactoryImpl extends EFactoryImpl implements Exec
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Quantity createQuantity() {
-		QuantityImpl quantity = new QuantityImpl();
-		return quantity;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public PrescriptionExam createPrescriptionExam() {
 		PrescriptionExamImpl prescriptionExam = new PrescriptionExamImpl();
 		return prescriptionExam;
@@ -431,6 +421,16 @@ public class Execution_metamodelFactoryImpl extends EFactoryImpl implements Exec
 	public EPathway createEPathway() {
 		EPathwayImpl ePathway = new EPathwayImpl();
 		return ePathway;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Quantity createQuantity() {
+		QuantityImpl quantity = new QuantityImpl();
+		return quantity;
 	}
 
 	/**

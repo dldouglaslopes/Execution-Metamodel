@@ -212,11 +212,6 @@ public class Execution_metamodelAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
-		public Adapter caseQuantity(Quantity object) {
-			return createQuantityAdapter();
-		}
-
-		@Override
 		public Adapter casePrescriptionExam(PrescriptionExam object) {
 			return createPrescriptionExamAdapter();
 		}
@@ -234,6 +229,11 @@ public class Execution_metamodelAdapterFactory extends AdapterFactoryImpl {
 		@Override
 		public Adapter caseEPathway(EPathway object) {
 			return createEPathwayAdapter();
+		}
+
+		@Override
+		public Adapter caseQuantity(Quantity object) {
+			return createQuantityAdapter();
 		}
 
 		@Override
@@ -667,20 +667,6 @@ public class Execution_metamodelAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link MetamodelExecution.Quantity <em>Quantity</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see MetamodelExecution.Quantity
-	 * @generated
-	 */
-	public Adapter createQuantityAdapter() {
-		return null;
-	}
-
-	/**
 	 * Creates a new adapter for an object of class '{@link MetamodelExecution.PrescriptionExam <em>Prescription Exam</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -733,6 +719,20 @@ public class Execution_metamodelAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createEPathwayAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link MetamodelExecution.Quantity <em>Quantity</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see MetamodelExecution.Quantity
+	 * @generated
+	 */
+	public Adapter createQuantityAdapter() {
 		return null;
 	}
 

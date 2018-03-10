@@ -265,13 +265,6 @@ public class Execution_metamodelPackageImpl extends EPackageImpl implements Exec
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass quantityEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	private EClass prescriptionExamEClass = null;
 
 	/**
@@ -294,6 +287,13 @@ public class Execution_metamodelPackageImpl extends EPackageImpl implements Exec
 	 * @generated
 	 */
 	private EClass ePathwayEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass quantityEClass = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -869,6 +869,15 @@ public class Execution_metamodelPackageImpl extends EPackageImpl implements Exec
 	 */
 	public EAttribute getComplement_Justification() {
 		return (EAttribute) complementEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getComplement_Quantity() {
+		return (EReference) complementEClass.getEStructuralFeatures().get(5);
 	}
 
 	/**
@@ -1524,15 +1533,6 @@ public class Execution_metamodelPackageImpl extends EPackageImpl implements Exec
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getQuantity() {
-		return quantityEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getPrescriptionExam() {
 		return prescriptionExamEClass;
 	}
@@ -1749,6 +1749,15 @@ public class Execution_metamodelPackageImpl extends EPackageImpl implements Exec
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getQuantity() {
+		return quantityEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public Execution_metamodelFactory getExecution_metamodelFactory() {
 		return (Execution_metamodelFactory) getEFactoryInstance();
 	}
@@ -1841,6 +1850,7 @@ public class Execution_metamodelPackageImpl extends EPackageImpl implements Exec
 		createEAttribute(complementEClass, COMPLEMENT__SIDE_LIMB_DISPLAY);
 		createEAttribute(complementEClass, COMPLEMENT__CLINICAL_INDICATION);
 		createEAttribute(complementEClass, COMPLEMENT__JUSTIFICATION);
+		createEReference(complementEClass, COMPLEMENT__QUANTITY);
 
 		prescribedPrescriptionItemEClass = createEClass(PRESCRIBED_PRESCRIPTION_ITEM);
 
@@ -1930,8 +1940,6 @@ public class Execution_metamodelPackageImpl extends EPackageImpl implements Exec
 
 		resultEClass = createEClass(RESULT);
 
-		quantityEClass = createEClass(QUANTITY);
-
 		prescriptionExamEClass = createEClass(PRESCRIPTION_EXAM);
 		createEAttribute(prescriptionExamEClass, PRESCRIPTION_EXAM__ID);
 		createEAttribute(prescriptionExamEClass, PRESCRIPTION_EXAM__SUCCESS);
@@ -1959,6 +1967,8 @@ public class Execution_metamodelPackageImpl extends EPackageImpl implements Exec
 		createEReference(ePathwayEClass, EPATHWAY__RESPONSIBLE);
 		createEReference(ePathwayEClass, EPATHWAY__LASTPROFESSIONAL);
 		createEAttribute(ePathwayEClass, EPATHWAY__NAME);
+
+		quantityEClass = createEClass(QUANTITY);
 	}
 
 	/**
@@ -2155,12 +2165,15 @@ public class Execution_metamodelPackageImpl extends EPackageImpl implements Exec
 		initEAttribute(getComplement_SideLimbDisplay(), ecorePackage.getEString(), "sideLimbDisplay", null, 0, 1,
 				Complement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
 				!IS_DERIVED, IS_ORDERED);
-		initEAttribute(getComplement_ClinicalIndication(), ecorePackage.getEInt(), "clinicalIndication", null, 0, 1,
+		initEAttribute(getComplement_ClinicalIndication(), ecorePackage.getEString(), "clinicalIndication", null, 0, 1,
 				Complement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
 				!IS_DERIVED, IS_ORDERED);
 		initEAttribute(getComplement_Justification(), ecorePackage.getEString(), "justification", null, 0, 1,
 				Complement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
 				!IS_DERIVED, IS_ORDERED);
+		initEReference(getComplement_Quantity(), this.getQuantity(), null, "quantity", null, 0, -1, Complement.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(prescribedPrescriptionItemEClass, PrescribedPrescriptionItem.class, "PrescribedPrescriptionItem",
 				!IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -2324,9 +2337,6 @@ public class Execution_metamodelPackageImpl extends EPackageImpl implements Exec
 
 		initEClass(resultEClass, Result.class, "Result", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		initEClass(quantityEClass, Quantity.class, "Quantity", !IS_ABSTRACT, !IS_INTERFACE,
-				IS_GENERATED_INSTANCE_CLASS);
-
 		initEClass(prescriptionExamEClass, PrescriptionExam.class, "PrescriptionExam", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getPrescriptionExam_Id(), ecorePackage.getEInt(), "id", null, 0, 1, PrescriptionExam.class,
@@ -2389,6 +2399,9 @@ public class Execution_metamodelPackageImpl extends EPackageImpl implements Exec
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getEPathway_Name(), ecorePackage.getEString(), "name", null, 0, 1, EPathway.class, !IS_TRANSIENT,
 				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(quantityEClass, Quantity.class, "Quantity", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
 
 		// Create resource
 		createResource(eNS_URI);

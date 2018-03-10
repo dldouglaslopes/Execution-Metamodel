@@ -256,15 +256,6 @@ public interface Execution_metamodelFactory extends EFactory {
 	Result createResult();
 
 	/**
-	 * Returns a new object of class '<em>Quantity</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Quantity</em>'.
-	 * @generated
-	 */
-	Quantity createQuantity();
-
-	/**
 	 * Returns a new object of class '<em>Prescription Exam</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -299,6 +290,15 @@ public interface Execution_metamodelFactory extends EFactory {
 	 * @generated
 	 */
 	EPathway createEPathway();
+
+	/**
+	 * Returns a new object of class '<em>Quantity</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Quantity</em>'.
+	 * @generated
+	 */
+	Quantity createQuantity();
 
 	/**
 	 * Returns the package supported by this factory.
