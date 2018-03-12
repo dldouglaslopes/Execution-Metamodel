@@ -37,6 +37,7 @@ import MetamodelExecution.Result;
 import MetamodelExecution.Step;
 import MetamodelExecution.User;
 import MetamodelExecution.Value;
+import MetamodelExecution.Variable;
 import MetamodelExecution.YesOrNo;
 
 import org.eclipse.emf.ecore.EAttribute;
@@ -45,10 +46,6 @@ import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 
 import org.eclipse.emf.ecore.impl.EPackageImpl;
-
-import pathwayMetamodel.PathwayMetamodelPackage;
-
-import pathwayMetamodel.impl.PathwayMetamodelPackageImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -279,13 +276,6 @@ public class Execution_metamodelPackageImpl extends EPackageImpl implements Exec
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass questionEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	private EClass ePathwayEClass = null;
 
 	/**
@@ -294,6 +284,20 @@ public class Execution_metamodelPackageImpl extends EPackageImpl implements Exec
 	 * @generated
 	 */
 	private EClass quantityEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass questionEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass variableEClass = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -345,19 +349,11 @@ public class Execution_metamodelPackageImpl extends EPackageImpl implements Exec
 
 		isInited = true;
 
-		// Obtain or create and register interdependencies
-		PathwayMetamodelPackageImpl thePathwayMetamodelPackage = (PathwayMetamodelPackageImpl) (EPackage.Registry.INSTANCE
-				.getEPackage(PathwayMetamodelPackage.eNS_URI) instanceof PathwayMetamodelPackageImpl
-						? EPackage.Registry.INSTANCE.getEPackage(PathwayMetamodelPackage.eNS_URI)
-						: PathwayMetamodelPackage.eINSTANCE);
-
 		// Create package meta-data objects
 		theExecution_metamodelPackage.createPackageContents();
-		thePathwayMetamodelPackage.createPackageContents();
 
 		// Initialize created meta-data
 		theExecution_metamodelPackage.initializePackageContents();
-		thePathwayMetamodelPackage.initializePackageContents();
 
 		// Mark meta-data to indicate it can't be changed
 		theExecution_metamodelPackage.freeze();
@@ -1587,15 +1583,6 @@ public class Execution_metamodelPackageImpl extends EPackageImpl implements Exec
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getQuestion() {
-		return questionEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getEPathway() {
 		return ePathwayEClass;
 	}
@@ -1749,8 +1736,152 @@ public class Execution_metamodelPackageImpl extends EPackageImpl implements Exec
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getEPathway_Justification() {
+		return (EReference) ePathwayEClass.getEStructuralFeatures().get(16);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getQuantity() {
 		return quantityEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getQuestion() {
+		return questionEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getQuestion_Id() {
+		return (EAttribute) questionEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getQuestion_Url() {
+		return (EAttribute) questionEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getQuestion_Text() {
+		return (EAttribute) questionEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getQuestion_Variable() {
+		return (EReference) questionEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getQuestion_IdCategory() {
+		return (EAttribute) questionEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getQuestion_Category() {
+		return (EAttribute) questionEClass.getEStructuralFeatures().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getVariable() {
+		return variableEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getVariable_Id() {
+		return (EAttribute) variableEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getVariable_Type() {
+		return (EAttribute) variableEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getVariable_TypeVerbose() {
+		return (EAttribute) variableEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getVariable_Url() {
+		return (EAttribute) variableEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getVariable_Name() {
+		return (EAttribute) variableEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getVariable_Weight() {
+		return (EAttribute) variableEClass.getEStructuralFeatures().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getVariable_Value() {
+		return (EReference) variableEClass.getEStructuralFeatures().get(6);
 	}
 
 	/**
@@ -1948,8 +2079,6 @@ public class Execution_metamodelPackageImpl extends EPackageImpl implements Exec
 
 		prescriptionInfoEClass = createEClass(PRESCRIPTION_INFO);
 
-		questionEClass = createEClass(QUESTION);
-
 		ePathwayEClass = createEClass(EPATHWAY);
 		createEReference(ePathwayEClass, EPATHWAY__ELEMENT);
 		createEAttribute(ePathwayEClass, EPATHWAY__ID);
@@ -1967,8 +2096,26 @@ public class Execution_metamodelPackageImpl extends EPackageImpl implements Exec
 		createEReference(ePathwayEClass, EPATHWAY__RESPONSIBLE);
 		createEReference(ePathwayEClass, EPATHWAY__LASTPROFESSIONAL);
 		createEAttribute(ePathwayEClass, EPATHWAY__NAME);
+		createEReference(ePathwayEClass, EPATHWAY__JUSTIFICATION);
 
 		quantityEClass = createEClass(QUANTITY);
+
+		questionEClass = createEClass(QUESTION);
+		createEAttribute(questionEClass, QUESTION__ID);
+		createEAttribute(questionEClass, QUESTION__URL);
+		createEAttribute(questionEClass, QUESTION__TEXT);
+		createEReference(questionEClass, QUESTION__VARIABLE);
+		createEAttribute(questionEClass, QUESTION__ID_CATEGORY);
+		createEAttribute(questionEClass, QUESTION__CATEGORY);
+
+		variableEClass = createEClass(VARIABLE);
+		createEAttribute(variableEClass, VARIABLE__ID);
+		createEAttribute(variableEClass, VARIABLE__TYPE);
+		createEAttribute(variableEClass, VARIABLE__TYPE_VERBOSE);
+		createEAttribute(variableEClass, VARIABLE__URL);
+		createEAttribute(variableEClass, VARIABLE__NAME);
+		createEAttribute(variableEClass, VARIABLE__WEIGHT);
+		createEReference(variableEClass, VARIABLE__VALUE);
 	}
 
 	/**
@@ -1995,10 +2142,6 @@ public class Execution_metamodelPackageImpl extends EPackageImpl implements Exec
 		setNsPrefix(eNS_PREFIX);
 		setNsURI(eNS_URI);
 
-		// Obtain other dependent packages
-		PathwayMetamodelPackage thePathwayMetamodelPackage = (PathwayMetamodelPackage) EPackage.Registry.INSTANCE
-				.getEPackage(PathwayMetamodelPackage.eNS_URI);
-
 		// Create type parameters
 
 		// Set bounds for type parameters
@@ -2016,7 +2159,6 @@ public class Execution_metamodelPackageImpl extends EPackageImpl implements Exec
 		creatorEClass.getESuperTypes().add(this.getUser());
 		executorEClass.getESuperTypes().add(this.getUser());
 		lastProfessionalEClass.getESuperTypes().add(this.getUser());
-		questionEClass.getESuperTypes().add(thePathwayMetamodelPackage.getQuestion());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(eAuxiliaryConductEClass, EAuxiliaryConduct.class, "EAuxiliaryConduct", !IS_ABSTRACT, !IS_INTERFACE,
@@ -2251,7 +2393,7 @@ public class Execution_metamodelPackageImpl extends EPackageImpl implements Exec
 		initEReference(getAnswer_Value(), this.getValue(), null, "value", null, 1, 1, Answer.class, !IS_TRANSIENT,
 				!IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED,
 				IS_ORDERED);
-		initEReference(getAnswer_Question(), this.getQuestion(), null, "question", null, 0, -1, Answer.class,
+		initEReference(getAnswer_Question(), this.getQuestion(), null, "question", null, 1, 1, Answer.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
@@ -2354,9 +2496,6 @@ public class Execution_metamodelPackageImpl extends EPackageImpl implements Exec
 		initEClass(prescriptionInfoEClass, PrescriptionInfo.class, "PrescriptionInfo", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
 
-		initEClass(questionEClass, Question.class, "Question", !IS_ABSTRACT, !IS_INTERFACE,
-				IS_GENERATED_INSTANCE_CLASS);
-
 		initEClass(ePathwayEClass, EPathway.class, "EPathway", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getEPathway_Element(), this.getEElement(), null, "element", null, 0, -1, EPathway.class,
@@ -2399,9 +2538,46 @@ public class Execution_metamodelPackageImpl extends EPackageImpl implements Exec
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getEPathway_Name(), ecorePackage.getEString(), "name", null, 0, 1, EPathway.class, !IS_TRANSIENT,
 				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getEPathway_Justification(), this.getJustification(), null, "justification", null, 0, 1,
+				EPathway.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(quantityEClass, Quantity.class, "Quantity", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(questionEClass, Question.class, "Question", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getQuestion_Id(), ecorePackage.getEInt(), "id", null, 0, 1, Question.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getQuestion_Url(), ecorePackage.getEString(), "url", null, 0, 1, Question.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getQuestion_Text(), ecorePackage.getEString(), "text", null, 0, 1, Question.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getQuestion_Variable(), this.getVariable(), null, "variable", null, 1, 1, Question.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getQuestion_IdCategory(), ecorePackage.getEInt(), "idCategory", null, 0, 1, Question.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getQuestion_Category(), ecorePackage.getEString(), "category", null, 0, 1, Question.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(variableEClass, Variable.class, "Variable", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getVariable_Id(), ecorePackage.getEInt(), "id", null, 0, 1, Variable.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getVariable_Type(), ecorePackage.getEString(), "type", null, 0, 1, Variable.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getVariable_TypeVerbose(), ecorePackage.getEString(), "typeVerbose", null, 0, 1, Variable.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getVariable_Url(), ecorePackage.getEString(), "url", null, 0, 1, Variable.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getVariable_Name(), ecorePackage.getEString(), "name", null, 0, 1, Variable.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getVariable_Weight(), ecorePackage.getEDouble(), "weight", null, 0, 1, Variable.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getVariable_Value(), this.getValue(), null, "value", null, 1, 1, Variable.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED,
+				IS_ORDERED);
 
 		// Create resource
 		createResource(eNS_URI);

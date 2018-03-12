@@ -307,15 +307,6 @@ public class Execution_metamodelSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case Execution_metamodelPackage.QUESTION: {
-			Question question = (Question) theEObject;
-			T result = caseQuestion(question);
-			if (result == null)
-				result = casePathwayMetamodel_Question(question);
-			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
 		case Execution_metamodelPackage.EPATHWAY: {
 			EPathway ePathway = (EPathway) theEObject;
 			T result = caseEPathway(ePathway);
@@ -326,6 +317,20 @@ public class Execution_metamodelSwitch<T> extends Switch<T> {
 		case Execution_metamodelPackage.QUANTITY: {
 			Quantity quantity = (Quantity) theEObject;
 			T result = caseQuantity(quantity);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case Execution_metamodelPackage.QUESTION: {
+			Question question = (Question) theEObject;
+			T result = caseQuestion(question);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case Execution_metamodelPackage.VARIABLE: {
+			Variable variable = (Variable) theEObject;
+			T result = caseVariable(variable);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -801,21 +806,6 @@ public class Execution_metamodelSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Question</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Question</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseQuestion(Question object) {
-		return null;
-	}
-
-	/**
 	 * Returns the result of interpreting the object as an instance of '<em>EPathway</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -856,7 +846,22 @@ public class Execution_metamodelSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T casePathwayMetamodel_Question(pathwayMetamodel.Question object) {
+	public T caseQuestion(Question object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Variable</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Variable</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseVariable(Variable object) {
 		return null;
 	}
 

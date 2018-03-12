@@ -7,8 +7,6 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 
-import pathwayMetamodel.PathwayMetamodelPackage;
-
 /**
  * <!-- begin-user-doc -->
  * The <b>Package</b> for the model.
@@ -2502,7 +2500,7 @@ public interface Execution_metamodelPackage extends EPackage {
 	int ANSWER__VALUE = 3;
 
 	/**
-	 * The feature id for the '<em><b>Question</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Question</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -3159,79 +3157,6 @@ public interface Execution_metamodelPackage extends EPackage {
 	int PRESCRIPTION_INFO_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link MetamodelExecution.impl.QuestionImpl <em>Question</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see MetamodelExecution.impl.QuestionImpl
-	 * @see MetamodelExecution.impl.Execution_metamodelPackageImpl#getQuestion()
-	 * @generated
-	 */
-	int QUESTION = 31;
-
-	/**
-	 * The feature id for the '<em><b>Text</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int QUESTION__TEXT = PathwayMetamodelPackage.QUESTION__TEXT;
-
-	/**
-	 * The feature id for the '<em><b>Variable</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int QUESTION__VARIABLE = PathwayMetamodelPackage.QUESTION__VARIABLE;
-
-	/**
-	 * The feature id for the '<em><b>Url</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int QUESTION__URL = PathwayMetamodelPackage.QUESTION__URL;
-
-	/**
-	 * The feature id for the '<em><b>Id</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int QUESTION__ID = PathwayMetamodelPackage.QUESTION__ID;
-
-	/**
-	 * The feature id for the '<em><b>Category</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int QUESTION__CATEGORY = PathwayMetamodelPackage.QUESTION__CATEGORY;
-
-	/**
-	 * The number of structural features of the '<em>Question</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int QUESTION_FEATURE_COUNT = PathwayMetamodelPackage.QUESTION_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of operations of the '<em>Question</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int QUESTION_OPERATION_COUNT = PathwayMetamodelPackage.QUESTION_OPERATION_COUNT + 0;
-
-	/**
 	 * The meta object id for the '{@link MetamodelExecution.impl.EPathwayImpl <em>EPathway</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3239,7 +3164,7 @@ public interface Execution_metamodelPackage extends EPackage {
 	 * @see MetamodelExecution.impl.Execution_metamodelPackageImpl#getEPathway()
 	 * @generated
 	 */
-	int EPATHWAY = 32;
+	int EPATHWAY = 31;
 
 	/**
 	 * The feature id for the '<em><b>Element</b></em>' containment reference list.
@@ -3386,13 +3311,22 @@ public interface Execution_metamodelPackage extends EPackage {
 	int EPATHWAY__NAME = 15;
 
 	/**
+	 * The feature id for the '<em><b>Justification</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EPATHWAY__JUSTIFICATION = 16;
+
+	/**
 	 * The number of structural features of the '<em>EPathway</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int EPATHWAY_FEATURE_COUNT = 16;
+	int EPATHWAY_FEATURE_COUNT = 17;
 
 	/**
 	 * The number of operations of the '<em>EPathway</em>' class.
@@ -3411,7 +3345,7 @@ public interface Execution_metamodelPackage extends EPackage {
 	 * @see MetamodelExecution.impl.Execution_metamodelPackageImpl#getQuantity()
 	 * @generated
 	 */
-	int QUANTITY = 33;
+	int QUANTITY = 32;
 
 	/**
 	 * The number of structural features of the '<em>Quantity</em>' class.
@@ -3430,6 +3364,179 @@ public interface Execution_metamodelPackage extends EPackage {
 	 * @ordered
 	 */
 	int QUANTITY_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link MetamodelExecution.impl.QuestionImpl <em>Question</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see MetamodelExecution.impl.QuestionImpl
+	 * @see MetamodelExecution.impl.Execution_metamodelPackageImpl#getQuestion()
+	 * @generated
+	 */
+	int QUESTION = 33;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int QUESTION__ID = 0;
+
+	/**
+	 * The feature id for the '<em><b>Url</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int QUESTION__URL = 1;
+
+	/**
+	 * The feature id for the '<em><b>Text</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int QUESTION__TEXT = 2;
+
+	/**
+	 * The feature id for the '<em><b>Variable</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int QUESTION__VARIABLE = 3;
+
+	/**
+	 * The feature id for the '<em><b>Id Category</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int QUESTION__ID_CATEGORY = 4;
+
+	/**
+	 * The feature id for the '<em><b>Category</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int QUESTION__CATEGORY = 5;
+
+	/**
+	 * The number of structural features of the '<em>Question</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int QUESTION_FEATURE_COUNT = 6;
+
+	/**
+	 * The number of operations of the '<em>Question</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int QUESTION_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link MetamodelExecution.impl.VariableImpl <em>Variable</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see MetamodelExecution.impl.VariableImpl
+	 * @see MetamodelExecution.impl.Execution_metamodelPackageImpl#getVariable()
+	 * @generated
+	 */
+	int VARIABLE = 34;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VARIABLE__ID = 0;
+
+	/**
+	 * The feature id for the '<em><b>Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VARIABLE__TYPE = 1;
+
+	/**
+	 * The feature id for the '<em><b>Type Verbose</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VARIABLE__TYPE_VERBOSE = 2;
+
+	/**
+	 * The feature id for the '<em><b>Url</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VARIABLE__URL = 3;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VARIABLE__NAME = 4;
+
+	/**
+	 * The feature id for the '<em><b>Weight</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VARIABLE__WEIGHT = 5;
+
+	/**
+	 * The feature id for the '<em><b>Value</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VARIABLE__VALUE = 6;
+
+	/**
+	 * The number of structural features of the '<em>Variable</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VARIABLE_FEATURE_COUNT = 7;
+
+	/**
+	 * The number of operations of the '<em>Variable</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VARIABLE_OPERATION_COUNT = 0;
 
 	/**
 	 * Returns the meta object for class '{@link MetamodelExecution.EAuxiliaryConduct <em>EAuxiliary Conduct</em>}'.
@@ -4412,10 +4519,10 @@ public interface Execution_metamodelPackage extends EPackage {
 	EReference getAnswer_Value();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link MetamodelExecution.Answer#getQuestion <em>Question</em>}'.
+	 * Returns the meta object for the containment reference '{@link MetamodelExecution.Answer#getQuestion <em>Question</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Question</em>'.
+	 * @return the meta object for the containment reference '<em>Question</em>'.
 	 * @see MetamodelExecution.Answer#getQuestion()
 	 * @see #getAnswer()
 	 * @generated
@@ -4886,16 +4993,6 @@ public interface Execution_metamodelPackage extends EPackage {
 	EClass getPrescriptionInfo();
 
 	/**
-	 * Returns the meta object for class '{@link MetamodelExecution.Question <em>Question</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Question</em>'.
-	 * @see MetamodelExecution.Question
-	 * @generated
-	 */
-	EClass getQuestion();
-
-	/**
 	 * Returns the meta object for class '{@link MetamodelExecution.EPathway <em>EPathway</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5082,6 +5179,17 @@ public interface Execution_metamodelPackage extends EPackage {
 	EAttribute getEPathway_Name();
 
 	/**
+	 * Returns the meta object for the containment reference '{@link MetamodelExecution.EPathway#getJustification <em>Justification</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Justification</em>'.
+	 * @see MetamodelExecution.EPathway#getJustification()
+	 * @see #getEPathway()
+	 * @generated
+	 */
+	EReference getEPathway_Justification();
+
+	/**
 	 * Returns the meta object for class '{@link MetamodelExecution.Quantity <em>Quantity</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5090,6 +5198,169 @@ public interface Execution_metamodelPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getQuantity();
+
+	/**
+	 * Returns the meta object for class '{@link MetamodelExecution.Question <em>Question</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Question</em>'.
+	 * @see MetamodelExecution.Question
+	 * @generated
+	 */
+	EClass getQuestion();
+
+	/**
+	 * Returns the meta object for the attribute '{@link MetamodelExecution.Question#getId <em>Id</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Id</em>'.
+	 * @see MetamodelExecution.Question#getId()
+	 * @see #getQuestion()
+	 * @generated
+	 */
+	EAttribute getQuestion_Id();
+
+	/**
+	 * Returns the meta object for the attribute '{@link MetamodelExecution.Question#getUrl <em>Url</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Url</em>'.
+	 * @see MetamodelExecution.Question#getUrl()
+	 * @see #getQuestion()
+	 * @generated
+	 */
+	EAttribute getQuestion_Url();
+
+	/**
+	 * Returns the meta object for the attribute '{@link MetamodelExecution.Question#getText <em>Text</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Text</em>'.
+	 * @see MetamodelExecution.Question#getText()
+	 * @see #getQuestion()
+	 * @generated
+	 */
+	EAttribute getQuestion_Text();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link MetamodelExecution.Question#getVariable <em>Variable</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Variable</em>'.
+	 * @see MetamodelExecution.Question#getVariable()
+	 * @see #getQuestion()
+	 * @generated
+	 */
+	EReference getQuestion_Variable();
+
+	/**
+	 * Returns the meta object for the attribute '{@link MetamodelExecution.Question#getIdCategory <em>Id Category</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Id Category</em>'.
+	 * @see MetamodelExecution.Question#getIdCategory()
+	 * @see #getQuestion()
+	 * @generated
+	 */
+	EAttribute getQuestion_IdCategory();
+
+	/**
+	 * Returns the meta object for the attribute '{@link MetamodelExecution.Question#getCategory <em>Category</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Category</em>'.
+	 * @see MetamodelExecution.Question#getCategory()
+	 * @see #getQuestion()
+	 * @generated
+	 */
+	EAttribute getQuestion_Category();
+
+	/**
+	 * Returns the meta object for class '{@link MetamodelExecution.Variable <em>Variable</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Variable</em>'.
+	 * @see MetamodelExecution.Variable
+	 * @generated
+	 */
+	EClass getVariable();
+
+	/**
+	 * Returns the meta object for the attribute '{@link MetamodelExecution.Variable#getId <em>Id</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Id</em>'.
+	 * @see MetamodelExecution.Variable#getId()
+	 * @see #getVariable()
+	 * @generated
+	 */
+	EAttribute getVariable_Id();
+
+	/**
+	 * Returns the meta object for the attribute '{@link MetamodelExecution.Variable#getType <em>Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Type</em>'.
+	 * @see MetamodelExecution.Variable#getType()
+	 * @see #getVariable()
+	 * @generated
+	 */
+	EAttribute getVariable_Type();
+
+	/**
+	 * Returns the meta object for the attribute '{@link MetamodelExecution.Variable#getTypeVerbose <em>Type Verbose</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Type Verbose</em>'.
+	 * @see MetamodelExecution.Variable#getTypeVerbose()
+	 * @see #getVariable()
+	 * @generated
+	 */
+	EAttribute getVariable_TypeVerbose();
+
+	/**
+	 * Returns the meta object for the attribute '{@link MetamodelExecution.Variable#getUrl <em>Url</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Url</em>'.
+	 * @see MetamodelExecution.Variable#getUrl()
+	 * @see #getVariable()
+	 * @generated
+	 */
+	EAttribute getVariable_Url();
+
+	/**
+	 * Returns the meta object for the attribute '{@link MetamodelExecution.Variable#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see MetamodelExecution.Variable#getName()
+	 * @see #getVariable()
+	 * @generated
+	 */
+	EAttribute getVariable_Name();
+
+	/**
+	 * Returns the meta object for the attribute '{@link MetamodelExecution.Variable#getWeight <em>Weight</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Weight</em>'.
+	 * @see MetamodelExecution.Variable#getWeight()
+	 * @see #getVariable()
+	 * @generated
+	 */
+	EAttribute getVariable_Weight();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link MetamodelExecution.Variable#getValue <em>Value</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Value</em>'.
+	 * @see MetamodelExecution.Variable#getValue()
+	 * @see #getVariable()
+	 * @generated
+	 */
+	EReference getVariable_Value();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -5886,7 +6157,7 @@ public interface Execution_metamodelPackage extends EPackage {
 		EReference ANSWER__VALUE = eINSTANCE.getAnswer_Value();
 
 		/**
-		 * The meta object literal for the '<em><b>Question</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Question</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -6258,16 +6529,6 @@ public interface Execution_metamodelPackage extends EPackage {
 		EClass PRESCRIPTION_INFO = eINSTANCE.getPrescriptionInfo();
 
 		/**
-		 * The meta object literal for the '{@link MetamodelExecution.impl.QuestionImpl <em>Question</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see MetamodelExecution.impl.QuestionImpl
-		 * @see MetamodelExecution.impl.Execution_metamodelPackageImpl#getQuestion()
-		 * @generated
-		 */
-		EClass QUESTION = eINSTANCE.getQuestion();
-
-		/**
 		 * The meta object literal for the '{@link MetamodelExecution.impl.EPathwayImpl <em>EPathway</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -6406,6 +6667,14 @@ public interface Execution_metamodelPackage extends EPackage {
 		EAttribute EPATHWAY__NAME = eINSTANCE.getEPathway_Name();
 
 		/**
+		 * The meta object literal for the '<em><b>Justification</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference EPATHWAY__JUSTIFICATION = eINSTANCE.getEPathway_Justification();
+
+		/**
 		 * The meta object literal for the '{@link MetamodelExecution.impl.QuantityImpl <em>Quantity</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -6414,6 +6683,130 @@ public interface Execution_metamodelPackage extends EPackage {
 		 * @generated
 		 */
 		EClass QUANTITY = eINSTANCE.getQuantity();
+
+		/**
+		 * The meta object literal for the '{@link MetamodelExecution.impl.QuestionImpl <em>Question</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see MetamodelExecution.impl.QuestionImpl
+		 * @see MetamodelExecution.impl.Execution_metamodelPackageImpl#getQuestion()
+		 * @generated
+		 */
+		EClass QUESTION = eINSTANCE.getQuestion();
+
+		/**
+		 * The meta object literal for the '<em><b>Id</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute QUESTION__ID = eINSTANCE.getQuestion_Id();
+
+		/**
+		 * The meta object literal for the '<em><b>Url</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute QUESTION__URL = eINSTANCE.getQuestion_Url();
+
+		/**
+		 * The meta object literal for the '<em><b>Text</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute QUESTION__TEXT = eINSTANCE.getQuestion_Text();
+
+		/**
+		 * The meta object literal for the '<em><b>Variable</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference QUESTION__VARIABLE = eINSTANCE.getQuestion_Variable();
+
+		/**
+		 * The meta object literal for the '<em><b>Id Category</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute QUESTION__ID_CATEGORY = eINSTANCE.getQuestion_IdCategory();
+
+		/**
+		 * The meta object literal for the '<em><b>Category</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute QUESTION__CATEGORY = eINSTANCE.getQuestion_Category();
+
+		/**
+		 * The meta object literal for the '{@link MetamodelExecution.impl.VariableImpl <em>Variable</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see MetamodelExecution.impl.VariableImpl
+		 * @see MetamodelExecution.impl.Execution_metamodelPackageImpl#getVariable()
+		 * @generated
+		 */
+		EClass VARIABLE = eINSTANCE.getVariable();
+
+		/**
+		 * The meta object literal for the '<em><b>Id</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute VARIABLE__ID = eINSTANCE.getVariable_Id();
+
+		/**
+		 * The meta object literal for the '<em><b>Type</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute VARIABLE__TYPE = eINSTANCE.getVariable_Type();
+
+		/**
+		 * The meta object literal for the '<em><b>Type Verbose</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute VARIABLE__TYPE_VERBOSE = eINSTANCE.getVariable_TypeVerbose();
+
+		/**
+		 * The meta object literal for the '<em><b>Url</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute VARIABLE__URL = eINSTANCE.getVariable_Url();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute VARIABLE__NAME = eINSTANCE.getVariable_Name();
+
+		/**
+		 * The meta object literal for the '<em><b>Weight</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute VARIABLE__WEIGHT = eINSTANCE.getVariable_Weight();
+
+		/**
+		 * The meta object literal for the '<em><b>Value</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference VARIABLE__VALUE = eINSTANCE.getVariable_Value();
 
 	}
 

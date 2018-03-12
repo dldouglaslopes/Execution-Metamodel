@@ -112,12 +112,14 @@ public class Execution_metamodelFactoryImpl extends EFactoryImpl implements Exec
 			return createPrescriptionExam();
 		case Execution_metamodelPackage.PRESCRIPTION_INFO:
 			return createPrescriptionInfo();
-		case Execution_metamodelPackage.QUESTION:
-			return createQuestion();
 		case Execution_metamodelPackage.EPATHWAY:
 			return createEPathway();
 		case Execution_metamodelPackage.QUANTITY:
 			return createQuantity();
+		case Execution_metamodelPackage.QUESTION:
+			return createQuestion();
+		case Execution_metamodelPackage.VARIABLE:
+			return createVariable();
 		default:
 			throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -408,16 +410,6 @@ public class Execution_metamodelFactoryImpl extends EFactoryImpl implements Exec
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Question createQuestion() {
-		QuestionImpl question = new QuestionImpl();
-		return question;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EPathway createEPathway() {
 		EPathwayImpl ePathway = new EPathwayImpl();
 		return ePathway;
@@ -431,6 +423,26 @@ public class Execution_metamodelFactoryImpl extends EFactoryImpl implements Exec
 	public Quantity createQuantity() {
 		QuantityImpl quantity = new QuantityImpl();
 		return quantity;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Question createQuestion() {
+		QuestionImpl question = new QuestionImpl();
+		return question;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Variable createVariable() {
+		VariableImpl variable = new VariableImpl();
+		return variable;
 	}
 
 	/**

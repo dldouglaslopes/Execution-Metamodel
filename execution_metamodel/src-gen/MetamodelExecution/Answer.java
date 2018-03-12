@@ -2,8 +2,6 @@
  */
 package MetamodelExecution;
 
-import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -132,19 +130,29 @@ public interface Answer extends EObject {
 	void setValue(Value value);
 
 	/**
-	 * Returns the value of the '<em><b>Question</b></em>' containment reference list.
-	 * The list contents are of type {@link MetamodelExecution.Question}.
+	 * Returns the value of the '<em><b>Question</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Question</em>' containment reference list isn't clear,
+	 * If the meaning of the '<em>Question</em>' containment reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Question</em>' containment reference list.
+	 * @return the value of the '<em>Question</em>' containment reference.
+	 * @see #setQuestion(Question)
 	 * @see MetamodelExecution.Execution_metamodelPackage#getAnswer_Question()
-	 * @model containment="true"
+	 * @model containment="true" required="true"
 	 * @generated
 	 */
-	EList<Question> getQuestion();
+	Question getQuestion();
+
+	/**
+	 * Sets the value of the '{@link MetamodelExecution.Answer#getQuestion <em>Question</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Question</em>' containment reference.
+	 * @see #getQuestion()
+	 * @generated
+	 */
+	void setQuestion(Question value);
 
 } // Answer

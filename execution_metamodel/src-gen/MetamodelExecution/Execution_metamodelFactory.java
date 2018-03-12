@@ -274,15 +274,6 @@ public interface Execution_metamodelFactory extends EFactory {
 	PrescriptionInfo createPrescriptionInfo();
 
 	/**
-	 * Returns a new object of class '<em>Question</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Question</em>'.
-	 * @generated
-	 */
-	Question createQuestion();
-
-	/**
 	 * Returns a new object of class '<em>EPathway</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -299,6 +290,24 @@ public interface Execution_metamodelFactory extends EFactory {
 	 * @generated
 	 */
 	Quantity createQuantity();
+
+	/**
+	 * Returns a new object of class '<em>Question</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Question</em>'.
+	 * @generated
+	 */
+	Question createQuestion();
+
+	/**
+	 * Returns a new object of class '<em>Variable</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Variable</em>'.
+	 * @generated
+	 */
+	Variable createVariable();
 
 	/**
 	 * Returns the package supported by this factory.

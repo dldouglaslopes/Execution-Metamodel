@@ -33,6 +33,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link MetamodelExecution.EPathway#getResponsible <em>Responsible</em>}</li>
  *   <li>{@link MetamodelExecution.EPathway#getLastprofessional <em>Lastprofessional</em>}</li>
  *   <li>{@link MetamodelExecution.EPathway#getName <em>Name</em>}</li>
+ *   <li>{@link MetamodelExecution.EPathway#getJustification <em>Justification</em>}</li>
  * </ul>
  *
  * @see MetamodelExecution.Execution_metamodelPackage#getEPathway()
@@ -436,5 +437,31 @@ public interface EPathway extends EObject {
 	 * @generated
 	 */
 	void setName(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Justification</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Justification</em>' containment reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Justification</em>' containment reference.
+	 * @see #setJustification(Justification)
+	 * @see MetamodelExecution.Execution_metamodelPackage#getEPathway_Justification()
+	 * @model containment="true"
+	 * @generated
+	 */
+	Justification getJustification();
+
+	/**
+	 * Sets the value of the '{@link MetamodelExecution.EPathway#getJustification <em>Justification</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Justification</em>' containment reference.
+	 * @see #getJustification()
+	 * @generated
+	 */
+	void setJustification(Justification value);
 
 } // EPathway

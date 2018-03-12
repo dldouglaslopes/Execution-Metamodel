@@ -222,11 +222,6 @@ public class Execution_metamodelAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
-		public Adapter caseQuestion(Question object) {
-			return createQuestionAdapter();
-		}
-
-		@Override
 		public Adapter caseEPathway(EPathway object) {
 			return createEPathwayAdapter();
 		}
@@ -237,8 +232,13 @@ public class Execution_metamodelAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
-		public Adapter casePathwayMetamodel_Question(pathwayMetamodel.Question object) {
-			return createPathwayMetamodel_QuestionAdapter();
+		public Adapter caseQuestion(Question object) {
+			return createQuestionAdapter();
+		}
+
+		@Override
+		public Adapter caseVariable(Variable object) {
+			return createVariableAdapter();
 		}
 
 		@Override
@@ -695,20 +695,6 @@ public class Execution_metamodelAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link MetamodelExecution.Question <em>Question</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see MetamodelExecution.Question
-	 * @generated
-	 */
-	public Adapter createQuestionAdapter() {
-		return null;
-	}
-
-	/**
 	 * Creates a new adapter for an object of class '{@link MetamodelExecution.EPathway <em>EPathway</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -737,16 +723,30 @@ public class Execution_metamodelAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link pathwayMetamodel.Question <em>Question</em>}'.
+	 * Creates a new adapter for an object of class '{@link MetamodelExecution.Question <em>Question</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see pathwayMetamodel.Question
+	 * @see MetamodelExecution.Question
 	 * @generated
 	 */
-	public Adapter createPathwayMetamodel_QuestionAdapter() {
+	public Adapter createQuestionAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link MetamodelExecution.Variable <em>Variable</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see MetamodelExecution.Variable
+	 * @generated
+	 */
+	public Adapter createVariableAdapter() {
 		return null;
 	}
 

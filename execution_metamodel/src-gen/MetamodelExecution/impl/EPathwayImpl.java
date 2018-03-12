@@ -5,6 +5,7 @@ package MetamodelExecution.impl;
 import MetamodelExecution.EElement;
 import MetamodelExecution.EPathway;
 import MetamodelExecution.Execution_metamodelPackage;
+import MetamodelExecution.Justification;
 import MetamodelExecution.LastProfessional;
 import MetamodelExecution.Pathway;
 import MetamodelExecution.Responsible;
@@ -51,6 +52,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link MetamodelExecution.impl.EPathwayImpl#getResponsible <em>Responsible</em>}</li>
  *   <li>{@link MetamodelExecution.impl.EPathwayImpl#getLastprofessional <em>Lastprofessional</em>}</li>
  *   <li>{@link MetamodelExecution.impl.EPathwayImpl#getName <em>Name</em>}</li>
+ *   <li>{@link MetamodelExecution.impl.EPathwayImpl#getJustification <em>Justification</em>}</li>
  * </ul>
  *
  * @generated
@@ -325,6 +327,16 @@ public class EPathwayImpl extends MinimalEObjectImpl.Container implements EPathw
 	 * @ordered
 	 */
 	protected String name = NAME_EDEFAULT;
+
+	/**
+	 * The cached value of the '{@link #getJustification() <em>Justification</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getJustification()
+	 * @generated
+	 * @ordered
+	 */
+	protected Justification justification;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -769,6 +781,56 @@ public class EPathwayImpl extends MinimalEObjectImpl.Container implements EPathw
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public Justification getJustification() {
+		return justification;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetJustification(Justification newJustification, NotificationChain msgs) {
+		Justification oldJustification = justification;
+		justification = newJustification;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
+					Execution_metamodelPackage.EPATHWAY__JUSTIFICATION, oldJustification, newJustification);
+			if (msgs == null)
+				msgs = notification;
+			else
+				msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setJustification(Justification newJustification) {
+		if (newJustification != justification) {
+			NotificationChain msgs = null;
+			if (justification != null)
+				msgs = ((InternalEObject) justification).eInverseRemove(this,
+						EOPPOSITE_FEATURE_BASE - Execution_metamodelPackage.EPATHWAY__JUSTIFICATION, null, msgs);
+			if (newJustification != null)
+				msgs = ((InternalEObject) newJustification).eInverseAdd(this,
+						EOPPOSITE_FEATURE_BASE - Execution_metamodelPackage.EPATHWAY__JUSTIFICATION, null, msgs);
+			msgs = basicSetJustification(newJustification, msgs);
+			if (msgs != null)
+				msgs.dispatch();
+		} else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.EPATHWAY__JUSTIFICATION,
+					newJustification, newJustification));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -780,6 +842,8 @@ public class EPathwayImpl extends MinimalEObjectImpl.Container implements EPathw
 			return basicSetResponsible(null, msgs);
 		case Execution_metamodelPackage.EPATHWAY__LASTPROFESSIONAL:
 			return basicSetLastprofessional(null, msgs);
+		case Execution_metamodelPackage.EPATHWAY__JUSTIFICATION:
+			return basicSetJustification(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -824,6 +888,8 @@ public class EPathwayImpl extends MinimalEObjectImpl.Container implements EPathw
 			return getLastprofessional();
 		case Execution_metamodelPackage.EPATHWAY__NAME:
 			return getName();
+		case Execution_metamodelPackage.EPATHWAY__JUSTIFICATION:
+			return getJustification();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -887,6 +953,9 @@ public class EPathwayImpl extends MinimalEObjectImpl.Container implements EPathw
 		case Execution_metamodelPackage.EPATHWAY__NAME:
 			setName((String) newValue);
 			return;
+		case Execution_metamodelPackage.EPATHWAY__JUSTIFICATION:
+			setJustification((Justification) newValue);
+			return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -947,6 +1016,9 @@ public class EPathwayImpl extends MinimalEObjectImpl.Container implements EPathw
 		case Execution_metamodelPackage.EPATHWAY__NAME:
 			setName(NAME_EDEFAULT);
 			return;
+		case Execution_metamodelPackage.EPATHWAY__JUSTIFICATION:
+			setJustification((Justification) null);
+			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -993,6 +1065,8 @@ public class EPathwayImpl extends MinimalEObjectImpl.Container implements EPathw
 			return lastprofessional != null;
 		case Execution_metamodelPackage.EPATHWAY__NAME:
 			return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+		case Execution_metamodelPackage.EPATHWAY__JUSTIFICATION:
+			return justification != null;
 		}
 		return super.eIsSet(featureID);
 	}
