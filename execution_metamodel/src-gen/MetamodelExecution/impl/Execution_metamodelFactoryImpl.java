@@ -106,16 +106,12 @@ public class Execution_metamodelFactoryImpl extends EFactoryImpl implements Exec
 			return createExecutor();
 		case Execution_metamodelPackage.LAST_PROFESSIONAL:
 			return createLastProfessional();
-		case Execution_metamodelPackage.RESULT:
-			return createResult();
 		case Execution_metamodelPackage.PRESCRIPTION_EXAM:
 			return createPrescriptionExam();
 		case Execution_metamodelPackage.PRESCRIPTION_INFO:
 			return createPrescriptionInfo();
 		case Execution_metamodelPackage.EPATHWAY:
 			return createEPathway();
-		case Execution_metamodelPackage.QUANTITY:
-			return createQuantity();
 		case Execution_metamodelPackage.QUESTION:
 			return createQuestion();
 		case Execution_metamodelPackage.VARIABLE:
@@ -380,16 +376,6 @@ public class Execution_metamodelFactoryImpl extends EFactoryImpl implements Exec
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Result createResult() {
-		ResultImpl result = new ResultImpl();
-		return result;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public PrescriptionExam createPrescriptionExam() {
 		PrescriptionExamImpl prescriptionExam = new PrescriptionExamImpl();
 		return prescriptionExam;
@@ -413,16 +399,6 @@ public class Execution_metamodelFactoryImpl extends EFactoryImpl implements Exec
 	public EPathway createEPathway() {
 		EPathwayImpl ePathway = new EPathwayImpl();
 		return ePathway;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Quantity createQuantity() {
-		QuantityImpl quantity = new QuantityImpl();
-		return quantity;
 	}
 
 	/**

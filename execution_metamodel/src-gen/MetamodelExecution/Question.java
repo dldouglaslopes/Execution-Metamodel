@@ -15,7 +15,7 @@ import org.eclipse.emf.ecore.EObject;
  * <ul>
  *   <li>{@link MetamodelExecution.Question#getId <em>Id</em>}</li>
  *   <li>{@link MetamodelExecution.Question#getUrl <em>Url</em>}</li>
- *   <li>{@link MetamodelExecution.Question#getText <em>Text</em>}</li>
+ *   <li>{@link MetamodelExecution.Question#getName <em>Name</em>}</li>
  *   <li>{@link MetamodelExecution.Question#getVariable <em>Variable</em>}</li>
  *   <li>{@link MetamodelExecution.Question#getIdCategory <em>Id Category</em>}</li>
  *   <li>{@link MetamodelExecution.Question#getCategory <em>Category</em>}</li>
@@ -79,30 +79,30 @@ public interface Question extends EObject {
 	void setUrl(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Text</b></em>' attribute.
+	 * Returns the value of the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Text</em>' attribute isn't clear,
+	 * If the meaning of the '<em>Name</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Text</em>' attribute.
-	 * @see #setText(String)
-	 * @see MetamodelExecution.Execution_metamodelPackage#getQuestion_Text()
+	 * @return the value of the '<em>Name</em>' attribute.
+	 * @see #setName(String)
+	 * @see MetamodelExecution.Execution_metamodelPackage#getQuestion_Name()
 	 * @model
 	 * @generated
 	 */
-	String getText();
+	String getName();
 
 	/**
-	 * Sets the value of the '{@link MetamodelExecution.Question#getText <em>Text</em>}' attribute.
+	 * Sets the value of the '{@link MetamodelExecution.Question#getName <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Text</em>' attribute.
-	 * @see #getText()
+	 * @param value the new value of the '<em>Name</em>' attribute.
+	 * @see #getName()
 	 * @generated
 	 */
-	void setText(String value);
+	void setName(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Variable</b></em>' containment reference.

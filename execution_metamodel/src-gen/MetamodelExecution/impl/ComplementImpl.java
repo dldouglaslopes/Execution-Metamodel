@@ -4,23 +4,13 @@ package MetamodelExecution.impl;
 
 import MetamodelExecution.Complement;
 import MetamodelExecution.Execution_metamodelPackage;
-import MetamodelExecution.Quantity;
-
-import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
-import org.eclipse.emf.common.notify.NotificationChain;
-
-import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
-import org.eclipse.emf.ecore.util.EObjectContainmentEList;
-import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -142,14 +132,24 @@ public class ComplementImpl extends MinimalEObjectImpl.Container implements Comp
 	protected String justification = JUSTIFICATION_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getQuantity() <em>Quantity</em>}' containment reference list.
+	 * The default value of the '{@link #getQuantity() <em>Quantity</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getQuantity()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Quantity> quantity;
+	protected static final int QUANTITY_EDEFAULT = 0;
+
+	/**
+	 * The cached value of the '{@link #getQuantity() <em>Quantity</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getQuantity()
+	 * @generated
+	 * @ordered
+	 */
+	protected int quantity = QUANTITY_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -286,11 +286,7 @@ public class ComplementImpl extends MinimalEObjectImpl.Container implements Comp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Quantity> getQuantity() {
-		if (quantity == null) {
-			quantity = new EObjectContainmentEList<Quantity>(Quantity.class, this,
-					Execution_metamodelPackage.COMPLEMENT__QUANTITY);
-		}
+	public int getQuantity() {
 		return quantity;
 	}
 
@@ -299,13 +295,12 @@ public class ComplementImpl extends MinimalEObjectImpl.Container implements Comp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
-		case Execution_metamodelPackage.COMPLEMENT__QUANTITY:
-			return ((InternalEList<?>) getQuantity()).basicRemove(otherEnd, msgs);
-		}
-		return super.eInverseRemove(otherEnd, featureID, msgs);
+	public void setQuantity(int newQuantity) {
+		int oldQuantity = quantity;
+		quantity = newQuantity;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.COMPLEMENT__QUANTITY,
+					oldQuantity, quantity));
 	}
 
 	/**
@@ -337,7 +332,6 @@ public class ComplementImpl extends MinimalEObjectImpl.Container implements Comp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
@@ -357,8 +351,7 @@ public class ComplementImpl extends MinimalEObjectImpl.Container implements Comp
 			setJustification((String) newValue);
 			return;
 		case Execution_metamodelPackage.COMPLEMENT__QUANTITY:
-			getQuantity().clear();
-			getQuantity().addAll((Collection<? extends Quantity>) newValue);
+			setQuantity((Integer) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -388,7 +381,7 @@ public class ComplementImpl extends MinimalEObjectImpl.Container implements Comp
 			setJustification(JUSTIFICATION_EDEFAULT);
 			return;
 		case Execution_metamodelPackage.COMPLEMENT__QUANTITY:
-			getQuantity().clear();
+			setQuantity(QUANTITY_EDEFAULT);
 			return;
 		}
 		super.eUnset(featureID);
@@ -416,7 +409,7 @@ public class ComplementImpl extends MinimalEObjectImpl.Container implements Comp
 			return JUSTIFICATION_EDEFAULT == null ? justification != null
 					: !JUSTIFICATION_EDEFAULT.equals(justification);
 		case Execution_metamodelPackage.COMPLEMENT__QUANTITY:
-			return quantity != null && !quantity.isEmpty();
+			return quantity != QUANTITY_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -442,6 +435,8 @@ public class ComplementImpl extends MinimalEObjectImpl.Container implements Comp
 		result.append(clinicalIndication);
 		result.append(", justification: ");
 		result.append(justification);
+		result.append(", quantity: ");
+		result.append(quantity);
 		result.append(')');
 		return result.toString();
 	}

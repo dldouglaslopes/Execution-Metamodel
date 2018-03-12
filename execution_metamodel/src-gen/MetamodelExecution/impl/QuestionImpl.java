@@ -25,7 +25,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * <ul>
  *   <li>{@link MetamodelExecution.impl.QuestionImpl#getId <em>Id</em>}</li>
  *   <li>{@link MetamodelExecution.impl.QuestionImpl#getUrl <em>Url</em>}</li>
- *   <li>{@link MetamodelExecution.impl.QuestionImpl#getText <em>Text</em>}</li>
+ *   <li>{@link MetamodelExecution.impl.QuestionImpl#getName <em>Name</em>}</li>
  *   <li>{@link MetamodelExecution.impl.QuestionImpl#getVariable <em>Variable</em>}</li>
  *   <li>{@link MetamodelExecution.impl.QuestionImpl#getIdCategory <em>Id Category</em>}</li>
  *   <li>{@link MetamodelExecution.impl.QuestionImpl#getCategory <em>Category</em>}</li>
@@ -75,24 +75,24 @@ public class QuestionImpl extends MinimalEObjectImpl.Container implements Questi
 	protected String url = URL_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getText() <em>Text</em>}' attribute.
+	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getText()
+	 * @see #getName()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String TEXT_EDEFAULT = null;
+	protected static final String NAME_EDEFAULT = null;
 
 	/**
-	 * The cached value of the '{@link #getText() <em>Text</em>}' attribute.
+	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getText()
+	 * @see #getName()
 	 * @generated
 	 * @ordered
 	 */
-	protected String text = TEXT_EDEFAULT;
+	protected String name = NAME_EDEFAULT;
 
 	/**
 	 * The cached value of the '{@link #getVariable() <em>Variable</em>}' containment reference.
@@ -211,8 +211,8 @@ public class QuestionImpl extends MinimalEObjectImpl.Container implements Questi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getText() {
-		return text;
+	public String getName() {
+		return name;
 	}
 
 	/**
@@ -220,12 +220,12 @@ public class QuestionImpl extends MinimalEObjectImpl.Container implements Questi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setText(String newText) {
-		String oldText = text;
-		text = newText;
+	public void setName(String newName) {
+		String oldName = name;
+		name = newName;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.QUESTION__TEXT, oldText,
-					text));
+			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.QUESTION__NAME, oldName,
+					name));
 	}
 
 	/**
@@ -348,8 +348,8 @@ public class QuestionImpl extends MinimalEObjectImpl.Container implements Questi
 			return getId();
 		case Execution_metamodelPackage.QUESTION__URL:
 			return getUrl();
-		case Execution_metamodelPackage.QUESTION__TEXT:
-			return getText();
+		case Execution_metamodelPackage.QUESTION__NAME:
+			return getName();
 		case Execution_metamodelPackage.QUESTION__VARIABLE:
 			return getVariable();
 		case Execution_metamodelPackage.QUESTION__ID_CATEGORY:
@@ -374,8 +374,8 @@ public class QuestionImpl extends MinimalEObjectImpl.Container implements Questi
 		case Execution_metamodelPackage.QUESTION__URL:
 			setUrl((String) newValue);
 			return;
-		case Execution_metamodelPackage.QUESTION__TEXT:
-			setText((String) newValue);
+		case Execution_metamodelPackage.QUESTION__NAME:
+			setName((String) newValue);
 			return;
 		case Execution_metamodelPackage.QUESTION__VARIABLE:
 			setVariable((Variable) newValue);
@@ -404,8 +404,8 @@ public class QuestionImpl extends MinimalEObjectImpl.Container implements Questi
 		case Execution_metamodelPackage.QUESTION__URL:
 			setUrl(URL_EDEFAULT);
 			return;
-		case Execution_metamodelPackage.QUESTION__TEXT:
-			setText(TEXT_EDEFAULT);
+		case Execution_metamodelPackage.QUESTION__NAME:
+			setName(NAME_EDEFAULT);
 			return;
 		case Execution_metamodelPackage.QUESTION__VARIABLE:
 			setVariable((Variable) null);
@@ -432,8 +432,8 @@ public class QuestionImpl extends MinimalEObjectImpl.Container implements Questi
 			return id != ID_EDEFAULT;
 		case Execution_metamodelPackage.QUESTION__URL:
 			return URL_EDEFAULT == null ? url != null : !URL_EDEFAULT.equals(url);
-		case Execution_metamodelPackage.QUESTION__TEXT:
-			return TEXT_EDEFAULT == null ? text != null : !TEXT_EDEFAULT.equals(text);
+		case Execution_metamodelPackage.QUESTION__NAME:
+			return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 		case Execution_metamodelPackage.QUESTION__VARIABLE:
 			return variable != null;
 		case Execution_metamodelPackage.QUESTION__ID_CATEGORY:
@@ -459,8 +459,8 @@ public class QuestionImpl extends MinimalEObjectImpl.Container implements Questi
 		result.append(id);
 		result.append(", url: ");
 		result.append(url);
-		result.append(", text: ");
-		result.append(text);
+		result.append(", name: ");
+		result.append(name);
 		result.append(", idCategory: ");
 		result.append(idCategory);
 		result.append(", category: ");

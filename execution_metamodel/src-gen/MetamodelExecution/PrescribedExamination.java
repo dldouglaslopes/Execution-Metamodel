@@ -18,8 +18,9 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link MetamodelExecution.PrescribedExamination#getReport <em>Report</em>}</li>
  *   <li>{@link MetamodelExecution.PrescribedExamination#getNumberGuide <em>Number Guide</em>}</li>
  *   <li>{@link MetamodelExecution.PrescribedExamination#getComplement <em>Complement</em>}</li>
- *   <li>{@link MetamodelExecution.PrescribedExamination#getResult <em>Result</em>}</li>
  *   <li>{@link MetamodelExecution.PrescribedExamination#getPrescriptionexam <em>Prescriptionexam</em>}</li>
+ *   <li>{@link MetamodelExecution.PrescribedExamination#getName <em>Name</em>}</li>
+ *   <li>{@link MetamodelExecution.PrescribedExamination#getResult <em>Result</em>}</li>
  * </ul>
  *
  * @see MetamodelExecution.Execution_metamodelPackage#getPrescribedExamination()
@@ -158,32 +159,6 @@ public interface PrescribedExamination extends EObject {
 	void setComplement(Complement value);
 
 	/**
-	 * Returns the value of the '<em><b>Result</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Result</em>' containment reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Result</em>' containment reference.
-	 * @see #setResult(Result)
-	 * @see MetamodelExecution.Execution_metamodelPackage#getPrescribedExamination_Result()
-	 * @model containment="true" required="true"
-	 * @generated
-	 */
-	Result getResult();
-
-	/**
-	 * Sets the value of the '{@link MetamodelExecution.PrescribedExamination#getResult <em>Result</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Result</em>' containment reference.
-	 * @see #getResult()
-	 * @generated
-	 */
-	void setResult(Result value);
-
-	/**
 	 * Returns the value of the '<em><b>Prescriptionexam</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
@@ -208,5 +183,57 @@ public interface PrescribedExamination extends EObject {
 	 * @generated
 	 */
 	void setPrescriptionexam(PrescriptionExam value);
+
+	/**
+	 * Returns the value of the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Name</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Name</em>' attribute.
+	 * @see #setName(String)
+	 * @see MetamodelExecution.Execution_metamodelPackage#getPrescribedExamination_Name()
+	 * @model
+	 * @generated
+	 */
+	String getName();
+
+	/**
+	 * Sets the value of the '{@link MetamodelExecution.PrescribedExamination#getName <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Name</em>' attribute.
+	 * @see #getName()
+	 * @generated
+	 */
+	void setName(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Result</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Result</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Result</em>' attribute.
+	 * @see #setResult(String)
+	 * @see MetamodelExecution.Execution_metamodelPackage#getPrescribedExamination_Result()
+	 * @model
+	 * @generated
+	 */
+	String getResult();
+
+	/**
+	 * Sets the value of the '{@link MetamodelExecution.PrescribedExamination#getResult <em>Result</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Result</em>' attribute.
+	 * @see #getResult()
+	 * @generated
+	 */
+	void setResult(String value);
 
 } // PrescribedExamination

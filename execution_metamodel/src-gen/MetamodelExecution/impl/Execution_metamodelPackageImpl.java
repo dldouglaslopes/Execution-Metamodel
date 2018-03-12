@@ -30,10 +30,8 @@ import MetamodelExecution.PrescribedPrescriptionItem;
 import MetamodelExecution.PrescribedProcedure;
 import MetamodelExecution.PrescriptionExam;
 import MetamodelExecution.PrescriptionInfo;
-import MetamodelExecution.Quantity;
 import MetamodelExecution.Question;
 import MetamodelExecution.Responsible;
-import MetamodelExecution.Result;
 import MetamodelExecution.Step;
 import MetamodelExecution.User;
 import MetamodelExecution.Value;
@@ -255,13 +253,6 @@ public class Execution_metamodelPackageImpl extends EPackageImpl implements Exec
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass resultEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	private EClass prescriptionExamEClass = null;
 
 	/**
@@ -277,13 +268,6 @@ public class Execution_metamodelPackageImpl extends EPackageImpl implements Exec
 	 * @generated
 	 */
 	private EClass ePathwayEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass quantityEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -647,6 +631,15 @@ public class Execution_metamodelPackageImpl extends EPackageImpl implements Exec
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getExamination_Name() {
+		return (EAttribute) examinationEClass.getEStructuralFeatures().get(9);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getPrescribedExamination() {
 		return prescribedExaminationEClass;
 	}
@@ -701,7 +694,7 @@ public class Execution_metamodelPackageImpl extends EPackageImpl implements Exec
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getPrescribedExamination_Result() {
+	public EReference getPrescribedExamination_Prescriptionexam() {
 		return (EReference) prescribedExaminationEClass.getEStructuralFeatures().get(5);
 	}
 
@@ -710,8 +703,17 @@ public class Execution_metamodelPackageImpl extends EPackageImpl implements Exec
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getPrescribedExamination_Prescriptionexam() {
-		return (EReference) prescribedExaminationEClass.getEStructuralFeatures().get(6);
+	public EAttribute getPrescribedExamination_Name() {
+		return (EAttribute) prescribedExaminationEClass.getEStructuralFeatures().get(6);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getPrescribedExamination_Result() {
+		return (EAttribute) prescribedExaminationEClass.getEStructuralFeatures().get(7);
 	}
 
 	/**
@@ -872,8 +874,8 @@ public class Execution_metamodelPackageImpl extends EPackageImpl implements Exec
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getComplement_Quantity() {
-		return (EReference) complementEClass.getEStructuralFeatures().get(5);
+	public EAttribute getComplement_Quantity() {
+		return (EAttribute) complementEClass.getEStructuralFeatures().get(5);
 	}
 
 	/**
@@ -1520,15 +1522,6 @@ public class Execution_metamodelPackageImpl extends EPackageImpl implements Exec
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getResult() {
-		return resultEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getPrescriptionExam() {
 		return prescriptionExamEClass;
 	}
@@ -1745,15 +1738,6 @@ public class Execution_metamodelPackageImpl extends EPackageImpl implements Exec
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getQuantity() {
-		return quantityEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getQuestion() {
 		return questionEClass;
 	}
@@ -1781,7 +1765,7 @@ public class Execution_metamodelPackageImpl extends EPackageImpl implements Exec
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getQuestion_Text() {
+	public EAttribute getQuestion_Name() {
 		return (EAttribute) questionEClass.getEStructuralFeatures().get(2);
 	}
 
@@ -1950,6 +1934,7 @@ public class Execution_metamodelPackageImpl extends EPackageImpl implements Exec
 		createEAttribute(examinationEClass, EXAMINATION__CLINICAL_INDICATION);
 		createEAttribute(examinationEClass, EXAMINATION__SIDE_LIMB_DISPLAY);
 		createEReference(examinationEClass, EXAMINATION__EXAM);
+		createEAttribute(examinationEClass, EXAMINATION__NAME);
 
 		prescribedExaminationEClass = createEClass(PRESCRIBED_EXAMINATION);
 		createEReference(prescribedExaminationEClass, PRESCRIBED_EXAMINATION__EXAMINATION);
@@ -1957,8 +1942,9 @@ public class Execution_metamodelPackageImpl extends EPackageImpl implements Exec
 		createEAttribute(prescribedExaminationEClass, PRESCRIBED_EXAMINATION__REPORT);
 		createEAttribute(prescribedExaminationEClass, PRESCRIBED_EXAMINATION__NUMBER_GUIDE);
 		createEReference(prescribedExaminationEClass, PRESCRIBED_EXAMINATION__COMPLEMENT);
-		createEReference(prescribedExaminationEClass, PRESCRIBED_EXAMINATION__RESULT);
 		createEReference(prescribedExaminationEClass, PRESCRIBED_EXAMINATION__PRESCRIPTIONEXAM);
+		createEAttribute(prescribedExaminationEClass, PRESCRIBED_EXAMINATION__NAME);
+		createEAttribute(prescribedExaminationEClass, PRESCRIBED_EXAMINATION__RESULT);
 
 		examEClass = createEClass(EXAM);
 		createEAttribute(examEClass, EXAM__ID);
@@ -1981,7 +1967,7 @@ public class Execution_metamodelPackageImpl extends EPackageImpl implements Exec
 		createEAttribute(complementEClass, COMPLEMENT__SIDE_LIMB_DISPLAY);
 		createEAttribute(complementEClass, COMPLEMENT__CLINICAL_INDICATION);
 		createEAttribute(complementEClass, COMPLEMENT__JUSTIFICATION);
-		createEReference(complementEClass, COMPLEMENT__QUANTITY);
+		createEAttribute(complementEClass, COMPLEMENT__QUANTITY);
 
 		prescribedPrescriptionItemEClass = createEClass(PRESCRIBED_PRESCRIPTION_ITEM);
 
@@ -2069,8 +2055,6 @@ public class Execution_metamodelPackageImpl extends EPackageImpl implements Exec
 		createEReference(eElementEClass, EELEMENT__EXECUTOR);
 		createEAttribute(eElementEClass, EELEMENT__NAME);
 
-		resultEClass = createEClass(RESULT);
-
 		prescriptionExamEClass = createEClass(PRESCRIPTION_EXAM);
 		createEAttribute(prescriptionExamEClass, PRESCRIPTION_EXAM__ID);
 		createEAttribute(prescriptionExamEClass, PRESCRIPTION_EXAM__SUCCESS);
@@ -2098,12 +2082,10 @@ public class Execution_metamodelPackageImpl extends EPackageImpl implements Exec
 		createEAttribute(ePathwayEClass, EPATHWAY__NAME);
 		createEReference(ePathwayEClass, EPATHWAY__JUSTIFICATION);
 
-		quantityEClass = createEClass(QUANTITY);
-
 		questionEClass = createEClass(QUESTION);
 		createEAttribute(questionEClass, QUESTION__ID);
 		createEAttribute(questionEClass, QUESTION__URL);
-		createEAttribute(questionEClass, QUESTION__TEXT);
+		createEAttribute(questionEClass, QUESTION__NAME);
 		createEReference(questionEClass, QUESTION__VARIABLE);
 		createEAttribute(questionEClass, QUESTION__ID_CATEGORY);
 		createEAttribute(questionEClass, QUESTION__CATEGORY);
@@ -2248,6 +2230,8 @@ public class Execution_metamodelPackageImpl extends EPackageImpl implements Exec
 		initEReference(getExamination_Exam(), this.getExam(), null, "exam", null, 1, 1, Examination.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getExamination_Name(), ecorePackage.getEString(), "name", null, 0, 1, Examination.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(prescribedExaminationEClass, PrescribedExamination.class, "PrescribedExamination", !IS_ABSTRACT,
 				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -2266,12 +2250,15 @@ public class Execution_metamodelPackageImpl extends EPackageImpl implements Exec
 		initEReference(getPrescribedExamination_Complement(), this.getComplement(), null, "complement", null, 1, 1,
 				PrescribedExamination.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
 				!IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getPrescribedExamination_Result(), this.getResult(), null, "result", null, 1, 1,
-				PrescribedExamination.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
-				!IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getPrescribedExamination_Prescriptionexam(), this.getPrescriptionExam(), null,
 				"prescriptionexam", null, 1, 1, PrescribedExamination.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
 				IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getPrescribedExamination_Name(), ecorePackage.getEString(), "name", null, 0, 1,
+				PrescribedExamination.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getPrescribedExamination_Result(), ecorePackage.getEString(), "result", null, 0, 1,
+				PrescribedExamination.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(examEClass, Exam.class, "Exam", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getExam_Id(), ecorePackage.getEInt(), "id", null, 0, 1, Exam.class, !IS_TRANSIENT, !IS_VOLATILE,
@@ -2313,9 +2300,8 @@ public class Execution_metamodelPackageImpl extends EPackageImpl implements Exec
 		initEAttribute(getComplement_Justification(), ecorePackage.getEString(), "justification", null, 0, 1,
 				Complement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
 				!IS_DERIVED, IS_ORDERED);
-		initEReference(getComplement_Quantity(), this.getQuantity(), null, "quantity", null, 0, -1, Complement.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
-				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getComplement_Quantity(), ecorePackage.getEInt(), "quantity", null, 0, 1, Complement.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(prescribedPrescriptionItemEClass, PrescribedPrescriptionItem.class, "PrescribedPrescriptionItem",
 				!IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -2477,8 +2463,6 @@ public class Execution_metamodelPackageImpl extends EPackageImpl implements Exec
 		initEAttribute(getEElement_Name(), ecorePackage.getEString(), "name", null, 0, 1, EElement.class, !IS_TRANSIENT,
 				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(resultEClass, Result.class, "Result", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
 		initEClass(prescriptionExamEClass, PrescriptionExam.class, "PrescriptionExam", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getPrescriptionExam_Id(), ecorePackage.getEInt(), "id", null, 0, 1, PrescriptionExam.class,
@@ -2542,16 +2526,13 @@ public class Execution_metamodelPackageImpl extends EPackageImpl implements Exec
 				EPathway.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(quantityEClass, Quantity.class, "Quantity", !IS_ABSTRACT, !IS_INTERFACE,
-				IS_GENERATED_INSTANCE_CLASS);
-
 		initEClass(questionEClass, Question.class, "Question", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getQuestion_Id(), ecorePackage.getEInt(), "id", null, 0, 1, Question.class, !IS_TRANSIENT,
 				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getQuestion_Url(), ecorePackage.getEString(), "url", null, 0, 1, Question.class, !IS_TRANSIENT,
 				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getQuestion_Text(), ecorePackage.getEString(), "text", null, 0, 1, Question.class, !IS_TRANSIENT,
+		initEAttribute(getQuestion_Name(), ecorePackage.getEString(), "name", null, 0, 1, Question.class, !IS_TRANSIENT,
 				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getQuestion_Variable(), this.getVariable(), null, "variable", null, 1, 1, Question.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,

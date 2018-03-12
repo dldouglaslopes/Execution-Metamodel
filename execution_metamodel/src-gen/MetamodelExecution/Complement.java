@@ -2,8 +2,6 @@
  */
 package MetamodelExecution;
 
-import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -159,19 +157,29 @@ public interface Complement extends EObject {
 	void setJustification(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Quantity</b></em>' containment reference list.
-	 * The list contents are of type {@link MetamodelExecution.Quantity}.
+	 * Returns the value of the '<em><b>Quantity</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Quantity</em>' containment reference list isn't clear,
+	 * If the meaning of the '<em>Quantity</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Quantity</em>' containment reference list.
+	 * @return the value of the '<em>Quantity</em>' attribute.
+	 * @see #setQuantity(int)
 	 * @see MetamodelExecution.Execution_metamodelPackage#getComplement_Quantity()
-	 * @model containment="true"
+	 * @model
 	 * @generated
 	 */
-	EList<Quantity> getQuantity();
+	int getQuantity();
+
+	/**
+	 * Sets the value of the '{@link MetamodelExecution.Complement#getQuantity <em>Quantity</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Quantity</em>' attribute.
+	 * @see #getQuantity()
+	 * @generated
+	 */
+	void setQuantity(int value);
 
 } // Complement

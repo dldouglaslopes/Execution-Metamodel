@@ -1613,13 +1613,22 @@ public interface Execution_metamodelPackage extends EPackage {
 	int EXAMINATION__EXAM = 8;
 
 	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXAMINATION__NAME = 9;
+
+	/**
 	 * The number of structural features of the '<em>Examination</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int EXAMINATION_FEATURE_COUNT = 9;
+	int EXAMINATION_FEATURE_COUNT = 10;
 
 	/**
 	 * The number of operations of the '<em>Examination</em>' class.
@@ -1686,22 +1695,31 @@ public interface Execution_metamodelPackage extends EPackage {
 	int PRESCRIBED_EXAMINATION__COMPLEMENT = 4;
 
 	/**
-	 * The feature id for the '<em><b>Result</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PRESCRIBED_EXAMINATION__RESULT = 5;
-
-	/**
 	 * The feature id for the '<em><b>Prescriptionexam</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PRESCRIBED_EXAMINATION__PRESCRIPTIONEXAM = 6;
+	int PRESCRIBED_EXAMINATION__PRESCRIPTIONEXAM = 5;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PRESCRIBED_EXAMINATION__NAME = 6;
+
+	/**
+	 * The feature id for the '<em><b>Result</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PRESCRIBED_EXAMINATION__RESULT = 7;
 
 	/**
 	 * The number of structural features of the '<em>Prescribed Examination</em>' class.
@@ -1710,7 +1728,7 @@ public interface Execution_metamodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PRESCRIBED_EXAMINATION_FEATURE_COUNT = 7;
+	int PRESCRIBED_EXAMINATION_FEATURE_COUNT = 8;
 
 	/**
 	 * The number of operations of the '<em>Prescribed Examination</em>' class.
@@ -1952,7 +1970,7 @@ public interface Execution_metamodelPackage extends EPackage {
 	int COMPLEMENT__JUSTIFICATION = 4;
 
 	/**
-	 * The feature id for the '<em><b>Quantity</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Quantity</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -3037,34 +3055,6 @@ public interface Execution_metamodelPackage extends EPackage {
 	int LAST_PROFESSIONAL_OPERATION_COUNT = USER_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link MetamodelExecution.impl.ResultImpl <em>Result</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see MetamodelExecution.impl.ResultImpl
-	 * @see MetamodelExecution.impl.Execution_metamodelPackageImpl#getResult()
-	 * @generated
-	 */
-	int RESULT = 28;
-
-	/**
-	 * The number of structural features of the '<em>Result</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RESULT_FEATURE_COUNT = 0;
-
-	/**
-	 * The number of operations of the '<em>Result</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RESULT_OPERATION_COUNT = 0;
-
-	/**
 	 * The meta object id for the '{@link MetamodelExecution.impl.PrescriptionExamImpl <em>Prescription Exam</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3072,7 +3062,7 @@ public interface Execution_metamodelPackage extends EPackage {
 	 * @see MetamodelExecution.impl.Execution_metamodelPackageImpl#getPrescriptionExam()
 	 * @generated
 	 */
-	int PRESCRIPTION_EXAM = 29;
+	int PRESCRIPTION_EXAM = 28;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -3136,7 +3126,7 @@ public interface Execution_metamodelPackage extends EPackage {
 	 * @see MetamodelExecution.impl.Execution_metamodelPackageImpl#getPrescriptionInfo()
 	 * @generated
 	 */
-	int PRESCRIPTION_INFO = 30;
+	int PRESCRIPTION_INFO = 29;
 
 	/**
 	 * The number of structural features of the '<em>Prescription Info</em>' class.
@@ -3164,7 +3154,7 @@ public interface Execution_metamodelPackage extends EPackage {
 	 * @see MetamodelExecution.impl.Execution_metamodelPackageImpl#getEPathway()
 	 * @generated
 	 */
-	int EPATHWAY = 31;
+	int EPATHWAY = 30;
 
 	/**
 	 * The feature id for the '<em><b>Element</b></em>' containment reference list.
@@ -3338,34 +3328,6 @@ public interface Execution_metamodelPackage extends EPackage {
 	int EPATHWAY_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link MetamodelExecution.impl.QuantityImpl <em>Quantity</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see MetamodelExecution.impl.QuantityImpl
-	 * @see MetamodelExecution.impl.Execution_metamodelPackageImpl#getQuantity()
-	 * @generated
-	 */
-	int QUANTITY = 32;
-
-	/**
-	 * The number of structural features of the '<em>Quantity</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int QUANTITY_FEATURE_COUNT = 0;
-
-	/**
-	 * The number of operations of the '<em>Quantity</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int QUANTITY_OPERATION_COUNT = 0;
-
-	/**
 	 * The meta object id for the '{@link MetamodelExecution.impl.QuestionImpl <em>Question</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3373,7 +3335,7 @@ public interface Execution_metamodelPackage extends EPackage {
 	 * @see MetamodelExecution.impl.Execution_metamodelPackageImpl#getQuestion()
 	 * @generated
 	 */
-	int QUESTION = 33;
+	int QUESTION = 31;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -3394,13 +3356,13 @@ public interface Execution_metamodelPackage extends EPackage {
 	int QUESTION__URL = 1;
 
 	/**
-	 * The feature id for the '<em><b>Text</b></em>' attribute.
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int QUESTION__TEXT = 2;
+	int QUESTION__NAME = 2;
 
 	/**
 	 * The feature id for the '<em><b>Variable</b></em>' containment reference.
@@ -3455,7 +3417,7 @@ public interface Execution_metamodelPackage extends EPackage {
 	 * @see MetamodelExecution.impl.Execution_metamodelPackageImpl#getVariable()
 	 * @generated
 	 */
-	int VARIABLE = 34;
+	int VARIABLE = 32;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -3873,6 +3835,17 @@ public interface Execution_metamodelPackage extends EPackage {
 	EReference getExamination_Exam();
 
 	/**
+	 * Returns the meta object for the attribute '{@link MetamodelExecution.Examination#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see MetamodelExecution.Examination#getName()
+	 * @see #getExamination()
+	 * @generated
+	 */
+	EAttribute getExamination_Name();
+
+	/**
 	 * Returns the meta object for class '{@link MetamodelExecution.PrescribedExamination <em>Prescribed Examination</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3938,17 +3911,6 @@ public interface Execution_metamodelPackage extends EPackage {
 	EReference getPrescribedExamination_Complement();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link MetamodelExecution.PrescribedExamination#getResult <em>Result</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Result</em>'.
-	 * @see MetamodelExecution.PrescribedExamination#getResult()
-	 * @see #getPrescribedExamination()
-	 * @generated
-	 */
-	EReference getPrescribedExamination_Result();
-
-	/**
 	 * Returns the meta object for the containment reference '{@link MetamodelExecution.PrescribedExamination#getPrescriptionexam <em>Prescriptionexam</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3958,6 +3920,28 @@ public interface Execution_metamodelPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getPrescribedExamination_Prescriptionexam();
+
+	/**
+	 * Returns the meta object for the attribute '{@link MetamodelExecution.PrescribedExamination#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see MetamodelExecution.PrescribedExamination#getName()
+	 * @see #getPrescribedExamination()
+	 * @generated
+	 */
+	EAttribute getPrescribedExamination_Name();
+
+	/**
+	 * Returns the meta object for the attribute '{@link MetamodelExecution.PrescribedExamination#getResult <em>Result</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Result</em>'.
+	 * @see MetamodelExecution.PrescribedExamination#getResult()
+	 * @see #getPrescribedExamination()
+	 * @generated
+	 */
+	EAttribute getPrescribedExamination_Result();
 
 	/**
 	 * Returns the meta object for class '{@link MetamodelExecution.Exam <em>Exam</em>}'.
@@ -4142,15 +4126,15 @@ public interface Execution_metamodelPackage extends EPackage {
 	EAttribute getComplement_Justification();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link MetamodelExecution.Complement#getQuantity <em>Quantity</em>}'.
+	 * Returns the meta object for the attribute '{@link MetamodelExecution.Complement#getQuantity <em>Quantity</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Quantity</em>'.
+	 * @return the meta object for the attribute '<em>Quantity</em>'.
 	 * @see MetamodelExecution.Complement#getQuantity()
 	 * @see #getComplement()
 	 * @generated
 	 */
-	EReference getComplement_Quantity();
+	EAttribute getComplement_Quantity();
 
 	/**
 	 * Returns the meta object for class '{@link MetamodelExecution.PrescribedPrescriptionItem <em>Prescribed Prescription Item</em>}'.
@@ -4919,16 +4903,6 @@ public interface Execution_metamodelPackage extends EPackage {
 	EAttribute getEElement_Name();
 
 	/**
-	 * Returns the meta object for class '{@link MetamodelExecution.Result <em>Result</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Result</em>'.
-	 * @see MetamodelExecution.Result
-	 * @generated
-	 */
-	EClass getResult();
-
-	/**
 	 * Returns the meta object for class '{@link MetamodelExecution.PrescriptionExam <em>Prescription Exam</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5190,16 +5164,6 @@ public interface Execution_metamodelPackage extends EPackage {
 	EReference getEPathway_Justification();
 
 	/**
-	 * Returns the meta object for class '{@link MetamodelExecution.Quantity <em>Quantity</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Quantity</em>'.
-	 * @see MetamodelExecution.Quantity
-	 * @generated
-	 */
-	EClass getQuantity();
-
-	/**
 	 * Returns the meta object for class '{@link MetamodelExecution.Question <em>Question</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5232,15 +5196,15 @@ public interface Execution_metamodelPackage extends EPackage {
 	EAttribute getQuestion_Url();
 
 	/**
-	 * Returns the meta object for the attribute '{@link MetamodelExecution.Question#getText <em>Text</em>}'.
+	 * Returns the meta object for the attribute '{@link MetamodelExecution.Question#getName <em>Name</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Text</em>'.
-	 * @see MetamodelExecution.Question#getText()
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see MetamodelExecution.Question#getName()
 	 * @see #getQuestion()
 	 * @generated
 	 */
-	EAttribute getQuestion_Text();
+	EAttribute getQuestion_Name();
 
 	/**
 	 * Returns the meta object for the containment reference '{@link MetamodelExecution.Question#getVariable <em>Variable</em>}'.
@@ -5649,6 +5613,14 @@ public interface Execution_metamodelPackage extends EPackage {
 		EReference EXAMINATION__EXAM = eINSTANCE.getExamination_Exam();
 
 		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute EXAMINATION__NAME = eINSTANCE.getExamination_Name();
+
+		/**
 		 * The meta object literal for the '{@link MetamodelExecution.impl.PrescribedExaminationImpl <em>Prescribed Examination</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -5699,20 +5671,28 @@ public interface Execution_metamodelPackage extends EPackage {
 		EReference PRESCRIBED_EXAMINATION__COMPLEMENT = eINSTANCE.getPrescribedExamination_Complement();
 
 		/**
-		 * The meta object literal for the '<em><b>Result</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference PRESCRIBED_EXAMINATION__RESULT = eINSTANCE.getPrescribedExamination_Result();
-
-		/**
 		 * The meta object literal for the '<em><b>Prescriptionexam</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
 		EReference PRESCRIBED_EXAMINATION__PRESCRIPTIONEXAM = eINSTANCE.getPrescribedExamination_Prescriptionexam();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute PRESCRIBED_EXAMINATION__NAME = eINSTANCE.getPrescribedExamination_Name();
+
+		/**
+		 * The meta object literal for the '<em><b>Result</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute PRESCRIBED_EXAMINATION__RESULT = eINSTANCE.getPrescribedExamination_Result();
 
 		/**
 		 * The meta object literal for the '{@link MetamodelExecution.impl.ExamImpl <em>Exam</em>}' class.
@@ -5861,12 +5841,12 @@ public interface Execution_metamodelPackage extends EPackage {
 		EAttribute COMPLEMENT__JUSTIFICATION = eINSTANCE.getComplement_Justification();
 
 		/**
-		 * The meta object literal for the '<em><b>Quantity</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Quantity</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference COMPLEMENT__QUANTITY = eINSTANCE.getComplement_Quantity();
+		EAttribute COMPLEMENT__QUANTITY = eINSTANCE.getComplement_Quantity();
 
 		/**
 		 * The meta object literal for the '{@link MetamodelExecution.impl.PrescribedPrescriptionItemImpl <em>Prescribed Prescription Item</em>}' class.
@@ -6467,16 +6447,6 @@ public interface Execution_metamodelPackage extends EPackage {
 		EAttribute EELEMENT__NAME = eINSTANCE.getEElement_Name();
 
 		/**
-		 * The meta object literal for the '{@link MetamodelExecution.impl.ResultImpl <em>Result</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see MetamodelExecution.impl.ResultImpl
-		 * @see MetamodelExecution.impl.Execution_metamodelPackageImpl#getResult()
-		 * @generated
-		 */
-		EClass RESULT = eINSTANCE.getResult();
-
-		/**
 		 * The meta object literal for the '{@link MetamodelExecution.impl.PrescriptionExamImpl <em>Prescription Exam</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -6675,16 +6645,6 @@ public interface Execution_metamodelPackage extends EPackage {
 		EReference EPATHWAY__JUSTIFICATION = eINSTANCE.getEPathway_Justification();
 
 		/**
-		 * The meta object literal for the '{@link MetamodelExecution.impl.QuantityImpl <em>Quantity</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see MetamodelExecution.impl.QuantityImpl
-		 * @see MetamodelExecution.impl.Execution_metamodelPackageImpl#getQuantity()
-		 * @generated
-		 */
-		EClass QUANTITY = eINSTANCE.getQuantity();
-
-		/**
 		 * The meta object literal for the '{@link MetamodelExecution.impl.QuestionImpl <em>Question</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -6711,12 +6671,12 @@ public interface Execution_metamodelPackage extends EPackage {
 		EAttribute QUESTION__URL = eINSTANCE.getQuestion_Url();
 
 		/**
-		 * The meta object literal for the '<em><b>Text</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute QUESTION__TEXT = eINSTANCE.getQuestion_Text();
+		EAttribute QUESTION__NAME = eINSTANCE.getQuestion_Name();
 
 		/**
 		 * The meta object literal for the '<em><b>Variable</b></em>' containment reference feature.
