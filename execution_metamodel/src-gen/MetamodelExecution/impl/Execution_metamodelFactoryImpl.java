@@ -84,8 +84,6 @@ public class Execution_metamodelFactoryImpl extends EFactoryImpl implements Exec
 			return createComplement();
 		case Execution_metamodelPackage.PRESCRIBED_PRESCRIPTION_ITEM:
 			return createPrescribedPrescriptionItem();
-		case Execution_metamodelPackage.PRESCRIBED_MEDICAMENT:
-			return createPrescribedMedicament();
 		case Execution_metamodelPackage.JUSTIFICATION:
 			return createJustification();
 		case Execution_metamodelPackage.PATHWAY:
@@ -106,16 +104,22 @@ public class Execution_metamodelFactoryImpl extends EFactoryImpl implements Exec
 			return createExecutor();
 		case Execution_metamodelPackage.LAST_PROFESSIONAL:
 			return createLastProfessional();
-		case Execution_metamodelPackage.PRESCRIPTION_EXAM:
-			return createPrescriptionExam();
-		case Execution_metamodelPackage.PRESCRIPTION_INFO:
-			return createPrescriptionInfo();
+		case Execution_metamodelPackage.PRESCRIPTION:
+			return createPrescription();
 		case Execution_metamodelPackage.EPATHWAY:
 			return createEPathway();
 		case Execution_metamodelPackage.QUESTION:
 			return createQuestion();
 		case Execution_metamodelPackage.VARIABLE:
 			return createVariable();
+		case Execution_metamodelPackage.MEDICAMENT:
+			return createMedicament();
+		case Execution_metamodelPackage.MEDICINE:
+			return createMedicine();
+		case Execution_metamodelPackage.UNIT:
+			return createUnit();
+		case Execution_metamodelPackage.ACCESS:
+			return createAccess();
 		default:
 			throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -266,16 +270,6 @@ public class Execution_metamodelFactoryImpl extends EFactoryImpl implements Exec
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public PrescribedMedicament createPrescribedMedicament() {
-		PrescribedMedicamentImpl prescribedMedicament = new PrescribedMedicamentImpl();
-		return prescribedMedicament;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public Justification createJustification() {
 		JustificationImpl justification = new JustificationImpl();
 		return justification;
@@ -376,19 +370,9 @@ public class Execution_metamodelFactoryImpl extends EFactoryImpl implements Exec
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public PrescriptionExam createPrescriptionExam() {
-		PrescriptionExamImpl prescriptionExam = new PrescriptionExamImpl();
-		return prescriptionExam;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public PrescriptionInfo createPrescriptionInfo() {
-		PrescriptionInfoImpl prescriptionInfo = new PrescriptionInfoImpl();
-		return prescriptionInfo;
+	public Prescription createPrescription() {
+		PrescriptionImpl prescription = new PrescriptionImpl();
+		return prescription;
 	}
 
 	/**
@@ -419,6 +403,46 @@ public class Execution_metamodelFactoryImpl extends EFactoryImpl implements Exec
 	public Variable createVariable() {
 		VariableImpl variable = new VariableImpl();
 		return variable;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Medicament createMedicament() {
+		MedicamentImpl medicament = new MedicamentImpl();
+		return medicament;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Medicine createMedicine() {
+		MedicineImpl medicine = new MedicineImpl();
+		return medicine;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Unit createUnit() {
+		UnitImpl unit = new UnitImpl();
+		return unit;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Access createAccess() {
+		AccessImpl access = new AccessImpl();
+		return access;
 	}
 
 	/**

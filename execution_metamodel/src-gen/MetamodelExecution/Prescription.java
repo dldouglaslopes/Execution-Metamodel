@@ -8,24 +8,24 @@ import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>Prescription Exam</b></em>'.
+ * A representation of the model object '<em><b>Prescription</b></em>'.
  * <!-- end-user-doc -->
  *
  * <p>
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link MetamodelExecution.PrescriptionExam#getId <em>Id</em>}</li>
- *   <li>{@link MetamodelExecution.PrescriptionExam#isSuccess <em>Success</em>}</li>
- *   <li>{@link MetamodelExecution.PrescriptionExam#getMessage <em>Message</em>}</li>
- *   <li>{@link MetamodelExecution.PrescriptionExam#getRequestDate <em>Request Date</em>}</li>
+ *   <li>{@link MetamodelExecution.Prescription#getId <em>Id</em>}</li>
+ *   <li>{@link MetamodelExecution.Prescription#isSuccess <em>Success</em>}</li>
+ *   <li>{@link MetamodelExecution.Prescription#getMessage <em>Message</em>}</li>
+ *   <li>{@link MetamodelExecution.Prescription#getRequestDate <em>Request Date</em>}</li>
  * </ul>
  *
- * @see MetamodelExecution.Execution_metamodelPackage#getPrescriptionExam()
+ * @see MetamodelExecution.Execution_metamodelPackage#getPrescription()
  * @model
  * @generated
  */
-public interface PrescriptionExam extends EObject {
+public interface Prescription extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Id</b></em>' attribute.
 	 * <!-- begin-user-doc -->
@@ -36,14 +36,14 @@ public interface PrescriptionExam extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Id</em>' attribute.
 	 * @see #setId(int)
-	 * @see MetamodelExecution.Execution_metamodelPackage#getPrescriptionExam_Id()
+	 * @see MetamodelExecution.Execution_metamodelPackage#getPrescription_Id()
 	 * @model
 	 * @generated
 	 */
 	int getId();
 
 	/**
-	 * Sets the value of the '{@link MetamodelExecution.PrescriptionExam#getId <em>Id</em>}' attribute.
+	 * Sets the value of the '{@link MetamodelExecution.Prescription#getId <em>Id</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Id</em>' attribute.
@@ -62,14 +62,14 @@ public interface PrescriptionExam extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Success</em>' attribute.
 	 * @see #setSuccess(boolean)
-	 * @see MetamodelExecution.Execution_metamodelPackage#getPrescriptionExam_Success()
+	 * @see MetamodelExecution.Execution_metamodelPackage#getPrescription_Success()
 	 * @model
 	 * @generated
 	 */
 	boolean isSuccess();
 
 	/**
-	 * Sets the value of the '{@link MetamodelExecution.PrescriptionExam#isSuccess <em>Success</em>}' attribute.
+	 * Sets the value of the '{@link MetamodelExecution.Prescription#isSuccess <em>Success</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Success</em>' attribute.
@@ -88,14 +88,14 @@ public interface PrescriptionExam extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Message</em>' attribute.
 	 * @see #setMessage(String)
-	 * @see MetamodelExecution.Execution_metamodelPackage#getPrescriptionExam_Message()
+	 * @see MetamodelExecution.Execution_metamodelPackage#getPrescription_Message()
 	 * @model
 	 * @generated
 	 */
 	String getMessage();
 
 	/**
-	 * Sets the value of the '{@link MetamodelExecution.PrescriptionExam#getMessage <em>Message</em>}' attribute.
+	 * Sets the value of the '{@link MetamodelExecution.Prescription#getMessage <em>Message</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Message</em>' attribute.
@@ -114,14 +114,14 @@ public interface PrescriptionExam extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Request Date</em>' attribute.
 	 * @see #setRequestDate(Date)
-	 * @see MetamodelExecution.Execution_metamodelPackage#getPrescriptionExam_RequestDate()
+	 * @see MetamodelExecution.Execution_metamodelPackage#getPrescription_RequestDate()
 	 * @model
 	 * @generated
 	 */
 	Date getRequestDate();
 
 	/**
-	 * Sets the value of the '{@link MetamodelExecution.PrescriptionExam#getRequestDate <em>Request Date</em>}' attribute.
+	 * Sets the value of the '{@link MetamodelExecution.Prescription#getRequestDate <em>Request Date</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Request Date</em>' attribute.
@@ -130,4 +130,4 @@ public interface PrescriptionExam extends EObject {
 	 */
 	void setRequestDate(Date value);
 
-} // PrescriptionExam
+} // Prescription

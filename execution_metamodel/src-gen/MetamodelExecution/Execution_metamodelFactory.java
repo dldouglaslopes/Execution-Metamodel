@@ -148,15 +148,6 @@ public interface Execution_metamodelFactory extends EFactory {
 	PrescribedPrescriptionItem createPrescribedPrescriptionItem();
 
 	/**
-	 * Returns a new object of class '<em>Prescribed Medicament</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Prescribed Medicament</em>'.
-	 * @generated
-	 */
-	PrescribedMedicament createPrescribedMedicament();
-
-	/**
 	 * Returns a new object of class '<em>Justification</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -247,22 +238,13 @@ public interface Execution_metamodelFactory extends EFactory {
 	LastProfessional createLastProfessional();
 
 	/**
-	 * Returns a new object of class '<em>Prescription Exam</em>'.
+	 * Returns a new object of class '<em>Prescription</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Prescription Exam</em>'.
+	 * @return a new object of class '<em>Prescription</em>'.
 	 * @generated
 	 */
-	PrescriptionExam createPrescriptionExam();
-
-	/**
-	 * Returns a new object of class '<em>Prescription Info</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Prescription Info</em>'.
-	 * @generated
-	 */
-	PrescriptionInfo createPrescriptionInfo();
+	Prescription createPrescription();
 
 	/**
 	 * Returns a new object of class '<em>EPathway</em>'.
@@ -290,6 +272,42 @@ public interface Execution_metamodelFactory extends EFactory {
 	 * @generated
 	 */
 	Variable createVariable();
+
+	/**
+	 * Returns a new object of class '<em>Medicament</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Medicament</em>'.
+	 * @generated
+	 */
+	Medicament createMedicament();
+
+	/**
+	 * Returns a new object of class '<em>Medicine</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Medicine</em>'.
+	 * @generated
+	 */
+	Medicine createMedicine();
+
+	/**
+	 * Returns a new object of class '<em>Unit</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Unit</em>'.
+	 * @generated
+	 */
+	Unit createUnit();
+
+	/**
+	 * Returns a new object of class '<em>Access</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Access</em>'.
+	 * @generated
+	 */
+	Access createAccess();
 
 	/**
 	 * Returns the package supported by this factory.

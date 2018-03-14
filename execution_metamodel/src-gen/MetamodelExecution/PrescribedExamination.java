@@ -18,7 +18,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link MetamodelExecution.PrescribedExamination#getReport <em>Report</em>}</li>
  *   <li>{@link MetamodelExecution.PrescribedExamination#getNumberGuide <em>Number Guide</em>}</li>
  *   <li>{@link MetamodelExecution.PrescribedExamination#getComplement <em>Complement</em>}</li>
- *   <li>{@link MetamodelExecution.PrescribedExamination#getPrescriptionexam <em>Prescriptionexam</em>}</li>
+ *   <li>{@link MetamodelExecution.PrescribedExamination#getPrescription <em>Prescription</em>}</li>
  *   <li>{@link MetamodelExecution.PrescribedExamination#getName <em>Name</em>}</li>
  *   <li>{@link MetamodelExecution.PrescribedExamination#getResult <em>Result</em>}</li>
  * </ul>
@@ -159,30 +159,30 @@ public interface PrescribedExamination extends EObject {
 	void setComplement(Complement value);
 
 	/**
-	 * Returns the value of the '<em><b>Prescriptionexam</b></em>' containment reference.
+	 * Returns the value of the '<em><b>Prescription</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Prescriptionexam</em>' containment reference isn't clear,
+	 * If the meaning of the '<em>Prescription</em>' containment reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Prescriptionexam</em>' containment reference.
-	 * @see #setPrescriptionexam(PrescriptionExam)
-	 * @see MetamodelExecution.Execution_metamodelPackage#getPrescribedExamination_Prescriptionexam()
+	 * @return the value of the '<em>Prescription</em>' containment reference.
+	 * @see #setPrescription(Prescription)
+	 * @see MetamodelExecution.Execution_metamodelPackage#getPrescribedExamination_Prescription()
 	 * @model containment="true" required="true"
 	 * @generated
 	 */
-	PrescriptionExam getPrescriptionexam();
+	Prescription getPrescription();
 
 	/**
-	 * Sets the value of the '{@link MetamodelExecution.PrescribedExamination#getPrescriptionexam <em>Prescriptionexam</em>}' containment reference.
+	 * Sets the value of the '{@link MetamodelExecution.PrescribedExamination#getPrescription <em>Prescription</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Prescriptionexam</em>' containment reference.
-	 * @see #getPrescriptionexam()
+	 * @param value the new value of the '<em>Prescription</em>' containment reference.
+	 * @see #getPrescription()
 	 * @generated
 	 */
-	void setPrescriptionexam(PrescriptionExam value);
+	void setPrescription(Prescription value);
 
 	/**
 	 * Returns the value of the '<em><b>Name</b></em>' attribute.

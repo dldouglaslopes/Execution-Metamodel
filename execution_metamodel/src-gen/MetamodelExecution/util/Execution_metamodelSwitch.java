@@ -176,13 +176,6 @@ public class Execution_metamodelSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case Execution_metamodelPackage.PRESCRIBED_MEDICAMENT: {
-			PrescribedMedicament prescribedMedicament = (PrescribedMedicament) theEObject;
-			T result = casePrescribedMedicament(prescribedMedicament);
-			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
 		case Execution_metamodelPackage.JUSTIFICATION: {
 			Justification justification = (Justification) theEObject;
 			T result = caseJustification(justification);
@@ -286,16 +279,9 @@ public class Execution_metamodelSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case Execution_metamodelPackage.PRESCRIPTION_EXAM: {
-			PrescriptionExam prescriptionExam = (PrescriptionExam) theEObject;
-			T result = casePrescriptionExam(prescriptionExam);
-			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
-		case Execution_metamodelPackage.PRESCRIPTION_INFO: {
-			PrescriptionInfo prescriptionInfo = (PrescriptionInfo) theEObject;
-			T result = casePrescriptionInfo(prescriptionInfo);
+		case Execution_metamodelPackage.PRESCRIPTION: {
+			Prescription prescription = (Prescription) theEObject;
+			T result = casePrescription(prescription);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -317,6 +303,34 @@ public class Execution_metamodelSwitch<T> extends Switch<T> {
 		case Execution_metamodelPackage.VARIABLE: {
 			Variable variable = (Variable) theEObject;
 			T result = caseVariable(variable);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case Execution_metamodelPackage.MEDICAMENT: {
+			Medicament medicament = (Medicament) theEObject;
+			T result = caseMedicament(medicament);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case Execution_metamodelPackage.MEDICINE: {
+			Medicine medicine = (Medicine) theEObject;
+			T result = caseMedicine(medicine);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case Execution_metamodelPackage.UNIT: {
+			Unit unit = (Unit) theEObject;
+			T result = caseUnit(unit);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case Execution_metamodelPackage.ACCESS: {
+			Access access = (Access) theEObject;
+			T result = caseAccess(access);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -537,21 +551,6 @@ public class Execution_metamodelSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Prescribed Medicament</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Prescribed Medicament</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T casePrescribedMedicament(PrescribedMedicament object) {
-		return null;
-	}
-
-	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Justification</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -747,32 +746,17 @@ public class Execution_metamodelSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Prescription Exam</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Prescription</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Prescription Exam</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Prescription</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T casePrescriptionExam(PrescriptionExam object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Prescription Info</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Prescription Info</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T casePrescriptionInfo(PrescriptionInfo object) {
+	public T casePrescription(Prescription object) {
 		return null;
 	}
 
@@ -818,6 +802,66 @@ public class Execution_metamodelSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseVariable(Variable object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Medicament</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Medicament</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseMedicament(Medicament object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Medicine</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Medicine</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseMedicine(Medicine object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Unit</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Unit</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseUnit(Unit object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Access</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Access</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseAccess(Access object) {
 		return null;
 	}
 

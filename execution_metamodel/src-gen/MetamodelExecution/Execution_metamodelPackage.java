@@ -64,7 +64,7 @@ public interface Execution_metamodelPackage extends EPackage {
 	 * @see MetamodelExecution.impl.Execution_metamodelPackageImpl#getEElement()
 	 * @generated
 	 */
-	int EELEMENT = 27;
+	int EELEMENT = 26;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -1197,22 +1197,13 @@ public interface Execution_metamodelPackage extends EPackage {
 	int EPRESCRIPTION__TEXT = EELEMENT_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Prescribedmedicament</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EPRESCRIPTION__PRESCRIBEDMEDICAMENT = EELEMENT_FEATURE_COUNT + 1;
-
-	/**
 	 * The feature id for the '<em><b>Prescribedprescriptionitem</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int EPRESCRIPTION__PRESCRIBEDPRESCRIPTIONITEM = EELEMENT_FEATURE_COUNT + 2;
+	int EPRESCRIPTION__PRESCRIBEDPRESCRIPTIONITEM = EELEMENT_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Ids Prescribed Medication</b></em>' attribute list.
@@ -1221,7 +1212,7 @@ public interface Execution_metamodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EPRESCRIPTION__IDS_PRESCRIBED_MEDICATION = EELEMENT_FEATURE_COUNT + 3;
+	int EPRESCRIPTION__IDS_PRESCRIBED_MEDICATION = EELEMENT_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Ids Prescribed Prescription Item</b></em>' attribute list.
@@ -1230,16 +1221,25 @@ public interface Execution_metamodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EPRESCRIPTION__IDS_PRESCRIBED_PRESCRIPTION_ITEM = EELEMENT_FEATURE_COUNT + 4;
+	int EPRESCRIPTION__IDS_PRESCRIBED_PRESCRIPTION_ITEM = EELEMENT_FEATURE_COUNT + 3;
 
 	/**
-	 * The feature id for the '<em><b>Prescriptioninfo</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Prescription</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int EPRESCRIPTION__PRESCRIPTIONINFO = EELEMENT_FEATURE_COUNT + 5;
+	int EPRESCRIPTION__PRESCRIPTION = EELEMENT_FEATURE_COUNT + 4;
+
+	/**
+	 * The feature id for the '<em><b>Prescribedmedication</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EPRESCRIPTION__PRESCRIBEDMEDICATION = EELEMENT_FEATURE_COUNT + 5;
 
 	/**
 	 * The number of structural features of the '<em>EPrescription</em>' class.
@@ -1695,13 +1695,13 @@ public interface Execution_metamodelPackage extends EPackage {
 	int PRESCRIBED_EXAMINATION__COMPLEMENT = 4;
 
 	/**
-	 * The feature id for the '<em><b>Prescriptionexam</b></em>' containment reference.
+	 * The feature id for the '<em><b>Prescription</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PRESCRIBED_EXAMINATION__PRESCRIPTIONEXAM = 5;
+	int PRESCRIBED_EXAMINATION__PRESCRIPTION = 5;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1897,13 +1897,49 @@ public interface Execution_metamodelPackage extends EPackage {
 	int PRESCRIBED_MEDICATION = 11;
 
 	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PRESCRIBED_MEDICATION__ID = 0;
+
+	/**
+	 * The feature id for the '<em><b>Result</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PRESCRIBED_MEDICATION__RESULT = 1;
+
+	/**
+	 * The feature id for the '<em><b>Medicament</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PRESCRIBED_MEDICATION__MEDICAMENT = 2;
+
+	/**
+	 * The feature id for the '<em><b>Prescription</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PRESCRIBED_MEDICATION__PRESCRIPTION = 3;
+
+	/**
 	 * The number of structural features of the '<em>Prescribed Medication</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PRESCRIBED_MEDICATION_FEATURE_COUNT = 0;
+	int PRESCRIBED_MEDICATION_FEATURE_COUNT = 4;
 
 	/**
 	 * The number of operations of the '<em>Prescribed Medication</em>' class.
@@ -2025,34 +2061,6 @@ public interface Execution_metamodelPackage extends EPackage {
 	int PRESCRIBED_PRESCRIPTION_ITEM_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link MetamodelExecution.impl.PrescribedMedicamentImpl <em>Prescribed Medicament</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see MetamodelExecution.impl.PrescribedMedicamentImpl
-	 * @see MetamodelExecution.impl.Execution_metamodelPackageImpl#getPrescribedMedicament()
-	 * @generated
-	 */
-	int PRESCRIBED_MEDICAMENT = 14;
-
-	/**
-	 * The number of structural features of the '<em>Prescribed Medicament</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PRESCRIBED_MEDICAMENT_FEATURE_COUNT = 0;
-
-	/**
-	 * The number of operations of the '<em>Prescribed Medicament</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PRESCRIBED_MEDICAMENT_OPERATION_COUNT = 0;
-
-	/**
 	 * The meta object id for the '{@link MetamodelExecution.impl.JustificationImpl <em>Justification</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2060,7 +2068,7 @@ public interface Execution_metamodelPackage extends EPackage {
 	 * @see MetamodelExecution.impl.Execution_metamodelPackageImpl#getJustification()
 	 * @generated
 	 */
-	int JUSTIFICATION = 15;
+	int JUSTIFICATION = 14;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -2142,7 +2150,7 @@ public interface Execution_metamodelPackage extends EPackage {
 	 * @see MetamodelExecution.impl.Execution_metamodelPackageImpl#getPathway()
 	 * @generated
 	 */
-	int PATHWAY = 16;
+	int PATHWAY = 15;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -2233,7 +2241,7 @@ public interface Execution_metamodelPackage extends EPackage {
 	 * @see MetamodelExecution.impl.Execution_metamodelPackageImpl#getUser()
 	 * @generated
 	 */
-	int USER = 18;
+	int USER = 17;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -2342,7 +2350,7 @@ public interface Execution_metamodelPackage extends EPackage {
 	 * @see MetamodelExecution.impl.Execution_metamodelPackageImpl#getResponsible()
 	 * @generated
 	 */
-	int RESPONSIBLE = 17;
+	int RESPONSIBLE = 16;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -2451,7 +2459,7 @@ public interface Execution_metamodelPackage extends EPackage {
 	 * @see MetamodelExecution.impl.Execution_metamodelPackageImpl#getValue()
 	 * @generated
 	 */
-	int VALUE = 19;
+	int VALUE = 18;
 
 	/**
 	 * The number of structural features of the '<em>Value</em>' class.
@@ -2479,7 +2487,7 @@ public interface Execution_metamodelPackage extends EPackage {
 	 * @see MetamodelExecution.impl.Execution_metamodelPackageImpl#getAnswer()
 	 * @generated
 	 */
-	int ANSWER = 20;
+	int ANSWER = 19;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -2552,7 +2560,7 @@ public interface Execution_metamodelPackage extends EPackage {
 	 * @see MetamodelExecution.impl.Execution_metamodelPackageImpl#getNumeric()
 	 * @generated
 	 */
-	int NUMERIC = 21;
+	int NUMERIC = 20;
 
 	/**
 	 * The feature id for the '<em><b>Value</b></em>' attribute.
@@ -2589,7 +2597,7 @@ public interface Execution_metamodelPackage extends EPackage {
 	 * @see MetamodelExecution.impl.Execution_metamodelPackageImpl#getYesOrNo()
 	 * @generated
 	 */
-	int YES_OR_NO = 22;
+	int YES_OR_NO = 21;
 
 	/**
 	 * The feature id for the '<em><b>Value</b></em>' attribute.
@@ -2626,7 +2634,7 @@ public interface Execution_metamodelPackage extends EPackage {
 	 * @see MetamodelExecution.impl.Execution_metamodelPackageImpl#getStep()
 	 * @generated
 	 */
-	int STEP = 23;
+	int STEP = 22;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -2735,7 +2743,7 @@ public interface Execution_metamodelPackage extends EPackage {
 	 * @see MetamodelExecution.impl.Execution_metamodelPackageImpl#getCreator()
 	 * @generated
 	 */
-	int CREATOR = 24;
+	int CREATOR = 23;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -2844,7 +2852,7 @@ public interface Execution_metamodelPackage extends EPackage {
 	 * @see MetamodelExecution.impl.Execution_metamodelPackageImpl#getExecutor()
 	 * @generated
 	 */
-	int EXECUTOR = 25;
+	int EXECUTOR = 24;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -2953,7 +2961,7 @@ public interface Execution_metamodelPackage extends EPackage {
 	 * @see MetamodelExecution.impl.Execution_metamodelPackageImpl#getLastProfessional()
 	 * @generated
 	 */
-	int LAST_PROFESSIONAL = 26;
+	int LAST_PROFESSIONAL = 25;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -3055,14 +3063,14 @@ public interface Execution_metamodelPackage extends EPackage {
 	int LAST_PROFESSIONAL_OPERATION_COUNT = USER_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link MetamodelExecution.impl.PrescriptionExamImpl <em>Prescription Exam</em>}' class.
+	 * The meta object id for the '{@link MetamodelExecution.impl.PrescriptionImpl <em>Prescription</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see MetamodelExecution.impl.PrescriptionExamImpl
-	 * @see MetamodelExecution.impl.Execution_metamodelPackageImpl#getPrescriptionExam()
+	 * @see MetamodelExecution.impl.PrescriptionImpl
+	 * @see MetamodelExecution.impl.Execution_metamodelPackageImpl#getPrescription()
 	 * @generated
 	 */
-	int PRESCRIPTION_EXAM = 28;
+	int PRESCRIPTION = 27;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -3071,7 +3079,7 @@ public interface Execution_metamodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PRESCRIPTION_EXAM__ID = 0;
+	int PRESCRIPTION__ID = 0;
 
 	/**
 	 * The feature id for the '<em><b>Success</b></em>' attribute.
@@ -3080,7 +3088,7 @@ public interface Execution_metamodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PRESCRIPTION_EXAM__SUCCESS = 1;
+	int PRESCRIPTION__SUCCESS = 1;
 
 	/**
 	 * The feature id for the '<em><b>Message</b></em>' attribute.
@@ -3089,7 +3097,7 @@ public interface Execution_metamodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PRESCRIPTION_EXAM__MESSAGE = 2;
+	int PRESCRIPTION__MESSAGE = 2;
 
 	/**
 	 * The feature id for the '<em><b>Request Date</b></em>' attribute.
@@ -3098,53 +3106,25 @@ public interface Execution_metamodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PRESCRIPTION_EXAM__REQUEST_DATE = 3;
+	int PRESCRIPTION__REQUEST_DATE = 3;
 
 	/**
-	 * The number of structural features of the '<em>Prescription Exam</em>' class.
+	 * The number of structural features of the '<em>Prescription</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PRESCRIPTION_EXAM_FEATURE_COUNT = 4;
+	int PRESCRIPTION_FEATURE_COUNT = 4;
 
 	/**
-	 * The number of operations of the '<em>Prescription Exam</em>' class.
+	 * The number of operations of the '<em>Prescription</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PRESCRIPTION_EXAM_OPERATION_COUNT = 0;
-
-	/**
-	 * The meta object id for the '{@link MetamodelExecution.impl.PrescriptionInfoImpl <em>Prescription Info</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see MetamodelExecution.impl.PrescriptionInfoImpl
-	 * @see MetamodelExecution.impl.Execution_metamodelPackageImpl#getPrescriptionInfo()
-	 * @generated
-	 */
-	int PRESCRIPTION_INFO = 29;
-
-	/**
-	 * The number of structural features of the '<em>Prescription Info</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PRESCRIPTION_INFO_FEATURE_COUNT = 0;
-
-	/**
-	 * The number of operations of the '<em>Prescription Info</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PRESCRIPTION_INFO_OPERATION_COUNT = 0;
+	int PRESCRIPTION_OPERATION_COUNT = 0;
 
 	/**
 	 * The meta object id for the '{@link MetamodelExecution.impl.EPathwayImpl <em>EPathway</em>}' class.
@@ -3154,7 +3134,7 @@ public interface Execution_metamodelPackage extends EPackage {
 	 * @see MetamodelExecution.impl.Execution_metamodelPackageImpl#getEPathway()
 	 * @generated
 	 */
-	int EPATHWAY = 30;
+	int EPATHWAY = 28;
 
 	/**
 	 * The feature id for the '<em><b>Element</b></em>' containment reference list.
@@ -3335,7 +3315,7 @@ public interface Execution_metamodelPackage extends EPackage {
 	 * @see MetamodelExecution.impl.Execution_metamodelPackageImpl#getQuestion()
 	 * @generated
 	 */
-	int QUESTION = 31;
+	int QUESTION = 29;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -3417,7 +3397,7 @@ public interface Execution_metamodelPackage extends EPackage {
 	 * @see MetamodelExecution.impl.Execution_metamodelPackageImpl#getVariable()
 	 * @generated
 	 */
-	int VARIABLE = 32;
+	int VARIABLE = 30;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -3501,6 +3481,442 @@ public interface Execution_metamodelPackage extends EPackage {
 	int VARIABLE_OPERATION_COUNT = 0;
 
 	/**
+	 * The meta object id for the '{@link MetamodelExecution.impl.MedicamentImpl <em>Medicament</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see MetamodelExecution.impl.MedicamentImpl
+	 * @see MetamodelExecution.impl.Execution_metamodelPackageImpl#getMedicament()
+	 * @generated
+	 */
+	int MEDICAMENT = 31;
+
+	/**
+	 * The feature id for the '<em><b>Medicine</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MEDICAMENT__MEDICINE = 0;
+
+	/**
+	 * The feature id for the '<em><b>Unit</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MEDICAMENT__UNIT = 1;
+
+	/**
+	 * The feature id for the '<em><b>Access</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MEDICAMENT__ACCESS = 2;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MEDICAMENT__ID = 3;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MEDICAMENT__NAME = 4;
+
+	/**
+	 * The feature id for the '<em><b>Url</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MEDICAMENT__URL = 5;
+
+	/**
+	 * The feature id for the '<em><b>Code</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MEDICAMENT__CODE = 6;
+
+	/**
+	 * The feature id for the '<em><b>Id Medicament</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MEDICAMENT__ID_MEDICAMENT = 7;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MEDICAMENT__DESCRIPTION = 8;
+
+	/**
+	 * The feature id for the '<em><b>Brand</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MEDICAMENT__BRAND = 9;
+
+	/**
+	 * The feature id for the '<em><b>Outpatient</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MEDICAMENT__OUTPATIENT = 10;
+
+	/**
+	 * The feature id for the '<em><b>Id Unit</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MEDICAMENT__ID_UNIT = 11;
+
+	/**
+	 * The feature id for the '<em><b>Id Access</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MEDICAMENT__ID_ACCESS = 12;
+
+	/**
+	 * The feature id for the '<em><b>Standard</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MEDICAMENT__STANDARD = 13;
+
+	/**
+	 * The feature id for the '<em><b>Daily Dosage</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MEDICAMENT__DAILY_DOSAGE = 14;
+
+	/**
+	 * The feature id for the '<em><b>Cycles</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MEDICAMENT__CYCLES = 15;
+
+	/**
+	 * The feature id for the '<em><b>Frequency</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MEDICAMENT__FREQUENCY = 16;
+
+	/**
+	 * The feature id for the '<em><b>Frequency Display</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MEDICAMENT__FREQUENCY_DISPLAY = 17;
+
+	/**
+	 * The feature id for the '<em><b>Time Treatement</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MEDICAMENT__TIME_TREATEMENT = 18;
+
+	/**
+	 * The feature id for the '<em><b>Time Interval</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MEDICAMENT__TIME_INTERVAL = 19;
+
+	/**
+	 * The number of structural features of the '<em>Medicament</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MEDICAMENT_FEATURE_COUNT = 20;
+
+	/**
+	 * The number of operations of the '<em>Medicament</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MEDICAMENT_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link MetamodelExecution.impl.MedicineImpl <em>Medicine</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see MetamodelExecution.impl.MedicineImpl
+	 * @see MetamodelExecution.impl.Execution_metamodelPackageImpl#getMedicine()
+	 * @generated
+	 */
+	int MEDICINE = 32;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MEDICINE__ID = 0;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MEDICINE__NAME = 1;
+
+	/**
+	 * The feature id for the '<em><b>Url</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MEDICINE__URL = 2;
+
+	/**
+	 * The feature id for the '<em><b>Code</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MEDICINE__CODE = 3;
+
+	/**
+	 * The feature id for the '<em><b>Outpatient</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MEDICINE__OUTPATIENT = 4;
+
+	/**
+	 * The feature id for the '<em><b>Brand</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MEDICINE__BRAND = 5;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MEDICINE__DESCRIPTION = 6;
+
+	/**
+	 * The number of structural features of the '<em>Medicine</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MEDICINE_FEATURE_COUNT = 7;
+
+	/**
+	 * The number of operations of the '<em>Medicine</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MEDICINE_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link MetamodelExecution.impl.UnitImpl <em>Unit</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see MetamodelExecution.impl.UnitImpl
+	 * @see MetamodelExecution.impl.Execution_metamodelPackageImpl#getUnit()
+	 * @generated
+	 */
+	int UNIT = 33;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UNIT__ID = 0;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UNIT__NAME = 1;
+
+	/**
+	 * The feature id for the '<em><b>Url</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UNIT__URL = 2;
+
+	/**
+	 * The feature id for the '<em><b>Code</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UNIT__CODE = 3;
+
+	/**
+	 * The feature id for the '<em><b>Unit</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UNIT__UNIT = 4;
+
+	/**
+	 * The number of structural features of the '<em>Unit</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UNIT_FEATURE_COUNT = 5;
+
+	/**
+	 * The number of operations of the '<em>Unit</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UNIT_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link MetamodelExecution.impl.AccessImpl <em>Access</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see MetamodelExecution.impl.AccessImpl
+	 * @see MetamodelExecution.impl.Execution_metamodelPackageImpl#getAccess()
+	 * @generated
+	 */
+	int ACCESS = 34;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACCESS__ID = 0;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACCESS__NAME = 1;
+
+	/**
+	 * The feature id for the '<em><b>Url</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACCESS__URL = 2;
+
+	/**
+	 * The feature id for the '<em><b>Code</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACCESS__CODE = 3;
+
+	/**
+	 * The number of structural features of the '<em>Access</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACCESS_FEATURE_COUNT = 4;
+
+	/**
+	 * The number of operations of the '<em>Access</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACCESS_OPERATION_COUNT = 0;
+
+	/**
 	 * Returns the meta object for class '{@link MetamodelExecution.EAuxiliaryConduct <em>EAuxiliary Conduct</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3573,17 +3989,6 @@ public interface Execution_metamodelPackage extends EPackage {
 	EAttribute getEPrescription_Text();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link MetamodelExecution.EPrescription#getPrescribedmedicament <em>Prescribedmedicament</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Prescribedmedicament</em>'.
-	 * @see MetamodelExecution.EPrescription#getPrescribedmedicament()
-	 * @see #getEPrescription()
-	 * @generated
-	 */
-	EReference getEPrescription_Prescribedmedicament();
-
-	/**
 	 * Returns the meta object for the containment reference list '{@link MetamodelExecution.EPrescription#getPrescribedprescriptionitem <em>Prescribedprescriptionitem</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3617,15 +4022,26 @@ public interface Execution_metamodelPackage extends EPackage {
 	EAttribute getEPrescription_IdsPrescribedPrescriptionItem();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link MetamodelExecution.EPrescription#getPrescriptioninfo <em>Prescriptioninfo</em>}'.
+	 * Returns the meta object for the containment reference list '{@link MetamodelExecution.EPrescription#getPrescription <em>Prescription</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Prescriptioninfo</em>'.
-	 * @see MetamodelExecution.EPrescription#getPrescriptioninfo()
+	 * @return the meta object for the containment reference list '<em>Prescription</em>'.
+	 * @see MetamodelExecution.EPrescription#getPrescription()
 	 * @see #getEPrescription()
 	 * @generated
 	 */
-	EReference getEPrescription_Prescriptioninfo();
+	EReference getEPrescription_Prescription();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link MetamodelExecution.EPrescription#getPrescribedmedication <em>Prescribedmedication</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Prescribedmedication</em>'.
+	 * @see MetamodelExecution.EPrescription#getPrescribedmedication()
+	 * @see #getEPrescription()
+	 * @generated
+	 */
+	EReference getEPrescription_Prescribedmedication();
 
 	/**
 	 * Returns the meta object for class '{@link MetamodelExecution.ETreatment <em>ETreatment</em>}'.
@@ -3911,15 +4327,15 @@ public interface Execution_metamodelPackage extends EPackage {
 	EReference getPrescribedExamination_Complement();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link MetamodelExecution.PrescribedExamination#getPrescriptionexam <em>Prescriptionexam</em>}'.
+	 * Returns the meta object for the containment reference '{@link MetamodelExecution.PrescribedExamination#getPrescription <em>Prescription</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Prescriptionexam</em>'.
-	 * @see MetamodelExecution.PrescribedExamination#getPrescriptionexam()
+	 * @return the meta object for the containment reference '<em>Prescription</em>'.
+	 * @see MetamodelExecution.PrescribedExamination#getPrescription()
 	 * @see #getPrescribedExamination()
 	 * @generated
 	 */
-	EReference getPrescribedExamination_Prescriptionexam();
+	EReference getPrescribedExamination_Prescription();
 
 	/**
 	 * Returns the meta object for the attribute '{@link MetamodelExecution.PrescribedExamination#getName <em>Name</em>}'.
@@ -4061,6 +4477,50 @@ public interface Execution_metamodelPackage extends EPackage {
 	EClass getPrescribedMedication();
 
 	/**
+	 * Returns the meta object for the attribute '{@link MetamodelExecution.PrescribedMedication#getId <em>Id</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Id</em>'.
+	 * @see MetamodelExecution.PrescribedMedication#getId()
+	 * @see #getPrescribedMedication()
+	 * @generated
+	 */
+	EAttribute getPrescribedMedication_Id();
+
+	/**
+	 * Returns the meta object for the attribute '{@link MetamodelExecution.PrescribedMedication#getResult <em>Result</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Result</em>'.
+	 * @see MetamodelExecution.PrescribedMedication#getResult()
+	 * @see #getPrescribedMedication()
+	 * @generated
+	 */
+	EAttribute getPrescribedMedication_Result();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link MetamodelExecution.PrescribedMedication#getMedicament <em>Medicament</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Medicament</em>'.
+	 * @see MetamodelExecution.PrescribedMedication#getMedicament()
+	 * @see #getPrescribedMedication()
+	 * @generated
+	 */
+	EReference getPrescribedMedication_Medicament();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link MetamodelExecution.PrescribedMedication#getPrescription <em>Prescription</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Prescription</em>'.
+	 * @see MetamodelExecution.PrescribedMedication#getPrescription()
+	 * @see #getPrescribedMedication()
+	 * @generated
+	 */
+	EReference getPrescribedMedication_Prescription();
+
+	/**
 	 * Returns the meta object for class '{@link MetamodelExecution.Complement <em>Complement</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4145,16 +4605,6 @@ public interface Execution_metamodelPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getPrescribedPrescriptionItem();
-
-	/**
-	 * Returns the meta object for class '{@link MetamodelExecution.PrescribedMedicament <em>Prescribed Medicament</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Prescribed Medicament</em>'.
-	 * @see MetamodelExecution.PrescribedMedicament
-	 * @generated
-	 */
-	EClass getPrescribedMedicament();
 
 	/**
 	 * Returns the meta object for class '{@link MetamodelExecution.Justification <em>Justification</em>}'.
@@ -4903,68 +5353,58 @@ public interface Execution_metamodelPackage extends EPackage {
 	EAttribute getEElement_Name();
 
 	/**
-	 * Returns the meta object for class '{@link MetamodelExecution.PrescriptionExam <em>Prescription Exam</em>}'.
+	 * Returns the meta object for class '{@link MetamodelExecution.Prescription <em>Prescription</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Prescription Exam</em>'.
-	 * @see MetamodelExecution.PrescriptionExam
+	 * @return the meta object for class '<em>Prescription</em>'.
+	 * @see MetamodelExecution.Prescription
 	 * @generated
 	 */
-	EClass getPrescriptionExam();
+	EClass getPrescription();
 
 	/**
-	 * Returns the meta object for the attribute '{@link MetamodelExecution.PrescriptionExam#getId <em>Id</em>}'.
+	 * Returns the meta object for the attribute '{@link MetamodelExecution.Prescription#getId <em>Id</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Id</em>'.
-	 * @see MetamodelExecution.PrescriptionExam#getId()
-	 * @see #getPrescriptionExam()
+	 * @see MetamodelExecution.Prescription#getId()
+	 * @see #getPrescription()
 	 * @generated
 	 */
-	EAttribute getPrescriptionExam_Id();
+	EAttribute getPrescription_Id();
 
 	/**
-	 * Returns the meta object for the attribute '{@link MetamodelExecution.PrescriptionExam#isSuccess <em>Success</em>}'.
+	 * Returns the meta object for the attribute '{@link MetamodelExecution.Prescription#isSuccess <em>Success</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Success</em>'.
-	 * @see MetamodelExecution.PrescriptionExam#isSuccess()
-	 * @see #getPrescriptionExam()
+	 * @see MetamodelExecution.Prescription#isSuccess()
+	 * @see #getPrescription()
 	 * @generated
 	 */
-	EAttribute getPrescriptionExam_Success();
+	EAttribute getPrescription_Success();
 
 	/**
-	 * Returns the meta object for the attribute '{@link MetamodelExecution.PrescriptionExam#getMessage <em>Message</em>}'.
+	 * Returns the meta object for the attribute '{@link MetamodelExecution.Prescription#getMessage <em>Message</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Message</em>'.
-	 * @see MetamodelExecution.PrescriptionExam#getMessage()
-	 * @see #getPrescriptionExam()
+	 * @see MetamodelExecution.Prescription#getMessage()
+	 * @see #getPrescription()
 	 * @generated
 	 */
-	EAttribute getPrescriptionExam_Message();
+	EAttribute getPrescription_Message();
 
 	/**
-	 * Returns the meta object for the attribute '{@link MetamodelExecution.PrescriptionExam#getRequestDate <em>Request Date</em>}'.
+	 * Returns the meta object for the attribute '{@link MetamodelExecution.Prescription#getRequestDate <em>Request Date</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Request Date</em>'.
-	 * @see MetamodelExecution.PrescriptionExam#getRequestDate()
-	 * @see #getPrescriptionExam()
+	 * @see MetamodelExecution.Prescription#getRequestDate()
+	 * @see #getPrescription()
 	 * @generated
 	 */
-	EAttribute getPrescriptionExam_RequestDate();
-
-	/**
-	 * Returns the meta object for class '{@link MetamodelExecution.PrescriptionInfo <em>Prescription Info</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Prescription Info</em>'.
-	 * @see MetamodelExecution.PrescriptionInfo
-	 * @generated
-	 */
-	EClass getPrescriptionInfo();
+	EAttribute getPrescription_RequestDate();
 
 	/**
 	 * Returns the meta object for class '{@link MetamodelExecution.EPathway <em>EPathway</em>}'.
@@ -5327,6 +5767,442 @@ public interface Execution_metamodelPackage extends EPackage {
 	EReference getVariable_Value();
 
 	/**
+	 * Returns the meta object for class '{@link MetamodelExecution.Medicament <em>Medicament</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Medicament</em>'.
+	 * @see MetamodelExecution.Medicament
+	 * @generated
+	 */
+	EClass getMedicament();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link MetamodelExecution.Medicament#getMedicine <em>Medicine</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Medicine</em>'.
+	 * @see MetamodelExecution.Medicament#getMedicine()
+	 * @see #getMedicament()
+	 * @generated
+	 */
+	EReference getMedicament_Medicine();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link MetamodelExecution.Medicament#getUnit <em>Unit</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Unit</em>'.
+	 * @see MetamodelExecution.Medicament#getUnit()
+	 * @see #getMedicament()
+	 * @generated
+	 */
+	EReference getMedicament_Unit();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link MetamodelExecution.Medicament#getAccess <em>Access</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Access</em>'.
+	 * @see MetamodelExecution.Medicament#getAccess()
+	 * @see #getMedicament()
+	 * @generated
+	 */
+	EReference getMedicament_Access();
+
+	/**
+	 * Returns the meta object for the attribute '{@link MetamodelExecution.Medicament#getId <em>Id</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Id</em>'.
+	 * @see MetamodelExecution.Medicament#getId()
+	 * @see #getMedicament()
+	 * @generated
+	 */
+	EAttribute getMedicament_Id();
+
+	/**
+	 * Returns the meta object for the attribute '{@link MetamodelExecution.Medicament#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see MetamodelExecution.Medicament#getName()
+	 * @see #getMedicament()
+	 * @generated
+	 */
+	EAttribute getMedicament_Name();
+
+	/**
+	 * Returns the meta object for the attribute '{@link MetamodelExecution.Medicament#getUrl <em>Url</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Url</em>'.
+	 * @see MetamodelExecution.Medicament#getUrl()
+	 * @see #getMedicament()
+	 * @generated
+	 */
+	EAttribute getMedicament_Url();
+
+	/**
+	 * Returns the meta object for the attribute '{@link MetamodelExecution.Medicament#getCode <em>Code</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Code</em>'.
+	 * @see MetamodelExecution.Medicament#getCode()
+	 * @see #getMedicament()
+	 * @generated
+	 */
+	EAttribute getMedicament_Code();
+
+	/**
+	 * Returns the meta object for the attribute '{@link MetamodelExecution.Medicament#getIdMedicament <em>Id Medicament</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Id Medicament</em>'.
+	 * @see MetamodelExecution.Medicament#getIdMedicament()
+	 * @see #getMedicament()
+	 * @generated
+	 */
+	EAttribute getMedicament_IdMedicament();
+
+	/**
+	 * Returns the meta object for the attribute '{@link MetamodelExecution.Medicament#getDescription <em>Description</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Description</em>'.
+	 * @see MetamodelExecution.Medicament#getDescription()
+	 * @see #getMedicament()
+	 * @generated
+	 */
+	EAttribute getMedicament_Description();
+
+	/**
+	 * Returns the meta object for the attribute '{@link MetamodelExecution.Medicament#getBrand <em>Brand</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Brand</em>'.
+	 * @see MetamodelExecution.Medicament#getBrand()
+	 * @see #getMedicament()
+	 * @generated
+	 */
+	EAttribute getMedicament_Brand();
+
+	/**
+	 * Returns the meta object for the attribute '{@link MetamodelExecution.Medicament#isOutpatient <em>Outpatient</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Outpatient</em>'.
+	 * @see MetamodelExecution.Medicament#isOutpatient()
+	 * @see #getMedicament()
+	 * @generated
+	 */
+	EAttribute getMedicament_Outpatient();
+
+	/**
+	 * Returns the meta object for the attribute '{@link MetamodelExecution.Medicament#getIdUnit <em>Id Unit</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Id Unit</em>'.
+	 * @see MetamodelExecution.Medicament#getIdUnit()
+	 * @see #getMedicament()
+	 * @generated
+	 */
+	EAttribute getMedicament_IdUnit();
+
+	/**
+	 * Returns the meta object for the attribute '{@link MetamodelExecution.Medicament#getIdAccess <em>Id Access</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Id Access</em>'.
+	 * @see MetamodelExecution.Medicament#getIdAccess()
+	 * @see #getMedicament()
+	 * @generated
+	 */
+	EAttribute getMedicament_IdAccess();
+
+	/**
+	 * Returns the meta object for the attribute '{@link MetamodelExecution.Medicament#getStandard <em>Standard</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Standard</em>'.
+	 * @see MetamodelExecution.Medicament#getStandard()
+	 * @see #getMedicament()
+	 * @generated
+	 */
+	EAttribute getMedicament_Standard();
+
+	/**
+	 * Returns the meta object for the attribute '{@link MetamodelExecution.Medicament#getDailyDosage <em>Daily Dosage</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Daily Dosage</em>'.
+	 * @see MetamodelExecution.Medicament#getDailyDosage()
+	 * @see #getMedicament()
+	 * @generated
+	 */
+	EAttribute getMedicament_DailyDosage();
+
+	/**
+	 * Returns the meta object for the attribute '{@link MetamodelExecution.Medicament#getCycles <em>Cycles</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Cycles</em>'.
+	 * @see MetamodelExecution.Medicament#getCycles()
+	 * @see #getMedicament()
+	 * @generated
+	 */
+	EAttribute getMedicament_Cycles();
+
+	/**
+	 * Returns the meta object for the attribute '{@link MetamodelExecution.Medicament#getFrequency <em>Frequency</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Frequency</em>'.
+	 * @see MetamodelExecution.Medicament#getFrequency()
+	 * @see #getMedicament()
+	 * @generated
+	 */
+	EAttribute getMedicament_Frequency();
+
+	/**
+	 * Returns the meta object for the attribute '{@link MetamodelExecution.Medicament#getFrequencyDisplay <em>Frequency Display</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Frequency Display</em>'.
+	 * @see MetamodelExecution.Medicament#getFrequencyDisplay()
+	 * @see #getMedicament()
+	 * @generated
+	 */
+	EAttribute getMedicament_FrequencyDisplay();
+
+	/**
+	 * Returns the meta object for the attribute '{@link MetamodelExecution.Medicament#getTimeTreatement <em>Time Treatement</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Time Treatement</em>'.
+	 * @see MetamodelExecution.Medicament#getTimeTreatement()
+	 * @see #getMedicament()
+	 * @generated
+	 */
+	EAttribute getMedicament_TimeTreatement();
+
+	/**
+	 * Returns the meta object for the attribute '{@link MetamodelExecution.Medicament#getTimeInterval <em>Time Interval</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Time Interval</em>'.
+	 * @see MetamodelExecution.Medicament#getTimeInterval()
+	 * @see #getMedicament()
+	 * @generated
+	 */
+	EAttribute getMedicament_TimeInterval();
+
+	/**
+	 * Returns the meta object for class '{@link MetamodelExecution.Medicine <em>Medicine</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Medicine</em>'.
+	 * @see MetamodelExecution.Medicine
+	 * @generated
+	 */
+	EClass getMedicine();
+
+	/**
+	 * Returns the meta object for the attribute '{@link MetamodelExecution.Medicine#getId <em>Id</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Id</em>'.
+	 * @see MetamodelExecution.Medicine#getId()
+	 * @see #getMedicine()
+	 * @generated
+	 */
+	EAttribute getMedicine_Id();
+
+	/**
+	 * Returns the meta object for the attribute '{@link MetamodelExecution.Medicine#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see MetamodelExecution.Medicine#getName()
+	 * @see #getMedicine()
+	 * @generated
+	 */
+	EAttribute getMedicine_Name();
+
+	/**
+	 * Returns the meta object for the attribute '{@link MetamodelExecution.Medicine#getUrl <em>Url</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Url</em>'.
+	 * @see MetamodelExecution.Medicine#getUrl()
+	 * @see #getMedicine()
+	 * @generated
+	 */
+	EAttribute getMedicine_Url();
+
+	/**
+	 * Returns the meta object for the attribute '{@link MetamodelExecution.Medicine#getCode <em>Code</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Code</em>'.
+	 * @see MetamodelExecution.Medicine#getCode()
+	 * @see #getMedicine()
+	 * @generated
+	 */
+	EAttribute getMedicine_Code();
+
+	/**
+	 * Returns the meta object for the attribute '{@link MetamodelExecution.Medicine#isOutpatient <em>Outpatient</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Outpatient</em>'.
+	 * @see MetamodelExecution.Medicine#isOutpatient()
+	 * @see #getMedicine()
+	 * @generated
+	 */
+	EAttribute getMedicine_Outpatient();
+
+	/**
+	 * Returns the meta object for the attribute '{@link MetamodelExecution.Medicine#getBrand <em>Brand</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Brand</em>'.
+	 * @see MetamodelExecution.Medicine#getBrand()
+	 * @see #getMedicine()
+	 * @generated
+	 */
+	EAttribute getMedicine_Brand();
+
+	/**
+	 * Returns the meta object for the attribute '{@link MetamodelExecution.Medicine#getDescription <em>Description</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Description</em>'.
+	 * @see MetamodelExecution.Medicine#getDescription()
+	 * @see #getMedicine()
+	 * @generated
+	 */
+	EAttribute getMedicine_Description();
+
+	/**
+	 * Returns the meta object for class '{@link MetamodelExecution.Unit <em>Unit</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Unit</em>'.
+	 * @see MetamodelExecution.Unit
+	 * @generated
+	 */
+	EClass getUnit();
+
+	/**
+	 * Returns the meta object for the attribute '{@link MetamodelExecution.Unit#getId <em>Id</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Id</em>'.
+	 * @see MetamodelExecution.Unit#getId()
+	 * @see #getUnit()
+	 * @generated
+	 */
+	EAttribute getUnit_Id();
+
+	/**
+	 * Returns the meta object for the attribute '{@link MetamodelExecution.Unit#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see MetamodelExecution.Unit#getName()
+	 * @see #getUnit()
+	 * @generated
+	 */
+	EAttribute getUnit_Name();
+
+	/**
+	 * Returns the meta object for the attribute '{@link MetamodelExecution.Unit#getUrl <em>Url</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Url</em>'.
+	 * @see MetamodelExecution.Unit#getUrl()
+	 * @see #getUnit()
+	 * @generated
+	 */
+	EAttribute getUnit_Url();
+
+	/**
+	 * Returns the meta object for the attribute '{@link MetamodelExecution.Unit#getCode <em>Code</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Code</em>'.
+	 * @see MetamodelExecution.Unit#getCode()
+	 * @see #getUnit()
+	 * @generated
+	 */
+	EAttribute getUnit_Code();
+
+	/**
+	 * Returns the meta object for the attribute '{@link MetamodelExecution.Unit#getUnit <em>Unit</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Unit</em>'.
+	 * @see MetamodelExecution.Unit#getUnit()
+	 * @see #getUnit()
+	 * @generated
+	 */
+	EAttribute getUnit_Unit();
+
+	/**
+	 * Returns the meta object for class '{@link MetamodelExecution.Access <em>Access</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Access</em>'.
+	 * @see MetamodelExecution.Access
+	 * @generated
+	 */
+	EClass getAccess();
+
+	/**
+	 * Returns the meta object for the attribute '{@link MetamodelExecution.Access#getId <em>Id</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Id</em>'.
+	 * @see MetamodelExecution.Access#getId()
+	 * @see #getAccess()
+	 * @generated
+	 */
+	EAttribute getAccess_Id();
+
+	/**
+	 * Returns the meta object for the attribute '{@link MetamodelExecution.Access#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see MetamodelExecution.Access#getName()
+	 * @see #getAccess()
+	 * @generated
+	 */
+	EAttribute getAccess_Name();
+
+	/**
+	 * Returns the meta object for the attribute '{@link MetamodelExecution.Access#getUrl <em>Url</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Url</em>'.
+	 * @see MetamodelExecution.Access#getUrl()
+	 * @see #getAccess()
+	 * @generated
+	 */
+	EAttribute getAccess_Url();
+
+	/**
+	 * Returns the meta object for the attribute '{@link MetamodelExecution.Access#getCode <em>Code</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Code</em>'.
+	 * @see MetamodelExecution.Access#getCode()
+	 * @see #getAccess()
+	 * @generated
+	 */
+	EAttribute getAccess_Code();
+
+	/**
 	 * Returns the factory that creates the instances of the model.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5416,14 +6292,6 @@ public interface Execution_metamodelPackage extends EPackage {
 		EAttribute EPRESCRIPTION__TEXT = eINSTANCE.getEPrescription_Text();
 
 		/**
-		 * The meta object literal for the '<em><b>Prescribedmedicament</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference EPRESCRIPTION__PRESCRIBEDMEDICAMENT = eINSTANCE.getEPrescription_Prescribedmedicament();
-
-		/**
 		 * The meta object literal for the '<em><b>Prescribedprescriptionitem</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -5449,12 +6317,20 @@ public interface Execution_metamodelPackage extends EPackage {
 				.getEPrescription_IdsPrescribedPrescriptionItem();
 
 		/**
-		 * The meta object literal for the '<em><b>Prescriptioninfo</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Prescription</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference EPRESCRIPTION__PRESCRIPTIONINFO = eINSTANCE.getEPrescription_Prescriptioninfo();
+		EReference EPRESCRIPTION__PRESCRIPTION = eINSTANCE.getEPrescription_Prescription();
+
+		/**
+		 * The meta object literal for the '<em><b>Prescribedmedication</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference EPRESCRIPTION__PRESCRIBEDMEDICATION = eINSTANCE.getEPrescription_Prescribedmedication();
 
 		/**
 		 * The meta object literal for the '{@link MetamodelExecution.impl.ETreatmentImpl <em>ETreatment</em>}' class.
@@ -5671,12 +6547,12 @@ public interface Execution_metamodelPackage extends EPackage {
 		EReference PRESCRIBED_EXAMINATION__COMPLEMENT = eINSTANCE.getPrescribedExamination_Complement();
 
 		/**
-		 * The meta object literal for the '<em><b>Prescriptionexam</b></em>' containment reference feature.
+		 * The meta object literal for the '<em><b>Prescription</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference PRESCRIBED_EXAMINATION__PRESCRIPTIONEXAM = eINSTANCE.getPrescribedExamination_Prescriptionexam();
+		EReference PRESCRIBED_EXAMINATION__PRESCRIPTION = eINSTANCE.getPrescribedExamination_Prescription();
 
 		/**
 		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
@@ -5791,6 +6667,38 @@ public interface Execution_metamodelPackage extends EPackage {
 		EClass PRESCRIBED_MEDICATION = eINSTANCE.getPrescribedMedication();
 
 		/**
+		 * The meta object literal for the '<em><b>Id</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute PRESCRIBED_MEDICATION__ID = eINSTANCE.getPrescribedMedication_Id();
+
+		/**
+		 * The meta object literal for the '<em><b>Result</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute PRESCRIBED_MEDICATION__RESULT = eINSTANCE.getPrescribedMedication_Result();
+
+		/**
+		 * The meta object literal for the '<em><b>Medicament</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference PRESCRIBED_MEDICATION__MEDICAMENT = eINSTANCE.getPrescribedMedication_Medicament();
+
+		/**
+		 * The meta object literal for the '<em><b>Prescription</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference PRESCRIBED_MEDICATION__PRESCRIPTION = eINSTANCE.getPrescribedMedication_Prescription();
+
+		/**
 		 * The meta object literal for the '{@link MetamodelExecution.impl.ComplementImpl <em>Complement</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -5857,16 +6765,6 @@ public interface Execution_metamodelPackage extends EPackage {
 		 * @generated
 		 */
 		EClass PRESCRIBED_PRESCRIPTION_ITEM = eINSTANCE.getPrescribedPrescriptionItem();
-
-		/**
-		 * The meta object literal for the '{@link MetamodelExecution.impl.PrescribedMedicamentImpl <em>Prescribed Medicament</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see MetamodelExecution.impl.PrescribedMedicamentImpl
-		 * @see MetamodelExecution.impl.Execution_metamodelPackageImpl#getPrescribedMedicament()
-		 * @generated
-		 */
-		EClass PRESCRIBED_MEDICAMENT = eINSTANCE.getPrescribedMedicament();
 
 		/**
 		 * The meta object literal for the '{@link MetamodelExecution.impl.JustificationImpl <em>Justification</em>}' class.
@@ -6447,14 +7345,14 @@ public interface Execution_metamodelPackage extends EPackage {
 		EAttribute EELEMENT__NAME = eINSTANCE.getEElement_Name();
 
 		/**
-		 * The meta object literal for the '{@link MetamodelExecution.impl.PrescriptionExamImpl <em>Prescription Exam</em>}' class.
+		 * The meta object literal for the '{@link MetamodelExecution.impl.PrescriptionImpl <em>Prescription</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see MetamodelExecution.impl.PrescriptionExamImpl
-		 * @see MetamodelExecution.impl.Execution_metamodelPackageImpl#getPrescriptionExam()
+		 * @see MetamodelExecution.impl.PrescriptionImpl
+		 * @see MetamodelExecution.impl.Execution_metamodelPackageImpl#getPrescription()
 		 * @generated
 		 */
-		EClass PRESCRIPTION_EXAM = eINSTANCE.getPrescriptionExam();
+		EClass PRESCRIPTION = eINSTANCE.getPrescription();
 
 		/**
 		 * The meta object literal for the '<em><b>Id</b></em>' attribute feature.
@@ -6462,7 +7360,7 @@ public interface Execution_metamodelPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute PRESCRIPTION_EXAM__ID = eINSTANCE.getPrescriptionExam_Id();
+		EAttribute PRESCRIPTION__ID = eINSTANCE.getPrescription_Id();
 
 		/**
 		 * The meta object literal for the '<em><b>Success</b></em>' attribute feature.
@@ -6470,7 +7368,7 @@ public interface Execution_metamodelPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute PRESCRIPTION_EXAM__SUCCESS = eINSTANCE.getPrescriptionExam_Success();
+		EAttribute PRESCRIPTION__SUCCESS = eINSTANCE.getPrescription_Success();
 
 		/**
 		 * The meta object literal for the '<em><b>Message</b></em>' attribute feature.
@@ -6478,7 +7376,7 @@ public interface Execution_metamodelPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute PRESCRIPTION_EXAM__MESSAGE = eINSTANCE.getPrescriptionExam_Message();
+		EAttribute PRESCRIPTION__MESSAGE = eINSTANCE.getPrescription_Message();
 
 		/**
 		 * The meta object literal for the '<em><b>Request Date</b></em>' attribute feature.
@@ -6486,17 +7384,7 @@ public interface Execution_metamodelPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute PRESCRIPTION_EXAM__REQUEST_DATE = eINSTANCE.getPrescriptionExam_RequestDate();
-
-		/**
-		 * The meta object literal for the '{@link MetamodelExecution.impl.PrescriptionInfoImpl <em>Prescription Info</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see MetamodelExecution.impl.PrescriptionInfoImpl
-		 * @see MetamodelExecution.impl.Execution_metamodelPackageImpl#getPrescriptionInfo()
-		 * @generated
-		 */
-		EClass PRESCRIPTION_INFO = eINSTANCE.getPrescriptionInfo();
+		EAttribute PRESCRIPTION__REQUEST_DATE = eINSTANCE.getPrescription_RequestDate();
 
 		/**
 		 * The meta object literal for the '{@link MetamodelExecution.impl.EPathwayImpl <em>EPathway</em>}' class.
@@ -6767,6 +7655,334 @@ public interface Execution_metamodelPackage extends EPackage {
 		 * @generated
 		 */
 		EReference VARIABLE__VALUE = eINSTANCE.getVariable_Value();
+
+		/**
+		 * The meta object literal for the '{@link MetamodelExecution.impl.MedicamentImpl <em>Medicament</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see MetamodelExecution.impl.MedicamentImpl
+		 * @see MetamodelExecution.impl.Execution_metamodelPackageImpl#getMedicament()
+		 * @generated
+		 */
+		EClass MEDICAMENT = eINSTANCE.getMedicament();
+
+		/**
+		 * The meta object literal for the '<em><b>Medicine</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference MEDICAMENT__MEDICINE = eINSTANCE.getMedicament_Medicine();
+
+		/**
+		 * The meta object literal for the '<em><b>Unit</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference MEDICAMENT__UNIT = eINSTANCE.getMedicament_Unit();
+
+		/**
+		 * The meta object literal for the '<em><b>Access</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference MEDICAMENT__ACCESS = eINSTANCE.getMedicament_Access();
+
+		/**
+		 * The meta object literal for the '<em><b>Id</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute MEDICAMENT__ID = eINSTANCE.getMedicament_Id();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute MEDICAMENT__NAME = eINSTANCE.getMedicament_Name();
+
+		/**
+		 * The meta object literal for the '<em><b>Url</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute MEDICAMENT__URL = eINSTANCE.getMedicament_Url();
+
+		/**
+		 * The meta object literal for the '<em><b>Code</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute MEDICAMENT__CODE = eINSTANCE.getMedicament_Code();
+
+		/**
+		 * The meta object literal for the '<em><b>Id Medicament</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute MEDICAMENT__ID_MEDICAMENT = eINSTANCE.getMedicament_IdMedicament();
+
+		/**
+		 * The meta object literal for the '<em><b>Description</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute MEDICAMENT__DESCRIPTION = eINSTANCE.getMedicament_Description();
+
+		/**
+		 * The meta object literal for the '<em><b>Brand</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute MEDICAMENT__BRAND = eINSTANCE.getMedicament_Brand();
+
+		/**
+		 * The meta object literal for the '<em><b>Outpatient</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute MEDICAMENT__OUTPATIENT = eINSTANCE.getMedicament_Outpatient();
+
+		/**
+		 * The meta object literal for the '<em><b>Id Unit</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute MEDICAMENT__ID_UNIT = eINSTANCE.getMedicament_IdUnit();
+
+		/**
+		 * The meta object literal for the '<em><b>Id Access</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute MEDICAMENT__ID_ACCESS = eINSTANCE.getMedicament_IdAccess();
+
+		/**
+		 * The meta object literal for the '<em><b>Standard</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute MEDICAMENT__STANDARD = eINSTANCE.getMedicament_Standard();
+
+		/**
+		 * The meta object literal for the '<em><b>Daily Dosage</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute MEDICAMENT__DAILY_DOSAGE = eINSTANCE.getMedicament_DailyDosage();
+
+		/**
+		 * The meta object literal for the '<em><b>Cycles</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute MEDICAMENT__CYCLES = eINSTANCE.getMedicament_Cycles();
+
+		/**
+		 * The meta object literal for the '<em><b>Frequency</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute MEDICAMENT__FREQUENCY = eINSTANCE.getMedicament_Frequency();
+
+		/**
+		 * The meta object literal for the '<em><b>Frequency Display</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute MEDICAMENT__FREQUENCY_DISPLAY = eINSTANCE.getMedicament_FrequencyDisplay();
+
+		/**
+		 * The meta object literal for the '<em><b>Time Treatement</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute MEDICAMENT__TIME_TREATEMENT = eINSTANCE.getMedicament_TimeTreatement();
+
+		/**
+		 * The meta object literal for the '<em><b>Time Interval</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute MEDICAMENT__TIME_INTERVAL = eINSTANCE.getMedicament_TimeInterval();
+
+		/**
+		 * The meta object literal for the '{@link MetamodelExecution.impl.MedicineImpl <em>Medicine</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see MetamodelExecution.impl.MedicineImpl
+		 * @see MetamodelExecution.impl.Execution_metamodelPackageImpl#getMedicine()
+		 * @generated
+		 */
+		EClass MEDICINE = eINSTANCE.getMedicine();
+
+		/**
+		 * The meta object literal for the '<em><b>Id</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute MEDICINE__ID = eINSTANCE.getMedicine_Id();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute MEDICINE__NAME = eINSTANCE.getMedicine_Name();
+
+		/**
+		 * The meta object literal for the '<em><b>Url</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute MEDICINE__URL = eINSTANCE.getMedicine_Url();
+
+		/**
+		 * The meta object literal for the '<em><b>Code</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute MEDICINE__CODE = eINSTANCE.getMedicine_Code();
+
+		/**
+		 * The meta object literal for the '<em><b>Outpatient</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute MEDICINE__OUTPATIENT = eINSTANCE.getMedicine_Outpatient();
+
+		/**
+		 * The meta object literal for the '<em><b>Brand</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute MEDICINE__BRAND = eINSTANCE.getMedicine_Brand();
+
+		/**
+		 * The meta object literal for the '<em><b>Description</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute MEDICINE__DESCRIPTION = eINSTANCE.getMedicine_Description();
+
+		/**
+		 * The meta object literal for the '{@link MetamodelExecution.impl.UnitImpl <em>Unit</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see MetamodelExecution.impl.UnitImpl
+		 * @see MetamodelExecution.impl.Execution_metamodelPackageImpl#getUnit()
+		 * @generated
+		 */
+		EClass UNIT = eINSTANCE.getUnit();
+
+		/**
+		 * The meta object literal for the '<em><b>Id</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute UNIT__ID = eINSTANCE.getUnit_Id();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute UNIT__NAME = eINSTANCE.getUnit_Name();
+
+		/**
+		 * The meta object literal for the '<em><b>Url</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute UNIT__URL = eINSTANCE.getUnit_Url();
+
+		/**
+		 * The meta object literal for the '<em><b>Code</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute UNIT__CODE = eINSTANCE.getUnit_Code();
+
+		/**
+		 * The meta object literal for the '<em><b>Unit</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute UNIT__UNIT = eINSTANCE.getUnit_Unit();
+
+		/**
+		 * The meta object literal for the '{@link MetamodelExecution.impl.AccessImpl <em>Access</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see MetamodelExecution.impl.AccessImpl
+		 * @see MetamodelExecution.impl.Execution_metamodelPackageImpl#getAccess()
+		 * @generated
+		 */
+		EClass ACCESS = eINSTANCE.getAccess();
+
+		/**
+		 * The meta object literal for the '<em><b>Id</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ACCESS__ID = eINSTANCE.getAccess_Id();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ACCESS__NAME = eINSTANCE.getAccess_Name();
+
+		/**
+		 * The meta object literal for the '<em><b>Url</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ACCESS__URL = eINSTANCE.getAccess_Url();
+
+		/**
+		 * The meta object literal for the '<em><b>Code</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ACCESS__CODE = eINSTANCE.getAccess_Code();
 
 	}
 

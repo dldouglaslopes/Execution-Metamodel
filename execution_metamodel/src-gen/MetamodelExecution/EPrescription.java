@@ -14,11 +14,11 @@ import org.eclipse.emf.common.util.EList;
  * </p>
  * <ul>
  *   <li>{@link MetamodelExecution.EPrescription#getText <em>Text</em>}</li>
- *   <li>{@link MetamodelExecution.EPrescription#getPrescribedmedicament <em>Prescribedmedicament</em>}</li>
  *   <li>{@link MetamodelExecution.EPrescription#getPrescribedprescriptionitem <em>Prescribedprescriptionitem</em>}</li>
  *   <li>{@link MetamodelExecution.EPrescription#getIdsPrescribedMedication <em>Ids Prescribed Medication</em>}</li>
  *   <li>{@link MetamodelExecution.EPrescription#getIdsPrescribedPrescriptionItem <em>Ids Prescribed Prescription Item</em>}</li>
- *   <li>{@link MetamodelExecution.EPrescription#getPrescriptioninfo <em>Prescriptioninfo</em>}</li>
+ *   <li>{@link MetamodelExecution.EPrescription#getPrescription <em>Prescription</em>}</li>
+ *   <li>{@link MetamodelExecution.EPrescription#getPrescribedmedication <em>Prescribedmedication</em>}</li>
  * </ul>
  *
  * @see MetamodelExecution.Execution_metamodelPackage#getEPrescription()
@@ -51,22 +51,6 @@ public interface EPrescription extends EElement {
 	 * @generated
 	 */
 	void setText(String value);
-
-	/**
-	 * Returns the value of the '<em><b>Prescribedmedicament</b></em>' containment reference list.
-	 * The list contents are of type {@link MetamodelExecution.PrescribedMedicament}.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Prescribedmedicament</em>' containment reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Prescribedmedicament</em>' containment reference list.
-	 * @see MetamodelExecution.Execution_metamodelPackage#getEPrescription_Prescribedmedicament()
-	 * @model containment="true"
-	 * @generated
-	 */
-	EList<PrescribedMedicament> getPrescribedmedicament();
 
 	/**
 	 * Returns the value of the '<em><b>Prescribedprescriptionitem</b></em>' containment reference list.
@@ -117,19 +101,35 @@ public interface EPrescription extends EElement {
 	EList<Integer> getIdsPrescribedPrescriptionItem();
 
 	/**
-	 * Returns the value of the '<em><b>Prescriptioninfo</b></em>' containment reference list.
-	 * The list contents are of type {@link MetamodelExecution.PrescriptionInfo}.
+	 * Returns the value of the '<em><b>Prescription</b></em>' containment reference list.
+	 * The list contents are of type {@link MetamodelExecution.Prescription}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Prescriptioninfo</em>' containment reference list isn't clear,
+	 * If the meaning of the '<em>Prescription</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Prescriptioninfo</em>' containment reference list.
-	 * @see MetamodelExecution.Execution_metamodelPackage#getEPrescription_Prescriptioninfo()
+	 * @return the value of the '<em>Prescription</em>' containment reference list.
+	 * @see MetamodelExecution.Execution_metamodelPackage#getEPrescription_Prescription()
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<PrescriptionInfo> getPrescriptioninfo();
+	EList<Prescription> getPrescription();
+
+	/**
+	 * Returns the value of the '<em><b>Prescribedmedication</b></em>' containment reference list.
+	 * The list contents are of type {@link MetamodelExecution.PrescribedMedication}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Prescribedmedication</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Prescribedmedication</em>' containment reference list.
+	 * @see MetamodelExecution.Execution_metamodelPackage#getEPrescription_Prescribedmedication()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<PrescribedMedication> getPrescribedmedication();
 
 } // EPrescription

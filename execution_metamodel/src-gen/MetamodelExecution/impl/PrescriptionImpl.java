@@ -3,7 +3,7 @@
 package MetamodelExecution.impl;
 
 import MetamodelExecution.Execution_metamodelPackage;
-import MetamodelExecution.PrescriptionExam;
+import MetamodelExecution.Prescription;
 
 import java.util.Date;
 
@@ -16,21 +16,21 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Prescription Exam</b></em>'.
+ * An implementation of the model object '<em><b>Prescription</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link MetamodelExecution.impl.PrescriptionExamImpl#getId <em>Id</em>}</li>
- *   <li>{@link MetamodelExecution.impl.PrescriptionExamImpl#isSuccess <em>Success</em>}</li>
- *   <li>{@link MetamodelExecution.impl.PrescriptionExamImpl#getMessage <em>Message</em>}</li>
- *   <li>{@link MetamodelExecution.impl.PrescriptionExamImpl#getRequestDate <em>Request Date</em>}</li>
+ *   <li>{@link MetamodelExecution.impl.PrescriptionImpl#getId <em>Id</em>}</li>
+ *   <li>{@link MetamodelExecution.impl.PrescriptionImpl#isSuccess <em>Success</em>}</li>
+ *   <li>{@link MetamodelExecution.impl.PrescriptionImpl#getMessage <em>Message</em>}</li>
+ *   <li>{@link MetamodelExecution.impl.PrescriptionImpl#getRequestDate <em>Request Date</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class PrescriptionExamImpl extends MinimalEObjectImpl.Container implements PrescriptionExam {
+public class PrescriptionImpl extends MinimalEObjectImpl.Container implements Prescription {
 	/**
 	 * The default value of the '{@link #getId() <em>Id</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -116,7 +116,7 @@ public class PrescriptionExamImpl extends MinimalEObjectImpl.Container implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected PrescriptionExamImpl() {
+	protected PrescriptionImpl() {
 		super();
 	}
 
@@ -127,7 +127,7 @@ public class PrescriptionExamImpl extends MinimalEObjectImpl.Container implement
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Execution_metamodelPackage.Literals.PRESCRIPTION_EXAM;
+		return Execution_metamodelPackage.Literals.PRESCRIPTION;
 	}
 
 	/**
@@ -148,8 +148,8 @@ public class PrescriptionExamImpl extends MinimalEObjectImpl.Container implement
 		int oldId = id;
 		id = newId;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.PRESCRIPTION_EXAM__ID,
-					oldId, id));
+			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.PRESCRIPTION__ID, oldId,
+					id));
 	}
 
 	/**
@@ -170,7 +170,7 @@ public class PrescriptionExamImpl extends MinimalEObjectImpl.Container implement
 		boolean oldSuccess = success;
 		success = newSuccess;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.PRESCRIPTION_EXAM__SUCCESS,
+			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.PRESCRIPTION__SUCCESS,
 					oldSuccess, success));
 	}
 
@@ -192,7 +192,7 @@ public class PrescriptionExamImpl extends MinimalEObjectImpl.Container implement
 		String oldMessage = message;
 		message = newMessage;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.PRESCRIPTION_EXAM__MESSAGE,
+			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.PRESCRIPTION__MESSAGE,
 					oldMessage, message));
 	}
 
@@ -214,8 +214,8 @@ public class PrescriptionExamImpl extends MinimalEObjectImpl.Container implement
 		Date oldRequestDate = requestDate;
 		requestDate = newRequestDate;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET,
-					Execution_metamodelPackage.PRESCRIPTION_EXAM__REQUEST_DATE, oldRequestDate, requestDate));
+			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.PRESCRIPTION__REQUEST_DATE,
+					oldRequestDate, requestDate));
 	}
 
 	/**
@@ -226,13 +226,13 @@ public class PrescriptionExamImpl extends MinimalEObjectImpl.Container implement
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case Execution_metamodelPackage.PRESCRIPTION_EXAM__ID:
+		case Execution_metamodelPackage.PRESCRIPTION__ID:
 			return getId();
-		case Execution_metamodelPackage.PRESCRIPTION_EXAM__SUCCESS:
+		case Execution_metamodelPackage.PRESCRIPTION__SUCCESS:
 			return isSuccess();
-		case Execution_metamodelPackage.PRESCRIPTION_EXAM__MESSAGE:
+		case Execution_metamodelPackage.PRESCRIPTION__MESSAGE:
 			return getMessage();
-		case Execution_metamodelPackage.PRESCRIPTION_EXAM__REQUEST_DATE:
+		case Execution_metamodelPackage.PRESCRIPTION__REQUEST_DATE:
 			return getRequestDate();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -246,16 +246,16 @@ public class PrescriptionExamImpl extends MinimalEObjectImpl.Container implement
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case Execution_metamodelPackage.PRESCRIPTION_EXAM__ID:
+		case Execution_metamodelPackage.PRESCRIPTION__ID:
 			setId((Integer) newValue);
 			return;
-		case Execution_metamodelPackage.PRESCRIPTION_EXAM__SUCCESS:
+		case Execution_metamodelPackage.PRESCRIPTION__SUCCESS:
 			setSuccess((Boolean) newValue);
 			return;
-		case Execution_metamodelPackage.PRESCRIPTION_EXAM__MESSAGE:
+		case Execution_metamodelPackage.PRESCRIPTION__MESSAGE:
 			setMessage((String) newValue);
 			return;
-		case Execution_metamodelPackage.PRESCRIPTION_EXAM__REQUEST_DATE:
+		case Execution_metamodelPackage.PRESCRIPTION__REQUEST_DATE:
 			setRequestDate((Date) newValue);
 			return;
 		}
@@ -270,16 +270,16 @@ public class PrescriptionExamImpl extends MinimalEObjectImpl.Container implement
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case Execution_metamodelPackage.PRESCRIPTION_EXAM__ID:
+		case Execution_metamodelPackage.PRESCRIPTION__ID:
 			setId(ID_EDEFAULT);
 			return;
-		case Execution_metamodelPackage.PRESCRIPTION_EXAM__SUCCESS:
+		case Execution_metamodelPackage.PRESCRIPTION__SUCCESS:
 			setSuccess(SUCCESS_EDEFAULT);
 			return;
-		case Execution_metamodelPackage.PRESCRIPTION_EXAM__MESSAGE:
+		case Execution_metamodelPackage.PRESCRIPTION__MESSAGE:
 			setMessage(MESSAGE_EDEFAULT);
 			return;
-		case Execution_metamodelPackage.PRESCRIPTION_EXAM__REQUEST_DATE:
+		case Execution_metamodelPackage.PRESCRIPTION__REQUEST_DATE:
 			setRequestDate(REQUEST_DATE_EDEFAULT);
 			return;
 		}
@@ -294,13 +294,13 @@ public class PrescriptionExamImpl extends MinimalEObjectImpl.Container implement
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case Execution_metamodelPackage.PRESCRIPTION_EXAM__ID:
+		case Execution_metamodelPackage.PRESCRIPTION__ID:
 			return id != ID_EDEFAULT;
-		case Execution_metamodelPackage.PRESCRIPTION_EXAM__SUCCESS:
+		case Execution_metamodelPackage.PRESCRIPTION__SUCCESS:
 			return success != SUCCESS_EDEFAULT;
-		case Execution_metamodelPackage.PRESCRIPTION_EXAM__MESSAGE:
+		case Execution_metamodelPackage.PRESCRIPTION__MESSAGE:
 			return MESSAGE_EDEFAULT == null ? message != null : !MESSAGE_EDEFAULT.equals(message);
-		case Execution_metamodelPackage.PRESCRIPTION_EXAM__REQUEST_DATE:
+		case Execution_metamodelPackage.PRESCRIPTION__REQUEST_DATE:
 			return REQUEST_DATE_EDEFAULT == null ? requestDate != null : !REQUEST_DATE_EDEFAULT.equals(requestDate);
 		}
 		return super.eIsSet(featureID);
@@ -329,4 +329,4 @@ public class PrescriptionExamImpl extends MinimalEObjectImpl.Container implement
 		return result.toString();
 	}
 
-} //PrescriptionExamImpl
+} //PrescriptionImpl
