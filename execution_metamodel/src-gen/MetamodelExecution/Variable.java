@@ -20,6 +20,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link MetamodelExecution.Variable#getName <em>Name</em>}</li>
  *   <li>{@link MetamodelExecution.Variable#getWeight <em>Weight</em>}</li>
  *   <li>{@link MetamodelExecution.Variable#getValue <em>Value</em>}</li>
+ *   <li>{@link MetamodelExecution.Variable#getBond <em>Bond</em>}</li>
  * </ul>
  *
  * @see MetamodelExecution.Execution_metamodelPackage#getVariable()
@@ -208,5 +209,31 @@ public interface Variable extends EObject {
 	 * @generated
 	 */
 	void setValue(Value value);
+
+	/**
+	 * Returns the value of the '<em><b>Bond</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Bond</em>' containment reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Bond</em>' containment reference.
+	 * @see #setBond(Bond)
+	 * @see MetamodelExecution.Execution_metamodelPackage#getVariable_Bond()
+	 * @model containment="true"
+	 * @generated
+	 */
+	Bond getBond();
+
+	/**
+	 * Sets the value of the '{@link MetamodelExecution.Variable#getBond <em>Bond</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Bond</em>' containment reference.
+	 * @see #getBond()
+	 * @generated
+	 */
+	void setBond(Bond value);
 
 } // Variable

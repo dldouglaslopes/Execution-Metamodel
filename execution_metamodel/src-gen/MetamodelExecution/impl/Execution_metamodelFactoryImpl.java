@@ -120,6 +120,12 @@ public class Execution_metamodelFactoryImpl extends EFactoryImpl implements Exec
 			return createUnit();
 		case Execution_metamodelPackage.ACCESS:
 			return createAccess();
+		case Execution_metamodelPackage.PREVIOUS:
+			return createPrevious();
+		case Execution_metamodelPackage.NEXT:
+			return createNext();
+		case Execution_metamodelPackage.BOND:
+			return createBond();
 		default:
 			throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -443,6 +449,36 @@ public class Execution_metamodelFactoryImpl extends EFactoryImpl implements Exec
 	public Access createAccess() {
 		AccessImpl access = new AccessImpl();
 		return access;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Previous createPrevious() {
+		PreviousImpl previous = new PreviousImpl();
+		return previous;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Next createNext() {
+		NextImpl next = new NextImpl();
+		return next;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Bond createBond() {
+		BondImpl bond = new BondImpl();
+		return bond;
 	}
 
 	/**

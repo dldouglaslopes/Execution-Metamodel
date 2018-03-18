@@ -33,6 +33,8 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link MetamodelExecution.EElement#getCreator <em>Creator</em>}</li>
  *   <li>{@link MetamodelExecution.EElement#getExecutor <em>Executor</em>}</li>
  *   <li>{@link MetamodelExecution.EElement#getName <em>Name</em>}</li>
+ *   <li>{@link MetamodelExecution.EElement#getPrevious <em>Previous</em>}</li>
+ *   <li>{@link MetamodelExecution.EElement#getNext <em>Next</em>}</li>
  * </ul>
  *
  * @see MetamodelExecution.Execution_metamodelPackage#getEElement()
@@ -510,5 +512,57 @@ public interface EElement extends EObject {
 	 * @generated
 	 */
 	void setName(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Previous</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Previous</em>' containment reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Previous</em>' containment reference.
+	 * @see #setPrevious(Previous)
+	 * @see MetamodelExecution.Execution_metamodelPackage#getEElement_Previous()
+	 * @model containment="true"
+	 * @generated
+	 */
+	Previous getPrevious();
+
+	/**
+	 * Sets the value of the '{@link MetamodelExecution.EElement#getPrevious <em>Previous</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Previous</em>' containment reference.
+	 * @see #getPrevious()
+	 * @generated
+	 */
+	void setPrevious(Previous value);
+
+	/**
+	 * Returns the value of the '<em><b>Next</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Next</em>' containment reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Next</em>' containment reference.
+	 * @see #setNext(Next)
+	 * @see MetamodelExecution.Execution_metamodelPackage#getEElement_Next()
+	 * @model containment="true"
+	 * @generated
+	 */
+	Next getNext();
+
+	/**
+	 * Sets the value of the '{@link MetamodelExecution.EElement#getNext <em>Next</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Next</em>' containment reference.
+	 * @see #getNext()
+	 * @generated
+	 */
+	void setNext(Next value);
 
 } // EElement

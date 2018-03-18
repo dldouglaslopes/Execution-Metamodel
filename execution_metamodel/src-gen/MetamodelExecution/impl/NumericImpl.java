@@ -33,7 +33,7 @@ public class NumericImpl extends ValueImpl implements Numeric {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final Double VALUE_EDEFAULT = null;
+	protected static final double VALUE_EDEFAULT = 0.0;
 
 	/**
 	 * The cached value of the '{@link #getValue() <em>Value</em>}' attribute.
@@ -43,7 +43,7 @@ public class NumericImpl extends ValueImpl implements Numeric {
 	 * @generated
 	 * @ordered
 	 */
-	protected Double value = VALUE_EDEFAULT;
+	protected double value = VALUE_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -69,7 +69,7 @@ public class NumericImpl extends ValueImpl implements Numeric {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Double getValue() {
+	public double getValue() {
 		return value;
 	}
 
@@ -78,8 +78,8 @@ public class NumericImpl extends ValueImpl implements Numeric {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setValue(Double newValue) {
-		Double oldValue = value;
+	public void setValue(double newValue) {
+		double oldValue = value;
 		value = newValue;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.NUMERIC__VALUE, oldValue,
@@ -139,7 +139,7 @@ public class NumericImpl extends ValueImpl implements Numeric {
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 		case Execution_metamodelPackage.NUMERIC__VALUE:
-			return VALUE_EDEFAULT == null ? value != null : !VALUE_EDEFAULT.equals(value);
+			return value != VALUE_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}

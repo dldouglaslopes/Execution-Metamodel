@@ -98,7 +98,7 @@ public class UnitImpl extends MinimalEObjectImpl.Container implements Unit {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final int CODE_EDEFAULT = 0;
+	protected static final String CODE_EDEFAULT = null;
 
 	/**
 	 * The cached value of the '{@link #getCode() <em>Code</em>}' attribute.
@@ -108,7 +108,7 @@ public class UnitImpl extends MinimalEObjectImpl.Container implements Unit {
 	 * @generated
 	 * @ordered
 	 */
-	protected int code = CODE_EDEFAULT;
+	protected String code = CODE_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getUnit() <em>Unit</em>}' attribute.
@@ -218,7 +218,7 @@ public class UnitImpl extends MinimalEObjectImpl.Container implements Unit {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public int getCode() {
+	public String getCode() {
 		return code;
 	}
 
@@ -227,8 +227,8 @@ public class UnitImpl extends MinimalEObjectImpl.Container implements Unit {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setCode(int newCode) {
-		int oldCode = code;
+	public void setCode(String newCode) {
+		String oldCode = code;
 		code = newCode;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.UNIT__CODE, oldCode,
@@ -297,7 +297,7 @@ public class UnitImpl extends MinimalEObjectImpl.Container implements Unit {
 			setUrl((String) newValue);
 			return;
 		case Execution_metamodelPackage.UNIT__CODE:
-			setCode((Integer) newValue);
+			setCode((String) newValue);
 			return;
 		case Execution_metamodelPackage.UNIT__UNIT:
 			setUnit((String) newValue);
@@ -348,7 +348,7 @@ public class UnitImpl extends MinimalEObjectImpl.Container implements Unit {
 		case Execution_metamodelPackage.UNIT__URL:
 			return URL_EDEFAULT == null ? url != null : !URL_EDEFAULT.equals(url);
 		case Execution_metamodelPackage.UNIT__CODE:
-			return code != CODE_EDEFAULT;
+			return CODE_EDEFAULT == null ? code != null : !CODE_EDEFAULT.equals(code);
 		case Execution_metamodelPackage.UNIT__UNIT:
 			return UNIT_EDEFAULT == null ? unit != null : !UNIT_EDEFAULT.equals(unit);
 		}

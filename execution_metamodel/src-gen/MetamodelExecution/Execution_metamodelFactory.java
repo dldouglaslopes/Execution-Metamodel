@@ -310,6 +310,33 @@ public interface Execution_metamodelFactory extends EFactory {
 	Access createAccess();
 
 	/**
+	 * Returns a new object of class '<em>Previous</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Previous</em>'.
+	 * @generated
+	 */
+	Previous createPrevious();
+
+	/**
+	 * Returns a new object of class '<em>Next</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Next</em>'.
+	 * @generated
+	 */
+	Next createNext();
+
+	/**
+	 * Returns a new object of class '<em>Bond</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Bond</em>'.
+	 * @generated
+	 */
+	Bond createBond();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

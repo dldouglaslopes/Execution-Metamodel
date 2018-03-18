@@ -11,7 +11,7 @@ package MetamodelExecution;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link MetamodelExecution.YesOrNo#getValue <em>Value</em>}</li>
+ *   <li>{@link MetamodelExecution.YesOrNo#isValue <em>Value</em>}</li>
  * </ul>
  *
  * @see MetamodelExecution.Execution_metamodelPackage#getYesOrNo()
@@ -28,21 +28,21 @@ public interface YesOrNo extends Value {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Value</em>' attribute.
-	 * @see #setValue(Boolean)
+	 * @see #setValue(boolean)
 	 * @see MetamodelExecution.Execution_metamodelPackage#getYesOrNo_Value()
 	 * @model
 	 * @generated
 	 */
-	Boolean getValue();
+	boolean isValue();
 
 	/**
-	 * Sets the value of the '{@link MetamodelExecution.YesOrNo#getValue <em>Value</em>}' attribute.
+	 * Sets the value of the '{@link MetamodelExecution.YesOrNo#isValue <em>Value</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Value</em>' attribute.
-	 * @see #getValue()
+	 * @see #isValue()
 	 * @generated
 	 */
-	void setValue(Boolean value);
+	void setValue(boolean value);
 
 } // YesOrNo

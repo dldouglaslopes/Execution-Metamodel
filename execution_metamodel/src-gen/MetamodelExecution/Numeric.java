@@ -28,12 +28,12 @@ public interface Numeric extends Value {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Value</em>' attribute.
-	 * @see #setValue(Double)
+	 * @see #setValue(double)
 	 * @see MetamodelExecution.Execution_metamodelPackage#getNumeric_Value()
 	 * @model
 	 * @generated
 	 */
-	Double getValue();
+	double getValue();
 
 	/**
 	 * Sets the value of the '{@link MetamodelExecution.Numeric#getValue <em>Value</em>}' attribute.
@@ -43,6 +43,6 @@ public interface Numeric extends Value {
 	 * @see #getValue()
 	 * @generated
 	 */
-	void setValue(Double value);
+	void setValue(double value);
 
 } // Numeric

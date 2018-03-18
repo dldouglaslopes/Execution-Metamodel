@@ -7,6 +7,8 @@ import MetamodelExecution.EElement;
 import MetamodelExecution.Execution_metamodelPackage;
 import MetamodelExecution.Executor;
 import MetamodelExecution.Justification;
+import MetamodelExecution.Next;
+import MetamodelExecution.Previous;
 import MetamodelExecution.Step;
 
 import java.util.Date;
@@ -46,6 +48,8 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *   <li>{@link MetamodelExecution.impl.EElementImpl#getCreator <em>Creator</em>}</li>
  *   <li>{@link MetamodelExecution.impl.EElementImpl#getExecutor <em>Executor</em>}</li>
  *   <li>{@link MetamodelExecution.impl.EElementImpl#getName <em>Name</em>}</li>
+ *   <li>{@link MetamodelExecution.impl.EElementImpl#getPrevious <em>Previous</em>}</li>
+ *   <li>{@link MetamodelExecution.impl.EElementImpl#getNext <em>Next</em>}</li>
  * </ul>
  *
  * @generated
@@ -370,6 +374,26 @@ public abstract class EElementImpl extends MinimalEObjectImpl.Container implemen
 	 * @ordered
 	 */
 	protected String name = NAME_EDEFAULT;
+
+	/**
+	 * The cached value of the '{@link #getPrevious() <em>Previous</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getPrevious()
+	 * @generated
+	 * @ordered
+	 */
+	protected Previous previous;
+
+	/**
+	 * The cached value of the '{@link #getNext() <em>Next</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getNext()
+	 * @generated
+	 * @ordered
+	 */
+	protected Next next;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -902,6 +926,106 @@ public abstract class EElementImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public Previous getPrevious() {
+		return previous;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetPrevious(Previous newPrevious, NotificationChain msgs) {
+		Previous oldPrevious = previous;
+		previous = newPrevious;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
+					Execution_metamodelPackage.EELEMENT__PREVIOUS, oldPrevious, newPrevious);
+			if (msgs == null)
+				msgs = notification;
+			else
+				msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setPrevious(Previous newPrevious) {
+		if (newPrevious != previous) {
+			NotificationChain msgs = null;
+			if (previous != null)
+				msgs = ((InternalEObject) previous).eInverseRemove(this,
+						EOPPOSITE_FEATURE_BASE - Execution_metamodelPackage.EELEMENT__PREVIOUS, null, msgs);
+			if (newPrevious != null)
+				msgs = ((InternalEObject) newPrevious).eInverseAdd(this,
+						EOPPOSITE_FEATURE_BASE - Execution_metamodelPackage.EELEMENT__PREVIOUS, null, msgs);
+			msgs = basicSetPrevious(newPrevious, msgs);
+			if (msgs != null)
+				msgs.dispatch();
+		} else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.EELEMENT__PREVIOUS,
+					newPrevious, newPrevious));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Next getNext() {
+		return next;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetNext(Next newNext, NotificationChain msgs) {
+		Next oldNext = next;
+		next = newNext;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
+					Execution_metamodelPackage.EELEMENT__NEXT, oldNext, newNext);
+			if (msgs == null)
+				msgs = notification;
+			else
+				msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setNext(Next newNext) {
+		if (newNext != next) {
+			NotificationChain msgs = null;
+			if (next != null)
+				msgs = ((InternalEObject) next).eInverseRemove(this,
+						EOPPOSITE_FEATURE_BASE - Execution_metamodelPackage.EELEMENT__NEXT, null, msgs);
+			if (newNext != null)
+				msgs = ((InternalEObject) newNext).eInverseAdd(this,
+						EOPPOSITE_FEATURE_BASE - Execution_metamodelPackage.EELEMENT__NEXT, null, msgs);
+			msgs = basicSetNext(newNext, msgs);
+			if (msgs != null)
+				msgs.dispatch();
+		} else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.EELEMENT__NEXT, newNext,
+					newNext));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -913,6 +1037,10 @@ public abstract class EElementImpl extends MinimalEObjectImpl.Container implemen
 			return basicSetCreator(null, msgs);
 		case Execution_metamodelPackage.EELEMENT__EXECUTOR:
 			return basicSetExecutor(null, msgs);
+		case Execution_metamodelPackage.EELEMENT__PREVIOUS:
+			return basicSetPrevious(null, msgs);
+		case Execution_metamodelPackage.EELEMENT__NEXT:
+			return basicSetNext(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -961,6 +1089,10 @@ public abstract class EElementImpl extends MinimalEObjectImpl.Container implemen
 			return getExecutor();
 		case Execution_metamodelPackage.EELEMENT__NAME:
 			return getName();
+		case Execution_metamodelPackage.EELEMENT__PREVIOUS:
+			return getPrevious();
+		case Execution_metamodelPackage.EELEMENT__NEXT:
+			return getNext();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -1026,6 +1158,12 @@ public abstract class EElementImpl extends MinimalEObjectImpl.Container implemen
 			return;
 		case Execution_metamodelPackage.EELEMENT__NAME:
 			setName((String) newValue);
+			return;
+		case Execution_metamodelPackage.EELEMENT__PREVIOUS:
+			setPrevious((Previous) newValue);
+			return;
+		case Execution_metamodelPackage.EELEMENT__NEXT:
+			setNext((Next) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -1093,6 +1231,12 @@ public abstract class EElementImpl extends MinimalEObjectImpl.Container implemen
 		case Execution_metamodelPackage.EELEMENT__NAME:
 			setName(NAME_EDEFAULT);
 			return;
+		case Execution_metamodelPackage.EELEMENT__PREVIOUS:
+			setPrevious((Previous) null);
+			return;
+		case Execution_metamodelPackage.EELEMENT__NEXT:
+			setNext((Next) null);
+			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -1143,6 +1287,10 @@ public abstract class EElementImpl extends MinimalEObjectImpl.Container implemen
 			return executor != null;
 		case Execution_metamodelPackage.EELEMENT__NAME:
 			return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+		case Execution_metamodelPackage.EELEMENT__PREVIOUS:
+			return previous != null;
+		case Execution_metamodelPackage.EELEMENT__NEXT:
+			return next != null;
 		}
 		return super.eIsSet(featureID);
 	}

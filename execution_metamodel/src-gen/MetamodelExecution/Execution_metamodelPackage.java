@@ -229,13 +229,31 @@ public interface Execution_metamodelPackage extends EPackage {
 	int EELEMENT__NAME = 17;
 
 	/**
+	 * The feature id for the '<em><b>Previous</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EELEMENT__PREVIOUS = 18;
+
+	/**
+	 * The feature id for the '<em><b>Next</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EELEMENT__NEXT = 19;
+
+	/**
 	 * The number of structural features of the '<em>EElement</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int EELEMENT_FEATURE_COUNT = 18;
+	int EELEMENT_FEATURE_COUNT = 20;
 
 	/**
 	 * The number of operations of the '<em>EElement</em>' class.
@@ -417,6 +435,24 @@ public interface Execution_metamodelPackage extends EPackage {
 	 * @ordered
 	 */
 	int EAUXILIARY_CONDUCT__NAME = EELEMENT__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Previous</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EAUXILIARY_CONDUCT__PREVIOUS = EELEMENT__PREVIOUS;
+
+	/**
+	 * The feature id for the '<em><b>Next</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EAUXILIARY_CONDUCT__NEXT = EELEMENT__NEXT;
 
 	/**
 	 * The feature id for the '<em><b>Answer</b></em>' containment reference list.
@@ -618,6 +654,24 @@ public interface Execution_metamodelPackage extends EPackage {
 	int EINFORMATION__NAME = EELEMENT__NAME;
 
 	/**
+	 * The feature id for the '<em><b>Previous</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EINFORMATION__PREVIOUS = EELEMENT__PREVIOUS;
+
+	/**
+	 * The feature id for the '<em><b>Next</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EINFORMATION__NEXT = EELEMENT__NEXT;
+
+	/**
 	 * The number of structural features of the '<em>EInformation</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -806,6 +860,24 @@ public interface Execution_metamodelPackage extends EPackage {
 	 * @ordered
 	 */
 	int EDISCHARGE__NAME = EELEMENT__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Previous</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EDISCHARGE__PREVIOUS = EELEMENT__PREVIOUS;
+
+	/**
+	 * The feature id for the '<em><b>Next</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EDISCHARGE__NEXT = EELEMENT__NEXT;
 
 	/**
 	 * The number of structural features of the '<em>EDischarge</em>' class.
@@ -998,6 +1070,24 @@ public interface Execution_metamodelPackage extends EPackage {
 	int EREFERRAL__NAME = EELEMENT__NAME;
 
 	/**
+	 * The feature id for the '<em><b>Previous</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EREFERRAL__PREVIOUS = EELEMENT__PREVIOUS;
+
+	/**
+	 * The feature id for the '<em><b>Next</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EREFERRAL__NEXT = EELEMENT__NEXT;
+
+	/**
 	 * The number of structural features of the '<em>EReferral</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1186,6 +1276,24 @@ public interface Execution_metamodelPackage extends EPackage {
 	 * @ordered
 	 */
 	int EPRESCRIPTION__NAME = EELEMENT__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Previous</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EPRESCRIPTION__PREVIOUS = EELEMENT__PREVIOUS;
+
+	/**
+	 * The feature id for the '<em><b>Next</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EPRESCRIPTION__NEXT = EELEMENT__NEXT;
 
 	/**
 	 * The feature id for the '<em><b>Text</b></em>' attribute.
@@ -1430,6 +1538,24 @@ public interface Execution_metamodelPackage extends EPackage {
 	 * @ordered
 	 */
 	int ETREATMENT__NAME = EELEMENT__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Previous</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ETREATMENT__PREVIOUS = EELEMENT__PREVIOUS;
+
+	/**
+	 * The feature id for the '<em><b>Next</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ETREATMENT__NEXT = EELEMENT__NEXT;
 
 	/**
 	 * The feature id for the '<em><b>Prescribedexam</b></em>' containment reference list.
@@ -3463,13 +3589,22 @@ public interface Execution_metamodelPackage extends EPackage {
 	int VARIABLE__VALUE = 6;
 
 	/**
+	 * The feature id for the '<em><b>Bond</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VARIABLE__BOND = 7;
+
+	/**
 	 * The number of structural features of the '<em>Variable</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int VARIABLE_FEATURE_COUNT = 7;
+	int VARIABLE_FEATURE_COUNT = 8;
 
 	/**
 	 * The number of operations of the '<em>Variable</em>' class.
@@ -3915,6 +4050,217 @@ public interface Execution_metamodelPackage extends EPackage {
 	 * @ordered
 	 */
 	int ACCESS_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link MetamodelExecution.impl.SequenceImpl <em>Sequence</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see MetamodelExecution.impl.SequenceImpl
+	 * @see MetamodelExecution.impl.Execution_metamodelPackageImpl#getSequence()
+	 * @generated
+	 */
+	int SEQUENCE = 35;
+
+	/**
+	 * The feature id for the '<em><b>Url</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SEQUENCE__URL = 0;
+
+	/**
+	 * The feature id for the '<em><b>Url Absolute</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SEQUENCE__URL_ABSOLUTE = 1;
+
+	/**
+	 * The number of structural features of the '<em>Sequence</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SEQUENCE_FEATURE_COUNT = 2;
+
+	/**
+	 * The number of operations of the '<em>Sequence</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SEQUENCE_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link MetamodelExecution.impl.PreviousImpl <em>Previous</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see MetamodelExecution.impl.PreviousImpl
+	 * @see MetamodelExecution.impl.Execution_metamodelPackageImpl#getPrevious()
+	 * @generated
+	 */
+	int PREVIOUS = 36;
+
+	/**
+	 * The feature id for the '<em><b>Url</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PREVIOUS__URL = SEQUENCE__URL;
+
+	/**
+	 * The feature id for the '<em><b>Url Absolute</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PREVIOUS__URL_ABSOLUTE = SEQUENCE__URL_ABSOLUTE;
+
+	/**
+	 * The number of structural features of the '<em>Previous</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PREVIOUS_FEATURE_COUNT = SEQUENCE_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Previous</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PREVIOUS_OPERATION_COUNT = SEQUENCE_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link MetamodelExecution.impl.NextImpl <em>Next</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see MetamodelExecution.impl.NextImpl
+	 * @see MetamodelExecution.impl.Execution_metamodelPackageImpl#getNext()
+	 * @generated
+	 */
+	int NEXT = 37;
+
+	/**
+	 * The feature id for the '<em><b>Url</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NEXT__URL = SEQUENCE__URL;
+
+	/**
+	 * The feature id for the '<em><b>Url Absolute</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NEXT__URL_ABSOLUTE = SEQUENCE__URL_ABSOLUTE;
+
+	/**
+	 * The number of structural features of the '<em>Next</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NEXT_FEATURE_COUNT = SEQUENCE_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Next</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NEXT_OPERATION_COUNT = SEQUENCE_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link MetamodelExecution.impl.BondImpl <em>Bond</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see MetamodelExecution.impl.BondImpl
+	 * @see MetamodelExecution.impl.Execution_metamodelPackageImpl#getBond()
+	 * @generated
+	 */
+	int BOND = 38;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOND__ID = 0;
+
+	/**
+	 * The feature id for the '<em><b>Type Verbose</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOND__TYPE_VERBOSE = 1;
+
+	/**
+	 * The feature id for the '<em><b>Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOND__TYPE = 2;
+
+	/**
+	 * The feature id for the '<em><b>True Premise</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOND__TRUE_PREMISE = 3;
+
+	/**
+	 * The feature id for the '<em><b>True Premise Display</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOND__TRUE_PREMISE_DISPLAY = 4;
+
+	/**
+	 * The number of structural features of the '<em>Bond</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOND_FEATURE_COUNT = 5;
+
+	/**
+	 * The number of operations of the '<em>Bond</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOND_OPERATION_COUNT = 0;
 
 	/**
 	 * Returns the meta object for class '{@link MetamodelExecution.EAuxiliaryConduct <em>EAuxiliary Conduct</em>}'.
@@ -4995,11 +5341,11 @@ public interface Execution_metamodelPackage extends EPackage {
 	EClass getYesOrNo();
 
 	/**
-	 * Returns the meta object for the attribute '{@link MetamodelExecution.YesOrNo#getValue <em>Value</em>}'.
+	 * Returns the meta object for the attribute '{@link MetamodelExecution.YesOrNo#isValue <em>Value</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Value</em>'.
-	 * @see MetamodelExecution.YesOrNo#getValue()
+	 * @see MetamodelExecution.YesOrNo#isValue()
 	 * @see #getYesOrNo()
 	 * @generated
 	 */
@@ -5351,6 +5697,28 @@ public interface Execution_metamodelPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getEElement_Name();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link MetamodelExecution.EElement#getPrevious <em>Previous</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Previous</em>'.
+	 * @see MetamodelExecution.EElement#getPrevious()
+	 * @see #getEElement()
+	 * @generated
+	 */
+	EReference getEElement_Previous();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link MetamodelExecution.EElement#getNext <em>Next</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Next</em>'.
+	 * @see MetamodelExecution.EElement#getNext()
+	 * @see #getEElement()
+	 * @generated
+	 */
+	EReference getEElement_Next();
 
 	/**
 	 * Returns the meta object for class '{@link MetamodelExecution.Prescription <em>Prescription</em>}'.
@@ -5765,6 +6133,17 @@ public interface Execution_metamodelPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getVariable_Value();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link MetamodelExecution.Variable#getBond <em>Bond</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Bond</em>'.
+	 * @see MetamodelExecution.Variable#getBond()
+	 * @see #getVariable()
+	 * @generated
+	 */
+	EReference getVariable_Bond();
 
 	/**
 	 * Returns the meta object for class '{@link MetamodelExecution.Medicament <em>Medicament</em>}'.
@@ -6201,6 +6580,123 @@ public interface Execution_metamodelPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getAccess_Code();
+
+	/**
+	 * Returns the meta object for class '{@link MetamodelExecution.Sequence <em>Sequence</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Sequence</em>'.
+	 * @see MetamodelExecution.Sequence
+	 * @generated
+	 */
+	EClass getSequence();
+
+	/**
+	 * Returns the meta object for the attribute '{@link MetamodelExecution.Sequence#getUrl <em>Url</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Url</em>'.
+	 * @see MetamodelExecution.Sequence#getUrl()
+	 * @see #getSequence()
+	 * @generated
+	 */
+	EAttribute getSequence_Url();
+
+	/**
+	 * Returns the meta object for the attribute '{@link MetamodelExecution.Sequence#getUrlAbsolute <em>Url Absolute</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Url Absolute</em>'.
+	 * @see MetamodelExecution.Sequence#getUrlAbsolute()
+	 * @see #getSequence()
+	 * @generated
+	 */
+	EAttribute getSequence_UrlAbsolute();
+
+	/**
+	 * Returns the meta object for class '{@link MetamodelExecution.Previous <em>Previous</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Previous</em>'.
+	 * @see MetamodelExecution.Previous
+	 * @generated
+	 */
+	EClass getPrevious();
+
+	/**
+	 * Returns the meta object for class '{@link MetamodelExecution.Next <em>Next</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Next</em>'.
+	 * @see MetamodelExecution.Next
+	 * @generated
+	 */
+	EClass getNext();
+
+	/**
+	 * Returns the meta object for class '{@link MetamodelExecution.Bond <em>Bond</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Bond</em>'.
+	 * @see MetamodelExecution.Bond
+	 * @generated
+	 */
+	EClass getBond();
+
+	/**
+	 * Returns the meta object for the attribute '{@link MetamodelExecution.Bond#getId <em>Id</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Id</em>'.
+	 * @see MetamodelExecution.Bond#getId()
+	 * @see #getBond()
+	 * @generated
+	 */
+	EAttribute getBond_Id();
+
+	/**
+	 * Returns the meta object for the attribute '{@link MetamodelExecution.Bond#getTypeVerbose <em>Type Verbose</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Type Verbose</em>'.
+	 * @see MetamodelExecution.Bond#getTypeVerbose()
+	 * @see #getBond()
+	 * @generated
+	 */
+	EAttribute getBond_TypeVerbose();
+
+	/**
+	 * Returns the meta object for the attribute '{@link MetamodelExecution.Bond#getType <em>Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Type</em>'.
+	 * @see MetamodelExecution.Bond#getType()
+	 * @see #getBond()
+	 * @generated
+	 */
+	EAttribute getBond_Type();
+
+	/**
+	 * Returns the meta object for the attribute '{@link MetamodelExecution.Bond#getTruePremise <em>True Premise</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>True Premise</em>'.
+	 * @see MetamodelExecution.Bond#getTruePremise()
+	 * @see #getBond()
+	 * @generated
+	 */
+	EAttribute getBond_TruePremise();
+
+	/**
+	 * Returns the meta object for the attribute '{@link MetamodelExecution.Bond#getTruePremiseDisplay <em>True Premise Display</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>True Premise Display</em>'.
+	 * @see MetamodelExecution.Bond#getTruePremiseDisplay()
+	 * @see #getBond()
+	 * @generated
+	 */
+	EAttribute getBond_TruePremiseDisplay();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -7345,6 +7841,22 @@ public interface Execution_metamodelPackage extends EPackage {
 		EAttribute EELEMENT__NAME = eINSTANCE.getEElement_Name();
 
 		/**
+		 * The meta object literal for the '<em><b>Previous</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference EELEMENT__PREVIOUS = eINSTANCE.getEElement_Previous();
+
+		/**
+		 * The meta object literal for the '<em><b>Next</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference EELEMENT__NEXT = eINSTANCE.getEElement_Next();
+
+		/**
 		 * The meta object literal for the '{@link MetamodelExecution.impl.PrescriptionImpl <em>Prescription</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -7655,6 +8167,14 @@ public interface Execution_metamodelPackage extends EPackage {
 		 * @generated
 		 */
 		EReference VARIABLE__VALUE = eINSTANCE.getVariable_Value();
+
+		/**
+		 * The meta object literal for the '<em><b>Bond</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference VARIABLE__BOND = eINSTANCE.getVariable_Bond();
 
 		/**
 		 * The meta object literal for the '{@link MetamodelExecution.impl.MedicamentImpl <em>Medicament</em>}' class.
@@ -7983,6 +8503,102 @@ public interface Execution_metamodelPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute ACCESS__CODE = eINSTANCE.getAccess_Code();
+
+		/**
+		 * The meta object literal for the '{@link MetamodelExecution.impl.SequenceImpl <em>Sequence</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see MetamodelExecution.impl.SequenceImpl
+		 * @see MetamodelExecution.impl.Execution_metamodelPackageImpl#getSequence()
+		 * @generated
+		 */
+		EClass SEQUENCE = eINSTANCE.getSequence();
+
+		/**
+		 * The meta object literal for the '<em><b>Url</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute SEQUENCE__URL = eINSTANCE.getSequence_Url();
+
+		/**
+		 * The meta object literal for the '<em><b>Url Absolute</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute SEQUENCE__URL_ABSOLUTE = eINSTANCE.getSequence_UrlAbsolute();
+
+		/**
+		 * The meta object literal for the '{@link MetamodelExecution.impl.PreviousImpl <em>Previous</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see MetamodelExecution.impl.PreviousImpl
+		 * @see MetamodelExecution.impl.Execution_metamodelPackageImpl#getPrevious()
+		 * @generated
+		 */
+		EClass PREVIOUS = eINSTANCE.getPrevious();
+
+		/**
+		 * The meta object literal for the '{@link MetamodelExecution.impl.NextImpl <em>Next</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see MetamodelExecution.impl.NextImpl
+		 * @see MetamodelExecution.impl.Execution_metamodelPackageImpl#getNext()
+		 * @generated
+		 */
+		EClass NEXT = eINSTANCE.getNext();
+
+		/**
+		 * The meta object literal for the '{@link MetamodelExecution.impl.BondImpl <em>Bond</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see MetamodelExecution.impl.BondImpl
+		 * @see MetamodelExecution.impl.Execution_metamodelPackageImpl#getBond()
+		 * @generated
+		 */
+		EClass BOND = eINSTANCE.getBond();
+
+		/**
+		 * The meta object literal for the '<em><b>Id</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute BOND__ID = eINSTANCE.getBond_Id();
+
+		/**
+		 * The meta object literal for the '<em><b>Type Verbose</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute BOND__TYPE_VERBOSE = eINSTANCE.getBond_TypeVerbose();
+
+		/**
+		 * The meta object literal for the '<em><b>Type</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute BOND__TYPE = eINSTANCE.getBond_Type();
+
+		/**
+		 * The meta object literal for the '<em><b>True Premise</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute BOND__TRUE_PREMISE = eINSTANCE.getBond_TruePremise();
+
+		/**
+		 * The meta object literal for the '<em><b>True Premise Display</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute BOND__TRUE_PREMISE_DISPLAY = eINSTANCE.getBond_TruePremiseDisplay();
 
 	}
 

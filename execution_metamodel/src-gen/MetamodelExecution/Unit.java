@@ -112,12 +112,12 @@ public interface Unit extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Code</em>' attribute.
-	 * @see #setCode(int)
+	 * @see #setCode(String)
 	 * @see MetamodelExecution.Execution_metamodelPackage#getUnit_Code()
 	 * @model
 	 * @generated
 	 */
-	int getCode();
+	String getCode();
 
 	/**
 	 * Sets the value of the '{@link MetamodelExecution.Unit#getCode <em>Code</em>}' attribute.
@@ -127,7 +127,7 @@ public interface Unit extends EObject {
 	 * @see #getCode()
 	 * @generated
 	 */
-	void setCode(int value);
+	void setCode(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Unit</b></em>' attribute.

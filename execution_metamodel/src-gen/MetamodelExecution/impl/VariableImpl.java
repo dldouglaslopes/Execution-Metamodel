@@ -2,6 +2,7 @@
  */
 package MetamodelExecution.impl;
 
+import MetamodelExecution.Bond;
 import MetamodelExecution.Execution_metamodelPackage;
 import MetamodelExecution.Value;
 import MetamodelExecution.Variable;
@@ -30,6 +31,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *   <li>{@link MetamodelExecution.impl.VariableImpl#getName <em>Name</em>}</li>
  *   <li>{@link MetamodelExecution.impl.VariableImpl#getWeight <em>Weight</em>}</li>
  *   <li>{@link MetamodelExecution.impl.VariableImpl#getValue <em>Value</em>}</li>
+ *   <li>{@link MetamodelExecution.impl.VariableImpl#getBond <em>Bond</em>}</li>
  * </ul>
  *
  * @generated
@@ -164,6 +166,16 @@ public class VariableImpl extends MinimalEObjectImpl.Container implements Variab
 	 * @ordered
 	 */
 	protected Value value;
+
+	/**
+	 * The cached value of the '{@link #getBond() <em>Bond</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getBond()
+	 * @generated
+	 * @ordered
+	 */
+	protected Bond bond;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -370,11 +382,63 @@ public class VariableImpl extends MinimalEObjectImpl.Container implements Variab
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public Bond getBond() {
+		return bond;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetBond(Bond newBond, NotificationChain msgs) {
+		Bond oldBond = bond;
+		bond = newBond;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
+					Execution_metamodelPackage.VARIABLE__BOND, oldBond, newBond);
+			if (msgs == null)
+				msgs = notification;
+			else
+				msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setBond(Bond newBond) {
+		if (newBond != bond) {
+			NotificationChain msgs = null;
+			if (bond != null)
+				msgs = ((InternalEObject) bond).eInverseRemove(this,
+						EOPPOSITE_FEATURE_BASE - Execution_metamodelPackage.VARIABLE__BOND, null, msgs);
+			if (newBond != null)
+				msgs = ((InternalEObject) newBond).eInverseAdd(this,
+						EOPPOSITE_FEATURE_BASE - Execution_metamodelPackage.VARIABLE__BOND, null, msgs);
+			msgs = basicSetBond(newBond, msgs);
+			if (msgs != null)
+				msgs.dispatch();
+		} else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.VARIABLE__BOND, newBond,
+					newBond));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 		case Execution_metamodelPackage.VARIABLE__VALUE:
 			return basicSetValue(null, msgs);
+		case Execution_metamodelPackage.VARIABLE__BOND:
+			return basicSetBond(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -401,6 +465,8 @@ public class VariableImpl extends MinimalEObjectImpl.Container implements Variab
 			return getWeight();
 		case Execution_metamodelPackage.VARIABLE__VALUE:
 			return getValue();
+		case Execution_metamodelPackage.VARIABLE__BOND:
+			return getBond();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -433,6 +499,9 @@ public class VariableImpl extends MinimalEObjectImpl.Container implements Variab
 			return;
 		case Execution_metamodelPackage.VARIABLE__VALUE:
 			setValue((Value) newValue);
+			return;
+		case Execution_metamodelPackage.VARIABLE__BOND:
+			setBond((Bond) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -467,6 +536,9 @@ public class VariableImpl extends MinimalEObjectImpl.Container implements Variab
 		case Execution_metamodelPackage.VARIABLE__VALUE:
 			setValue((Value) null);
 			return;
+		case Execution_metamodelPackage.VARIABLE__BOND:
+			setBond((Bond) null);
+			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -493,6 +565,8 @@ public class VariableImpl extends MinimalEObjectImpl.Container implements Variab
 			return weight != WEIGHT_EDEFAULT;
 		case Execution_metamodelPackage.VARIABLE__VALUE:
 			return value != null;
+		case Execution_metamodelPackage.VARIABLE__BOND:
+			return bond != null;
 		}
 		return super.eIsSet(featureID);
 	}
