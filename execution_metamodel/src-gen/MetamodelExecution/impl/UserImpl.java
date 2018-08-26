@@ -21,7 +21,6 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * </p>
  * <ul>
  *   <li>{@link MetamodelExecution.impl.UserImpl#getId <em>Id</em>}</li>
- *   <li>{@link MetamodelExecution.impl.UserImpl#getUrl <em>Url</em>}</li>
  *   <li>{@link MetamodelExecution.impl.UserImpl#getCode <em>Code</em>}</li>
  *   <li>{@link MetamodelExecution.impl.UserImpl#getEmail <em>Email</em>}</li>
  *   <li>{@link MetamodelExecution.impl.UserImpl#getName <em>Name</em>}</li>
@@ -53,26 +52,6 @@ public abstract class UserImpl extends MinimalEObjectImpl.Container implements U
 	 * @ordered
 	 */
 	protected int id = ID_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getUrl() <em>Url</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getUrl()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String URL_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getUrl() <em>Url</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getUrl()
-	 * @generated
-	 * @ordered
-	 */
-	protected String url = URL_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getCode() <em>Code</em>}' attribute.
@@ -259,27 +238,6 @@ public abstract class UserImpl extends MinimalEObjectImpl.Container implements U
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getUrl() {
-		return url;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setUrl(String newUrl) {
-		String oldUrl = url;
-		url = newUrl;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.USER__URL, oldUrl, url));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public int getCode() {
 		return code;
 	}
@@ -439,8 +397,6 @@ public abstract class UserImpl extends MinimalEObjectImpl.Container implements U
 		switch (featureID) {
 		case Execution_metamodelPackage.USER__ID:
 			return getId();
-		case Execution_metamodelPackage.USER__URL:
-			return getUrl();
 		case Execution_metamodelPackage.USER__CODE:
 			return getCode();
 		case Execution_metamodelPackage.USER__EMAIL:
@@ -469,9 +425,6 @@ public abstract class UserImpl extends MinimalEObjectImpl.Container implements U
 		switch (featureID) {
 		case Execution_metamodelPackage.USER__ID:
 			setId((Integer) newValue);
-			return;
-		case Execution_metamodelPackage.USER__URL:
-			setUrl((String) newValue);
 			return;
 		case Execution_metamodelPackage.USER__CODE:
 			setCode((Integer) newValue);
@@ -509,9 +462,6 @@ public abstract class UserImpl extends MinimalEObjectImpl.Container implements U
 		case Execution_metamodelPackage.USER__ID:
 			setId(ID_EDEFAULT);
 			return;
-		case Execution_metamodelPackage.USER__URL:
-			setUrl(URL_EDEFAULT);
-			return;
 		case Execution_metamodelPackage.USER__CODE:
 			setCode(CODE_EDEFAULT);
 			return;
@@ -547,8 +497,6 @@ public abstract class UserImpl extends MinimalEObjectImpl.Container implements U
 		switch (featureID) {
 		case Execution_metamodelPackage.USER__ID:
 			return id != ID_EDEFAULT;
-		case Execution_metamodelPackage.USER__URL:
-			return URL_EDEFAULT == null ? url != null : !URL_EDEFAULT.equals(url);
 		case Execution_metamodelPackage.USER__CODE:
 			return code != CODE_EDEFAULT;
 		case Execution_metamodelPackage.USER__EMAIL:
@@ -580,8 +528,6 @@ public abstract class UserImpl extends MinimalEObjectImpl.Container implements U
 		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (id: ");
 		result.append(id);
-		result.append(", url: ");
-		result.append(url);
 		result.append(", code: ");
 		result.append(code);
 		result.append(", email: ");

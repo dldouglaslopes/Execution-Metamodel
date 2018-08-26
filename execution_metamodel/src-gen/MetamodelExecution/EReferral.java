@@ -12,5 +12,5 @@ package MetamodelExecution;
  * @model
  * @generated
  */
-public interface EReferral extends EElement {
+public interface EReferral extends EStep {
 } // EReferral

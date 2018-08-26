@@ -15,7 +15,6 @@ import org.eclipse.emf.ecore.EObject;
  * <ul>
  *   <li>{@link MetamodelExecution.Unit#getId <em>Id</em>}</li>
  *   <li>{@link MetamodelExecution.Unit#getName <em>Name</em>}</li>
- *   <li>{@link MetamodelExecution.Unit#getUrl <em>Url</em>}</li>
  *   <li>{@link MetamodelExecution.Unit#getCode <em>Code</em>}</li>
  *   <li>{@link MetamodelExecution.Unit#getUnit <em>Unit</em>}</li>
  * </ul>
@@ -76,32 +75,6 @@ public interface Unit extends EObject {
 	 * @generated
 	 */
 	void setName(String value);
-
-	/**
-	 * Returns the value of the '<em><b>Url</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Url</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Url</em>' attribute.
-	 * @see #setUrl(String)
-	 * @see MetamodelExecution.Execution_metamodelPackage#getUnit_Url()
-	 * @model
-	 * @generated
-	 */
-	String getUrl();
-
-	/**
-	 * Sets the value of the '{@link MetamodelExecution.Unit#getUrl <em>Url</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Url</em>' attribute.
-	 * @see #getUrl()
-	 * @generated
-	 */
-	void setUrl(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Code</b></em>' attribute.

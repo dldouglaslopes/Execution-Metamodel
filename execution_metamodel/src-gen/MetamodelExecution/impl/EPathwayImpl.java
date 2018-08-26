@@ -2,11 +2,12 @@
  */
 package MetamodelExecution.impl;
 
-import MetamodelExecution.EElement;
 import MetamodelExecution.EPathway;
+import MetamodelExecution.EStep;
 import MetamodelExecution.Execution_metamodelPackage;
 import MetamodelExecution.Justification;
 import MetamodelExecution.LastProfessional;
+import MetamodelExecution.MedicalCare;
 import MetamodelExecution.Pathway;
 import MetamodelExecution.Responsible;
 
@@ -38,21 +39,20 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <ul>
  *   <li>{@link MetamodelExecution.impl.EPathwayImpl#getElement <em>Element</em>}</li>
  *   <li>{@link MetamodelExecution.impl.EPathwayImpl#getId <em>Id</em>}</li>
- *   <li>{@link MetamodelExecution.impl.EPathwayImpl#getUrl <em>Url</em>}</li>
  *   <li>{@link MetamodelExecution.impl.EPathwayImpl#getCreationDate <em>Creation Date</em>}</li>
  *   <li>{@link MetamodelExecution.impl.EPathwayImpl#getConclusionDate <em>Conclusion Date</em>}</li>
  *   <li>{@link MetamodelExecution.impl.EPathwayImpl#isCompleted <em>Completed</em>}</li>
  *   <li>{@link MetamodelExecution.impl.EPathwayImpl#isAborted <em>Aborted</em>}</li>
- *   <li>{@link MetamodelExecution.impl.EPathwayImpl#getLastExecutedStepDate <em>Last Executed Step Date</em>}</li>
  *   <li>{@link MetamodelExecution.impl.EPathwayImpl#getIdPathway <em>Id Pathway</em>}</li>
  *   <li>{@link MetamodelExecution.impl.EPathwayImpl#getIdLastProfessional <em>Id Last Professional</em>}</li>
  *   <li>{@link MetamodelExecution.impl.EPathwayImpl#getIdResponsible <em>Id Responsible</em>}</li>
  *   <li>{@link MetamodelExecution.impl.EPathwayImpl#getIdsExecutedStep <em>Ids Executed Step</em>}</li>
- *   <li>{@link MetamodelExecution.impl.EPathwayImpl#getPathway <em>Pathway</em>}</li>
  *   <li>{@link MetamodelExecution.impl.EPathwayImpl#getResponsible <em>Responsible</em>}</li>
  *   <li>{@link MetamodelExecution.impl.EPathwayImpl#getLastprofessional <em>Lastprofessional</em>}</li>
  *   <li>{@link MetamodelExecution.impl.EPathwayImpl#getName <em>Name</em>}</li>
  *   <li>{@link MetamodelExecution.impl.EPathwayImpl#getJustification <em>Justification</em>}</li>
+ *   <li>{@link MetamodelExecution.impl.EPathwayImpl#getPathway <em>Pathway</em>}</li>
+ *   <li>{@link MetamodelExecution.impl.EPathwayImpl#getMedicalcare <em>Medicalcare</em>}</li>
  * </ul>
  *
  * @generated
@@ -66,7 +66,7 @@ public class EPathwayImpl extends MinimalEObjectImpl.Container implements EPathw
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<EElement> element;
+	protected EList<EStep> element;
 
 	/**
 	 * The default value of the '{@link #getId() <em>Id</em>}' attribute.
@@ -87,26 +87,6 @@ public class EPathwayImpl extends MinimalEObjectImpl.Container implements EPathw
 	 * @ordered
 	 */
 	protected int id = ID_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getUrl() <em>Url</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getUrl()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String URL_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getUrl() <em>Url</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getUrl()
-	 * @generated
-	 * @ordered
-	 */
-	protected String url = URL_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getCreationDate() <em>Creation Date</em>}' attribute.
@@ -189,26 +169,6 @@ public class EPathwayImpl extends MinimalEObjectImpl.Container implements EPathw
 	protected boolean aborted = ABORTED_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getLastExecutedStepDate() <em>Last Executed Step Date</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getLastExecutedStepDate()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String LAST_EXECUTED_STEP_DATE_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getLastExecutedStepDate() <em>Last Executed Step Date</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getLastExecutedStepDate()
-	 * @generated
-	 * @ordered
-	 */
-	protected String lastExecutedStepDate = LAST_EXECUTED_STEP_DATE_EDEFAULT;
-
-	/**
 	 * The default value of the '{@link #getIdPathway() <em>Id Pathway</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -279,16 +239,6 @@ public class EPathwayImpl extends MinimalEObjectImpl.Container implements EPathw
 	protected EList<Integer> idsExecutedStep;
 
 	/**
-	 * The cached value of the '{@link #getPathway() <em>Pathway</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getPathway()
-	 * @generated
-	 * @ordered
-	 */
-	protected Pathway pathway;
-
-	/**
 	 * The cached value of the '{@link #getResponsible() <em>Responsible</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -339,6 +289,26 @@ public class EPathwayImpl extends MinimalEObjectImpl.Container implements EPathw
 	protected Justification justification;
 
 	/**
+	 * The cached value of the '{@link #getPathway() <em>Pathway</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getPathway()
+	 * @generated
+	 * @ordered
+	 */
+	protected Pathway pathway;
+
+	/**
+	 * The cached value of the '{@link #getMedicalcare() <em>Medicalcare</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getMedicalcare()
+	 * @generated
+	 * @ordered
+	 */
+	protected MedicalCare medicalcare;
+
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -362,9 +332,9 @@ public class EPathwayImpl extends MinimalEObjectImpl.Container implements EPathw
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<EElement> getElement() {
+	public EList<EStep> getElement() {
 		if (element == null) {
-			element = new EObjectContainmentEList<EElement>(EElement.class, this,
+			element = new EObjectContainmentEList<EStep>(EStep.class, this,
 					Execution_metamodelPackage.EPATHWAY__ELEMENT);
 		}
 		return element;
@@ -389,28 +359,6 @@ public class EPathwayImpl extends MinimalEObjectImpl.Container implements EPathw
 		id = newId;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.EPATHWAY__ID, oldId, id));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String getUrl() {
-		return url;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setUrl(String newUrl) {
-		String oldUrl = url;
-		url = newUrl;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.EPATHWAY__URL, oldUrl,
-					url));
 	}
 
 	/**
@@ -506,29 +454,6 @@ public class EPathwayImpl extends MinimalEObjectImpl.Container implements EPathw
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getLastExecutedStepDate() {
-		return lastExecutedStepDate;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setLastExecutedStepDate(String newLastExecutedStepDate) {
-		String oldLastExecutedStepDate = lastExecutedStepDate;
-		lastExecutedStepDate = newLastExecutedStepDate;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET,
-					Execution_metamodelPackage.EPATHWAY__LAST_EXECUTED_STEP_DATE, oldLastExecutedStepDate,
-					lastExecutedStepDate));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public int getIdPathway() {
 		return idPathway;
 	}
@@ -602,56 +527,6 @@ public class EPathwayImpl extends MinimalEObjectImpl.Container implements EPathw
 					Execution_metamodelPackage.EPATHWAY__IDS_EXECUTED_STEP);
 		}
 		return idsExecutedStep;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Pathway getPathway() {
-		return pathway;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public NotificationChain basicSetPathway(Pathway newPathway, NotificationChain msgs) {
-		Pathway oldPathway = pathway;
-		pathway = newPathway;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
-					Execution_metamodelPackage.EPATHWAY__PATHWAY, oldPathway, newPathway);
-			if (msgs == null)
-				msgs = notification;
-			else
-				msgs.add(notification);
-		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setPathway(Pathway newPathway) {
-		if (newPathway != pathway) {
-			NotificationChain msgs = null;
-			if (pathway != null)
-				msgs = ((InternalEObject) pathway).eInverseRemove(this,
-						EOPPOSITE_FEATURE_BASE - Execution_metamodelPackage.EPATHWAY__PATHWAY, null, msgs);
-			if (newPathway != null)
-				msgs = ((InternalEObject) newPathway).eInverseAdd(this,
-						EOPPOSITE_FEATURE_BASE - Execution_metamodelPackage.EPATHWAY__PATHWAY, null, msgs);
-			msgs = basicSetPathway(newPathway, msgs);
-			if (msgs != null)
-				msgs.dispatch();
-		} else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.EPATHWAY__PATHWAY,
-					newPathway, newPathway));
 	}
 
 	/**
@@ -831,19 +706,121 @@ public class EPathwayImpl extends MinimalEObjectImpl.Container implements EPathw
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public Pathway getPathway() {
+		return pathway;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetPathway(Pathway newPathway, NotificationChain msgs) {
+		Pathway oldPathway = pathway;
+		pathway = newPathway;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
+					Execution_metamodelPackage.EPATHWAY__PATHWAY, oldPathway, newPathway);
+			if (msgs == null)
+				msgs = notification;
+			else
+				msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setPathway(Pathway newPathway) {
+		if (newPathway != pathway) {
+			NotificationChain msgs = null;
+			if (pathway != null)
+				msgs = ((InternalEObject) pathway).eInverseRemove(this,
+						EOPPOSITE_FEATURE_BASE - Execution_metamodelPackage.EPATHWAY__PATHWAY, null, msgs);
+			if (newPathway != null)
+				msgs = ((InternalEObject) newPathway).eInverseAdd(this,
+						EOPPOSITE_FEATURE_BASE - Execution_metamodelPackage.EPATHWAY__PATHWAY, null, msgs);
+			msgs = basicSetPathway(newPathway, msgs);
+			if (msgs != null)
+				msgs.dispatch();
+		} else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.EPATHWAY__PATHWAY,
+					newPathway, newPathway));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public MedicalCare getMedicalcare() {
+		return medicalcare;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetMedicalcare(MedicalCare newMedicalcare, NotificationChain msgs) {
+		MedicalCare oldMedicalcare = medicalcare;
+		medicalcare = newMedicalcare;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
+					Execution_metamodelPackage.EPATHWAY__MEDICALCARE, oldMedicalcare, newMedicalcare);
+			if (msgs == null)
+				msgs = notification;
+			else
+				msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setMedicalcare(MedicalCare newMedicalcare) {
+		if (newMedicalcare != medicalcare) {
+			NotificationChain msgs = null;
+			if (medicalcare != null)
+				msgs = ((InternalEObject) medicalcare).eInverseRemove(this,
+						EOPPOSITE_FEATURE_BASE - Execution_metamodelPackage.EPATHWAY__MEDICALCARE, null, msgs);
+			if (newMedicalcare != null)
+				msgs = ((InternalEObject) newMedicalcare).eInverseAdd(this,
+						EOPPOSITE_FEATURE_BASE - Execution_metamodelPackage.EPATHWAY__MEDICALCARE, null, msgs);
+			msgs = basicSetMedicalcare(newMedicalcare, msgs);
+			if (msgs != null)
+				msgs.dispatch();
+		} else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.EPATHWAY__MEDICALCARE,
+					newMedicalcare, newMedicalcare));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 		case Execution_metamodelPackage.EPATHWAY__ELEMENT:
 			return ((InternalEList<?>) getElement()).basicRemove(otherEnd, msgs);
-		case Execution_metamodelPackage.EPATHWAY__PATHWAY:
-			return basicSetPathway(null, msgs);
 		case Execution_metamodelPackage.EPATHWAY__RESPONSIBLE:
 			return basicSetResponsible(null, msgs);
 		case Execution_metamodelPackage.EPATHWAY__LASTPROFESSIONAL:
 			return basicSetLastprofessional(null, msgs);
 		case Execution_metamodelPackage.EPATHWAY__JUSTIFICATION:
 			return basicSetJustification(null, msgs);
+		case Execution_metamodelPackage.EPATHWAY__PATHWAY:
+			return basicSetPathway(null, msgs);
+		case Execution_metamodelPackage.EPATHWAY__MEDICALCARE:
+			return basicSetMedicalcare(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -860,8 +837,6 @@ public class EPathwayImpl extends MinimalEObjectImpl.Container implements EPathw
 			return getElement();
 		case Execution_metamodelPackage.EPATHWAY__ID:
 			return getId();
-		case Execution_metamodelPackage.EPATHWAY__URL:
-			return getUrl();
 		case Execution_metamodelPackage.EPATHWAY__CREATION_DATE:
 			return getCreationDate();
 		case Execution_metamodelPackage.EPATHWAY__CONCLUSION_DATE:
@@ -870,8 +845,6 @@ public class EPathwayImpl extends MinimalEObjectImpl.Container implements EPathw
 			return isCompleted();
 		case Execution_metamodelPackage.EPATHWAY__ABORTED:
 			return isAborted();
-		case Execution_metamodelPackage.EPATHWAY__LAST_EXECUTED_STEP_DATE:
-			return getLastExecutedStepDate();
 		case Execution_metamodelPackage.EPATHWAY__ID_PATHWAY:
 			return getIdPathway();
 		case Execution_metamodelPackage.EPATHWAY__ID_LAST_PROFESSIONAL:
@@ -880,8 +853,6 @@ public class EPathwayImpl extends MinimalEObjectImpl.Container implements EPathw
 			return getIdResponsible();
 		case Execution_metamodelPackage.EPATHWAY__IDS_EXECUTED_STEP:
 			return getIdsExecutedStep();
-		case Execution_metamodelPackage.EPATHWAY__PATHWAY:
-			return getPathway();
 		case Execution_metamodelPackage.EPATHWAY__RESPONSIBLE:
 			return getResponsible();
 		case Execution_metamodelPackage.EPATHWAY__LASTPROFESSIONAL:
@@ -890,6 +861,10 @@ public class EPathwayImpl extends MinimalEObjectImpl.Container implements EPathw
 			return getName();
 		case Execution_metamodelPackage.EPATHWAY__JUSTIFICATION:
 			return getJustification();
+		case Execution_metamodelPackage.EPATHWAY__PATHWAY:
+			return getPathway();
+		case Execution_metamodelPackage.EPATHWAY__MEDICALCARE:
+			return getMedicalcare();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -905,13 +880,10 @@ public class EPathwayImpl extends MinimalEObjectImpl.Container implements EPathw
 		switch (featureID) {
 		case Execution_metamodelPackage.EPATHWAY__ELEMENT:
 			getElement().clear();
-			getElement().addAll((Collection<? extends EElement>) newValue);
+			getElement().addAll((Collection<? extends EStep>) newValue);
 			return;
 		case Execution_metamodelPackage.EPATHWAY__ID:
 			setId((Integer) newValue);
-			return;
-		case Execution_metamodelPackage.EPATHWAY__URL:
-			setUrl((String) newValue);
 			return;
 		case Execution_metamodelPackage.EPATHWAY__CREATION_DATE:
 			setCreationDate((Date) newValue);
@@ -924,9 +896,6 @@ public class EPathwayImpl extends MinimalEObjectImpl.Container implements EPathw
 			return;
 		case Execution_metamodelPackage.EPATHWAY__ABORTED:
 			setAborted((Boolean) newValue);
-			return;
-		case Execution_metamodelPackage.EPATHWAY__LAST_EXECUTED_STEP_DATE:
-			setLastExecutedStepDate((String) newValue);
 			return;
 		case Execution_metamodelPackage.EPATHWAY__ID_PATHWAY:
 			setIdPathway((Integer) newValue);
@@ -941,9 +910,6 @@ public class EPathwayImpl extends MinimalEObjectImpl.Container implements EPathw
 			getIdsExecutedStep().clear();
 			getIdsExecutedStep().addAll((Collection<? extends Integer>) newValue);
 			return;
-		case Execution_metamodelPackage.EPATHWAY__PATHWAY:
-			setPathway((Pathway) newValue);
-			return;
 		case Execution_metamodelPackage.EPATHWAY__RESPONSIBLE:
 			setResponsible((Responsible) newValue);
 			return;
@@ -955,6 +921,12 @@ public class EPathwayImpl extends MinimalEObjectImpl.Container implements EPathw
 			return;
 		case Execution_metamodelPackage.EPATHWAY__JUSTIFICATION:
 			setJustification((Justification) newValue);
+			return;
+		case Execution_metamodelPackage.EPATHWAY__PATHWAY:
+			setPathway((Pathway) newValue);
+			return;
+		case Execution_metamodelPackage.EPATHWAY__MEDICALCARE:
+			setMedicalcare((MedicalCare) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -974,9 +946,6 @@ public class EPathwayImpl extends MinimalEObjectImpl.Container implements EPathw
 		case Execution_metamodelPackage.EPATHWAY__ID:
 			setId(ID_EDEFAULT);
 			return;
-		case Execution_metamodelPackage.EPATHWAY__URL:
-			setUrl(URL_EDEFAULT);
-			return;
 		case Execution_metamodelPackage.EPATHWAY__CREATION_DATE:
 			setCreationDate(CREATION_DATE_EDEFAULT);
 			return;
@@ -988,9 +957,6 @@ public class EPathwayImpl extends MinimalEObjectImpl.Container implements EPathw
 			return;
 		case Execution_metamodelPackage.EPATHWAY__ABORTED:
 			setAborted(ABORTED_EDEFAULT);
-			return;
-		case Execution_metamodelPackage.EPATHWAY__LAST_EXECUTED_STEP_DATE:
-			setLastExecutedStepDate(LAST_EXECUTED_STEP_DATE_EDEFAULT);
 			return;
 		case Execution_metamodelPackage.EPATHWAY__ID_PATHWAY:
 			setIdPathway(ID_PATHWAY_EDEFAULT);
@@ -1004,9 +970,6 @@ public class EPathwayImpl extends MinimalEObjectImpl.Container implements EPathw
 		case Execution_metamodelPackage.EPATHWAY__IDS_EXECUTED_STEP:
 			getIdsExecutedStep().clear();
 			return;
-		case Execution_metamodelPackage.EPATHWAY__PATHWAY:
-			setPathway((Pathway) null);
-			return;
 		case Execution_metamodelPackage.EPATHWAY__RESPONSIBLE:
 			setResponsible((Responsible) null);
 			return;
@@ -1018,6 +981,12 @@ public class EPathwayImpl extends MinimalEObjectImpl.Container implements EPathw
 			return;
 		case Execution_metamodelPackage.EPATHWAY__JUSTIFICATION:
 			setJustification((Justification) null);
+			return;
+		case Execution_metamodelPackage.EPATHWAY__PATHWAY:
+			setPathway((Pathway) null);
+			return;
+		case Execution_metamodelPackage.EPATHWAY__MEDICALCARE:
+			setMedicalcare((MedicalCare) null);
 			return;
 		}
 		super.eUnset(featureID);
@@ -1035,8 +1004,6 @@ public class EPathwayImpl extends MinimalEObjectImpl.Container implements EPathw
 			return element != null && !element.isEmpty();
 		case Execution_metamodelPackage.EPATHWAY__ID:
 			return id != ID_EDEFAULT;
-		case Execution_metamodelPackage.EPATHWAY__URL:
-			return URL_EDEFAULT == null ? url != null : !URL_EDEFAULT.equals(url);
 		case Execution_metamodelPackage.EPATHWAY__CREATION_DATE:
 			return CREATION_DATE_EDEFAULT == null ? creationDate != null : !CREATION_DATE_EDEFAULT.equals(creationDate);
 		case Execution_metamodelPackage.EPATHWAY__CONCLUSION_DATE:
@@ -1046,9 +1013,6 @@ public class EPathwayImpl extends MinimalEObjectImpl.Container implements EPathw
 			return completed != COMPLETED_EDEFAULT;
 		case Execution_metamodelPackage.EPATHWAY__ABORTED:
 			return aborted != ABORTED_EDEFAULT;
-		case Execution_metamodelPackage.EPATHWAY__LAST_EXECUTED_STEP_DATE:
-			return LAST_EXECUTED_STEP_DATE_EDEFAULT == null ? lastExecutedStepDate != null
-					: !LAST_EXECUTED_STEP_DATE_EDEFAULT.equals(lastExecutedStepDate);
 		case Execution_metamodelPackage.EPATHWAY__ID_PATHWAY:
 			return idPathway != ID_PATHWAY_EDEFAULT;
 		case Execution_metamodelPackage.EPATHWAY__ID_LAST_PROFESSIONAL:
@@ -1057,8 +1021,6 @@ public class EPathwayImpl extends MinimalEObjectImpl.Container implements EPathw
 			return idResponsible != ID_RESPONSIBLE_EDEFAULT;
 		case Execution_metamodelPackage.EPATHWAY__IDS_EXECUTED_STEP:
 			return idsExecutedStep != null && !idsExecutedStep.isEmpty();
-		case Execution_metamodelPackage.EPATHWAY__PATHWAY:
-			return pathway != null;
 		case Execution_metamodelPackage.EPATHWAY__RESPONSIBLE:
 			return responsible != null;
 		case Execution_metamodelPackage.EPATHWAY__LASTPROFESSIONAL:
@@ -1067,6 +1029,10 @@ public class EPathwayImpl extends MinimalEObjectImpl.Container implements EPathw
 			return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 		case Execution_metamodelPackage.EPATHWAY__JUSTIFICATION:
 			return justification != null;
+		case Execution_metamodelPackage.EPATHWAY__PATHWAY:
+			return pathway != null;
+		case Execution_metamodelPackage.EPATHWAY__MEDICALCARE:
+			return medicalcare != null;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -1084,8 +1050,6 @@ public class EPathwayImpl extends MinimalEObjectImpl.Container implements EPathw
 		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (id: ");
 		result.append(id);
-		result.append(", url: ");
-		result.append(url);
 		result.append(", creationDate: ");
 		result.append(creationDate);
 		result.append(", conclusionDate: ");
@@ -1094,8 +1058,6 @@ public class EPathwayImpl extends MinimalEObjectImpl.Container implements EPathw
 		result.append(completed);
 		result.append(", aborted: ");
 		result.append(aborted);
-		result.append(", lastExecutedStepDate: ");
-		result.append(lastExecutedStepDate);
 		result.append(", idPathway: ");
 		result.append(idPathway);
 		result.append(", idLastProfessional: ");

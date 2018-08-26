@@ -19,21 +19,20 @@ import org.eclipse.emf.ecore.EObject;
  * <ul>
  *   <li>{@link MetamodelExecution.EPathway#getElement <em>Element</em>}</li>
  *   <li>{@link MetamodelExecution.EPathway#getId <em>Id</em>}</li>
- *   <li>{@link MetamodelExecution.EPathway#getUrl <em>Url</em>}</li>
  *   <li>{@link MetamodelExecution.EPathway#getCreationDate <em>Creation Date</em>}</li>
  *   <li>{@link MetamodelExecution.EPathway#getConclusionDate <em>Conclusion Date</em>}</li>
  *   <li>{@link MetamodelExecution.EPathway#isCompleted <em>Completed</em>}</li>
  *   <li>{@link MetamodelExecution.EPathway#isAborted <em>Aborted</em>}</li>
- *   <li>{@link MetamodelExecution.EPathway#getLastExecutedStepDate <em>Last Executed Step Date</em>}</li>
  *   <li>{@link MetamodelExecution.EPathway#getIdPathway <em>Id Pathway</em>}</li>
  *   <li>{@link MetamodelExecution.EPathway#getIdLastProfessional <em>Id Last Professional</em>}</li>
  *   <li>{@link MetamodelExecution.EPathway#getIdResponsible <em>Id Responsible</em>}</li>
  *   <li>{@link MetamodelExecution.EPathway#getIdsExecutedStep <em>Ids Executed Step</em>}</li>
- *   <li>{@link MetamodelExecution.EPathway#getPathway <em>Pathway</em>}</li>
  *   <li>{@link MetamodelExecution.EPathway#getResponsible <em>Responsible</em>}</li>
  *   <li>{@link MetamodelExecution.EPathway#getLastprofessional <em>Lastprofessional</em>}</li>
  *   <li>{@link MetamodelExecution.EPathway#getName <em>Name</em>}</li>
  *   <li>{@link MetamodelExecution.EPathway#getJustification <em>Justification</em>}</li>
+ *   <li>{@link MetamodelExecution.EPathway#getPathway <em>Pathway</em>}</li>
+ *   <li>{@link MetamodelExecution.EPathway#getMedicalcare <em>Medicalcare</em>}</li>
  * </ul>
  *
  * @see MetamodelExecution.Execution_metamodelPackage#getEPathway()
@@ -43,7 +42,7 @@ import org.eclipse.emf.ecore.EObject;
 public interface EPathway extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Element</b></em>' containment reference list.
-	 * The list contents are of type {@link MetamodelExecution.EElement}.
+	 * The list contents are of type {@link MetamodelExecution.EStep}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Element</em>' containment reference list isn't clear,
@@ -55,7 +54,7 @@ public interface EPathway extends EObject {
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<EElement> getElement();
+	EList<EStep> getElement();
 
 	/**
 	 * Returns the value of the '<em><b>Id</b></em>' attribute.
@@ -82,32 +81,6 @@ public interface EPathway extends EObject {
 	 * @generated
 	 */
 	void setId(int value);
-
-	/**
-	 * Returns the value of the '<em><b>Url</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Url</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Url</em>' attribute.
-	 * @see #setUrl(String)
-	 * @see MetamodelExecution.Execution_metamodelPackage#getEPathway_Url()
-	 * @model
-	 * @generated
-	 */
-	String getUrl();
-
-	/**
-	 * Sets the value of the '{@link MetamodelExecution.EPathway#getUrl <em>Url</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Url</em>' attribute.
-	 * @see #getUrl()
-	 * @generated
-	 */
-	void setUrl(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Creation Date</b></em>' attribute.
@@ -215,32 +188,6 @@ public interface EPathway extends EObject {
 	void setAborted(boolean value);
 
 	/**
-	 * Returns the value of the '<em><b>Last Executed Step Date</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Last Executed Step Date</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Last Executed Step Date</em>' attribute.
-	 * @see #setLastExecutedStepDate(String)
-	 * @see MetamodelExecution.Execution_metamodelPackage#getEPathway_LastExecutedStepDate()
-	 * @model
-	 * @generated
-	 */
-	String getLastExecutedStepDate();
-
-	/**
-	 * Sets the value of the '{@link MetamodelExecution.EPathway#getLastExecutedStepDate <em>Last Executed Step Date</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Last Executed Step Date</em>' attribute.
-	 * @see #getLastExecutedStepDate()
-	 * @generated
-	 */
-	void setLastExecutedStepDate(String value);
-
-	/**
 	 * Returns the value of the '<em><b>Id Pathway</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <p>
@@ -335,32 +282,6 @@ public interface EPathway extends EObject {
 	EList<Integer> getIdsExecutedStep();
 
 	/**
-	 * Returns the value of the '<em><b>Pathway</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Pathway</em>' containment reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Pathway</em>' containment reference.
-	 * @see #setPathway(Pathway)
-	 * @see MetamodelExecution.Execution_metamodelPackage#getEPathway_Pathway()
-	 * @model containment="true" required="true"
-	 * @generated
-	 */
-	Pathway getPathway();
-
-	/**
-	 * Sets the value of the '{@link MetamodelExecution.EPathway#getPathway <em>Pathway</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Pathway</em>' containment reference.
-	 * @see #getPathway()
-	 * @generated
-	 */
-	void setPathway(Pathway value);
-
-	/**
 	 * Returns the value of the '<em><b>Responsible</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
@@ -449,7 +370,7 @@ public interface EPathway extends EObject {
 	 * @return the value of the '<em>Justification</em>' containment reference.
 	 * @see #setJustification(Justification)
 	 * @see MetamodelExecution.Execution_metamodelPackage#getEPathway_Justification()
-	 * @model containment="true"
+	 * @model containment="true" required="true"
 	 * @generated
 	 */
 	Justification getJustification();
@@ -463,5 +384,57 @@ public interface EPathway extends EObject {
 	 * @generated
 	 */
 	void setJustification(Justification value);
+
+	/**
+	 * Returns the value of the '<em><b>Pathway</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Pathway</em>' containment reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Pathway</em>' containment reference.
+	 * @see #setPathway(Pathway)
+	 * @see MetamodelExecution.Execution_metamodelPackage#getEPathway_Pathway()
+	 * @model containment="true" required="true"
+	 * @generated
+	 */
+	Pathway getPathway();
+
+	/**
+	 * Sets the value of the '{@link MetamodelExecution.EPathway#getPathway <em>Pathway</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Pathway</em>' containment reference.
+	 * @see #getPathway()
+	 * @generated
+	 */
+	void setPathway(Pathway value);
+
+	/**
+	 * Returns the value of the '<em><b>Medicalcare</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Medicalcare</em>' containment reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Medicalcare</em>' containment reference.
+	 * @see #setMedicalcare(MedicalCare)
+	 * @see MetamodelExecution.Execution_metamodelPackage#getEPathway_Medicalcare()
+	 * @model containment="true" required="true"
+	 * @generated
+	 */
+	MedicalCare getMedicalcare();
+
+	/**
+	 * Sets the value of the '{@link MetamodelExecution.EPathway#getMedicalcare <em>Medicalcare</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Medicalcare</em>' containment reference.
+	 * @see #getMedicalcare()
+	 * @generated
+	 */
+	void setMedicalcare(MedicalCare value);
 
 } // EPathway

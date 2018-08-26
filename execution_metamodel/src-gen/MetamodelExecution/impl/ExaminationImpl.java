@@ -24,7 +24,6 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * </p>
  * <ul>
  *   <li>{@link MetamodelExecution.impl.ExaminationImpl#getId <em>Id</em>}</li>
- *   <li>{@link MetamodelExecution.impl.ExaminationImpl#getUrl <em>Url</em>}</li>
  *   <li>{@link MetamodelExecution.impl.ExaminationImpl#getIdExamination <em>Id Examination</em>}</li>
  *   <li>{@link MetamodelExecution.impl.ExaminationImpl#getSideLimb <em>Side Limb</em>}</li>
  *   <li>{@link MetamodelExecution.impl.ExaminationImpl#getQuantity <em>Quantity</em>}</li>
@@ -57,26 +56,6 @@ public class ExaminationImpl extends MinimalEObjectImpl.Container implements Exa
 	 * @ordered
 	 */
 	protected int id = ID_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getUrl() <em>Url</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getUrl()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String URL_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getUrl() <em>Url</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getUrl()
-	 * @generated
-	 * @ordered
-	 */
-	protected String url = URL_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getIdExamination() <em>Id Examination</em>}' attribute.
@@ -267,28 +246,6 @@ public class ExaminationImpl extends MinimalEObjectImpl.Container implements Exa
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.EXAMINATION__ID, oldId,
 					id));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String getUrl() {
-		return url;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setUrl(String newUrl) {
-		String oldUrl = url;
-		url = newUrl;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.EXAMINATION__URL, oldUrl,
-					url));
 	}
 
 	/**
@@ -520,8 +477,6 @@ public class ExaminationImpl extends MinimalEObjectImpl.Container implements Exa
 		switch (featureID) {
 		case Execution_metamodelPackage.EXAMINATION__ID:
 			return getId();
-		case Execution_metamodelPackage.EXAMINATION__URL:
-			return getUrl();
 		case Execution_metamodelPackage.EXAMINATION__ID_EXAMINATION:
 			return getIdExamination();
 		case Execution_metamodelPackage.EXAMINATION__SIDE_LIMB:
@@ -552,9 +507,6 @@ public class ExaminationImpl extends MinimalEObjectImpl.Container implements Exa
 		switch (featureID) {
 		case Execution_metamodelPackage.EXAMINATION__ID:
 			setId((Integer) newValue);
-			return;
-		case Execution_metamodelPackage.EXAMINATION__URL:
-			setUrl((String) newValue);
 			return;
 		case Execution_metamodelPackage.EXAMINATION__ID_EXAMINATION:
 			setIdExamination((Integer) newValue);
@@ -595,9 +547,6 @@ public class ExaminationImpl extends MinimalEObjectImpl.Container implements Exa
 		case Execution_metamodelPackage.EXAMINATION__ID:
 			setId(ID_EDEFAULT);
 			return;
-		case Execution_metamodelPackage.EXAMINATION__URL:
-			setUrl(URL_EDEFAULT);
-			return;
 		case Execution_metamodelPackage.EXAMINATION__ID_EXAMINATION:
 			setIdExamination(ID_EXAMINATION_EDEFAULT);
 			return;
@@ -636,8 +585,6 @@ public class ExaminationImpl extends MinimalEObjectImpl.Container implements Exa
 		switch (featureID) {
 		case Execution_metamodelPackage.EXAMINATION__ID:
 			return id != ID_EDEFAULT;
-		case Execution_metamodelPackage.EXAMINATION__URL:
-			return URL_EDEFAULT == null ? url != null : !URL_EDEFAULT.equals(url);
 		case Execution_metamodelPackage.EXAMINATION__ID_EXAMINATION:
 			return idExamination != ID_EXAMINATION_EDEFAULT;
 		case Execution_metamodelPackage.EXAMINATION__SIDE_LIMB:
@@ -674,8 +621,6 @@ public class ExaminationImpl extends MinimalEObjectImpl.Container implements Exa
 		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (id: ");
 		result.append(id);
-		result.append(", url: ");
-		result.append(url);
 		result.append(", idExamination: ");
 		result.append(idExamination);
 		result.append(", sideLimb: ");

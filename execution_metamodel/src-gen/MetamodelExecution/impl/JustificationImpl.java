@@ -22,7 +22,6 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * <ul>
  *   <li>{@link MetamodelExecution.impl.JustificationImpl#getId <em>Id</em>}</li>
  *   <li>{@link MetamodelExecution.impl.JustificationImpl#getReason <em>Reason</em>}</li>
- *   <li>{@link MetamodelExecution.impl.JustificationImpl#getReasonDisplay <em>Reason Display</em>}</li>
  *   <li>{@link MetamodelExecution.impl.JustificationImpl#getDescription <em>Description</em>}</li>
  *   <li>{@link MetamodelExecution.impl.JustificationImpl#getJustifiedById <em>Justified By Id</em>}</li>
  *   <li>{@link MetamodelExecution.impl.JustificationImpl#getJustifiedBy <em>Justified By</em>}</li>
@@ -70,26 +69,6 @@ public class JustificationImpl extends MinimalEObjectImpl.Container implements J
 	 * @ordered
 	 */
 	protected String reason = REASON_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getReasonDisplay() <em>Reason Display</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getReasonDisplay()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String REASON_DISPLAY_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getReasonDisplay() <em>Reason Display</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getReasonDisplay()
-	 * @generated
-	 * @ordered
-	 */
-	protected String reasonDisplay = REASON_DISPLAY_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getDescription() <em>Description</em>}' attribute.
@@ -219,28 +198,6 @@ public class JustificationImpl extends MinimalEObjectImpl.Container implements J
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getReasonDisplay() {
-		return reasonDisplay;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setReasonDisplay(String newReasonDisplay) {
-		String oldReasonDisplay = reasonDisplay;
-		reasonDisplay = newReasonDisplay;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET,
-					Execution_metamodelPackage.JUSTIFICATION__REASON_DISPLAY, oldReasonDisplay, reasonDisplay));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public String getDescription() {
 		return description;
 	}
@@ -314,8 +271,6 @@ public class JustificationImpl extends MinimalEObjectImpl.Container implements J
 			return getId();
 		case Execution_metamodelPackage.JUSTIFICATION__REASON:
 			return getReason();
-		case Execution_metamodelPackage.JUSTIFICATION__REASON_DISPLAY:
-			return getReasonDisplay();
 		case Execution_metamodelPackage.JUSTIFICATION__DESCRIPTION:
 			return getDescription();
 		case Execution_metamodelPackage.JUSTIFICATION__JUSTIFIED_BY_ID:
@@ -339,9 +294,6 @@ public class JustificationImpl extends MinimalEObjectImpl.Container implements J
 			return;
 		case Execution_metamodelPackage.JUSTIFICATION__REASON:
 			setReason((String) newValue);
-			return;
-		case Execution_metamodelPackage.JUSTIFICATION__REASON_DISPLAY:
-			setReasonDisplay((String) newValue);
 			return;
 		case Execution_metamodelPackage.JUSTIFICATION__DESCRIPTION:
 			setDescription((String) newValue);
@@ -370,9 +322,6 @@ public class JustificationImpl extends MinimalEObjectImpl.Container implements J
 		case Execution_metamodelPackage.JUSTIFICATION__REASON:
 			setReason(REASON_EDEFAULT);
 			return;
-		case Execution_metamodelPackage.JUSTIFICATION__REASON_DISPLAY:
-			setReasonDisplay(REASON_DISPLAY_EDEFAULT);
-			return;
 		case Execution_metamodelPackage.JUSTIFICATION__DESCRIPTION:
 			setDescription(DESCRIPTION_EDEFAULT);
 			return;
@@ -398,9 +347,6 @@ public class JustificationImpl extends MinimalEObjectImpl.Container implements J
 			return id != ID_EDEFAULT;
 		case Execution_metamodelPackage.JUSTIFICATION__REASON:
 			return REASON_EDEFAULT == null ? reason != null : !REASON_EDEFAULT.equals(reason);
-		case Execution_metamodelPackage.JUSTIFICATION__REASON_DISPLAY:
-			return REASON_DISPLAY_EDEFAULT == null ? reasonDisplay != null
-					: !REASON_DISPLAY_EDEFAULT.equals(reasonDisplay);
 		case Execution_metamodelPackage.JUSTIFICATION__DESCRIPTION:
 			return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
 		case Execution_metamodelPackage.JUSTIFICATION__JUSTIFIED_BY_ID:
@@ -426,8 +372,6 @@ public class JustificationImpl extends MinimalEObjectImpl.Container implements J
 		result.append(id);
 		result.append(", reason: ");
 		result.append(reason);
-		result.append(", reasonDisplay: ");
-		result.append(reasonDisplay);
 		result.append(", description: ");
 		result.append(description);
 		result.append(", justifiedById: ");

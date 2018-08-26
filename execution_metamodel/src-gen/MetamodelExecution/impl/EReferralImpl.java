@@ -14,7 +14,7 @@ import org.eclipse.emf.ecore.EClass;
  *
  * @generated
  */
-public class EReferralImpl extends EElementImpl implements EReferral {
+public class EReferralImpl extends EStepImpl implements EReferral {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

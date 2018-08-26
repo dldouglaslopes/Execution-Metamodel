@@ -22,7 +22,6 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * <ul>
  *   <li>{@link MetamodelExecution.impl.UnitImpl#getId <em>Id</em>}</li>
  *   <li>{@link MetamodelExecution.impl.UnitImpl#getName <em>Name</em>}</li>
- *   <li>{@link MetamodelExecution.impl.UnitImpl#getUrl <em>Url</em>}</li>
  *   <li>{@link MetamodelExecution.impl.UnitImpl#getCode <em>Code</em>}</li>
  *   <li>{@link MetamodelExecution.impl.UnitImpl#getUnit <em>Unit</em>}</li>
  * </ul>
@@ -69,26 +68,6 @@ public class UnitImpl extends MinimalEObjectImpl.Container implements Unit {
 	 * @ordered
 	 */
 	protected String name = NAME_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getUrl() <em>Url</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getUrl()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String URL_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getUrl() <em>Url</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getUrl()
-	 * @generated
-	 * @ordered
-	 */
-	protected String url = URL_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getCode() <em>Code</em>}' attribute.
@@ -197,27 +176,6 @@ public class UnitImpl extends MinimalEObjectImpl.Container implements Unit {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getUrl() {
-		return url;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setUrl(String newUrl) {
-		String oldUrl = url;
-		url = newUrl;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.UNIT__URL, oldUrl, url));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public String getCode() {
 		return code;
 	}
@@ -269,8 +227,6 @@ public class UnitImpl extends MinimalEObjectImpl.Container implements Unit {
 			return getId();
 		case Execution_metamodelPackage.UNIT__NAME:
 			return getName();
-		case Execution_metamodelPackage.UNIT__URL:
-			return getUrl();
 		case Execution_metamodelPackage.UNIT__CODE:
 			return getCode();
 		case Execution_metamodelPackage.UNIT__UNIT:
@@ -292,9 +248,6 @@ public class UnitImpl extends MinimalEObjectImpl.Container implements Unit {
 			return;
 		case Execution_metamodelPackage.UNIT__NAME:
 			setName((String) newValue);
-			return;
-		case Execution_metamodelPackage.UNIT__URL:
-			setUrl((String) newValue);
 			return;
 		case Execution_metamodelPackage.UNIT__CODE:
 			setCode((String) newValue);
@@ -320,9 +273,6 @@ public class UnitImpl extends MinimalEObjectImpl.Container implements Unit {
 		case Execution_metamodelPackage.UNIT__NAME:
 			setName(NAME_EDEFAULT);
 			return;
-		case Execution_metamodelPackage.UNIT__URL:
-			setUrl(URL_EDEFAULT);
-			return;
 		case Execution_metamodelPackage.UNIT__CODE:
 			setCode(CODE_EDEFAULT);
 			return;
@@ -345,8 +295,6 @@ public class UnitImpl extends MinimalEObjectImpl.Container implements Unit {
 			return id != ID_EDEFAULT;
 		case Execution_metamodelPackage.UNIT__NAME:
 			return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-		case Execution_metamodelPackage.UNIT__URL:
-			return URL_EDEFAULT == null ? url != null : !URL_EDEFAULT.equals(url);
 		case Execution_metamodelPackage.UNIT__CODE:
 			return CODE_EDEFAULT == null ? code != null : !CODE_EDEFAULT.equals(code);
 		case Execution_metamodelPackage.UNIT__UNIT:
@@ -370,8 +318,6 @@ public class UnitImpl extends MinimalEObjectImpl.Container implements Unit {
 		result.append(id);
 		result.append(", name: ");
 		result.append(name);
-		result.append(", url: ");
-		result.append(url);
 		result.append(", code: ");
 		result.append(code);
 		result.append(", unit: ");

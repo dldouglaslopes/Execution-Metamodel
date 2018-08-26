@@ -42,7 +42,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *
  * @generated
  */
-public class EPrescriptionImpl extends EElementImpl implements EPrescription {
+public class EPrescriptionImpl extends EStepImpl implements EPrescription {
 	/**
 	 * The default value of the '{@link #getText() <em>Text</em>}' attribute.
 	 * <!-- begin-user-doc -->

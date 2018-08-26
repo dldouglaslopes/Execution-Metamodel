@@ -27,7 +27,7 @@ import org.eclipse.emf.common.util.EList;
  * @model
  * @generated
  */
-public interface ETreatment extends EElement {
+public interface ETreatment extends EStep {
 	/**
 	 * Returns the value of the '<em><b>Prescribedexam</b></em>' containment reference list.
 	 * The list contents are of type {@link MetamodelExecution.PrescribedExamination}.

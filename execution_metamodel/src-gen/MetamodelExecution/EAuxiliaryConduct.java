@@ -20,7 +20,7 @@ import org.eclipse.emf.common.util.EList;
  * @model
  * @generated
  */
-public interface EAuxiliaryConduct extends EElement {
+public interface EAuxiliaryConduct extends EStep {
 	/**
 	 * Returns the value of the '<em><b>Answer</b></em>' containment reference list.
 	 * The list contents are of type {@link MetamodelExecution.Answer}.

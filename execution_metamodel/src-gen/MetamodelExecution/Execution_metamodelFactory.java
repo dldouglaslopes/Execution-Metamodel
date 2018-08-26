@@ -157,15 +157,6 @@ public interface Execution_metamodelFactory extends EFactory {
 	Justification createJustification();
 
 	/**
-	 * Returns a new object of class '<em>Pathway</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Pathway</em>'.
-	 * @generated
-	 */
-	Pathway createPathway();
-
-	/**
 	 * Returns a new object of class '<em>Responsible</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -274,13 +265,13 @@ public interface Execution_metamodelFactory extends EFactory {
 	Variable createVariable();
 
 	/**
-	 * Returns a new object of class '<em>Medicament</em>'.
+	 * Returns a new object of class '<em>Medication</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Medicament</em>'.
+	 * @return a new object of class '<em>Medication</em>'.
 	 * @generated
 	 */
-	Medicament createMedicament();
+	Medication createMedication();
 
 	/**
 	 * Returns a new object of class '<em>Medicine</em>'.
@@ -310,24 +301,6 @@ public interface Execution_metamodelFactory extends EFactory {
 	Access createAccess();
 
 	/**
-	 * Returns a new object of class '<em>Previous</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Previous</em>'.
-	 * @generated
-	 */
-	Previous createPrevious();
-
-	/**
-	 * Returns a new object of class '<em>Next</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Next</em>'.
-	 * @generated
-	 */
-	Next createNext();
-
-	/**
 	 * Returns a new object of class '<em>Bond</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -335,6 +308,123 @@ public interface Execution_metamodelFactory extends EFactory {
 	 * @generated
 	 */
 	Bond createBond();
+
+	/**
+	 * Returns a new object of class '<em>EAction</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>EAction</em>'.
+	 * @generated
+	 */
+	EAction createEAction();
+
+	/**
+	 * Returns a new object of class '<em>Request</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Request</em>'.
+	 * @generated
+	 */
+	Request createRequest();
+
+	/**
+	 * Returns a new object of class '<em>Pathway</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Pathway</em>'.
+	 * @generated
+	 */
+	Pathway createPathway();
+
+	/**
+	 * Returns a new object of class '<em>EProcedure</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>EProcedure</em>'.
+	 * @generated
+	 */
+	EProcedure createEProcedure();
+
+	/**
+	 * Returns a new object of class '<em>EPause</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>EPause</em>'.
+	 * @generated
+	 */
+	EPause createEPause();
+
+	/**
+	 * Returns a new object of class '<em>Medical Care</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Medical Care</em>'.
+	 * @generated
+	 */
+	MedicalCare createMedicalCare();
+
+	/**
+	 * Returns a new object of class '<em>Unit Care</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Unit Care</em>'.
+	 * @generated
+	 */
+	UnitCare createUnitCare();
+
+	/**
+	 * Returns a new object of class '<em>Professional</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Professional</em>'.
+	 * @generated
+	 */
+	Professional createProfessional();
+
+	/**
+	 * Returns a new object of class '<em>Patient</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Patient</em>'.
+	 * @generated
+	 */
+	Patient createPatient();
+
+	/**
+	 * Returns a new object of class '<em>Allergy Registry</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Allergy Registry</em>'.
+	 * @generated
+	 */
+	AllergyRegistry createAllergyRegistry();
+
+	/**
+	 * Returns a new object of class '<em>Comorbidity Registry</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Comorbidity Registry</em>'.
+	 * @generated
+	 */
+	ComorbidityRegistry createComorbidityRegistry();
+
+	/**
+	 * Returns a new object of class '<em>Allergy</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Allergy</em>'.
+	 * @generated
+	 */
+	Allergy createAllergy();
+
+	/**
+	 * Returns a new object of class '<em>Comorbidity</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Comorbidity</em>'.
+	 * @generated
+	 */
+	Comorbidity createComorbidity();
 
 	/**
 	 * Returns the package supported by this factory.

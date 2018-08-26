@@ -8,40 +8,36 @@ import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>EElement</b></em>'.
+ * A representation of the model object '<em><b>EStep</b></em>'.
  * <!-- end-user-doc -->
  *
  * <p>
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link MetamodelExecution.EElement#getId <em>Id</em>}</li>
- *   <li>{@link MetamodelExecution.EElement#getType <em>Type</em>}</li>
- *   <li>{@link MetamodelExecution.EElement#getTypeVerbose <em>Type Verbose</em>}</li>
- *   <li>{@link MetamodelExecution.EElement#getUrl <em>Url</em>}</li>
- *   <li>{@link MetamodelExecution.EElement#isIsCurrent <em>Is Current</em>}</li>
- *   <li>{@link MetamodelExecution.EElement#isReworked <em>Reworked</em>}</li>
- *   <li>{@link MetamodelExecution.EElement#isExecuted <em>Executed</em>}</li>
- *   <li>{@link MetamodelExecution.EElement#getCreationDate <em>Creation Date</em>}</li>
- *   <li>{@link MetamodelExecution.EElement#getModificationDate <em>Modification Date</em>}</li>
- *   <li>{@link MetamodelExecution.EElement#getExecutionDate <em>Execution Date</em>}</li>
- *   <li>{@link MetamodelExecution.EElement#getCreatedById <em>Created By Id</em>}</li>
- *   <li>{@link MetamodelExecution.EElement#getExecutedById <em>Executed By Id</em>}</li>
- *   <li>{@link MetamodelExecution.EElement#getIdStep <em>Id Step</em>}</li>
- *   <li>{@link MetamodelExecution.EElement#getJustification <em>Justification</em>}</li>
- *   <li>{@link MetamodelExecution.EElement#getStep <em>Step</em>}</li>
- *   <li>{@link MetamodelExecution.EElement#getCreator <em>Creator</em>}</li>
- *   <li>{@link MetamodelExecution.EElement#getExecutor <em>Executor</em>}</li>
- *   <li>{@link MetamodelExecution.EElement#getName <em>Name</em>}</li>
- *   <li>{@link MetamodelExecution.EElement#getPrevious <em>Previous</em>}</li>
- *   <li>{@link MetamodelExecution.EElement#getNext <em>Next</em>}</li>
+ *   <li>{@link MetamodelExecution.EStep#getId <em>Id</em>}</li>
+ *   <li>{@link MetamodelExecution.EStep#getType <em>Type</em>}</li>
+ *   <li>{@link MetamodelExecution.EStep#isIsCurrent <em>Is Current</em>}</li>
+ *   <li>{@link MetamodelExecution.EStep#isReworked <em>Reworked</em>}</li>
+ *   <li>{@link MetamodelExecution.EStep#isExecuted <em>Executed</em>}</li>
+ *   <li>{@link MetamodelExecution.EStep#getCreationDate <em>Creation Date</em>}</li>
+ *   <li>{@link MetamodelExecution.EStep#getModificationDate <em>Modification Date</em>}</li>
+ *   <li>{@link MetamodelExecution.EStep#getExecutionDate <em>Execution Date</em>}</li>
+ *   <li>{@link MetamodelExecution.EStep#getCreatedById <em>Created By Id</em>}</li>
+ *   <li>{@link MetamodelExecution.EStep#getExecutedById <em>Executed By Id</em>}</li>
+ *   <li>{@link MetamodelExecution.EStep#getIdStep <em>Id Step</em>}</li>
+ *   <li>{@link MetamodelExecution.EStep#getJustification <em>Justification</em>}</li>
+ *   <li>{@link MetamodelExecution.EStep#getStep <em>Step</em>}</li>
+ *   <li>{@link MetamodelExecution.EStep#getCreator <em>Creator</em>}</li>
+ *   <li>{@link MetamodelExecution.EStep#getExecutor <em>Executor</em>}</li>
+ *   <li>{@link MetamodelExecution.EStep#getName <em>Name</em>}</li>
  * </ul>
  *
- * @see MetamodelExecution.Execution_metamodelPackage#getEElement()
+ * @see MetamodelExecution.Execution_metamodelPackage#getEStep()
  * @model abstract="true"
  * @generated
  */
-public interface EElement extends EObject {
+public interface EStep extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Id</b></em>' attribute.
 	 * <!-- begin-user-doc -->
@@ -52,14 +48,14 @@ public interface EElement extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Id</em>' attribute.
 	 * @see #setId(int)
-	 * @see MetamodelExecution.Execution_metamodelPackage#getEElement_Id()
+	 * @see MetamodelExecution.Execution_metamodelPackage#getEStep_Id()
 	 * @model
 	 * @generated
 	 */
 	int getId();
 
 	/**
-	 * Sets the value of the '{@link MetamodelExecution.EElement#getId <em>Id</em>}' attribute.
+	 * Sets the value of the '{@link MetamodelExecution.EStep#getId <em>Id</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Id</em>' attribute.
@@ -78,14 +74,14 @@ public interface EElement extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Type</em>' attribute.
 	 * @see #setType(String)
-	 * @see MetamodelExecution.Execution_metamodelPackage#getEElement_Type()
+	 * @see MetamodelExecution.Execution_metamodelPackage#getEStep_Type()
 	 * @model
 	 * @generated
 	 */
 	String getType();
 
 	/**
-	 * Sets the value of the '{@link MetamodelExecution.EElement#getType <em>Type</em>}' attribute.
+	 * Sets the value of the '{@link MetamodelExecution.EStep#getType <em>Type</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Type</em>' attribute.
@@ -93,58 +89,6 @@ public interface EElement extends EObject {
 	 * @generated
 	 */
 	void setType(String value);
-
-	/**
-	 * Returns the value of the '<em><b>Type Verbose</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Type Verbose</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Type Verbose</em>' attribute.
-	 * @see #setTypeVerbose(String)
-	 * @see MetamodelExecution.Execution_metamodelPackage#getEElement_TypeVerbose()
-	 * @model
-	 * @generated
-	 */
-	String getTypeVerbose();
-
-	/**
-	 * Sets the value of the '{@link MetamodelExecution.EElement#getTypeVerbose <em>Type Verbose</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Type Verbose</em>' attribute.
-	 * @see #getTypeVerbose()
-	 * @generated
-	 */
-	void setTypeVerbose(String value);
-
-	/**
-	 * Returns the value of the '<em><b>Url</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Url</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Url</em>' attribute.
-	 * @see #setUrl(String)
-	 * @see MetamodelExecution.Execution_metamodelPackage#getEElement_Url()
-	 * @model
-	 * @generated
-	 */
-	String getUrl();
-
-	/**
-	 * Sets the value of the '{@link MetamodelExecution.EElement#getUrl <em>Url</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Url</em>' attribute.
-	 * @see #getUrl()
-	 * @generated
-	 */
-	void setUrl(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Is Current</b></em>' attribute.
@@ -157,14 +101,14 @@ public interface EElement extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Is Current</em>' attribute.
 	 * @see #setIsCurrent(boolean)
-	 * @see MetamodelExecution.Execution_metamodelPackage#getEElement_IsCurrent()
+	 * @see MetamodelExecution.Execution_metamodelPackage#getEStep_IsCurrent()
 	 * @model default="false"
 	 * @generated
 	 */
 	boolean isIsCurrent();
 
 	/**
-	 * Sets the value of the '{@link MetamodelExecution.EElement#isIsCurrent <em>Is Current</em>}' attribute.
+	 * Sets the value of the '{@link MetamodelExecution.EStep#isIsCurrent <em>Is Current</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Is Current</em>' attribute.
@@ -184,14 +128,14 @@ public interface EElement extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Reworked</em>' attribute.
 	 * @see #setReworked(boolean)
-	 * @see MetamodelExecution.Execution_metamodelPackage#getEElement_Reworked()
+	 * @see MetamodelExecution.Execution_metamodelPackage#getEStep_Reworked()
 	 * @model default="false"
 	 * @generated
 	 */
 	boolean isReworked();
 
 	/**
-	 * Sets the value of the '{@link MetamodelExecution.EElement#isReworked <em>Reworked</em>}' attribute.
+	 * Sets the value of the '{@link MetamodelExecution.EStep#isReworked <em>Reworked</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Reworked</em>' attribute.
@@ -211,14 +155,14 @@ public interface EElement extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Executed</em>' attribute.
 	 * @see #setExecuted(boolean)
-	 * @see MetamodelExecution.Execution_metamodelPackage#getEElement_Executed()
+	 * @see MetamodelExecution.Execution_metamodelPackage#getEStep_Executed()
 	 * @model default="false"
 	 * @generated
 	 */
 	boolean isExecuted();
 
 	/**
-	 * Sets the value of the '{@link MetamodelExecution.EElement#isExecuted <em>Executed</em>}' attribute.
+	 * Sets the value of the '{@link MetamodelExecution.EStep#isExecuted <em>Executed</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Executed</em>' attribute.
@@ -237,14 +181,14 @@ public interface EElement extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Creation Date</em>' attribute.
 	 * @see #setCreationDate(Date)
-	 * @see MetamodelExecution.Execution_metamodelPackage#getEElement_CreationDate()
+	 * @see MetamodelExecution.Execution_metamodelPackage#getEStep_CreationDate()
 	 * @model
 	 * @generated
 	 */
 	Date getCreationDate();
 
 	/**
-	 * Sets the value of the '{@link MetamodelExecution.EElement#getCreationDate <em>Creation Date</em>}' attribute.
+	 * Sets the value of the '{@link MetamodelExecution.EStep#getCreationDate <em>Creation Date</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Creation Date</em>' attribute.
@@ -263,14 +207,14 @@ public interface EElement extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Modification Date</em>' attribute.
 	 * @see #setModificationDate(Date)
-	 * @see MetamodelExecution.Execution_metamodelPackage#getEElement_ModificationDate()
+	 * @see MetamodelExecution.Execution_metamodelPackage#getEStep_ModificationDate()
 	 * @model
 	 * @generated
 	 */
 	Date getModificationDate();
 
 	/**
-	 * Sets the value of the '{@link MetamodelExecution.EElement#getModificationDate <em>Modification Date</em>}' attribute.
+	 * Sets the value of the '{@link MetamodelExecution.EStep#getModificationDate <em>Modification Date</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Modification Date</em>' attribute.
@@ -289,14 +233,14 @@ public interface EElement extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Execution Date</em>' attribute.
 	 * @see #setExecutionDate(Date)
-	 * @see MetamodelExecution.Execution_metamodelPackage#getEElement_ExecutionDate()
+	 * @see MetamodelExecution.Execution_metamodelPackage#getEStep_ExecutionDate()
 	 * @model
 	 * @generated
 	 */
 	Date getExecutionDate();
 
 	/**
-	 * Sets the value of the '{@link MetamodelExecution.EElement#getExecutionDate <em>Execution Date</em>}' attribute.
+	 * Sets the value of the '{@link MetamodelExecution.EStep#getExecutionDate <em>Execution Date</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Execution Date</em>' attribute.
@@ -315,14 +259,14 @@ public interface EElement extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Created By Id</em>' attribute.
 	 * @see #setCreatedById(int)
-	 * @see MetamodelExecution.Execution_metamodelPackage#getEElement_CreatedById()
+	 * @see MetamodelExecution.Execution_metamodelPackage#getEStep_CreatedById()
 	 * @model
 	 * @generated
 	 */
 	int getCreatedById();
 
 	/**
-	 * Sets the value of the '{@link MetamodelExecution.EElement#getCreatedById <em>Created By Id</em>}' attribute.
+	 * Sets the value of the '{@link MetamodelExecution.EStep#getCreatedById <em>Created By Id</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Created By Id</em>' attribute.
@@ -341,14 +285,14 @@ public interface EElement extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Executed By Id</em>' attribute.
 	 * @see #setExecutedById(int)
-	 * @see MetamodelExecution.Execution_metamodelPackage#getEElement_ExecutedById()
+	 * @see MetamodelExecution.Execution_metamodelPackage#getEStep_ExecutedById()
 	 * @model
 	 * @generated
 	 */
 	int getExecutedById();
 
 	/**
-	 * Sets the value of the '{@link MetamodelExecution.EElement#getExecutedById <em>Executed By Id</em>}' attribute.
+	 * Sets the value of the '{@link MetamodelExecution.EStep#getExecutedById <em>Executed By Id</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Executed By Id</em>' attribute.
@@ -367,14 +311,14 @@ public interface EElement extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Id Step</em>' attribute.
 	 * @see #setIdStep(int)
-	 * @see MetamodelExecution.Execution_metamodelPackage#getEElement_IdStep()
+	 * @see MetamodelExecution.Execution_metamodelPackage#getEStep_IdStep()
 	 * @model
 	 * @generated
 	 */
 	int getIdStep();
 
 	/**
-	 * Sets the value of the '{@link MetamodelExecution.EElement#getIdStep <em>Id Step</em>}' attribute.
+	 * Sets the value of the '{@link MetamodelExecution.EStep#getIdStep <em>Id Step</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Id Step</em>' attribute.
@@ -393,14 +337,14 @@ public interface EElement extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Justification</em>' containment reference.
 	 * @see #setJustification(Justification)
-	 * @see MetamodelExecution.Execution_metamodelPackage#getEElement_Justification()
-	 * @model containment="true"
+	 * @see MetamodelExecution.Execution_metamodelPackage#getEStep_Justification()
+	 * @model containment="true" required="true"
 	 * @generated
 	 */
 	Justification getJustification();
 
 	/**
-	 * Sets the value of the '{@link MetamodelExecution.EElement#getJustification <em>Justification</em>}' containment reference.
+	 * Sets the value of the '{@link MetamodelExecution.EStep#getJustification <em>Justification</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Justification</em>' containment reference.
@@ -419,14 +363,14 @@ public interface EElement extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Step</em>' containment reference.
 	 * @see #setStep(Step)
-	 * @see MetamodelExecution.Execution_metamodelPackage#getEElement_Step()
+	 * @see MetamodelExecution.Execution_metamodelPackage#getEStep_Step()
 	 * @model containment="true" required="true"
 	 * @generated
 	 */
 	Step getStep();
 
 	/**
-	 * Sets the value of the '{@link MetamodelExecution.EElement#getStep <em>Step</em>}' containment reference.
+	 * Sets the value of the '{@link MetamodelExecution.EStep#getStep <em>Step</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Step</em>' containment reference.
@@ -445,14 +389,14 @@ public interface EElement extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Creator</em>' containment reference.
 	 * @see #setCreator(Creator)
-	 * @see MetamodelExecution.Execution_metamodelPackage#getEElement_Creator()
+	 * @see MetamodelExecution.Execution_metamodelPackage#getEStep_Creator()
 	 * @model containment="true" required="true"
 	 * @generated
 	 */
 	Creator getCreator();
 
 	/**
-	 * Sets the value of the '{@link MetamodelExecution.EElement#getCreator <em>Creator</em>}' containment reference.
+	 * Sets the value of the '{@link MetamodelExecution.EStep#getCreator <em>Creator</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Creator</em>' containment reference.
@@ -471,14 +415,14 @@ public interface EElement extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Executor</em>' containment reference.
 	 * @see #setExecutor(Executor)
-	 * @see MetamodelExecution.Execution_metamodelPackage#getEElement_Executor()
+	 * @see MetamodelExecution.Execution_metamodelPackage#getEStep_Executor()
 	 * @model containment="true" required="true"
 	 * @generated
 	 */
 	Executor getExecutor();
 
 	/**
-	 * Sets the value of the '{@link MetamodelExecution.EElement#getExecutor <em>Executor</em>}' containment reference.
+	 * Sets the value of the '{@link MetamodelExecution.EStep#getExecutor <em>Executor</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Executor</em>' containment reference.
@@ -497,14 +441,14 @@ public interface EElement extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Name</em>' attribute.
 	 * @see #setName(String)
-	 * @see MetamodelExecution.Execution_metamodelPackage#getEElement_Name()
+	 * @see MetamodelExecution.Execution_metamodelPackage#getEStep_Name()
 	 * @model
 	 * @generated
 	 */
 	String getName();
 
 	/**
-	 * Sets the value of the '{@link MetamodelExecution.EElement#getName <em>Name</em>}' attribute.
+	 * Sets the value of the '{@link MetamodelExecution.EStep#getName <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Name</em>' attribute.
@@ -513,56 +457,4 @@ public interface EElement extends EObject {
 	 */
 	void setName(String value);
 
-	/**
-	 * Returns the value of the '<em><b>Previous</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Previous</em>' containment reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Previous</em>' containment reference.
-	 * @see #setPrevious(Previous)
-	 * @see MetamodelExecution.Execution_metamodelPackage#getEElement_Previous()
-	 * @model containment="true"
-	 * @generated
-	 */
-	Previous getPrevious();
-
-	/**
-	 * Sets the value of the '{@link MetamodelExecution.EElement#getPrevious <em>Previous</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Previous</em>' containment reference.
-	 * @see #getPrevious()
-	 * @generated
-	 */
-	void setPrevious(Previous value);
-
-	/**
-	 * Returns the value of the '<em><b>Next</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Next</em>' containment reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Next</em>' containment reference.
-	 * @see #setNext(Next)
-	 * @see MetamodelExecution.Execution_metamodelPackage#getEElement_Next()
-	 * @model containment="true"
-	 * @generated
-	 */
-	Next getNext();
-
-	/**
-	 * Sets the value of the '{@link MetamodelExecution.EElement#getNext <em>Next</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Next</em>' containment reference.
-	 * @see #getNext()
-	 * @generated
-	 */
-	void setNext(Next value);
-
-} // EElement
+} // EStep

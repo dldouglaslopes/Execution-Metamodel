@@ -25,7 +25,7 @@ import org.eclipse.emf.common.util.EList;
  * @model
  * @generated
  */
-public interface EPrescription extends EElement {
+public interface EPrescription extends EStep {
 	/**
 	 * Returns the value of the '<em><b>Text</b></em>' attribute.
 	 * <!-- begin-user-doc -->

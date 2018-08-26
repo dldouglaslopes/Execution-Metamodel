@@ -21,7 +21,6 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * </p>
  * <ul>
  *   <li>{@link MetamodelExecution.impl.ExamImpl#getId <em>Id</em>}</li>
- *   <li>{@link MetamodelExecution.impl.ExamImpl#getUrl <em>Url</em>}</li>
  *   <li>{@link MetamodelExecution.impl.ExamImpl#getCode <em>Code</em>}</li>
  *   <li>{@link MetamodelExecution.impl.ExamImpl#getName <em>Name</em>}</li>
  *   <li>{@link MetamodelExecution.impl.ExamImpl#getDescription <em>Description</em>}</li>
@@ -51,26 +50,6 @@ public class ExamImpl extends MinimalEObjectImpl.Container implements Exam {
 	 * @ordered
 	 */
 	protected int id = ID_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getUrl() <em>Url</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getUrl()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String URL_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getUrl() <em>Url</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getUrl()
-	 * @generated
-	 * @ordered
-	 */
-	protected String url = URL_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getCode() <em>Code</em>}' attribute.
@@ -217,27 +196,6 @@ public class ExamImpl extends MinimalEObjectImpl.Container implements Exam {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getUrl() {
-		return url;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setUrl(String newUrl) {
-		String oldUrl = url;
-		url = newUrl;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.EXAM__URL, oldUrl, url));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public int getCode() {
 		return code;
 	}
@@ -353,8 +311,6 @@ public class ExamImpl extends MinimalEObjectImpl.Container implements Exam {
 		switch (featureID) {
 		case Execution_metamodelPackage.EXAM__ID:
 			return getId();
-		case Execution_metamodelPackage.EXAM__URL:
-			return getUrl();
 		case Execution_metamodelPackage.EXAM__CODE:
 			return getCode();
 		case Execution_metamodelPackage.EXAM__NAME:
@@ -379,9 +335,6 @@ public class ExamImpl extends MinimalEObjectImpl.Container implements Exam {
 		switch (featureID) {
 		case Execution_metamodelPackage.EXAM__ID:
 			setId((Integer) newValue);
-			return;
-		case Execution_metamodelPackage.EXAM__URL:
-			setUrl((String) newValue);
 			return;
 		case Execution_metamodelPackage.EXAM__CODE:
 			setCode((Integer) newValue);
@@ -413,9 +366,6 @@ public class ExamImpl extends MinimalEObjectImpl.Container implements Exam {
 		case Execution_metamodelPackage.EXAM__ID:
 			setId(ID_EDEFAULT);
 			return;
-		case Execution_metamodelPackage.EXAM__URL:
-			setUrl(URL_EDEFAULT);
-			return;
 		case Execution_metamodelPackage.EXAM__CODE:
 			setCode(CODE_EDEFAULT);
 			return;
@@ -445,8 +395,6 @@ public class ExamImpl extends MinimalEObjectImpl.Container implements Exam {
 		switch (featureID) {
 		case Execution_metamodelPackage.EXAM__ID:
 			return id != ID_EDEFAULT;
-		case Execution_metamodelPackage.EXAM__URL:
-			return URL_EDEFAULT == null ? url != null : !URL_EDEFAULT.equals(url);
 		case Execution_metamodelPackage.EXAM__CODE:
 			return code != CODE_EDEFAULT;
 		case Execution_metamodelPackage.EXAM__NAME:
@@ -474,8 +422,6 @@ public class ExamImpl extends MinimalEObjectImpl.Container implements Exam {
 		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (id: ");
 		result.append(id);
-		result.append(", url: ");
-		result.append(url);
 		result.append(", code: ");
 		result.append(code);
 		result.append(", name: ");

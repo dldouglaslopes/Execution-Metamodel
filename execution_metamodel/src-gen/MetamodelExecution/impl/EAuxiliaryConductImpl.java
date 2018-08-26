@@ -31,7 +31,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *
  * @generated
  */
-public class EAuxiliaryConductImpl extends EElementImpl implements EAuxiliaryConduct {
+public class EAuxiliaryConductImpl extends EStepImpl implements EAuxiliaryConduct {
 	/**
 	 * The cached value of the '{@link #getAnswer() <em>Answer</em>}' containment reference list.
 	 * <!-- begin-user-doc -->

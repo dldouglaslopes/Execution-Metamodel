@@ -4,7 +4,7 @@ package MetamodelExecution.impl;
 
 import MetamodelExecution.Access;
 import MetamodelExecution.Execution_metamodelPackage;
-import MetamodelExecution.Medicament;
+import MetamodelExecution.Medication;
 import MetamodelExecution.Medicine;
 import MetamodelExecution.Unit;
 
@@ -26,37 +26,36 @@ import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Medicament</b></em>'.
+ * An implementation of the model object '<em><b>Medication</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link MetamodelExecution.impl.MedicamentImpl#getMedicine <em>Medicine</em>}</li>
- *   <li>{@link MetamodelExecution.impl.MedicamentImpl#getUnit <em>Unit</em>}</li>
- *   <li>{@link MetamodelExecution.impl.MedicamentImpl#getAccess <em>Access</em>}</li>
- *   <li>{@link MetamodelExecution.impl.MedicamentImpl#getId <em>Id</em>}</li>
- *   <li>{@link MetamodelExecution.impl.MedicamentImpl#getName <em>Name</em>}</li>
- *   <li>{@link MetamodelExecution.impl.MedicamentImpl#getUrl <em>Url</em>}</li>
- *   <li>{@link MetamodelExecution.impl.MedicamentImpl#getCode <em>Code</em>}</li>
- *   <li>{@link MetamodelExecution.impl.MedicamentImpl#getIdMedicament <em>Id Medicament</em>}</li>
- *   <li>{@link MetamodelExecution.impl.MedicamentImpl#getDescription <em>Description</em>}</li>
- *   <li>{@link MetamodelExecution.impl.MedicamentImpl#getBrand <em>Brand</em>}</li>
- *   <li>{@link MetamodelExecution.impl.MedicamentImpl#isOutpatient <em>Outpatient</em>}</li>
- *   <li>{@link MetamodelExecution.impl.MedicamentImpl#getIdUnit <em>Id Unit</em>}</li>
- *   <li>{@link MetamodelExecution.impl.MedicamentImpl#getIdAccess <em>Id Access</em>}</li>
- *   <li>{@link MetamodelExecution.impl.MedicamentImpl#getStandard <em>Standard</em>}</li>
- *   <li>{@link MetamodelExecution.impl.MedicamentImpl#getDailyDosage <em>Daily Dosage</em>}</li>
- *   <li>{@link MetamodelExecution.impl.MedicamentImpl#getCycles <em>Cycles</em>}</li>
- *   <li>{@link MetamodelExecution.impl.MedicamentImpl#getFrequency <em>Frequency</em>}</li>
- *   <li>{@link MetamodelExecution.impl.MedicamentImpl#getFrequencyDisplay <em>Frequency Display</em>}</li>
- *   <li>{@link MetamodelExecution.impl.MedicamentImpl#getTimeTreatement <em>Time Treatement</em>}</li>
- *   <li>{@link MetamodelExecution.impl.MedicamentImpl#getTimeInterval <em>Time Interval</em>}</li>
+ *   <li>{@link MetamodelExecution.impl.MedicationImpl#getMedicine <em>Medicine</em>}</li>
+ *   <li>{@link MetamodelExecution.impl.MedicationImpl#getUnit <em>Unit</em>}</li>
+ *   <li>{@link MetamodelExecution.impl.MedicationImpl#getAccess <em>Access</em>}</li>
+ *   <li>{@link MetamodelExecution.impl.MedicationImpl#getId <em>Id</em>}</li>
+ *   <li>{@link MetamodelExecution.impl.MedicationImpl#getName <em>Name</em>}</li>
+ *   <li>{@link MetamodelExecution.impl.MedicationImpl#getCode <em>Code</em>}</li>
+ *   <li>{@link MetamodelExecution.impl.MedicationImpl#getIdMedication <em>Id Medication</em>}</li>
+ *   <li>{@link MetamodelExecution.impl.MedicationImpl#getDescription <em>Description</em>}</li>
+ *   <li>{@link MetamodelExecution.impl.MedicationImpl#getBrand <em>Brand</em>}</li>
+ *   <li>{@link MetamodelExecution.impl.MedicationImpl#isOutpatient <em>Outpatient</em>}</li>
+ *   <li>{@link MetamodelExecution.impl.MedicationImpl#getIdUnit <em>Id Unit</em>}</li>
+ *   <li>{@link MetamodelExecution.impl.MedicationImpl#getIdAccess <em>Id Access</em>}</li>
+ *   <li>{@link MetamodelExecution.impl.MedicationImpl#getStandard <em>Standard</em>}</li>
+ *   <li>{@link MetamodelExecution.impl.MedicationImpl#getDailyDosage <em>Daily Dosage</em>}</li>
+ *   <li>{@link MetamodelExecution.impl.MedicationImpl#getCycles <em>Cycles</em>}</li>
+ *   <li>{@link MetamodelExecution.impl.MedicationImpl#getFrequency <em>Frequency</em>}</li>
+ *   <li>{@link MetamodelExecution.impl.MedicationImpl#getFrequencyDisplay <em>Frequency Display</em>}</li>
+ *   <li>{@link MetamodelExecution.impl.MedicationImpl#getTimeTreatement <em>Time Treatement</em>}</li>
+ *   <li>{@link MetamodelExecution.impl.MedicationImpl#getTimeInterval <em>Time Interval</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class MedicamentImpl extends MinimalEObjectImpl.Container implements Medicament {
+public class MedicationImpl extends MinimalEObjectImpl.Container implements Medication {
 	/**
 	 * The cached value of the '{@link #getMedicine() <em>Medicine</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
@@ -128,26 +127,6 @@ public class MedicamentImpl extends MinimalEObjectImpl.Container implements Medi
 	protected String name = NAME_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getUrl() <em>Url</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getUrl()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String URL_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getUrl() <em>Url</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getUrl()
-	 * @generated
-	 * @ordered
-	 */
-	protected String url = URL_EDEFAULT;
-
-	/**
 	 * The default value of the '{@link #getCode() <em>Code</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -168,24 +147,24 @@ public class MedicamentImpl extends MinimalEObjectImpl.Container implements Medi
 	protected int code = CODE_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getIdMedicament() <em>Id Medicament</em>}' attribute.
+	 * The default value of the '{@link #getIdMedication() <em>Id Medication</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getIdMedicament()
+	 * @see #getIdMedication()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final int ID_MEDICAMENT_EDEFAULT = 0;
+	protected static final int ID_MEDICATION_EDEFAULT = 0;
 
 	/**
-	 * The cached value of the '{@link #getIdMedicament() <em>Id Medicament</em>}' attribute.
+	 * The cached value of the '{@link #getIdMedication() <em>Id Medication</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getIdMedicament()
+	 * @see #getIdMedication()
 	 * @generated
 	 * @ordered
 	 */
-	protected int idMedicament = ID_MEDICAMENT_EDEFAULT;
+	protected int idMedication = ID_MEDICATION_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getDescription() <em>Description</em>}' attribute.
@@ -432,7 +411,7 @@ public class MedicamentImpl extends MinimalEObjectImpl.Container implements Medi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected MedicamentImpl() {
+	protected MedicationImpl() {
 		super();
 	}
 
@@ -443,7 +422,7 @@ public class MedicamentImpl extends MinimalEObjectImpl.Container implements Medi
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Execution_metamodelPackage.Literals.MEDICAMENT;
+		return Execution_metamodelPackage.Literals.MEDICATION;
 	}
 
 	/**
@@ -454,7 +433,7 @@ public class MedicamentImpl extends MinimalEObjectImpl.Container implements Medi
 	public EList<Medicine> getMedicine() {
 		if (medicine == null) {
 			medicine = new EObjectContainmentEList<Medicine>(Medicine.class, this,
-					Execution_metamodelPackage.MEDICAMENT__MEDICINE);
+					Execution_metamodelPackage.MEDICATION__MEDICINE);
 		}
 		return medicine;
 	}
@@ -466,7 +445,7 @@ public class MedicamentImpl extends MinimalEObjectImpl.Container implements Medi
 	 */
 	public EList<Unit> getUnit() {
 		if (unit == null) {
-			unit = new EObjectContainmentEList<Unit>(Unit.class, this, Execution_metamodelPackage.MEDICAMENT__UNIT);
+			unit = new EObjectContainmentEList<Unit>(Unit.class, this, Execution_metamodelPackage.MEDICATION__UNIT);
 		}
 		return unit;
 	}
@@ -479,7 +458,7 @@ public class MedicamentImpl extends MinimalEObjectImpl.Container implements Medi
 	public EList<Access> getAccess() {
 		if (access == null) {
 			access = new EObjectContainmentEList<Access>(Access.class, this,
-					Execution_metamodelPackage.MEDICAMENT__ACCESS);
+					Execution_metamodelPackage.MEDICATION__ACCESS);
 		}
 		return access;
 	}
@@ -502,7 +481,7 @@ public class MedicamentImpl extends MinimalEObjectImpl.Container implements Medi
 		int oldId = id;
 		id = newId;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.MEDICAMENT__ID, oldId,
+			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.MEDICATION__ID, oldId,
 					id));
 	}
 
@@ -524,30 +503,8 @@ public class MedicamentImpl extends MinimalEObjectImpl.Container implements Medi
 		String oldName = name;
 		name = newName;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.MEDICAMENT__NAME, oldName,
+			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.MEDICATION__NAME, oldName,
 					name));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String getUrl() {
-		return url;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setUrl(String newUrl) {
-		String oldUrl = url;
-		url = newUrl;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.MEDICAMENT__URL, oldUrl,
-					url));
 	}
 
 	/**
@@ -568,7 +525,7 @@ public class MedicamentImpl extends MinimalEObjectImpl.Container implements Medi
 		int oldCode = code;
 		code = newCode;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.MEDICAMENT__CODE, oldCode,
+			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.MEDICATION__CODE, oldCode,
 					code));
 	}
 
@@ -577,8 +534,8 @@ public class MedicamentImpl extends MinimalEObjectImpl.Container implements Medi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public int getIdMedicament() {
-		return idMedicament;
+	public int getIdMedication() {
+		return idMedication;
 	}
 
 	/**
@@ -586,12 +543,12 @@ public class MedicamentImpl extends MinimalEObjectImpl.Container implements Medi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setIdMedicament(int newIdMedicament) {
-		int oldIdMedicament = idMedicament;
-		idMedicament = newIdMedicament;
+	public void setIdMedication(int newIdMedication) {
+		int oldIdMedication = idMedication;
+		idMedication = newIdMedication;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.MEDICAMENT__ID_MEDICAMENT,
-					oldIdMedicament, idMedicament));
+			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.MEDICATION__ID_MEDICATION,
+					oldIdMedication, idMedication));
 	}
 
 	/**
@@ -612,7 +569,7 @@ public class MedicamentImpl extends MinimalEObjectImpl.Container implements Medi
 		String oldDescription = description;
 		description = newDescription;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.MEDICAMENT__DESCRIPTION,
+			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.MEDICATION__DESCRIPTION,
 					oldDescription, description));
 	}
 
@@ -634,7 +591,7 @@ public class MedicamentImpl extends MinimalEObjectImpl.Container implements Medi
 		String oldBrand = brand;
 		brand = newBrand;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.MEDICAMENT__BRAND,
+			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.MEDICATION__BRAND,
 					oldBrand, brand));
 	}
 
@@ -656,7 +613,7 @@ public class MedicamentImpl extends MinimalEObjectImpl.Container implements Medi
 		boolean oldOutpatient = outpatient;
 		outpatient = newOutpatient;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.MEDICAMENT__OUTPATIENT,
+			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.MEDICATION__OUTPATIENT,
 					oldOutpatient, outpatient));
 	}
 
@@ -678,7 +635,7 @@ public class MedicamentImpl extends MinimalEObjectImpl.Container implements Medi
 		int oldIdUnit = idUnit;
 		idUnit = newIdUnit;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.MEDICAMENT__ID_UNIT,
+			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.MEDICATION__ID_UNIT,
 					oldIdUnit, idUnit));
 	}
 
@@ -700,7 +657,7 @@ public class MedicamentImpl extends MinimalEObjectImpl.Container implements Medi
 		int oldIdAccess = idAccess;
 		idAccess = newIdAccess;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.MEDICAMENT__ID_ACCESS,
+			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.MEDICATION__ID_ACCESS,
 					oldIdAccess, idAccess));
 	}
 
@@ -722,7 +679,7 @@ public class MedicamentImpl extends MinimalEObjectImpl.Container implements Medi
 		String oldStandard = standard;
 		standard = newStandard;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.MEDICAMENT__STANDARD,
+			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.MEDICATION__STANDARD,
 					oldStandard, standard));
 	}
 
@@ -744,7 +701,7 @@ public class MedicamentImpl extends MinimalEObjectImpl.Container implements Medi
 		int oldDailyDosage = dailyDosage;
 		dailyDosage = newDailyDosage;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.MEDICAMENT__DAILY_DOSAGE,
+			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.MEDICATION__DAILY_DOSAGE,
 					oldDailyDosage, dailyDosage));
 	}
 
@@ -766,7 +723,7 @@ public class MedicamentImpl extends MinimalEObjectImpl.Container implements Medi
 		int oldCycles = cycles;
 		cycles = newCycles;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.MEDICAMENT__CYCLES,
+			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.MEDICATION__CYCLES,
 					oldCycles, cycles));
 	}
 
@@ -788,7 +745,7 @@ public class MedicamentImpl extends MinimalEObjectImpl.Container implements Medi
 		int oldFrequency = frequency;
 		frequency = newFrequency;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.MEDICAMENT__FREQUENCY,
+			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.MEDICATION__FREQUENCY,
 					oldFrequency, frequency));
 	}
 
@@ -811,7 +768,7 @@ public class MedicamentImpl extends MinimalEObjectImpl.Container implements Medi
 		frequencyDisplay = newFrequencyDisplay;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET,
-					Execution_metamodelPackage.MEDICAMENT__FREQUENCY_DISPLAY, oldFrequencyDisplay, frequencyDisplay));
+					Execution_metamodelPackage.MEDICATION__FREQUENCY_DISPLAY, oldFrequencyDisplay, frequencyDisplay));
 	}
 
 	/**
@@ -833,7 +790,7 @@ public class MedicamentImpl extends MinimalEObjectImpl.Container implements Medi
 		timeTreatement = newTimeTreatement;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET,
-					Execution_metamodelPackage.MEDICAMENT__TIME_TREATEMENT, oldTimeTreatement, timeTreatement));
+					Execution_metamodelPackage.MEDICATION__TIME_TREATEMENT, oldTimeTreatement, timeTreatement));
 	}
 
 	/**
@@ -854,7 +811,7 @@ public class MedicamentImpl extends MinimalEObjectImpl.Container implements Medi
 		int oldTimeInterval = timeInterval;
 		timeInterval = newTimeInterval;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.MEDICAMENT__TIME_INTERVAL,
+			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.MEDICATION__TIME_INTERVAL,
 					oldTimeInterval, timeInterval));
 	}
 
@@ -866,11 +823,11 @@ public class MedicamentImpl extends MinimalEObjectImpl.Container implements Medi
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-		case Execution_metamodelPackage.MEDICAMENT__MEDICINE:
+		case Execution_metamodelPackage.MEDICATION__MEDICINE:
 			return ((InternalEList<?>) getMedicine()).basicRemove(otherEnd, msgs);
-		case Execution_metamodelPackage.MEDICAMENT__UNIT:
+		case Execution_metamodelPackage.MEDICATION__UNIT:
 			return ((InternalEList<?>) getUnit()).basicRemove(otherEnd, msgs);
-		case Execution_metamodelPackage.MEDICAMENT__ACCESS:
+		case Execution_metamodelPackage.MEDICATION__ACCESS:
 			return ((InternalEList<?>) getAccess()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -884,45 +841,43 @@ public class MedicamentImpl extends MinimalEObjectImpl.Container implements Medi
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case Execution_metamodelPackage.MEDICAMENT__MEDICINE:
+		case Execution_metamodelPackage.MEDICATION__MEDICINE:
 			return getMedicine();
-		case Execution_metamodelPackage.MEDICAMENT__UNIT:
+		case Execution_metamodelPackage.MEDICATION__UNIT:
 			return getUnit();
-		case Execution_metamodelPackage.MEDICAMENT__ACCESS:
+		case Execution_metamodelPackage.MEDICATION__ACCESS:
 			return getAccess();
-		case Execution_metamodelPackage.MEDICAMENT__ID:
+		case Execution_metamodelPackage.MEDICATION__ID:
 			return getId();
-		case Execution_metamodelPackage.MEDICAMENT__NAME:
+		case Execution_metamodelPackage.MEDICATION__NAME:
 			return getName();
-		case Execution_metamodelPackage.MEDICAMENT__URL:
-			return getUrl();
-		case Execution_metamodelPackage.MEDICAMENT__CODE:
+		case Execution_metamodelPackage.MEDICATION__CODE:
 			return getCode();
-		case Execution_metamodelPackage.MEDICAMENT__ID_MEDICAMENT:
-			return getIdMedicament();
-		case Execution_metamodelPackage.MEDICAMENT__DESCRIPTION:
+		case Execution_metamodelPackage.MEDICATION__ID_MEDICATION:
+			return getIdMedication();
+		case Execution_metamodelPackage.MEDICATION__DESCRIPTION:
 			return getDescription();
-		case Execution_metamodelPackage.MEDICAMENT__BRAND:
+		case Execution_metamodelPackage.MEDICATION__BRAND:
 			return getBrand();
-		case Execution_metamodelPackage.MEDICAMENT__OUTPATIENT:
+		case Execution_metamodelPackage.MEDICATION__OUTPATIENT:
 			return isOutpatient();
-		case Execution_metamodelPackage.MEDICAMENT__ID_UNIT:
+		case Execution_metamodelPackage.MEDICATION__ID_UNIT:
 			return getIdUnit();
-		case Execution_metamodelPackage.MEDICAMENT__ID_ACCESS:
+		case Execution_metamodelPackage.MEDICATION__ID_ACCESS:
 			return getIdAccess();
-		case Execution_metamodelPackage.MEDICAMENT__STANDARD:
+		case Execution_metamodelPackage.MEDICATION__STANDARD:
 			return getStandard();
-		case Execution_metamodelPackage.MEDICAMENT__DAILY_DOSAGE:
+		case Execution_metamodelPackage.MEDICATION__DAILY_DOSAGE:
 			return getDailyDosage();
-		case Execution_metamodelPackage.MEDICAMENT__CYCLES:
+		case Execution_metamodelPackage.MEDICATION__CYCLES:
 			return getCycles();
-		case Execution_metamodelPackage.MEDICAMENT__FREQUENCY:
+		case Execution_metamodelPackage.MEDICATION__FREQUENCY:
 			return getFrequency();
-		case Execution_metamodelPackage.MEDICAMENT__FREQUENCY_DISPLAY:
+		case Execution_metamodelPackage.MEDICATION__FREQUENCY_DISPLAY:
 			return getFrequencyDisplay();
-		case Execution_metamodelPackage.MEDICAMENT__TIME_TREATEMENT:
+		case Execution_metamodelPackage.MEDICATION__TIME_TREATEMENT:
 			return getTimeTreatement();
-		case Execution_metamodelPackage.MEDICAMENT__TIME_INTERVAL:
+		case Execution_metamodelPackage.MEDICATION__TIME_INTERVAL:
 			return getTimeInterval();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -937,67 +892,64 @@ public class MedicamentImpl extends MinimalEObjectImpl.Container implements Medi
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case Execution_metamodelPackage.MEDICAMENT__MEDICINE:
+		case Execution_metamodelPackage.MEDICATION__MEDICINE:
 			getMedicine().clear();
 			getMedicine().addAll((Collection<? extends Medicine>) newValue);
 			return;
-		case Execution_metamodelPackage.MEDICAMENT__UNIT:
+		case Execution_metamodelPackage.MEDICATION__UNIT:
 			getUnit().clear();
 			getUnit().addAll((Collection<? extends Unit>) newValue);
 			return;
-		case Execution_metamodelPackage.MEDICAMENT__ACCESS:
+		case Execution_metamodelPackage.MEDICATION__ACCESS:
 			getAccess().clear();
 			getAccess().addAll((Collection<? extends Access>) newValue);
 			return;
-		case Execution_metamodelPackage.MEDICAMENT__ID:
+		case Execution_metamodelPackage.MEDICATION__ID:
 			setId((Integer) newValue);
 			return;
-		case Execution_metamodelPackage.MEDICAMENT__NAME:
+		case Execution_metamodelPackage.MEDICATION__NAME:
 			setName((String) newValue);
 			return;
-		case Execution_metamodelPackage.MEDICAMENT__URL:
-			setUrl((String) newValue);
-			return;
-		case Execution_metamodelPackage.MEDICAMENT__CODE:
+		case Execution_metamodelPackage.MEDICATION__CODE:
 			setCode((Integer) newValue);
 			return;
-		case Execution_metamodelPackage.MEDICAMENT__ID_MEDICAMENT:
-			setIdMedicament((Integer) newValue);
+		case Execution_metamodelPackage.MEDICATION__ID_MEDICATION:
+			setIdMedication((Integer) newValue);
 			return;
-		case Execution_metamodelPackage.MEDICAMENT__DESCRIPTION:
+		case Execution_metamodelPackage.MEDICATION__DESCRIPTION:
 			setDescription((String) newValue);
 			return;
-		case Execution_metamodelPackage.MEDICAMENT__BRAND:
+		case Execution_metamodelPackage.MEDICATION__BRAND:
 			setBrand((String) newValue);
 			return;
-		case Execution_metamodelPackage.MEDICAMENT__OUTPATIENT:
+		case Execution_metamodelPackage.MEDICATION__OUTPATIENT:
 			setOutpatient((Boolean) newValue);
 			return;
-		case Execution_metamodelPackage.MEDICAMENT__ID_UNIT:
+		case Execution_metamodelPackage.MEDICATION__ID_UNIT:
 			setIdUnit((Integer) newValue);
 			return;
-		case Execution_metamodelPackage.MEDICAMENT__ID_ACCESS:
+		case Execution_metamodelPackage.MEDICATION__ID_ACCESS:
 			setIdAccess((Integer) newValue);
 			return;
-		case Execution_metamodelPackage.MEDICAMENT__STANDARD:
+		case Execution_metamodelPackage.MEDICATION__STANDARD:
 			setStandard((String) newValue);
 			return;
-		case Execution_metamodelPackage.MEDICAMENT__DAILY_DOSAGE:
+		case Execution_metamodelPackage.MEDICATION__DAILY_DOSAGE:
 			setDailyDosage((Integer) newValue);
 			return;
-		case Execution_metamodelPackage.MEDICAMENT__CYCLES:
+		case Execution_metamodelPackage.MEDICATION__CYCLES:
 			setCycles((Integer) newValue);
 			return;
-		case Execution_metamodelPackage.MEDICAMENT__FREQUENCY:
+		case Execution_metamodelPackage.MEDICATION__FREQUENCY:
 			setFrequency((Integer) newValue);
 			return;
-		case Execution_metamodelPackage.MEDICAMENT__FREQUENCY_DISPLAY:
+		case Execution_metamodelPackage.MEDICATION__FREQUENCY_DISPLAY:
 			setFrequencyDisplay((String) newValue);
 			return;
-		case Execution_metamodelPackage.MEDICAMENT__TIME_TREATEMENT:
+		case Execution_metamodelPackage.MEDICATION__TIME_TREATEMENT:
 			setTimeTreatement((Integer) newValue);
 			return;
-		case Execution_metamodelPackage.MEDICAMENT__TIME_INTERVAL:
+		case Execution_metamodelPackage.MEDICATION__TIME_INTERVAL:
 			setTimeInterval((Integer) newValue);
 			return;
 		}
@@ -1012,64 +964,61 @@ public class MedicamentImpl extends MinimalEObjectImpl.Container implements Medi
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case Execution_metamodelPackage.MEDICAMENT__MEDICINE:
+		case Execution_metamodelPackage.MEDICATION__MEDICINE:
 			getMedicine().clear();
 			return;
-		case Execution_metamodelPackage.MEDICAMENT__UNIT:
+		case Execution_metamodelPackage.MEDICATION__UNIT:
 			getUnit().clear();
 			return;
-		case Execution_metamodelPackage.MEDICAMENT__ACCESS:
+		case Execution_metamodelPackage.MEDICATION__ACCESS:
 			getAccess().clear();
 			return;
-		case Execution_metamodelPackage.MEDICAMENT__ID:
+		case Execution_metamodelPackage.MEDICATION__ID:
 			setId(ID_EDEFAULT);
 			return;
-		case Execution_metamodelPackage.MEDICAMENT__NAME:
+		case Execution_metamodelPackage.MEDICATION__NAME:
 			setName(NAME_EDEFAULT);
 			return;
-		case Execution_metamodelPackage.MEDICAMENT__URL:
-			setUrl(URL_EDEFAULT);
-			return;
-		case Execution_metamodelPackage.MEDICAMENT__CODE:
+		case Execution_metamodelPackage.MEDICATION__CODE:
 			setCode(CODE_EDEFAULT);
 			return;
-		case Execution_metamodelPackage.MEDICAMENT__ID_MEDICAMENT:
-			setIdMedicament(ID_MEDICAMENT_EDEFAULT);
+		case Execution_metamodelPackage.MEDICATION__ID_MEDICATION:
+			setIdMedication(ID_MEDICATION_EDEFAULT);
 			return;
-		case Execution_metamodelPackage.MEDICAMENT__DESCRIPTION:
+		case Execution_metamodelPackage.MEDICATION__DESCRIPTION:
 			setDescription(DESCRIPTION_EDEFAULT);
 			return;
-		case Execution_metamodelPackage.MEDICAMENT__BRAND:
+		case Execution_metamodelPackage.MEDICATION__BRAND:
 			setBrand(BRAND_EDEFAULT);
 			return;
-		case Execution_metamodelPackage.MEDICAMENT__OUTPATIENT:
+		case Execution_metamodelPackage.MEDICATION__OUTPATIENT:
 			setOutpatient(OUTPATIENT_EDEFAULT);
 			return;
-		case Execution_metamodelPackage.MEDICAMENT__ID_UNIT:
+		case Execution_metamodelPackage.MEDICATION__ID_UNIT:
 			setIdUnit(ID_UNIT_EDEFAULT);
 			return;
-		case Execution_metamodelPackage.MEDICAMENT__ID_ACCESS:
+		case Execution_metamodelPackage.MEDICATION__ID_ACCESS:
 			setIdAccess(ID_ACCESS_EDEFAULT);
 			return;
-		case Execution_metamodelPackage.MEDICAMENT__STANDARD:
+		case Execution_metamodelPackage.MEDICATION__STANDARD:
 			setStandard(STANDARD_EDEFAULT);
 			return;
-		case Execution_metamodelPackage.MEDICAMENT__DAILY_DOSAGE:
+		case Execution_metamodelPackage.MEDICATION__DAILY_DOSAGE:
 			setDailyDosage(DAILY_DOSAGE_EDEFAULT);
 			return;
-		case Execution_metamodelPackage.MEDICAMENT__CYCLES:
+		case Execution_metamodelPackage.MEDICATION__CYCLES:
 			setCycles(CYCLES_EDEFAULT);
 			return;
-		case Execution_metamodelPackage.MEDICAMENT__FREQUENCY:
+		case Execution_metamodelPackage.MEDICATION__FREQUENCY:
 			setFrequency(FREQUENCY_EDEFAULT);
 			return;
-		case Execution_metamodelPackage.MEDICAMENT__FREQUENCY_DISPLAY:
+		case Execution_metamodelPackage.MEDICATION__FREQUENCY_DISPLAY:
 			setFrequencyDisplay(FREQUENCY_DISPLAY_EDEFAULT);
 			return;
-		case Execution_metamodelPackage.MEDICAMENT__TIME_TREATEMENT:
+		case Execution_metamodelPackage.MEDICATION__TIME_TREATEMENT:
 			setTimeTreatement(TIME_TREATEMENT_EDEFAULT);
 			return;
-		case Execution_metamodelPackage.MEDICAMENT__TIME_INTERVAL:
+		case Execution_metamodelPackage.MEDICATION__TIME_INTERVAL:
 			setTimeInterval(TIME_INTERVAL_EDEFAULT);
 			return;
 		}
@@ -1084,46 +1033,44 @@ public class MedicamentImpl extends MinimalEObjectImpl.Container implements Medi
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case Execution_metamodelPackage.MEDICAMENT__MEDICINE:
+		case Execution_metamodelPackage.MEDICATION__MEDICINE:
 			return medicine != null && !medicine.isEmpty();
-		case Execution_metamodelPackage.MEDICAMENT__UNIT:
+		case Execution_metamodelPackage.MEDICATION__UNIT:
 			return unit != null && !unit.isEmpty();
-		case Execution_metamodelPackage.MEDICAMENT__ACCESS:
+		case Execution_metamodelPackage.MEDICATION__ACCESS:
 			return access != null && !access.isEmpty();
-		case Execution_metamodelPackage.MEDICAMENT__ID:
+		case Execution_metamodelPackage.MEDICATION__ID:
 			return id != ID_EDEFAULT;
-		case Execution_metamodelPackage.MEDICAMENT__NAME:
+		case Execution_metamodelPackage.MEDICATION__NAME:
 			return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-		case Execution_metamodelPackage.MEDICAMENT__URL:
-			return URL_EDEFAULT == null ? url != null : !URL_EDEFAULT.equals(url);
-		case Execution_metamodelPackage.MEDICAMENT__CODE:
+		case Execution_metamodelPackage.MEDICATION__CODE:
 			return code != CODE_EDEFAULT;
-		case Execution_metamodelPackage.MEDICAMENT__ID_MEDICAMENT:
-			return idMedicament != ID_MEDICAMENT_EDEFAULT;
-		case Execution_metamodelPackage.MEDICAMENT__DESCRIPTION:
+		case Execution_metamodelPackage.MEDICATION__ID_MEDICATION:
+			return idMedication != ID_MEDICATION_EDEFAULT;
+		case Execution_metamodelPackage.MEDICATION__DESCRIPTION:
 			return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
-		case Execution_metamodelPackage.MEDICAMENT__BRAND:
+		case Execution_metamodelPackage.MEDICATION__BRAND:
 			return BRAND_EDEFAULT == null ? brand != null : !BRAND_EDEFAULT.equals(brand);
-		case Execution_metamodelPackage.MEDICAMENT__OUTPATIENT:
+		case Execution_metamodelPackage.MEDICATION__OUTPATIENT:
 			return outpatient != OUTPATIENT_EDEFAULT;
-		case Execution_metamodelPackage.MEDICAMENT__ID_UNIT:
+		case Execution_metamodelPackage.MEDICATION__ID_UNIT:
 			return idUnit != ID_UNIT_EDEFAULT;
-		case Execution_metamodelPackage.MEDICAMENT__ID_ACCESS:
+		case Execution_metamodelPackage.MEDICATION__ID_ACCESS:
 			return idAccess != ID_ACCESS_EDEFAULT;
-		case Execution_metamodelPackage.MEDICAMENT__STANDARD:
+		case Execution_metamodelPackage.MEDICATION__STANDARD:
 			return STANDARD_EDEFAULT == null ? standard != null : !STANDARD_EDEFAULT.equals(standard);
-		case Execution_metamodelPackage.MEDICAMENT__DAILY_DOSAGE:
+		case Execution_metamodelPackage.MEDICATION__DAILY_DOSAGE:
 			return dailyDosage != DAILY_DOSAGE_EDEFAULT;
-		case Execution_metamodelPackage.MEDICAMENT__CYCLES:
+		case Execution_metamodelPackage.MEDICATION__CYCLES:
 			return cycles != CYCLES_EDEFAULT;
-		case Execution_metamodelPackage.MEDICAMENT__FREQUENCY:
+		case Execution_metamodelPackage.MEDICATION__FREQUENCY:
 			return frequency != FREQUENCY_EDEFAULT;
-		case Execution_metamodelPackage.MEDICAMENT__FREQUENCY_DISPLAY:
+		case Execution_metamodelPackage.MEDICATION__FREQUENCY_DISPLAY:
 			return FREQUENCY_DISPLAY_EDEFAULT == null ? frequencyDisplay != null
 					: !FREQUENCY_DISPLAY_EDEFAULT.equals(frequencyDisplay);
-		case Execution_metamodelPackage.MEDICAMENT__TIME_TREATEMENT:
+		case Execution_metamodelPackage.MEDICATION__TIME_TREATEMENT:
 			return timeTreatement != TIME_TREATEMENT_EDEFAULT;
-		case Execution_metamodelPackage.MEDICAMENT__TIME_INTERVAL:
+		case Execution_metamodelPackage.MEDICATION__TIME_INTERVAL:
 			return timeInterval != TIME_INTERVAL_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
@@ -1144,12 +1091,10 @@ public class MedicamentImpl extends MinimalEObjectImpl.Container implements Medi
 		result.append(id);
 		result.append(", name: ");
 		result.append(name);
-		result.append(", url: ");
-		result.append(url);
 		result.append(", code: ");
 		result.append(code);
-		result.append(", idMedicament: ");
-		result.append(idMedicament);
+		result.append(", idMedication: ");
+		result.append(idMedication);
 		result.append(", description: ");
 		result.append(description);
 		result.append(", brand: ");
@@ -1178,4 +1123,4 @@ public class MedicamentImpl extends MinimalEObjectImpl.Container implements Medi
 		return result.toString();
 	}
 
-} //MedicamentImpl
+} //MedicationImpl

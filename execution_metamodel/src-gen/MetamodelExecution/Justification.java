@@ -15,7 +15,6 @@ import org.eclipse.emf.ecore.EObject;
  * <ul>
  *   <li>{@link MetamodelExecution.Justification#getId <em>Id</em>}</li>
  *   <li>{@link MetamodelExecution.Justification#getReason <em>Reason</em>}</li>
- *   <li>{@link MetamodelExecution.Justification#getReasonDisplay <em>Reason Display</em>}</li>
  *   <li>{@link MetamodelExecution.Justification#getDescription <em>Description</em>}</li>
  *   <li>{@link MetamodelExecution.Justification#getJustifiedById <em>Justified By Id</em>}</li>
  *   <li>{@link MetamodelExecution.Justification#getJustifiedBy <em>Justified By</em>}</li>
@@ -77,32 +76,6 @@ public interface Justification extends EObject {
 	 * @generated
 	 */
 	void setReason(String value);
-
-	/**
-	 * Returns the value of the '<em><b>Reason Display</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Reason Display</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Reason Display</em>' attribute.
-	 * @see #setReasonDisplay(String)
-	 * @see MetamodelExecution.Execution_metamodelPackage#getJustification_ReasonDisplay()
-	 * @model
-	 * @generated
-	 */
-	String getReasonDisplay();
-
-	/**
-	 * Sets the value of the '{@link MetamodelExecution.Justification#getReasonDisplay <em>Reason Display</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Reason Display</em>' attribute.
-	 * @see #getReasonDisplay()
-	 * @generated
-	 */
-	void setReasonDisplay(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Description</b></em>' attribute.

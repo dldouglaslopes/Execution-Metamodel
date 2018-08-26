@@ -15,8 +15,6 @@ import org.eclipse.emf.ecore.EObject;
  * <ul>
  *   <li>{@link MetamodelExecution.Step#getId <em>Id</em>}</li>
  *   <li>{@link MetamodelExecution.Step#getType <em>Type</em>}</li>
- *   <li>{@link MetamodelExecution.Step#getTypeVerbose <em>Type Verbose</em>}</li>
- *   <li>{@link MetamodelExecution.Step#getUrl <em>Url</em>}</li>
  *   <li>{@link MetamodelExecution.Step#getName <em>Name</em>}</li>
  *   <li>{@link MetamodelExecution.Step#getDescription <em>Description</em>}</li>
  *   <li>{@link MetamodelExecution.Step#isIsInitial <em>Is Initial</em>}</li>
@@ -80,58 +78,6 @@ public interface Step extends EObject {
 	 * @generated
 	 */
 	void setType(String value);
-
-	/**
-	 * Returns the value of the '<em><b>Type Verbose</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Type Verbose</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Type Verbose</em>' attribute.
-	 * @see #setTypeVerbose(String)
-	 * @see MetamodelExecution.Execution_metamodelPackage#getStep_TypeVerbose()
-	 * @model
-	 * @generated
-	 */
-	String getTypeVerbose();
-
-	/**
-	 * Sets the value of the '{@link MetamodelExecution.Step#getTypeVerbose <em>Type Verbose</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Type Verbose</em>' attribute.
-	 * @see #getTypeVerbose()
-	 * @generated
-	 */
-	void setTypeVerbose(String value);
-
-	/**
-	 * Returns the value of the '<em><b>Url</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Url</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Url</em>' attribute.
-	 * @see #setUrl(String)
-	 * @see MetamodelExecution.Execution_metamodelPackage#getStep_Url()
-	 * @model
-	 * @generated
-	 */
-	String getUrl();
-
-	/**
-	 * Sets the value of the '{@link MetamodelExecution.Step#getUrl <em>Url</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Url</em>' attribute.
-	 * @see #getUrl()
-	 * @generated
-	 */
-	void setUrl(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Name</b></em>' attribute.

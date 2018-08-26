@@ -86,8 +86,6 @@ public class Execution_metamodelFactoryImpl extends EFactoryImpl implements Exec
 			return createPrescribedPrescriptionItem();
 		case Execution_metamodelPackage.JUSTIFICATION:
 			return createJustification();
-		case Execution_metamodelPackage.PATHWAY:
-			return createPathway();
 		case Execution_metamodelPackage.RESPONSIBLE:
 			return createResponsible();
 		case Execution_metamodelPackage.ANSWER:
@@ -112,20 +110,42 @@ public class Execution_metamodelFactoryImpl extends EFactoryImpl implements Exec
 			return createQuestion();
 		case Execution_metamodelPackage.VARIABLE:
 			return createVariable();
-		case Execution_metamodelPackage.MEDICAMENT:
-			return createMedicament();
+		case Execution_metamodelPackage.MEDICATION:
+			return createMedication();
 		case Execution_metamodelPackage.MEDICINE:
 			return createMedicine();
 		case Execution_metamodelPackage.UNIT:
 			return createUnit();
 		case Execution_metamodelPackage.ACCESS:
 			return createAccess();
-		case Execution_metamodelPackage.PREVIOUS:
-			return createPrevious();
-		case Execution_metamodelPackage.NEXT:
-			return createNext();
 		case Execution_metamodelPackage.BOND:
 			return createBond();
+		case Execution_metamodelPackage.EACTION:
+			return createEAction();
+		case Execution_metamodelPackage.REQUEST:
+			return createRequest();
+		case Execution_metamodelPackage.PATHWAY:
+			return createPathway();
+		case Execution_metamodelPackage.EPROCEDURE:
+			return createEProcedure();
+		case Execution_metamodelPackage.EPAUSE:
+			return createEPause();
+		case Execution_metamodelPackage.MEDICAL_CARE:
+			return createMedicalCare();
+		case Execution_metamodelPackage.UNIT_CARE:
+			return createUnitCare();
+		case Execution_metamodelPackage.PROFESSIONAL:
+			return createProfessional();
+		case Execution_metamodelPackage.PATIENT:
+			return createPatient();
+		case Execution_metamodelPackage.ALLERGY_REGISTRY:
+			return createAllergyRegistry();
+		case Execution_metamodelPackage.COMORBIDITY_REGISTRY:
+			return createComorbidityRegistry();
+		case Execution_metamodelPackage.ALLERGY:
+			return createAllergy();
+		case Execution_metamodelPackage.COMORBIDITY:
+			return createComorbidity();
 		default:
 			throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -286,16 +306,6 @@ public class Execution_metamodelFactoryImpl extends EFactoryImpl implements Exec
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Pathway createPathway() {
-		PathwayImpl pathway = new PathwayImpl();
-		return pathway;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public Responsible createResponsible() {
 		ResponsibleImpl responsible = new ResponsibleImpl();
 		return responsible;
@@ -416,9 +426,9 @@ public class Execution_metamodelFactoryImpl extends EFactoryImpl implements Exec
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Medicament createMedicament() {
-		MedicamentImpl medicament = new MedicamentImpl();
-		return medicament;
+	public Medication createMedication() {
+		MedicationImpl medication = new MedicationImpl();
+		return medication;
 	}
 
 	/**
@@ -456,29 +466,139 @@ public class Execution_metamodelFactoryImpl extends EFactoryImpl implements Exec
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Previous createPrevious() {
-		PreviousImpl previous = new PreviousImpl();
-		return previous;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Next createNext() {
-		NextImpl next = new NextImpl();
-		return next;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public Bond createBond() {
 		BondImpl bond = new BondImpl();
 		return bond;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAction createEAction() {
+		EActionImpl eAction = new EActionImpl();
+		return eAction;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Request createRequest() {
+		RequestImpl request = new RequestImpl();
+		return request;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Pathway createPathway() {
+		PathwayImpl pathway = new PathwayImpl();
+		return pathway;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EProcedure createEProcedure() {
+		EProcedureImpl eProcedure = new EProcedureImpl();
+		return eProcedure;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EPause createEPause() {
+		EPauseImpl ePause = new EPauseImpl();
+		return ePause;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public MedicalCare createMedicalCare() {
+		MedicalCareImpl medicalCare = new MedicalCareImpl();
+		return medicalCare;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public UnitCare createUnitCare() {
+		UnitCareImpl unitCare = new UnitCareImpl();
+		return unitCare;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Professional createProfessional() {
+		ProfessionalImpl professional = new ProfessionalImpl();
+		return professional;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Patient createPatient() {
+		PatientImpl patient = new PatientImpl();
+		return patient;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public AllergyRegistry createAllergyRegistry() {
+		AllergyRegistryImpl allergyRegistry = new AllergyRegistryImpl();
+		return allergyRegistry;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ComorbidityRegistry createComorbidityRegistry() {
+		ComorbidityRegistryImpl comorbidityRegistry = new ComorbidityRegistryImpl();
+		return comorbidityRegistry;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Allergy createAllergy() {
+		AllergyImpl allergy = new AllergyImpl();
+		return allergy;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Comorbidity createComorbidity() {
+		ComorbidityImpl comorbidity = new ComorbidityImpl();
+		return comorbidity;
 	}
 
 	/**

@@ -22,8 +22,6 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * <ul>
  *   <li>{@link MetamodelExecution.impl.StepImpl#getId <em>Id</em>}</li>
  *   <li>{@link MetamodelExecution.impl.StepImpl#getType <em>Type</em>}</li>
- *   <li>{@link MetamodelExecution.impl.StepImpl#getTypeVerbose <em>Type Verbose</em>}</li>
- *   <li>{@link MetamodelExecution.impl.StepImpl#getUrl <em>Url</em>}</li>
  *   <li>{@link MetamodelExecution.impl.StepImpl#getName <em>Name</em>}</li>
  *   <li>{@link MetamodelExecution.impl.StepImpl#getDescription <em>Description</em>}</li>
  *   <li>{@link MetamodelExecution.impl.StepImpl#isIsInitial <em>Is Initial</em>}</li>
@@ -73,46 +71,6 @@ public class StepImpl extends MinimalEObjectImpl.Container implements Step {
 	 * @ordered
 	 */
 	protected String type = TYPE_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getTypeVerbose() <em>Type Verbose</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getTypeVerbose()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String TYPE_VERBOSE_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getTypeVerbose() <em>Type Verbose</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getTypeVerbose()
-	 * @generated
-	 * @ordered
-	 */
-	protected String typeVerbose = TYPE_VERBOSE_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getUrl() <em>Url</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getUrl()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String URL_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getUrl() <em>Url</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getUrl()
-	 * @generated
-	 * @ordered
-	 */
-	protected String url = URL_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
@@ -281,49 +239,6 @@ public class StepImpl extends MinimalEObjectImpl.Container implements Step {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getTypeVerbose() {
-		return typeVerbose;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setTypeVerbose(String newTypeVerbose) {
-		String oldTypeVerbose = typeVerbose;
-		typeVerbose = newTypeVerbose;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.STEP__TYPE_VERBOSE,
-					oldTypeVerbose, typeVerbose));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String getUrl() {
-		return url;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setUrl(String newUrl) {
-		String oldUrl = url;
-		url = newUrl;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.STEP__URL, oldUrl, url));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public String getName() {
 		return name;
 	}
@@ -441,10 +356,6 @@ public class StepImpl extends MinimalEObjectImpl.Container implements Step {
 			return getId();
 		case Execution_metamodelPackage.STEP__TYPE:
 			return getType();
-		case Execution_metamodelPackage.STEP__TYPE_VERBOSE:
-			return getTypeVerbose();
-		case Execution_metamodelPackage.STEP__URL:
-			return getUrl();
 		case Execution_metamodelPackage.STEP__NAME:
 			return getName();
 		case Execution_metamodelPackage.STEP__DESCRIPTION:
@@ -472,12 +383,6 @@ public class StepImpl extends MinimalEObjectImpl.Container implements Step {
 			return;
 		case Execution_metamodelPackage.STEP__TYPE:
 			setType((String) newValue);
-			return;
-		case Execution_metamodelPackage.STEP__TYPE_VERBOSE:
-			setTypeVerbose((String) newValue);
-			return;
-		case Execution_metamodelPackage.STEP__URL:
-			setUrl((String) newValue);
 			return;
 		case Execution_metamodelPackage.STEP__NAME:
 			setName((String) newValue);
@@ -512,12 +417,6 @@ public class StepImpl extends MinimalEObjectImpl.Container implements Step {
 		case Execution_metamodelPackage.STEP__TYPE:
 			setType(TYPE_EDEFAULT);
 			return;
-		case Execution_metamodelPackage.STEP__TYPE_VERBOSE:
-			setTypeVerbose(TYPE_VERBOSE_EDEFAULT);
-			return;
-		case Execution_metamodelPackage.STEP__URL:
-			setUrl(URL_EDEFAULT);
-			return;
 		case Execution_metamodelPackage.STEP__NAME:
 			setName(NAME_EDEFAULT);
 			return;
@@ -549,10 +448,6 @@ public class StepImpl extends MinimalEObjectImpl.Container implements Step {
 			return id != ID_EDEFAULT;
 		case Execution_metamodelPackage.STEP__TYPE:
 			return TYPE_EDEFAULT == null ? type != null : !TYPE_EDEFAULT.equals(type);
-		case Execution_metamodelPackage.STEP__TYPE_VERBOSE:
-			return TYPE_VERBOSE_EDEFAULT == null ? typeVerbose != null : !TYPE_VERBOSE_EDEFAULT.equals(typeVerbose);
-		case Execution_metamodelPackage.STEP__URL:
-			return URL_EDEFAULT == null ? url != null : !URL_EDEFAULT.equals(url);
 		case Execution_metamodelPackage.STEP__NAME:
 			return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 		case Execution_metamodelPackage.STEP__DESCRIPTION:
@@ -582,10 +477,6 @@ public class StepImpl extends MinimalEObjectImpl.Container implements Step {
 		result.append(id);
 		result.append(", type: ");
 		result.append(type);
-		result.append(", typeVerbose: ");
-		result.append(typeVerbose);
-		result.append(", url: ");
-		result.append(url);
 		result.append(", name: ");
 		result.append(name);
 		result.append(", description: ");

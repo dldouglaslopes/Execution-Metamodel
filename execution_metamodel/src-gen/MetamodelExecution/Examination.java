@@ -14,7 +14,6 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  * <ul>
  *   <li>{@link MetamodelExecution.Examination#getId <em>Id</em>}</li>
- *   <li>{@link MetamodelExecution.Examination#getUrl <em>Url</em>}</li>
  *   <li>{@link MetamodelExecution.Examination#getIdExamination <em>Id Examination</em>}</li>
  *   <li>{@link MetamodelExecution.Examination#getSideLimb <em>Side Limb</em>}</li>
  *   <li>{@link MetamodelExecution.Examination#getQuantity <em>Quantity</em>}</li>
@@ -55,32 +54,6 @@ public interface Examination extends EObject {
 	 * @generated
 	 */
 	void setId(int value);
-
-	/**
-	 * Returns the value of the '<em><b>Url</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Url</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Url</em>' attribute.
-	 * @see #setUrl(String)
-	 * @see MetamodelExecution.Execution_metamodelPackage#getExamination_Url()
-	 * @model
-	 * @generated
-	 */
-	String getUrl();
-
-	/**
-	 * Sets the value of the '{@link MetamodelExecution.Examination#getUrl <em>Url</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Url</em>' attribute.
-	 * @see #getUrl()
-	 * @generated
-	 */
-	void setUrl(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Id Examination</b></em>' attribute.

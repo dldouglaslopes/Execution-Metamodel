@@ -26,7 +26,6 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * <ul>
  *   <li>{@link MetamodelExecution.impl.AnswerImpl#getId <em>Id</em>}</li>
  *   <li>{@link MetamodelExecution.impl.AnswerImpl#getType <em>Type</em>}</li>
- *   <li>{@link MetamodelExecution.impl.AnswerImpl#getTypeVerbose <em>Type Verbose</em>}</li>
  *   <li>{@link MetamodelExecution.impl.AnswerImpl#getValue <em>Value</em>}</li>
  *   <li>{@link MetamodelExecution.impl.AnswerImpl#getQuestion <em>Question</em>}</li>
  * </ul>
@@ -73,26 +72,6 @@ public class AnswerImpl extends MinimalEObjectImpl.Container implements Answer {
 	 * @ordered
 	 */
 	protected String type = TYPE_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getTypeVerbose() <em>Type Verbose</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getTypeVerbose()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String TYPE_VERBOSE_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getTypeVerbose() <em>Type Verbose</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getTypeVerbose()
-	 * @generated
-	 * @ordered
-	 */
-	protected String typeVerbose = TYPE_VERBOSE_EDEFAULT;
 
 	/**
 	 * The cached value of the '{@link #getValue() <em>Value</em>}' containment reference.
@@ -174,28 +153,6 @@ public class AnswerImpl extends MinimalEObjectImpl.Container implements Answer {
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.ANSWER__TYPE, oldType,
 					type));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String getTypeVerbose() {
-		return typeVerbose;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setTypeVerbose(String newTypeVerbose) {
-		String oldTypeVerbose = typeVerbose;
-		typeVerbose = newTypeVerbose;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.ANSWER__TYPE_VERBOSE,
-					oldTypeVerbose, typeVerbose));
 	}
 
 	/**
@@ -326,8 +283,6 @@ public class AnswerImpl extends MinimalEObjectImpl.Container implements Answer {
 			return getId();
 		case Execution_metamodelPackage.ANSWER__TYPE:
 			return getType();
-		case Execution_metamodelPackage.ANSWER__TYPE_VERBOSE:
-			return getTypeVerbose();
 		case Execution_metamodelPackage.ANSWER__VALUE:
 			return getValue();
 		case Execution_metamodelPackage.ANSWER__QUESTION:
@@ -349,9 +304,6 @@ public class AnswerImpl extends MinimalEObjectImpl.Container implements Answer {
 			return;
 		case Execution_metamodelPackage.ANSWER__TYPE:
 			setType((String) newValue);
-			return;
-		case Execution_metamodelPackage.ANSWER__TYPE_VERBOSE:
-			setTypeVerbose((String) newValue);
 			return;
 		case Execution_metamodelPackage.ANSWER__VALUE:
 			setValue((Value) newValue);
@@ -377,9 +329,6 @@ public class AnswerImpl extends MinimalEObjectImpl.Container implements Answer {
 		case Execution_metamodelPackage.ANSWER__TYPE:
 			setType(TYPE_EDEFAULT);
 			return;
-		case Execution_metamodelPackage.ANSWER__TYPE_VERBOSE:
-			setTypeVerbose(TYPE_VERBOSE_EDEFAULT);
-			return;
 		case Execution_metamodelPackage.ANSWER__VALUE:
 			setValue((Value) null);
 			return;
@@ -402,8 +351,6 @@ public class AnswerImpl extends MinimalEObjectImpl.Container implements Answer {
 			return id != ID_EDEFAULT;
 		case Execution_metamodelPackage.ANSWER__TYPE:
 			return TYPE_EDEFAULT == null ? type != null : !TYPE_EDEFAULT.equals(type);
-		case Execution_metamodelPackage.ANSWER__TYPE_VERBOSE:
-			return TYPE_VERBOSE_EDEFAULT == null ? typeVerbose != null : !TYPE_VERBOSE_EDEFAULT.equals(typeVerbose);
 		case Execution_metamodelPackage.ANSWER__VALUE:
 			return value != null;
 		case Execution_metamodelPackage.ANSWER__QUESTION:
@@ -427,8 +374,6 @@ public class AnswerImpl extends MinimalEObjectImpl.Container implements Answer {
 		result.append(id);
 		result.append(", type: ");
 		result.append(type);
-		result.append(", typeVerbose: ");
-		result.append(typeVerbose);
 		result.append(')');
 		return result.toString();
 	}

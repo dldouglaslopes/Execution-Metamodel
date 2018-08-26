@@ -26,7 +26,6 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * <ul>
  *   <li>{@link MetamodelExecution.impl.VariableImpl#getId <em>Id</em>}</li>
  *   <li>{@link MetamodelExecution.impl.VariableImpl#getType <em>Type</em>}</li>
- *   <li>{@link MetamodelExecution.impl.VariableImpl#getTypeVerbose <em>Type Verbose</em>}</li>
  *   <li>{@link MetamodelExecution.impl.VariableImpl#getUrl <em>Url</em>}</li>
  *   <li>{@link MetamodelExecution.impl.VariableImpl#getName <em>Name</em>}</li>
  *   <li>{@link MetamodelExecution.impl.VariableImpl#getWeight <em>Weight</em>}</li>
@@ -76,26 +75,6 @@ public class VariableImpl extends MinimalEObjectImpl.Container implements Variab
 	 * @ordered
 	 */
 	protected String type = TYPE_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getTypeVerbose() <em>Type Verbose</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getTypeVerbose()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String TYPE_VERBOSE_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getTypeVerbose() <em>Type Verbose</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getTypeVerbose()
-	 * @generated
-	 * @ordered
-	 */
-	protected String typeVerbose = TYPE_VERBOSE_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getUrl() <em>Url</em>}' attribute.
@@ -237,28 +216,6 @@ public class VariableImpl extends MinimalEObjectImpl.Container implements Variab
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.VARIABLE__TYPE, oldType,
 					type));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String getTypeVerbose() {
-		return typeVerbose;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setTypeVerbose(String newTypeVerbose) {
-		String oldTypeVerbose = typeVerbose;
-		typeVerbose = newTypeVerbose;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.VARIABLE__TYPE_VERBOSE,
-					oldTypeVerbose, typeVerbose));
 	}
 
 	/**
@@ -455,8 +412,6 @@ public class VariableImpl extends MinimalEObjectImpl.Container implements Variab
 			return getId();
 		case Execution_metamodelPackage.VARIABLE__TYPE:
 			return getType();
-		case Execution_metamodelPackage.VARIABLE__TYPE_VERBOSE:
-			return getTypeVerbose();
 		case Execution_metamodelPackage.VARIABLE__URL:
 			return getUrl();
 		case Execution_metamodelPackage.VARIABLE__NAME:
@@ -484,9 +439,6 @@ public class VariableImpl extends MinimalEObjectImpl.Container implements Variab
 			return;
 		case Execution_metamodelPackage.VARIABLE__TYPE:
 			setType((String) newValue);
-			return;
-		case Execution_metamodelPackage.VARIABLE__TYPE_VERBOSE:
-			setTypeVerbose((String) newValue);
 			return;
 		case Execution_metamodelPackage.VARIABLE__URL:
 			setUrl((String) newValue);
@@ -521,9 +473,6 @@ public class VariableImpl extends MinimalEObjectImpl.Container implements Variab
 		case Execution_metamodelPackage.VARIABLE__TYPE:
 			setType(TYPE_EDEFAULT);
 			return;
-		case Execution_metamodelPackage.VARIABLE__TYPE_VERBOSE:
-			setTypeVerbose(TYPE_VERBOSE_EDEFAULT);
-			return;
 		case Execution_metamodelPackage.VARIABLE__URL:
 			setUrl(URL_EDEFAULT);
 			return;
@@ -555,8 +504,6 @@ public class VariableImpl extends MinimalEObjectImpl.Container implements Variab
 			return id != ID_EDEFAULT;
 		case Execution_metamodelPackage.VARIABLE__TYPE:
 			return TYPE_EDEFAULT == null ? type != null : !TYPE_EDEFAULT.equals(type);
-		case Execution_metamodelPackage.VARIABLE__TYPE_VERBOSE:
-			return TYPE_VERBOSE_EDEFAULT == null ? typeVerbose != null : !TYPE_VERBOSE_EDEFAULT.equals(typeVerbose);
 		case Execution_metamodelPackage.VARIABLE__URL:
 			return URL_EDEFAULT == null ? url != null : !URL_EDEFAULT.equals(url);
 		case Execution_metamodelPackage.VARIABLE__NAME:
@@ -586,8 +533,6 @@ public class VariableImpl extends MinimalEObjectImpl.Container implements Variab
 		result.append(id);
 		result.append(", type: ");
 		result.append(type);
-		result.append(", typeVerbose: ");
-		result.append(typeVerbose);
 		result.append(", url: ");
 		result.append(url);
 		result.append(", name: ");

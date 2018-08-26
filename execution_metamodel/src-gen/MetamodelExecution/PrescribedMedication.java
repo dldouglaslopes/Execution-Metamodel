@@ -15,7 +15,7 @@ import org.eclipse.emf.ecore.EObject;
  * <ul>
  *   <li>{@link MetamodelExecution.PrescribedMedication#getId <em>Id</em>}</li>
  *   <li>{@link MetamodelExecution.PrescribedMedication#getResult <em>Result</em>}</li>
- *   <li>{@link MetamodelExecution.PrescribedMedication#getMedicament <em>Medicament</em>}</li>
+ *   <li>{@link MetamodelExecution.PrescribedMedication#getMedication <em>Medication</em>}</li>
  *   <li>{@link MetamodelExecution.PrescribedMedication#getPrescription <em>Prescription</em>}</li>
  * </ul>
  *
@@ -77,30 +77,30 @@ public interface PrescribedMedication extends EObject {
 	void setResult(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Medicament</b></em>' containment reference.
+	 * Returns the value of the '<em><b>Medication</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Medicament</em>' containment reference isn't clear,
+	 * If the meaning of the '<em>Medication</em>' containment reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Medicament</em>' containment reference.
-	 * @see #setMedicament(Medicament)
-	 * @see MetamodelExecution.Execution_metamodelPackage#getPrescribedMedication_Medicament()
+	 * @return the value of the '<em>Medication</em>' containment reference.
+	 * @see #setMedication(Medication)
+	 * @see MetamodelExecution.Execution_metamodelPackage#getPrescribedMedication_Medication()
 	 * @model containment="true" required="true"
 	 * @generated
 	 */
-	Medicament getMedicament();
+	Medication getMedication();
 
 	/**
-	 * Sets the value of the '{@link MetamodelExecution.PrescribedMedication#getMedicament <em>Medicament</em>}' containment reference.
+	 * Sets the value of the '{@link MetamodelExecution.PrescribedMedication#getMedication <em>Medication</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Medicament</em>' containment reference.
-	 * @see #getMedicament()
+	 * @param value the new value of the '<em>Medication</em>' containment reference.
+	 * @see #getMedication()
 	 * @generated
 	 */
-	void setMedicament(Medicament value);
+	void setMedication(Medication value);
 
 	/**
 	 * Returns the value of the '<em><b>Prescription</b></em>' containment reference.

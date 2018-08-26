@@ -2,8 +2,8 @@
  */
 package MetamodelExecution.impl;
 
+import MetamodelExecution.Allergy;
 import MetamodelExecution.Execution_metamodelPackage;
-import MetamodelExecution.Sequence;
 
 import org.eclipse.emf.common.notify.Notification;
 
@@ -14,65 +14,65 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Sequence</b></em>'.
+ * An implementation of the model object '<em><b>Allergy</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link MetamodelExecution.impl.SequenceImpl#getUrl <em>Url</em>}</li>
- *   <li>{@link MetamodelExecution.impl.SequenceImpl#getUrlAbsolute <em>Url Absolute</em>}</li>
+ *   <li>{@link MetamodelExecution.impl.AllergyImpl#getId <em>Id</em>}</li>
+ *   <li>{@link MetamodelExecution.impl.AllergyImpl#getName <em>Name</em>}</li>
  * </ul>
  *
  * @generated
  */
-public abstract class SequenceImpl extends MinimalEObjectImpl.Container implements Sequence {
+public class AllergyImpl extends MinimalEObjectImpl.Container implements Allergy {
 	/**
-	 * The default value of the '{@link #getUrl() <em>Url</em>}' attribute.
+	 * The default value of the '{@link #getId() <em>Id</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getUrl()
+	 * @see #getId()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String URL_EDEFAULT = null;
+	protected static final int ID_EDEFAULT = 0;
 
 	/**
-	 * The cached value of the '{@link #getUrl() <em>Url</em>}' attribute.
+	 * The cached value of the '{@link #getId() <em>Id</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getUrl()
+	 * @see #getId()
 	 * @generated
 	 * @ordered
 	 */
-	protected String url = URL_EDEFAULT;
+	protected int id = ID_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getUrlAbsolute() <em>Url Absolute</em>}' attribute.
+	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getUrlAbsolute()
+	 * @see #getName()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String URL_ABSOLUTE_EDEFAULT = null;
+	protected static final String NAME_EDEFAULT = null;
 
 	/**
-	 * The cached value of the '{@link #getUrlAbsolute() <em>Url Absolute</em>}' attribute.
+	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getUrlAbsolute()
+	 * @see #getName()
 	 * @generated
 	 * @ordered
 	 */
-	protected String urlAbsolute = URL_ABSOLUTE_EDEFAULT;
+	protected String name = NAME_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected SequenceImpl() {
+	protected AllergyImpl() {
 		super();
 	}
 
@@ -83,7 +83,7 @@ public abstract class SequenceImpl extends MinimalEObjectImpl.Container implemen
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Execution_metamodelPackage.Literals.SEQUENCE;
+		return Execution_metamodelPackage.Literals.ALLERGY;
 	}
 
 	/**
@@ -91,8 +91,8 @@ public abstract class SequenceImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getUrl() {
-		return url;
+	public int getId() {
+		return id;
 	}
 
 	/**
@@ -100,12 +100,11 @@ public abstract class SequenceImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setUrl(String newUrl) {
-		String oldUrl = url;
-		url = newUrl;
+	public void setId(int newId) {
+		int oldId = id;
+		id = newId;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.SEQUENCE__URL, oldUrl,
-					url));
+			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.ALLERGY__ID, oldId, id));
 	}
 
 	/**
@@ -113,8 +112,8 @@ public abstract class SequenceImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getUrlAbsolute() {
-		return urlAbsolute;
+	public String getName() {
+		return name;
 	}
 
 	/**
@@ -122,12 +121,12 @@ public abstract class SequenceImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setUrlAbsolute(String newUrlAbsolute) {
-		String oldUrlAbsolute = urlAbsolute;
-		urlAbsolute = newUrlAbsolute;
+	public void setName(String newName) {
+		String oldName = name;
+		name = newName;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.SEQUENCE__URL_ABSOLUTE,
-					oldUrlAbsolute, urlAbsolute));
+			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.ALLERGY__NAME, oldName,
+					name));
 	}
 
 	/**
@@ -138,10 +137,10 @@ public abstract class SequenceImpl extends MinimalEObjectImpl.Container implemen
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case Execution_metamodelPackage.SEQUENCE__URL:
-			return getUrl();
-		case Execution_metamodelPackage.SEQUENCE__URL_ABSOLUTE:
-			return getUrlAbsolute();
+		case Execution_metamodelPackage.ALLERGY__ID:
+			return getId();
+		case Execution_metamodelPackage.ALLERGY__NAME:
+			return getName();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -154,11 +153,11 @@ public abstract class SequenceImpl extends MinimalEObjectImpl.Container implemen
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case Execution_metamodelPackage.SEQUENCE__URL:
-			setUrl((String) newValue);
+		case Execution_metamodelPackage.ALLERGY__ID:
+			setId((Integer) newValue);
 			return;
-		case Execution_metamodelPackage.SEQUENCE__URL_ABSOLUTE:
-			setUrlAbsolute((String) newValue);
+		case Execution_metamodelPackage.ALLERGY__NAME:
+			setName((String) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -172,11 +171,11 @@ public abstract class SequenceImpl extends MinimalEObjectImpl.Container implemen
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case Execution_metamodelPackage.SEQUENCE__URL:
-			setUrl(URL_EDEFAULT);
+		case Execution_metamodelPackage.ALLERGY__ID:
+			setId(ID_EDEFAULT);
 			return;
-		case Execution_metamodelPackage.SEQUENCE__URL_ABSOLUTE:
-			setUrlAbsolute(URL_ABSOLUTE_EDEFAULT);
+		case Execution_metamodelPackage.ALLERGY__NAME:
+			setName(NAME_EDEFAULT);
 			return;
 		}
 		super.eUnset(featureID);
@@ -190,10 +189,10 @@ public abstract class SequenceImpl extends MinimalEObjectImpl.Container implemen
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case Execution_metamodelPackage.SEQUENCE__URL:
-			return URL_EDEFAULT == null ? url != null : !URL_EDEFAULT.equals(url);
-		case Execution_metamodelPackage.SEQUENCE__URL_ABSOLUTE:
-			return URL_ABSOLUTE_EDEFAULT == null ? urlAbsolute != null : !URL_ABSOLUTE_EDEFAULT.equals(urlAbsolute);
+		case Execution_metamodelPackage.ALLERGY__ID:
+			return id != ID_EDEFAULT;
+		case Execution_metamodelPackage.ALLERGY__NAME:
+			return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -209,12 +208,12 @@ public abstract class SequenceImpl extends MinimalEObjectImpl.Container implemen
 			return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (url: ");
-		result.append(url);
-		result.append(", urlAbsolute: ");
-		result.append(urlAbsolute);
+		result.append(" (id: ");
+		result.append(id);
+		result.append(", name: ");
+		result.append(name);
 		result.append(')');
 		return result.toString();
 	}
 
-} //SequenceImpl
+} //AllergyImpl

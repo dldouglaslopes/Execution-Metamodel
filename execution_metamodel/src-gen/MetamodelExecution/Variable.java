@@ -15,7 +15,6 @@ import org.eclipse.emf.ecore.EObject;
  * <ul>
  *   <li>{@link MetamodelExecution.Variable#getId <em>Id</em>}</li>
  *   <li>{@link MetamodelExecution.Variable#getType <em>Type</em>}</li>
- *   <li>{@link MetamodelExecution.Variable#getTypeVerbose <em>Type Verbose</em>}</li>
  *   <li>{@link MetamodelExecution.Variable#getUrl <em>Url</em>}</li>
  *   <li>{@link MetamodelExecution.Variable#getName <em>Name</em>}</li>
  *   <li>{@link MetamodelExecution.Variable#getWeight <em>Weight</em>}</li>
@@ -79,32 +78,6 @@ public interface Variable extends EObject {
 	 * @generated
 	 */
 	void setType(String value);
-
-	/**
-	 * Returns the value of the '<em><b>Type Verbose</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Type Verbose</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Type Verbose</em>' attribute.
-	 * @see #setTypeVerbose(String)
-	 * @see MetamodelExecution.Execution_metamodelPackage#getVariable_TypeVerbose()
-	 * @model
-	 * @generated
-	 */
-	String getTypeVerbose();
-
-	/**
-	 * Sets the value of the '{@link MetamodelExecution.Variable#getTypeVerbose <em>Type Verbose</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Type Verbose</em>' attribute.
-	 * @see #getTypeVerbose()
-	 * @generated
-	 */
-	void setTypeVerbose(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Url</b></em>' attribute.

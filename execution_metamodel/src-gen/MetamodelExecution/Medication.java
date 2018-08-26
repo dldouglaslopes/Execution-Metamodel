@@ -8,40 +8,39 @@ import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>Medicament</b></em>'.
+ * A representation of the model object '<em><b>Medication</b></em>'.
  * <!-- end-user-doc -->
  *
  * <p>
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link MetamodelExecution.Medicament#getMedicine <em>Medicine</em>}</li>
- *   <li>{@link MetamodelExecution.Medicament#getUnit <em>Unit</em>}</li>
- *   <li>{@link MetamodelExecution.Medicament#getAccess <em>Access</em>}</li>
- *   <li>{@link MetamodelExecution.Medicament#getId <em>Id</em>}</li>
- *   <li>{@link MetamodelExecution.Medicament#getName <em>Name</em>}</li>
- *   <li>{@link MetamodelExecution.Medicament#getUrl <em>Url</em>}</li>
- *   <li>{@link MetamodelExecution.Medicament#getCode <em>Code</em>}</li>
- *   <li>{@link MetamodelExecution.Medicament#getIdMedicament <em>Id Medicament</em>}</li>
- *   <li>{@link MetamodelExecution.Medicament#getDescription <em>Description</em>}</li>
- *   <li>{@link MetamodelExecution.Medicament#getBrand <em>Brand</em>}</li>
- *   <li>{@link MetamodelExecution.Medicament#isOutpatient <em>Outpatient</em>}</li>
- *   <li>{@link MetamodelExecution.Medicament#getIdUnit <em>Id Unit</em>}</li>
- *   <li>{@link MetamodelExecution.Medicament#getIdAccess <em>Id Access</em>}</li>
- *   <li>{@link MetamodelExecution.Medicament#getStandard <em>Standard</em>}</li>
- *   <li>{@link MetamodelExecution.Medicament#getDailyDosage <em>Daily Dosage</em>}</li>
- *   <li>{@link MetamodelExecution.Medicament#getCycles <em>Cycles</em>}</li>
- *   <li>{@link MetamodelExecution.Medicament#getFrequency <em>Frequency</em>}</li>
- *   <li>{@link MetamodelExecution.Medicament#getFrequencyDisplay <em>Frequency Display</em>}</li>
- *   <li>{@link MetamodelExecution.Medicament#getTimeTreatement <em>Time Treatement</em>}</li>
- *   <li>{@link MetamodelExecution.Medicament#getTimeInterval <em>Time Interval</em>}</li>
+ *   <li>{@link MetamodelExecution.Medication#getMedicine <em>Medicine</em>}</li>
+ *   <li>{@link MetamodelExecution.Medication#getUnit <em>Unit</em>}</li>
+ *   <li>{@link MetamodelExecution.Medication#getAccess <em>Access</em>}</li>
+ *   <li>{@link MetamodelExecution.Medication#getId <em>Id</em>}</li>
+ *   <li>{@link MetamodelExecution.Medication#getName <em>Name</em>}</li>
+ *   <li>{@link MetamodelExecution.Medication#getCode <em>Code</em>}</li>
+ *   <li>{@link MetamodelExecution.Medication#getIdMedication <em>Id Medication</em>}</li>
+ *   <li>{@link MetamodelExecution.Medication#getDescription <em>Description</em>}</li>
+ *   <li>{@link MetamodelExecution.Medication#getBrand <em>Brand</em>}</li>
+ *   <li>{@link MetamodelExecution.Medication#isOutpatient <em>Outpatient</em>}</li>
+ *   <li>{@link MetamodelExecution.Medication#getIdUnit <em>Id Unit</em>}</li>
+ *   <li>{@link MetamodelExecution.Medication#getIdAccess <em>Id Access</em>}</li>
+ *   <li>{@link MetamodelExecution.Medication#getStandard <em>Standard</em>}</li>
+ *   <li>{@link MetamodelExecution.Medication#getDailyDosage <em>Daily Dosage</em>}</li>
+ *   <li>{@link MetamodelExecution.Medication#getCycles <em>Cycles</em>}</li>
+ *   <li>{@link MetamodelExecution.Medication#getFrequency <em>Frequency</em>}</li>
+ *   <li>{@link MetamodelExecution.Medication#getFrequencyDisplay <em>Frequency Display</em>}</li>
+ *   <li>{@link MetamodelExecution.Medication#getTimeTreatement <em>Time Treatement</em>}</li>
+ *   <li>{@link MetamodelExecution.Medication#getTimeInterval <em>Time Interval</em>}</li>
  * </ul>
  *
- * @see MetamodelExecution.Execution_metamodelPackage#getMedicament()
+ * @see MetamodelExecution.Execution_metamodelPackage#getMedication()
  * @model
  * @generated
  */
-public interface Medicament extends EObject {
+public interface Medication extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Medicine</b></em>' containment reference list.
 	 * The list contents are of type {@link MetamodelExecution.Medicine}.
@@ -52,7 +51,7 @@ public interface Medicament extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Medicine</em>' containment reference list.
-	 * @see MetamodelExecution.Execution_metamodelPackage#getMedicament_Medicine()
+	 * @see MetamodelExecution.Execution_metamodelPackage#getMedication_Medicine()
 	 * @model containment="true"
 	 * @generated
 	 */
@@ -68,7 +67,7 @@ public interface Medicament extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Unit</em>' containment reference list.
-	 * @see MetamodelExecution.Execution_metamodelPackage#getMedicament_Unit()
+	 * @see MetamodelExecution.Execution_metamodelPackage#getMedication_Unit()
 	 * @model containment="true"
 	 * @generated
 	 */
@@ -84,7 +83,7 @@ public interface Medicament extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Access</em>' containment reference list.
-	 * @see MetamodelExecution.Execution_metamodelPackage#getMedicament_Access()
+	 * @see MetamodelExecution.Execution_metamodelPackage#getMedication_Access()
 	 * @model containment="true"
 	 * @generated
 	 */
@@ -100,14 +99,14 @@ public interface Medicament extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Id</em>' attribute.
 	 * @see #setId(int)
-	 * @see MetamodelExecution.Execution_metamodelPackage#getMedicament_Id()
+	 * @see MetamodelExecution.Execution_metamodelPackage#getMedication_Id()
 	 * @model
 	 * @generated
 	 */
 	int getId();
 
 	/**
-	 * Sets the value of the '{@link MetamodelExecution.Medicament#getId <em>Id</em>}' attribute.
+	 * Sets the value of the '{@link MetamodelExecution.Medication#getId <em>Id</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Id</em>' attribute.
@@ -126,14 +125,14 @@ public interface Medicament extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Name</em>' attribute.
 	 * @see #setName(String)
-	 * @see MetamodelExecution.Execution_metamodelPackage#getMedicament_Name()
+	 * @see MetamodelExecution.Execution_metamodelPackage#getMedication_Name()
 	 * @model
 	 * @generated
 	 */
 	String getName();
 
 	/**
-	 * Sets the value of the '{@link MetamodelExecution.Medicament#getName <em>Name</em>}' attribute.
+	 * Sets the value of the '{@link MetamodelExecution.Medication#getName <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Name</em>' attribute.
@@ -141,32 +140,6 @@ public interface Medicament extends EObject {
 	 * @generated
 	 */
 	void setName(String value);
-
-	/**
-	 * Returns the value of the '<em><b>Url</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Url</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Url</em>' attribute.
-	 * @see #setUrl(String)
-	 * @see MetamodelExecution.Execution_metamodelPackage#getMedicament_Url()
-	 * @model
-	 * @generated
-	 */
-	String getUrl();
-
-	/**
-	 * Sets the value of the '{@link MetamodelExecution.Medicament#getUrl <em>Url</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Url</em>' attribute.
-	 * @see #getUrl()
-	 * @generated
-	 */
-	void setUrl(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Code</b></em>' attribute.
@@ -178,14 +151,14 @@ public interface Medicament extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Code</em>' attribute.
 	 * @see #setCode(int)
-	 * @see MetamodelExecution.Execution_metamodelPackage#getMedicament_Code()
+	 * @see MetamodelExecution.Execution_metamodelPackage#getMedication_Code()
 	 * @model
 	 * @generated
 	 */
 	int getCode();
 
 	/**
-	 * Sets the value of the '{@link MetamodelExecution.Medicament#getCode <em>Code</em>}' attribute.
+	 * Sets the value of the '{@link MetamodelExecution.Medication#getCode <em>Code</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Code</em>' attribute.
@@ -195,30 +168,30 @@ public interface Medicament extends EObject {
 	void setCode(int value);
 
 	/**
-	 * Returns the value of the '<em><b>Id Medicament</b></em>' attribute.
+	 * Returns the value of the '<em><b>Id Medication</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Id Medicament</em>' attribute isn't clear,
+	 * If the meaning of the '<em>Id Medication</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Id Medicament</em>' attribute.
-	 * @see #setIdMedicament(int)
-	 * @see MetamodelExecution.Execution_metamodelPackage#getMedicament_IdMedicament()
+	 * @return the value of the '<em>Id Medication</em>' attribute.
+	 * @see #setIdMedication(int)
+	 * @see MetamodelExecution.Execution_metamodelPackage#getMedication_IdMedication()
 	 * @model
 	 * @generated
 	 */
-	int getIdMedicament();
+	int getIdMedication();
 
 	/**
-	 * Sets the value of the '{@link MetamodelExecution.Medicament#getIdMedicament <em>Id Medicament</em>}' attribute.
+	 * Sets the value of the '{@link MetamodelExecution.Medication#getIdMedication <em>Id Medication</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Id Medicament</em>' attribute.
-	 * @see #getIdMedicament()
+	 * @param value the new value of the '<em>Id Medication</em>' attribute.
+	 * @see #getIdMedication()
 	 * @generated
 	 */
-	void setIdMedicament(int value);
+	void setIdMedication(int value);
 
 	/**
 	 * Returns the value of the '<em><b>Description</b></em>' attribute.
@@ -230,14 +203,14 @@ public interface Medicament extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Description</em>' attribute.
 	 * @see #setDescription(String)
-	 * @see MetamodelExecution.Execution_metamodelPackage#getMedicament_Description()
+	 * @see MetamodelExecution.Execution_metamodelPackage#getMedication_Description()
 	 * @model
 	 * @generated
 	 */
 	String getDescription();
 
 	/**
-	 * Sets the value of the '{@link MetamodelExecution.Medicament#getDescription <em>Description</em>}' attribute.
+	 * Sets the value of the '{@link MetamodelExecution.Medication#getDescription <em>Description</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Description</em>' attribute.
@@ -256,14 +229,14 @@ public interface Medicament extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Brand</em>' attribute.
 	 * @see #setBrand(String)
-	 * @see MetamodelExecution.Execution_metamodelPackage#getMedicament_Brand()
+	 * @see MetamodelExecution.Execution_metamodelPackage#getMedication_Brand()
 	 * @model
 	 * @generated
 	 */
 	String getBrand();
 
 	/**
-	 * Sets the value of the '{@link MetamodelExecution.Medicament#getBrand <em>Brand</em>}' attribute.
+	 * Sets the value of the '{@link MetamodelExecution.Medication#getBrand <em>Brand</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Brand</em>' attribute.
@@ -282,14 +255,14 @@ public interface Medicament extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Outpatient</em>' attribute.
 	 * @see #setOutpatient(boolean)
-	 * @see MetamodelExecution.Execution_metamodelPackage#getMedicament_Outpatient()
+	 * @see MetamodelExecution.Execution_metamodelPackage#getMedication_Outpatient()
 	 * @model
 	 * @generated
 	 */
 	boolean isOutpatient();
 
 	/**
-	 * Sets the value of the '{@link MetamodelExecution.Medicament#isOutpatient <em>Outpatient</em>}' attribute.
+	 * Sets the value of the '{@link MetamodelExecution.Medication#isOutpatient <em>Outpatient</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Outpatient</em>' attribute.
@@ -308,14 +281,14 @@ public interface Medicament extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Id Unit</em>' attribute.
 	 * @see #setIdUnit(int)
-	 * @see MetamodelExecution.Execution_metamodelPackage#getMedicament_IdUnit()
+	 * @see MetamodelExecution.Execution_metamodelPackage#getMedication_IdUnit()
 	 * @model
 	 * @generated
 	 */
 	int getIdUnit();
 
 	/**
-	 * Sets the value of the '{@link MetamodelExecution.Medicament#getIdUnit <em>Id Unit</em>}' attribute.
+	 * Sets the value of the '{@link MetamodelExecution.Medication#getIdUnit <em>Id Unit</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Id Unit</em>' attribute.
@@ -334,14 +307,14 @@ public interface Medicament extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Id Access</em>' attribute.
 	 * @see #setIdAccess(int)
-	 * @see MetamodelExecution.Execution_metamodelPackage#getMedicament_IdAccess()
+	 * @see MetamodelExecution.Execution_metamodelPackage#getMedication_IdAccess()
 	 * @model
 	 * @generated
 	 */
 	int getIdAccess();
 
 	/**
-	 * Sets the value of the '{@link MetamodelExecution.Medicament#getIdAccess <em>Id Access</em>}' attribute.
+	 * Sets the value of the '{@link MetamodelExecution.Medication#getIdAccess <em>Id Access</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Id Access</em>' attribute.
@@ -360,14 +333,14 @@ public interface Medicament extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Standard</em>' attribute.
 	 * @see #setStandard(String)
-	 * @see MetamodelExecution.Execution_metamodelPackage#getMedicament_Standard()
+	 * @see MetamodelExecution.Execution_metamodelPackage#getMedication_Standard()
 	 * @model
 	 * @generated
 	 */
 	String getStandard();
 
 	/**
-	 * Sets the value of the '{@link MetamodelExecution.Medicament#getStandard <em>Standard</em>}' attribute.
+	 * Sets the value of the '{@link MetamodelExecution.Medication#getStandard <em>Standard</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Standard</em>' attribute.
@@ -386,14 +359,14 @@ public interface Medicament extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Daily Dosage</em>' attribute.
 	 * @see #setDailyDosage(int)
-	 * @see MetamodelExecution.Execution_metamodelPackage#getMedicament_DailyDosage()
+	 * @see MetamodelExecution.Execution_metamodelPackage#getMedication_DailyDosage()
 	 * @model
 	 * @generated
 	 */
 	int getDailyDosage();
 
 	/**
-	 * Sets the value of the '{@link MetamodelExecution.Medicament#getDailyDosage <em>Daily Dosage</em>}' attribute.
+	 * Sets the value of the '{@link MetamodelExecution.Medication#getDailyDosage <em>Daily Dosage</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Daily Dosage</em>' attribute.
@@ -412,14 +385,14 @@ public interface Medicament extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Cycles</em>' attribute.
 	 * @see #setCycles(int)
-	 * @see MetamodelExecution.Execution_metamodelPackage#getMedicament_Cycles()
+	 * @see MetamodelExecution.Execution_metamodelPackage#getMedication_Cycles()
 	 * @model
 	 * @generated
 	 */
 	int getCycles();
 
 	/**
-	 * Sets the value of the '{@link MetamodelExecution.Medicament#getCycles <em>Cycles</em>}' attribute.
+	 * Sets the value of the '{@link MetamodelExecution.Medication#getCycles <em>Cycles</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Cycles</em>' attribute.
@@ -438,14 +411,14 @@ public interface Medicament extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Frequency</em>' attribute.
 	 * @see #setFrequency(int)
-	 * @see MetamodelExecution.Execution_metamodelPackage#getMedicament_Frequency()
+	 * @see MetamodelExecution.Execution_metamodelPackage#getMedication_Frequency()
 	 * @model
 	 * @generated
 	 */
 	int getFrequency();
 
 	/**
-	 * Sets the value of the '{@link MetamodelExecution.Medicament#getFrequency <em>Frequency</em>}' attribute.
+	 * Sets the value of the '{@link MetamodelExecution.Medication#getFrequency <em>Frequency</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Frequency</em>' attribute.
@@ -464,14 +437,14 @@ public interface Medicament extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Frequency Display</em>' attribute.
 	 * @see #setFrequencyDisplay(String)
-	 * @see MetamodelExecution.Execution_metamodelPackage#getMedicament_FrequencyDisplay()
+	 * @see MetamodelExecution.Execution_metamodelPackage#getMedication_FrequencyDisplay()
 	 * @model
 	 * @generated
 	 */
 	String getFrequencyDisplay();
 
 	/**
-	 * Sets the value of the '{@link MetamodelExecution.Medicament#getFrequencyDisplay <em>Frequency Display</em>}' attribute.
+	 * Sets the value of the '{@link MetamodelExecution.Medication#getFrequencyDisplay <em>Frequency Display</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Frequency Display</em>' attribute.
@@ -490,14 +463,14 @@ public interface Medicament extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Time Treatement</em>' attribute.
 	 * @see #setTimeTreatement(int)
-	 * @see MetamodelExecution.Execution_metamodelPackage#getMedicament_TimeTreatement()
+	 * @see MetamodelExecution.Execution_metamodelPackage#getMedication_TimeTreatement()
 	 * @model
 	 * @generated
 	 */
 	int getTimeTreatement();
 
 	/**
-	 * Sets the value of the '{@link MetamodelExecution.Medicament#getTimeTreatement <em>Time Treatement</em>}' attribute.
+	 * Sets the value of the '{@link MetamodelExecution.Medication#getTimeTreatement <em>Time Treatement</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Time Treatement</em>' attribute.
@@ -516,14 +489,14 @@ public interface Medicament extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Time Interval</em>' attribute.
 	 * @see #setTimeInterval(int)
-	 * @see MetamodelExecution.Execution_metamodelPackage#getMedicament_TimeInterval()
+	 * @see MetamodelExecution.Execution_metamodelPackage#getMedication_TimeInterval()
 	 * @model
 	 * @generated
 	 */
 	int getTimeInterval();
 
 	/**
-	 * Sets the value of the '{@link MetamodelExecution.Medicament#getTimeInterval <em>Time Interval</em>}' attribute.
+	 * Sets the value of the '{@link MetamodelExecution.Medication#getTimeInterval <em>Time Interval</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Time Interval</em>' attribute.
@@ -532,4 +505,4 @@ public interface Medicament extends EObject {
 	 */
 	void setTimeInterval(int value);
 
-} // Medicament
+} // Medication

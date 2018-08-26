@@ -2,25 +2,25 @@
  */
 package MetamodelExecution.impl;
 
+import MetamodelExecution.EProcedure;
 import MetamodelExecution.Execution_metamodelPackage;
-import MetamodelExecution.Next;
 
 import org.eclipse.emf.ecore.EClass;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Next</b></em>'.
+ * An implementation of the model object '<em><b>EProcedure</b></em>'.
  * <!-- end-user-doc -->
  *
  * @generated
  */
-public class NextImpl extends SequenceImpl implements Next {
+public class EProcedureImpl extends EStepImpl implements EProcedure {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected NextImpl() {
+	protected EProcedureImpl() {
 		super();
 	}
 
@@ -31,7 +31,7 @@ public class NextImpl extends SequenceImpl implements Next {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Execution_metamodelPackage.Literals.NEXT;
+		return Execution_metamodelPackage.Literals.EPROCEDURE;
 	}
 
-} //NextImpl
+} //EProcedureImpl

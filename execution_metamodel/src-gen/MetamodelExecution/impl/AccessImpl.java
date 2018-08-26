@@ -22,7 +22,6 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * <ul>
  *   <li>{@link MetamodelExecution.impl.AccessImpl#getId <em>Id</em>}</li>
  *   <li>{@link MetamodelExecution.impl.AccessImpl#getName <em>Name</em>}</li>
- *   <li>{@link MetamodelExecution.impl.AccessImpl#getUrl <em>Url</em>}</li>
  *   <li>{@link MetamodelExecution.impl.AccessImpl#getCode <em>Code</em>}</li>
  * </ul>
  *
@@ -68,26 +67,6 @@ public class AccessImpl extends MinimalEObjectImpl.Container implements Access {
 	 * @ordered
 	 */
 	protected String name = NAME_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getUrl() <em>Url</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getUrl()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String URL_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getUrl() <em>Url</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getUrl()
-	 * @generated
-	 * @ordered
-	 */
-	protected String url = URL_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getCode() <em>Code</em>}' attribute.
@@ -176,27 +155,6 @@ public class AccessImpl extends MinimalEObjectImpl.Container implements Access {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getUrl() {
-		return url;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setUrl(String newUrl) {
-		String oldUrl = url;
-		url = newUrl;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.ACCESS__URL, oldUrl, url));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public int getCode() {
 		return code;
 	}
@@ -226,8 +184,6 @@ public class AccessImpl extends MinimalEObjectImpl.Container implements Access {
 			return getId();
 		case Execution_metamodelPackage.ACCESS__NAME:
 			return getName();
-		case Execution_metamodelPackage.ACCESS__URL:
-			return getUrl();
 		case Execution_metamodelPackage.ACCESS__CODE:
 			return getCode();
 		}
@@ -247,9 +203,6 @@ public class AccessImpl extends MinimalEObjectImpl.Container implements Access {
 			return;
 		case Execution_metamodelPackage.ACCESS__NAME:
 			setName((String) newValue);
-			return;
-		case Execution_metamodelPackage.ACCESS__URL:
-			setUrl((String) newValue);
 			return;
 		case Execution_metamodelPackage.ACCESS__CODE:
 			setCode((Integer) newValue);
@@ -272,9 +225,6 @@ public class AccessImpl extends MinimalEObjectImpl.Container implements Access {
 		case Execution_metamodelPackage.ACCESS__NAME:
 			setName(NAME_EDEFAULT);
 			return;
-		case Execution_metamodelPackage.ACCESS__URL:
-			setUrl(URL_EDEFAULT);
-			return;
 		case Execution_metamodelPackage.ACCESS__CODE:
 			setCode(CODE_EDEFAULT);
 			return;
@@ -294,8 +244,6 @@ public class AccessImpl extends MinimalEObjectImpl.Container implements Access {
 			return id != ID_EDEFAULT;
 		case Execution_metamodelPackage.ACCESS__NAME:
 			return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-		case Execution_metamodelPackage.ACCESS__URL:
-			return URL_EDEFAULT == null ? url != null : !URL_EDEFAULT.equals(url);
 		case Execution_metamodelPackage.ACCESS__CODE:
 			return code != CODE_EDEFAULT;
 		}
@@ -317,8 +265,6 @@ public class AccessImpl extends MinimalEObjectImpl.Container implements Access {
 		result.append(id);
 		result.append(", name: ");
 		result.append(name);
-		result.append(", url: ");
-		result.append(url);
 		result.append(", code: ");
 		result.append(code);
 		result.append(')');

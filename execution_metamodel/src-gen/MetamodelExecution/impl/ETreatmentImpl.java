@@ -42,7 +42,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *
  * @generated
  */
-public class ETreatmentImpl extends EElementImpl implements ETreatment {
+public class ETreatmentImpl extends EStepImpl implements ETreatment {
 	/**
 	 * The cached value of the '{@link #getPrescribedexam() <em>Prescribedexam</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
