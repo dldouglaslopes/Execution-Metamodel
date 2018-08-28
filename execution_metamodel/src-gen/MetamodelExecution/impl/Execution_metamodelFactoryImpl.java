@@ -146,6 +146,10 @@ public class Execution_metamodelFactoryImpl extends EFactoryImpl implements Exec
 			return createAllergy();
 		case Execution_metamodelPackage.COMORBIDITY:
 			return createComorbidity();
+		case Execution_metamodelPackage.PROCEDURE:
+			return createProcedure();
+		case Execution_metamodelPackage.INTERNMENT:
+			return createInternment();
 		default:
 			throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -599,6 +603,26 @@ public class Execution_metamodelFactoryImpl extends EFactoryImpl implements Exec
 	public Comorbidity createComorbidity() {
 		ComorbidityImpl comorbidity = new ComorbidityImpl();
 		return comorbidity;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Procedure createProcedure() {
+		ProcedureImpl procedure = new ProcedureImpl();
+		return procedure;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Internment createInternment() {
+		InternmentImpl internment = new InternmentImpl();
+		return internment;
 	}
 
 	/**

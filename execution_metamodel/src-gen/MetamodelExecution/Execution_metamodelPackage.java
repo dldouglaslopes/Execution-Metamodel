@@ -917,13 +917,22 @@ public interface Execution_metamodelPackage extends EPackage {
 	int EREFERRAL__NAME = ESTEP__NAME;
 
 	/**
+	 * The feature id for the '<em><b>Epathway</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EREFERRAL__EPATHWAY = ESTEP_FEATURE_COUNT + 0;
+
+	/**
 	 * The number of structural features of the '<em>EReferral</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int EREFERRAL_FEATURE_COUNT = ESTEP_FEATURE_COUNT + 0;
+	int EREFERRAL_FEATURE_COUNT = ESTEP_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>EReferral</em>' class.
@@ -1706,13 +1715,49 @@ public interface Execution_metamodelPackage extends EPackage {
 	int PRESCRIBED_PROCEDURE = 9;
 
 	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PRESCRIBED_PROCEDURE__ID = 0;
+
+	/**
+	 * The feature id for the '<em><b>Procedure</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PRESCRIBED_PROCEDURE__PROCEDURE = 1;
+
+	/**
+	 * The feature id for the '<em><b>Code Order Prescription</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PRESCRIBED_PROCEDURE__CODE_ORDER_PRESCRIPTION = 2;
+
+	/**
+	 * The feature id for the '<em><b>Code Order Prescription Plan</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PRESCRIBED_PROCEDURE__CODE_ORDER_PRESCRIPTION_PLAN = 3;
+
+	/**
 	 * The number of structural features of the '<em>Prescribed Procedure</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PRESCRIBED_PROCEDURE_FEATURE_COUNT = 0;
+	int PRESCRIBED_PROCEDURE_FEATURE_COUNT = 4;
 
 	/**
 	 * The number of operations of the '<em>Prescribed Procedure</em>' class.
@@ -1734,13 +1779,40 @@ public interface Execution_metamodelPackage extends EPackage {
 	int PRESCRIBED_INTERNMENT = 10;
 
 	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PRESCRIBED_INTERNMENT__ID = 0;
+
+	/**
+	 * The feature id for the '<em><b>Internment</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PRESCRIBED_INTERNMENT__INTERNMENT = 1;
+
+	/**
+	 * The feature id for the '<em><b>Number Guide</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PRESCRIBED_INTERNMENT__NUMBER_GUIDE = 2;
+
+	/**
 	 * The number of structural features of the '<em>Prescribed Internment</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PRESCRIBED_INTERNMENT_FEATURE_COUNT = 0;
+	int PRESCRIBED_INTERNMENT_FEATURE_COUNT = 3;
 
 	/**
 	 * The number of operations of the '<em>Prescribed Internment</em>' class.
@@ -4911,6 +4983,143 @@ public interface Execution_metamodelPackage extends EPackage {
 	int COMORBIDITY_OPERATION_COUNT = 0;
 
 	/**
+	 * The meta object id for the '{@link MetamodelExecution.impl.ProcedureImpl <em>Procedure</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see MetamodelExecution.impl.ProcedureImpl
+	 * @see MetamodelExecution.impl.Execution_metamodelPackageImpl#getProcedure()
+	 * @generated
+	 */
+	int PROCEDURE = 48;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROCEDURE__ID = 0;
+
+	/**
+	 * The feature id for the '<em><b>Category</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROCEDURE__CATEGORY = 1;
+
+	/**
+	 * The feature id for the '<em><b>Frequency</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROCEDURE__FREQUENCY = 2;
+
+	/**
+	 * The feature id for the '<em><b>Quantity</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROCEDURE__QUANTITY = 3;
+
+	/**
+	 * The number of structural features of the '<em>Procedure</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROCEDURE_FEATURE_COUNT = 4;
+
+	/**
+	 * The number of operations of the '<em>Procedure</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROCEDURE_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link MetamodelExecution.impl.InternmentImpl <em>Internment</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see MetamodelExecution.impl.InternmentImpl
+	 * @see MetamodelExecution.impl.Execution_metamodelPackageImpl#getInternment()
+	 * @generated
+	 */
+	int INTERNMENT = 49;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INTERNMENT__ID = 0;
+
+	/**
+	 * The feature id for the '<em><b>Category</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INTERNMENT__CATEGORY = 1;
+
+	/**
+	 * The feature id for the '<em><b>Justification</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INTERNMENT__JUSTIFICATION = 2;
+
+	/**
+	 * The feature id for the '<em><b>Clinical Indication</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INTERNMENT__CLINICAL_INDICATION = 3;
+
+	/**
+	 * The feature id for the '<em><b>Quantity</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INTERNMENT__QUANTITY = 4;
+
+	/**
+	 * The number of structural features of the '<em>Internment</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INTERNMENT_FEATURE_COUNT = 5;
+
+	/**
+	 * The number of operations of the '<em>Internment</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INTERNMENT_OPERATION_COUNT = 0;
+
+	/**
 	 * Returns the meta object for class '{@link MetamodelExecution.EAuxiliaryConduct <em>EAuxiliary Conduct</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4971,6 +5180,17 @@ public interface Execution_metamodelPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getEReferral();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link MetamodelExecution.EReferral#getEpathway <em>Epathway</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Epathway</em>'.
+	 * @see MetamodelExecution.EReferral#getEpathway()
+	 * @see #getEReferral()
+	 * @generated
+	 */
+	EReference getEReferral_Epathway();
 
 	/**
 	 * Returns the meta object for class '{@link MetamodelExecution.EPrescription <em>EPrescription</em>}'.
@@ -5440,6 +5660,50 @@ public interface Execution_metamodelPackage extends EPackage {
 	EClass getPrescribedProcedure();
 
 	/**
+	 * Returns the meta object for the attribute '{@link MetamodelExecution.PrescribedProcedure#getId <em>Id</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Id</em>'.
+	 * @see MetamodelExecution.PrescribedProcedure#getId()
+	 * @see #getPrescribedProcedure()
+	 * @generated
+	 */
+	EAttribute getPrescribedProcedure_Id();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link MetamodelExecution.PrescribedProcedure#getProcedure <em>Procedure</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Procedure</em>'.
+	 * @see MetamodelExecution.PrescribedProcedure#getProcedure()
+	 * @see #getPrescribedProcedure()
+	 * @generated
+	 */
+	EReference getPrescribedProcedure_Procedure();
+
+	/**
+	 * Returns the meta object for the attribute '{@link MetamodelExecution.PrescribedProcedure#getCodeOrderPrescription <em>Code Order Prescription</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Code Order Prescription</em>'.
+	 * @see MetamodelExecution.PrescribedProcedure#getCodeOrderPrescription()
+	 * @see #getPrescribedProcedure()
+	 * @generated
+	 */
+	EAttribute getPrescribedProcedure_CodeOrderPrescription();
+
+	/**
+	 * Returns the meta object for the attribute '{@link MetamodelExecution.PrescribedProcedure#getCodeOrderPrescriptionPlan <em>Code Order Prescription Plan</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Code Order Prescription Plan</em>'.
+	 * @see MetamodelExecution.PrescribedProcedure#getCodeOrderPrescriptionPlan()
+	 * @see #getPrescribedProcedure()
+	 * @generated
+	 */
+	EAttribute getPrescribedProcedure_CodeOrderPrescriptionPlan();
+
+	/**
 	 * Returns the meta object for class '{@link MetamodelExecution.PrescribedInternment <em>Prescribed Internment</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5448,6 +5712,39 @@ public interface Execution_metamodelPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getPrescribedInternment();
+
+	/**
+	 * Returns the meta object for the attribute '{@link MetamodelExecution.PrescribedInternment#getId <em>Id</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Id</em>'.
+	 * @see MetamodelExecution.PrescribedInternment#getId()
+	 * @see #getPrescribedInternment()
+	 * @generated
+	 */
+	EAttribute getPrescribedInternment_Id();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link MetamodelExecution.PrescribedInternment#getInternment <em>Internment</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Internment</em>'.
+	 * @see MetamodelExecution.PrescribedInternment#getInternment()
+	 * @see #getPrescribedInternment()
+	 * @generated
+	 */
+	EReference getPrescribedInternment_Internment();
+
+	/**
+	 * Returns the meta object for the attribute '{@link MetamodelExecution.PrescribedInternment#getNumberGuide <em>Number Guide</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Number Guide</em>'.
+	 * @see MetamodelExecution.PrescribedInternment#getNumberGuide()
+	 * @see #getPrescribedInternment()
+	 * @generated
+	 */
+	EAttribute getPrescribedInternment_NumberGuide();
 
 	/**
 	 * Returns the meta object for class '{@link MetamodelExecution.PrescribedMedication <em>Prescribed Medication</em>}'.
@@ -7657,6 +7954,125 @@ public interface Execution_metamodelPackage extends EPackage {
 	EAttribute getComorbidity_Name();
 
 	/**
+	 * Returns the meta object for class '{@link MetamodelExecution.Procedure <em>Procedure</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Procedure</em>'.
+	 * @see MetamodelExecution.Procedure
+	 * @generated
+	 */
+	EClass getProcedure();
+
+	/**
+	 * Returns the meta object for the attribute '{@link MetamodelExecution.Procedure#getId <em>Id</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Id</em>'.
+	 * @see MetamodelExecution.Procedure#getId()
+	 * @see #getProcedure()
+	 * @generated
+	 */
+	EAttribute getProcedure_Id();
+
+	/**
+	 * Returns the meta object for the attribute '{@link MetamodelExecution.Procedure#getCategory <em>Category</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Category</em>'.
+	 * @see MetamodelExecution.Procedure#getCategory()
+	 * @see #getProcedure()
+	 * @generated
+	 */
+	EAttribute getProcedure_Category();
+
+	/**
+	 * Returns the meta object for the attribute '{@link MetamodelExecution.Procedure#getFrequency <em>Frequency</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Frequency</em>'.
+	 * @see MetamodelExecution.Procedure#getFrequency()
+	 * @see #getProcedure()
+	 * @generated
+	 */
+	EAttribute getProcedure_Frequency();
+
+	/**
+	 * Returns the meta object for the attribute '{@link MetamodelExecution.Procedure#getQuantity <em>Quantity</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Quantity</em>'.
+	 * @see MetamodelExecution.Procedure#getQuantity()
+	 * @see #getProcedure()
+	 * @generated
+	 */
+	EAttribute getProcedure_Quantity();
+
+	/**
+	 * Returns the meta object for class '{@link MetamodelExecution.Internment <em>Internment</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Internment</em>'.
+	 * @see MetamodelExecution.Internment
+	 * @generated
+	 */
+	EClass getInternment();
+
+	/**
+	 * Returns the meta object for the attribute '{@link MetamodelExecution.Internment#getId <em>Id</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Id</em>'.
+	 * @see MetamodelExecution.Internment#getId()
+	 * @see #getInternment()
+	 * @generated
+	 */
+	EAttribute getInternment_Id();
+
+	/**
+	 * Returns the meta object for the attribute '{@link MetamodelExecution.Internment#getCategory <em>Category</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Category</em>'.
+	 * @see MetamodelExecution.Internment#getCategory()
+	 * @see #getInternment()
+	 * @generated
+	 */
+	EAttribute getInternment_Category();
+
+	/**
+	 * Returns the meta object for the attribute '{@link MetamodelExecution.Internment#getJustification <em>Justification</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Justification</em>'.
+	 * @see MetamodelExecution.Internment#getJustification()
+	 * @see #getInternment()
+	 * @generated
+	 */
+	EAttribute getInternment_Justification();
+
+	/**
+	 * Returns the meta object for the attribute '{@link MetamodelExecution.Internment#getClinicalIndication <em>Clinical Indication</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Clinical Indication</em>'.
+	 * @see MetamodelExecution.Internment#getClinicalIndication()
+	 * @see #getInternment()
+	 * @generated
+	 */
+	EAttribute getInternment_ClinicalIndication();
+
+	/**
+	 * Returns the meta object for the attribute '{@link MetamodelExecution.Internment#getQuantity <em>Quantity</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Quantity</em>'.
+	 * @see MetamodelExecution.Internment#getQuantity()
+	 * @see #getInternment()
+	 * @generated
+	 */
+	EAttribute getInternment_Quantity();
+
+	/**
 	 * Returns the factory that creates the instances of the model.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -7734,6 +8150,14 @@ public interface Execution_metamodelPackage extends EPackage {
 		 * @generated
 		 */
 		EClass EREFERRAL = eINSTANCE.getEReferral();
+
+		/**
+		 * The meta object literal for the '<em><b>Epathway</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference EREFERRAL__EPATHWAY = eINSTANCE.getEReferral_Epathway();
 
 		/**
 		 * The meta object literal for the '{@link MetamodelExecution.impl.EPrescriptionImpl <em>EPrescription</em>}' class.
@@ -8093,6 +8517,40 @@ public interface Execution_metamodelPackage extends EPackage {
 		EClass PRESCRIBED_PROCEDURE = eINSTANCE.getPrescribedProcedure();
 
 		/**
+		 * The meta object literal for the '<em><b>Id</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute PRESCRIBED_PROCEDURE__ID = eINSTANCE.getPrescribedProcedure_Id();
+
+		/**
+		 * The meta object literal for the '<em><b>Procedure</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference PRESCRIBED_PROCEDURE__PROCEDURE = eINSTANCE.getPrescribedProcedure_Procedure();
+
+		/**
+		 * The meta object literal for the '<em><b>Code Order Prescription</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute PRESCRIBED_PROCEDURE__CODE_ORDER_PRESCRIPTION = eINSTANCE
+				.getPrescribedProcedure_CodeOrderPrescription();
+
+		/**
+		 * The meta object literal for the '<em><b>Code Order Prescription Plan</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute PRESCRIBED_PROCEDURE__CODE_ORDER_PRESCRIPTION_PLAN = eINSTANCE
+				.getPrescribedProcedure_CodeOrderPrescriptionPlan();
+
+		/**
 		 * The meta object literal for the '{@link MetamodelExecution.impl.PrescribedInternmentImpl <em>Prescribed Internment</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -8101,6 +8559,30 @@ public interface Execution_metamodelPackage extends EPackage {
 		 * @generated
 		 */
 		EClass PRESCRIBED_INTERNMENT = eINSTANCE.getPrescribedInternment();
+
+		/**
+		 * The meta object literal for the '<em><b>Id</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute PRESCRIBED_INTERNMENT__ID = eINSTANCE.getPrescribedInternment_Id();
+
+		/**
+		 * The meta object literal for the '<em><b>Internment</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference PRESCRIBED_INTERNMENT__INTERNMENT = eINSTANCE.getPrescribedInternment_Internment();
+
+		/**
+		 * The meta object literal for the '<em><b>Number Guide</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute PRESCRIBED_INTERNMENT__NUMBER_GUIDE = eINSTANCE.getPrescribedInternment_NumberGuide();
 
 		/**
 		 * The meta object literal for the '{@link MetamodelExecution.impl.PrescribedMedicationImpl <em>Prescribed Medication</em>}' class.
@@ -9807,6 +10289,98 @@ public interface Execution_metamodelPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute COMORBIDITY__NAME = eINSTANCE.getComorbidity_Name();
+
+		/**
+		 * The meta object literal for the '{@link MetamodelExecution.impl.ProcedureImpl <em>Procedure</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see MetamodelExecution.impl.ProcedureImpl
+		 * @see MetamodelExecution.impl.Execution_metamodelPackageImpl#getProcedure()
+		 * @generated
+		 */
+		EClass PROCEDURE = eINSTANCE.getProcedure();
+
+		/**
+		 * The meta object literal for the '<em><b>Id</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute PROCEDURE__ID = eINSTANCE.getProcedure_Id();
+
+		/**
+		 * The meta object literal for the '<em><b>Category</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute PROCEDURE__CATEGORY = eINSTANCE.getProcedure_Category();
+
+		/**
+		 * The meta object literal for the '<em><b>Frequency</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute PROCEDURE__FREQUENCY = eINSTANCE.getProcedure_Frequency();
+
+		/**
+		 * The meta object literal for the '<em><b>Quantity</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute PROCEDURE__QUANTITY = eINSTANCE.getProcedure_Quantity();
+
+		/**
+		 * The meta object literal for the '{@link MetamodelExecution.impl.InternmentImpl <em>Internment</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see MetamodelExecution.impl.InternmentImpl
+		 * @see MetamodelExecution.impl.Execution_metamodelPackageImpl#getInternment()
+		 * @generated
+		 */
+		EClass INTERNMENT = eINSTANCE.getInternment();
+
+		/**
+		 * The meta object literal for the '<em><b>Id</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute INTERNMENT__ID = eINSTANCE.getInternment_Id();
+
+		/**
+		 * The meta object literal for the '<em><b>Category</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute INTERNMENT__CATEGORY = eINSTANCE.getInternment_Category();
+
+		/**
+		 * The meta object literal for the '<em><b>Justification</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute INTERNMENT__JUSTIFICATION = eINSTANCE.getInternment_Justification();
+
+		/**
+		 * The meta object literal for the '<em><b>Clinical Indication</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute INTERNMENT__CLINICAL_INDICATION = eINSTANCE.getInternment_ClinicalIndication();
+
+		/**
+		 * The meta object literal for the '<em><b>Quantity</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute INTERNMENT__QUANTITY = eINSTANCE.getInternment_Quantity();
 
 	}
 

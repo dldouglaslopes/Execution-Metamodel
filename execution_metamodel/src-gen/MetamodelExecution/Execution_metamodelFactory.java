@@ -427,6 +427,24 @@ public interface Execution_metamodelFactory extends EFactory {
 	Comorbidity createComorbidity();
 
 	/**
+	 * Returns a new object of class '<em>Procedure</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Procedure</em>'.
+	 * @generated
+	 */
+	Procedure createProcedure();
+
+	/**
+	 * Returns a new object of class '<em>Internment</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Internment</em>'.
+	 * @generated
+	 */
+	Internment createInternment();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
