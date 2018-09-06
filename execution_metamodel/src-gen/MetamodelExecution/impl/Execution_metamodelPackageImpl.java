@@ -1127,6 +1127,24 @@ public class Execution_metamodelPackageImpl extends EPackageImpl implements Exec
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getPrescribedPrescriptionItem_Id() {
+		return (EAttribute) prescribedPrescriptionItemEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getPrescribedPrescriptionItem_ItemPrescription() {
+		return (EAttribute) prescribedPrescriptionItemEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getJustification() {
 		return justificationEClass;
 	}
@@ -3053,6 +3071,8 @@ public class Execution_metamodelPackageImpl extends EPackageImpl implements Exec
 		createEAttribute(complementEClass, COMPLEMENT__QUANTITY);
 
 		prescribedPrescriptionItemEClass = createEClass(PRESCRIBED_PRESCRIPTION_ITEM);
+		createEAttribute(prescribedPrescriptionItemEClass, PRESCRIBED_PRESCRIPTION_ITEM__ID);
+		createEAttribute(prescribedPrescriptionItemEClass, PRESCRIBED_PRESCRIPTION_ITEM__ITEM_PRESCRIPTION);
 
 		justificationEClass = createEClass(JUSTIFICATION);
 		createEAttribute(justificationEClass, JUSTIFICATION__ID);
@@ -3536,6 +3556,12 @@ public class Execution_metamodelPackageImpl extends EPackageImpl implements Exec
 
 		initEClass(prescribedPrescriptionItemEClass, PrescribedPrescriptionItem.class, "PrescribedPrescriptionItem",
 				!IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getPrescribedPrescriptionItem_Id(), ecorePackage.getEInt(), "id", null, 0, 1,
+				PrescribedPrescriptionItem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getPrescribedPrescriptionItem_ItemPrescription(), ecorePackage.getEInt(), "itemPrescription",
+				null, 0, 1, PrescribedPrescriptionItem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
+				!IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(justificationEClass, Justification.class, "Justification", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);

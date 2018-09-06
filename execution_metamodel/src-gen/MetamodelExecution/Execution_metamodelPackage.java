@@ -1980,13 +1980,31 @@ public interface Execution_metamodelPackage extends EPackage {
 	int PRESCRIBED_PRESCRIPTION_ITEM = 13;
 
 	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PRESCRIBED_PRESCRIPTION_ITEM__ID = 0;
+
+	/**
+	 * The feature id for the '<em><b>Item Prescription</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PRESCRIBED_PRESCRIPTION_ITEM__ITEM_PRESCRIPTION = 1;
+
+	/**
 	 * The number of structural features of the '<em>Prescribed Prescription Item</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PRESCRIBED_PRESCRIPTION_ITEM_FEATURE_COUNT = 0;
+	int PRESCRIBED_PRESCRIPTION_ITEM_FEATURE_COUNT = 2;
 
 	/**
 	 * The number of operations of the '<em>Prescribed Prescription Item</em>' class.
@@ -5887,6 +5905,28 @@ public interface Execution_metamodelPackage extends EPackage {
 	EClass getPrescribedPrescriptionItem();
 
 	/**
+	 * Returns the meta object for the attribute '{@link MetamodelExecution.PrescribedPrescriptionItem#getId <em>Id</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Id</em>'.
+	 * @see MetamodelExecution.PrescribedPrescriptionItem#getId()
+	 * @see #getPrescribedPrescriptionItem()
+	 * @generated
+	 */
+	EAttribute getPrescribedPrescriptionItem_Id();
+
+	/**
+	 * Returns the meta object for the attribute '{@link MetamodelExecution.PrescribedPrescriptionItem#getItemPrescription <em>Item Prescription</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Item Prescription</em>'.
+	 * @see MetamodelExecution.PrescribedPrescriptionItem#getItemPrescription()
+	 * @see #getPrescribedPrescriptionItem()
+	 * @generated
+	 */
+	EAttribute getPrescribedPrescriptionItem_ItemPrescription();
+
+	/**
 	 * Returns the meta object for class '{@link MetamodelExecution.Justification <em>Justification</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -8693,6 +8733,23 @@ public interface Execution_metamodelPackage extends EPackage {
 		 * @generated
 		 */
 		EClass PRESCRIBED_PRESCRIPTION_ITEM = eINSTANCE.getPrescribedPrescriptionItem();
+
+		/**
+		 * The meta object literal for the '<em><b>Id</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute PRESCRIBED_PRESCRIPTION_ITEM__ID = eINSTANCE.getPrescribedPrescriptionItem_Id();
+
+		/**
+		 * The meta object literal for the '<em><b>Item Prescription</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute PRESCRIBED_PRESCRIPTION_ITEM__ITEM_PRESCRIPTION = eINSTANCE
+				.getPrescribedPrescriptionItem_ItemPrescription();
 
 		/**
 		 * The meta object literal for the '{@link MetamodelExecution.impl.JustificationImpl <em>Justification</em>}' class.
