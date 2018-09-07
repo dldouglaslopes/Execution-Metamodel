@@ -25,6 +25,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *   <li>{@link MetamodelExecution.impl.PathwayImpl#getName <em>Name</em>}</li>
  *   <li>{@link MetamodelExecution.impl.PathwayImpl#getVersion <em>Version</em>}</li>
  *   <li>{@link MetamodelExecution.impl.PathwayImpl#isCompleted <em>Completed</em>}</li>
+ *   <li>{@link MetamodelExecution.impl.PathwayImpl#getLastAuditing <em>Last Auditing</em>}</li>
  * </ul>
  *
  * @generated
@@ -129,6 +130,26 @@ public class PathwayImpl extends MinimalEObjectImpl.Container implements Pathway
 	 * @ordered
 	 */
 	protected boolean completed = COMPLETED_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getLastAuditing() <em>Last Auditing</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getLastAuditing()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String LAST_AUDITING_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getLastAuditing() <em>Last Auditing</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getLastAuditing()
+	 * @generated
+	 * @ordered
+	 */
+	protected String lastAuditing = LAST_AUDITING_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -263,6 +284,28 @@ public class PathwayImpl extends MinimalEObjectImpl.Container implements Pathway
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public String getLastAuditing() {
+		return lastAuditing;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setLastAuditing(String newLastAuditing) {
+		String oldLastAuditing = lastAuditing;
+		lastAuditing = newLastAuditing;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.PATHWAY__LAST_AUDITING,
+					oldLastAuditing, lastAuditing));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -276,6 +319,8 @@ public class PathwayImpl extends MinimalEObjectImpl.Container implements Pathway
 			return getVersion();
 		case Execution_metamodelPackage.PATHWAY__COMPLETED:
 			return isCompleted();
+		case Execution_metamodelPackage.PATHWAY__LAST_AUDITING:
+			return getLastAuditing();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -302,6 +347,9 @@ public class PathwayImpl extends MinimalEObjectImpl.Container implements Pathway
 			return;
 		case Execution_metamodelPackage.PATHWAY__COMPLETED:
 			setCompleted((Boolean) newValue);
+			return;
+		case Execution_metamodelPackage.PATHWAY__LAST_AUDITING:
+			setLastAuditing((String) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -330,6 +378,9 @@ public class PathwayImpl extends MinimalEObjectImpl.Container implements Pathway
 		case Execution_metamodelPackage.PATHWAY__COMPLETED:
 			setCompleted(COMPLETED_EDEFAULT);
 			return;
+		case Execution_metamodelPackage.PATHWAY__LAST_AUDITING:
+			setLastAuditing(LAST_AUDITING_EDEFAULT);
+			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -352,6 +403,8 @@ public class PathwayImpl extends MinimalEObjectImpl.Container implements Pathway
 			return version != VERSION_EDEFAULT;
 		case Execution_metamodelPackage.PATHWAY__COMPLETED:
 			return completed != COMPLETED_EDEFAULT;
+		case Execution_metamodelPackage.PATHWAY__LAST_AUDITING:
+			return LAST_AUDITING_EDEFAULT == null ? lastAuditing != null : !LAST_AUDITING_EDEFAULT.equals(lastAuditing);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -377,6 +430,8 @@ public class PathwayImpl extends MinimalEObjectImpl.Container implements Pathway
 		result.append(version);
 		result.append(", completed: ");
 		result.append(completed);
+		result.append(", lastAuditing: ");
+		result.append(lastAuditing);
 		result.append(')');
 		return result.toString();
 	}

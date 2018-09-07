@@ -222,11 +222,6 @@ public class Execution_metamodelAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
-		public Adapter caseMedicine(Medicine object) {
-			return createMedicineAdapter();
-		}
-
-		@Override
 		public Adapter caseUnit(Unit object) {
 			return createUnitAdapter();
 		}
@@ -302,11 +297,6 @@ public class Execution_metamodelAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
-		public Adapter caseComorbidity(Comorbidity object) {
-			return createComorbidityAdapter();
-		}
-
-		@Override
 		public Adapter caseProcedure(Procedure object) {
 			return createProcedureAdapter();
 		}
@@ -314,6 +304,61 @@ public class Execution_metamodelAdapterFactory extends AdapterFactoryImpl {
 		@Override
 		public Adapter caseInternment(Internment object) {
 			return createInternmentAdapter();
+		}
+
+		@Override
+		public Adapter caseComplementaryConducts(ComplementaryConducts object) {
+			return createComplementaryConductsAdapter();
+		}
+
+		@Override
+		public Adapter caseAttendance(Attendance object) {
+			return createAttendanceAdapter();
+		}
+
+		@Override
+		public Adapter caseComorbidity(Comorbidity object) {
+			return createComorbidityAdapter();
+		}
+
+		@Override
+		public Adapter caseComplementaryMedication(ComplementaryMedication object) {
+			return createComplementaryMedicationAdapter();
+		}
+
+		@Override
+		public Adapter caseComplementaryProcedure(ComplementaryProcedure object) {
+			return createComplementaryProcedureAdapter();
+		}
+
+		@Override
+		public Adapter caseSuspension(Suspension object) {
+			return createSuspensionAdapter();
+		}
+
+		@Override
+		public Adapter caseMedicationPrescribedResource(MedicationPrescribedResource object) {
+			return createMedicationPrescribedResourceAdapter();
+		}
+
+		@Override
+		public Adapter caseNotification(Notification object) {
+			return createNotificationAdapter();
+		}
+
+		@Override
+		public Adapter caseProcedurePrescribedResource(ProcedurePrescribedResource object) {
+			return createProcedurePrescribedResourceAdapter();
+		}
+
+		@Override
+		public Adapter caseComplementaryExamination(ComplementaryExamination object) {
+			return createComplementaryExaminationAdapter();
+		}
+
+		@Override
+		public Adapter caseComplementaryItemPrescription(ComplementaryItemPrescription object) {
+			return createComplementaryItemPrescriptionAdapter();
 		}
 
 		@Override
@@ -770,20 +815,6 @@ public class Execution_metamodelAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link MetamodelExecution.Medicine <em>Medicine</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see MetamodelExecution.Medicine
-	 * @generated
-	 */
-	public Adapter createMedicineAdapter() {
-		return null;
-	}
-
-	/**
 	 * Creates a new adapter for an object of class '{@link MetamodelExecution.Unit <em>Unit</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -994,20 +1025,6 @@ public class Execution_metamodelAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link MetamodelExecution.Comorbidity <em>Comorbidity</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see MetamodelExecution.Comorbidity
-	 * @generated
-	 */
-	public Adapter createComorbidityAdapter() {
-		return null;
-	}
-
-	/**
 	 * Creates a new adapter for an object of class '{@link MetamodelExecution.Procedure <em>Procedure</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -1032,6 +1049,160 @@ public class Execution_metamodelAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createInternmentAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link MetamodelExecution.ComplementaryConducts <em>Complementary Conducts</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see MetamodelExecution.ComplementaryConducts
+	 * @generated
+	 */
+	public Adapter createComplementaryConductsAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link MetamodelExecution.Attendance <em>Attendance</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see MetamodelExecution.Attendance
+	 * @generated
+	 */
+	public Adapter createAttendanceAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link MetamodelExecution.Comorbidity <em>Comorbidity</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see MetamodelExecution.Comorbidity
+	 * @generated
+	 */
+	public Adapter createComorbidityAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link MetamodelExecution.ComplementaryMedication <em>Complementary Medication</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see MetamodelExecution.ComplementaryMedication
+	 * @generated
+	 */
+	public Adapter createComplementaryMedicationAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link MetamodelExecution.ComplementaryProcedure <em>Complementary Procedure</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see MetamodelExecution.ComplementaryProcedure
+	 * @generated
+	 */
+	public Adapter createComplementaryProcedureAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link MetamodelExecution.Suspension <em>Suspension</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see MetamodelExecution.Suspension
+	 * @generated
+	 */
+	public Adapter createSuspensionAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link MetamodelExecution.MedicationPrescribedResource <em>Medication Prescribed Resource</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see MetamodelExecution.MedicationPrescribedResource
+	 * @generated
+	 */
+	public Adapter createMedicationPrescribedResourceAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link MetamodelExecution.Notification <em>Notification</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see MetamodelExecution.Notification
+	 * @generated
+	 */
+	public Adapter createNotificationAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link MetamodelExecution.ProcedurePrescribedResource <em>Procedure Prescribed Resource</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see MetamodelExecution.ProcedurePrescribedResource
+	 * @generated
+	 */
+	public Adapter createProcedurePrescribedResourceAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link MetamodelExecution.ComplementaryExamination <em>Complementary Examination</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see MetamodelExecution.ComplementaryExamination
+	 * @generated
+	 */
+	public Adapter createComplementaryExaminationAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link MetamodelExecution.ComplementaryItemPrescription <em>Complementary Item Prescription</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see MetamodelExecution.ComplementaryItemPrescription
+	 * @generated
+	 */
+	public Adapter createComplementaryItemPrescriptionAdapter() {
 		return null;
 	}
 

@@ -26,11 +26,11 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * <ul>
  *   <li>{@link MetamodelExecution.impl.VariableImpl#getId <em>Id</em>}</li>
  *   <li>{@link MetamodelExecution.impl.VariableImpl#getType <em>Type</em>}</li>
- *   <li>{@link MetamodelExecution.impl.VariableImpl#getUrl <em>Url</em>}</li>
  *   <li>{@link MetamodelExecution.impl.VariableImpl#getName <em>Name</em>}</li>
  *   <li>{@link MetamodelExecution.impl.VariableImpl#getWeight <em>Weight</em>}</li>
  *   <li>{@link MetamodelExecution.impl.VariableImpl#getValue <em>Value</em>}</li>
  *   <li>{@link MetamodelExecution.impl.VariableImpl#getBond <em>Bond</em>}</li>
+ *   <li>{@link MetamodelExecution.impl.VariableImpl#getUnit <em>Unit</em>}</li>
  * </ul>
  *
  * @generated
@@ -75,26 +75,6 @@ public class VariableImpl extends MinimalEObjectImpl.Container implements Variab
 	 * @ordered
 	 */
 	protected String type = TYPE_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getUrl() <em>Url</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getUrl()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String URL_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getUrl() <em>Url</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getUrl()
-	 * @generated
-	 * @ordered
-	 */
-	protected String url = URL_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
@@ -157,6 +137,26 @@ public class VariableImpl extends MinimalEObjectImpl.Container implements Variab
 	protected Bond bond;
 
 	/**
+	 * The default value of the '{@link #getUnit() <em>Unit</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getUnit()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String UNIT_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getUnit() <em>Unit</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getUnit()
+	 * @generated
+	 * @ordered
+	 */
+	protected String unit = UNIT_EDEFAULT;
+
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -216,28 +216,6 @@ public class VariableImpl extends MinimalEObjectImpl.Container implements Variab
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.VARIABLE__TYPE, oldType,
 					type));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String getUrl() {
-		return url;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setUrl(String newUrl) {
-		String oldUrl = url;
-		url = newUrl;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.VARIABLE__URL, oldUrl,
-					url));
 	}
 
 	/**
@@ -389,6 +367,28 @@ public class VariableImpl extends MinimalEObjectImpl.Container implements Variab
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public String getUnit() {
+		return unit;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setUnit(String newUnit) {
+		String oldUnit = unit;
+		unit = newUnit;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.VARIABLE__UNIT, oldUnit,
+					unit));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -412,8 +412,6 @@ public class VariableImpl extends MinimalEObjectImpl.Container implements Variab
 			return getId();
 		case Execution_metamodelPackage.VARIABLE__TYPE:
 			return getType();
-		case Execution_metamodelPackage.VARIABLE__URL:
-			return getUrl();
 		case Execution_metamodelPackage.VARIABLE__NAME:
 			return getName();
 		case Execution_metamodelPackage.VARIABLE__WEIGHT:
@@ -422,6 +420,8 @@ public class VariableImpl extends MinimalEObjectImpl.Container implements Variab
 			return getValue();
 		case Execution_metamodelPackage.VARIABLE__BOND:
 			return getBond();
+		case Execution_metamodelPackage.VARIABLE__UNIT:
+			return getUnit();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -440,9 +440,6 @@ public class VariableImpl extends MinimalEObjectImpl.Container implements Variab
 		case Execution_metamodelPackage.VARIABLE__TYPE:
 			setType((String) newValue);
 			return;
-		case Execution_metamodelPackage.VARIABLE__URL:
-			setUrl((String) newValue);
-			return;
 		case Execution_metamodelPackage.VARIABLE__NAME:
 			setName((String) newValue);
 			return;
@@ -454,6 +451,9 @@ public class VariableImpl extends MinimalEObjectImpl.Container implements Variab
 			return;
 		case Execution_metamodelPackage.VARIABLE__BOND:
 			setBond((Bond) newValue);
+			return;
+		case Execution_metamodelPackage.VARIABLE__UNIT:
+			setUnit((String) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -473,9 +473,6 @@ public class VariableImpl extends MinimalEObjectImpl.Container implements Variab
 		case Execution_metamodelPackage.VARIABLE__TYPE:
 			setType(TYPE_EDEFAULT);
 			return;
-		case Execution_metamodelPackage.VARIABLE__URL:
-			setUrl(URL_EDEFAULT);
-			return;
 		case Execution_metamodelPackage.VARIABLE__NAME:
 			setName(NAME_EDEFAULT);
 			return;
@@ -487,6 +484,9 @@ public class VariableImpl extends MinimalEObjectImpl.Container implements Variab
 			return;
 		case Execution_metamodelPackage.VARIABLE__BOND:
 			setBond((Bond) null);
+			return;
+		case Execution_metamodelPackage.VARIABLE__UNIT:
+			setUnit(UNIT_EDEFAULT);
 			return;
 		}
 		super.eUnset(featureID);
@@ -504,8 +504,6 @@ public class VariableImpl extends MinimalEObjectImpl.Container implements Variab
 			return id != ID_EDEFAULT;
 		case Execution_metamodelPackage.VARIABLE__TYPE:
 			return TYPE_EDEFAULT == null ? type != null : !TYPE_EDEFAULT.equals(type);
-		case Execution_metamodelPackage.VARIABLE__URL:
-			return URL_EDEFAULT == null ? url != null : !URL_EDEFAULT.equals(url);
 		case Execution_metamodelPackage.VARIABLE__NAME:
 			return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 		case Execution_metamodelPackage.VARIABLE__WEIGHT:
@@ -514,6 +512,8 @@ public class VariableImpl extends MinimalEObjectImpl.Container implements Variab
 			return value != null;
 		case Execution_metamodelPackage.VARIABLE__BOND:
 			return bond != null;
+		case Execution_metamodelPackage.VARIABLE__UNIT:
+			return UNIT_EDEFAULT == null ? unit != null : !UNIT_EDEFAULT.equals(unit);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -533,12 +533,12 @@ public class VariableImpl extends MinimalEObjectImpl.Container implements Variab
 		result.append(id);
 		result.append(", type: ");
 		result.append(type);
-		result.append(", url: ");
-		result.append(url);
 		result.append(", name: ");
 		result.append(name);
 		result.append(", weight: ");
 		result.append(weight);
+		result.append(", unit: ");
+		result.append(unit);
 		result.append(')');
 		return result.toString();
 	}

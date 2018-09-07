@@ -25,7 +25,6 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link MetamodelExecution.EStep#getExecutionDate <em>Execution Date</em>}</li>
  *   <li>{@link MetamodelExecution.EStep#getCreatedById <em>Created By Id</em>}</li>
  *   <li>{@link MetamodelExecution.EStep#getExecutedById <em>Executed By Id</em>}</li>
- *   <li>{@link MetamodelExecution.EStep#getIdStep <em>Id Step</em>}</li>
  *   <li>{@link MetamodelExecution.EStep#getJustification <em>Justification</em>}</li>
  *   <li>{@link MetamodelExecution.EStep#getStep <em>Step</em>}</li>
  *   <li>{@link MetamodelExecution.EStep#getCreator <em>Creator</em>}</li>
@@ -49,7 +48,7 @@ public interface EStep extends EObject {
 	 * @return the value of the '<em>Id</em>' attribute.
 	 * @see #setId(int)
 	 * @see MetamodelExecution.Execution_metamodelPackage#getEStep_Id()
-	 * @model
+	 * @model id="true"
 	 * @generated
 	 */
 	int getId();
@@ -300,32 +299,6 @@ public interface EStep extends EObject {
 	 * @generated
 	 */
 	void setExecutedById(int value);
-
-	/**
-	 * Returns the value of the '<em><b>Id Step</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Id Step</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Id Step</em>' attribute.
-	 * @see #setIdStep(int)
-	 * @see MetamodelExecution.Execution_metamodelPackage#getEStep_IdStep()
-	 * @model
-	 * @generated
-	 */
-	int getIdStep();
-
-	/**
-	 * Sets the value of the '{@link MetamodelExecution.EStep#getIdStep <em>Id Step</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Id Step</em>' attribute.
-	 * @see #getIdStep()
-	 * @generated
-	 */
-	void setIdStep(int value);
 
 	/**
 	 * Returns the value of the '<em><b>Justification</b></em>' containment reference.

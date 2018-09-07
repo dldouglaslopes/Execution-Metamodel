@@ -24,14 +24,12 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * </p>
  * <ul>
  *   <li>{@link MetamodelExecution.impl.ExaminationImpl#getId <em>Id</em>}</li>
- *   <li>{@link MetamodelExecution.impl.ExaminationImpl#getIdExamination <em>Id Examination</em>}</li>
  *   <li>{@link MetamodelExecution.impl.ExaminationImpl#getSideLimb <em>Side Limb</em>}</li>
  *   <li>{@link MetamodelExecution.impl.ExaminationImpl#getQuantity <em>Quantity</em>}</li>
  *   <li>{@link MetamodelExecution.impl.ExaminationImpl#getJustification <em>Justification</em>}</li>
  *   <li>{@link MetamodelExecution.impl.ExaminationImpl#getClinicalIndication <em>Clinical Indication</em>}</li>
- *   <li>{@link MetamodelExecution.impl.ExaminationImpl#getSideLimbDisplay <em>Side Limb Display</em>}</li>
  *   <li>{@link MetamodelExecution.impl.ExaminationImpl#getExam <em>Exam</em>}</li>
- *   <li>{@link MetamodelExecution.impl.ExaminationImpl#getName <em>Name</em>}</li>
+ *   <li>{@link MetamodelExecution.impl.ExaminationImpl#getCategory <em>Category</em>}</li>
  * </ul>
  *
  * @generated
@@ -56,26 +54,6 @@ public class ExaminationImpl extends MinimalEObjectImpl.Container implements Exa
 	 * @ordered
 	 */
 	protected int id = ID_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getIdExamination() <em>Id Examination</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getIdExamination()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final int ID_EXAMINATION_EDEFAULT = 0;
-
-	/**
-	 * The cached value of the '{@link #getIdExamination() <em>Id Examination</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getIdExamination()
-	 * @generated
-	 * @ordered
-	 */
-	protected int idExamination = ID_EXAMINATION_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getSideLimb() <em>Side Limb</em>}' attribute.
@@ -158,26 +136,6 @@ public class ExaminationImpl extends MinimalEObjectImpl.Container implements Exa
 	protected String clinicalIndication = CLINICAL_INDICATION_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getSideLimbDisplay() <em>Side Limb Display</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getSideLimbDisplay()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String SIDE_LIMB_DISPLAY_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getSideLimbDisplay() <em>Side Limb Display</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getSideLimbDisplay()
-	 * @generated
-	 * @ordered
-	 */
-	protected String sideLimbDisplay = SIDE_LIMB_DISPLAY_EDEFAULT;
-
-	/**
 	 * The cached value of the '{@link #getExam() <em>Exam</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -188,24 +146,24 @@ public class ExaminationImpl extends MinimalEObjectImpl.Container implements Exa
 	protected Exam exam;
 
 	/**
-	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * The default value of the '{@link #getCategory() <em>Category</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getName()
+	 * @see #getCategory()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String NAME_EDEFAULT = null;
+	protected static final String CATEGORY_EDEFAULT = null;
 
 	/**
-	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * The cached value of the '{@link #getCategory() <em>Category</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getName()
+	 * @see #getCategory()
 	 * @generated
 	 * @ordered
 	 */
-	protected String name = NAME_EDEFAULT;
+	protected String category = CATEGORY_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -246,28 +204,6 @@ public class ExaminationImpl extends MinimalEObjectImpl.Container implements Exa
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.EXAMINATION__ID, oldId,
 					id));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public int getIdExamination() {
-		return idExamination;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setIdExamination(int newIdExamination) {
-		int oldIdExamination = idExamination;
-		idExamination = newIdExamination;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET,
-					Execution_metamodelPackage.EXAMINATION__ID_EXAMINATION, oldIdExamination, idExamination));
 	}
 
 	/**
@@ -364,28 +300,6 @@ public class ExaminationImpl extends MinimalEObjectImpl.Container implements Exa
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getSideLimbDisplay() {
-		return sideLimbDisplay;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setSideLimbDisplay(String newSideLimbDisplay) {
-		String oldSideLimbDisplay = sideLimbDisplay;
-		sideLimbDisplay = newSideLimbDisplay;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET,
-					Execution_metamodelPackage.EXAMINATION__SIDE_LIMB_DISPLAY, oldSideLimbDisplay, sideLimbDisplay));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public Exam getExam() {
 		return exam;
 	}
@@ -436,8 +350,8 @@ public class ExaminationImpl extends MinimalEObjectImpl.Container implements Exa
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getName() {
-		return name;
+	public String getCategory() {
+		return category;
 	}
 
 	/**
@@ -445,12 +359,12 @@ public class ExaminationImpl extends MinimalEObjectImpl.Container implements Exa
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setName(String newName) {
-		String oldName = name;
-		name = newName;
+	public void setCategory(String newCategory) {
+		String oldCategory = category;
+		category = newCategory;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.EXAMINATION__NAME, oldName,
-					name));
+			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.EXAMINATION__CATEGORY,
+					oldCategory, category));
 	}
 
 	/**
@@ -477,8 +391,6 @@ public class ExaminationImpl extends MinimalEObjectImpl.Container implements Exa
 		switch (featureID) {
 		case Execution_metamodelPackage.EXAMINATION__ID:
 			return getId();
-		case Execution_metamodelPackage.EXAMINATION__ID_EXAMINATION:
-			return getIdExamination();
 		case Execution_metamodelPackage.EXAMINATION__SIDE_LIMB:
 			return getSideLimb();
 		case Execution_metamodelPackage.EXAMINATION__QUANTITY:
@@ -487,12 +399,10 @@ public class ExaminationImpl extends MinimalEObjectImpl.Container implements Exa
 			return getJustification();
 		case Execution_metamodelPackage.EXAMINATION__CLINICAL_INDICATION:
 			return getClinicalIndication();
-		case Execution_metamodelPackage.EXAMINATION__SIDE_LIMB_DISPLAY:
-			return getSideLimbDisplay();
 		case Execution_metamodelPackage.EXAMINATION__EXAM:
 			return getExam();
-		case Execution_metamodelPackage.EXAMINATION__NAME:
-			return getName();
+		case Execution_metamodelPackage.EXAMINATION__CATEGORY:
+			return getCategory();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -508,9 +418,6 @@ public class ExaminationImpl extends MinimalEObjectImpl.Container implements Exa
 		case Execution_metamodelPackage.EXAMINATION__ID:
 			setId((Integer) newValue);
 			return;
-		case Execution_metamodelPackage.EXAMINATION__ID_EXAMINATION:
-			setIdExamination((Integer) newValue);
-			return;
 		case Execution_metamodelPackage.EXAMINATION__SIDE_LIMB:
 			setSideLimb((String) newValue);
 			return;
@@ -523,14 +430,11 @@ public class ExaminationImpl extends MinimalEObjectImpl.Container implements Exa
 		case Execution_metamodelPackage.EXAMINATION__CLINICAL_INDICATION:
 			setClinicalIndication((String) newValue);
 			return;
-		case Execution_metamodelPackage.EXAMINATION__SIDE_LIMB_DISPLAY:
-			setSideLimbDisplay((String) newValue);
-			return;
 		case Execution_metamodelPackage.EXAMINATION__EXAM:
 			setExam((Exam) newValue);
 			return;
-		case Execution_metamodelPackage.EXAMINATION__NAME:
-			setName((String) newValue);
+		case Execution_metamodelPackage.EXAMINATION__CATEGORY:
+			setCategory((String) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -547,9 +451,6 @@ public class ExaminationImpl extends MinimalEObjectImpl.Container implements Exa
 		case Execution_metamodelPackage.EXAMINATION__ID:
 			setId(ID_EDEFAULT);
 			return;
-		case Execution_metamodelPackage.EXAMINATION__ID_EXAMINATION:
-			setIdExamination(ID_EXAMINATION_EDEFAULT);
-			return;
 		case Execution_metamodelPackage.EXAMINATION__SIDE_LIMB:
 			setSideLimb(SIDE_LIMB_EDEFAULT);
 			return;
@@ -562,14 +463,11 @@ public class ExaminationImpl extends MinimalEObjectImpl.Container implements Exa
 		case Execution_metamodelPackage.EXAMINATION__CLINICAL_INDICATION:
 			setClinicalIndication(CLINICAL_INDICATION_EDEFAULT);
 			return;
-		case Execution_metamodelPackage.EXAMINATION__SIDE_LIMB_DISPLAY:
-			setSideLimbDisplay(SIDE_LIMB_DISPLAY_EDEFAULT);
-			return;
 		case Execution_metamodelPackage.EXAMINATION__EXAM:
 			setExam((Exam) null);
 			return;
-		case Execution_metamodelPackage.EXAMINATION__NAME:
-			setName(NAME_EDEFAULT);
+		case Execution_metamodelPackage.EXAMINATION__CATEGORY:
+			setCategory(CATEGORY_EDEFAULT);
 			return;
 		}
 		super.eUnset(featureID);
@@ -585,8 +483,6 @@ public class ExaminationImpl extends MinimalEObjectImpl.Container implements Exa
 		switch (featureID) {
 		case Execution_metamodelPackage.EXAMINATION__ID:
 			return id != ID_EDEFAULT;
-		case Execution_metamodelPackage.EXAMINATION__ID_EXAMINATION:
-			return idExamination != ID_EXAMINATION_EDEFAULT;
 		case Execution_metamodelPackage.EXAMINATION__SIDE_LIMB:
 			return SIDE_LIMB_EDEFAULT == null ? sideLimb != null : !SIDE_LIMB_EDEFAULT.equals(sideLimb);
 		case Execution_metamodelPackage.EXAMINATION__QUANTITY:
@@ -597,13 +493,10 @@ public class ExaminationImpl extends MinimalEObjectImpl.Container implements Exa
 		case Execution_metamodelPackage.EXAMINATION__CLINICAL_INDICATION:
 			return CLINICAL_INDICATION_EDEFAULT == null ? clinicalIndication != null
 					: !CLINICAL_INDICATION_EDEFAULT.equals(clinicalIndication);
-		case Execution_metamodelPackage.EXAMINATION__SIDE_LIMB_DISPLAY:
-			return SIDE_LIMB_DISPLAY_EDEFAULT == null ? sideLimbDisplay != null
-					: !SIDE_LIMB_DISPLAY_EDEFAULT.equals(sideLimbDisplay);
 		case Execution_metamodelPackage.EXAMINATION__EXAM:
 			return exam != null;
-		case Execution_metamodelPackage.EXAMINATION__NAME:
-			return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+		case Execution_metamodelPackage.EXAMINATION__CATEGORY:
+			return CATEGORY_EDEFAULT == null ? category != null : !CATEGORY_EDEFAULT.equals(category);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -621,8 +514,6 @@ public class ExaminationImpl extends MinimalEObjectImpl.Container implements Exa
 		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (id: ");
 		result.append(id);
-		result.append(", idExamination: ");
-		result.append(idExamination);
 		result.append(", sideLimb: ");
 		result.append(sideLimb);
 		result.append(", quantity: ");
@@ -631,10 +522,8 @@ public class ExaminationImpl extends MinimalEObjectImpl.Container implements Exa
 		result.append(justification);
 		result.append(", clinicalIndication: ");
 		result.append(clinicalIndication);
-		result.append(", sideLimbDisplay: ");
-		result.append(sideLimbDisplay);
-		result.append(", name: ");
-		result.append(name);
+		result.append(", category: ");
+		result.append(category);
 		result.append(')');
 		return result.toString();
 	}

@@ -276,6 +276,8 @@ public class Execution_metamodelSwitch<T> extends Switch<T> {
 			Prescription prescription = (Prescription) theEObject;
 			T result = casePrescription(prescription);
 			if (result == null)
+				result = caseNotification(prescription);
+			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
 		}
@@ -303,13 +305,6 @@ public class Execution_metamodelSwitch<T> extends Switch<T> {
 		case Execution_metamodelPackage.MEDICATION: {
 			Medication medication = (Medication) theEObject;
 			T result = caseMedication(medication);
-			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
-		case Execution_metamodelPackage.MEDICINE: {
-			Medicine medicine = (Medicine) theEObject;
-			T result = caseMedicine(medicine);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -394,8 +389,6 @@ public class Execution_metamodelSwitch<T> extends Switch<T> {
 			Professional professional = (Professional) theEObject;
 			T result = caseProfessional(professional);
 			if (result == null)
-				result = caseUser(professional);
-			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
 		}
@@ -427,13 +420,6 @@ public class Execution_metamodelSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case Execution_metamodelPackage.COMORBIDITY: {
-			Comorbidity comorbidity = (Comorbidity) theEObject;
-			T result = caseComorbidity(comorbidity);
-			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
 		case Execution_metamodelPackage.PROCEDURE: {
 			Procedure procedure = (Procedure) theEObject;
 			T result = caseProcedure(procedure);
@@ -444,6 +430,93 @@ public class Execution_metamodelSwitch<T> extends Switch<T> {
 		case Execution_metamodelPackage.INTERNMENT: {
 			Internment internment = (Internment) theEObject;
 			T result = caseInternment(internment);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case Execution_metamodelPackage.COMPLEMENTARY_CONDUCTS: {
+			ComplementaryConducts complementaryConducts = (ComplementaryConducts) theEObject;
+			T result = caseComplementaryConducts(complementaryConducts);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case Execution_metamodelPackage.ATTENDANCE: {
+			Attendance attendance = (Attendance) theEObject;
+			T result = caseAttendance(attendance);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case Execution_metamodelPackage.COMORBIDITY: {
+			Comorbidity comorbidity = (Comorbidity) theEObject;
+			T result = caseComorbidity(comorbidity);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case Execution_metamodelPackage.COMPLEMENTARY_MEDICATION: {
+			ComplementaryMedication complementaryMedication = (ComplementaryMedication) theEObject;
+			T result = caseComplementaryMedication(complementaryMedication);
+			if (result == null)
+				result = caseComplementaryConducts(complementaryMedication);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case Execution_metamodelPackage.COMPLEMENTARY_PROCEDURE: {
+			ComplementaryProcedure complementaryProcedure = (ComplementaryProcedure) theEObject;
+			T result = caseComplementaryProcedure(complementaryProcedure);
+			if (result == null)
+				result = caseComplementaryConducts(complementaryProcedure);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case Execution_metamodelPackage.SUSPENSION: {
+			Suspension suspension = (Suspension) theEObject;
+			T result = caseSuspension(suspension);
+			if (result == null)
+				result = caseNotification(suspension);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case Execution_metamodelPackage.MEDICATION_PRESCRIBED_RESOURCE: {
+			MedicationPrescribedResource medicationPrescribedResource = (MedicationPrescribedResource) theEObject;
+			T result = caseMedicationPrescribedResource(medicationPrescribedResource);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case Execution_metamodelPackage.NOTIFICATION: {
+			Notification notification = (Notification) theEObject;
+			T result = caseNotification(notification);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case Execution_metamodelPackage.PROCEDURE_PRESCRIBED_RESOURCE: {
+			ProcedurePrescribedResource procedurePrescribedResource = (ProcedurePrescribedResource) theEObject;
+			T result = caseProcedurePrescribedResource(procedurePrescribedResource);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case Execution_metamodelPackage.COMPLEMENTARY_EXAMINATION: {
+			ComplementaryExamination complementaryExamination = (ComplementaryExamination) theEObject;
+			T result = caseComplementaryExamination(complementaryExamination);
+			if (result == null)
+				result = caseComplementaryConducts(complementaryExamination);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case Execution_metamodelPackage.COMPLEMENTARY_ITEM_PRESCRIPTION: {
+			ComplementaryItemPrescription complementaryItemPrescription = (ComplementaryItemPrescription) theEObject;
+			T result = caseComplementaryItemPrescription(complementaryItemPrescription);
+			if (result == null)
+				result = caseComplementaryConducts(complementaryItemPrescription);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -919,21 +992,6 @@ public class Execution_metamodelSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Medicine</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Medicine</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseMedicine(Medicine object) {
-		return null;
-	}
-
-	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Unit</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -1159,21 +1217,6 @@ public class Execution_metamodelSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Comorbidity</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Comorbidity</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseComorbidity(Comorbidity object) {
-		return null;
-	}
-
-	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Procedure</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -1200,6 +1243,171 @@ public class Execution_metamodelSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseInternment(Internment object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Complementary Conducts</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Complementary Conducts</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseComplementaryConducts(ComplementaryConducts object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Attendance</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Attendance</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseAttendance(Attendance object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Comorbidity</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Comorbidity</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseComorbidity(Comorbidity object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Complementary Medication</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Complementary Medication</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseComplementaryMedication(ComplementaryMedication object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Complementary Procedure</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Complementary Procedure</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseComplementaryProcedure(ComplementaryProcedure object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Suspension</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Suspension</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseSuspension(Suspension object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Medication Prescribed Resource</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Medication Prescribed Resource</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseMedicationPrescribedResource(MedicationPrescribedResource object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Notification</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Notification</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseNotification(Notification object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Procedure Prescribed Resource</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Procedure Prescribed Resource</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseProcedurePrescribedResource(ProcedurePrescribedResource object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Complementary Examination</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Complementary Examination</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseComplementaryExamination(ComplementaryExamination object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Complementary Item Prescription</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Complementary Item Prescription</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseComplementaryItemPrescription(ComplementaryItemPrescription object) {
 		return null;
 	}
 

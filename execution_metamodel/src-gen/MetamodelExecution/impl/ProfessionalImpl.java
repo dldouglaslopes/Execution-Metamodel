@@ -7,6 +7,8 @@ import MetamodelExecution.Professional;
 
 import org.eclipse.emf.ecore.EClass;
 
+import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+
 /**
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Professional</b></em>'.
@@ -14,7 +16,7 @@ import org.eclipse.emf.ecore.EClass;
  *
  * @generated
  */
-public class ProfessionalImpl extends UserImpl implements Professional {
+public class ProfessionalImpl extends MinimalEObjectImpl.Container implements Professional {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

@@ -22,7 +22,6 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * <ul>
  *   <li>{@link MetamodelExecution.impl.ComplementImpl#getId <em>Id</em>}</li>
  *   <li>{@link MetamodelExecution.impl.ComplementImpl#getSideLimb <em>Side Limb</em>}</li>
- *   <li>{@link MetamodelExecution.impl.ComplementImpl#getSideLimbDisplay <em>Side Limb Display</em>}</li>
  *   <li>{@link MetamodelExecution.impl.ComplementImpl#getClinicalIndication <em>Clinical Indication</em>}</li>
  *   <li>{@link MetamodelExecution.impl.ComplementImpl#getJustification <em>Justification</em>}</li>
  *   <li>{@link MetamodelExecution.impl.ComplementImpl#getQuantity <em>Quantity</em>}</li>
@@ -70,26 +69,6 @@ public class ComplementImpl extends MinimalEObjectImpl.Container implements Comp
 	 * @ordered
 	 */
 	protected String sideLimb = SIDE_LIMB_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getSideLimbDisplay() <em>Side Limb Display</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getSideLimbDisplay()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String SIDE_LIMB_DISPLAY_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getSideLimbDisplay() <em>Side Limb Display</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getSideLimbDisplay()
-	 * @generated
-	 * @ordered
-	 */
-	protected String sideLimbDisplay = SIDE_LIMB_DISPLAY_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getClinicalIndication() <em>Clinical Indication</em>}' attribute.
@@ -219,28 +198,6 @@ public class ComplementImpl extends MinimalEObjectImpl.Container implements Comp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getSideLimbDisplay() {
-		return sideLimbDisplay;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setSideLimbDisplay(String newSideLimbDisplay) {
-		String oldSideLimbDisplay = sideLimbDisplay;
-		sideLimbDisplay = newSideLimbDisplay;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET,
-					Execution_metamodelPackage.COMPLEMENT__SIDE_LIMB_DISPLAY, oldSideLimbDisplay, sideLimbDisplay));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public String getClinicalIndication() {
 		return clinicalIndication;
 	}
@@ -315,8 +272,6 @@ public class ComplementImpl extends MinimalEObjectImpl.Container implements Comp
 			return getId();
 		case Execution_metamodelPackage.COMPLEMENT__SIDE_LIMB:
 			return getSideLimb();
-		case Execution_metamodelPackage.COMPLEMENT__SIDE_LIMB_DISPLAY:
-			return getSideLimbDisplay();
 		case Execution_metamodelPackage.COMPLEMENT__CLINICAL_INDICATION:
 			return getClinicalIndication();
 		case Execution_metamodelPackage.COMPLEMENT__JUSTIFICATION:
@@ -340,9 +295,6 @@ public class ComplementImpl extends MinimalEObjectImpl.Container implements Comp
 			return;
 		case Execution_metamodelPackage.COMPLEMENT__SIDE_LIMB:
 			setSideLimb((String) newValue);
-			return;
-		case Execution_metamodelPackage.COMPLEMENT__SIDE_LIMB_DISPLAY:
-			setSideLimbDisplay((String) newValue);
 			return;
 		case Execution_metamodelPackage.COMPLEMENT__CLINICAL_INDICATION:
 			setClinicalIndication((String) newValue);
@@ -371,9 +323,6 @@ public class ComplementImpl extends MinimalEObjectImpl.Container implements Comp
 		case Execution_metamodelPackage.COMPLEMENT__SIDE_LIMB:
 			setSideLimb(SIDE_LIMB_EDEFAULT);
 			return;
-		case Execution_metamodelPackage.COMPLEMENT__SIDE_LIMB_DISPLAY:
-			setSideLimbDisplay(SIDE_LIMB_DISPLAY_EDEFAULT);
-			return;
 		case Execution_metamodelPackage.COMPLEMENT__CLINICAL_INDICATION:
 			setClinicalIndication(CLINICAL_INDICATION_EDEFAULT);
 			return;
@@ -399,9 +348,6 @@ public class ComplementImpl extends MinimalEObjectImpl.Container implements Comp
 			return id != ID_EDEFAULT;
 		case Execution_metamodelPackage.COMPLEMENT__SIDE_LIMB:
 			return SIDE_LIMB_EDEFAULT == null ? sideLimb != null : !SIDE_LIMB_EDEFAULT.equals(sideLimb);
-		case Execution_metamodelPackage.COMPLEMENT__SIDE_LIMB_DISPLAY:
-			return SIDE_LIMB_DISPLAY_EDEFAULT == null ? sideLimbDisplay != null
-					: !SIDE_LIMB_DISPLAY_EDEFAULT.equals(sideLimbDisplay);
 		case Execution_metamodelPackage.COMPLEMENT__CLINICAL_INDICATION:
 			return CLINICAL_INDICATION_EDEFAULT == null ? clinicalIndication != null
 					: !CLINICAL_INDICATION_EDEFAULT.equals(clinicalIndication);
@@ -429,8 +375,6 @@ public class ComplementImpl extends MinimalEObjectImpl.Container implements Comp
 		result.append(id);
 		result.append(", sideLimb: ");
 		result.append(sideLimb);
-		result.append(", sideLimbDisplay: ");
-		result.append(sideLimbDisplay);
 		result.append(", clinicalIndication: ");
 		result.append(clinicalIndication);
 		result.append(", justification: ");

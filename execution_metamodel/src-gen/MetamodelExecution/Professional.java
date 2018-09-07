@@ -2,6 +2,8 @@
  */
 package MetamodelExecution;
 
+import org.eclipse.emf.ecore.EObject;
+
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Professional</b></em>'.
@@ -12,5 +14,5 @@ package MetamodelExecution;
  * @model
  * @generated
  */
-public interface Professional extends User {
+public interface Professional extends EObject {
 } // Professional

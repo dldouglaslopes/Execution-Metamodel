@@ -15,8 +15,7 @@ import org.eclipse.emf.ecore.EObject;
  * <ul>
  *   <li>{@link MetamodelExecution.Bond#getId <em>Id</em>}</li>
  *   <li>{@link MetamodelExecution.Bond#getType <em>Type</em>}</li>
- *   <li>{@link MetamodelExecution.Bond#getTruePremise <em>True Premise</em>}</li>
- *   <li>{@link MetamodelExecution.Bond#getTruePremiseDisplay <em>True Premise Display</em>}</li>
+ *   <li>{@link MetamodelExecution.Bond#getComorbidity <em>Comorbidity</em>}</li>
  * </ul>
  *
  * @see MetamodelExecution.Execution_metamodelPackage#getBond()
@@ -35,7 +34,7 @@ public interface Bond extends EObject {
 	 * @return the value of the '<em>Id</em>' attribute.
 	 * @see #setId(int)
 	 * @see MetamodelExecution.Execution_metamodelPackage#getBond_Id()
-	 * @model
+	 * @model id="true"
 	 * @generated
 	 */
 	int getId();
@@ -77,55 +76,29 @@ public interface Bond extends EObject {
 	void setType(String value);
 
 	/**
-	 * Returns the value of the '<em><b>True Premise</b></em>' attribute.
+	 * Returns the value of the '<em><b>Comorbidity</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>True Premise</em>' attribute isn't clear,
+	 * If the meaning of the '<em>Comorbidity</em>' containment reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>True Premise</em>' attribute.
-	 * @see #setTruePremise(String)
-	 * @see MetamodelExecution.Execution_metamodelPackage#getBond_TruePremise()
-	 * @model
+	 * @return the value of the '<em>Comorbidity</em>' containment reference.
+	 * @see #setComorbidity(Comorbidity)
+	 * @see MetamodelExecution.Execution_metamodelPackage#getBond_Comorbidity()
+	 * @model containment="true" required="true"
 	 * @generated
 	 */
-	String getTruePremise();
+	Comorbidity getComorbidity();
 
 	/**
-	 * Sets the value of the '{@link MetamodelExecution.Bond#getTruePremise <em>True Premise</em>}' attribute.
+	 * Sets the value of the '{@link MetamodelExecution.Bond#getComorbidity <em>Comorbidity</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>True Premise</em>' attribute.
-	 * @see #getTruePremise()
+	 * @param value the new value of the '<em>Comorbidity</em>' containment reference.
+	 * @see #getComorbidity()
 	 * @generated
 	 */
-	void setTruePremise(String value);
-
-	/**
-	 * Returns the value of the '<em><b>True Premise Display</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>True Premise Display</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>True Premise Display</em>' attribute.
-	 * @see #setTruePremiseDisplay(String)
-	 * @see MetamodelExecution.Execution_metamodelPackage#getBond_TruePremiseDisplay()
-	 * @model
-	 * @generated
-	 */
-	String getTruePremiseDisplay();
-
-	/**
-	 * Sets the value of the '{@link MetamodelExecution.Bond#getTruePremiseDisplay <em>True Premise Display</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>True Premise Display</em>' attribute.
-	 * @see #getTruePremiseDisplay()
-	 * @generated
-	 */
-	void setTruePremiseDisplay(String value);
+	void setComorbidity(Comorbidity value);
 
 } // Bond

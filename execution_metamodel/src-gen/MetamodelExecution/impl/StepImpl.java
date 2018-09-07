@@ -27,6 +27,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *   <li>{@link MetamodelExecution.impl.StepImpl#isIsInitial <em>Is Initial</em>}</li>
  *   <li>{@link MetamodelExecution.impl.StepImpl#isIsTerminal <em>Is Terminal</em>}</li>
  *   <li>{@link MetamodelExecution.impl.StepImpl#isMandatory <em>Mandatory</em>}</li>
+ *   <li>{@link MetamodelExecution.impl.StepImpl#getLastAuditing <em>Last Auditing</em>}</li>
  * </ul>
  *
  * @generated
@@ -171,6 +172,26 @@ public class StepImpl extends MinimalEObjectImpl.Container implements Step {
 	 * @ordered
 	 */
 	protected boolean mandatory = MANDATORY_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getLastAuditing() <em>Last Auditing</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getLastAuditing()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String LAST_AUDITING_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getLastAuditing() <em>Last Auditing</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getLastAuditing()
+	 * @generated
+	 * @ordered
+	 */
+	protected String lastAuditing = LAST_AUDITING_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -349,6 +370,28 @@ public class StepImpl extends MinimalEObjectImpl.Container implements Step {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public String getLastAuditing() {
+		return lastAuditing;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setLastAuditing(String newLastAuditing) {
+		String oldLastAuditing = lastAuditing;
+		lastAuditing = newLastAuditing;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.STEP__LAST_AUDITING,
+					oldLastAuditing, lastAuditing));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -366,6 +409,8 @@ public class StepImpl extends MinimalEObjectImpl.Container implements Step {
 			return isIsTerminal();
 		case Execution_metamodelPackage.STEP__MANDATORY:
 			return isMandatory();
+		case Execution_metamodelPackage.STEP__LAST_AUDITING:
+			return getLastAuditing();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -398,6 +443,9 @@ public class StepImpl extends MinimalEObjectImpl.Container implements Step {
 			return;
 		case Execution_metamodelPackage.STEP__MANDATORY:
 			setMandatory((Boolean) newValue);
+			return;
+		case Execution_metamodelPackage.STEP__LAST_AUDITING:
+			setLastAuditing((String) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -432,6 +480,9 @@ public class StepImpl extends MinimalEObjectImpl.Container implements Step {
 		case Execution_metamodelPackage.STEP__MANDATORY:
 			setMandatory(MANDATORY_EDEFAULT);
 			return;
+		case Execution_metamodelPackage.STEP__LAST_AUDITING:
+			setLastAuditing(LAST_AUDITING_EDEFAULT);
+			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -458,6 +509,8 @@ public class StepImpl extends MinimalEObjectImpl.Container implements Step {
 			return isTerminal != IS_TERMINAL_EDEFAULT;
 		case Execution_metamodelPackage.STEP__MANDATORY:
 			return mandatory != MANDATORY_EDEFAULT;
+		case Execution_metamodelPackage.STEP__LAST_AUDITING:
+			return LAST_AUDITING_EDEFAULT == null ? lastAuditing != null : !LAST_AUDITING_EDEFAULT.equals(lastAuditing);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -487,6 +540,8 @@ public class StepImpl extends MinimalEObjectImpl.Container implements Step {
 		result.append(isTerminal);
 		result.append(", mandatory: ");
 		result.append(mandatory);
+		result.append(", lastAuditing: ");
+		result.append(lastAuditing);
 		result.append(')');
 		return result.toString();
 	}

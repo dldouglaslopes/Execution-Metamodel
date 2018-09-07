@@ -18,6 +18,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link MetamodelExecution.Pathway#getName <em>Name</em>}</li>
  *   <li>{@link MetamodelExecution.Pathway#getVersion <em>Version</em>}</li>
  *   <li>{@link MetamodelExecution.Pathway#isCompleted <em>Completed</em>}</li>
+ *   <li>{@link MetamodelExecution.Pathway#getLastAuditing <em>Last Auditing</em>}</li>
  * </ul>
  *
  * @see MetamodelExecution.Execution_metamodelPackage#getPathway()
@@ -36,7 +37,7 @@ public interface Pathway extends EObject {
 	 * @return the value of the '<em>Id</em>' attribute.
 	 * @see #setId(int)
 	 * @see MetamodelExecution.Execution_metamodelPackage#getPathway_Id()
-	 * @model
+	 * @model id="true"
 	 * @generated
 	 */
 	int getId();
@@ -154,5 +155,31 @@ public interface Pathway extends EObject {
 	 * @generated
 	 */
 	void setCompleted(boolean value);
+
+	/**
+	 * Returns the value of the '<em><b>Last Auditing</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Last Auditing</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Last Auditing</em>' attribute.
+	 * @see #setLastAuditing(String)
+	 * @see MetamodelExecution.Execution_metamodelPackage#getPathway_LastAuditing()
+	 * @model
+	 * @generated
+	 */
+	String getLastAuditing();
+
+	/**
+	 * Sets the value of the '{@link MetamodelExecution.Pathway#getLastAuditing <em>Last Auditing</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Last Auditing</em>' attribute.
+	 * @see #getLastAuditing()
+	 * @generated
+	 */
+	void setLastAuditing(String value);
 
 } // Pathway

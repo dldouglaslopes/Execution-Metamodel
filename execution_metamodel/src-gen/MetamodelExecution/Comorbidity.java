@@ -33,7 +33,7 @@ public interface Comorbidity extends EObject {
 	 * @return the value of the '<em>Id</em>' attribute.
 	 * @see #setId(int)
 	 * @see MetamodelExecution.Execution_metamodelPackage#getComorbidity_Id()
-	 * @model
+	 * @model id="true"
 	 * @generated
 	 */
 	int getId();

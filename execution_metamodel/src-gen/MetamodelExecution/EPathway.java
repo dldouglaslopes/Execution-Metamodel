@@ -23,16 +23,16 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link MetamodelExecution.EPathway#getConclusionDate <em>Conclusion Date</em>}</li>
  *   <li>{@link MetamodelExecution.EPathway#isCompleted <em>Completed</em>}</li>
  *   <li>{@link MetamodelExecution.EPathway#isAborted <em>Aborted</em>}</li>
- *   <li>{@link MetamodelExecution.EPathway#getIdPathway <em>Id Pathway</em>}</li>
- *   <li>{@link MetamodelExecution.EPathway#getIdLastProfessional <em>Id Last Professional</em>}</li>
- *   <li>{@link MetamodelExecution.EPathway#getIdResponsible <em>Id Responsible</em>}</li>
  *   <li>{@link MetamodelExecution.EPathway#getIdsExecutedStep <em>Ids Executed Step</em>}</li>
  *   <li>{@link MetamodelExecution.EPathway#getResponsible <em>Responsible</em>}</li>
  *   <li>{@link MetamodelExecution.EPathway#getLastprofessional <em>Lastprofessional</em>}</li>
  *   <li>{@link MetamodelExecution.EPathway#getName <em>Name</em>}</li>
  *   <li>{@link MetamodelExecution.EPathway#getJustification <em>Justification</em>}</li>
  *   <li>{@link MetamodelExecution.EPathway#getPathway <em>Pathway</em>}</li>
- *   <li>{@link MetamodelExecution.EPathway#getMedicalcare <em>Medicalcare</em>}</li>
+ *   <li>{@link MetamodelExecution.EPathway#getComplementaryconducts <em>Complementaryconducts</em>}</li>
+ *   <li>{@link MetamodelExecution.EPathway#getAttendance <em>Attendance</em>}</li>
+ *   <li>{@link MetamodelExecution.EPathway#getCid <em>Cid</em>}</li>
+ *   <li>{@link MetamodelExecution.EPathway#getTimeExecution <em>Time Execution</em>}</li>
  * </ul>
  *
  * @see MetamodelExecution.Execution_metamodelPackage#getEPathway()
@@ -67,7 +67,7 @@ public interface EPathway extends EObject {
 	 * @return the value of the '<em>Id</em>' attribute.
 	 * @see #setId(int)
 	 * @see MetamodelExecution.Execution_metamodelPackage#getEPathway_Id()
-	 * @model
+	 * @model id="true"
 	 * @generated
 	 */
 	int getId();
@@ -186,84 +186,6 @@ public interface EPathway extends EObject {
 	 * @generated
 	 */
 	void setAborted(boolean value);
-
-	/**
-	 * Returns the value of the '<em><b>Id Pathway</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Id Pathway</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Id Pathway</em>' attribute.
-	 * @see #setIdPathway(int)
-	 * @see MetamodelExecution.Execution_metamodelPackage#getEPathway_IdPathway()
-	 * @model
-	 * @generated
-	 */
-	int getIdPathway();
-
-	/**
-	 * Sets the value of the '{@link MetamodelExecution.EPathway#getIdPathway <em>Id Pathway</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Id Pathway</em>' attribute.
-	 * @see #getIdPathway()
-	 * @generated
-	 */
-	void setIdPathway(int value);
-
-	/**
-	 * Returns the value of the '<em><b>Id Last Professional</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Id Last Professional</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Id Last Professional</em>' attribute.
-	 * @see #setIdLastProfessional(int)
-	 * @see MetamodelExecution.Execution_metamodelPackage#getEPathway_IdLastProfessional()
-	 * @model
-	 * @generated
-	 */
-	int getIdLastProfessional();
-
-	/**
-	 * Sets the value of the '{@link MetamodelExecution.EPathway#getIdLastProfessional <em>Id Last Professional</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Id Last Professional</em>' attribute.
-	 * @see #getIdLastProfessional()
-	 * @generated
-	 */
-	void setIdLastProfessional(int value);
-
-	/**
-	 * Returns the value of the '<em><b>Id Responsible</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Id Responsible</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Id Responsible</em>' attribute.
-	 * @see #setIdResponsible(int)
-	 * @see MetamodelExecution.Execution_metamodelPackage#getEPathway_IdResponsible()
-	 * @model
-	 * @generated
-	 */
-	int getIdResponsible();
-
-	/**
-	 * Sets the value of the '{@link MetamodelExecution.EPathway#getIdResponsible <em>Id Responsible</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Id Responsible</em>' attribute.
-	 * @see #getIdResponsible()
-	 * @generated
-	 */
-	void setIdResponsible(int value);
 
 	/**
 	 * Returns the value of the '<em><b>Ids Executed Step</b></em>' attribute list.
@@ -412,29 +334,97 @@ public interface EPathway extends EObject {
 	void setPathway(Pathway value);
 
 	/**
-	 * Returns the value of the '<em><b>Medicalcare</b></em>' containment reference.
+	 * Returns the value of the '<em><b>Complementaryconducts</b></em>' containment reference list.
+	 * The list contents are of type {@link MetamodelExecution.ComplementaryConducts}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Medicalcare</em>' containment reference isn't clear,
+	 * If the meaning of the '<em>Complementaryconducts</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Medicalcare</em>' containment reference.
-	 * @see #setMedicalcare(MedicalCare)
-	 * @see MetamodelExecution.Execution_metamodelPackage#getEPathway_Medicalcare()
+	 * @return the value of the '<em>Complementaryconducts</em>' containment reference list.
+	 * @see MetamodelExecution.Execution_metamodelPackage#getEPathway_Complementaryconducts()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<ComplementaryConducts> getComplementaryconducts();
+
+	/**
+	 * Returns the value of the '<em><b>Attendance</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Attendance</em>' containment reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Attendance</em>' containment reference.
+	 * @see #setAttendance(Attendance)
+	 * @see MetamodelExecution.Execution_metamodelPackage#getEPathway_Attendance()
 	 * @model containment="true" required="true"
 	 * @generated
 	 */
-	MedicalCare getMedicalcare();
+	Attendance getAttendance();
 
 	/**
-	 * Sets the value of the '{@link MetamodelExecution.EPathway#getMedicalcare <em>Medicalcare</em>}' containment reference.
+	 * Sets the value of the '{@link MetamodelExecution.EPathway#getAttendance <em>Attendance</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Medicalcare</em>' containment reference.
-	 * @see #getMedicalcare()
+	 * @param value the new value of the '<em>Attendance</em>' containment reference.
+	 * @see #getAttendance()
 	 * @generated
 	 */
-	void setMedicalcare(MedicalCare value);
+	void setAttendance(Attendance value);
+
+	/**
+	 * Returns the value of the '<em><b>Cid</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Cid</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Cid</em>' attribute.
+	 * @see #setCid(String)
+	 * @see MetamodelExecution.Execution_metamodelPackage#getEPathway_Cid()
+	 * @model
+	 * @generated
+	 */
+	String getCid();
+
+	/**
+	 * Sets the value of the '{@link MetamodelExecution.EPathway#getCid <em>Cid</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Cid</em>' attribute.
+	 * @see #getCid()
+	 * @generated
+	 */
+	void setCid(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Time Execution</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Time Execution</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Time Execution</em>' attribute.
+	 * @see #setTimeExecution(double)
+	 * @see MetamodelExecution.Execution_metamodelPackage#getEPathway_TimeExecution()
+	 * @model
+	 * @generated
+	 */
+	double getTimeExecution();
+
+	/**
+	 * Sets the value of the '{@link MetamodelExecution.EPathway#getTimeExecution <em>Time Execution</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Time Execution</em>' attribute.
+	 * @see #getTimeExecution()
+	 * @generated
+	 */
+	void setTimeExecution(double value);
 
 } // EPathway

@@ -3,11 +3,14 @@
 package MetamodelExecution.impl;
 
 import MetamodelExecution.Bond;
+import MetamodelExecution.Comorbidity;
 import MetamodelExecution.Execution_metamodelPackage;
 
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
@@ -22,8 +25,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * <ul>
  *   <li>{@link MetamodelExecution.impl.BondImpl#getId <em>Id</em>}</li>
  *   <li>{@link MetamodelExecution.impl.BondImpl#getType <em>Type</em>}</li>
- *   <li>{@link MetamodelExecution.impl.BondImpl#getTruePremise <em>True Premise</em>}</li>
- *   <li>{@link MetamodelExecution.impl.BondImpl#getTruePremiseDisplay <em>True Premise Display</em>}</li>
+ *   <li>{@link MetamodelExecution.impl.BondImpl#getComorbidity <em>Comorbidity</em>}</li>
  * </ul>
  *
  * @generated
@@ -70,44 +72,14 @@ public class BondImpl extends MinimalEObjectImpl.Container implements Bond {
 	protected String type = TYPE_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getTruePremise() <em>True Premise</em>}' attribute.
+	 * The cached value of the '{@link #getComorbidity() <em>Comorbidity</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getTruePremise()
+	 * @see #getComorbidity()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String TRUE_PREMISE_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getTruePremise() <em>True Premise</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getTruePremise()
-	 * @generated
-	 * @ordered
-	 */
-	protected String truePremise = TRUE_PREMISE_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getTruePremiseDisplay() <em>True Premise Display</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getTruePremiseDisplay()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String TRUE_PREMISE_DISPLAY_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getTruePremiseDisplay() <em>True Premise Display</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getTruePremiseDisplay()
-	 * @generated
-	 * @ordered
-	 */
-	protected String truePremiseDisplay = TRUE_PREMISE_DISPLAY_EDEFAULT;
+	protected Comorbidity comorbidity;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -176,8 +148,8 @@ public class BondImpl extends MinimalEObjectImpl.Container implements Bond {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getTruePremise() {
-		return truePremise;
+	public Comorbidity getComorbidity() {
+		return comorbidity;
 	}
 
 	/**
@@ -185,12 +157,18 @@ public class BondImpl extends MinimalEObjectImpl.Container implements Bond {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setTruePremise(String newTruePremise) {
-		String oldTruePremise = truePremise;
-		truePremise = newTruePremise;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.BOND__TRUE_PREMISE,
-					oldTruePremise, truePremise));
+	public NotificationChain basicSetComorbidity(Comorbidity newComorbidity, NotificationChain msgs) {
+		Comorbidity oldComorbidity = comorbidity;
+		comorbidity = newComorbidity;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
+					Execution_metamodelPackage.BOND__COMORBIDITY, oldComorbidity, newComorbidity);
+			if (msgs == null)
+				msgs = notification;
+			else
+				msgs.add(notification);
+		}
+		return msgs;
 	}
 
 	/**
@@ -198,8 +176,21 @@ public class BondImpl extends MinimalEObjectImpl.Container implements Bond {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getTruePremiseDisplay() {
-		return truePremiseDisplay;
+	public void setComorbidity(Comorbidity newComorbidity) {
+		if (newComorbidity != comorbidity) {
+			NotificationChain msgs = null;
+			if (comorbidity != null)
+				msgs = ((InternalEObject) comorbidity).eInverseRemove(this,
+						EOPPOSITE_FEATURE_BASE - Execution_metamodelPackage.BOND__COMORBIDITY, null, msgs);
+			if (newComorbidity != null)
+				msgs = ((InternalEObject) newComorbidity).eInverseAdd(this,
+						EOPPOSITE_FEATURE_BASE - Execution_metamodelPackage.BOND__COMORBIDITY, null, msgs);
+			msgs = basicSetComorbidity(newComorbidity, msgs);
+			if (msgs != null)
+				msgs.dispatch();
+		} else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.BOND__COMORBIDITY,
+					newComorbidity, newComorbidity));
 	}
 
 	/**
@@ -207,12 +198,13 @@ public class BondImpl extends MinimalEObjectImpl.Container implements Bond {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setTruePremiseDisplay(String newTruePremiseDisplay) {
-		String oldTruePremiseDisplay = truePremiseDisplay;
-		truePremiseDisplay = newTruePremiseDisplay;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.BOND__TRUE_PREMISE_DISPLAY,
-					oldTruePremiseDisplay, truePremiseDisplay));
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+		case Execution_metamodelPackage.BOND__COMORBIDITY:
+			return basicSetComorbidity(null, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
 
 	/**
@@ -227,10 +219,8 @@ public class BondImpl extends MinimalEObjectImpl.Container implements Bond {
 			return getId();
 		case Execution_metamodelPackage.BOND__TYPE:
 			return getType();
-		case Execution_metamodelPackage.BOND__TRUE_PREMISE:
-			return getTruePremise();
-		case Execution_metamodelPackage.BOND__TRUE_PREMISE_DISPLAY:
-			return getTruePremiseDisplay();
+		case Execution_metamodelPackage.BOND__COMORBIDITY:
+			return getComorbidity();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -249,11 +239,8 @@ public class BondImpl extends MinimalEObjectImpl.Container implements Bond {
 		case Execution_metamodelPackage.BOND__TYPE:
 			setType((String) newValue);
 			return;
-		case Execution_metamodelPackage.BOND__TRUE_PREMISE:
-			setTruePremise((String) newValue);
-			return;
-		case Execution_metamodelPackage.BOND__TRUE_PREMISE_DISPLAY:
-			setTruePremiseDisplay((String) newValue);
+		case Execution_metamodelPackage.BOND__COMORBIDITY:
+			setComorbidity((Comorbidity) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -273,11 +260,8 @@ public class BondImpl extends MinimalEObjectImpl.Container implements Bond {
 		case Execution_metamodelPackage.BOND__TYPE:
 			setType(TYPE_EDEFAULT);
 			return;
-		case Execution_metamodelPackage.BOND__TRUE_PREMISE:
-			setTruePremise(TRUE_PREMISE_EDEFAULT);
-			return;
-		case Execution_metamodelPackage.BOND__TRUE_PREMISE_DISPLAY:
-			setTruePremiseDisplay(TRUE_PREMISE_DISPLAY_EDEFAULT);
+		case Execution_metamodelPackage.BOND__COMORBIDITY:
+			setComorbidity((Comorbidity) null);
 			return;
 		}
 		super.eUnset(featureID);
@@ -295,11 +279,8 @@ public class BondImpl extends MinimalEObjectImpl.Container implements Bond {
 			return id != ID_EDEFAULT;
 		case Execution_metamodelPackage.BOND__TYPE:
 			return TYPE_EDEFAULT == null ? type != null : !TYPE_EDEFAULT.equals(type);
-		case Execution_metamodelPackage.BOND__TRUE_PREMISE:
-			return TRUE_PREMISE_EDEFAULT == null ? truePremise != null : !TRUE_PREMISE_EDEFAULT.equals(truePremise);
-		case Execution_metamodelPackage.BOND__TRUE_PREMISE_DISPLAY:
-			return TRUE_PREMISE_DISPLAY_EDEFAULT == null ? truePremiseDisplay != null
-					: !TRUE_PREMISE_DISPLAY_EDEFAULT.equals(truePremiseDisplay);
+		case Execution_metamodelPackage.BOND__COMORBIDITY:
+			return comorbidity != null;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -319,10 +300,6 @@ public class BondImpl extends MinimalEObjectImpl.Container implements Bond {
 		result.append(id);
 		result.append(", type: ");
 		result.append(type);
-		result.append(", truePremise: ");
-		result.append(truePremise);
-		result.append(", truePremiseDisplay: ");
-		result.append(truePremiseDisplay);
 		result.append(')');
 		return result.toString();
 	}

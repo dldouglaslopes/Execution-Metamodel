@@ -35,7 +35,7 @@ public interface Unit extends EObject {
 	 * @return the value of the '<em>Id</em>' attribute.
 	 * @see #setId(int)
 	 * @see MetamodelExecution.Execution_metamodelPackage#getUnit_Id()
-	 * @model
+	 * @model id="true"
 	 * @generated
 	 */
 	int getId();

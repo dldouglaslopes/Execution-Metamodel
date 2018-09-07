@@ -14,14 +14,12 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  * <ul>
  *   <li>{@link MetamodelExecution.Examination#getId <em>Id</em>}</li>
- *   <li>{@link MetamodelExecution.Examination#getIdExamination <em>Id Examination</em>}</li>
  *   <li>{@link MetamodelExecution.Examination#getSideLimb <em>Side Limb</em>}</li>
  *   <li>{@link MetamodelExecution.Examination#getQuantity <em>Quantity</em>}</li>
  *   <li>{@link MetamodelExecution.Examination#getJustification <em>Justification</em>}</li>
  *   <li>{@link MetamodelExecution.Examination#getClinicalIndication <em>Clinical Indication</em>}</li>
- *   <li>{@link MetamodelExecution.Examination#getSideLimbDisplay <em>Side Limb Display</em>}</li>
  *   <li>{@link MetamodelExecution.Examination#getExam <em>Exam</em>}</li>
- *   <li>{@link MetamodelExecution.Examination#getName <em>Name</em>}</li>
+ *   <li>{@link MetamodelExecution.Examination#getCategory <em>Category</em>}</li>
  * </ul>
  *
  * @see MetamodelExecution.Execution_metamodelPackage#getExamination()
@@ -40,7 +38,7 @@ public interface Examination extends EObject {
 	 * @return the value of the '<em>Id</em>' attribute.
 	 * @see #setId(int)
 	 * @see MetamodelExecution.Execution_metamodelPackage#getExamination_Id()
-	 * @model
+	 * @model id="true"
 	 * @generated
 	 */
 	int getId();
@@ -54,32 +52,6 @@ public interface Examination extends EObject {
 	 * @generated
 	 */
 	void setId(int value);
-
-	/**
-	 * Returns the value of the '<em><b>Id Examination</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Id Examination</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Id Examination</em>' attribute.
-	 * @see #setIdExamination(int)
-	 * @see MetamodelExecution.Execution_metamodelPackage#getExamination_IdExamination()
-	 * @model
-	 * @generated
-	 */
-	int getIdExamination();
-
-	/**
-	 * Sets the value of the '{@link MetamodelExecution.Examination#getIdExamination <em>Id Examination</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Id Examination</em>' attribute.
-	 * @see #getIdExamination()
-	 * @generated
-	 */
-	void setIdExamination(int value);
 
 	/**
 	 * Returns the value of the '<em><b>Side Limb</b></em>' attribute.
@@ -186,32 +158,6 @@ public interface Examination extends EObject {
 	void setClinicalIndication(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Side Limb Display</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Side Limb Display</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Side Limb Display</em>' attribute.
-	 * @see #setSideLimbDisplay(String)
-	 * @see MetamodelExecution.Execution_metamodelPackage#getExamination_SideLimbDisplay()
-	 * @model
-	 * @generated
-	 */
-	String getSideLimbDisplay();
-
-	/**
-	 * Sets the value of the '{@link MetamodelExecution.Examination#getSideLimbDisplay <em>Side Limb Display</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Side Limb Display</em>' attribute.
-	 * @see #getSideLimbDisplay()
-	 * @generated
-	 */
-	void setSideLimbDisplay(String value);
-
-	/**
 	 * Returns the value of the '<em><b>Exam</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
@@ -238,29 +184,29 @@ public interface Examination extends EObject {
 	void setExam(Exam value);
 
 	/**
-	 * Returns the value of the '<em><b>Name</b></em>' attribute.
+	 * Returns the value of the '<em><b>Category</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Name</em>' attribute isn't clear,
+	 * If the meaning of the '<em>Category</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Name</em>' attribute.
-	 * @see #setName(String)
-	 * @see MetamodelExecution.Execution_metamodelPackage#getExamination_Name()
+	 * @return the value of the '<em>Category</em>' attribute.
+	 * @see #setCategory(String)
+	 * @see MetamodelExecution.Execution_metamodelPackage#getExamination_Category()
 	 * @model
 	 * @generated
 	 */
-	String getName();
+	String getCategory();
 
 	/**
-	 * Sets the value of the '{@link MetamodelExecution.Examination#getName <em>Name</em>}' attribute.
+	 * Sets the value of the '{@link MetamodelExecution.Examination#getCategory <em>Category</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Name</em>' attribute.
-	 * @see #getName()
+	 * @param value the new value of the '<em>Category</em>' attribute.
+	 * @see #getCategory()
 	 * @generated
 	 */
-	void setName(String value);
+	void setCategory(String value);
 
 } // Examination

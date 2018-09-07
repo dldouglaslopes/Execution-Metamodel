@@ -112,8 +112,6 @@ public class Execution_metamodelFactoryImpl extends EFactoryImpl implements Exec
 			return createVariable();
 		case Execution_metamodelPackage.MEDICATION:
 			return createMedication();
-		case Execution_metamodelPackage.MEDICINE:
-			return createMedicine();
 		case Execution_metamodelPackage.UNIT:
 			return createUnit();
 		case Execution_metamodelPackage.ACCESS:
@@ -144,12 +142,28 @@ public class Execution_metamodelFactoryImpl extends EFactoryImpl implements Exec
 			return createComorbidityRegistry();
 		case Execution_metamodelPackage.ALLERGY:
 			return createAllergy();
-		case Execution_metamodelPackage.COMORBIDITY:
-			return createComorbidity();
 		case Execution_metamodelPackage.PROCEDURE:
 			return createProcedure();
 		case Execution_metamodelPackage.INTERNMENT:
 			return createInternment();
+		case Execution_metamodelPackage.ATTENDANCE:
+			return createAttendance();
+		case Execution_metamodelPackage.COMORBIDITY:
+			return createComorbidity();
+		case Execution_metamodelPackage.COMPLEMENTARY_MEDICATION:
+			return createComplementaryMedication();
+		case Execution_metamodelPackage.COMPLEMENTARY_PROCEDURE:
+			return createComplementaryProcedure();
+		case Execution_metamodelPackage.SUSPENSION:
+			return createSuspension();
+		case Execution_metamodelPackage.MEDICATION_PRESCRIBED_RESOURCE:
+			return createMedicationPrescribedResource();
+		case Execution_metamodelPackage.PROCEDURE_PRESCRIBED_RESOURCE:
+			return createProcedurePrescribedResource();
+		case Execution_metamodelPackage.COMPLEMENTARY_EXAMINATION:
+			return createComplementaryExamination();
+		case Execution_metamodelPackage.COMPLEMENTARY_ITEM_PRESCRIPTION:
+			return createComplementaryItemPrescription();
 		default:
 			throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -440,16 +454,6 @@ public class Execution_metamodelFactoryImpl extends EFactoryImpl implements Exec
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Medicine createMedicine() {
-		MedicineImpl medicine = new MedicineImpl();
-		return medicine;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public Unit createUnit() {
 		UnitImpl unit = new UnitImpl();
 		return unit;
@@ -600,16 +604,6 @@ public class Execution_metamodelFactoryImpl extends EFactoryImpl implements Exec
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Comorbidity createComorbidity() {
-		ComorbidityImpl comorbidity = new ComorbidityImpl();
-		return comorbidity;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public Procedure createProcedure() {
 		ProcedureImpl procedure = new ProcedureImpl();
 		return procedure;
@@ -623,6 +617,96 @@ public class Execution_metamodelFactoryImpl extends EFactoryImpl implements Exec
 	public Internment createInternment() {
 		InternmentImpl internment = new InternmentImpl();
 		return internment;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Attendance createAttendance() {
+		AttendanceImpl attendance = new AttendanceImpl();
+		return attendance;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Comorbidity createComorbidity() {
+		ComorbidityImpl comorbidity = new ComorbidityImpl();
+		return comorbidity;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ComplementaryMedication createComplementaryMedication() {
+		ComplementaryMedicationImpl complementaryMedication = new ComplementaryMedicationImpl();
+		return complementaryMedication;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ComplementaryProcedure createComplementaryProcedure() {
+		ComplementaryProcedureImpl complementaryProcedure = new ComplementaryProcedureImpl();
+		return complementaryProcedure;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Suspension createSuspension() {
+		SuspensionImpl suspension = new SuspensionImpl();
+		return suspension;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public MedicationPrescribedResource createMedicationPrescribedResource() {
+		MedicationPrescribedResourceImpl medicationPrescribedResource = new MedicationPrescribedResourceImpl();
+		return medicationPrescribedResource;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ProcedurePrescribedResource createProcedurePrescribedResource() {
+		ProcedurePrescribedResourceImpl procedurePrescribedResource = new ProcedurePrescribedResourceImpl();
+		return procedurePrescribedResource;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ComplementaryExamination createComplementaryExamination() {
+		ComplementaryExaminationImpl complementaryExamination = new ComplementaryExaminationImpl();
+		return complementaryExamination;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ComplementaryItemPrescription createComplementaryItemPrescription() {
+		ComplementaryItemPrescriptionImpl complementaryItemPrescription = new ComplementaryItemPrescriptionImpl();
+		return complementaryItemPrescription;
 	}
 
 	/**

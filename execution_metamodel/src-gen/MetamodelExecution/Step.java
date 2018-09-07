@@ -20,6 +20,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link MetamodelExecution.Step#isIsInitial <em>Is Initial</em>}</li>
  *   <li>{@link MetamodelExecution.Step#isIsTerminal <em>Is Terminal</em>}</li>
  *   <li>{@link MetamodelExecution.Step#isMandatory <em>Mandatory</em>}</li>
+ *   <li>{@link MetamodelExecution.Step#getLastAuditing <em>Last Auditing</em>}</li>
  * </ul>
  *
  * @see MetamodelExecution.Execution_metamodelPackage#getStep()
@@ -38,7 +39,7 @@ public interface Step extends EObject {
 	 * @return the value of the '<em>Id</em>' attribute.
 	 * @see #setId(int)
 	 * @see MetamodelExecution.Execution_metamodelPackage#getStep_Id()
-	 * @model
+	 * @model id="true"
 	 * @generated
 	 */
 	int getId();
@@ -208,5 +209,31 @@ public interface Step extends EObject {
 	 * @generated
 	 */
 	void setMandatory(boolean value);
+
+	/**
+	 * Returns the value of the '<em><b>Last Auditing</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Last Auditing</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Last Auditing</em>' attribute.
+	 * @see #setLastAuditing(String)
+	 * @see MetamodelExecution.Execution_metamodelPackage#getStep_LastAuditing()
+	 * @model
+	 * @generated
+	 */
+	String getLastAuditing();
+
+	/**
+	 * Sets the value of the '{@link MetamodelExecution.Step#getLastAuditing <em>Last Auditing</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Last Auditing</em>' attribute.
+	 * @see #getLastAuditing()
+	 * @generated
+	 */
+	void setLastAuditing(String value);
 
 } // Step

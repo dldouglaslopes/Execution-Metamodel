@@ -274,15 +274,6 @@ public interface Execution_metamodelFactory extends EFactory {
 	Medication createMedication();
 
 	/**
-	 * Returns a new object of class '<em>Medicine</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Medicine</em>'.
-	 * @generated
-	 */
-	Medicine createMedicine();
-
-	/**
 	 * Returns a new object of class '<em>Unit</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -418,15 +409,6 @@ public interface Execution_metamodelFactory extends EFactory {
 	Allergy createAllergy();
 
 	/**
-	 * Returns a new object of class '<em>Comorbidity</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Comorbidity</em>'.
-	 * @generated
-	 */
-	Comorbidity createComorbidity();
-
-	/**
 	 * Returns a new object of class '<em>Procedure</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -443,6 +425,87 @@ public interface Execution_metamodelFactory extends EFactory {
 	 * @generated
 	 */
 	Internment createInternment();
+
+	/**
+	 * Returns a new object of class '<em>Attendance</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Attendance</em>'.
+	 * @generated
+	 */
+	Attendance createAttendance();
+
+	/**
+	 * Returns a new object of class '<em>Comorbidity</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Comorbidity</em>'.
+	 * @generated
+	 */
+	Comorbidity createComorbidity();
+
+	/**
+	 * Returns a new object of class '<em>Complementary Medication</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Complementary Medication</em>'.
+	 * @generated
+	 */
+	ComplementaryMedication createComplementaryMedication();
+
+	/**
+	 * Returns a new object of class '<em>Complementary Procedure</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Complementary Procedure</em>'.
+	 * @generated
+	 */
+	ComplementaryProcedure createComplementaryProcedure();
+
+	/**
+	 * Returns a new object of class '<em>Suspension</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Suspension</em>'.
+	 * @generated
+	 */
+	Suspension createSuspension();
+
+	/**
+	 * Returns a new object of class '<em>Medication Prescribed Resource</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Medication Prescribed Resource</em>'.
+	 * @generated
+	 */
+	MedicationPrescribedResource createMedicationPrescribedResource();
+
+	/**
+	 * Returns a new object of class '<em>Procedure Prescribed Resource</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Procedure Prescribed Resource</em>'.
+	 * @generated
+	 */
+	ProcedurePrescribedResource createProcedurePrescribedResource();
+
+	/**
+	 * Returns a new object of class '<em>Complementary Examination</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Complementary Examination</em>'.
+	 * @generated
+	 */
+	ComplementaryExamination createComplementaryExamination();
+
+	/**
+	 * Returns a new object of class '<em>Complementary Item Prescription</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Complementary Item Prescription</em>'.
+	 * @generated
+	 */
+	ComplementaryItemPrescription createComplementaryItemPrescription();
 
 	/**
 	 * Returns the package supported by this factory.

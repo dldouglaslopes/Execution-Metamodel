@@ -14,10 +14,8 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  * <ul>
  *   <li>{@link MetamodelExecution.Question#getId <em>Id</em>}</li>
- *   <li>{@link MetamodelExecution.Question#getUrl <em>Url</em>}</li>
- *   <li>{@link MetamodelExecution.Question#getName <em>Name</em>}</li>
+ *   <li>{@link MetamodelExecution.Question#getText <em>Text</em>}</li>
  *   <li>{@link MetamodelExecution.Question#getVariable <em>Variable</em>}</li>
- *   <li>{@link MetamodelExecution.Question#getIdCategory <em>Id Category</em>}</li>
  *   <li>{@link MetamodelExecution.Question#getCategory <em>Category</em>}</li>
  * </ul>
  *
@@ -37,7 +35,7 @@ public interface Question extends EObject {
 	 * @return the value of the '<em>Id</em>' attribute.
 	 * @see #setId(int)
 	 * @see MetamodelExecution.Execution_metamodelPackage#getQuestion_Id()
-	 * @model
+	 * @model id="true"
 	 * @generated
 	 */
 	int getId();
@@ -53,56 +51,30 @@ public interface Question extends EObject {
 	void setId(int value);
 
 	/**
-	 * Returns the value of the '<em><b>Url</b></em>' attribute.
+	 * Returns the value of the '<em><b>Text</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Url</em>' attribute isn't clear,
+	 * If the meaning of the '<em>Text</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Url</em>' attribute.
-	 * @see #setUrl(String)
-	 * @see MetamodelExecution.Execution_metamodelPackage#getQuestion_Url()
+	 * @return the value of the '<em>Text</em>' attribute.
+	 * @see #setText(String)
+	 * @see MetamodelExecution.Execution_metamodelPackage#getQuestion_Text()
 	 * @model
 	 * @generated
 	 */
-	String getUrl();
+	String getText();
 
 	/**
-	 * Sets the value of the '{@link MetamodelExecution.Question#getUrl <em>Url</em>}' attribute.
+	 * Sets the value of the '{@link MetamodelExecution.Question#getText <em>Text</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Url</em>' attribute.
-	 * @see #getUrl()
+	 * @param value the new value of the '<em>Text</em>' attribute.
+	 * @see #getText()
 	 * @generated
 	 */
-	void setUrl(String value);
-
-	/**
-	 * Returns the value of the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Name</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Name</em>' attribute.
-	 * @see #setName(String)
-	 * @see MetamodelExecution.Execution_metamodelPackage#getQuestion_Name()
-	 * @model
-	 * @generated
-	 */
-	String getName();
-
-	/**
-	 * Sets the value of the '{@link MetamodelExecution.Question#getName <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Name</em>' attribute.
-	 * @see #getName()
-	 * @generated
-	 */
-	void setName(String value);
+	void setText(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Variable</b></em>' containment reference.
@@ -129,32 +101,6 @@ public interface Question extends EObject {
 	 * @generated
 	 */
 	void setVariable(Variable value);
-
-	/**
-	 * Returns the value of the '<em><b>Id Category</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Id Category</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Id Category</em>' attribute.
-	 * @see #setIdCategory(int)
-	 * @see MetamodelExecution.Execution_metamodelPackage#getQuestion_IdCategory()
-	 * @model
-	 * @generated
-	 */
-	int getIdCategory();
-
-	/**
-	 * Sets the value of the '{@link MetamodelExecution.Question#getIdCategory <em>Id Category</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Id Category</em>' attribute.
-	 * @see #getIdCategory()
-	 * @generated
-	 */
-	void setIdCategory(int value);
 
 	/**
 	 * Returns the value of the '<em><b>Category</b></em>' attribute.

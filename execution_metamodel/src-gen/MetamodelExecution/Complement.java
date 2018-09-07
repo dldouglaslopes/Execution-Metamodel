@@ -15,7 +15,6 @@ import org.eclipse.emf.ecore.EObject;
  * <ul>
  *   <li>{@link MetamodelExecution.Complement#getId <em>Id</em>}</li>
  *   <li>{@link MetamodelExecution.Complement#getSideLimb <em>Side Limb</em>}</li>
- *   <li>{@link MetamodelExecution.Complement#getSideLimbDisplay <em>Side Limb Display</em>}</li>
  *   <li>{@link MetamodelExecution.Complement#getClinicalIndication <em>Clinical Indication</em>}</li>
  *   <li>{@link MetamodelExecution.Complement#getJustification <em>Justification</em>}</li>
  *   <li>{@link MetamodelExecution.Complement#getQuantity <em>Quantity</em>}</li>
@@ -37,7 +36,7 @@ public interface Complement extends EObject {
 	 * @return the value of the '<em>Id</em>' attribute.
 	 * @see #setId(int)
 	 * @see MetamodelExecution.Execution_metamodelPackage#getComplement_Id()
-	 * @model
+	 * @model id="true"
 	 * @generated
 	 */
 	int getId();
@@ -77,32 +76,6 @@ public interface Complement extends EObject {
 	 * @generated
 	 */
 	void setSideLimb(String value);
-
-	/**
-	 * Returns the value of the '<em><b>Side Limb Display</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Side Limb Display</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Side Limb Display</em>' attribute.
-	 * @see #setSideLimbDisplay(String)
-	 * @see MetamodelExecution.Execution_metamodelPackage#getComplement_SideLimbDisplay()
-	 * @model
-	 * @generated
-	 */
-	String getSideLimbDisplay();
-
-	/**
-	 * Sets the value of the '{@link MetamodelExecution.Complement#getSideLimbDisplay <em>Side Limb Display</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Side Limb Display</em>' attribute.
-	 * @see #getSideLimbDisplay()
-	 * @generated
-	 */
-	void setSideLimbDisplay(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Clinical Indication</b></em>' attribute.

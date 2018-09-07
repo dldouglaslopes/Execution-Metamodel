@@ -38,7 +38,6 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *   <li>{@link MetamodelExecution.impl.EStepImpl#getExecutionDate <em>Execution Date</em>}</li>
  *   <li>{@link MetamodelExecution.impl.EStepImpl#getCreatedById <em>Created By Id</em>}</li>
  *   <li>{@link MetamodelExecution.impl.EStepImpl#getExecutedById <em>Executed By Id</em>}</li>
- *   <li>{@link MetamodelExecution.impl.EStepImpl#getIdStep <em>Id Step</em>}</li>
  *   <li>{@link MetamodelExecution.impl.EStepImpl#getJustification <em>Justification</em>}</li>
  *   <li>{@link MetamodelExecution.impl.EStepImpl#getStep <em>Step</em>}</li>
  *   <li>{@link MetamodelExecution.impl.EStepImpl#getCreator <em>Creator</em>}</li>
@@ -248,26 +247,6 @@ public abstract class EStepImpl extends MinimalEObjectImpl.Container implements 
 	 * @ordered
 	 */
 	protected int executedById = EXECUTED_BY_ID_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getIdStep() <em>Id Step</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getIdStep()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final int ID_STEP_EDEFAULT = 0;
-
-	/**
-	 * The cached value of the '{@link #getIdStep() <em>Id Step</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getIdStep()
-	 * @generated
-	 * @ordered
-	 */
-	protected int idStep = ID_STEP_EDEFAULT;
 
 	/**
 	 * The cached value of the '{@link #getJustification() <em>Justification</em>}' containment reference.
@@ -572,28 +551,6 @@ public abstract class EStepImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public int getIdStep() {
-		return idStep;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setIdStep(int newIdStep) {
-		int oldIdStep = idStep;
-		idStep = newIdStep;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.ESTEP__ID_STEP, oldIdStep,
-					idStep));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public Justification getJustification() {
 		return justification;
 	}
@@ -859,8 +816,6 @@ public abstract class EStepImpl extends MinimalEObjectImpl.Container implements 
 			return getCreatedById();
 		case Execution_metamodelPackage.ESTEP__EXECUTED_BY_ID:
 			return getExecutedById();
-		case Execution_metamodelPackage.ESTEP__ID_STEP:
-			return getIdStep();
 		case Execution_metamodelPackage.ESTEP__JUSTIFICATION:
 			return getJustification();
 		case Execution_metamodelPackage.ESTEP__STEP:
@@ -912,9 +867,6 @@ public abstract class EStepImpl extends MinimalEObjectImpl.Container implements 
 			return;
 		case Execution_metamodelPackage.ESTEP__EXECUTED_BY_ID:
 			setExecutedById((Integer) newValue);
-			return;
-		case Execution_metamodelPackage.ESTEP__ID_STEP:
-			setIdStep((Integer) newValue);
 			return;
 		case Execution_metamodelPackage.ESTEP__JUSTIFICATION:
 			setJustification((Justification) newValue);
@@ -973,9 +925,6 @@ public abstract class EStepImpl extends MinimalEObjectImpl.Container implements 
 		case Execution_metamodelPackage.ESTEP__EXECUTED_BY_ID:
 			setExecutedById(EXECUTED_BY_ID_EDEFAULT);
 			return;
-		case Execution_metamodelPackage.ESTEP__ID_STEP:
-			setIdStep(ID_STEP_EDEFAULT);
-			return;
 		case Execution_metamodelPackage.ESTEP__JUSTIFICATION:
 			setJustification((Justification) null);
 			return;
@@ -1025,8 +974,6 @@ public abstract class EStepImpl extends MinimalEObjectImpl.Container implements 
 			return createdById != CREATED_BY_ID_EDEFAULT;
 		case Execution_metamodelPackage.ESTEP__EXECUTED_BY_ID:
 			return executedById != EXECUTED_BY_ID_EDEFAULT;
-		case Execution_metamodelPackage.ESTEP__ID_STEP:
-			return idStep != ID_STEP_EDEFAULT;
 		case Execution_metamodelPackage.ESTEP__JUSTIFICATION:
 			return justification != null;
 		case Execution_metamodelPackage.ESTEP__STEP:
@@ -1072,8 +1019,6 @@ public abstract class EStepImpl extends MinimalEObjectImpl.Container implements 
 		result.append(createdById);
 		result.append(", executedById: ");
 		result.append(executedById);
-		result.append(", idStep: ");
-		result.append(idStep);
 		result.append(", name: ");
 		result.append(name);
 		result.append(')');

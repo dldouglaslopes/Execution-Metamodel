@@ -15,11 +15,11 @@ import org.eclipse.emf.ecore.EObject;
  * <ul>
  *   <li>{@link MetamodelExecution.Variable#getId <em>Id</em>}</li>
  *   <li>{@link MetamodelExecution.Variable#getType <em>Type</em>}</li>
- *   <li>{@link MetamodelExecution.Variable#getUrl <em>Url</em>}</li>
  *   <li>{@link MetamodelExecution.Variable#getName <em>Name</em>}</li>
  *   <li>{@link MetamodelExecution.Variable#getWeight <em>Weight</em>}</li>
  *   <li>{@link MetamodelExecution.Variable#getValue <em>Value</em>}</li>
  *   <li>{@link MetamodelExecution.Variable#getBond <em>Bond</em>}</li>
+ *   <li>{@link MetamodelExecution.Variable#getUnit <em>Unit</em>}</li>
  * </ul>
  *
  * @see MetamodelExecution.Execution_metamodelPackage#getVariable()
@@ -38,7 +38,7 @@ public interface Variable extends EObject {
 	 * @return the value of the '<em>Id</em>' attribute.
 	 * @see #setId(int)
 	 * @see MetamodelExecution.Execution_metamodelPackage#getVariable_Id()
-	 * @model
+	 * @model id="true"
 	 * @generated
 	 */
 	int getId();
@@ -78,32 +78,6 @@ public interface Variable extends EObject {
 	 * @generated
 	 */
 	void setType(String value);
-
-	/**
-	 * Returns the value of the '<em><b>Url</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Url</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Url</em>' attribute.
-	 * @see #setUrl(String)
-	 * @see MetamodelExecution.Execution_metamodelPackage#getVariable_Url()
-	 * @model
-	 * @generated
-	 */
-	String getUrl();
-
-	/**
-	 * Sets the value of the '{@link MetamodelExecution.Variable#getUrl <em>Url</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Url</em>' attribute.
-	 * @see #getUrl()
-	 * @generated
-	 */
-	void setUrl(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Name</b></em>' attribute.
@@ -194,7 +168,7 @@ public interface Variable extends EObject {
 	 * @return the value of the '<em>Bond</em>' containment reference.
 	 * @see #setBond(Bond)
 	 * @see MetamodelExecution.Execution_metamodelPackage#getVariable_Bond()
-	 * @model containment="true"
+	 * @model containment="true" required="true"
 	 * @generated
 	 */
 	Bond getBond();
@@ -208,5 +182,31 @@ public interface Variable extends EObject {
 	 * @generated
 	 */
 	void setBond(Bond value);
+
+	/**
+	 * Returns the value of the '<em><b>Unit</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Unit</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Unit</em>' attribute.
+	 * @see #setUnit(String)
+	 * @see MetamodelExecution.Execution_metamodelPackage#getVariable_Unit()
+	 * @model
+	 * @generated
+	 */
+	String getUnit();
+
+	/**
+	 * Sets the value of the '{@link MetamodelExecution.Variable#getUnit <em>Unit</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Unit</em>' attribute.
+	 * @see #getUnit()
+	 * @generated
+	 */
+	void setUnit(String value);
 
 } // Variable
