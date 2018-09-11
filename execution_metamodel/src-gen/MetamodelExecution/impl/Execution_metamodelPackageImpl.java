@@ -7,6 +7,7 @@ import MetamodelExecution.Allergy;
 import MetamodelExecution.AllergyRegistry;
 import MetamodelExecution.Answer;
 import MetamodelExecution.Attendance;
+import MetamodelExecution.Audit;
 import MetamodelExecution.Bond;
 import MetamodelExecution.Comorbidity;
 import MetamodelExecution.ComorbidityRegistry;
@@ -490,6 +491,13 @@ public class Execution_metamodelPackageImpl extends EPackageImpl implements Exec
 	 * @generated
 	 */
 	private EClass complementaryItemPrescriptionEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass auditEClass = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -1514,8 +1522,8 @@ public class Execution_metamodelPackageImpl extends EPackageImpl implements Exec
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getStep_LastAuditing() {
-		return (EAttribute) stepEClass.getEStructuralFeatures().get(7);
+	public EReference getStep_Audit() {
+		return (EReference) stepEClass.getEStructuralFeatures().get(7);
 	}
 
 	/**
@@ -2360,8 +2368,8 @@ public class Execution_metamodelPackageImpl extends EPackageImpl implements Exec
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getPathway_LastAuditing() {
-		return (EAttribute) pathwayEClass.getEStructuralFeatures().get(5);
+	public EReference getPathway_Audit() {
+		return (EReference) pathwayEClass.getEStructuralFeatures().get(5);
 	}
 
 	/**
@@ -3341,6 +3349,33 @@ public class Execution_metamodelPackageImpl extends EPackageImpl implements Exec
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getAudit() {
+		return auditEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getAudit_User() {
+		return (EAttribute) auditEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getAudit_Date() {
+		return (EAttribute) auditEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public Execution_metamodelFactory getExecution_metamodelFactory() {
 		return (Execution_metamodelFactory) getEFactoryInstance();
 	}
@@ -3492,7 +3527,7 @@ public class Execution_metamodelPackageImpl extends EPackageImpl implements Exec
 		createEAttribute(stepEClass, STEP__IS_INITIAL);
 		createEAttribute(stepEClass, STEP__IS_TERMINAL);
 		createEAttribute(stepEClass, STEP__MANDATORY);
-		createEAttribute(stepEClass, STEP__LAST_AUDITING);
+		createEReference(stepEClass, STEP__AUDIT);
 
 		creatorEClass = createEClass(CREATOR);
 
@@ -3601,7 +3636,7 @@ public class Execution_metamodelPackageImpl extends EPackageImpl implements Exec
 		createEAttribute(pathwayEClass, PATHWAY__NAME);
 		createEAttribute(pathwayEClass, PATHWAY__VERSION);
 		createEAttribute(pathwayEClass, PATHWAY__COMPLETED);
-		createEAttribute(pathwayEClass, PATHWAY__LAST_AUDITING);
+		createEReference(pathwayEClass, PATHWAY__AUDIT);
 
 		eProcedureEClass = createEClass(EPROCEDURE);
 
@@ -3732,6 +3767,10 @@ public class Execution_metamodelPackageImpl extends EPackageImpl implements Exec
 		complementaryExaminationEClass = createEClass(COMPLEMENTARY_EXAMINATION);
 
 		complementaryItemPrescriptionEClass = createEClass(COMPLEMENTARY_ITEM_PRESCRIPTION);
+
+		auditEClass = createEClass(AUDIT);
+		createEAttribute(auditEClass, AUDIT__USER);
+		createEAttribute(auditEClass, AUDIT__DATE);
 	}
 
 	/**
@@ -4060,8 +4099,9 @@ public class Execution_metamodelPackageImpl extends EPackageImpl implements Exec
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getStep_Mandatory(), ecorePackage.getEBoolean(), "mandatory", null, 0, 1, Step.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getStep_LastAuditing(), ecorePackage.getEString(), "lastAuditing", null, 0, 1, Step.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getStep_Audit(), this.getAudit(), null, "audit", null, 1, 1, Step.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED,
+				IS_ORDERED);
 
 		initEClass(creatorEClass, Creator.class, "Creator", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -4281,8 +4321,9 @@ public class Execution_metamodelPackageImpl extends EPackageImpl implements Exec
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getPathway_Completed(), ecorePackage.getEBoolean(), "completed", null, 0, 1, Pathway.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getPathway_LastAuditing(), ecorePackage.getEString(), "lastAuditing", null, 0, 1, Pathway.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getPathway_Audit(), this.getAudit(), null, "audit", null, 1, 1, Pathway.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED,
+				IS_ORDERED);
 
 		initEClass(eProcedureEClass, EProcedure.class, "EProcedure", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
@@ -4571,6 +4612,12 @@ public class Execution_metamodelPackageImpl extends EPackageImpl implements Exec
 
 		initEClass(complementaryItemPrescriptionEClass, ComplementaryItemPrescription.class,
 				"ComplementaryItemPrescription", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(auditEClass, Audit.class, "Audit", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getAudit_User(), ecorePackage.getEString(), "user", null, 0, 1, Audit.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getAudit_Date(), ecorePackage.getEDate(), "date", null, 0, 1, Audit.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Create resource
 		createResource(eNS_URI);

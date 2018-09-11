@@ -20,7 +20,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link MetamodelExecution.Step#isIsInitial <em>Is Initial</em>}</li>
  *   <li>{@link MetamodelExecution.Step#isIsTerminal <em>Is Terminal</em>}</li>
  *   <li>{@link MetamodelExecution.Step#isMandatory <em>Mandatory</em>}</li>
- *   <li>{@link MetamodelExecution.Step#getLastAuditing <em>Last Auditing</em>}</li>
+ *   <li>{@link MetamodelExecution.Step#getAudit <em>Audit</em>}</li>
  * </ul>
  *
  * @see MetamodelExecution.Execution_metamodelPackage#getStep()
@@ -211,29 +211,29 @@ public interface Step extends EObject {
 	void setMandatory(boolean value);
 
 	/**
-	 * Returns the value of the '<em><b>Last Auditing</b></em>' attribute.
+	 * Returns the value of the '<em><b>Audit</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Last Auditing</em>' attribute isn't clear,
+	 * If the meaning of the '<em>Audit</em>' containment reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Last Auditing</em>' attribute.
-	 * @see #setLastAuditing(String)
-	 * @see MetamodelExecution.Execution_metamodelPackage#getStep_LastAuditing()
-	 * @model
+	 * @return the value of the '<em>Audit</em>' containment reference.
+	 * @see #setAudit(Audit)
+	 * @see MetamodelExecution.Execution_metamodelPackage#getStep_Audit()
+	 * @model containment="true" required="true"
 	 * @generated
 	 */
-	String getLastAuditing();
+	Audit getAudit();
 
 	/**
-	 * Sets the value of the '{@link MetamodelExecution.Step#getLastAuditing <em>Last Auditing</em>}' attribute.
+	 * Sets the value of the '{@link MetamodelExecution.Step#getAudit <em>Audit</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Last Auditing</em>' attribute.
-	 * @see #getLastAuditing()
+	 * @param value the new value of the '<em>Audit</em>' containment reference.
+	 * @see #getAudit()
 	 * @generated
 	 */
-	void setLastAuditing(String value);
+	void setAudit(Audit value);
 
 } // Step

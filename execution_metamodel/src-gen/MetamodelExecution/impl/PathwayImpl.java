@@ -2,12 +2,15 @@
  */
 package MetamodelExecution.impl;
 
+import MetamodelExecution.Audit;
 import MetamodelExecution.Execution_metamodelPackage;
 import MetamodelExecution.Pathway;
 
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
@@ -25,7 +28,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *   <li>{@link MetamodelExecution.impl.PathwayImpl#getName <em>Name</em>}</li>
  *   <li>{@link MetamodelExecution.impl.PathwayImpl#getVersion <em>Version</em>}</li>
  *   <li>{@link MetamodelExecution.impl.PathwayImpl#isCompleted <em>Completed</em>}</li>
- *   <li>{@link MetamodelExecution.impl.PathwayImpl#getLastAuditing <em>Last Auditing</em>}</li>
+ *   <li>{@link MetamodelExecution.impl.PathwayImpl#getAudit <em>Audit</em>}</li>
  * </ul>
  *
  * @generated
@@ -132,24 +135,14 @@ public class PathwayImpl extends MinimalEObjectImpl.Container implements Pathway
 	protected boolean completed = COMPLETED_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getLastAuditing() <em>Last Auditing</em>}' attribute.
+	 * The cached value of the '{@link #getAudit() <em>Audit</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getLastAuditing()
+	 * @see #getAudit()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String LAST_AUDITING_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getLastAuditing() <em>Last Auditing</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getLastAuditing()
-	 * @generated
-	 * @ordered
-	 */
-	protected String lastAuditing = LAST_AUDITING_EDEFAULT;
+	protected Audit audit;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -284,8 +277,8 @@ public class PathwayImpl extends MinimalEObjectImpl.Container implements Pathway
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getLastAuditing() {
-		return lastAuditing;
+	public Audit getAudit() {
+		return audit;
 	}
 
 	/**
@@ -293,12 +286,54 @@ public class PathwayImpl extends MinimalEObjectImpl.Container implements Pathway
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setLastAuditing(String newLastAuditing) {
-		String oldLastAuditing = lastAuditing;
-		lastAuditing = newLastAuditing;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.PATHWAY__LAST_AUDITING,
-					oldLastAuditing, lastAuditing));
+	public NotificationChain basicSetAudit(Audit newAudit, NotificationChain msgs) {
+		Audit oldAudit = audit;
+		audit = newAudit;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
+					Execution_metamodelPackage.PATHWAY__AUDIT, oldAudit, newAudit);
+			if (msgs == null)
+				msgs = notification;
+			else
+				msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setAudit(Audit newAudit) {
+		if (newAudit != audit) {
+			NotificationChain msgs = null;
+			if (audit != null)
+				msgs = ((InternalEObject) audit).eInverseRemove(this,
+						EOPPOSITE_FEATURE_BASE - Execution_metamodelPackage.PATHWAY__AUDIT, null, msgs);
+			if (newAudit != null)
+				msgs = ((InternalEObject) newAudit).eInverseAdd(this,
+						EOPPOSITE_FEATURE_BASE - Execution_metamodelPackage.PATHWAY__AUDIT, null, msgs);
+			msgs = basicSetAudit(newAudit, msgs);
+			if (msgs != null)
+				msgs.dispatch();
+		} else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.PATHWAY__AUDIT, newAudit,
+					newAudit));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+		case Execution_metamodelPackage.PATHWAY__AUDIT:
+			return basicSetAudit(null, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
 
 	/**
@@ -319,8 +354,8 @@ public class PathwayImpl extends MinimalEObjectImpl.Container implements Pathway
 			return getVersion();
 		case Execution_metamodelPackage.PATHWAY__COMPLETED:
 			return isCompleted();
-		case Execution_metamodelPackage.PATHWAY__LAST_AUDITING:
-			return getLastAuditing();
+		case Execution_metamodelPackage.PATHWAY__AUDIT:
+			return getAudit();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -348,8 +383,8 @@ public class PathwayImpl extends MinimalEObjectImpl.Container implements Pathway
 		case Execution_metamodelPackage.PATHWAY__COMPLETED:
 			setCompleted((Boolean) newValue);
 			return;
-		case Execution_metamodelPackage.PATHWAY__LAST_AUDITING:
-			setLastAuditing((String) newValue);
+		case Execution_metamodelPackage.PATHWAY__AUDIT:
+			setAudit((Audit) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -378,8 +413,8 @@ public class PathwayImpl extends MinimalEObjectImpl.Container implements Pathway
 		case Execution_metamodelPackage.PATHWAY__COMPLETED:
 			setCompleted(COMPLETED_EDEFAULT);
 			return;
-		case Execution_metamodelPackage.PATHWAY__LAST_AUDITING:
-			setLastAuditing(LAST_AUDITING_EDEFAULT);
+		case Execution_metamodelPackage.PATHWAY__AUDIT:
+			setAudit((Audit) null);
 			return;
 		}
 		super.eUnset(featureID);
@@ -403,8 +438,8 @@ public class PathwayImpl extends MinimalEObjectImpl.Container implements Pathway
 			return version != VERSION_EDEFAULT;
 		case Execution_metamodelPackage.PATHWAY__COMPLETED:
 			return completed != COMPLETED_EDEFAULT;
-		case Execution_metamodelPackage.PATHWAY__LAST_AUDITING:
-			return LAST_AUDITING_EDEFAULT == null ? lastAuditing != null : !LAST_AUDITING_EDEFAULT.equals(lastAuditing);
+		case Execution_metamodelPackage.PATHWAY__AUDIT:
+			return audit != null;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -430,8 +465,6 @@ public class PathwayImpl extends MinimalEObjectImpl.Container implements Pathway
 		result.append(version);
 		result.append(", completed: ");
 		result.append(completed);
-		result.append(", lastAuditing: ");
-		result.append(lastAuditing);
 		result.append(')');
 		return result.toString();
 	}

@@ -508,6 +508,15 @@ public interface Execution_metamodelFactory extends EFactory {
 	ComplementaryItemPrescription createComplementaryItemPrescription();
 
 	/**
+	 * Returns a new object of class '<em>Audit</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Audit</em>'.
+	 * @generated
+	 */
+	Audit createAudit();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

@@ -2456,13 +2456,13 @@ public interface Execution_metamodelPackage extends EPackage {
 	int STEP__MANDATORY = 6;
 
 	/**
-	 * The feature id for the '<em><b>Last Auditing</b></em>' attribute.
+	 * The feature id for the '<em><b>Audit</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int STEP__LAST_AUDITING = 7;
+	int STEP__AUDIT = 7;
 
 	/**
 	 * The number of structural features of the '<em>Step</em>' class.
@@ -3875,13 +3875,13 @@ public interface Execution_metamodelPackage extends EPackage {
 	int PATHWAY__COMPLETED = 4;
 
 	/**
-	 * The feature id for the '<em><b>Last Auditing</b></em>' attribute.
+	 * The feature id for the '<em><b>Audit</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PATHWAY__LAST_AUDITING = 5;
+	int PATHWAY__AUDIT = 5;
 
 	/**
 	 * The number of structural features of the '<em>Pathway</em>' class.
@@ -5822,6 +5822,52 @@ public interface Execution_metamodelPackage extends EPackage {
 	int COMPLEMENTARY_ITEM_PRESCRIPTION_OPERATION_COUNT = COMPLEMENTARY_CONDUCTS_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link MetamodelExecution.impl.AuditImpl <em>Audit</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see MetamodelExecution.impl.AuditImpl
+	 * @see MetamodelExecution.impl.Execution_metamodelPackageImpl#getAudit()
+	 * @generated
+	 */
+	int AUDIT = 59;
+
+	/**
+	 * The feature id for the '<em><b>User</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int AUDIT__USER = 0;
+
+	/**
+	 * The feature id for the '<em><b>Date</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int AUDIT__DATE = 1;
+
+	/**
+	 * The number of structural features of the '<em>Audit</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int AUDIT_FEATURE_COUNT = 2;
+
+	/**
+	 * The number of operations of the '<em>Audit</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int AUDIT_OPERATION_COUNT = 0;
+
+	/**
 	 * Returns the meta object for class '{@link MetamodelExecution.EAuxiliaryConduct <em>EAuxiliary Conduct</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -6966,15 +7012,15 @@ public interface Execution_metamodelPackage extends EPackage {
 	EAttribute getStep_Mandatory();
 
 	/**
-	 * Returns the meta object for the attribute '{@link MetamodelExecution.Step#getLastAuditing <em>Last Auditing</em>}'.
+	 * Returns the meta object for the containment reference '{@link MetamodelExecution.Step#getAudit <em>Audit</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Last Auditing</em>'.
-	 * @see MetamodelExecution.Step#getLastAuditing()
+	 * @return the meta object for the containment reference '<em>Audit</em>'.
+	 * @see MetamodelExecution.Step#getAudit()
 	 * @see #getStep()
 	 * @generated
 	 */
-	EAttribute getStep_LastAuditing();
+	EReference getStep_Audit();
 
 	/**
 	 * Returns the meta object for class '{@link MetamodelExecution.Creator <em>Creator</em>}'.
@@ -7985,15 +8031,15 @@ public interface Execution_metamodelPackage extends EPackage {
 	EAttribute getPathway_Completed();
 
 	/**
-	 * Returns the meta object for the attribute '{@link MetamodelExecution.Pathway#getLastAuditing <em>Last Auditing</em>}'.
+	 * Returns the meta object for the containment reference '{@link MetamodelExecution.Pathway#getAudit <em>Audit</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Last Auditing</em>'.
-	 * @see MetamodelExecution.Pathway#getLastAuditing()
+	 * @return the meta object for the containment reference '<em>Audit</em>'.
+	 * @see MetamodelExecution.Pathway#getAudit()
 	 * @see #getPathway()
 	 * @generated
 	 */
-	EAttribute getPathway_LastAuditing();
+	EReference getPathway_Audit();
 
 	/**
 	 * Returns the meta object for class '{@link MetamodelExecution.EProcedure <em>EProcedure</em>}'.
@@ -9162,6 +9208,38 @@ public interface Execution_metamodelPackage extends EPackage {
 	EClass getComplementaryItemPrescription();
 
 	/**
+	 * Returns the meta object for class '{@link MetamodelExecution.Audit <em>Audit</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Audit</em>'.
+	 * @see MetamodelExecution.Audit
+	 * @generated
+	 */
+	EClass getAudit();
+
+	/**
+	 * Returns the meta object for the attribute '{@link MetamodelExecution.Audit#getUser <em>User</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>User</em>'.
+	 * @see MetamodelExecution.Audit#getUser()
+	 * @see #getAudit()
+	 * @generated
+	 */
+	EAttribute getAudit_User();
+
+	/**
+	 * Returns the meta object for the attribute '{@link MetamodelExecution.Audit#getDate <em>Date</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Date</em>'.
+	 * @see MetamodelExecution.Audit#getDate()
+	 * @see #getAudit()
+	 * @generated
+	 */
+	EAttribute getAudit_Date();
+
+	/**
 	 * Returns the factory that creates the instances of the model.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -10081,12 +10159,12 @@ public interface Execution_metamodelPackage extends EPackage {
 		EAttribute STEP__MANDATORY = eINSTANCE.getStep_Mandatory();
 
 		/**
-		 * The meta object literal for the '<em><b>Last Auditing</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Audit</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute STEP__LAST_AUDITING = eINSTANCE.getStep_LastAuditing();
+		EReference STEP__AUDIT = eINSTANCE.getStep_Audit();
 
 		/**
 		 * The meta object literal for the '{@link MetamodelExecution.impl.CreatorImpl <em>Creator</em>}' class.
@@ -10863,12 +10941,12 @@ public interface Execution_metamodelPackage extends EPackage {
 		EAttribute PATHWAY__COMPLETED = eINSTANCE.getPathway_Completed();
 
 		/**
-		 * The meta object literal for the '<em><b>Last Auditing</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Audit</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute PATHWAY__LAST_AUDITING = eINSTANCE.getPathway_LastAuditing();
+		EReference PATHWAY__AUDIT = eINSTANCE.getPathway_Audit();
 
 		/**
 		 * The meta object literal for the '{@link MetamodelExecution.impl.EProcedureImpl <em>EProcedure</em>}' class.
@@ -11784,6 +11862,32 @@ public interface Execution_metamodelPackage extends EPackage {
 		 * @generated
 		 */
 		EClass COMPLEMENTARY_ITEM_PRESCRIPTION = eINSTANCE.getComplementaryItemPrescription();
+
+		/**
+		 * The meta object literal for the '{@link MetamodelExecution.impl.AuditImpl <em>Audit</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see MetamodelExecution.impl.AuditImpl
+		 * @see MetamodelExecution.impl.Execution_metamodelPackageImpl#getAudit()
+		 * @generated
+		 */
+		EClass AUDIT = eINSTANCE.getAudit();
+
+		/**
+		 * The meta object literal for the '<em><b>User</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute AUDIT__USER = eINSTANCE.getAudit_User();
+
+		/**
+		 * The meta object literal for the '<em><b>Date</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute AUDIT__DATE = eINSTANCE.getAudit_Date();
 
 	}
 

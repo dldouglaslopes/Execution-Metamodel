@@ -133,7 +133,7 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute execution_metamodel.ecore#//Step/isInitial"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute execution_metamodel.ecore#//Step/isTerminal"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute execution_metamodel.ecore#//Step/mandatory"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute execution_metamodel.ecore#//Step/lastAuditing"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference execution_metamodel.ecore#//Step/audit"/>
     </genClasses>
     <genClasses ecoreClass="execution_metamodel.ecore#//Creator"/>
     <genClasses ecoreClass="execution_metamodel.ecore#//Executor"/>
@@ -238,7 +238,7 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute execution_metamodel.ecore#//Pathway/name"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute execution_metamodel.ecore#//Pathway/version"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute execution_metamodel.ecore#//Pathway/completed"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute execution_metamodel.ecore#//Pathway/lastAuditing"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference execution_metamodel.ecore#//Pathway/audit"/>
     </genClasses>
     <genClasses ecoreClass="execution_metamodel.ecore#//EProcedure"/>
     <genClasses ecoreClass="execution_metamodel.ecore#//EPause"/>
@@ -364,5 +364,9 @@
     </genClasses>
     <genClasses ecoreClass="execution_metamodel.ecore#//ComplementaryExamination"/>
     <genClasses ecoreClass="execution_metamodel.ecore#//ComplementaryItemPrescription"/>
+    <genClasses ecoreClass="execution_metamodel.ecore#//Audit">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute execution_metamodel.ecore#//Audit/user"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute execution_metamodel.ecore#//Audit/date"/>
+    </genClasses>
   </genPackages>
 </genmodel:GenModel>

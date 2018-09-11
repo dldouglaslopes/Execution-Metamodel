@@ -2,12 +2,15 @@
  */
 package MetamodelExecution.impl;
 
+import MetamodelExecution.Audit;
 import MetamodelExecution.Execution_metamodelPackage;
 import MetamodelExecution.Step;
 
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
@@ -27,7 +30,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *   <li>{@link MetamodelExecution.impl.StepImpl#isIsInitial <em>Is Initial</em>}</li>
  *   <li>{@link MetamodelExecution.impl.StepImpl#isIsTerminal <em>Is Terminal</em>}</li>
  *   <li>{@link MetamodelExecution.impl.StepImpl#isMandatory <em>Mandatory</em>}</li>
- *   <li>{@link MetamodelExecution.impl.StepImpl#getLastAuditing <em>Last Auditing</em>}</li>
+ *   <li>{@link MetamodelExecution.impl.StepImpl#getAudit <em>Audit</em>}</li>
  * </ul>
  *
  * @generated
@@ -174,24 +177,14 @@ public class StepImpl extends MinimalEObjectImpl.Container implements Step {
 	protected boolean mandatory = MANDATORY_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getLastAuditing() <em>Last Auditing</em>}' attribute.
+	 * The cached value of the '{@link #getAudit() <em>Audit</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getLastAuditing()
+	 * @see #getAudit()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String LAST_AUDITING_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getLastAuditing() <em>Last Auditing</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getLastAuditing()
-	 * @generated
-	 * @ordered
-	 */
-	protected String lastAuditing = LAST_AUDITING_EDEFAULT;
+	protected Audit audit;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -370,8 +363,8 @@ public class StepImpl extends MinimalEObjectImpl.Container implements Step {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getLastAuditing() {
-		return lastAuditing;
+	public Audit getAudit() {
+		return audit;
 	}
 
 	/**
@@ -379,12 +372,54 @@ public class StepImpl extends MinimalEObjectImpl.Container implements Step {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setLastAuditing(String newLastAuditing) {
-		String oldLastAuditing = lastAuditing;
-		lastAuditing = newLastAuditing;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.STEP__LAST_AUDITING,
-					oldLastAuditing, lastAuditing));
+	public NotificationChain basicSetAudit(Audit newAudit, NotificationChain msgs) {
+		Audit oldAudit = audit;
+		audit = newAudit;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
+					Execution_metamodelPackage.STEP__AUDIT, oldAudit, newAudit);
+			if (msgs == null)
+				msgs = notification;
+			else
+				msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setAudit(Audit newAudit) {
+		if (newAudit != audit) {
+			NotificationChain msgs = null;
+			if (audit != null)
+				msgs = ((InternalEObject) audit).eInverseRemove(this,
+						EOPPOSITE_FEATURE_BASE - Execution_metamodelPackage.STEP__AUDIT, null, msgs);
+			if (newAudit != null)
+				msgs = ((InternalEObject) newAudit).eInverseAdd(this,
+						EOPPOSITE_FEATURE_BASE - Execution_metamodelPackage.STEP__AUDIT, null, msgs);
+			msgs = basicSetAudit(newAudit, msgs);
+			if (msgs != null)
+				msgs.dispatch();
+		} else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.STEP__AUDIT, newAudit,
+					newAudit));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+		case Execution_metamodelPackage.STEP__AUDIT:
+			return basicSetAudit(null, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
 
 	/**
@@ -409,8 +444,8 @@ public class StepImpl extends MinimalEObjectImpl.Container implements Step {
 			return isIsTerminal();
 		case Execution_metamodelPackage.STEP__MANDATORY:
 			return isMandatory();
-		case Execution_metamodelPackage.STEP__LAST_AUDITING:
-			return getLastAuditing();
+		case Execution_metamodelPackage.STEP__AUDIT:
+			return getAudit();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -444,8 +479,8 @@ public class StepImpl extends MinimalEObjectImpl.Container implements Step {
 		case Execution_metamodelPackage.STEP__MANDATORY:
 			setMandatory((Boolean) newValue);
 			return;
-		case Execution_metamodelPackage.STEP__LAST_AUDITING:
-			setLastAuditing((String) newValue);
+		case Execution_metamodelPackage.STEP__AUDIT:
+			setAudit((Audit) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -480,8 +515,8 @@ public class StepImpl extends MinimalEObjectImpl.Container implements Step {
 		case Execution_metamodelPackage.STEP__MANDATORY:
 			setMandatory(MANDATORY_EDEFAULT);
 			return;
-		case Execution_metamodelPackage.STEP__LAST_AUDITING:
-			setLastAuditing(LAST_AUDITING_EDEFAULT);
+		case Execution_metamodelPackage.STEP__AUDIT:
+			setAudit((Audit) null);
 			return;
 		}
 		super.eUnset(featureID);
@@ -509,8 +544,8 @@ public class StepImpl extends MinimalEObjectImpl.Container implements Step {
 			return isTerminal != IS_TERMINAL_EDEFAULT;
 		case Execution_metamodelPackage.STEP__MANDATORY:
 			return mandatory != MANDATORY_EDEFAULT;
-		case Execution_metamodelPackage.STEP__LAST_AUDITING:
-			return LAST_AUDITING_EDEFAULT == null ? lastAuditing != null : !LAST_AUDITING_EDEFAULT.equals(lastAuditing);
+		case Execution_metamodelPackage.STEP__AUDIT:
+			return audit != null;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -540,8 +575,6 @@ public class StepImpl extends MinimalEObjectImpl.Container implements Step {
 		result.append(isTerminal);
 		result.append(", mandatory: ");
 		result.append(mandatory);
-		result.append(", lastAuditing: ");
-		result.append(lastAuditing);
 		result.append(')');
 		return result.toString();
 	}

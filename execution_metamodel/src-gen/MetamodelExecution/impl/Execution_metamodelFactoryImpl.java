@@ -164,6 +164,8 @@ public class Execution_metamodelFactoryImpl extends EFactoryImpl implements Exec
 			return createComplementaryExamination();
 		case Execution_metamodelPackage.COMPLEMENTARY_ITEM_PRESCRIPTION:
 			return createComplementaryItemPrescription();
+		case Execution_metamodelPackage.AUDIT:
+			return createAudit();
 		default:
 			throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -707,6 +709,16 @@ public class Execution_metamodelFactoryImpl extends EFactoryImpl implements Exec
 	public ComplementaryItemPrescription createComplementaryItemPrescription() {
 		ComplementaryItemPrescriptionImpl complementaryItemPrescription = new ComplementaryItemPrescriptionImpl();
 		return complementaryItemPrescription;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Audit createAudit() {
+		AuditImpl audit = new AuditImpl();
+		return audit;
 	}
 
 	/**
