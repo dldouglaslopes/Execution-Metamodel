@@ -211,29 +211,29 @@ public interface PrescribedExamination extends EObject {
 	void setName(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Result</b></em>' attribute.
+	 * Returns the value of the '<em><b>Result</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Result</em>' attribute isn't clear,
+	 * If the meaning of the '<em>Result</em>' containment reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Result</em>' attribute.
-	 * @see #setResult(String)
+	 * @return the value of the '<em>Result</em>' containment reference.
+	 * @see #setResult(Result)
 	 * @see MetamodelExecution.Execution_metamodelPackage#getPrescribedExamination_Result()
-	 * @model
+	 * @model containment="true" required="true"
 	 * @generated
 	 */
-	String getResult();
+	Result getResult();
 
 	/**
-	 * Sets the value of the '{@link MetamodelExecution.PrescribedExamination#getResult <em>Result</em>}' attribute.
+	 * Sets the value of the '{@link MetamodelExecution.PrescribedExamination#getResult <em>Result</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Result</em>' attribute.
+	 * @param value the new value of the '<em>Result</em>' containment reference.
 	 * @see #getResult()
 	 * @generated
 	 */
-	void setResult(String value);
+	void setResult(Result value);
 
 } // PrescribedExamination

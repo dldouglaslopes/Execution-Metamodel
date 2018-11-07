@@ -56,7 +56,7 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference execution_metamodel.ecore#//PrescribedExamination/complement"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference execution_metamodel.ecore#//PrescribedExamination/prescription"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute execution_metamodel.ecore#//PrescribedExamination/name"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute execution_metamodel.ecore#//PrescribedExamination/result"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference execution_metamodel.ecore#//PrescribedExamination/result"/>
     </genClasses>
     <genClasses ecoreClass="execution_metamodel.ecore#//Exam">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute execution_metamodel.ecore#//Exam/id"/>
@@ -362,11 +362,24 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute execution_metamodel.ecore#//ProcedurePrescribedResource/procedure"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute execution_metamodel.ecore#//ProcedurePrescribedResource/category"/>
     </genClasses>
-    <genClasses ecoreClass="execution_metamodel.ecore#//ComplementaryExamination"/>
+    <genClasses ecoreClass="execution_metamodel.ecore#//ComplementaryExamination">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference execution_metamodel.ecore#//ComplementaryExamination/examinationprescribedresource"/>
+    </genClasses>
     <genClasses ecoreClass="execution_metamodel.ecore#//ComplementaryItemPrescription"/>
     <genClasses ecoreClass="execution_metamodel.ecore#//Audit">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute execution_metamodel.ecore#//Audit/user"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute execution_metamodel.ecore#//Audit/date"/>
+    </genClasses>
+    <genClasses ecoreClass="execution_metamodel.ecore#//Result"/>
+    <genClasses ecoreClass="execution_metamodel.ecore#//ExaminationPrescribedResource">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute execution_metamodel.ecore#//ExaminationPrescribedResource/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute execution_metamodel.ecore#//ExaminationPrescribedResource/exam"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute execution_metamodel.ecore#//ExaminationPrescribedResource/idExam"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute execution_metamodel.ecore#//ExaminationPrescribedResource/justification"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute execution_metamodel.ecore#//ExaminationPrescribedResource/category"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute execution_metamodel.ecore#//ExaminationPrescribedResource/quantity"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute execution_metamodel.ecore#//ExaminationPrescribedResource/sideLimb"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute execution_metamodel.ecore#//ExaminationPrescribedResource/clinicalIndication"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

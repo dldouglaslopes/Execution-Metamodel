@@ -31,6 +31,7 @@ import MetamodelExecution.EStep;
 import MetamodelExecution.ETreatment;
 import MetamodelExecution.Exam;
 import MetamodelExecution.Examination;
+import MetamodelExecution.ExaminationPrescribedResource;
 import MetamodelExecution.Execution_metamodelFactory;
 import MetamodelExecution.Execution_metamodelPackage;
 import MetamodelExecution.Executor;
@@ -56,6 +57,7 @@ import MetamodelExecution.Professional;
 import MetamodelExecution.Question;
 import MetamodelExecution.Request;
 import MetamodelExecution.Responsible;
+import MetamodelExecution.Result;
 import MetamodelExecution.Step;
 import MetamodelExecution.Suspension;
 import MetamodelExecution.Unit;
@@ -500,6 +502,20 @@ public class Execution_metamodelPackageImpl extends EPackageImpl implements Exec
 	private EClass auditEClass = null;
 
 	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass resultEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass examinationPrescribedResourceEClass = null;
+
+	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
 	 * {@link org.eclipse.emf.ecore.EPackage.Registry EPackage.Registry} by the package
 	 * package URI value.
@@ -937,8 +953,8 @@ public class Execution_metamodelPackageImpl extends EPackageImpl implements Exec
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getPrescribedExamination_Result() {
-		return (EAttribute) prescribedExaminationEClass.getEStructuralFeatures().get(7);
+	public EReference getPrescribedExamination_Result() {
+		return (EReference) prescribedExaminationEClass.getEStructuralFeatures().get(7);
 	}
 
 	/**
@@ -3340,6 +3356,15 @@ public class Execution_metamodelPackageImpl extends EPackageImpl implements Exec
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getComplementaryExamination_Examinationprescribedresource() {
+		return (EReference) complementaryExaminationEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getComplementaryItemPrescription() {
 		return complementaryItemPrescriptionEClass;
 	}
@@ -3369,6 +3394,96 @@ public class Execution_metamodelPackageImpl extends EPackageImpl implements Exec
 	 */
 	public EAttribute getAudit_Date() {
 		return (EAttribute) auditEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getResult() {
+		return resultEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getExaminationPrescribedResource() {
+		return examinationPrescribedResourceEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getExaminationPrescribedResource_Id() {
+		return (EAttribute) examinationPrescribedResourceEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getExaminationPrescribedResource_Exam() {
+		return (EAttribute) examinationPrescribedResourceEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getExaminationPrescribedResource_IdExam() {
+		return (EAttribute) examinationPrescribedResourceEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getExaminationPrescribedResource_Justification() {
+		return (EAttribute) examinationPrescribedResourceEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getExaminationPrescribedResource_Category() {
+		return (EAttribute) examinationPrescribedResourceEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getExaminationPrescribedResource_Quantity() {
+		return (EAttribute) examinationPrescribedResourceEClass.getEStructuralFeatures().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getExaminationPrescribedResource_SideLimb() {
+		return (EAttribute) examinationPrescribedResourceEClass.getEStructuralFeatures().get(6);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getExaminationPrescribedResource_ClinicalIndication() {
+		return (EAttribute) examinationPrescribedResourceEClass.getEStructuralFeatures().get(7);
 	}
 
 	/**
@@ -3448,7 +3563,7 @@ public class Execution_metamodelPackageImpl extends EPackageImpl implements Exec
 		createEReference(prescribedExaminationEClass, PRESCRIBED_EXAMINATION__COMPLEMENT);
 		createEReference(prescribedExaminationEClass, PRESCRIBED_EXAMINATION__PRESCRIPTION);
 		createEAttribute(prescribedExaminationEClass, PRESCRIBED_EXAMINATION__NAME);
-		createEAttribute(prescribedExaminationEClass, PRESCRIBED_EXAMINATION__RESULT);
+		createEReference(prescribedExaminationEClass, PRESCRIBED_EXAMINATION__RESULT);
 
 		examEClass = createEClass(EXAM);
 		createEAttribute(examEClass, EXAM__ID);
@@ -3765,12 +3880,25 @@ public class Execution_metamodelPackageImpl extends EPackageImpl implements Exec
 		createEAttribute(procedurePrescribedResourceEClass, PROCEDURE_PRESCRIBED_RESOURCE__CATEGORY);
 
 		complementaryExaminationEClass = createEClass(COMPLEMENTARY_EXAMINATION);
+		createEReference(complementaryExaminationEClass, COMPLEMENTARY_EXAMINATION__EXAMINATIONPRESCRIBEDRESOURCE);
 
 		complementaryItemPrescriptionEClass = createEClass(COMPLEMENTARY_ITEM_PRESCRIPTION);
 
 		auditEClass = createEClass(AUDIT);
 		createEAttribute(auditEClass, AUDIT__USER);
 		createEAttribute(auditEClass, AUDIT__DATE);
+
+		resultEClass = createEClass(RESULT);
+
+		examinationPrescribedResourceEClass = createEClass(EXAMINATION_PRESCRIBED_RESOURCE);
+		createEAttribute(examinationPrescribedResourceEClass, EXAMINATION_PRESCRIBED_RESOURCE__ID);
+		createEAttribute(examinationPrescribedResourceEClass, EXAMINATION_PRESCRIBED_RESOURCE__EXAM);
+		createEAttribute(examinationPrescribedResourceEClass, EXAMINATION_PRESCRIBED_RESOURCE__ID_EXAM);
+		createEAttribute(examinationPrescribedResourceEClass, EXAMINATION_PRESCRIBED_RESOURCE__JUSTIFICATION);
+		createEAttribute(examinationPrescribedResourceEClass, EXAMINATION_PRESCRIBED_RESOURCE__CATEGORY);
+		createEAttribute(examinationPrescribedResourceEClass, EXAMINATION_PRESCRIBED_RESOURCE__QUANTITY);
+		createEAttribute(examinationPrescribedResourceEClass, EXAMINATION_PRESCRIBED_RESOURCE__SIDE_LIMB);
+		createEAttribute(examinationPrescribedResourceEClass, EXAMINATION_PRESCRIBED_RESOURCE__CLINICAL_INDICATION);
 	}
 
 	/**
@@ -3823,6 +3951,7 @@ public class Execution_metamodelPackageImpl extends EPackageImpl implements Exec
 		suspensionEClass.getESuperTypes().add(this.getNotification());
 		complementaryExaminationEClass.getESuperTypes().add(this.getComplementaryConducts());
 		complementaryItemPrescriptionEClass.getESuperTypes().add(this.getComplementaryConducts());
+		resultEClass.getESuperTypes().add(this.getNotification());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(eAuxiliaryConductEClass, EAuxiliaryConduct.class, "EAuxiliaryConduct", !IS_ABSTRACT, !IS_INTERFACE,
@@ -3942,9 +4071,9 @@ public class Execution_metamodelPackageImpl extends EPackageImpl implements Exec
 		initEAttribute(getPrescribedExamination_Name(), ecorePackage.getEString(), "name", null, 0, 1,
 				PrescribedExamination.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getPrescribedExamination_Result(), ecorePackage.getEString(), "result", null, 0, 1,
-				PrescribedExamination.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
-				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getPrescribedExamination_Result(), this.getResult(), null, "result", null, 1, 1,
+				PrescribedExamination.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
+				!IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(examEClass, Exam.class, "Exam", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getExam_Id(), ecorePackage.getEInt(), "id", null, 0, 1, Exam.class, !IS_TRANSIENT, !IS_VOLATILE,
@@ -4239,7 +4368,7 @@ public class Execution_metamodelPackageImpl extends EPackageImpl implements Exec
 				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getMedication_Name(), ecorePackage.getEString(), "name", null, 0, 1, Medication.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getMedication_Code(), ecorePackage.getEInt(), "code", null, 0, 1, Medication.class,
+		initEAttribute(getMedication_Code(), ecorePackage.getEString(), "code", null, 0, 1, Medication.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getMedication_Description(), ecorePackage.getEString(), "description", null, 0, 1,
 				Medication.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
@@ -4540,7 +4669,7 @@ public class Execution_metamodelPackageImpl extends EPackageImpl implements Exec
 		initEAttribute(getMedicationPrescribedResource_Brand(), ecorePackage.getEString(), "brand", null, 0, 1,
 				MedicationPrescribedResource.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getMedicationPrescribedResource_Code(), ecorePackage.getEInt(), "code", null, 0, 1,
+		initEAttribute(getMedicationPrescribedResource_Code(), ecorePackage.getEString(), "code", null, 0, 1,
 				MedicationPrescribedResource.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getMedicationPrescribedResource_Cycles(), ecorePackage.getEInt(), "cycles", null, 0, 1,
@@ -4609,6 +4738,10 @@ public class Execution_metamodelPackageImpl extends EPackageImpl implements Exec
 
 		initEClass(complementaryExaminationEClass, ComplementaryExamination.class, "ComplementaryExamination",
 				!IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getComplementaryExamination_Examinationprescribedresource(),
+				this.getExaminationPrescribedResource(), null, "examinationprescribedresource", null, 0, 1,
+				ComplementaryExamination.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
+				!IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(complementaryItemPrescriptionEClass, ComplementaryItemPrescription.class,
 				"ComplementaryItemPrescription", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -4618,6 +4751,35 @@ public class Execution_metamodelPackageImpl extends EPackageImpl implements Exec
 				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getAudit_Date(), ecorePackage.getEDate(), "date", null, 0, 1, Audit.class, !IS_TRANSIENT,
 				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(resultEClass, Result.class, "Result", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(examinationPrescribedResourceEClass, ExaminationPrescribedResource.class,
+				"ExaminationPrescribedResource", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getExaminationPrescribedResource_Id(), ecorePackage.getEInt(), "id", null, 0, 1,
+				ExaminationPrescribedResource.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, IS_ID,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getExaminationPrescribedResource_Exam(), ecorePackage.getEString(), "exam", null, 0, 1,
+				ExaminationPrescribedResource.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getExaminationPrescribedResource_IdExam(), ecorePackage.getEInt(), "idExam", null, 0, 1,
+				ExaminationPrescribedResource.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getExaminationPrescribedResource_Justification(), ecorePackage.getEString(), "justification",
+				null, 0, 1, ExaminationPrescribedResource.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
+				!IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getExaminationPrescribedResource_Category(), ecorePackage.getEString(), "category", null, 0, 1,
+				ExaminationPrescribedResource.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getExaminationPrescribedResource_Quantity(), ecorePackage.getEInt(), "quantity", null, 0, 1,
+				ExaminationPrescribedResource.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getExaminationPrescribedResource_SideLimb(), ecorePackage.getEString(), "sideLimb", null, 0, 1,
+				ExaminationPrescribedResource.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getExaminationPrescribedResource_ClinicalIndication(), ecorePackage.getEString(),
+				"clinicalIndication", null, 0, 1, ExaminationPrescribedResource.class, !IS_TRANSIENT, !IS_VOLATILE,
+				IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Create resource
 		createResource(eNS_URI);

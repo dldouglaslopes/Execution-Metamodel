@@ -202,12 +202,12 @@ public interface MedicationPrescribedResource extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Code</em>' attribute.
-	 * @see #setCode(int)
+	 * @see #setCode(String)
 	 * @see MetamodelExecution.Execution_metamodelPackage#getMedicationPrescribedResource_Code()
 	 * @model
 	 * @generated
 	 */
-	int getCode();
+	String getCode();
 
 	/**
 	 * Sets the value of the '{@link MetamodelExecution.MedicationPrescribedResource#getCode <em>Code</em>}' attribute.
@@ -217,7 +217,7 @@ public interface MedicationPrescribedResource extends EObject {
 	 * @see #getCode()
 	 * @generated
 	 */
-	void setCode(int value);
+	void setCode(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Cycles</b></em>' attribute.

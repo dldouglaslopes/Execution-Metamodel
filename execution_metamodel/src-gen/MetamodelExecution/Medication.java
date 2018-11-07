@@ -148,12 +148,12 @@ public interface Medication extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Code</em>' attribute.
-	 * @see #setCode(int)
+	 * @see #setCode(String)
 	 * @see MetamodelExecution.Execution_metamodelPackage#getMedication_Code()
 	 * @model
 	 * @generated
 	 */
-	int getCode();
+	String getCode();
 
 	/**
 	 * Sets the value of the '{@link MetamodelExecution.Medication#getCode <em>Code</em>}' attribute.
@@ -163,7 +163,7 @@ public interface Medication extends EObject {
 	 * @see #getCode()
 	 * @generated
 	 */
-	void setCode(int value);
+	void setCode(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Description</b></em>' attribute.

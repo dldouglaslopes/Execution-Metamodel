@@ -112,7 +112,7 @@ public class MedicationImpl extends MinimalEObjectImpl.Container implements Medi
 	 * @generated
 	 * @ordered
 	 */
-	protected static final int CODE_EDEFAULT = 0;
+	protected static final String CODE_EDEFAULT = null;
 
 	/**
 	 * The cached value of the '{@link #getCode() <em>Code</em>}' attribute.
@@ -122,7 +122,7 @@ public class MedicationImpl extends MinimalEObjectImpl.Container implements Medi
 	 * @generated
 	 * @ordered
 	 */
-	protected int code = CODE_EDEFAULT;
+	protected String code = CODE_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getDescription() <em>Description</em>}' attribute.
@@ -492,7 +492,7 @@ public class MedicationImpl extends MinimalEObjectImpl.Container implements Medi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public int getCode() {
+	public String getCode() {
 		return code;
 	}
 
@@ -501,8 +501,8 @@ public class MedicationImpl extends MinimalEObjectImpl.Container implements Medi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setCode(int newCode) {
-		int oldCode = code;
+	public void setCode(String newCode) {
+		String oldCode = code;
 		code = newCode;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.MEDICATION__CODE, oldCode,
@@ -808,7 +808,7 @@ public class MedicationImpl extends MinimalEObjectImpl.Container implements Medi
 			setName((String) newValue);
 			return;
 		case Execution_metamodelPackage.MEDICATION__CODE:
-			setCode((Integer) newValue);
+			setCode((String) newValue);
 			return;
 		case Execution_metamodelPackage.MEDICATION__DESCRIPTION:
 			setDescription((String) newValue);
@@ -918,7 +918,7 @@ public class MedicationImpl extends MinimalEObjectImpl.Container implements Medi
 		case Execution_metamodelPackage.MEDICATION__NAME:
 			return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 		case Execution_metamodelPackage.MEDICATION__CODE:
-			return code != CODE_EDEFAULT;
+			return CODE_EDEFAULT == null ? code != null : !CODE_EDEFAULT.equals(code);
 		case Execution_metamodelPackage.MEDICATION__DESCRIPTION:
 			return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
 		case Execution_metamodelPackage.MEDICATION__BRAND:

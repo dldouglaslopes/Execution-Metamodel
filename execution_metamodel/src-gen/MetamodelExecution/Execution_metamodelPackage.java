@@ -1533,7 +1533,7 @@ public interface Execution_metamodelPackage extends EPackage {
 	int PRESCRIBED_EXAMINATION__NAME = 6;
 
 	/**
-	 * The feature id for the '<em><b>Result</b></em>' attribute.
+	 * The feature id for the '<em><b>Result</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -5704,13 +5704,22 @@ public interface Execution_metamodelPackage extends EPackage {
 	int COMPLEMENTARY_EXAMINATION__SUSPENSION = COMPLEMENTARY_CONDUCTS__SUSPENSION;
 
 	/**
+	 * The feature id for the '<em><b>Examinationprescribedresource</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPLEMENTARY_EXAMINATION__EXAMINATIONPRESCRIBEDRESOURCE = COMPLEMENTARY_CONDUCTS_FEATURE_COUNT + 0;
+
+	/**
 	 * The number of structural features of the '<em>Complementary Examination</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int COMPLEMENTARY_EXAMINATION_FEATURE_COUNT = COMPLEMENTARY_CONDUCTS_FEATURE_COUNT + 0;
+	int COMPLEMENTARY_EXAMINATION_FEATURE_COUNT = COMPLEMENTARY_CONDUCTS_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>Complementary Examination</em>' class.
@@ -5866,6 +5875,170 @@ public interface Execution_metamodelPackage extends EPackage {
 	 * @ordered
 	 */
 	int AUDIT_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link MetamodelExecution.impl.ResultImpl <em>Result</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see MetamodelExecution.impl.ResultImpl
+	 * @see MetamodelExecution.impl.Execution_metamodelPackageImpl#getResult()
+	 * @generated
+	 */
+	int RESULT = 60;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RESULT__ID = NOTIFICATION__ID;
+
+	/**
+	 * The feature id for the '<em><b>Message</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RESULT__MESSAGE = NOTIFICATION__MESSAGE;
+
+	/**
+	 * The feature id for the '<em><b>Request Date</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RESULT__REQUEST_DATE = NOTIFICATION__REQUEST_DATE;
+
+	/**
+	 * The feature id for the '<em><b>Success</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RESULT__SUCCESS = NOTIFICATION__SUCCESS;
+
+	/**
+	 * The number of structural features of the '<em>Result</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RESULT_FEATURE_COUNT = NOTIFICATION_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Result</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RESULT_OPERATION_COUNT = NOTIFICATION_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link MetamodelExecution.impl.ExaminationPrescribedResourceImpl <em>Examination Prescribed Resource</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see MetamodelExecution.impl.ExaminationPrescribedResourceImpl
+	 * @see MetamodelExecution.impl.Execution_metamodelPackageImpl#getExaminationPrescribedResource()
+	 * @generated
+	 */
+	int EXAMINATION_PRESCRIBED_RESOURCE = 61;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXAMINATION_PRESCRIBED_RESOURCE__ID = 0;
+
+	/**
+	 * The feature id for the '<em><b>Exam</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXAMINATION_PRESCRIBED_RESOURCE__EXAM = 1;
+
+	/**
+	 * The feature id for the '<em><b>Id Exam</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXAMINATION_PRESCRIBED_RESOURCE__ID_EXAM = 2;
+
+	/**
+	 * The feature id for the '<em><b>Justification</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXAMINATION_PRESCRIBED_RESOURCE__JUSTIFICATION = 3;
+
+	/**
+	 * The feature id for the '<em><b>Category</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXAMINATION_PRESCRIBED_RESOURCE__CATEGORY = 4;
+
+	/**
+	 * The feature id for the '<em><b>Quantity</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXAMINATION_PRESCRIBED_RESOURCE__QUANTITY = 5;
+
+	/**
+	 * The feature id for the '<em><b>Side Limb</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXAMINATION_PRESCRIBED_RESOURCE__SIDE_LIMB = 6;
+
+	/**
+	 * The feature id for the '<em><b>Clinical Indication</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXAMINATION_PRESCRIBED_RESOURCE__CLINICAL_INDICATION = 7;
+
+	/**
+	 * The number of structural features of the '<em>Examination Prescribed Resource</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXAMINATION_PRESCRIBED_RESOURCE_FEATURE_COUNT = 8;
+
+	/**
+	 * The number of operations of the '<em>Examination Prescribed Resource</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXAMINATION_PRESCRIBED_RESOURCE_OPERATION_COUNT = 0;
 
 	/**
 	 * Returns the meta object for class '{@link MetamodelExecution.EAuxiliaryConduct <em>EAuxiliary Conduct</em>}'.
@@ -6311,15 +6484,15 @@ public interface Execution_metamodelPackage extends EPackage {
 	EAttribute getPrescribedExamination_Name();
 
 	/**
-	 * Returns the meta object for the attribute '{@link MetamodelExecution.PrescribedExamination#getResult <em>Result</em>}'.
+	 * Returns the meta object for the containment reference '{@link MetamodelExecution.PrescribedExamination#getResult <em>Result</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Result</em>'.
+	 * @return the meta object for the containment reference '<em>Result</em>'.
 	 * @see MetamodelExecution.PrescribedExamination#getResult()
 	 * @see #getPrescribedExamination()
 	 * @generated
 	 */
-	EAttribute getPrescribedExamination_Result();
+	EReference getPrescribedExamination_Result();
 
 	/**
 	 * Returns the meta object for class '{@link MetamodelExecution.Exam <em>Exam</em>}'.
@@ -9198,6 +9371,17 @@ public interface Execution_metamodelPackage extends EPackage {
 	EClass getComplementaryExamination();
 
 	/**
+	 * Returns the meta object for the containment reference '{@link MetamodelExecution.ComplementaryExamination#getExaminationprescribedresource <em>Examinationprescribedresource</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Examinationprescribedresource</em>'.
+	 * @see MetamodelExecution.ComplementaryExamination#getExaminationprescribedresource()
+	 * @see #getComplementaryExamination()
+	 * @generated
+	 */
+	EReference getComplementaryExamination_Examinationprescribedresource();
+
+	/**
 	 * Returns the meta object for class '{@link MetamodelExecution.ComplementaryItemPrescription <em>Complementary Item Prescription</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -9238,6 +9422,114 @@ public interface Execution_metamodelPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getAudit_Date();
+
+	/**
+	 * Returns the meta object for class '{@link MetamodelExecution.Result <em>Result</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Result</em>'.
+	 * @see MetamodelExecution.Result
+	 * @generated
+	 */
+	EClass getResult();
+
+	/**
+	 * Returns the meta object for class '{@link MetamodelExecution.ExaminationPrescribedResource <em>Examination Prescribed Resource</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Examination Prescribed Resource</em>'.
+	 * @see MetamodelExecution.ExaminationPrescribedResource
+	 * @generated
+	 */
+	EClass getExaminationPrescribedResource();
+
+	/**
+	 * Returns the meta object for the attribute '{@link MetamodelExecution.ExaminationPrescribedResource#getId <em>Id</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Id</em>'.
+	 * @see MetamodelExecution.ExaminationPrescribedResource#getId()
+	 * @see #getExaminationPrescribedResource()
+	 * @generated
+	 */
+	EAttribute getExaminationPrescribedResource_Id();
+
+	/**
+	 * Returns the meta object for the attribute '{@link MetamodelExecution.ExaminationPrescribedResource#getExam <em>Exam</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Exam</em>'.
+	 * @see MetamodelExecution.ExaminationPrescribedResource#getExam()
+	 * @see #getExaminationPrescribedResource()
+	 * @generated
+	 */
+	EAttribute getExaminationPrescribedResource_Exam();
+
+	/**
+	 * Returns the meta object for the attribute '{@link MetamodelExecution.ExaminationPrescribedResource#getIdExam <em>Id Exam</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Id Exam</em>'.
+	 * @see MetamodelExecution.ExaminationPrescribedResource#getIdExam()
+	 * @see #getExaminationPrescribedResource()
+	 * @generated
+	 */
+	EAttribute getExaminationPrescribedResource_IdExam();
+
+	/**
+	 * Returns the meta object for the attribute '{@link MetamodelExecution.ExaminationPrescribedResource#getJustification <em>Justification</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Justification</em>'.
+	 * @see MetamodelExecution.ExaminationPrescribedResource#getJustification()
+	 * @see #getExaminationPrescribedResource()
+	 * @generated
+	 */
+	EAttribute getExaminationPrescribedResource_Justification();
+
+	/**
+	 * Returns the meta object for the attribute '{@link MetamodelExecution.ExaminationPrescribedResource#getCategory <em>Category</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Category</em>'.
+	 * @see MetamodelExecution.ExaminationPrescribedResource#getCategory()
+	 * @see #getExaminationPrescribedResource()
+	 * @generated
+	 */
+	EAttribute getExaminationPrescribedResource_Category();
+
+	/**
+	 * Returns the meta object for the attribute '{@link MetamodelExecution.ExaminationPrescribedResource#getQuantity <em>Quantity</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Quantity</em>'.
+	 * @see MetamodelExecution.ExaminationPrescribedResource#getQuantity()
+	 * @see #getExaminationPrescribedResource()
+	 * @generated
+	 */
+	EAttribute getExaminationPrescribedResource_Quantity();
+
+	/**
+	 * Returns the meta object for the attribute '{@link MetamodelExecution.ExaminationPrescribedResource#getSideLimb <em>Side Limb</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Side Limb</em>'.
+	 * @see MetamodelExecution.ExaminationPrescribedResource#getSideLimb()
+	 * @see #getExaminationPrescribedResource()
+	 * @generated
+	 */
+	EAttribute getExaminationPrescribedResource_SideLimb();
+
+	/**
+	 * Returns the meta object for the attribute '{@link MetamodelExecution.ExaminationPrescribedResource#getClinicalIndication <em>Clinical Indication</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Clinical Indication</em>'.
+	 * @see MetamodelExecution.ExaminationPrescribedResource#getClinicalIndication()
+	 * @see #getExaminationPrescribedResource()
+	 * @generated
+	 */
+	EAttribute getExaminationPrescribedResource_ClinicalIndication();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -9608,12 +9900,12 @@ public interface Execution_metamodelPackage extends EPackage {
 		EAttribute PRESCRIBED_EXAMINATION__NAME = eINSTANCE.getPrescribedExamination_Name();
 
 		/**
-		 * The meta object literal for the '<em><b>Result</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Result</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute PRESCRIBED_EXAMINATION__RESULT = eINSTANCE.getPrescribedExamination_Result();
+		EReference PRESCRIBED_EXAMINATION__RESULT = eINSTANCE.getPrescribedExamination_Result();
 
 		/**
 		 * The meta object literal for the '{@link MetamodelExecution.impl.ExamImpl <em>Exam</em>}' class.
@@ -11854,6 +12146,15 @@ public interface Execution_metamodelPackage extends EPackage {
 		EClass COMPLEMENTARY_EXAMINATION = eINSTANCE.getComplementaryExamination();
 
 		/**
+		 * The meta object literal for the '<em><b>Examinationprescribedresource</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference COMPLEMENTARY_EXAMINATION__EXAMINATIONPRESCRIBEDRESOURCE = eINSTANCE
+				.getComplementaryExamination_Examinationprescribedresource();
+
+		/**
 		 * The meta object literal for the '{@link MetamodelExecution.impl.ComplementaryItemPrescriptionImpl <em>Complementary Item Prescription</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -11888,6 +12189,92 @@ public interface Execution_metamodelPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute AUDIT__DATE = eINSTANCE.getAudit_Date();
+
+		/**
+		 * The meta object literal for the '{@link MetamodelExecution.impl.ResultImpl <em>Result</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see MetamodelExecution.impl.ResultImpl
+		 * @see MetamodelExecution.impl.Execution_metamodelPackageImpl#getResult()
+		 * @generated
+		 */
+		EClass RESULT = eINSTANCE.getResult();
+
+		/**
+		 * The meta object literal for the '{@link MetamodelExecution.impl.ExaminationPrescribedResourceImpl <em>Examination Prescribed Resource</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see MetamodelExecution.impl.ExaminationPrescribedResourceImpl
+		 * @see MetamodelExecution.impl.Execution_metamodelPackageImpl#getExaminationPrescribedResource()
+		 * @generated
+		 */
+		EClass EXAMINATION_PRESCRIBED_RESOURCE = eINSTANCE.getExaminationPrescribedResource();
+
+		/**
+		 * The meta object literal for the '<em><b>Id</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute EXAMINATION_PRESCRIBED_RESOURCE__ID = eINSTANCE.getExaminationPrescribedResource_Id();
+
+		/**
+		 * The meta object literal for the '<em><b>Exam</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute EXAMINATION_PRESCRIBED_RESOURCE__EXAM = eINSTANCE.getExaminationPrescribedResource_Exam();
+
+		/**
+		 * The meta object literal for the '<em><b>Id Exam</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute EXAMINATION_PRESCRIBED_RESOURCE__ID_EXAM = eINSTANCE.getExaminationPrescribedResource_IdExam();
+
+		/**
+		 * The meta object literal for the '<em><b>Justification</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute EXAMINATION_PRESCRIBED_RESOURCE__JUSTIFICATION = eINSTANCE
+				.getExaminationPrescribedResource_Justification();
+
+		/**
+		 * The meta object literal for the '<em><b>Category</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute EXAMINATION_PRESCRIBED_RESOURCE__CATEGORY = eINSTANCE.getExaminationPrescribedResource_Category();
+
+		/**
+		 * The meta object literal for the '<em><b>Quantity</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute EXAMINATION_PRESCRIBED_RESOURCE__QUANTITY = eINSTANCE.getExaminationPrescribedResource_Quantity();
+
+		/**
+		 * The meta object literal for the '<em><b>Side Limb</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute EXAMINATION_PRESCRIBED_RESOURCE__SIDE_LIMB = eINSTANCE.getExaminationPrescribedResource_SideLimb();
+
+		/**
+		 * The meta object literal for the '<em><b>Clinical Indication</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute EXAMINATION_PRESCRIBED_RESOURCE__CLINICAL_INDICATION = eINSTANCE
+				.getExaminationPrescribedResource_ClinicalIndication();
 
 	}
 

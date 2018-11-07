@@ -171,7 +171,7 @@ public class MedicationPrescribedResourceImpl extends MinimalEObjectImpl.Contain
 	 * @generated
 	 * @ordered
 	 */
-	protected static final int CODE_EDEFAULT = 0;
+	protected static final String CODE_EDEFAULT = null;
 
 	/**
 	 * The cached value of the '{@link #getCode() <em>Code</em>}' attribute.
@@ -181,7 +181,7 @@ public class MedicationPrescribedResourceImpl extends MinimalEObjectImpl.Contain
 	 * @generated
 	 * @ordered
 	 */
-	protected int code = CODE_EDEFAULT;
+	protected String code = CODE_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getCycles() <em>Cycles</em>}' attribute.
@@ -540,7 +540,7 @@ public class MedicationPrescribedResourceImpl extends MinimalEObjectImpl.Contain
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public int getCode() {
+	public String getCode() {
 		return code;
 	}
 
@@ -549,8 +549,8 @@ public class MedicationPrescribedResourceImpl extends MinimalEObjectImpl.Contain
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setCode(int newCode) {
-		int oldCode = code;
+	public void setCode(String newCode) {
+		String oldCode = code;
 		code = newCode;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET,
@@ -854,7 +854,7 @@ public class MedicationPrescribedResourceImpl extends MinimalEObjectImpl.Contain
 			setBrand((String) newValue);
 			return;
 		case Execution_metamodelPackage.MEDICATION_PRESCRIBED_RESOURCE__CODE:
-			setCode((Integer) newValue);
+			setCode((String) newValue);
 			return;
 		case Execution_metamodelPackage.MEDICATION_PRESCRIBED_RESOURCE__CYCLES:
 			setCycles((Integer) newValue);
@@ -974,7 +974,7 @@ public class MedicationPrescribedResourceImpl extends MinimalEObjectImpl.Contain
 		case Execution_metamodelPackage.MEDICATION_PRESCRIBED_RESOURCE__BRAND:
 			return BRAND_EDEFAULT == null ? brand != null : !BRAND_EDEFAULT.equals(brand);
 		case Execution_metamodelPackage.MEDICATION_PRESCRIBED_RESOURCE__CODE:
-			return code != CODE_EDEFAULT;
+			return CODE_EDEFAULT == null ? code != null : !CODE_EDEFAULT.equals(code);
 		case Execution_metamodelPackage.MEDICATION_PRESCRIBED_RESOURCE__CYCLES:
 			return cycles != CYCLES_EDEFAULT;
 		case Execution_metamodelPackage.MEDICATION_PRESCRIBED_RESOURCE__CATEGORY:

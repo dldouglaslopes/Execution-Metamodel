@@ -528,6 +528,22 @@ public class Execution_metamodelSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
+		case Execution_metamodelPackage.RESULT: {
+			Result result = (Result) theEObject;
+			T theResult = caseResult(result);
+			if (theResult == null)
+				theResult = caseNotification(result);
+			if (theResult == null)
+				theResult = defaultCase(theEObject);
+			return theResult;
+		}
+		case Execution_metamodelPackage.EXAMINATION_PRESCRIBED_RESOURCE: {
+			ExaminationPrescribedResource examinationPrescribedResource = (ExaminationPrescribedResource) theEObject;
+			T result = caseExaminationPrescribedResource(examinationPrescribedResource);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
 		default:
 			return defaultCase(theEObject);
 		}
@@ -1430,6 +1446,36 @@ public class Execution_metamodelSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseAudit(Audit object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Result</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Result</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseResult(Result object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Examination Prescribed Resource</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Examination Prescribed Resource</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseExaminationPrescribedResource(ExaminationPrescribedResource object) {
 		return null;
 	}
 

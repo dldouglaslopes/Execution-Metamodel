@@ -517,6 +517,24 @@ public interface Execution_metamodelFactory extends EFactory {
 	Audit createAudit();
 
 	/**
+	 * Returns a new object of class '<em>Result</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Result</em>'.
+	 * @generated
+	 */
+	Result createResult();
+
+	/**
+	 * Returns a new object of class '<em>Examination Prescribed Resource</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Examination Prescribed Resource</em>'.
+	 * @generated
+	 */
+	ExaminationPrescribedResource createExaminationPrescribedResource();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

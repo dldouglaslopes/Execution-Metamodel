@@ -166,6 +166,10 @@ public class Execution_metamodelFactoryImpl extends EFactoryImpl implements Exec
 			return createComplementaryItemPrescription();
 		case Execution_metamodelPackage.AUDIT:
 			return createAudit();
+		case Execution_metamodelPackage.RESULT:
+			return createResult();
+		case Execution_metamodelPackage.EXAMINATION_PRESCRIBED_RESOURCE:
+			return createExaminationPrescribedResource();
 		default:
 			throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -719,6 +723,26 @@ public class Execution_metamodelFactoryImpl extends EFactoryImpl implements Exec
 	public Audit createAudit() {
 		AuditImpl audit = new AuditImpl();
 		return audit;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Result createResult() {
+		ResultImpl result = new ResultImpl();
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ExaminationPrescribedResource createExaminationPrescribedResource() {
+		ExaminationPrescribedResourceImpl examinationPrescribedResource = new ExaminationPrescribedResourceImpl();
+		return examinationPrescribedResource;
 	}
 
 	/**
