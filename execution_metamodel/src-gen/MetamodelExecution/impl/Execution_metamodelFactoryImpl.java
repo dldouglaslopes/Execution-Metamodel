@@ -128,20 +128,6 @@ public class Execution_metamodelFactoryImpl extends EFactoryImpl implements Exec
 			return createEProcedure();
 		case Execution_metamodelPackage.EPAUSE:
 			return createEPause();
-		case Execution_metamodelPackage.MEDICAL_CARE:
-			return createMedicalCare();
-		case Execution_metamodelPackage.UNIT_CARE:
-			return createUnitCare();
-		case Execution_metamodelPackage.PROFESSIONAL:
-			return createProfessional();
-		case Execution_metamodelPackage.PATIENT:
-			return createPatient();
-		case Execution_metamodelPackage.ALLERGY_REGISTRY:
-			return createAllergyRegistry();
-		case Execution_metamodelPackage.COMORBIDITY_REGISTRY:
-			return createComorbidityRegistry();
-		case Execution_metamodelPackage.ALLERGY:
-			return createAllergy();
 		case Execution_metamodelPackage.PROCEDURE:
 			return createProcedure();
 		case Execution_metamodelPackage.INTERNMENT:
@@ -170,6 +156,8 @@ public class Execution_metamodelFactoryImpl extends EFactoryImpl implements Exec
 			return createResult();
 		case Execution_metamodelPackage.EXAMINATION_PRESCRIBED_RESOURCE:
 			return createExaminationPrescribedResource();
+		case Execution_metamodelPackage.STANDARD:
+			return createStandard();
 		default:
 			throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -540,76 +528,6 @@ public class Execution_metamodelFactoryImpl extends EFactoryImpl implements Exec
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public MedicalCare createMedicalCare() {
-		MedicalCareImpl medicalCare = new MedicalCareImpl();
-		return medicalCare;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public UnitCare createUnitCare() {
-		UnitCareImpl unitCare = new UnitCareImpl();
-		return unitCare;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Professional createProfessional() {
-		ProfessionalImpl professional = new ProfessionalImpl();
-		return professional;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Patient createPatient() {
-		PatientImpl patient = new PatientImpl();
-		return patient;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public AllergyRegistry createAllergyRegistry() {
-		AllergyRegistryImpl allergyRegistry = new AllergyRegistryImpl();
-		return allergyRegistry;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public ComorbidityRegistry createComorbidityRegistry() {
-		ComorbidityRegistryImpl comorbidityRegistry = new ComorbidityRegistryImpl();
-		return comorbidityRegistry;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Allergy createAllergy() {
-		AllergyImpl allergy = new AllergyImpl();
-		return allergy;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public Procedure createProcedure() {
 		ProcedureImpl procedure = new ProcedureImpl();
 		return procedure;
@@ -743,6 +661,16 @@ public class Execution_metamodelFactoryImpl extends EFactoryImpl implements Exec
 	public ExaminationPrescribedResource createExaminationPrescribedResource() {
 		ExaminationPrescribedResourceImpl examinationPrescribedResource = new ExaminationPrescribedResourceImpl();
 		return examinationPrescribedResource;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Standard createStandard() {
+		StandardImpl standard = new StandardImpl();
+		return standard;
 	}
 
 	/**

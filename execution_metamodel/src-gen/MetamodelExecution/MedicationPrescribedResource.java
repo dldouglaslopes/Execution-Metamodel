@@ -17,7 +17,6 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link MetamodelExecution.MedicationPrescribedResource#getIdMedication <em>Id Medication</em>}</li>
  *   <li>{@link MetamodelExecution.MedicationPrescribedResource#isOutpatient <em>Outpatient</em>}</li>
  *   <li>{@link MetamodelExecution.MedicationPrescribedResource#getName <em>Name</em>}</li>
- *   <li>{@link MetamodelExecution.MedicationPrescribedResource#getStandard <em>Standard</em>}</li>
  *   <li>{@link MetamodelExecution.MedicationPrescribedResource#getBrand <em>Brand</em>}</li>
  *   <li>{@link MetamodelExecution.MedicationPrescribedResource#getCode <em>Code</em>}</li>
  *   <li>{@link MetamodelExecution.MedicationPrescribedResource#getCycles <em>Cycles</em>}</li>
@@ -30,6 +29,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link MetamodelExecution.MedicationPrescribedResource#getMedication <em>Medication</em>}</li>
  *   <li>{@link MetamodelExecution.MedicationPrescribedResource#getUnit <em>Unit</em>}</li>
  *   <li>{@link MetamodelExecution.MedicationPrescribedResource#getAccess <em>Access</em>}</li>
+ *   <li>{@link MetamodelExecution.MedicationPrescribedResource#getStandard <em>Standard</em>}</li>
  * </ul>
  *
  * @see MetamodelExecution.Execution_metamodelPackage#getMedicationPrescribedResource()
@@ -140,32 +140,6 @@ public interface MedicationPrescribedResource extends EObject {
 	 * @generated
 	 */
 	void setName(String value);
-
-	/**
-	 * Returns the value of the '<em><b>Standard</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Standard</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Standard</em>' attribute.
-	 * @see #setStandard(String)
-	 * @see MetamodelExecution.Execution_metamodelPackage#getMedicationPrescribedResource_Standard()
-	 * @model
-	 * @generated
-	 */
-	String getStandard();
-
-	/**
-	 * Sets the value of the '{@link MetamodelExecution.MedicationPrescribedResource#getStandard <em>Standard</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Standard</em>' attribute.
-	 * @see #getStandard()
-	 * @generated
-	 */
-	void setStandard(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Brand</b></em>' attribute.
@@ -478,5 +452,31 @@ public interface MedicationPrescribedResource extends EObject {
 	 * @generated
 	 */
 	void setAccess(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Standard</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Standard</em>' containment reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Standard</em>' containment reference.
+	 * @see #setStandard(Standard)
+	 * @see MetamodelExecution.Execution_metamodelPackage#getMedicationPrescribedResource_Standard()
+	 * @model containment="true"
+	 * @generated
+	 */
+	Standard getStandard();
+
+	/**
+	 * Sets the value of the '{@link MetamodelExecution.MedicationPrescribedResource#getStandard <em>Standard</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Standard</em>' containment reference.
+	 * @see #getStandard()
+	 * @generated
+	 */
+	void setStandard(Standard value);
 
 } // MedicationPrescribedResource

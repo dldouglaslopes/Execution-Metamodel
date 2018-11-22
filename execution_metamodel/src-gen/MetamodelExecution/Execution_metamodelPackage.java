@@ -2790,7 +2790,7 @@ public interface Execution_metamodelPackage extends EPackage {
 	 * @see MetamodelExecution.impl.Execution_metamodelPackageImpl#getNotification()
 	 * @generated
 	 */
-	int NOTIFICATION = 55;
+	int NOTIFICATION = 48;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -4228,481 +4228,6 @@ public interface Execution_metamodelPackage extends EPackage {
 	int EPAUSE_OPERATION_COUNT = ESTEP_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link MetamodelExecution.impl.MedicalCareImpl <em>Medical Care</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see MetamodelExecution.impl.MedicalCareImpl
-	 * @see MetamodelExecution.impl.Execution_metamodelPackageImpl#getMedicalCare()
-	 * @generated
-	 */
-	int MEDICAL_CARE = 39;
-
-	/**
-	 * The feature id for the '<em><b>Id</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MEDICAL_CARE__ID = 0;
-
-	/**
-	 * The feature id for the '<em><b>Professional</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MEDICAL_CARE__PROFESSIONAL = 1;
-
-	/**
-	 * The feature id for the '<em><b>Unitcare</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MEDICAL_CARE__UNITCARE = 2;
-
-	/**
-	 * The feature id for the '<em><b>Patient</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MEDICAL_CARE__PATIENT = 3;
-
-	/**
-	 * The feature id for the '<em><b>Cid10</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MEDICAL_CARE__CID10 = 4;
-
-	/**
-	 * The feature id for the '<em><b>Code Medical Care</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MEDICAL_CARE__CODE_MEDICAL_CARE = 5;
-
-	/**
-	 * The feature id for the '<em><b>Code Medical Care Contiguous</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MEDICAL_CARE__CODE_MEDICAL_CARE_CONTIGUOUS = 6;
-
-	/**
-	 * The feature id for the '<em><b>Code Bd</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MEDICAL_CARE__CODE_BD = 7;
-
-	/**
-	 * The feature id for the '<em><b>Code Beneficiary</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MEDICAL_CARE__CODE_BENEFICIARY = 8;
-
-	/**
-	 * The feature id for the '<em><b>Code Accommodation</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MEDICAL_CARE__CODE_ACCOMMODATION = 9;
-
-	/**
-	 * The feature id for the '<em><b>Code Patient</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MEDICAL_CARE__CODE_PATIENT = 10;
-
-	/**
-	 * The feature id for the '<em><b>Code Risk</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MEDICAL_CARE__CODE_RISK = 11;
-
-	/**
-	 * The feature id for the '<em><b>Code Professional</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MEDICAL_CARE__CODE_PROFESSIONAL = 12;
-
-	/**
-	 * The feature id for the '<em><b>Login</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MEDICAL_CARE__LOGIN = 13;
-
-	/**
-	 * The feature id for the '<em><b>Priority</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MEDICAL_CARE__PRIORITY = 14;
-
-	/**
-	 * The number of structural features of the '<em>Medical Care</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MEDICAL_CARE_FEATURE_COUNT = 15;
-
-	/**
-	 * The number of operations of the '<em>Medical Care</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MEDICAL_CARE_OPERATION_COUNT = 0;
-
-	/**
-	 * The meta object id for the '{@link MetamodelExecution.impl.UnitCareImpl <em>Unit Care</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see MetamodelExecution.impl.UnitCareImpl
-	 * @see MetamodelExecution.impl.Execution_metamodelPackageImpl#getUnitCare()
-	 * @generated
-	 */
-	int UNIT_CARE = 40;
-
-	/**
-	 * The feature id for the '<em><b>Id</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int UNIT_CARE__ID = 0;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int UNIT_CARE__NAME = 1;
-
-	/**
-	 * The feature id for the '<em><b>Code</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int UNIT_CARE__CODE = 2;
-
-	/**
-	 * The number of structural features of the '<em>Unit Care</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int UNIT_CARE_FEATURE_COUNT = 3;
-
-	/**
-	 * The number of operations of the '<em>Unit Care</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int UNIT_CARE_OPERATION_COUNT = 0;
-
-	/**
-	 * The meta object id for the '{@link MetamodelExecution.impl.ProfessionalImpl <em>Professional</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see MetamodelExecution.impl.ProfessionalImpl
-	 * @see MetamodelExecution.impl.Execution_metamodelPackageImpl#getProfessional()
-	 * @generated
-	 */
-	int PROFESSIONAL = 41;
-
-	/**
-	 * The number of structural features of the '<em>Professional</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PROFESSIONAL_FEATURE_COUNT = 0;
-
-	/**
-	 * The number of operations of the '<em>Professional</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PROFESSIONAL_OPERATION_COUNT = 0;
-
-	/**
-	 * The meta object id for the '{@link MetamodelExecution.impl.PatientImpl <em>Patient</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see MetamodelExecution.impl.PatientImpl
-	 * @see MetamodelExecution.impl.Execution_metamodelPackageImpl#getPatient()
-	 * @generated
-	 */
-	int PATIENT = 42;
-
-	/**
-	 * The feature id for the '<em><b>Id</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PATIENT__ID = 0;
-
-	/**
-	 * The feature id for the '<em><b>Code</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PATIENT__CODE = 1;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PATIENT__NAME = 2;
-
-	/**
-	 * The feature id for the '<em><b>Cpf</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PATIENT__CPF = 3;
-
-	/**
-	 * The feature id for the '<em><b>Mother</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PATIENT__MOTHER = 4;
-
-	/**
-	 * The feature id for the '<em><b>Sex</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PATIENT__SEX = 5;
-
-	/**
-	 * The feature id for the '<em><b>Birth Date</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PATIENT__BIRTH_DATE = 6;
-
-	/**
-	 * The number of structural features of the '<em>Patient</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PATIENT_FEATURE_COUNT = 7;
-
-	/**
-	 * The number of operations of the '<em>Patient</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PATIENT_OPERATION_COUNT = 0;
-
-	/**
-	 * The meta object id for the '{@link MetamodelExecution.impl.AllergyRegistryImpl <em>Allergy Registry</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see MetamodelExecution.impl.AllergyRegistryImpl
-	 * @see MetamodelExecution.impl.Execution_metamodelPackageImpl#getAllergyRegistry()
-	 * @generated
-	 */
-	int ALLERGY_REGISTRY = 43;
-
-	/**
-	 * The feature id for the '<em><b>Patient</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ALLERGY_REGISTRY__PATIENT = 0;
-
-	/**
-	 * The feature id for the '<em><b>Id</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ALLERGY_REGISTRY__ID = 1;
-
-	/**
-	 * The feature id for the '<em><b>Allergy</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ALLERGY_REGISTRY__ALLERGY = 2;
-
-	/**
-	 * The number of structural features of the '<em>Allergy Registry</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ALLERGY_REGISTRY_FEATURE_COUNT = 3;
-
-	/**
-	 * The number of operations of the '<em>Allergy Registry</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ALLERGY_REGISTRY_OPERATION_COUNT = 0;
-
-	/**
-	 * The meta object id for the '{@link MetamodelExecution.impl.ComorbidityRegistryImpl <em>Comorbidity Registry</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see MetamodelExecution.impl.ComorbidityRegistryImpl
-	 * @see MetamodelExecution.impl.Execution_metamodelPackageImpl#getComorbidityRegistry()
-	 * @generated
-	 */
-	int COMORBIDITY_REGISTRY = 44;
-
-	/**
-	 * The feature id for the '<em><b>Id</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int COMORBIDITY_REGISTRY__ID = 0;
-
-	/**
-	 * The number of structural features of the '<em>Comorbidity Registry</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int COMORBIDITY_REGISTRY_FEATURE_COUNT = 1;
-
-	/**
-	 * The number of operations of the '<em>Comorbidity Registry</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int COMORBIDITY_REGISTRY_OPERATION_COUNT = 0;
-
-	/**
-	 * The meta object id for the '{@link MetamodelExecution.impl.AllergyImpl <em>Allergy</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see MetamodelExecution.impl.AllergyImpl
-	 * @see MetamodelExecution.impl.Execution_metamodelPackageImpl#getAllergy()
-	 * @generated
-	 */
-	int ALLERGY = 45;
-
-	/**
-	 * The feature id for the '<em><b>Id</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ALLERGY__ID = 0;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ALLERGY__NAME = 1;
-
-	/**
-	 * The number of structural features of the '<em>Allergy</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ALLERGY_FEATURE_COUNT = 2;
-
-	/**
-	 * The number of operations of the '<em>Allergy</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ALLERGY_OPERATION_COUNT = 0;
-
-	/**
 	 * The meta object id for the '{@link MetamodelExecution.impl.ProcedureImpl <em>Procedure</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4710,7 +4235,7 @@ public interface Execution_metamodelPackage extends EPackage {
 	 * @see MetamodelExecution.impl.Execution_metamodelPackageImpl#getProcedure()
 	 * @generated
 	 */
-	int PROCEDURE = 46;
+	int PROCEDURE = 39;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -4774,7 +4299,7 @@ public interface Execution_metamodelPackage extends EPackage {
 	 * @see MetamodelExecution.impl.Execution_metamodelPackageImpl#getInternment()
 	 * @generated
 	 */
-	int INTERNMENT = 47;
+	int INTERNMENT = 40;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -4847,7 +4372,7 @@ public interface Execution_metamodelPackage extends EPackage {
 	 * @see MetamodelExecution.impl.Execution_metamodelPackageImpl#getComplementaryConducts()
 	 * @generated
 	 */
-	int COMPLEMENTARY_CONDUCTS = 48;
+	int COMPLEMENTARY_CONDUCTS = 41;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -4947,7 +4472,7 @@ public interface Execution_metamodelPackage extends EPackage {
 	 * @see MetamodelExecution.impl.Execution_metamodelPackageImpl#getAttendance()
 	 * @generated
 	 */
-	int ATTENDANCE = 49;
+	int ATTENDANCE = 42;
 
 	/**
 	 * The feature id for the '<em><b>Code Attendance</b></em>' attribute.
@@ -5038,7 +4563,7 @@ public interface Execution_metamodelPackage extends EPackage {
 	 * @see MetamodelExecution.impl.Execution_metamodelPackageImpl#getComorbidity()
 	 * @generated
 	 */
-	int COMORBIDITY = 50;
+	int COMORBIDITY = 43;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -5084,7 +4609,7 @@ public interface Execution_metamodelPackage extends EPackage {
 	 * @see MetamodelExecution.impl.Execution_metamodelPackageImpl#getComplementaryMedication()
 	 * @generated
 	 */
-	int COMPLEMENTARY_MEDICATION = 51;
+	int COMPLEMENTARY_MEDICATION = 44;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -5193,7 +4718,7 @@ public interface Execution_metamodelPackage extends EPackage {
 	 * @see MetamodelExecution.impl.Execution_metamodelPackageImpl#getComplementaryProcedure()
 	 * @generated
 	 */
-	int COMPLEMENTARY_PROCEDURE = 52;
+	int COMPLEMENTARY_PROCEDURE = 45;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -5302,7 +4827,7 @@ public interface Execution_metamodelPackage extends EPackage {
 	 * @see MetamodelExecution.impl.Execution_metamodelPackageImpl#getSuspension()
 	 * @generated
 	 */
-	int SUSPENSION = 53;
+	int SUSPENSION = 46;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -5366,7 +4891,7 @@ public interface Execution_metamodelPackage extends EPackage {
 	 * @see MetamodelExecution.impl.Execution_metamodelPackageImpl#getMedicationPrescribedResource()
 	 * @generated
 	 */
-	int MEDICATION_PRESCRIBED_RESOURCE = 54;
+	int MEDICATION_PRESCRIBED_RESOURCE = 47;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -5405,22 +4930,13 @@ public interface Execution_metamodelPackage extends EPackage {
 	int MEDICATION_PRESCRIBED_RESOURCE__NAME = 3;
 
 	/**
-	 * The feature id for the '<em><b>Standard</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MEDICATION_PRESCRIBED_RESOURCE__STANDARD = 4;
-
-	/**
 	 * The feature id for the '<em><b>Brand</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MEDICATION_PRESCRIBED_RESOURCE__BRAND = 5;
+	int MEDICATION_PRESCRIBED_RESOURCE__BRAND = 4;
 
 	/**
 	 * The feature id for the '<em><b>Code</b></em>' attribute.
@@ -5429,7 +4945,7 @@ public interface Execution_metamodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MEDICATION_PRESCRIBED_RESOURCE__CODE = 6;
+	int MEDICATION_PRESCRIBED_RESOURCE__CODE = 5;
 
 	/**
 	 * The feature id for the '<em><b>Cycles</b></em>' attribute.
@@ -5438,7 +4954,7 @@ public interface Execution_metamodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MEDICATION_PRESCRIBED_RESOURCE__CYCLES = 7;
+	int MEDICATION_PRESCRIBED_RESOURCE__CYCLES = 6;
 
 	/**
 	 * The feature id for the '<em><b>Category</b></em>' attribute.
@@ -5447,7 +4963,7 @@ public interface Execution_metamodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MEDICATION_PRESCRIBED_RESOURCE__CATEGORY = 8;
+	int MEDICATION_PRESCRIBED_RESOURCE__CATEGORY = 7;
 
 	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -5456,7 +4972,7 @@ public interface Execution_metamodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MEDICATION_PRESCRIBED_RESOURCE__DESCRIPTION = 9;
+	int MEDICATION_PRESCRIBED_RESOURCE__DESCRIPTION = 8;
 
 	/**
 	 * The feature id for the '<em><b>Time Interval</b></em>' attribute.
@@ -5465,7 +4981,7 @@ public interface Execution_metamodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MEDICATION_PRESCRIBED_RESOURCE__TIME_INTERVAL = 10;
+	int MEDICATION_PRESCRIBED_RESOURCE__TIME_INTERVAL = 9;
 
 	/**
 	 * The feature id for the '<em><b>Daily Dosage</b></em>' attribute.
@@ -5474,7 +4990,7 @@ public interface Execution_metamodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MEDICATION_PRESCRIBED_RESOURCE__DAILY_DOSAGE = 11;
+	int MEDICATION_PRESCRIBED_RESOURCE__DAILY_DOSAGE = 10;
 
 	/**
 	 * The feature id for the '<em><b>Frequency</b></em>' attribute.
@@ -5483,7 +4999,7 @@ public interface Execution_metamodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MEDICATION_PRESCRIBED_RESOURCE__FREQUENCY = 12;
+	int MEDICATION_PRESCRIBED_RESOURCE__FREQUENCY = 11;
 
 	/**
 	 * The feature id for the '<em><b>Time Treatement</b></em>' attribute.
@@ -5492,7 +5008,7 @@ public interface Execution_metamodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MEDICATION_PRESCRIBED_RESOURCE__TIME_TREATEMENT = 13;
+	int MEDICATION_PRESCRIBED_RESOURCE__TIME_TREATEMENT = 12;
 
 	/**
 	 * The feature id for the '<em><b>Medication</b></em>' attribute.
@@ -5501,7 +5017,7 @@ public interface Execution_metamodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MEDICATION_PRESCRIBED_RESOURCE__MEDICATION = 14;
+	int MEDICATION_PRESCRIBED_RESOURCE__MEDICATION = 13;
 
 	/**
 	 * The feature id for the '<em><b>Unit</b></em>' attribute.
@@ -5510,7 +5026,7 @@ public interface Execution_metamodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MEDICATION_PRESCRIBED_RESOURCE__UNIT = 15;
+	int MEDICATION_PRESCRIBED_RESOURCE__UNIT = 14;
 
 	/**
 	 * The feature id for the '<em><b>Access</b></em>' attribute.
@@ -5519,7 +5035,16 @@ public interface Execution_metamodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MEDICATION_PRESCRIBED_RESOURCE__ACCESS = 16;
+	int MEDICATION_PRESCRIBED_RESOURCE__ACCESS = 15;
+
+	/**
+	 * The feature id for the '<em><b>Standard</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MEDICATION_PRESCRIBED_RESOURCE__STANDARD = 16;
 
 	/**
 	 * The number of structural features of the '<em>Medication Prescribed Resource</em>' class.
@@ -5547,7 +5072,7 @@ public interface Execution_metamodelPackage extends EPackage {
 	 * @see MetamodelExecution.impl.Execution_metamodelPackageImpl#getProcedurePrescribedResource()
 	 * @generated
 	 */
-	int PROCEDURE_PRESCRIBED_RESOURCE = 56;
+	int PROCEDURE_PRESCRIBED_RESOURCE = 49;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -5629,7 +5154,7 @@ public interface Execution_metamodelPackage extends EPackage {
 	 * @see MetamodelExecution.impl.Execution_metamodelPackageImpl#getComplementaryExamination()
 	 * @generated
 	 */
-	int COMPLEMENTARY_EXAMINATION = 57;
+	int COMPLEMENTARY_EXAMINATION = 50;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -5738,7 +5263,7 @@ public interface Execution_metamodelPackage extends EPackage {
 	 * @see MetamodelExecution.impl.Execution_metamodelPackageImpl#getComplementaryItemPrescription()
 	 * @generated
 	 */
-	int COMPLEMENTARY_ITEM_PRESCRIPTION = 58;
+	int COMPLEMENTARY_ITEM_PRESCRIPTION = 51;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -5838,7 +5363,7 @@ public interface Execution_metamodelPackage extends EPackage {
 	 * @see MetamodelExecution.impl.Execution_metamodelPackageImpl#getAudit()
 	 * @generated
 	 */
-	int AUDIT = 59;
+	int AUDIT = 52;
 
 	/**
 	 * The feature id for the '<em><b>User</b></em>' attribute.
@@ -5884,7 +5409,7 @@ public interface Execution_metamodelPackage extends EPackage {
 	 * @see MetamodelExecution.impl.Execution_metamodelPackageImpl#getResult()
 	 * @generated
 	 */
-	int RESULT = 60;
+	int RESULT = 53;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -5948,7 +5473,7 @@ public interface Execution_metamodelPackage extends EPackage {
 	 * @see MetamodelExecution.impl.Execution_metamodelPackageImpl#getExaminationPrescribedResource()
 	 * @generated
 	 */
-	int EXAMINATION_PRESCRIBED_RESOURCE = 61;
+	int EXAMINATION_PRESCRIBED_RESOURCE = 54;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -6039,6 +5564,160 @@ public interface Execution_metamodelPackage extends EPackage {
 	 * @ordered
 	 */
 	int EXAMINATION_PRESCRIBED_RESOURCE_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link MetamodelExecution.impl.StandardImpl <em>Standard</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see MetamodelExecution.impl.StandardImpl
+	 * @see MetamodelExecution.impl.Execution_metamodelPackageImpl#getStandard()
+	 * @generated
+	 */
+	int STANDARD = 55;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STANDARD__ID = 0;
+
+	/**
+	 * The feature id for the '<em><b>Mnemonic</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STANDARD__MNEMONIC = 1;
+
+	/**
+	 * The feature id for the '<em><b>Code Active Agent</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STANDARD__CODE_ACTIVE_AGENT = 2;
+
+	/**
+	 * The feature id for the '<em><b>Code Diluent</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STANDARD__CODE_DILUENT = 3;
+
+	/**
+	 * The feature id for the '<em><b>Name Diluent</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STANDARD__NAME_DILUENT = 4;
+
+	/**
+	 * The feature id for the '<em><b>Code Events Diluent</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STANDARD__CODE_EVENTS_DILUENT = 5;
+
+	/**
+	 * The feature id for the '<em><b>Code Order Admin</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STANDARD__CODE_ORDER_ADMIN = 6;
+
+	/**
+	 * The feature id for the '<em><b>Code Apres Diluent</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STANDARD__CODE_APRES_DILUENT = 7;
+
+	/**
+	 * The feature id for the '<em><b>Type Access</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STANDARD__TYPE_ACCESS = 8;
+
+	/**
+	 * The feature id for the '<em><b>Type Admin</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STANDARD__TYPE_ADMIN = 9;
+
+	/**
+	 * The feature id for the '<em><b>Qty Diluent</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STANDARD__QTY_DILUENT = 10;
+
+	/**
+	 * The feature id for the '<em><b>Qty Volume</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STANDARD__QTY_VOLUME = 11;
+
+	/**
+	 * The feature id for the '<em><b>Qty Dosage</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STANDARD__QTY_DOSAGE = 12;
+
+	/**
+	 * The feature id for the '<em><b>Code Unit Dosage</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STANDARD__CODE_UNIT_DOSAGE = 13;
+
+	/**
+	 * The number of structural features of the '<em>Standard</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STANDARD_FEATURE_COUNT = 14;
+
+	/**
+	 * The number of operations of the '<em>Standard</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STANDARD_OPERATION_COUNT = 0;
 
 	/**
 	 * Returns the meta object for class '{@link MetamodelExecution.EAuxiliaryConduct <em>EAuxiliary Conduct</em>}'.
@@ -8235,417 +7914,6 @@ public interface Execution_metamodelPackage extends EPackage {
 	EClass getEPause();
 
 	/**
-	 * Returns the meta object for class '{@link MetamodelExecution.MedicalCare <em>Medical Care</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Medical Care</em>'.
-	 * @see MetamodelExecution.MedicalCare
-	 * @generated
-	 */
-	EClass getMedicalCare();
-
-	/**
-	 * Returns the meta object for the attribute '{@link MetamodelExecution.MedicalCare#getId <em>Id</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Id</em>'.
-	 * @see MetamodelExecution.MedicalCare#getId()
-	 * @see #getMedicalCare()
-	 * @generated
-	 */
-	EAttribute getMedicalCare_Id();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link MetamodelExecution.MedicalCare#getProfessional <em>Professional</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Professional</em>'.
-	 * @see MetamodelExecution.MedicalCare#getProfessional()
-	 * @see #getMedicalCare()
-	 * @generated
-	 */
-	EReference getMedicalCare_Professional();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link MetamodelExecution.MedicalCare#getUnitcare <em>Unitcare</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Unitcare</em>'.
-	 * @see MetamodelExecution.MedicalCare#getUnitcare()
-	 * @see #getMedicalCare()
-	 * @generated
-	 */
-	EReference getMedicalCare_Unitcare();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link MetamodelExecution.MedicalCare#getPatient <em>Patient</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Patient</em>'.
-	 * @see MetamodelExecution.MedicalCare#getPatient()
-	 * @see #getMedicalCare()
-	 * @generated
-	 */
-	EReference getMedicalCare_Patient();
-
-	/**
-	 * Returns the meta object for the attribute '{@link MetamodelExecution.MedicalCare#getCid10 <em>Cid10</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Cid10</em>'.
-	 * @see MetamodelExecution.MedicalCare#getCid10()
-	 * @see #getMedicalCare()
-	 * @generated
-	 */
-	EAttribute getMedicalCare_Cid10();
-
-	/**
-	 * Returns the meta object for the attribute '{@link MetamodelExecution.MedicalCare#getCodeMedicalCare <em>Code Medical Care</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Code Medical Care</em>'.
-	 * @see MetamodelExecution.MedicalCare#getCodeMedicalCare()
-	 * @see #getMedicalCare()
-	 * @generated
-	 */
-	EAttribute getMedicalCare_CodeMedicalCare();
-
-	/**
-	 * Returns the meta object for the attribute '{@link MetamodelExecution.MedicalCare#getCodeMedicalCareContiguous <em>Code Medical Care Contiguous</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Code Medical Care Contiguous</em>'.
-	 * @see MetamodelExecution.MedicalCare#getCodeMedicalCareContiguous()
-	 * @see #getMedicalCare()
-	 * @generated
-	 */
-	EAttribute getMedicalCare_CodeMedicalCareContiguous();
-
-	/**
-	 * Returns the meta object for the attribute '{@link MetamodelExecution.MedicalCare#getCodeBd <em>Code Bd</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Code Bd</em>'.
-	 * @see MetamodelExecution.MedicalCare#getCodeBd()
-	 * @see #getMedicalCare()
-	 * @generated
-	 */
-	EAttribute getMedicalCare_CodeBd();
-
-	/**
-	 * Returns the meta object for the attribute '{@link MetamodelExecution.MedicalCare#getCodeBeneficiary <em>Code Beneficiary</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Code Beneficiary</em>'.
-	 * @see MetamodelExecution.MedicalCare#getCodeBeneficiary()
-	 * @see #getMedicalCare()
-	 * @generated
-	 */
-	EAttribute getMedicalCare_CodeBeneficiary();
-
-	/**
-	 * Returns the meta object for the attribute '{@link MetamodelExecution.MedicalCare#getCodeAccommodation <em>Code Accommodation</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Code Accommodation</em>'.
-	 * @see MetamodelExecution.MedicalCare#getCodeAccommodation()
-	 * @see #getMedicalCare()
-	 * @generated
-	 */
-	EAttribute getMedicalCare_CodeAccommodation();
-
-	/**
-	 * Returns the meta object for the attribute '{@link MetamodelExecution.MedicalCare#getCodePatient <em>Code Patient</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Code Patient</em>'.
-	 * @see MetamodelExecution.MedicalCare#getCodePatient()
-	 * @see #getMedicalCare()
-	 * @generated
-	 */
-	EAttribute getMedicalCare_CodePatient();
-
-	/**
-	 * Returns the meta object for the attribute '{@link MetamodelExecution.MedicalCare#getCodeRisk <em>Code Risk</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Code Risk</em>'.
-	 * @see MetamodelExecution.MedicalCare#getCodeRisk()
-	 * @see #getMedicalCare()
-	 * @generated
-	 */
-	EAttribute getMedicalCare_CodeRisk();
-
-	/**
-	 * Returns the meta object for the attribute '{@link MetamodelExecution.MedicalCare#getCodeProfessional <em>Code Professional</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Code Professional</em>'.
-	 * @see MetamodelExecution.MedicalCare#getCodeProfessional()
-	 * @see #getMedicalCare()
-	 * @generated
-	 */
-	EAttribute getMedicalCare_CodeProfessional();
-
-	/**
-	 * Returns the meta object for the attribute '{@link MetamodelExecution.MedicalCare#getLogin <em>Login</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Login</em>'.
-	 * @see MetamodelExecution.MedicalCare#getLogin()
-	 * @see #getMedicalCare()
-	 * @generated
-	 */
-	EAttribute getMedicalCare_Login();
-
-	/**
-	 * Returns the meta object for the attribute '{@link MetamodelExecution.MedicalCare#getPriority <em>Priority</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Priority</em>'.
-	 * @see MetamodelExecution.MedicalCare#getPriority()
-	 * @see #getMedicalCare()
-	 * @generated
-	 */
-	EAttribute getMedicalCare_Priority();
-
-	/**
-	 * Returns the meta object for class '{@link MetamodelExecution.UnitCare <em>Unit Care</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Unit Care</em>'.
-	 * @see MetamodelExecution.UnitCare
-	 * @generated
-	 */
-	EClass getUnitCare();
-
-	/**
-	 * Returns the meta object for the attribute '{@link MetamodelExecution.UnitCare#getId <em>Id</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Id</em>'.
-	 * @see MetamodelExecution.UnitCare#getId()
-	 * @see #getUnitCare()
-	 * @generated
-	 */
-	EAttribute getUnitCare_Id();
-
-	/**
-	 * Returns the meta object for the attribute '{@link MetamodelExecution.UnitCare#getName <em>Name</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see MetamodelExecution.UnitCare#getName()
-	 * @see #getUnitCare()
-	 * @generated
-	 */
-	EAttribute getUnitCare_Name();
-
-	/**
-	 * Returns the meta object for the attribute '{@link MetamodelExecution.UnitCare#getCode <em>Code</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Code</em>'.
-	 * @see MetamodelExecution.UnitCare#getCode()
-	 * @see #getUnitCare()
-	 * @generated
-	 */
-	EAttribute getUnitCare_Code();
-
-	/**
-	 * Returns the meta object for class '{@link MetamodelExecution.Professional <em>Professional</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Professional</em>'.
-	 * @see MetamodelExecution.Professional
-	 * @generated
-	 */
-	EClass getProfessional();
-
-	/**
-	 * Returns the meta object for class '{@link MetamodelExecution.Patient <em>Patient</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Patient</em>'.
-	 * @see MetamodelExecution.Patient
-	 * @generated
-	 */
-	EClass getPatient();
-
-	/**
-	 * Returns the meta object for the attribute '{@link MetamodelExecution.Patient#getId <em>Id</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Id</em>'.
-	 * @see MetamodelExecution.Patient#getId()
-	 * @see #getPatient()
-	 * @generated
-	 */
-	EAttribute getPatient_Id();
-
-	/**
-	 * Returns the meta object for the attribute '{@link MetamodelExecution.Patient#getCode <em>Code</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Code</em>'.
-	 * @see MetamodelExecution.Patient#getCode()
-	 * @see #getPatient()
-	 * @generated
-	 */
-	EAttribute getPatient_Code();
-
-	/**
-	 * Returns the meta object for the attribute '{@link MetamodelExecution.Patient#getName <em>Name</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see MetamodelExecution.Patient#getName()
-	 * @see #getPatient()
-	 * @generated
-	 */
-	EAttribute getPatient_Name();
-
-	/**
-	 * Returns the meta object for the attribute '{@link MetamodelExecution.Patient#getCpf <em>Cpf</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Cpf</em>'.
-	 * @see MetamodelExecution.Patient#getCpf()
-	 * @see #getPatient()
-	 * @generated
-	 */
-	EAttribute getPatient_Cpf();
-
-	/**
-	 * Returns the meta object for the attribute '{@link MetamodelExecution.Patient#getMother <em>Mother</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Mother</em>'.
-	 * @see MetamodelExecution.Patient#getMother()
-	 * @see #getPatient()
-	 * @generated
-	 */
-	EAttribute getPatient_Mother();
-
-	/**
-	 * Returns the meta object for the attribute '{@link MetamodelExecution.Patient#getSex <em>Sex</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Sex</em>'.
-	 * @see MetamodelExecution.Patient#getSex()
-	 * @see #getPatient()
-	 * @generated
-	 */
-	EAttribute getPatient_Sex();
-
-	/**
-	 * Returns the meta object for the attribute '{@link MetamodelExecution.Patient#getBirthDate <em>Birth Date</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Birth Date</em>'.
-	 * @see MetamodelExecution.Patient#getBirthDate()
-	 * @see #getPatient()
-	 * @generated
-	 */
-	EAttribute getPatient_BirthDate();
-
-	/**
-	 * Returns the meta object for class '{@link MetamodelExecution.AllergyRegistry <em>Allergy Registry</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Allergy Registry</em>'.
-	 * @see MetamodelExecution.AllergyRegistry
-	 * @generated
-	 */
-	EClass getAllergyRegistry();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link MetamodelExecution.AllergyRegistry#getPatient <em>Patient</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Patient</em>'.
-	 * @see MetamodelExecution.AllergyRegistry#getPatient()
-	 * @see #getAllergyRegistry()
-	 * @generated
-	 */
-	EReference getAllergyRegistry_Patient();
-
-	/**
-	 * Returns the meta object for the attribute '{@link MetamodelExecution.AllergyRegistry#getId <em>Id</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Id</em>'.
-	 * @see MetamodelExecution.AllergyRegistry#getId()
-	 * @see #getAllergyRegistry()
-	 * @generated
-	 */
-	EAttribute getAllergyRegistry_Id();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link MetamodelExecution.AllergyRegistry#getAllergy <em>Allergy</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Allergy</em>'.
-	 * @see MetamodelExecution.AllergyRegistry#getAllergy()
-	 * @see #getAllergyRegistry()
-	 * @generated
-	 */
-	EReference getAllergyRegistry_Allergy();
-
-	/**
-	 * Returns the meta object for class '{@link MetamodelExecution.ComorbidityRegistry <em>Comorbidity Registry</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Comorbidity Registry</em>'.
-	 * @see MetamodelExecution.ComorbidityRegistry
-	 * @generated
-	 */
-	EClass getComorbidityRegistry();
-
-	/**
-	 * Returns the meta object for the attribute '{@link MetamodelExecution.ComorbidityRegistry#getId <em>Id</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Id</em>'.
-	 * @see MetamodelExecution.ComorbidityRegistry#getId()
-	 * @see #getComorbidityRegistry()
-	 * @generated
-	 */
-	EAttribute getComorbidityRegistry_Id();
-
-	/**
-	 * Returns the meta object for class '{@link MetamodelExecution.Allergy <em>Allergy</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Allergy</em>'.
-	 * @see MetamodelExecution.Allergy
-	 * @generated
-	 */
-	EClass getAllergy();
-
-	/**
-	 * Returns the meta object for the attribute '{@link MetamodelExecution.Allergy#getId <em>Id</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Id</em>'.
-	 * @see MetamodelExecution.Allergy#getId()
-	 * @see #getAllergy()
-	 * @generated
-	 */
-	EAttribute getAllergy_Id();
-
-	/**
-	 * Returns the meta object for the attribute '{@link MetamodelExecution.Allergy#getName <em>Name</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see MetamodelExecution.Allergy#getName()
-	 * @see #getAllergy()
-	 * @generated
-	 */
-	EAttribute getAllergy_Name();
-
-	/**
 	 * Returns the meta object for class '{@link MetamodelExecution.Procedure <em>Procedure</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -9088,17 +8356,6 @@ public interface Execution_metamodelPackage extends EPackage {
 	EAttribute getMedicationPrescribedResource_Name();
 
 	/**
-	 * Returns the meta object for the attribute '{@link MetamodelExecution.MedicationPrescribedResource#getStandard <em>Standard</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Standard</em>'.
-	 * @see MetamodelExecution.MedicationPrescribedResource#getStandard()
-	 * @see #getMedicationPrescribedResource()
-	 * @generated
-	 */
-	EAttribute getMedicationPrescribedResource_Standard();
-
-	/**
 	 * Returns the meta object for the attribute '{@link MetamodelExecution.MedicationPrescribedResource#getBrand <em>Brand</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -9229,6 +8486,17 @@ public interface Execution_metamodelPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getMedicationPrescribedResource_Access();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link MetamodelExecution.MedicationPrescribedResource#getStandard <em>Standard</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Standard</em>'.
+	 * @see MetamodelExecution.MedicationPrescribedResource#getStandard()
+	 * @see #getMedicationPrescribedResource()
+	 * @generated
+	 */
+	EReference getMedicationPrescribedResource_Standard();
 
 	/**
 	 * Returns the meta object for class '{@link MetamodelExecution.Notification <em>Notification</em>}'.
@@ -9530,6 +8798,170 @@ public interface Execution_metamodelPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getExaminationPrescribedResource_ClinicalIndication();
+
+	/**
+	 * Returns the meta object for class '{@link MetamodelExecution.Standard <em>Standard</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Standard</em>'.
+	 * @see MetamodelExecution.Standard
+	 * @generated
+	 */
+	EClass getStandard();
+
+	/**
+	 * Returns the meta object for the attribute '{@link MetamodelExecution.Standard#getId <em>Id</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Id</em>'.
+	 * @see MetamodelExecution.Standard#getId()
+	 * @see #getStandard()
+	 * @generated
+	 */
+	EAttribute getStandard_Id();
+
+	/**
+	 * Returns the meta object for the attribute '{@link MetamodelExecution.Standard#getMnemonic <em>Mnemonic</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Mnemonic</em>'.
+	 * @see MetamodelExecution.Standard#getMnemonic()
+	 * @see #getStandard()
+	 * @generated
+	 */
+	EAttribute getStandard_Mnemonic();
+
+	/**
+	 * Returns the meta object for the attribute '{@link MetamodelExecution.Standard#getCodeActiveAgent <em>Code Active Agent</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Code Active Agent</em>'.
+	 * @see MetamodelExecution.Standard#getCodeActiveAgent()
+	 * @see #getStandard()
+	 * @generated
+	 */
+	EAttribute getStandard_CodeActiveAgent();
+
+	/**
+	 * Returns the meta object for the attribute '{@link MetamodelExecution.Standard#getCodeDiluent <em>Code Diluent</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Code Diluent</em>'.
+	 * @see MetamodelExecution.Standard#getCodeDiluent()
+	 * @see #getStandard()
+	 * @generated
+	 */
+	EAttribute getStandard_CodeDiluent();
+
+	/**
+	 * Returns the meta object for the attribute '{@link MetamodelExecution.Standard#getNameDiluent <em>Name Diluent</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name Diluent</em>'.
+	 * @see MetamodelExecution.Standard#getNameDiluent()
+	 * @see #getStandard()
+	 * @generated
+	 */
+	EAttribute getStandard_NameDiluent();
+
+	/**
+	 * Returns the meta object for the attribute '{@link MetamodelExecution.Standard#getCodeEventsDiluent <em>Code Events Diluent</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Code Events Diluent</em>'.
+	 * @see MetamodelExecution.Standard#getCodeEventsDiluent()
+	 * @see #getStandard()
+	 * @generated
+	 */
+	EAttribute getStandard_CodeEventsDiluent();
+
+	/**
+	 * Returns the meta object for the attribute '{@link MetamodelExecution.Standard#getCodeOrderAdmin <em>Code Order Admin</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Code Order Admin</em>'.
+	 * @see MetamodelExecution.Standard#getCodeOrderAdmin()
+	 * @see #getStandard()
+	 * @generated
+	 */
+	EAttribute getStandard_CodeOrderAdmin();
+
+	/**
+	 * Returns the meta object for the attribute '{@link MetamodelExecution.Standard#getCodeApresDiluent <em>Code Apres Diluent</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Code Apres Diluent</em>'.
+	 * @see MetamodelExecution.Standard#getCodeApresDiluent()
+	 * @see #getStandard()
+	 * @generated
+	 */
+	EAttribute getStandard_CodeApresDiluent();
+
+	/**
+	 * Returns the meta object for the attribute '{@link MetamodelExecution.Standard#getTypeAccess <em>Type Access</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Type Access</em>'.
+	 * @see MetamodelExecution.Standard#getTypeAccess()
+	 * @see #getStandard()
+	 * @generated
+	 */
+	EAttribute getStandard_TypeAccess();
+
+	/**
+	 * Returns the meta object for the attribute '{@link MetamodelExecution.Standard#getTypeAdmin <em>Type Admin</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Type Admin</em>'.
+	 * @see MetamodelExecution.Standard#getTypeAdmin()
+	 * @see #getStandard()
+	 * @generated
+	 */
+	EAttribute getStandard_TypeAdmin();
+
+	/**
+	 * Returns the meta object for the attribute '{@link MetamodelExecution.Standard#getQtyDiluent <em>Qty Diluent</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Qty Diluent</em>'.
+	 * @see MetamodelExecution.Standard#getQtyDiluent()
+	 * @see #getStandard()
+	 * @generated
+	 */
+	EAttribute getStandard_QtyDiluent();
+
+	/**
+	 * Returns the meta object for the attribute '{@link MetamodelExecution.Standard#getQtyVolume <em>Qty Volume</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Qty Volume</em>'.
+	 * @see MetamodelExecution.Standard#getQtyVolume()
+	 * @see #getStandard()
+	 * @generated
+	 */
+	EAttribute getStandard_QtyVolume();
+
+	/**
+	 * Returns the meta object for the attribute '{@link MetamodelExecution.Standard#getQtyDosage <em>Qty Dosage</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Qty Dosage</em>'.
+	 * @see MetamodelExecution.Standard#getQtyDosage()
+	 * @see #getStandard()
+	 * @generated
+	 */
+	EAttribute getStandard_QtyDosage();
+
+	/**
+	 * Returns the meta object for the attribute '{@link MetamodelExecution.Standard#getCodeUnitDosage <em>Code Unit Dosage</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Code Unit Dosage</em>'.
+	 * @see MetamodelExecution.Standard#getCodeUnitDosage()
+	 * @see #getStandard()
+	 * @generated
+	 */
+	EAttribute getStandard_CodeUnitDosage();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -11261,324 +10693,6 @@ public interface Execution_metamodelPackage extends EPackage {
 		EClass EPAUSE = eINSTANCE.getEPause();
 
 		/**
-		 * The meta object literal for the '{@link MetamodelExecution.impl.MedicalCareImpl <em>Medical Care</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see MetamodelExecution.impl.MedicalCareImpl
-		 * @see MetamodelExecution.impl.Execution_metamodelPackageImpl#getMedicalCare()
-		 * @generated
-		 */
-		EClass MEDICAL_CARE = eINSTANCE.getMedicalCare();
-
-		/**
-		 * The meta object literal for the '<em><b>Id</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute MEDICAL_CARE__ID = eINSTANCE.getMedicalCare_Id();
-
-		/**
-		 * The meta object literal for the '<em><b>Professional</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference MEDICAL_CARE__PROFESSIONAL = eINSTANCE.getMedicalCare_Professional();
-
-		/**
-		 * The meta object literal for the '<em><b>Unitcare</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference MEDICAL_CARE__UNITCARE = eINSTANCE.getMedicalCare_Unitcare();
-
-		/**
-		 * The meta object literal for the '<em><b>Patient</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference MEDICAL_CARE__PATIENT = eINSTANCE.getMedicalCare_Patient();
-
-		/**
-		 * The meta object literal for the '<em><b>Cid10</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute MEDICAL_CARE__CID10 = eINSTANCE.getMedicalCare_Cid10();
-
-		/**
-		 * The meta object literal for the '<em><b>Code Medical Care</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute MEDICAL_CARE__CODE_MEDICAL_CARE = eINSTANCE.getMedicalCare_CodeMedicalCare();
-
-		/**
-		 * The meta object literal for the '<em><b>Code Medical Care Contiguous</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute MEDICAL_CARE__CODE_MEDICAL_CARE_CONTIGUOUS = eINSTANCE.getMedicalCare_CodeMedicalCareContiguous();
-
-		/**
-		 * The meta object literal for the '<em><b>Code Bd</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute MEDICAL_CARE__CODE_BD = eINSTANCE.getMedicalCare_CodeBd();
-
-		/**
-		 * The meta object literal for the '<em><b>Code Beneficiary</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute MEDICAL_CARE__CODE_BENEFICIARY = eINSTANCE.getMedicalCare_CodeBeneficiary();
-
-		/**
-		 * The meta object literal for the '<em><b>Code Accommodation</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute MEDICAL_CARE__CODE_ACCOMMODATION = eINSTANCE.getMedicalCare_CodeAccommodation();
-
-		/**
-		 * The meta object literal for the '<em><b>Code Patient</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute MEDICAL_CARE__CODE_PATIENT = eINSTANCE.getMedicalCare_CodePatient();
-
-		/**
-		 * The meta object literal for the '<em><b>Code Risk</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute MEDICAL_CARE__CODE_RISK = eINSTANCE.getMedicalCare_CodeRisk();
-
-		/**
-		 * The meta object literal for the '<em><b>Code Professional</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute MEDICAL_CARE__CODE_PROFESSIONAL = eINSTANCE.getMedicalCare_CodeProfessional();
-
-		/**
-		 * The meta object literal for the '<em><b>Login</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute MEDICAL_CARE__LOGIN = eINSTANCE.getMedicalCare_Login();
-
-		/**
-		 * The meta object literal for the '<em><b>Priority</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute MEDICAL_CARE__PRIORITY = eINSTANCE.getMedicalCare_Priority();
-
-		/**
-		 * The meta object literal for the '{@link MetamodelExecution.impl.UnitCareImpl <em>Unit Care</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see MetamodelExecution.impl.UnitCareImpl
-		 * @see MetamodelExecution.impl.Execution_metamodelPackageImpl#getUnitCare()
-		 * @generated
-		 */
-		EClass UNIT_CARE = eINSTANCE.getUnitCare();
-
-		/**
-		 * The meta object literal for the '<em><b>Id</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute UNIT_CARE__ID = eINSTANCE.getUnitCare_Id();
-
-		/**
-		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute UNIT_CARE__NAME = eINSTANCE.getUnitCare_Name();
-
-		/**
-		 * The meta object literal for the '<em><b>Code</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute UNIT_CARE__CODE = eINSTANCE.getUnitCare_Code();
-
-		/**
-		 * The meta object literal for the '{@link MetamodelExecution.impl.ProfessionalImpl <em>Professional</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see MetamodelExecution.impl.ProfessionalImpl
-		 * @see MetamodelExecution.impl.Execution_metamodelPackageImpl#getProfessional()
-		 * @generated
-		 */
-		EClass PROFESSIONAL = eINSTANCE.getProfessional();
-
-		/**
-		 * The meta object literal for the '{@link MetamodelExecution.impl.PatientImpl <em>Patient</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see MetamodelExecution.impl.PatientImpl
-		 * @see MetamodelExecution.impl.Execution_metamodelPackageImpl#getPatient()
-		 * @generated
-		 */
-		EClass PATIENT = eINSTANCE.getPatient();
-
-		/**
-		 * The meta object literal for the '<em><b>Id</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute PATIENT__ID = eINSTANCE.getPatient_Id();
-
-		/**
-		 * The meta object literal for the '<em><b>Code</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute PATIENT__CODE = eINSTANCE.getPatient_Code();
-
-		/**
-		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute PATIENT__NAME = eINSTANCE.getPatient_Name();
-
-		/**
-		 * The meta object literal for the '<em><b>Cpf</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute PATIENT__CPF = eINSTANCE.getPatient_Cpf();
-
-		/**
-		 * The meta object literal for the '<em><b>Mother</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute PATIENT__MOTHER = eINSTANCE.getPatient_Mother();
-
-		/**
-		 * The meta object literal for the '<em><b>Sex</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute PATIENT__SEX = eINSTANCE.getPatient_Sex();
-
-		/**
-		 * The meta object literal for the '<em><b>Birth Date</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute PATIENT__BIRTH_DATE = eINSTANCE.getPatient_BirthDate();
-
-		/**
-		 * The meta object literal for the '{@link MetamodelExecution.impl.AllergyRegistryImpl <em>Allergy Registry</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see MetamodelExecution.impl.AllergyRegistryImpl
-		 * @see MetamodelExecution.impl.Execution_metamodelPackageImpl#getAllergyRegistry()
-		 * @generated
-		 */
-		EClass ALLERGY_REGISTRY = eINSTANCE.getAllergyRegistry();
-
-		/**
-		 * The meta object literal for the '<em><b>Patient</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference ALLERGY_REGISTRY__PATIENT = eINSTANCE.getAllergyRegistry_Patient();
-
-		/**
-		 * The meta object literal for the '<em><b>Id</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute ALLERGY_REGISTRY__ID = eINSTANCE.getAllergyRegistry_Id();
-
-		/**
-		 * The meta object literal for the '<em><b>Allergy</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference ALLERGY_REGISTRY__ALLERGY = eINSTANCE.getAllergyRegistry_Allergy();
-
-		/**
-		 * The meta object literal for the '{@link MetamodelExecution.impl.ComorbidityRegistryImpl <em>Comorbidity Registry</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see MetamodelExecution.impl.ComorbidityRegistryImpl
-		 * @see MetamodelExecution.impl.Execution_metamodelPackageImpl#getComorbidityRegistry()
-		 * @generated
-		 */
-		EClass COMORBIDITY_REGISTRY = eINSTANCE.getComorbidityRegistry();
-
-		/**
-		 * The meta object literal for the '<em><b>Id</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute COMORBIDITY_REGISTRY__ID = eINSTANCE.getComorbidityRegistry_Id();
-
-		/**
-		 * The meta object literal for the '{@link MetamodelExecution.impl.AllergyImpl <em>Allergy</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see MetamodelExecution.impl.AllergyImpl
-		 * @see MetamodelExecution.impl.Execution_metamodelPackageImpl#getAllergy()
-		 * @generated
-		 */
-		EClass ALLERGY = eINSTANCE.getAllergy();
-
-		/**
-		 * The meta object literal for the '<em><b>Id</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute ALLERGY__ID = eINSTANCE.getAllergy_Id();
-
-		/**
-		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute ALLERGY__NAME = eINSTANCE.getAllergy_Name();
-
-		/**
 		 * The meta object literal for the '{@link MetamodelExecution.impl.ProcedureImpl <em>Procedure</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -11928,14 +11042,6 @@ public interface Execution_metamodelPackage extends EPackage {
 		EAttribute MEDICATION_PRESCRIBED_RESOURCE__NAME = eINSTANCE.getMedicationPrescribedResource_Name();
 
 		/**
-		 * The meta object literal for the '<em><b>Standard</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute MEDICATION_PRESCRIBED_RESOURCE__STANDARD = eINSTANCE.getMedicationPrescribedResource_Standard();
-
-		/**
 		 * The meta object literal for the '<em><b>Brand</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -12034,6 +11140,14 @@ public interface Execution_metamodelPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute MEDICATION_PRESCRIBED_RESOURCE__ACCESS = eINSTANCE.getMedicationPrescribedResource_Access();
+
+		/**
+		 * The meta object literal for the '<em><b>Standard</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference MEDICATION_PRESCRIBED_RESOURCE__STANDARD = eINSTANCE.getMedicationPrescribedResource_Standard();
 
 		/**
 		 * The meta object literal for the '{@link MetamodelExecution.impl.NotificationImpl <em>Notification</em>}' class.
@@ -12275,6 +11389,128 @@ public interface Execution_metamodelPackage extends EPackage {
 		 */
 		EAttribute EXAMINATION_PRESCRIBED_RESOURCE__CLINICAL_INDICATION = eINSTANCE
 				.getExaminationPrescribedResource_ClinicalIndication();
+
+		/**
+		 * The meta object literal for the '{@link MetamodelExecution.impl.StandardImpl <em>Standard</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see MetamodelExecution.impl.StandardImpl
+		 * @see MetamodelExecution.impl.Execution_metamodelPackageImpl#getStandard()
+		 * @generated
+		 */
+		EClass STANDARD = eINSTANCE.getStandard();
+
+		/**
+		 * The meta object literal for the '<em><b>Id</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute STANDARD__ID = eINSTANCE.getStandard_Id();
+
+		/**
+		 * The meta object literal for the '<em><b>Mnemonic</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute STANDARD__MNEMONIC = eINSTANCE.getStandard_Mnemonic();
+
+		/**
+		 * The meta object literal for the '<em><b>Code Active Agent</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute STANDARD__CODE_ACTIVE_AGENT = eINSTANCE.getStandard_CodeActiveAgent();
+
+		/**
+		 * The meta object literal for the '<em><b>Code Diluent</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute STANDARD__CODE_DILUENT = eINSTANCE.getStandard_CodeDiluent();
+
+		/**
+		 * The meta object literal for the '<em><b>Name Diluent</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute STANDARD__NAME_DILUENT = eINSTANCE.getStandard_NameDiluent();
+
+		/**
+		 * The meta object literal for the '<em><b>Code Events Diluent</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute STANDARD__CODE_EVENTS_DILUENT = eINSTANCE.getStandard_CodeEventsDiluent();
+
+		/**
+		 * The meta object literal for the '<em><b>Code Order Admin</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute STANDARD__CODE_ORDER_ADMIN = eINSTANCE.getStandard_CodeOrderAdmin();
+
+		/**
+		 * The meta object literal for the '<em><b>Code Apres Diluent</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute STANDARD__CODE_APRES_DILUENT = eINSTANCE.getStandard_CodeApresDiluent();
+
+		/**
+		 * The meta object literal for the '<em><b>Type Access</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute STANDARD__TYPE_ACCESS = eINSTANCE.getStandard_TypeAccess();
+
+		/**
+		 * The meta object literal for the '<em><b>Type Admin</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute STANDARD__TYPE_ADMIN = eINSTANCE.getStandard_TypeAdmin();
+
+		/**
+		 * The meta object literal for the '<em><b>Qty Diluent</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute STANDARD__QTY_DILUENT = eINSTANCE.getStandard_QtyDiluent();
+
+		/**
+		 * The meta object literal for the '<em><b>Qty Volume</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute STANDARD__QTY_VOLUME = eINSTANCE.getStandard_QtyVolume();
+
+		/**
+		 * The meta object literal for the '<em><b>Qty Dosage</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute STANDARD__QTY_DOSAGE = eINSTANCE.getStandard_QtyDosage();
+
+		/**
+		 * The meta object literal for the '<em><b>Code Unit Dosage</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute STANDARD__CODE_UNIT_DOSAGE = eINSTANCE.getStandard_CodeUnitDosage();
 
 	}
 

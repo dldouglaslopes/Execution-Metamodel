@@ -4,10 +4,13 @@ package MetamodelExecution.impl;
 
 import MetamodelExecution.Execution_metamodelPackage;
 import MetamodelExecution.MedicationPrescribedResource;
+import MetamodelExecution.Standard;
 
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
@@ -24,7 +27,6 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *   <li>{@link MetamodelExecution.impl.MedicationPrescribedResourceImpl#getIdMedication <em>Id Medication</em>}</li>
  *   <li>{@link MetamodelExecution.impl.MedicationPrescribedResourceImpl#isOutpatient <em>Outpatient</em>}</li>
  *   <li>{@link MetamodelExecution.impl.MedicationPrescribedResourceImpl#getName <em>Name</em>}</li>
- *   <li>{@link MetamodelExecution.impl.MedicationPrescribedResourceImpl#getStandard <em>Standard</em>}</li>
  *   <li>{@link MetamodelExecution.impl.MedicationPrescribedResourceImpl#getBrand <em>Brand</em>}</li>
  *   <li>{@link MetamodelExecution.impl.MedicationPrescribedResourceImpl#getCode <em>Code</em>}</li>
  *   <li>{@link MetamodelExecution.impl.MedicationPrescribedResourceImpl#getCycles <em>Cycles</em>}</li>
@@ -37,6 +39,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *   <li>{@link MetamodelExecution.impl.MedicationPrescribedResourceImpl#getMedication <em>Medication</em>}</li>
  *   <li>{@link MetamodelExecution.impl.MedicationPrescribedResourceImpl#getUnit <em>Unit</em>}</li>
  *   <li>{@link MetamodelExecution.impl.MedicationPrescribedResourceImpl#getAccess <em>Access</em>}</li>
+ *   <li>{@link MetamodelExecution.impl.MedicationPrescribedResourceImpl#getStandard <em>Standard</em>}</li>
  * </ul>
  *
  * @generated
@@ -122,26 +125,6 @@ public class MedicationPrescribedResourceImpl extends MinimalEObjectImpl.Contain
 	 * @ordered
 	 */
 	protected String name = NAME_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getStandard() <em>Standard</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getStandard()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String STANDARD_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getStandard() <em>Standard</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getStandard()
-	 * @generated
-	 * @ordered
-	 */
-	protected String standard = STANDARD_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getBrand() <em>Brand</em>}' attribute.
@@ -384,6 +367,16 @@ public class MedicationPrescribedResourceImpl extends MinimalEObjectImpl.Contain
 	protected String access = ACCESS_EDEFAULT;
 
 	/**
+	 * The cached value of the '{@link #getStandard() <em>Standard</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getStandard()
+	 * @generated
+	 * @ordered
+	 */
+	protected Standard standard;
+
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -489,28 +482,6 @@ public class MedicationPrescribedResourceImpl extends MinimalEObjectImpl.Contain
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET,
 					Execution_metamodelPackage.MEDICATION_PRESCRIBED_RESOURCE__NAME, oldName, name));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String getStandard() {
-		return standard;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setStandard(String newStandard) {
-		String oldStandard = standard;
-		standard = newStandard;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET,
-					Execution_metamodelPackage.MEDICATION_PRESCRIBED_RESOURCE__STANDARD, oldStandard, standard));
 	}
 
 	/**
@@ -786,6 +757,72 @@ public class MedicationPrescribedResourceImpl extends MinimalEObjectImpl.Contain
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public Standard getStandard() {
+		return standard;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetStandard(Standard newStandard, NotificationChain msgs) {
+		Standard oldStandard = standard;
+		standard = newStandard;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
+					Execution_metamodelPackage.MEDICATION_PRESCRIBED_RESOURCE__STANDARD, oldStandard, newStandard);
+			if (msgs == null)
+				msgs = notification;
+			else
+				msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setStandard(Standard newStandard) {
+		if (newStandard != standard) {
+			NotificationChain msgs = null;
+			if (standard != null)
+				msgs = ((InternalEObject) standard).eInverseRemove(this,
+						EOPPOSITE_FEATURE_BASE - Execution_metamodelPackage.MEDICATION_PRESCRIBED_RESOURCE__STANDARD,
+						null, msgs);
+			if (newStandard != null)
+				msgs = ((InternalEObject) newStandard).eInverseAdd(this,
+						EOPPOSITE_FEATURE_BASE - Execution_metamodelPackage.MEDICATION_PRESCRIBED_RESOURCE__STANDARD,
+						null, msgs);
+			msgs = basicSetStandard(newStandard, msgs);
+			if (msgs != null)
+				msgs.dispatch();
+		} else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET,
+					Execution_metamodelPackage.MEDICATION_PRESCRIBED_RESOURCE__STANDARD, newStandard, newStandard));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+		case Execution_metamodelPackage.MEDICATION_PRESCRIBED_RESOURCE__STANDARD:
+			return basicSetStandard(null, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -797,8 +834,6 @@ public class MedicationPrescribedResourceImpl extends MinimalEObjectImpl.Contain
 			return isOutpatient();
 		case Execution_metamodelPackage.MEDICATION_PRESCRIBED_RESOURCE__NAME:
 			return getName();
-		case Execution_metamodelPackage.MEDICATION_PRESCRIBED_RESOURCE__STANDARD:
-			return getStandard();
 		case Execution_metamodelPackage.MEDICATION_PRESCRIBED_RESOURCE__BRAND:
 			return getBrand();
 		case Execution_metamodelPackage.MEDICATION_PRESCRIBED_RESOURCE__CODE:
@@ -823,6 +858,8 @@ public class MedicationPrescribedResourceImpl extends MinimalEObjectImpl.Contain
 			return getUnit();
 		case Execution_metamodelPackage.MEDICATION_PRESCRIBED_RESOURCE__ACCESS:
 			return getAccess();
+		case Execution_metamodelPackage.MEDICATION_PRESCRIBED_RESOURCE__STANDARD:
+			return getStandard();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -846,9 +883,6 @@ public class MedicationPrescribedResourceImpl extends MinimalEObjectImpl.Contain
 			return;
 		case Execution_metamodelPackage.MEDICATION_PRESCRIBED_RESOURCE__NAME:
 			setName((String) newValue);
-			return;
-		case Execution_metamodelPackage.MEDICATION_PRESCRIBED_RESOURCE__STANDARD:
-			setStandard((String) newValue);
 			return;
 		case Execution_metamodelPackage.MEDICATION_PRESCRIBED_RESOURCE__BRAND:
 			setBrand((String) newValue);
@@ -886,6 +920,9 @@ public class MedicationPrescribedResourceImpl extends MinimalEObjectImpl.Contain
 		case Execution_metamodelPackage.MEDICATION_PRESCRIBED_RESOURCE__ACCESS:
 			setAccess((String) newValue);
 			return;
+		case Execution_metamodelPackage.MEDICATION_PRESCRIBED_RESOURCE__STANDARD:
+			setStandard((Standard) newValue);
+			return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -909,9 +946,6 @@ public class MedicationPrescribedResourceImpl extends MinimalEObjectImpl.Contain
 			return;
 		case Execution_metamodelPackage.MEDICATION_PRESCRIBED_RESOURCE__NAME:
 			setName(NAME_EDEFAULT);
-			return;
-		case Execution_metamodelPackage.MEDICATION_PRESCRIBED_RESOURCE__STANDARD:
-			setStandard(STANDARD_EDEFAULT);
 			return;
 		case Execution_metamodelPackage.MEDICATION_PRESCRIBED_RESOURCE__BRAND:
 			setBrand(BRAND_EDEFAULT);
@@ -949,6 +983,9 @@ public class MedicationPrescribedResourceImpl extends MinimalEObjectImpl.Contain
 		case Execution_metamodelPackage.MEDICATION_PRESCRIBED_RESOURCE__ACCESS:
 			setAccess(ACCESS_EDEFAULT);
 			return;
+		case Execution_metamodelPackage.MEDICATION_PRESCRIBED_RESOURCE__STANDARD:
+			setStandard((Standard) null);
+			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -969,8 +1006,6 @@ public class MedicationPrescribedResourceImpl extends MinimalEObjectImpl.Contain
 			return outpatient != OUTPATIENT_EDEFAULT;
 		case Execution_metamodelPackage.MEDICATION_PRESCRIBED_RESOURCE__NAME:
 			return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-		case Execution_metamodelPackage.MEDICATION_PRESCRIBED_RESOURCE__STANDARD:
-			return STANDARD_EDEFAULT == null ? standard != null : !STANDARD_EDEFAULT.equals(standard);
 		case Execution_metamodelPackage.MEDICATION_PRESCRIBED_RESOURCE__BRAND:
 			return BRAND_EDEFAULT == null ? brand != null : !BRAND_EDEFAULT.equals(brand);
 		case Execution_metamodelPackage.MEDICATION_PRESCRIBED_RESOURCE__CODE:
@@ -995,6 +1030,8 @@ public class MedicationPrescribedResourceImpl extends MinimalEObjectImpl.Contain
 			return UNIT_EDEFAULT == null ? unit != null : !UNIT_EDEFAULT.equals(unit);
 		case Execution_metamodelPackage.MEDICATION_PRESCRIBED_RESOURCE__ACCESS:
 			return ACCESS_EDEFAULT == null ? access != null : !ACCESS_EDEFAULT.equals(access);
+		case Execution_metamodelPackage.MEDICATION_PRESCRIBED_RESOURCE__STANDARD:
+			return standard != null;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -1018,8 +1055,6 @@ public class MedicationPrescribedResourceImpl extends MinimalEObjectImpl.Contain
 		result.append(outpatient);
 		result.append(", name: ");
 		result.append(name);
-		result.append(", standard: ");
-		result.append(standard);
 		result.append(", brand: ");
 		result.append(brand);
 		result.append(", code: ");

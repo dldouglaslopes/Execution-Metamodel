@@ -346,69 +346,6 @@ public interface Execution_metamodelFactory extends EFactory {
 	EPause createEPause();
 
 	/**
-	 * Returns a new object of class '<em>Medical Care</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Medical Care</em>'.
-	 * @generated
-	 */
-	MedicalCare createMedicalCare();
-
-	/**
-	 * Returns a new object of class '<em>Unit Care</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Unit Care</em>'.
-	 * @generated
-	 */
-	UnitCare createUnitCare();
-
-	/**
-	 * Returns a new object of class '<em>Professional</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Professional</em>'.
-	 * @generated
-	 */
-	Professional createProfessional();
-
-	/**
-	 * Returns a new object of class '<em>Patient</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Patient</em>'.
-	 * @generated
-	 */
-	Patient createPatient();
-
-	/**
-	 * Returns a new object of class '<em>Allergy Registry</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Allergy Registry</em>'.
-	 * @generated
-	 */
-	AllergyRegistry createAllergyRegistry();
-
-	/**
-	 * Returns a new object of class '<em>Comorbidity Registry</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Comorbidity Registry</em>'.
-	 * @generated
-	 */
-	ComorbidityRegistry createComorbidityRegistry();
-
-	/**
-	 * Returns a new object of class '<em>Allergy</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Allergy</em>'.
-	 * @generated
-	 */
-	Allergy createAllergy();
-
-	/**
 	 * Returns a new object of class '<em>Procedure</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -533,6 +470,15 @@ public interface Execution_metamodelFactory extends EFactory {
 	 * @generated
 	 */
 	ExaminationPrescribedResource createExaminationPrescribedResource();
+
+	/**
+	 * Returns a new object of class '<em>Standard</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Standard</em>'.
+	 * @generated
+	 */
+	Standard createStandard();
 
 	/**
 	 * Returns the package supported by this factory.
