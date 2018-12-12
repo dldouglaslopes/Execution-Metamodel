@@ -34,6 +34,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *   <li>{@link MetamodelExecution.impl.StandardImpl#getQtyVolume <em>Qty Volume</em>}</li>
  *   <li>{@link MetamodelExecution.impl.StandardImpl#getQtyDosage <em>Qty Dosage</em>}</li>
  *   <li>{@link MetamodelExecution.impl.StandardImpl#getCodeUnitDosage <em>Code Unit Dosage</em>}</li>
+ *   <li>{@link MetamodelExecution.impl.StandardImpl#getAdminDiluent <em>Admin Diluent</em>}</li>
  * </ul>
  *
  * @generated
@@ -318,6 +319,26 @@ public class StandardImpl extends MinimalEObjectImpl.Container implements Standa
 	 * @ordered
 	 */
 	protected String codeUnitDosage = CODE_UNIT_DOSAGE_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getAdminDiluent() <em>Admin Diluent</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getAdminDiluent()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String ADMIN_DILUENT_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getAdminDiluent() <em>Admin Diluent</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getAdminDiluent()
+	 * @generated
+	 * @ordered
+	 */
+	protected String adminDiluent = ADMIN_DILUENT_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -650,6 +671,28 @@ public class StandardImpl extends MinimalEObjectImpl.Container implements Standa
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public String getAdminDiluent() {
+		return adminDiluent;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setAdminDiluent(String newAdminDiluent) {
+		String oldAdminDiluent = adminDiluent;
+		adminDiluent = newAdminDiluent;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.STANDARD__ADMIN_DILUENT,
+					oldAdminDiluent, adminDiluent));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -681,6 +724,8 @@ public class StandardImpl extends MinimalEObjectImpl.Container implements Standa
 			return getQtyDosage();
 		case Execution_metamodelPackage.STANDARD__CODE_UNIT_DOSAGE:
 			return getCodeUnitDosage();
+		case Execution_metamodelPackage.STANDARD__ADMIN_DILUENT:
+			return getAdminDiluent();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -734,6 +779,9 @@ public class StandardImpl extends MinimalEObjectImpl.Container implements Standa
 			return;
 		case Execution_metamodelPackage.STANDARD__CODE_UNIT_DOSAGE:
 			setCodeUnitDosage((String) newValue);
+			return;
+		case Execution_metamodelPackage.STANDARD__ADMIN_DILUENT:
+			setAdminDiluent((String) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -789,6 +837,9 @@ public class StandardImpl extends MinimalEObjectImpl.Container implements Standa
 		case Execution_metamodelPackage.STANDARD__CODE_UNIT_DOSAGE:
 			setCodeUnitDosage(CODE_UNIT_DOSAGE_EDEFAULT);
 			return;
+		case Execution_metamodelPackage.STANDARD__ADMIN_DILUENT:
+			setAdminDiluent(ADMIN_DILUENT_EDEFAULT);
+			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -831,6 +882,8 @@ public class StandardImpl extends MinimalEObjectImpl.Container implements Standa
 		case Execution_metamodelPackage.STANDARD__CODE_UNIT_DOSAGE:
 			return CODE_UNIT_DOSAGE_EDEFAULT == null ? codeUnitDosage != null
 					: !CODE_UNIT_DOSAGE_EDEFAULT.equals(codeUnitDosage);
+		case Execution_metamodelPackage.STANDARD__ADMIN_DILUENT:
+			return ADMIN_DILUENT_EDEFAULT == null ? adminDiluent != null : !ADMIN_DILUENT_EDEFAULT.equals(adminDiluent);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -874,6 +927,8 @@ public class StandardImpl extends MinimalEObjectImpl.Container implements Standa
 		result.append(qtyDosage);
 		result.append(", codeUnitDosage: ");
 		result.append(codeUnitDosage);
+		result.append(", adminDiluent: ");
+		result.append(adminDiluent);
 		result.append(')');
 		return result.toString();
 	}

@@ -30,7 +30,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link MetamodelExecution.EPathway#getJustification <em>Justification</em>}</li>
  *   <li>{@link MetamodelExecution.EPathway#getPathway <em>Pathway</em>}</li>
  *   <li>{@link MetamodelExecution.EPathway#getComplementaryconducts <em>Complementaryconducts</em>}</li>
- *   <li>{@link MetamodelExecution.EPathway#getAttendance <em>Attendance</em>}</li>
+ *   <li>{@link MetamodelExecution.EPathway#getMedicalcare <em>Medicalcare</em>}</li>
  *   <li>{@link MetamodelExecution.EPathway#getCid <em>Cid</em>}</li>
  *   <li>{@link MetamodelExecution.EPathway#getTimeExecution <em>Time Execution</em>}</li>
  * </ul>
@@ -350,30 +350,30 @@ public interface EPathway extends EObject {
 	EList<ComplementaryConducts> getComplementaryconducts();
 
 	/**
-	 * Returns the value of the '<em><b>Attendance</b></em>' containment reference.
+	 * Returns the value of the '<em><b>Medicalcare</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Attendance</em>' containment reference isn't clear,
+	 * If the meaning of the '<em>Medicalcare</em>' containment reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Attendance</em>' containment reference.
-	 * @see #setAttendance(Attendance)
-	 * @see MetamodelExecution.Execution_metamodelPackage#getEPathway_Attendance()
+	 * @return the value of the '<em>Medicalcare</em>' containment reference.
+	 * @see #setMedicalcare(MedicalCare)
+	 * @see MetamodelExecution.Execution_metamodelPackage#getEPathway_Medicalcare()
 	 * @model containment="true" required="true"
 	 * @generated
 	 */
-	Attendance getAttendance();
+	MedicalCare getMedicalcare();
 
 	/**
-	 * Sets the value of the '{@link MetamodelExecution.EPathway#getAttendance <em>Attendance</em>}' containment reference.
+	 * Sets the value of the '{@link MetamodelExecution.EPathway#getMedicalcare <em>Medicalcare</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Attendance</em>' containment reference.
-	 * @see #getAttendance()
+	 * @param value the new value of the '<em>Medicalcare</em>' containment reference.
+	 * @see #getMedicalcare()
 	 * @generated
 	 */
-	void setAttendance(Attendance value);
+	void setMedicalcare(MedicalCare value);
 
 	/**
 	 * Returns the value of the '<em><b>Cid</b></em>' attribute.

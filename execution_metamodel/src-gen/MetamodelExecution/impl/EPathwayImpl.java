@@ -2,13 +2,13 @@
  */
 package MetamodelExecution.impl;
 
-import MetamodelExecution.Attendance;
 import MetamodelExecution.ComplementaryConducts;
 import MetamodelExecution.EPathway;
 import MetamodelExecution.EStep;
 import MetamodelExecution.Execution_metamodelPackage;
 import MetamodelExecution.Justification;
 import MetamodelExecution.LastProfessional;
+import MetamodelExecution.MedicalCare;
 import MetamodelExecution.Pathway;
 import MetamodelExecution.Responsible;
 
@@ -51,7 +51,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link MetamodelExecution.impl.EPathwayImpl#getJustification <em>Justification</em>}</li>
  *   <li>{@link MetamodelExecution.impl.EPathwayImpl#getPathway <em>Pathway</em>}</li>
  *   <li>{@link MetamodelExecution.impl.EPathwayImpl#getComplementaryconducts <em>Complementaryconducts</em>}</li>
- *   <li>{@link MetamodelExecution.impl.EPathwayImpl#getAttendance <em>Attendance</em>}</li>
+ *   <li>{@link MetamodelExecution.impl.EPathwayImpl#getMedicalcare <em>Medicalcare</em>}</li>
  *   <li>{@link MetamodelExecution.impl.EPathwayImpl#getCid <em>Cid</em>}</li>
  *   <li>{@link MetamodelExecution.impl.EPathwayImpl#getTimeExecution <em>Time Execution</em>}</li>
  * </ul>
@@ -250,14 +250,14 @@ public class EPathwayImpl extends MinimalEObjectImpl.Container implements EPathw
 	protected EList<ComplementaryConducts> complementaryconducts;
 
 	/**
-	 * The cached value of the '{@link #getAttendance() <em>Attendance</em>}' containment reference.
+	 * The cached value of the '{@link #getMedicalcare() <em>Medicalcare</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getAttendance()
+	 * @see #getMedicalcare()
 	 * @generated
 	 * @ordered
 	 */
-	protected Attendance attendance;
+	protected MedicalCare medicalcare;
 
 	/**
 	 * The default value of the '{@link #getCid() <em>Cid</em>}' attribute.
@@ -693,8 +693,8 @@ public class EPathwayImpl extends MinimalEObjectImpl.Container implements EPathw
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Attendance getAttendance() {
-		return attendance;
+	public MedicalCare getMedicalcare() {
+		return medicalcare;
 	}
 
 	/**
@@ -702,12 +702,12 @@ public class EPathwayImpl extends MinimalEObjectImpl.Container implements EPathw
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetAttendance(Attendance newAttendance, NotificationChain msgs) {
-		Attendance oldAttendance = attendance;
-		attendance = newAttendance;
+	public NotificationChain basicSetMedicalcare(MedicalCare newMedicalcare, NotificationChain msgs) {
+		MedicalCare oldMedicalcare = medicalcare;
+		medicalcare = newMedicalcare;
 		if (eNotificationRequired()) {
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
-					Execution_metamodelPackage.EPATHWAY__ATTENDANCE, oldAttendance, newAttendance);
+					Execution_metamodelPackage.EPATHWAY__MEDICALCARE, oldMedicalcare, newMedicalcare);
 			if (msgs == null)
 				msgs = notification;
 			else
@@ -721,21 +721,21 @@ public class EPathwayImpl extends MinimalEObjectImpl.Container implements EPathw
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setAttendance(Attendance newAttendance) {
-		if (newAttendance != attendance) {
+	public void setMedicalcare(MedicalCare newMedicalcare) {
+		if (newMedicalcare != medicalcare) {
 			NotificationChain msgs = null;
-			if (attendance != null)
-				msgs = ((InternalEObject) attendance).eInverseRemove(this,
-						EOPPOSITE_FEATURE_BASE - Execution_metamodelPackage.EPATHWAY__ATTENDANCE, null, msgs);
-			if (newAttendance != null)
-				msgs = ((InternalEObject) newAttendance).eInverseAdd(this,
-						EOPPOSITE_FEATURE_BASE - Execution_metamodelPackage.EPATHWAY__ATTENDANCE, null, msgs);
-			msgs = basicSetAttendance(newAttendance, msgs);
+			if (medicalcare != null)
+				msgs = ((InternalEObject) medicalcare).eInverseRemove(this,
+						EOPPOSITE_FEATURE_BASE - Execution_metamodelPackage.EPATHWAY__MEDICALCARE, null, msgs);
+			if (newMedicalcare != null)
+				msgs = ((InternalEObject) newMedicalcare).eInverseAdd(this,
+						EOPPOSITE_FEATURE_BASE - Execution_metamodelPackage.EPATHWAY__MEDICALCARE, null, msgs);
+			msgs = basicSetMedicalcare(newMedicalcare, msgs);
 			if (msgs != null)
 				msgs.dispatch();
 		} else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.EPATHWAY__ATTENDANCE,
-					newAttendance, newAttendance));
+			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.EPATHWAY__MEDICALCARE,
+					newMedicalcare, newMedicalcare));
 	}
 
 	/**
@@ -802,8 +802,8 @@ public class EPathwayImpl extends MinimalEObjectImpl.Container implements EPathw
 			return basicSetPathway(null, msgs);
 		case Execution_metamodelPackage.EPATHWAY__COMPLEMENTARYCONDUCTS:
 			return ((InternalEList<?>) getComplementaryconducts()).basicRemove(otherEnd, msgs);
-		case Execution_metamodelPackage.EPATHWAY__ATTENDANCE:
-			return basicSetAttendance(null, msgs);
+		case Execution_metamodelPackage.EPATHWAY__MEDICALCARE:
+			return basicSetMedicalcare(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -842,8 +842,8 @@ public class EPathwayImpl extends MinimalEObjectImpl.Container implements EPathw
 			return getPathway();
 		case Execution_metamodelPackage.EPATHWAY__COMPLEMENTARYCONDUCTS:
 			return getComplementaryconducts();
-		case Execution_metamodelPackage.EPATHWAY__ATTENDANCE:
-			return getAttendance();
+		case Execution_metamodelPackage.EPATHWAY__MEDICALCARE:
+			return getMedicalcare();
 		case Execution_metamodelPackage.EPATHWAY__CID:
 			return getCid();
 		case Execution_metamodelPackage.EPATHWAY__TIME_EXECUTION:
@@ -903,8 +903,8 @@ public class EPathwayImpl extends MinimalEObjectImpl.Container implements EPathw
 			getComplementaryconducts().clear();
 			getComplementaryconducts().addAll((Collection<? extends ComplementaryConducts>) newValue);
 			return;
-		case Execution_metamodelPackage.EPATHWAY__ATTENDANCE:
-			setAttendance((Attendance) newValue);
+		case Execution_metamodelPackage.EPATHWAY__MEDICALCARE:
+			setMedicalcare((MedicalCare) newValue);
 			return;
 		case Execution_metamodelPackage.EPATHWAY__CID:
 			setCid((String) newValue);
@@ -963,8 +963,8 @@ public class EPathwayImpl extends MinimalEObjectImpl.Container implements EPathw
 		case Execution_metamodelPackage.EPATHWAY__COMPLEMENTARYCONDUCTS:
 			getComplementaryconducts().clear();
 			return;
-		case Execution_metamodelPackage.EPATHWAY__ATTENDANCE:
-			setAttendance((Attendance) null);
+		case Execution_metamodelPackage.EPATHWAY__MEDICALCARE:
+			setMedicalcare((MedicalCare) null);
 			return;
 		case Execution_metamodelPackage.EPATHWAY__CID:
 			setCid(CID_EDEFAULT);
@@ -1011,8 +1011,8 @@ public class EPathwayImpl extends MinimalEObjectImpl.Container implements EPathw
 			return pathway != null;
 		case Execution_metamodelPackage.EPATHWAY__COMPLEMENTARYCONDUCTS:
 			return complementaryconducts != null && !complementaryconducts.isEmpty();
-		case Execution_metamodelPackage.EPATHWAY__ATTENDANCE:
-			return attendance != null;
+		case Execution_metamodelPackage.EPATHWAY__MEDICALCARE:
+			return medicalcare != null;
 		case Execution_metamodelPackage.EPATHWAY__CID:
 			return CID_EDEFAULT == null ? cid != null : !CID_EDEFAULT.equals(cid);
 		case Execution_metamodelPackage.EPATHWAY__TIME_EXECUTION:

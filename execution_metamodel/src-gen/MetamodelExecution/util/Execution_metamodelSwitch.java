@@ -392,9 +392,9 @@ public class Execution_metamodelSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case Execution_metamodelPackage.ATTENDANCE: {
-			Attendance attendance = (Attendance) theEObject;
-			T result = caseAttendance(attendance);
+		case Execution_metamodelPackage.MEDICAL_CARE: {
+			MedicalCare medicalCare = (MedicalCare) theEObject;
+			T result = caseMedicalCare(medicalCare);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -463,15 +463,6 @@ public class Execution_metamodelSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case Execution_metamodelPackage.COMPLEMENTARY_ITEM_PRESCRIPTION: {
-			ComplementaryItemPrescription complementaryItemPrescription = (ComplementaryItemPrescription) theEObject;
-			T result = caseComplementaryItemPrescription(complementaryItemPrescription);
-			if (result == null)
-				result = caseComplementaryConducts(complementaryItemPrescription);
-			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
 		case Execution_metamodelPackage.AUDIT: {
 			Audit audit = (Audit) theEObject;
 			T result = caseAudit(audit);
@@ -498,6 +489,13 @@ public class Execution_metamodelSwitch<T> extends Switch<T> {
 		case Execution_metamodelPackage.STANDARD: {
 			Standard standard = (Standard) theEObject;
 			T result = caseStandard(standard);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case Execution_metamodelPackage.OPTION: {
+			Option option = (Option) theEObject;
+			T result = caseOption(option);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -1138,17 +1136,17 @@ public class Execution_metamodelSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Attendance</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Medical Care</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Attendance</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Medical Care</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseAttendance(Attendance object) {
+	public T caseMedicalCare(MedicalCare object) {
 		return null;
 	}
 
@@ -1273,21 +1271,6 @@ public class Execution_metamodelSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Complementary Item Prescription</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Complementary Item Prescription</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseComplementaryItemPrescription(ComplementaryItemPrescription object) {
-		return null;
-	}
-
-	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Audit</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -1344,6 +1327,21 @@ public class Execution_metamodelSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseStandard(Standard object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Option</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Option</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseOption(Option object) {
 		return null;
 	}
 

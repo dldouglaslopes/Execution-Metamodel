@@ -154,6 +154,8 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference execution_metamodel.ecore#//EStep/creator"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference execution_metamodel.ecore#//EStep/executor"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute execution_metamodel.ecore#//EStep/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute execution_metamodel.ecore#//EStep/previous"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute execution_metamodel.ecore#//EStep/next"/>
     </genClasses>
     <genClasses ecoreClass="execution_metamodel.ecore#//Prescription"/>
     <genClasses ecoreClass="execution_metamodel.ecore#//EPathway">
@@ -170,7 +172,7 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference execution_metamodel.ecore#//EPathway/justification"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference execution_metamodel.ecore#//EPathway/pathway"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference execution_metamodel.ecore#//EPathway/complementaryconducts"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference execution_metamodel.ecore#//EPathway/attendance"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference execution_metamodel.ecore#//EPathway/medicalcare"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute execution_metamodel.ecore#//EPathway/cid"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute execution_metamodel.ecore#//EPathway/timeExecution"/>
     </genClasses>
@@ -265,14 +267,15 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute execution_metamodel.ecore#//ComplementaryConducts/resource"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference execution_metamodel.ecore#//ComplementaryConducts/suspension"/>
     </genClasses>
-    <genClasses ecoreClass="execution_metamodel.ecore#//Attendance">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute execution_metamodel.ecore#//Attendance/codeAttendance"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute execution_metamodel.ecore#//Attendance/pacient"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute execution_metamodel.ecore#//Attendance/professional"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute execution_metamodel.ecore#//Attendance/idProfessional"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute execution_metamodel.ecore#//Attendance/hospitalUnit"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute execution_metamodel.ecore#//Attendance/patientRecord"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute execution_metamodel.ecore#//Attendance/codeBd"/>
+    <genClasses ecoreClass="execution_metamodel.ecore#//MedicalCare">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute execution_metamodel.ecore#//MedicalCare/codeMedicalCare"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute execution_metamodel.ecore#//MedicalCare/pacient"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute execution_metamodel.ecore#//MedicalCare/professional"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute execution_metamodel.ecore#//MedicalCare/idProfessional"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute execution_metamodel.ecore#//MedicalCare/hospitalUnit"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute execution_metamodel.ecore#//MedicalCare/patientRecord"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute execution_metamodel.ecore#//MedicalCare/age"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute execution_metamodel.ecore#//MedicalCare/sex"/>
     </genClasses>
     <genClasses ecoreClass="execution_metamodel.ecore#//Comorbidity">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute execution_metamodel.ecore#//Comorbidity/id"/>
@@ -321,7 +324,6 @@
     <genClasses ecoreClass="execution_metamodel.ecore#//ComplementaryExamination">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference execution_metamodel.ecore#//ComplementaryExamination/examinationprescribedresource"/>
     </genClasses>
-    <genClasses ecoreClass="execution_metamodel.ecore#//ComplementaryItemPrescription"/>
     <genClasses ecoreClass="execution_metamodel.ecore#//Audit">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute execution_metamodel.ecore#//Audit/user"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute execution_metamodel.ecore#//Audit/date"/>
@@ -352,6 +354,8 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute execution_metamodel.ecore#//Standard/qtyVolume"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute execution_metamodel.ecore#//Standard/qtyDosage"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute execution_metamodel.ecore#//Standard/codeUnitDosage"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute execution_metamodel.ecore#//Standard/adminDiluent"/>
     </genClasses>
+    <genClasses ecoreClass="execution_metamodel.ecore#//Option"/>
   </genPackages>
 </genmodel:GenModel>

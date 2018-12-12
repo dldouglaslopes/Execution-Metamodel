@@ -364,13 +364,13 @@ public interface Execution_metamodelFactory extends EFactory {
 	Internment createInternment();
 
 	/**
-	 * Returns a new object of class '<em>Attendance</em>'.
+	 * Returns a new object of class '<em>Medical Care</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Attendance</em>'.
+	 * @return a new object of class '<em>Medical Care</em>'.
 	 * @generated
 	 */
-	Attendance createAttendance();
+	MedicalCare createMedicalCare();
 
 	/**
 	 * Returns a new object of class '<em>Comorbidity</em>'.
@@ -436,15 +436,6 @@ public interface Execution_metamodelFactory extends EFactory {
 	ComplementaryExamination createComplementaryExamination();
 
 	/**
-	 * Returns a new object of class '<em>Complementary Item Prescription</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Complementary Item Prescription</em>'.
-	 * @generated
-	 */
-	ComplementaryItemPrescription createComplementaryItemPrescription();
-
-	/**
 	 * Returns a new object of class '<em>Audit</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -479,6 +470,15 @@ public interface Execution_metamodelFactory extends EFactory {
 	 * @generated
 	 */
 	Standard createStandard();
+
+	/**
+	 * Returns a new object of class '<em>Option</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Option</em>'.
+	 * @generated
+	 */
+	Option createOption();
 
 	/**
 	 * Returns the package supported by this factory.

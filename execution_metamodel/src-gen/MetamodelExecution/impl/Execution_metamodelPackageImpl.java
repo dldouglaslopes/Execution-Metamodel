@@ -4,14 +4,12 @@ package MetamodelExecution.impl;
 
 import MetamodelExecution.Access;
 import MetamodelExecution.Answer;
-import MetamodelExecution.Attendance;
 import MetamodelExecution.Audit;
 import MetamodelExecution.Bond;
 import MetamodelExecution.Comorbidity;
 import MetamodelExecution.Complement;
 import MetamodelExecution.ComplementaryConducts;
 import MetamodelExecution.ComplementaryExamination;
-import MetamodelExecution.ComplementaryItemPrescription;
 import MetamodelExecution.ComplementaryMedication;
 import MetamodelExecution.ComplementaryProcedure;
 import MetamodelExecution.Creator;
@@ -35,10 +33,12 @@ import MetamodelExecution.Executor;
 import MetamodelExecution.Internment;
 import MetamodelExecution.Justification;
 import MetamodelExecution.LastProfessional;
+import MetamodelExecution.MedicalCare;
 import MetamodelExecution.Medication;
 import MetamodelExecution.MedicationPrescribedResource;
 import MetamodelExecution.Notification;
 import MetamodelExecution.Numeric;
+import MetamodelExecution.Option;
 import MetamodelExecution.Pathway;
 import MetamodelExecution.PrescribedExamination;
 import MetamodelExecution.PrescribedInternment;
@@ -374,7 +374,7 @@ public class Execution_metamodelPackageImpl extends EPackageImpl implements Exec
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass attendanceEClass = null;
+	private EClass medicalCareEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -437,13 +437,6 @@ public class Execution_metamodelPackageImpl extends EPackageImpl implements Exec
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass complementaryItemPrescriptionEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	private EClass auditEClass = null;
 
 	/**
@@ -466,6 +459,13 @@ public class Execution_metamodelPackageImpl extends EPackageImpl implements Exec
 	 * @generated
 	 */
 	private EClass standardEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass optionEClass = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -1670,6 +1670,24 @@ public class Execution_metamodelPackageImpl extends EPackageImpl implements Exec
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getEStep_Previous() {
+		return (EAttribute) eStepEClass.getEStructuralFeatures().get(15);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getEStep_Next() {
+		return (EAttribute) eStepEClass.getEStructuralFeatures().get(16);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getPrescription() {
 		return prescriptionEClass;
 	}
@@ -1805,7 +1823,7 @@ public class Execution_metamodelPackageImpl extends EPackageImpl implements Exec
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getEPathway_Attendance() {
+	public EReference getEPathway_Medicalcare() {
 		return (EReference) ePathwayEClass.getEStructuralFeatures().get(13);
 	}
 
@@ -2543,8 +2561,8 @@ public class Execution_metamodelPackageImpl extends EPackageImpl implements Exec
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getAttendance() {
-		return attendanceEClass;
+	public EClass getMedicalCare() {
+		return medicalCareEClass;
 	}
 
 	/**
@@ -2552,8 +2570,8 @@ public class Execution_metamodelPackageImpl extends EPackageImpl implements Exec
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getAttendance_CodeAttendance() {
-		return (EAttribute) attendanceEClass.getEStructuralFeatures().get(0);
+	public EAttribute getMedicalCare_CodeMedicalCare() {
+		return (EAttribute) medicalCareEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -2561,8 +2579,8 @@ public class Execution_metamodelPackageImpl extends EPackageImpl implements Exec
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getAttendance_Pacient() {
-		return (EAttribute) attendanceEClass.getEStructuralFeatures().get(1);
+	public EAttribute getMedicalCare_Pacient() {
+		return (EAttribute) medicalCareEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -2570,8 +2588,8 @@ public class Execution_metamodelPackageImpl extends EPackageImpl implements Exec
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getAttendance_Professional() {
-		return (EAttribute) attendanceEClass.getEStructuralFeatures().get(2);
+	public EAttribute getMedicalCare_Professional() {
+		return (EAttribute) medicalCareEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -2579,8 +2597,8 @@ public class Execution_metamodelPackageImpl extends EPackageImpl implements Exec
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getAttendance_IdProfessional() {
-		return (EAttribute) attendanceEClass.getEStructuralFeatures().get(3);
+	public EAttribute getMedicalCare_IdProfessional() {
+		return (EAttribute) medicalCareEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -2588,8 +2606,8 @@ public class Execution_metamodelPackageImpl extends EPackageImpl implements Exec
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getAttendance_HospitalUnit() {
-		return (EAttribute) attendanceEClass.getEStructuralFeatures().get(4);
+	public EAttribute getMedicalCare_HospitalUnit() {
+		return (EAttribute) medicalCareEClass.getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -2597,8 +2615,8 @@ public class Execution_metamodelPackageImpl extends EPackageImpl implements Exec
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getAttendance_PatientRecord() {
-		return (EAttribute) attendanceEClass.getEStructuralFeatures().get(5);
+	public EAttribute getMedicalCare_PatientRecord() {
+		return (EAttribute) medicalCareEClass.getEStructuralFeatures().get(5);
 	}
 
 	/**
@@ -2606,8 +2624,17 @@ public class Execution_metamodelPackageImpl extends EPackageImpl implements Exec
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getAttendance_CodeBd() {
-		return (EAttribute) attendanceEClass.getEStructuralFeatures().get(6);
+	public EAttribute getMedicalCare_Age() {
+		return (EAttribute) medicalCareEClass.getEStructuralFeatures().get(6);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getMedicalCare_Sex() {
+		return (EAttribute) medicalCareEClass.getEStructuralFeatures().get(7);
 	}
 
 	/**
@@ -2975,15 +3002,6 @@ public class Execution_metamodelPackageImpl extends EPackageImpl implements Exec
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getComplementaryItemPrescription() {
-		return complementaryItemPrescriptionEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getAudit() {
 		return auditEClass;
 	}
@@ -3236,6 +3254,24 @@ public class Execution_metamodelPackageImpl extends EPackageImpl implements Exec
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getStandard_AdminDiluent() {
+		return (EAttribute) standardEClass.getEStructuralFeatures().get(14);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getOption() {
+		return optionEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public Execution_metamodelFactory getExecution_metamodelFactory() {
 		return (Execution_metamodelFactory) getEFactoryInstance();
 	}
@@ -3411,6 +3447,8 @@ public class Execution_metamodelPackageImpl extends EPackageImpl implements Exec
 		createEReference(eStepEClass, ESTEP__CREATOR);
 		createEReference(eStepEClass, ESTEP__EXECUTOR);
 		createEAttribute(eStepEClass, ESTEP__NAME);
+		createEAttribute(eStepEClass, ESTEP__PREVIOUS);
+		createEAttribute(eStepEClass, ESTEP__NEXT);
 
 		prescriptionEClass = createEClass(PRESCRIPTION);
 
@@ -3428,7 +3466,7 @@ public class Execution_metamodelPackageImpl extends EPackageImpl implements Exec
 		createEReference(ePathwayEClass, EPATHWAY__JUSTIFICATION);
 		createEReference(ePathwayEClass, EPATHWAY__PATHWAY);
 		createEReference(ePathwayEClass, EPATHWAY__COMPLEMENTARYCONDUCTS);
-		createEReference(ePathwayEClass, EPATHWAY__ATTENDANCE);
+		createEReference(ePathwayEClass, EPATHWAY__MEDICALCARE);
 		createEAttribute(ePathwayEClass, EPATHWAY__CID);
 		createEAttribute(ePathwayEClass, EPATHWAY__TIME_EXECUTION);
 
@@ -3525,14 +3563,15 @@ public class Execution_metamodelPackageImpl extends EPackageImpl implements Exec
 		createEAttribute(complementaryConductsEClass, COMPLEMENTARY_CONDUCTS__RESOURCE);
 		createEReference(complementaryConductsEClass, COMPLEMENTARY_CONDUCTS__SUSPENSION);
 
-		attendanceEClass = createEClass(ATTENDANCE);
-		createEAttribute(attendanceEClass, ATTENDANCE__CODE_ATTENDANCE);
-		createEAttribute(attendanceEClass, ATTENDANCE__PACIENT);
-		createEAttribute(attendanceEClass, ATTENDANCE__PROFESSIONAL);
-		createEAttribute(attendanceEClass, ATTENDANCE__ID_PROFESSIONAL);
-		createEAttribute(attendanceEClass, ATTENDANCE__HOSPITAL_UNIT);
-		createEAttribute(attendanceEClass, ATTENDANCE__PATIENT_RECORD);
-		createEAttribute(attendanceEClass, ATTENDANCE__CODE_BD);
+		medicalCareEClass = createEClass(MEDICAL_CARE);
+		createEAttribute(medicalCareEClass, MEDICAL_CARE__CODE_MEDICAL_CARE);
+		createEAttribute(medicalCareEClass, MEDICAL_CARE__PACIENT);
+		createEAttribute(medicalCareEClass, MEDICAL_CARE__PROFESSIONAL);
+		createEAttribute(medicalCareEClass, MEDICAL_CARE__ID_PROFESSIONAL);
+		createEAttribute(medicalCareEClass, MEDICAL_CARE__HOSPITAL_UNIT);
+		createEAttribute(medicalCareEClass, MEDICAL_CARE__PATIENT_RECORD);
+		createEAttribute(medicalCareEClass, MEDICAL_CARE__AGE);
+		createEAttribute(medicalCareEClass, MEDICAL_CARE__SEX);
 
 		comorbidityEClass = createEClass(COMORBIDITY);
 		createEAttribute(comorbidityEClass, COMORBIDITY__ID);
@@ -3582,8 +3621,6 @@ public class Execution_metamodelPackageImpl extends EPackageImpl implements Exec
 		complementaryExaminationEClass = createEClass(COMPLEMENTARY_EXAMINATION);
 		createEReference(complementaryExaminationEClass, COMPLEMENTARY_EXAMINATION__EXAMINATIONPRESCRIBEDRESOURCE);
 
-		complementaryItemPrescriptionEClass = createEClass(COMPLEMENTARY_ITEM_PRESCRIPTION);
-
 		auditEClass = createEClass(AUDIT);
 		createEAttribute(auditEClass, AUDIT__USER);
 		createEAttribute(auditEClass, AUDIT__DATE);
@@ -3615,6 +3652,9 @@ public class Execution_metamodelPackageImpl extends EPackageImpl implements Exec
 		createEAttribute(standardEClass, STANDARD__QTY_VOLUME);
 		createEAttribute(standardEClass, STANDARD__QTY_DOSAGE);
 		createEAttribute(standardEClass, STANDARD__CODE_UNIT_DOSAGE);
+		createEAttribute(standardEClass, STANDARD__ADMIN_DILUENT);
+
+		optionEClass = createEClass(OPTION);
 	}
 
 	/**
@@ -3666,7 +3706,6 @@ public class Execution_metamodelPackageImpl extends EPackageImpl implements Exec
 		complementaryProcedureEClass.getESuperTypes().add(this.getComplementaryConducts());
 		suspensionEClass.getESuperTypes().add(this.getNotification());
 		complementaryExaminationEClass.getESuperTypes().add(this.getComplementaryConducts());
-		complementaryItemPrescriptionEClass.getESuperTypes().add(this.getComplementaryConducts());
 		resultEClass.getESuperTypes().add(this.getNotification());
 
 		// Initialize classes, features, and operations; add parameters
@@ -3992,6 +4031,10 @@ public class Execution_metamodelPackageImpl extends EPackageImpl implements Exec
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getEStep_Name(), ecorePackage.getEString(), "name", null, 0, 1, EStep.class, !IS_TRANSIENT,
 				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getEStep_Previous(), ecorePackage.getEString(), "previous", null, 0, 1, EStep.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getEStep_Next(), ecorePackage.getEString(), "next", null, 0, 1, EStep.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(prescriptionEClass, Prescription.class, "Prescription", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
@@ -4032,9 +4075,9 @@ public class Execution_metamodelPackageImpl extends EPackageImpl implements Exec
 		initEReference(getEPathway_Complementaryconducts(), this.getComplementaryConducts(), null,
 				"complementaryconducts", null, 0, -1, EPathway.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
 				IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getEPathway_Attendance(), this.getAttendance(), null, "attendance", null, 1, 1, EPathway.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
-				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getEPathway_Medicalcare(), this.getMedicalCare(), null, "medicalcare", null, 1, 1,
+				EPathway.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getEPathway_Cid(), ecorePackage.getEString(), "cid", null, 0, 1, EPathway.class, !IS_TRANSIENT,
 				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getEPathway_TimeExecution(), ecorePackage.getEDouble(), "timeExecution", null, 0, 1,
@@ -4228,26 +4271,28 @@ public class Execution_metamodelPackageImpl extends EPackageImpl implements Exec
 				ComplementaryConducts.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
 				!IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(attendanceEClass, Attendance.class, "Attendance", !IS_ABSTRACT, !IS_INTERFACE,
+		initEClass(medicalCareEClass, MedicalCare.class, "MedicalCare", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getAttendance_CodeAttendance(), ecorePackage.getEInt(), "codeAttendance", null, 0, 1,
-				Attendance.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+		initEAttribute(getMedicalCare_CodeMedicalCare(), ecorePackage.getEInt(), "codeMedicalCare", null, 0, 1,
+				MedicalCare.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
 				!IS_DERIVED, IS_ORDERED);
-		initEAttribute(getAttendance_Pacient(), ecorePackage.getEString(), "pacient", null, 0, 1, Attendance.class,
+		initEAttribute(getMedicalCare_Pacient(), ecorePackage.getEString(), "pacient", null, 0, 1, MedicalCare.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getAttendance_Professional(), ecorePackage.getEString(), "professional", null, 0, 1,
-				Attendance.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+		initEAttribute(getMedicalCare_Professional(), ecorePackage.getEString(), "professional", null, 0, 1,
+				MedicalCare.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
 				!IS_DERIVED, IS_ORDERED);
-		initEAttribute(getAttendance_IdProfessional(), ecorePackage.getEInt(), "idProfessional", null, 0, 1,
-				Attendance.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+		initEAttribute(getMedicalCare_IdProfessional(), ecorePackage.getEInt(), "idProfessional", null, 0, 1,
+				MedicalCare.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
 				!IS_DERIVED, IS_ORDERED);
-		initEAttribute(getAttendance_HospitalUnit(), ecorePackage.getEString(), "hospitalUnit", null, 0, 1,
-				Attendance.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+		initEAttribute(getMedicalCare_HospitalUnit(), ecorePackage.getEString(), "hospitalUnit", null, 0, 1,
+				MedicalCare.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
 				!IS_DERIVED, IS_ORDERED);
-		initEAttribute(getAttendance_PatientRecord(), ecorePackage.getEString(), "patientRecord", null, 0, 1,
-				Attendance.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+		initEAttribute(getMedicalCare_PatientRecord(), ecorePackage.getEString(), "patientRecord", null, 0, 1,
+				MedicalCare.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
 				!IS_DERIVED, IS_ORDERED);
-		initEAttribute(getAttendance_CodeBd(), ecorePackage.getEString(), "codeBd", null, 0, 1, Attendance.class,
+		initEAttribute(getMedicalCare_Age(), ecorePackage.getEInt(), "age", null, 0, 1, MedicalCare.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getMedicalCare_Sex(), ecorePackage.getEString(), "sex", null, 0, 1, MedicalCare.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(comorbidityEClass, Comorbidity.class, "Comorbidity", !IS_ABSTRACT, !IS_INTERFACE,
@@ -4367,9 +4412,6 @@ public class Execution_metamodelPackageImpl extends EPackageImpl implements Exec
 				ComplementaryExamination.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
 				!IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(complementaryItemPrescriptionEClass, ComplementaryItemPrescription.class,
-				"ComplementaryItemPrescription", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
 		initEClass(auditEClass, Audit.class, "Audit", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getAudit_User(), ecorePackage.getEString(), "user", null, 0, 1, Audit.class, !IS_TRANSIENT,
 				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -4440,6 +4482,11 @@ public class Execution_metamodelPackageImpl extends EPackageImpl implements Exec
 		initEAttribute(getStandard_CodeUnitDosage(), ecorePackage.getEString(), "codeUnitDosage", null, 0, 1,
 				Standard.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
 				!IS_DERIVED, IS_ORDERED);
+		initEAttribute(getStandard_AdminDiluent(), ecorePackage.getEString(), "adminDiluent", null, 0, 1,
+				Standard.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
+
+		initEClass(optionEClass, Option.class, "Option", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		// Create resource
 		createResource(eNS_URI);

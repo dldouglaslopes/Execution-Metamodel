@@ -27,6 +27,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link MetamodelExecution.Standard#getQtyVolume <em>Qty Volume</em>}</li>
  *   <li>{@link MetamodelExecution.Standard#getQtyDosage <em>Qty Dosage</em>}</li>
  *   <li>{@link MetamodelExecution.Standard#getCodeUnitDosage <em>Code Unit Dosage</em>}</li>
+ *   <li>{@link MetamodelExecution.Standard#getAdminDiluent <em>Admin Diluent</em>}</li>
  * </ul>
  *
  * @see MetamodelExecution.Execution_metamodelPackage#getStandard()
@@ -397,5 +398,31 @@ public interface Standard extends EObject {
 	 * @generated
 	 */
 	void setCodeUnitDosage(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Admin Diluent</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Admin Diluent</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Admin Diluent</em>' attribute.
+	 * @see #setAdminDiluent(String)
+	 * @see MetamodelExecution.Execution_metamodelPackage#getStandard_AdminDiluent()
+	 * @model
+	 * @generated
+	 */
+	String getAdminDiluent();
+
+	/**
+	 * Sets the value of the '{@link MetamodelExecution.Standard#getAdminDiluent <em>Admin Diluent</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Admin Diluent</em>' attribute.
+	 * @see #getAdminDiluent()
+	 * @generated
+	 */
+	void setAdminDiluent(String value);
 
 } // Standard

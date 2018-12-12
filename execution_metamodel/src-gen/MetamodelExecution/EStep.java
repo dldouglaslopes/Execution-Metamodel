@@ -30,6 +30,8 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link MetamodelExecution.EStep#getCreator <em>Creator</em>}</li>
  *   <li>{@link MetamodelExecution.EStep#getExecutor <em>Executor</em>}</li>
  *   <li>{@link MetamodelExecution.EStep#getName <em>Name</em>}</li>
+ *   <li>{@link MetamodelExecution.EStep#getPrevious <em>Previous</em>}</li>
+ *   <li>{@link MetamodelExecution.EStep#getNext <em>Next</em>}</li>
  * </ul>
  *
  * @see MetamodelExecution.Execution_metamodelPackage#getEStep()
@@ -429,5 +431,57 @@ public interface EStep extends EObject {
 	 * @generated
 	 */
 	void setName(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Previous</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Previous</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Previous</em>' attribute.
+	 * @see #setPrevious(String)
+	 * @see MetamodelExecution.Execution_metamodelPackage#getEStep_Previous()
+	 * @model
+	 * @generated
+	 */
+	String getPrevious();
+
+	/**
+	 * Sets the value of the '{@link MetamodelExecution.EStep#getPrevious <em>Previous</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Previous</em>' attribute.
+	 * @see #getPrevious()
+	 * @generated
+	 */
+	void setPrevious(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Next</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Next</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Next</em>' attribute.
+	 * @see #setNext(String)
+	 * @see MetamodelExecution.Execution_metamodelPackage#getEStep_Next()
+	 * @model
+	 * @generated
+	 */
+	String getNext();
+
+	/**
+	 * Sets the value of the '{@link MetamodelExecution.EStep#getNext <em>Next</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Next</em>' attribute.
+	 * @see #getNext()
+	 * @generated
+	 */
+	void setNext(String value);
 
 } // EStep

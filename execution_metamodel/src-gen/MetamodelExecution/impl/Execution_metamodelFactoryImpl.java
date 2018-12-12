@@ -132,8 +132,8 @@ public class Execution_metamodelFactoryImpl extends EFactoryImpl implements Exec
 			return createProcedure();
 		case Execution_metamodelPackage.INTERNMENT:
 			return createInternment();
-		case Execution_metamodelPackage.ATTENDANCE:
-			return createAttendance();
+		case Execution_metamodelPackage.MEDICAL_CARE:
+			return createMedicalCare();
 		case Execution_metamodelPackage.COMORBIDITY:
 			return createComorbidity();
 		case Execution_metamodelPackage.COMPLEMENTARY_MEDICATION:
@@ -148,8 +148,6 @@ public class Execution_metamodelFactoryImpl extends EFactoryImpl implements Exec
 			return createProcedurePrescribedResource();
 		case Execution_metamodelPackage.COMPLEMENTARY_EXAMINATION:
 			return createComplementaryExamination();
-		case Execution_metamodelPackage.COMPLEMENTARY_ITEM_PRESCRIPTION:
-			return createComplementaryItemPrescription();
 		case Execution_metamodelPackage.AUDIT:
 			return createAudit();
 		case Execution_metamodelPackage.RESULT:
@@ -158,6 +156,8 @@ public class Execution_metamodelFactoryImpl extends EFactoryImpl implements Exec
 			return createExaminationPrescribedResource();
 		case Execution_metamodelPackage.STANDARD:
 			return createStandard();
+		case Execution_metamodelPackage.OPTION:
+			return createOption();
 		default:
 			throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -548,9 +548,9 @@ public class Execution_metamodelFactoryImpl extends EFactoryImpl implements Exec
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Attendance createAttendance() {
-		AttendanceImpl attendance = new AttendanceImpl();
-		return attendance;
+	public MedicalCare createMedicalCare() {
+		MedicalCareImpl medicalCare = new MedicalCareImpl();
+		return medicalCare;
 	}
 
 	/**
@@ -628,16 +628,6 @@ public class Execution_metamodelFactoryImpl extends EFactoryImpl implements Exec
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ComplementaryItemPrescription createComplementaryItemPrescription() {
-		ComplementaryItemPrescriptionImpl complementaryItemPrescription = new ComplementaryItemPrescriptionImpl();
-		return complementaryItemPrescription;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public Audit createAudit() {
 		AuditImpl audit = new AuditImpl();
 		return audit;
@@ -671,6 +661,16 @@ public class Execution_metamodelFactoryImpl extends EFactoryImpl implements Exec
 	public Standard createStandard() {
 		StandardImpl standard = new StandardImpl();
 		return standard;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Option createOption() {
+		OptionImpl option = new OptionImpl();
+		return option;
 	}
 
 	/**

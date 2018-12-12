@@ -43,6 +43,8 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *   <li>{@link MetamodelExecution.impl.EStepImpl#getCreator <em>Creator</em>}</li>
  *   <li>{@link MetamodelExecution.impl.EStepImpl#getExecutor <em>Executor</em>}</li>
  *   <li>{@link MetamodelExecution.impl.EStepImpl#getName <em>Name</em>}</li>
+ *   <li>{@link MetamodelExecution.impl.EStepImpl#getPrevious <em>Previous</em>}</li>
+ *   <li>{@link MetamodelExecution.impl.EStepImpl#getNext <em>Next</em>}</li>
  * </ul>
  *
  * @generated
@@ -307,6 +309,46 @@ public abstract class EStepImpl extends MinimalEObjectImpl.Container implements 
 	 * @ordered
 	 */
 	protected String name = NAME_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getPrevious() <em>Previous</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getPrevious()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String PREVIOUS_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getPrevious() <em>Previous</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getPrevious()
+	 * @generated
+	 * @ordered
+	 */
+	protected String previous = PREVIOUS_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getNext() <em>Next</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getNext()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String NEXT_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getNext() <em>Next</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getNext()
+	 * @generated
+	 * @ordered
+	 */
+	protected String next = NEXT_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -773,6 +815,50 @@ public abstract class EStepImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public String getPrevious() {
+		return previous;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setPrevious(String newPrevious) {
+		String oldPrevious = previous;
+		previous = newPrevious;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.ESTEP__PREVIOUS,
+					oldPrevious, previous));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getNext() {
+		return next;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setNext(String newNext) {
+		String oldNext = next;
+		next = newNext;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.ESTEP__NEXT, oldNext,
+					next));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -826,6 +912,10 @@ public abstract class EStepImpl extends MinimalEObjectImpl.Container implements 
 			return getExecutor();
 		case Execution_metamodelPackage.ESTEP__NAME:
 			return getName();
+		case Execution_metamodelPackage.ESTEP__PREVIOUS:
+			return getPrevious();
+		case Execution_metamodelPackage.ESTEP__NEXT:
+			return getNext();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -882,6 +972,12 @@ public abstract class EStepImpl extends MinimalEObjectImpl.Container implements 
 			return;
 		case Execution_metamodelPackage.ESTEP__NAME:
 			setName((String) newValue);
+			return;
+		case Execution_metamodelPackage.ESTEP__PREVIOUS:
+			setPrevious((String) newValue);
+			return;
+		case Execution_metamodelPackage.ESTEP__NEXT:
+			setNext((String) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -940,6 +1036,12 @@ public abstract class EStepImpl extends MinimalEObjectImpl.Container implements 
 		case Execution_metamodelPackage.ESTEP__NAME:
 			setName(NAME_EDEFAULT);
 			return;
+		case Execution_metamodelPackage.ESTEP__PREVIOUS:
+			setPrevious(PREVIOUS_EDEFAULT);
+			return;
+		case Execution_metamodelPackage.ESTEP__NEXT:
+			setNext(NEXT_EDEFAULT);
+			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -984,6 +1086,10 @@ public abstract class EStepImpl extends MinimalEObjectImpl.Container implements 
 			return executor != null;
 		case Execution_metamodelPackage.ESTEP__NAME:
 			return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+		case Execution_metamodelPackage.ESTEP__PREVIOUS:
+			return PREVIOUS_EDEFAULT == null ? previous != null : !PREVIOUS_EDEFAULT.equals(previous);
+		case Execution_metamodelPackage.ESTEP__NEXT:
+			return NEXT_EDEFAULT == null ? next != null : !NEXT_EDEFAULT.equals(next);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -1021,6 +1127,10 @@ public abstract class EStepImpl extends MinimalEObjectImpl.Container implements 
 		result.append(executedById);
 		result.append(", name: ");
 		result.append(name);
+		result.append(", previous: ");
+		result.append(previous);
+		result.append(", next: ");
+		result.append(next);
 		result.append(')');
 		return result.toString();
 	}

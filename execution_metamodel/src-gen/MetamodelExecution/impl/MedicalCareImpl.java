@@ -2,8 +2,8 @@
  */
 package MetamodelExecution.impl;
 
-import MetamodelExecution.Attendance;
 import MetamodelExecution.Execution_metamodelPackage;
+import MetamodelExecution.MedicalCare;
 
 import org.eclipse.emf.common.notify.Notification;
 
@@ -14,43 +14,44 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Attendance</b></em>'.
+ * An implementation of the model object '<em><b>Medical Care</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link MetamodelExecution.impl.AttendanceImpl#getCodeAttendance <em>Code Attendance</em>}</li>
- *   <li>{@link MetamodelExecution.impl.AttendanceImpl#getPacient <em>Pacient</em>}</li>
- *   <li>{@link MetamodelExecution.impl.AttendanceImpl#getProfessional <em>Professional</em>}</li>
- *   <li>{@link MetamodelExecution.impl.AttendanceImpl#getIdProfessional <em>Id Professional</em>}</li>
- *   <li>{@link MetamodelExecution.impl.AttendanceImpl#getHospitalUnit <em>Hospital Unit</em>}</li>
- *   <li>{@link MetamodelExecution.impl.AttendanceImpl#getPatientRecord <em>Patient Record</em>}</li>
- *   <li>{@link MetamodelExecution.impl.AttendanceImpl#getCodeBd <em>Code Bd</em>}</li>
+ *   <li>{@link MetamodelExecution.impl.MedicalCareImpl#getCodeMedicalCare <em>Code Medical Care</em>}</li>
+ *   <li>{@link MetamodelExecution.impl.MedicalCareImpl#getPacient <em>Pacient</em>}</li>
+ *   <li>{@link MetamodelExecution.impl.MedicalCareImpl#getProfessional <em>Professional</em>}</li>
+ *   <li>{@link MetamodelExecution.impl.MedicalCareImpl#getIdProfessional <em>Id Professional</em>}</li>
+ *   <li>{@link MetamodelExecution.impl.MedicalCareImpl#getHospitalUnit <em>Hospital Unit</em>}</li>
+ *   <li>{@link MetamodelExecution.impl.MedicalCareImpl#getPatientRecord <em>Patient Record</em>}</li>
+ *   <li>{@link MetamodelExecution.impl.MedicalCareImpl#getAge <em>Age</em>}</li>
+ *   <li>{@link MetamodelExecution.impl.MedicalCareImpl#getSex <em>Sex</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class AttendanceImpl extends MinimalEObjectImpl.Container implements Attendance {
+public class MedicalCareImpl extends MinimalEObjectImpl.Container implements MedicalCare {
 	/**
-	 * The default value of the '{@link #getCodeAttendance() <em>Code Attendance</em>}' attribute.
+	 * The default value of the '{@link #getCodeMedicalCare() <em>Code Medical Care</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getCodeAttendance()
+	 * @see #getCodeMedicalCare()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final int CODE_ATTENDANCE_EDEFAULT = 0;
+	protected static final int CODE_MEDICAL_CARE_EDEFAULT = 0;
 
 	/**
-	 * The cached value of the '{@link #getCodeAttendance() <em>Code Attendance</em>}' attribute.
+	 * The cached value of the '{@link #getCodeMedicalCare() <em>Code Medical Care</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getCodeAttendance()
+	 * @see #getCodeMedicalCare()
 	 * @generated
 	 * @ordered
 	 */
-	protected int codeAttendance = CODE_ATTENDANCE_EDEFAULT;
+	protected int codeMedicalCare = CODE_MEDICAL_CARE_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getPacient() <em>Pacient</em>}' attribute.
@@ -153,31 +154,51 @@ public class AttendanceImpl extends MinimalEObjectImpl.Container implements Atte
 	protected String patientRecord = PATIENT_RECORD_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getCodeBd() <em>Code Bd</em>}' attribute.
+	 * The default value of the '{@link #getAge() <em>Age</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getCodeBd()
+	 * @see #getAge()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String CODE_BD_EDEFAULT = null;
+	protected static final int AGE_EDEFAULT = 0;
 
 	/**
-	 * The cached value of the '{@link #getCodeBd() <em>Code Bd</em>}' attribute.
+	 * The cached value of the '{@link #getAge() <em>Age</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getCodeBd()
+	 * @see #getAge()
 	 * @generated
 	 * @ordered
 	 */
-	protected String codeBd = CODE_BD_EDEFAULT;
+	protected int age = AGE_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getSex() <em>Sex</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getSex()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String SEX_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getSex() <em>Sex</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getSex()
+	 * @generated
+	 * @ordered
+	 */
+	protected String sex = SEX_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected AttendanceImpl() {
+	protected MedicalCareImpl() {
 		super();
 	}
 
@@ -188,7 +209,7 @@ public class AttendanceImpl extends MinimalEObjectImpl.Container implements Atte
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Execution_metamodelPackage.Literals.ATTENDANCE;
+		return Execution_metamodelPackage.Literals.MEDICAL_CARE;
 	}
 
 	/**
@@ -196,8 +217,8 @@ public class AttendanceImpl extends MinimalEObjectImpl.Container implements Atte
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public int getCodeAttendance() {
-		return codeAttendance;
+	public int getCodeMedicalCare() {
+		return codeMedicalCare;
 	}
 
 	/**
@@ -205,12 +226,12 @@ public class AttendanceImpl extends MinimalEObjectImpl.Container implements Atte
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setCodeAttendance(int newCodeAttendance) {
-		int oldCodeAttendance = codeAttendance;
-		codeAttendance = newCodeAttendance;
+	public void setCodeMedicalCare(int newCodeMedicalCare) {
+		int oldCodeMedicalCare = codeMedicalCare;
+		codeMedicalCare = newCodeMedicalCare;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET,
-					Execution_metamodelPackage.ATTENDANCE__CODE_ATTENDANCE, oldCodeAttendance, codeAttendance));
+					Execution_metamodelPackage.MEDICAL_CARE__CODE_MEDICAL_CARE, oldCodeMedicalCare, codeMedicalCare));
 	}
 
 	/**
@@ -231,7 +252,7 @@ public class AttendanceImpl extends MinimalEObjectImpl.Container implements Atte
 		String oldPacient = pacient;
 		pacient = newPacient;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.ATTENDANCE__PACIENT,
+			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.MEDICAL_CARE__PACIENT,
 					oldPacient, pacient));
 	}
 
@@ -253,7 +274,7 @@ public class AttendanceImpl extends MinimalEObjectImpl.Container implements Atte
 		String oldProfessional = professional;
 		professional = newProfessional;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.ATTENDANCE__PROFESSIONAL,
+			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.MEDICAL_CARE__PROFESSIONAL,
 					oldProfessional, professional));
 	}
 
@@ -276,7 +297,7 @@ public class AttendanceImpl extends MinimalEObjectImpl.Container implements Atte
 		idProfessional = newIdProfessional;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET,
-					Execution_metamodelPackage.ATTENDANCE__ID_PROFESSIONAL, oldIdProfessional, idProfessional));
+					Execution_metamodelPackage.MEDICAL_CARE__ID_PROFESSIONAL, oldIdProfessional, idProfessional));
 	}
 
 	/**
@@ -297,8 +318,8 @@ public class AttendanceImpl extends MinimalEObjectImpl.Container implements Atte
 		String oldHospitalUnit = hospitalUnit;
 		hospitalUnit = newHospitalUnit;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.ATTENDANCE__HOSPITAL_UNIT,
-					oldHospitalUnit, hospitalUnit));
+			eNotify(new ENotificationImpl(this, Notification.SET,
+					Execution_metamodelPackage.MEDICAL_CARE__HOSPITAL_UNIT, oldHospitalUnit, hospitalUnit));
 	}
 
 	/**
@@ -319,8 +340,8 @@ public class AttendanceImpl extends MinimalEObjectImpl.Container implements Atte
 		String oldPatientRecord = patientRecord;
 		patientRecord = newPatientRecord;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.ATTENDANCE__PATIENT_RECORD,
-					oldPatientRecord, patientRecord));
+			eNotify(new ENotificationImpl(this, Notification.SET,
+					Execution_metamodelPackage.MEDICAL_CARE__PATIENT_RECORD, oldPatientRecord, patientRecord));
 	}
 
 	/**
@@ -328,8 +349,8 @@ public class AttendanceImpl extends MinimalEObjectImpl.Container implements Atte
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getCodeBd() {
-		return codeBd;
+	public int getAge() {
+		return age;
 	}
 
 	/**
@@ -337,12 +358,34 @@ public class AttendanceImpl extends MinimalEObjectImpl.Container implements Atte
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setCodeBd(String newCodeBd) {
-		String oldCodeBd = codeBd;
-		codeBd = newCodeBd;
+	public void setAge(int newAge) {
+		int oldAge = age;
+		age = newAge;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.ATTENDANCE__CODE_BD,
-					oldCodeBd, codeBd));
+			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.MEDICAL_CARE__AGE, oldAge,
+					age));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getSex() {
+		return sex;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setSex(String newSex) {
+		String oldSex = sex;
+		sex = newSex;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.MEDICAL_CARE__SEX, oldSex,
+					sex));
 	}
 
 	/**
@@ -353,20 +396,22 @@ public class AttendanceImpl extends MinimalEObjectImpl.Container implements Atte
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case Execution_metamodelPackage.ATTENDANCE__CODE_ATTENDANCE:
-			return getCodeAttendance();
-		case Execution_metamodelPackage.ATTENDANCE__PACIENT:
+		case Execution_metamodelPackage.MEDICAL_CARE__CODE_MEDICAL_CARE:
+			return getCodeMedicalCare();
+		case Execution_metamodelPackage.MEDICAL_CARE__PACIENT:
 			return getPacient();
-		case Execution_metamodelPackage.ATTENDANCE__PROFESSIONAL:
+		case Execution_metamodelPackage.MEDICAL_CARE__PROFESSIONAL:
 			return getProfessional();
-		case Execution_metamodelPackage.ATTENDANCE__ID_PROFESSIONAL:
+		case Execution_metamodelPackage.MEDICAL_CARE__ID_PROFESSIONAL:
 			return getIdProfessional();
-		case Execution_metamodelPackage.ATTENDANCE__HOSPITAL_UNIT:
+		case Execution_metamodelPackage.MEDICAL_CARE__HOSPITAL_UNIT:
 			return getHospitalUnit();
-		case Execution_metamodelPackage.ATTENDANCE__PATIENT_RECORD:
+		case Execution_metamodelPackage.MEDICAL_CARE__PATIENT_RECORD:
 			return getPatientRecord();
-		case Execution_metamodelPackage.ATTENDANCE__CODE_BD:
-			return getCodeBd();
+		case Execution_metamodelPackage.MEDICAL_CARE__AGE:
+			return getAge();
+		case Execution_metamodelPackage.MEDICAL_CARE__SEX:
+			return getSex();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -379,26 +424,29 @@ public class AttendanceImpl extends MinimalEObjectImpl.Container implements Atte
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case Execution_metamodelPackage.ATTENDANCE__CODE_ATTENDANCE:
-			setCodeAttendance((Integer) newValue);
+		case Execution_metamodelPackage.MEDICAL_CARE__CODE_MEDICAL_CARE:
+			setCodeMedicalCare((Integer) newValue);
 			return;
-		case Execution_metamodelPackage.ATTENDANCE__PACIENT:
+		case Execution_metamodelPackage.MEDICAL_CARE__PACIENT:
 			setPacient((String) newValue);
 			return;
-		case Execution_metamodelPackage.ATTENDANCE__PROFESSIONAL:
+		case Execution_metamodelPackage.MEDICAL_CARE__PROFESSIONAL:
 			setProfessional((String) newValue);
 			return;
-		case Execution_metamodelPackage.ATTENDANCE__ID_PROFESSIONAL:
+		case Execution_metamodelPackage.MEDICAL_CARE__ID_PROFESSIONAL:
 			setIdProfessional((Integer) newValue);
 			return;
-		case Execution_metamodelPackage.ATTENDANCE__HOSPITAL_UNIT:
+		case Execution_metamodelPackage.MEDICAL_CARE__HOSPITAL_UNIT:
 			setHospitalUnit((String) newValue);
 			return;
-		case Execution_metamodelPackage.ATTENDANCE__PATIENT_RECORD:
+		case Execution_metamodelPackage.MEDICAL_CARE__PATIENT_RECORD:
 			setPatientRecord((String) newValue);
 			return;
-		case Execution_metamodelPackage.ATTENDANCE__CODE_BD:
-			setCodeBd((String) newValue);
+		case Execution_metamodelPackage.MEDICAL_CARE__AGE:
+			setAge((Integer) newValue);
+			return;
+		case Execution_metamodelPackage.MEDICAL_CARE__SEX:
+			setSex((String) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -412,26 +460,29 @@ public class AttendanceImpl extends MinimalEObjectImpl.Container implements Atte
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case Execution_metamodelPackage.ATTENDANCE__CODE_ATTENDANCE:
-			setCodeAttendance(CODE_ATTENDANCE_EDEFAULT);
+		case Execution_metamodelPackage.MEDICAL_CARE__CODE_MEDICAL_CARE:
+			setCodeMedicalCare(CODE_MEDICAL_CARE_EDEFAULT);
 			return;
-		case Execution_metamodelPackage.ATTENDANCE__PACIENT:
+		case Execution_metamodelPackage.MEDICAL_CARE__PACIENT:
 			setPacient(PACIENT_EDEFAULT);
 			return;
-		case Execution_metamodelPackage.ATTENDANCE__PROFESSIONAL:
+		case Execution_metamodelPackage.MEDICAL_CARE__PROFESSIONAL:
 			setProfessional(PROFESSIONAL_EDEFAULT);
 			return;
-		case Execution_metamodelPackage.ATTENDANCE__ID_PROFESSIONAL:
+		case Execution_metamodelPackage.MEDICAL_CARE__ID_PROFESSIONAL:
 			setIdProfessional(ID_PROFESSIONAL_EDEFAULT);
 			return;
-		case Execution_metamodelPackage.ATTENDANCE__HOSPITAL_UNIT:
+		case Execution_metamodelPackage.MEDICAL_CARE__HOSPITAL_UNIT:
 			setHospitalUnit(HOSPITAL_UNIT_EDEFAULT);
 			return;
-		case Execution_metamodelPackage.ATTENDANCE__PATIENT_RECORD:
+		case Execution_metamodelPackage.MEDICAL_CARE__PATIENT_RECORD:
 			setPatientRecord(PATIENT_RECORD_EDEFAULT);
 			return;
-		case Execution_metamodelPackage.ATTENDANCE__CODE_BD:
-			setCodeBd(CODE_BD_EDEFAULT);
+		case Execution_metamodelPackage.MEDICAL_CARE__AGE:
+			setAge(AGE_EDEFAULT);
+			return;
+		case Execution_metamodelPackage.MEDICAL_CARE__SEX:
+			setSex(SEX_EDEFAULT);
 			return;
 		}
 		super.eUnset(featureID);
@@ -445,21 +496,23 @@ public class AttendanceImpl extends MinimalEObjectImpl.Container implements Atte
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case Execution_metamodelPackage.ATTENDANCE__CODE_ATTENDANCE:
-			return codeAttendance != CODE_ATTENDANCE_EDEFAULT;
-		case Execution_metamodelPackage.ATTENDANCE__PACIENT:
+		case Execution_metamodelPackage.MEDICAL_CARE__CODE_MEDICAL_CARE:
+			return codeMedicalCare != CODE_MEDICAL_CARE_EDEFAULT;
+		case Execution_metamodelPackage.MEDICAL_CARE__PACIENT:
 			return PACIENT_EDEFAULT == null ? pacient != null : !PACIENT_EDEFAULT.equals(pacient);
-		case Execution_metamodelPackage.ATTENDANCE__PROFESSIONAL:
+		case Execution_metamodelPackage.MEDICAL_CARE__PROFESSIONAL:
 			return PROFESSIONAL_EDEFAULT == null ? professional != null : !PROFESSIONAL_EDEFAULT.equals(professional);
-		case Execution_metamodelPackage.ATTENDANCE__ID_PROFESSIONAL:
+		case Execution_metamodelPackage.MEDICAL_CARE__ID_PROFESSIONAL:
 			return idProfessional != ID_PROFESSIONAL_EDEFAULT;
-		case Execution_metamodelPackage.ATTENDANCE__HOSPITAL_UNIT:
+		case Execution_metamodelPackage.MEDICAL_CARE__HOSPITAL_UNIT:
 			return HOSPITAL_UNIT_EDEFAULT == null ? hospitalUnit != null : !HOSPITAL_UNIT_EDEFAULT.equals(hospitalUnit);
-		case Execution_metamodelPackage.ATTENDANCE__PATIENT_RECORD:
+		case Execution_metamodelPackage.MEDICAL_CARE__PATIENT_RECORD:
 			return PATIENT_RECORD_EDEFAULT == null ? patientRecord != null
 					: !PATIENT_RECORD_EDEFAULT.equals(patientRecord);
-		case Execution_metamodelPackage.ATTENDANCE__CODE_BD:
-			return CODE_BD_EDEFAULT == null ? codeBd != null : !CODE_BD_EDEFAULT.equals(codeBd);
+		case Execution_metamodelPackage.MEDICAL_CARE__AGE:
+			return age != AGE_EDEFAULT;
+		case Execution_metamodelPackage.MEDICAL_CARE__SEX:
+			return SEX_EDEFAULT == null ? sex != null : !SEX_EDEFAULT.equals(sex);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -475,8 +528,8 @@ public class AttendanceImpl extends MinimalEObjectImpl.Container implements Atte
 			return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (codeAttendance: ");
-		result.append(codeAttendance);
+		result.append(" (codeMedicalCare: ");
+		result.append(codeMedicalCare);
 		result.append(", pacient: ");
 		result.append(pacient);
 		result.append(", professional: ");
@@ -487,10 +540,12 @@ public class AttendanceImpl extends MinimalEObjectImpl.Container implements Atte
 		result.append(hospitalUnit);
 		result.append(", patientRecord: ");
 		result.append(patientRecord);
-		result.append(", codeBd: ");
-		result.append(codeBd);
+		result.append(", age: ");
+		result.append(age);
+		result.append(", sex: ");
+		result.append(sex);
 		result.append(')');
 		return result.toString();
 	}
 
-} //AttendanceImpl
+} //MedicalCareImpl
