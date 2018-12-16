@@ -17,6 +17,8 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link MetamodelExecution.Question#getText <em>Text</em>}</li>
  *   <li>{@link MetamodelExecution.Question#getVariable <em>Variable</em>}</li>
  *   <li>{@link MetamodelExecution.Question#getCategory <em>Category</em>}</li>
+ *   <li>{@link MetamodelExecution.Question#getOrder <em>Order</em>}</li>
+ *   <li>{@link MetamodelExecution.Question#isNotApplied <em>Not Applied</em>}</li>
  * </ul>
  *
  * @see MetamodelExecution.Execution_metamodelPackage#getQuestion()
@@ -127,5 +129,57 @@ public interface Question extends EObject {
 	 * @generated
 	 */
 	void setCategory(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Order</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Order</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Order</em>' attribute.
+	 * @see #setOrder(int)
+	 * @see MetamodelExecution.Execution_metamodelPackage#getQuestion_Order()
+	 * @model
+	 * @generated
+	 */
+	int getOrder();
+
+	/**
+	 * Sets the value of the '{@link MetamodelExecution.Question#getOrder <em>Order</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Order</em>' attribute.
+	 * @see #getOrder()
+	 * @generated
+	 */
+	void setOrder(int value);
+
+	/**
+	 * Returns the value of the '<em><b>Not Applied</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Not Applied</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Not Applied</em>' attribute.
+	 * @see #setNotApplied(boolean)
+	 * @see MetamodelExecution.Execution_metamodelPackage#getQuestion_NotApplied()
+	 * @model
+	 * @generated
+	 */
+	boolean isNotApplied();
+
+	/**
+	 * Sets the value of the '{@link MetamodelExecution.Question#isNotApplied <em>Not Applied</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Not Applied</em>' attribute.
+	 * @see #isNotApplied()
+	 * @generated
+	 */
+	void setNotApplied(boolean value);
 
 } // Question

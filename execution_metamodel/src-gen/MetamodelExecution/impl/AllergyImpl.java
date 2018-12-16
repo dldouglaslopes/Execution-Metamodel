@@ -2,7 +2,7 @@
  */
 package MetamodelExecution.impl;
 
-import MetamodelExecution.Bond;
+import MetamodelExecution.Allergy;
 import MetamodelExecution.Execution_metamodelPackage;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -10,69 +10,68 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Bond</b></em>'.
+ * An implementation of the model object '<em><b>Allergy</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link MetamodelExecution.impl.BondImpl#getType <em>Type</em>}</li>
- *   <li>{@link MetamodelExecution.impl.BondImpl#getIdBond <em>Id Bond</em>}</li>
+ *   <li>{@link MetamodelExecution.impl.AllergyImpl#getName <em>Name</em>}</li>
+ *   <li>{@link MetamodelExecution.impl.AllergyImpl#getId <em>Id</em>}</li>
  * </ul>
  *
  * @generated
  */
-public abstract class BondImpl extends MinimalEObjectImpl.Container implements Bond {
+public class AllergyImpl extends BondImpl implements Allergy {
 	/**
-	 * The default value of the '{@link #getType() <em>Type</em>}' attribute.
+	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getType()
+	 * @see #getName()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String TYPE_EDEFAULT = null;
+	protected static final String NAME_EDEFAULT = null;
 
 	/**
-	 * The cached value of the '{@link #getType() <em>Type</em>}' attribute.
+	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getType()
+	 * @see #getName()
 	 * @generated
 	 * @ordered
 	 */
-	protected String type = TYPE_EDEFAULT;
+	protected String name = NAME_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getIdBond() <em>Id Bond</em>}' attribute.
+	 * The default value of the '{@link #getId() <em>Id</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getIdBond()
+	 * @see #getId()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final int ID_BOND_EDEFAULT = 0;
+	protected static final int ID_EDEFAULT = 0;
 
 	/**
-	 * The cached value of the '{@link #getIdBond() <em>Id Bond</em>}' attribute.
+	 * The cached value of the '{@link #getId() <em>Id</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getIdBond()
+	 * @see #getId()
 	 * @generated
 	 * @ordered
 	 */
-	protected int idBond = ID_BOND_EDEFAULT;
+	protected int id = ID_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected BondImpl() {
+	protected AllergyImpl() {
 		super();
 	}
 
@@ -83,7 +82,7 @@ public abstract class BondImpl extends MinimalEObjectImpl.Container implements B
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Execution_metamodelPackage.Literals.BOND;
+		return Execution_metamodelPackage.Literals.ALLERGY;
 	}
 
 	/**
@@ -91,8 +90,8 @@ public abstract class BondImpl extends MinimalEObjectImpl.Container implements B
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getType() {
-		return type;
+	public String getName() {
+		return name;
 	}
 
 	/**
@@ -100,12 +99,12 @@ public abstract class BondImpl extends MinimalEObjectImpl.Container implements B
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setType(String newType) {
-		String oldType = type;
-		type = newType;
+	public void setName(String newName) {
+		String oldName = name;
+		name = newName;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.BOND__TYPE, oldType,
-					type));
+			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.ALLERGY__NAME, oldName,
+					name));
 	}
 
 	/**
@@ -113,8 +112,8 @@ public abstract class BondImpl extends MinimalEObjectImpl.Container implements B
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public int getIdBond() {
-		return idBond;
+	public int getId() {
+		return id;
 	}
 
 	/**
@@ -122,12 +121,11 @@ public abstract class BondImpl extends MinimalEObjectImpl.Container implements B
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setIdBond(int newIdBond) {
-		int oldIdBond = idBond;
-		idBond = newIdBond;
+	public void setId(int newId) {
+		int oldId = id;
+		id = newId;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.BOND__ID_BOND, oldIdBond,
-					idBond));
+			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.ALLERGY__ID, oldId, id));
 	}
 
 	/**
@@ -138,10 +136,10 @@ public abstract class BondImpl extends MinimalEObjectImpl.Container implements B
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case Execution_metamodelPackage.BOND__TYPE:
-			return getType();
-		case Execution_metamodelPackage.BOND__ID_BOND:
-			return getIdBond();
+		case Execution_metamodelPackage.ALLERGY__NAME:
+			return getName();
+		case Execution_metamodelPackage.ALLERGY__ID:
+			return getId();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -154,11 +152,11 @@ public abstract class BondImpl extends MinimalEObjectImpl.Container implements B
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case Execution_metamodelPackage.BOND__TYPE:
-			setType((String) newValue);
+		case Execution_metamodelPackage.ALLERGY__NAME:
+			setName((String) newValue);
 			return;
-		case Execution_metamodelPackage.BOND__ID_BOND:
-			setIdBond((Integer) newValue);
+		case Execution_metamodelPackage.ALLERGY__ID:
+			setId((Integer) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -172,11 +170,11 @@ public abstract class BondImpl extends MinimalEObjectImpl.Container implements B
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case Execution_metamodelPackage.BOND__TYPE:
-			setType(TYPE_EDEFAULT);
+		case Execution_metamodelPackage.ALLERGY__NAME:
+			setName(NAME_EDEFAULT);
 			return;
-		case Execution_metamodelPackage.BOND__ID_BOND:
-			setIdBond(ID_BOND_EDEFAULT);
+		case Execution_metamodelPackage.ALLERGY__ID:
+			setId(ID_EDEFAULT);
 			return;
 		}
 		super.eUnset(featureID);
@@ -190,10 +188,10 @@ public abstract class BondImpl extends MinimalEObjectImpl.Container implements B
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case Execution_metamodelPackage.BOND__TYPE:
-			return TYPE_EDEFAULT == null ? type != null : !TYPE_EDEFAULT.equals(type);
-		case Execution_metamodelPackage.BOND__ID_BOND:
-			return idBond != ID_BOND_EDEFAULT;
+		case Execution_metamodelPackage.ALLERGY__NAME:
+			return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+		case Execution_metamodelPackage.ALLERGY__ID:
+			return id != ID_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -209,12 +207,12 @@ public abstract class BondImpl extends MinimalEObjectImpl.Container implements B
 			return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (type: ");
-		result.append(type);
-		result.append(", idBond: ");
-		result.append(idBond);
+		result.append(" (name: ");
+		result.append(name);
+		result.append(", id: ");
+		result.append(id);
 		result.append(')');
 		return result.toString();
 	}
 
-} //BondImpl
+} //AllergyImpl

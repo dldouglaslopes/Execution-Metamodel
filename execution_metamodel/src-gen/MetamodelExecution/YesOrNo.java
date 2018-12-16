@@ -18,7 +18,7 @@ package MetamodelExecution;
  * @model
  * @generated
  */
-public interface YesOrNo extends Value {
+public interface YesOrNo extends UnitValue {
 	/**
 	 * Returns the value of the '<em><b>Value</b></em>' attribute.
 	 * <!-- begin-user-doc -->

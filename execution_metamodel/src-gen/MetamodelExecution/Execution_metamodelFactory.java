@@ -292,15 +292,6 @@ public interface Execution_metamodelFactory extends EFactory {
 	Access createAccess();
 
 	/**
-	 * Returns a new object of class '<em>Bond</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Bond</em>'.
-	 * @generated
-	 */
-	Bond createBond();
-
-	/**
 	 * Returns a new object of class '<em>EAction</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -470,6 +461,42 @@ public interface Execution_metamodelFactory extends EFactory {
 	 * @generated
 	 */
 	Standard createStandard();
+
+	/**
+	 * Returns a new object of class '<em>Allergy</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Allergy</em>'.
+	 * @generated
+	 */
+	Allergy createAllergy();
+
+	/**
+	 * Returns a new object of class '<em>Vital Sign</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Vital Sign</em>'.
+	 * @generated
+	 */
+	VitalSign createVitalSign();
+
+	/**
+	 * Returns a new object of class '<em>Patient Age</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Patient Age</em>'.
+	 * @generated
+	 */
+	PatientAge createPatientAge();
+
+	/**
+	 * Returns a new object of class '<em>Patient Sex</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Patient Sex</em>'.
+	 * @generated
+	 */
+	PatientSex createPatientSex();
 
 	/**
 	 * Returns a new object of class '<em>Option</em>'.

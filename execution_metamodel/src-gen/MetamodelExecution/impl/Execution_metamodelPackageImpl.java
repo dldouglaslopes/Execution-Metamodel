@@ -3,6 +3,7 @@
 package MetamodelExecution.impl;
 
 import MetamodelExecution.Access;
+import MetamodelExecution.Allergy;
 import MetamodelExecution.Answer;
 import MetamodelExecution.Audit;
 import MetamodelExecution.Bond;
@@ -40,6 +41,8 @@ import MetamodelExecution.Notification;
 import MetamodelExecution.Numeric;
 import MetamodelExecution.Option;
 import MetamodelExecution.Pathway;
+import MetamodelExecution.PatientAge;
+import MetamodelExecution.PatientSex;
 import MetamodelExecution.PrescribedExamination;
 import MetamodelExecution.PrescribedInternment;
 import MetamodelExecution.PrescribedMedication;
@@ -56,9 +59,11 @@ import MetamodelExecution.Standard;
 import MetamodelExecution.Step;
 import MetamodelExecution.Suspension;
 import MetamodelExecution.Unit;
+import MetamodelExecution.UnitValue;
 import MetamodelExecution.User;
 import MetamodelExecution.Value;
 import MetamodelExecution.Variable;
+import MetamodelExecution.VitalSign;
 import MetamodelExecution.YesOrNo;
 
 import org.eclipse.emf.ecore.EAttribute;
@@ -199,7 +204,7 @@ public class Execution_metamodelPackageImpl extends EPackageImpl implements Exec
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass valueEClass = null;
+	private EClass unitValueEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -305,13 +310,6 @@ public class Execution_metamodelPackageImpl extends EPackageImpl implements Exec
 	 * @generated
 	 */
 	private EClass accessEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass bondEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -465,7 +463,49 @@ public class Execution_metamodelPackageImpl extends EPackageImpl implements Exec
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	private EClass allergyEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass vitalSignEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass patientAgeEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass patientSexEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass bondEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	private EClass optionEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass valueEClass = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -1328,8 +1368,8 @@ public class Execution_metamodelPackageImpl extends EPackageImpl implements Exec
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getValue() {
-		return valueEClass;
+	public EClass getUnitValue() {
+		return unitValueEClass;
 	}
 
 	/**
@@ -1364,7 +1404,7 @@ public class Execution_metamodelPackageImpl extends EPackageImpl implements Exec
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getAnswer_Value() {
+	public EReference getAnswer_Question() {
 		return (EReference) answerEClass.getEStructuralFeatures().get(2);
 	}
 
@@ -1373,8 +1413,17 @@ public class Execution_metamodelPackageImpl extends EPackageImpl implements Exec
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getAnswer_Question() {
-		return (EReference) answerEClass.getEStructuralFeatures().get(3);
+	public EAttribute getAnswer_Justification() {
+		return (EAttribute) answerEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getAnswer_Unitvalue() {
+		return (EReference) answerEClass.getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -1895,6 +1944,24 @@ public class Execution_metamodelPackageImpl extends EPackageImpl implements Exec
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getQuestion_Order() {
+		return (EAttribute) questionEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getQuestion_NotApplied() {
+		return (EAttribute) questionEClass.getEStructuralFeatures().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getVariable() {
 		return variableEClass;
 	}
@@ -1940,8 +2007,8 @@ public class Execution_metamodelPackageImpl extends EPackageImpl implements Exec
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getVariable_Value() {
-		return (EReference) variableEClass.getEStructuralFeatures().get(4);
+	public EAttribute getVariable_Unit() {
+		return (EAttribute) variableEClass.getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -1958,8 +2025,8 @@ public class Execution_metamodelPackageImpl extends EPackageImpl implements Exec
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getVariable_Unit() {
-		return (EAttribute) variableEClass.getEStructuralFeatures().get(6);
+	public EReference getVariable_Value() {
+		return (EReference) variableEClass.getEStructuralFeatures().get(6);
 	}
 
 	/**
@@ -2185,42 +2252,6 @@ public class Execution_metamodelPackageImpl extends EPackageImpl implements Exec
 	 */
 	public EAttribute getAccess_Code() {
 		return (EAttribute) accessEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getBond() {
-		return bondEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getBond_Id() {
-		return (EAttribute) bondEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getBond_Type() {
-		return (EAttribute) bondEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getBond_Comorbidity() {
-		return (EReference) bondEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -2651,7 +2682,7 @@ public class Execution_metamodelPackageImpl extends EPackageImpl implements Exec
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getComorbidity_Id() {
+	public EAttribute getComorbidity_Name() {
 		return (EAttribute) comorbidityEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -2660,7 +2691,7 @@ public class Execution_metamodelPackageImpl extends EPackageImpl implements Exec
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getComorbidity_Name() {
+	public EAttribute getComorbidity_Id() {
 		return (EAttribute) comorbidityEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -3263,8 +3294,152 @@ public class Execution_metamodelPackageImpl extends EPackageImpl implements Exec
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getAllergy() {
+		return allergyEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getAllergy_Name() {
+		return (EAttribute) allergyEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getAllergy_Id() {
+		return (EAttribute) allergyEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getVitalSign() {
+		return vitalSignEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getVitalSign_Name() {
+		return (EAttribute) vitalSignEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getVitalSign_Id() {
+		return (EAttribute) vitalSignEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getPatientAge() {
+		return patientAgeEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getPatientSex() {
+		return patientSexEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getPatientSex_TruePremise() {
+		return (EAttribute) patientSexEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getBond() {
+		return bondEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getBond_Type() {
+		return (EAttribute) bondEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getBond_IdBond() {
+		return (EAttribute) bondEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getOption() {
 		return optionEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getOption_Id() {
+		return (EAttribute) optionEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getOption_Text() {
+		return (EAttribute) optionEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getOption_Weight() {
+		return (EAttribute) optionEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getValue() {
+		return valueEClass;
 	}
 
 	/**
@@ -3401,13 +3576,14 @@ public class Execution_metamodelPackageImpl extends EPackageImpl implements Exec
 		createEAttribute(userEClass, USER__NUMBER_COUNCIL);
 		createEAttribute(userEClass, USER__STATE);
 
-		valueEClass = createEClass(VALUE);
+		unitValueEClass = createEClass(UNIT_VALUE);
 
 		answerEClass = createEClass(ANSWER);
 		createEAttribute(answerEClass, ANSWER__ID);
 		createEAttribute(answerEClass, ANSWER__TYPE);
-		createEReference(answerEClass, ANSWER__VALUE);
 		createEReference(answerEClass, ANSWER__QUESTION);
+		createEAttribute(answerEClass, ANSWER__JUSTIFICATION);
+		createEReference(answerEClass, ANSWER__UNITVALUE);
 
 		numericEClass = createEClass(NUMERIC);
 		createEAttribute(numericEClass, NUMERIC__VALUE);
@@ -3475,15 +3651,17 @@ public class Execution_metamodelPackageImpl extends EPackageImpl implements Exec
 		createEAttribute(questionEClass, QUESTION__TEXT);
 		createEReference(questionEClass, QUESTION__VARIABLE);
 		createEAttribute(questionEClass, QUESTION__CATEGORY);
+		createEAttribute(questionEClass, QUESTION__ORDER);
+		createEAttribute(questionEClass, QUESTION__NOT_APPLIED);
 
 		variableEClass = createEClass(VARIABLE);
 		createEAttribute(variableEClass, VARIABLE__ID);
 		createEAttribute(variableEClass, VARIABLE__TYPE);
 		createEAttribute(variableEClass, VARIABLE__NAME);
 		createEAttribute(variableEClass, VARIABLE__WEIGHT);
-		createEReference(variableEClass, VARIABLE__VALUE);
-		createEReference(variableEClass, VARIABLE__BOND);
 		createEAttribute(variableEClass, VARIABLE__UNIT);
+		createEReference(variableEClass, VARIABLE__BOND);
+		createEReference(variableEClass, VARIABLE__VALUE);
 
 		medicationEClass = createEClass(MEDICATION);
 		createEReference(medicationEClass, MEDICATION__UNIT);
@@ -3512,11 +3690,6 @@ public class Execution_metamodelPackageImpl extends EPackageImpl implements Exec
 		createEAttribute(accessEClass, ACCESS__ID);
 		createEAttribute(accessEClass, ACCESS__NAME);
 		createEAttribute(accessEClass, ACCESS__CODE);
-
-		bondEClass = createEClass(BOND);
-		createEAttribute(bondEClass, BOND__ID);
-		createEAttribute(bondEClass, BOND__TYPE);
-		createEReference(bondEClass, BOND__COMORBIDITY);
 
 		eActionEClass = createEClass(EACTION);
 		createEReference(eActionEClass, EACTION__REQUEST);
@@ -3574,8 +3747,8 @@ public class Execution_metamodelPackageImpl extends EPackageImpl implements Exec
 		createEAttribute(medicalCareEClass, MEDICAL_CARE__SEX);
 
 		comorbidityEClass = createEClass(COMORBIDITY);
-		createEAttribute(comorbidityEClass, COMORBIDITY__ID);
 		createEAttribute(comorbidityEClass, COMORBIDITY__NAME);
+		createEAttribute(comorbidityEClass, COMORBIDITY__ID);
 
 		complementaryMedicationEClass = createEClass(COMPLEMENTARY_MEDICATION);
 		createEReference(complementaryMedicationEClass, COMPLEMENTARY_MEDICATION__PRESCRIBEDRESOURCE);
@@ -3654,7 +3827,29 @@ public class Execution_metamodelPackageImpl extends EPackageImpl implements Exec
 		createEAttribute(standardEClass, STANDARD__CODE_UNIT_DOSAGE);
 		createEAttribute(standardEClass, STANDARD__ADMIN_DILUENT);
 
+		allergyEClass = createEClass(ALLERGY);
+		createEAttribute(allergyEClass, ALLERGY__NAME);
+		createEAttribute(allergyEClass, ALLERGY__ID);
+
+		vitalSignEClass = createEClass(VITAL_SIGN);
+		createEAttribute(vitalSignEClass, VITAL_SIGN__NAME);
+		createEAttribute(vitalSignEClass, VITAL_SIGN__ID);
+
+		patientAgeEClass = createEClass(PATIENT_AGE);
+
+		patientSexEClass = createEClass(PATIENT_SEX);
+		createEAttribute(patientSexEClass, PATIENT_SEX__TRUE_PREMISE);
+
+		bondEClass = createEClass(BOND);
+		createEAttribute(bondEClass, BOND__TYPE);
+		createEAttribute(bondEClass, BOND__ID_BOND);
+
 		optionEClass = createEClass(OPTION);
+		createEAttribute(optionEClass, OPTION__ID);
+		createEAttribute(optionEClass, OPTION__TEXT);
+		createEAttribute(optionEClass, OPTION__WEIGHT);
+
+		valueEClass = createEClass(VALUE);
 	}
 
 	/**
@@ -3693,8 +3888,9 @@ public class Execution_metamodelPackageImpl extends EPackageImpl implements Exec
 		ePrescriptionEClass.getESuperTypes().add(this.getEStep());
 		eTreatmentEClass.getESuperTypes().add(this.getEStep());
 		responsibleEClass.getESuperTypes().add(this.getUser());
-		numericEClass.getESuperTypes().add(this.getValue());
-		yesOrNoEClass.getESuperTypes().add(this.getValue());
+		unitValueEClass.getESuperTypes().add(this.getValue());
+		numericEClass.getESuperTypes().add(this.getUnitValue());
+		yesOrNoEClass.getESuperTypes().add(this.getUnitValue());
 		creatorEClass.getESuperTypes().add(this.getUser());
 		executorEClass.getESuperTypes().add(this.getUser());
 		lastProfessionalEClass.getESuperTypes().add(this.getUser());
@@ -3702,11 +3898,17 @@ public class Execution_metamodelPackageImpl extends EPackageImpl implements Exec
 		eActionEClass.getESuperTypes().add(this.getEStep());
 		eProcedureEClass.getESuperTypes().add(this.getEStep());
 		ePauseEClass.getESuperTypes().add(this.getEStep());
+		comorbidityEClass.getESuperTypes().add(this.getBond());
 		complementaryMedicationEClass.getESuperTypes().add(this.getComplementaryConducts());
 		complementaryProcedureEClass.getESuperTypes().add(this.getComplementaryConducts());
 		suspensionEClass.getESuperTypes().add(this.getNotification());
 		complementaryExaminationEClass.getESuperTypes().add(this.getComplementaryConducts());
 		resultEClass.getESuperTypes().add(this.getNotification());
+		allergyEClass.getESuperTypes().add(this.getBond());
+		vitalSignEClass.getESuperTypes().add(this.getBond());
+		patientAgeEClass.getESuperTypes().add(this.getBond());
+		patientSexEClass.getESuperTypes().add(this.getBond());
+		optionEClass.getESuperTypes().add(this.getValue());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(eAuxiliaryConductEClass, EAuxiliaryConduct.class, "EAuxiliaryConduct", !IS_ABSTRACT, !IS_INTERFACE,
@@ -3946,17 +4148,20 @@ public class Execution_metamodelPackageImpl extends EPackageImpl implements Exec
 		initEAttribute(getUser_State(), ecorePackage.getEString(), "state", null, 0, 1, User.class, !IS_TRANSIENT,
 				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(valueEClass, Value.class, "Value", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(unitValueEClass, UnitValue.class, "UnitValue", IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(answerEClass, Answer.class, "Answer", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getAnswer_Id(), ecorePackage.getEInt(), "id", null, 0, 1, Answer.class, !IS_TRANSIENT,
 				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getAnswer_Type(), ecorePackage.getEString(), "type", null, 0, 1, Answer.class, !IS_TRANSIENT,
 				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getAnswer_Value(), this.getValue(), null, "value", null, 1, 1, Answer.class, !IS_TRANSIENT,
-				!IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED,
-				IS_ORDERED);
 		initEReference(getAnswer_Question(), this.getQuestion(), null, "question", null, 1, 1, Answer.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getAnswer_Justification(), ecorePackage.getEString(), "justification", null, 0, 1, Answer.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getAnswer_Unitvalue(), this.getUnitValue(), null, "unitvalue", null, 0, 1, Answer.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
@@ -4095,6 +4300,10 @@ public class Execution_metamodelPackageImpl extends EPackageImpl implements Exec
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getQuestion_Category(), ecorePackage.getEString(), "category", null, 0, 1, Question.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getQuestion_Order(), ecorePackage.getEInt(), "order", null, 0, 1, Question.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getQuestion_NotApplied(), ecorePackage.getEBoolean(), "notApplied", null, 0, 1, Question.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(variableEClass, Variable.class, "Variable", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
@@ -4106,14 +4315,14 @@ public class Execution_metamodelPackageImpl extends EPackageImpl implements Exec
 				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getVariable_Weight(), ecorePackage.getEDouble(), "weight", null, 0, 1, Variable.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getVariable_Value(), this.getValue(), null, "value", null, 1, 1, Variable.class, !IS_TRANSIENT,
-				!IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED,
-				IS_ORDERED);
-		initEReference(getVariable_Bond(), this.getBond(), null, "bond", null, 1, 1, Variable.class, !IS_TRANSIENT,
-				!IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED,
-				IS_ORDERED);
 		initEAttribute(getVariable_Unit(), ecorePackage.getEString(), "unit", null, 0, 1, Variable.class, !IS_TRANSIENT,
 				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getVariable_Bond(), this.getBond(), null, "bond", null, 0, 1, Variable.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED,
+				IS_ORDERED);
+		initEReference(getVariable_Value(), this.getValue(), null, "value", null, 0, -1, Variable.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED,
+				IS_ORDERED);
 
 		initEClass(medicationEClass, Medication.class, "Medication", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
@@ -4171,15 +4380,6 @@ public class Execution_metamodelPackageImpl extends EPackageImpl implements Exec
 				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getAccess_Code(), ecorePackage.getEInt(), "code", null, 0, 1, Access.class, !IS_TRANSIENT,
 				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(bondEClass, Bond.class, "Bond", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getBond_Id(), ecorePackage.getEInt(), "id", null, 0, 1, Bond.class, !IS_TRANSIENT, !IS_VOLATILE,
-				IS_CHANGEABLE, !IS_UNSETTABLE, IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getBond_Type(), ecorePackage.getEString(), "type", null, 0, 1, Bond.class, !IS_TRANSIENT,
-				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getBond_Comorbidity(), this.getComorbidity(), null, "comorbidity", null, 1, 1, Bond.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
-				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(eActionEClass, EAction.class, "EAction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getEAction_Request(), this.getRequest(), null, "request", null, 1, 1, EAction.class,
@@ -4297,10 +4497,10 @@ public class Execution_metamodelPackageImpl extends EPackageImpl implements Exec
 
 		initEClass(comorbidityEClass, Comorbidity.class, "Comorbidity", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getComorbidity_Id(), ecorePackage.getEInt(), "id", null, 0, 1, Comorbidity.class, !IS_TRANSIENT,
-				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getComorbidity_Name(), ecorePackage.getEString(), "name", null, 0, 1, Comorbidity.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getComorbidity_Id(), ecorePackage.getEInt(), "id", null, 0, 1, Comorbidity.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(complementaryMedicationEClass, ComplementaryMedication.class, "ComplementaryMedication",
 				!IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -4486,7 +4686,43 @@ public class Execution_metamodelPackageImpl extends EPackageImpl implements Exec
 				Standard.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
 				!IS_DERIVED, IS_ORDERED);
 
+		initEClass(allergyEClass, Allergy.class, "Allergy", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getAllergy_Name(), ecorePackage.getEString(), "name", null, 0, 1, Allergy.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getAllergy_Id(), ecorePackage.getEInt(), "id", null, 0, 1, Allergy.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(vitalSignEClass, VitalSign.class, "VitalSign", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getVitalSign_Name(), ecorePackage.getEString(), "name", null, 0, 1, VitalSign.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getVitalSign_Id(), ecorePackage.getEInt(), "id", null, 0, 1, VitalSign.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(patientAgeEClass, PatientAge.class, "PatientAge", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(patientSexEClass, PatientSex.class, "PatientSex", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getPatientSex_TruePremise(), ecorePackage.getEBoolean(), "truePremise", null, 0, 1,
+				PatientSex.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
+
+		initEClass(bondEClass, Bond.class, "Bond", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getBond_Type(), ecorePackage.getEString(), "type", null, 0, 1, Bond.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getBond_IdBond(), ecorePackage.getEInt(), "idBond", null, 0, 1, Bond.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
 		initEClass(optionEClass, Option.class, "Option", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getOption_Id(), ecorePackage.getEInt(), "id", null, 0, 1, Option.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getOption_Text(), ecorePackage.getEString(), "text", null, 0, 1, Option.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getOption_Weight(), ecorePackage.getEDouble(), "weight", null, 0, 1, Option.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(valueEClass, Value.class, "Value", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		// Create resource
 		createResource(eNS_URI);

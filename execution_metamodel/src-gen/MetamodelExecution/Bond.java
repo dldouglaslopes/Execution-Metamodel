@@ -13,42 +13,15 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link MetamodelExecution.Bond#getId <em>Id</em>}</li>
  *   <li>{@link MetamodelExecution.Bond#getType <em>Type</em>}</li>
- *   <li>{@link MetamodelExecution.Bond#getComorbidity <em>Comorbidity</em>}</li>
+ *   <li>{@link MetamodelExecution.Bond#getIdBond <em>Id Bond</em>}</li>
  * </ul>
  *
  * @see MetamodelExecution.Execution_metamodelPackage#getBond()
- * @model
+ * @model abstract="true"
  * @generated
  */
 public interface Bond extends EObject {
-	/**
-	 * Returns the value of the '<em><b>Id</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Id</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Id</em>' attribute.
-	 * @see #setId(int)
-	 * @see MetamodelExecution.Execution_metamodelPackage#getBond_Id()
-	 * @model id="true"
-	 * @generated
-	 */
-	int getId();
-
-	/**
-	 * Sets the value of the '{@link MetamodelExecution.Bond#getId <em>Id</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Id</em>' attribute.
-	 * @see #getId()
-	 * @generated
-	 */
-	void setId(int value);
-
 	/**
 	 * Returns the value of the '<em><b>Type</b></em>' attribute.
 	 * <!-- begin-user-doc -->
@@ -76,29 +49,29 @@ public interface Bond extends EObject {
 	void setType(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Comorbidity</b></em>' containment reference.
+	 * Returns the value of the '<em><b>Id Bond</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Comorbidity</em>' containment reference isn't clear,
+	 * If the meaning of the '<em>Id Bond</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Comorbidity</em>' containment reference.
-	 * @see #setComorbidity(Comorbidity)
-	 * @see MetamodelExecution.Execution_metamodelPackage#getBond_Comorbidity()
-	 * @model containment="true" required="true"
+	 * @return the value of the '<em>Id Bond</em>' attribute.
+	 * @see #setIdBond(int)
+	 * @see MetamodelExecution.Execution_metamodelPackage#getBond_IdBond()
+	 * @model
 	 * @generated
 	 */
-	Comorbidity getComorbidity();
+	int getIdBond();
 
 	/**
-	 * Sets the value of the '{@link MetamodelExecution.Bond#getComorbidity <em>Comorbidity</em>}' containment reference.
+	 * Sets the value of the '{@link MetamodelExecution.Bond#getIdBond <em>Id Bond</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Comorbidity</em>' containment reference.
-	 * @see #getComorbidity()
+	 * @param value the new value of the '<em>Id Bond</em>' attribute.
+	 * @see #getIdBond()
 	 * @generated
 	 */
-	void setComorbidity(Comorbidity value);
+	void setIdBond(int value);
 
 } // Bond

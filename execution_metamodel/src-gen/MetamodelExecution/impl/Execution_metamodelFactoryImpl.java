@@ -116,8 +116,6 @@ public class Execution_metamodelFactoryImpl extends EFactoryImpl implements Exec
 			return createUnit();
 		case Execution_metamodelPackage.ACCESS:
 			return createAccess();
-		case Execution_metamodelPackage.BOND:
-			return createBond();
 		case Execution_metamodelPackage.EACTION:
 			return createEAction();
 		case Execution_metamodelPackage.REQUEST:
@@ -156,6 +154,14 @@ public class Execution_metamodelFactoryImpl extends EFactoryImpl implements Exec
 			return createExaminationPrescribedResource();
 		case Execution_metamodelPackage.STANDARD:
 			return createStandard();
+		case Execution_metamodelPackage.ALLERGY:
+			return createAllergy();
+		case Execution_metamodelPackage.VITAL_SIGN:
+			return createVitalSign();
+		case Execution_metamodelPackage.PATIENT_AGE:
+			return createPatientAge();
+		case Execution_metamodelPackage.PATIENT_SEX:
+			return createPatientSex();
 		case Execution_metamodelPackage.OPTION:
 			return createOption();
 		default:
@@ -468,16 +474,6 @@ public class Execution_metamodelFactoryImpl extends EFactoryImpl implements Exec
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Bond createBond() {
-		BondImpl bond = new BondImpl();
-		return bond;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EAction createEAction() {
 		EActionImpl eAction = new EActionImpl();
 		return eAction;
@@ -661,6 +657,46 @@ public class Execution_metamodelFactoryImpl extends EFactoryImpl implements Exec
 	public Standard createStandard() {
 		StandardImpl standard = new StandardImpl();
 		return standard;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Allergy createAllergy() {
+		AllergyImpl allergy = new AllergyImpl();
+		return allergy;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public VitalSign createVitalSign() {
+		VitalSignImpl vitalSign = new VitalSignImpl();
+		return vitalSign;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public PatientAge createPatientAge() {
+		PatientAgeImpl patientAge = new PatientAgeImpl();
+		return patientAge;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public PatientSex createPatientSex() {
+		PatientSexImpl patientSex = new PatientSexImpl();
+		return patientSex;
 	}
 
 	/**

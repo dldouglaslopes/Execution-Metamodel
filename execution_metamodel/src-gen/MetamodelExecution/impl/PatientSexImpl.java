@@ -3,7 +3,7 @@
 package MetamodelExecution.impl;
 
 import MetamodelExecution.Execution_metamodelPackage;
-import MetamodelExecution.Numeric;
+import MetamodelExecution.PatientSex;
 
 import org.eclipse.emf.common.notify.Notification;
 
@@ -13,44 +13,44 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Numeric</b></em>'.
+ * An implementation of the model object '<em><b>Patient Sex</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link MetamodelExecution.impl.NumericImpl#getValue <em>Value</em>}</li>
+ *   <li>{@link MetamodelExecution.impl.PatientSexImpl#isTruePremise <em>True Premise</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class NumericImpl extends UnitValueImpl implements Numeric {
+public class PatientSexImpl extends BondImpl implements PatientSex {
 	/**
-	 * The default value of the '{@link #getValue() <em>Value</em>}' attribute.
+	 * The default value of the '{@link #isTruePremise() <em>True Premise</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getValue()
+	 * @see #isTruePremise()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final double VALUE_EDEFAULT = 0.0;
+	protected static final boolean TRUE_PREMISE_EDEFAULT = false;
 
 	/**
-	 * The cached value of the '{@link #getValue() <em>Value</em>}' attribute.
+	 * The cached value of the '{@link #isTruePremise() <em>True Premise</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getValue()
+	 * @see #isTruePremise()
 	 * @generated
 	 * @ordered
 	 */
-	protected double value = VALUE_EDEFAULT;
+	protected boolean truePremise = TRUE_PREMISE_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected NumericImpl() {
+	protected PatientSexImpl() {
 		super();
 	}
 
@@ -61,7 +61,7 @@ public class NumericImpl extends UnitValueImpl implements Numeric {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Execution_metamodelPackage.Literals.NUMERIC;
+		return Execution_metamodelPackage.Literals.PATIENT_SEX;
 	}
 
 	/**
@@ -69,8 +69,8 @@ public class NumericImpl extends UnitValueImpl implements Numeric {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public double getValue() {
-		return value;
+	public boolean isTruePremise() {
+		return truePremise;
 	}
 
 	/**
@@ -78,12 +78,12 @@ public class NumericImpl extends UnitValueImpl implements Numeric {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setValue(double newValue) {
-		double oldValue = value;
-		value = newValue;
+	public void setTruePremise(boolean newTruePremise) {
+		boolean oldTruePremise = truePremise;
+		truePremise = newTruePremise;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.NUMERIC__VALUE, oldValue,
-					value));
+			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.PATIENT_SEX__TRUE_PREMISE,
+					oldTruePremise, truePremise));
 	}
 
 	/**
@@ -94,8 +94,8 @@ public class NumericImpl extends UnitValueImpl implements Numeric {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case Execution_metamodelPackage.NUMERIC__VALUE:
-			return getValue();
+		case Execution_metamodelPackage.PATIENT_SEX__TRUE_PREMISE:
+			return isTruePremise();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -108,8 +108,8 @@ public class NumericImpl extends UnitValueImpl implements Numeric {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case Execution_metamodelPackage.NUMERIC__VALUE:
-			setValue((Double) newValue);
+		case Execution_metamodelPackage.PATIENT_SEX__TRUE_PREMISE:
+			setTruePremise((Boolean) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -123,8 +123,8 @@ public class NumericImpl extends UnitValueImpl implements Numeric {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case Execution_metamodelPackage.NUMERIC__VALUE:
-			setValue(VALUE_EDEFAULT);
+		case Execution_metamodelPackage.PATIENT_SEX__TRUE_PREMISE:
+			setTruePremise(TRUE_PREMISE_EDEFAULT);
 			return;
 		}
 		super.eUnset(featureID);
@@ -138,8 +138,8 @@ public class NumericImpl extends UnitValueImpl implements Numeric {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case Execution_metamodelPackage.NUMERIC__VALUE:
-			return value != VALUE_EDEFAULT;
+		case Execution_metamodelPackage.PATIENT_SEX__TRUE_PREMISE:
+			return truePremise != TRUE_PREMISE_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -155,10 +155,10 @@ public class NumericImpl extends UnitValueImpl implements Numeric {
 			return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (value: ");
-		result.append(value);
+		result.append(" (truePremise: ");
+		result.append(truePremise);
 		result.append(')');
 		return result.toString();
 	}
 
-} //NumericImpl
+} //PatientSexImpl

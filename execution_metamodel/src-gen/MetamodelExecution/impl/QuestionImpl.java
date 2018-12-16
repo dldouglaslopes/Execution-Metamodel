@@ -27,6 +27,8 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *   <li>{@link MetamodelExecution.impl.QuestionImpl#getText <em>Text</em>}</li>
  *   <li>{@link MetamodelExecution.impl.QuestionImpl#getVariable <em>Variable</em>}</li>
  *   <li>{@link MetamodelExecution.impl.QuestionImpl#getCategory <em>Category</em>}</li>
+ *   <li>{@link MetamodelExecution.impl.QuestionImpl#getOrder <em>Order</em>}</li>
+ *   <li>{@link MetamodelExecution.impl.QuestionImpl#isNotApplied <em>Not Applied</em>}</li>
  * </ul>
  *
  * @generated
@@ -101,6 +103,46 @@ public class QuestionImpl extends MinimalEObjectImpl.Container implements Questi
 	 * @ordered
 	 */
 	protected String category = CATEGORY_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getOrder() <em>Order</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getOrder()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final int ORDER_EDEFAULT = 0;
+
+	/**
+	 * The cached value of the '{@link #getOrder() <em>Order</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getOrder()
+	 * @generated
+	 * @ordered
+	 */
+	protected int order = ORDER_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #isNotApplied() <em>Not Applied</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isNotApplied()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final boolean NOT_APPLIED_EDEFAULT = false;
+
+	/**
+	 * The cached value of the '{@link #isNotApplied() <em>Not Applied</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isNotApplied()
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean notApplied = NOT_APPLIED_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -241,6 +283,50 @@ public class QuestionImpl extends MinimalEObjectImpl.Container implements Questi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public int getOrder() {
+		return order;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setOrder(int newOrder) {
+		int oldOrder = order;
+		order = newOrder;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.QUESTION__ORDER, oldOrder,
+					order));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean isNotApplied() {
+		return notApplied;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setNotApplied(boolean newNotApplied) {
+		boolean oldNotApplied = notApplied;
+		notApplied = newNotApplied;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.QUESTION__NOT_APPLIED,
+					oldNotApplied, notApplied));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -266,6 +352,10 @@ public class QuestionImpl extends MinimalEObjectImpl.Container implements Questi
 			return getVariable();
 		case Execution_metamodelPackage.QUESTION__CATEGORY:
 			return getCategory();
+		case Execution_metamodelPackage.QUESTION__ORDER:
+			return getOrder();
+		case Execution_metamodelPackage.QUESTION__NOT_APPLIED:
+			return isNotApplied();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -289,6 +379,12 @@ public class QuestionImpl extends MinimalEObjectImpl.Container implements Questi
 			return;
 		case Execution_metamodelPackage.QUESTION__CATEGORY:
 			setCategory((String) newValue);
+			return;
+		case Execution_metamodelPackage.QUESTION__ORDER:
+			setOrder((Integer) newValue);
+			return;
+		case Execution_metamodelPackage.QUESTION__NOT_APPLIED:
+			setNotApplied((Boolean) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -314,6 +410,12 @@ public class QuestionImpl extends MinimalEObjectImpl.Container implements Questi
 		case Execution_metamodelPackage.QUESTION__CATEGORY:
 			setCategory(CATEGORY_EDEFAULT);
 			return;
+		case Execution_metamodelPackage.QUESTION__ORDER:
+			setOrder(ORDER_EDEFAULT);
+			return;
+		case Execution_metamodelPackage.QUESTION__NOT_APPLIED:
+			setNotApplied(NOT_APPLIED_EDEFAULT);
+			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -334,6 +436,10 @@ public class QuestionImpl extends MinimalEObjectImpl.Container implements Questi
 			return variable != null;
 		case Execution_metamodelPackage.QUESTION__CATEGORY:
 			return CATEGORY_EDEFAULT == null ? category != null : !CATEGORY_EDEFAULT.equals(category);
+		case Execution_metamodelPackage.QUESTION__ORDER:
+			return order != ORDER_EDEFAULT;
+		case Execution_metamodelPackage.QUESTION__NOT_APPLIED:
+			return notApplied != NOT_APPLIED_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -355,6 +461,10 @@ public class QuestionImpl extends MinimalEObjectImpl.Container implements Questi
 		result.append(text);
 		result.append(", category: ");
 		result.append(category);
+		result.append(", order: ");
+		result.append(order);
+		result.append(", notApplied: ");
+		result.append(notApplied);
 		result.append(')');
 		return result.toString();
 	}

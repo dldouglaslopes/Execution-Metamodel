@@ -5,7 +5,7 @@ package MetamodelExecution.impl;
 import MetamodelExecution.Answer;
 import MetamodelExecution.Execution_metamodelPackage;
 import MetamodelExecution.Question;
-import MetamodelExecution.Value;
+import MetamodelExecution.UnitValue;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
@@ -26,8 +26,9 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * <ul>
  *   <li>{@link MetamodelExecution.impl.AnswerImpl#getId <em>Id</em>}</li>
  *   <li>{@link MetamodelExecution.impl.AnswerImpl#getType <em>Type</em>}</li>
- *   <li>{@link MetamodelExecution.impl.AnswerImpl#getValue <em>Value</em>}</li>
  *   <li>{@link MetamodelExecution.impl.AnswerImpl#getQuestion <em>Question</em>}</li>
+ *   <li>{@link MetamodelExecution.impl.AnswerImpl#getJustification <em>Justification</em>}</li>
+ *   <li>{@link MetamodelExecution.impl.AnswerImpl#getUnitvalue <em>Unitvalue</em>}</li>
  * </ul>
  *
  * @generated
@@ -74,16 +75,6 @@ public class AnswerImpl extends MinimalEObjectImpl.Container implements Answer {
 	protected String type = TYPE_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getValue() <em>Value</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getValue()
-	 * @generated
-	 * @ordered
-	 */
-	protected Value value;
-
-	/**
 	 * The cached value of the '{@link #getQuestion() <em>Question</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -92,6 +83,36 @@ public class AnswerImpl extends MinimalEObjectImpl.Container implements Answer {
 	 * @ordered
 	 */
 	protected Question question;
+
+	/**
+	 * The default value of the '{@link #getJustification() <em>Justification</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getJustification()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String JUSTIFICATION_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getJustification() <em>Justification</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getJustification()
+	 * @generated
+	 * @ordered
+	 */
+	protected String justification = JUSTIFICATION_EDEFAULT;
+
+	/**
+	 * The cached value of the '{@link #getUnitvalue() <em>Unitvalue</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getUnitvalue()
+	 * @generated
+	 * @ordered
+	 */
+	protected UnitValue unitvalue;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -160,56 +181,6 @@ public class AnswerImpl extends MinimalEObjectImpl.Container implements Answer {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Value getValue() {
-		return value;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public NotificationChain basicSetValue(Value newValue, NotificationChain msgs) {
-		Value oldValue = value;
-		value = newValue;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
-					Execution_metamodelPackage.ANSWER__VALUE, oldValue, newValue);
-			if (msgs == null)
-				msgs = notification;
-			else
-				msgs.add(notification);
-		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setValue(Value newValue) {
-		if (newValue != value) {
-			NotificationChain msgs = null;
-			if (value != null)
-				msgs = ((InternalEObject) value).eInverseRemove(this,
-						EOPPOSITE_FEATURE_BASE - Execution_metamodelPackage.ANSWER__VALUE, null, msgs);
-			if (newValue != null)
-				msgs = ((InternalEObject) newValue).eInverseAdd(this,
-						EOPPOSITE_FEATURE_BASE - Execution_metamodelPackage.ANSWER__VALUE, null, msgs);
-			msgs = basicSetValue(newValue, msgs);
-			if (msgs != null)
-				msgs.dispatch();
-		} else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.ANSWER__VALUE, newValue,
-					newValue));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public Question getQuestion() {
 		return question;
 	}
@@ -260,13 +231,85 @@ public class AnswerImpl extends MinimalEObjectImpl.Container implements Answer {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public String getJustification() {
+		return justification;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setJustification(String newJustification) {
+		String oldJustification = justification;
+		justification = newJustification;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.ANSWER__JUSTIFICATION,
+					oldJustification, justification));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public UnitValue getUnitvalue() {
+		return unitvalue;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetUnitvalue(UnitValue newUnitvalue, NotificationChain msgs) {
+		UnitValue oldUnitvalue = unitvalue;
+		unitvalue = newUnitvalue;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
+					Execution_metamodelPackage.ANSWER__UNITVALUE, oldUnitvalue, newUnitvalue);
+			if (msgs == null)
+				msgs = notification;
+			else
+				msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setUnitvalue(UnitValue newUnitvalue) {
+		if (newUnitvalue != unitvalue) {
+			NotificationChain msgs = null;
+			if (unitvalue != null)
+				msgs = ((InternalEObject) unitvalue).eInverseRemove(this,
+						EOPPOSITE_FEATURE_BASE - Execution_metamodelPackage.ANSWER__UNITVALUE, null, msgs);
+			if (newUnitvalue != null)
+				msgs = ((InternalEObject) newUnitvalue).eInverseAdd(this,
+						EOPPOSITE_FEATURE_BASE - Execution_metamodelPackage.ANSWER__UNITVALUE, null, msgs);
+			msgs = basicSetUnitvalue(newUnitvalue, msgs);
+			if (msgs != null)
+				msgs.dispatch();
+		} else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.ANSWER__UNITVALUE,
+					newUnitvalue, newUnitvalue));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-		case Execution_metamodelPackage.ANSWER__VALUE:
-			return basicSetValue(null, msgs);
 		case Execution_metamodelPackage.ANSWER__QUESTION:
 			return basicSetQuestion(null, msgs);
+		case Execution_metamodelPackage.ANSWER__UNITVALUE:
+			return basicSetUnitvalue(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -283,10 +326,12 @@ public class AnswerImpl extends MinimalEObjectImpl.Container implements Answer {
 			return getId();
 		case Execution_metamodelPackage.ANSWER__TYPE:
 			return getType();
-		case Execution_metamodelPackage.ANSWER__VALUE:
-			return getValue();
 		case Execution_metamodelPackage.ANSWER__QUESTION:
 			return getQuestion();
+		case Execution_metamodelPackage.ANSWER__JUSTIFICATION:
+			return getJustification();
+		case Execution_metamodelPackage.ANSWER__UNITVALUE:
+			return getUnitvalue();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -305,11 +350,14 @@ public class AnswerImpl extends MinimalEObjectImpl.Container implements Answer {
 		case Execution_metamodelPackage.ANSWER__TYPE:
 			setType((String) newValue);
 			return;
-		case Execution_metamodelPackage.ANSWER__VALUE:
-			setValue((Value) newValue);
-			return;
 		case Execution_metamodelPackage.ANSWER__QUESTION:
 			setQuestion((Question) newValue);
+			return;
+		case Execution_metamodelPackage.ANSWER__JUSTIFICATION:
+			setJustification((String) newValue);
+			return;
+		case Execution_metamodelPackage.ANSWER__UNITVALUE:
+			setUnitvalue((UnitValue) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -329,11 +377,14 @@ public class AnswerImpl extends MinimalEObjectImpl.Container implements Answer {
 		case Execution_metamodelPackage.ANSWER__TYPE:
 			setType(TYPE_EDEFAULT);
 			return;
-		case Execution_metamodelPackage.ANSWER__VALUE:
-			setValue((Value) null);
-			return;
 		case Execution_metamodelPackage.ANSWER__QUESTION:
 			setQuestion((Question) null);
+			return;
+		case Execution_metamodelPackage.ANSWER__JUSTIFICATION:
+			setJustification(JUSTIFICATION_EDEFAULT);
+			return;
+		case Execution_metamodelPackage.ANSWER__UNITVALUE:
+			setUnitvalue((UnitValue) null);
 			return;
 		}
 		super.eUnset(featureID);
@@ -351,10 +402,13 @@ public class AnswerImpl extends MinimalEObjectImpl.Container implements Answer {
 			return id != ID_EDEFAULT;
 		case Execution_metamodelPackage.ANSWER__TYPE:
 			return TYPE_EDEFAULT == null ? type != null : !TYPE_EDEFAULT.equals(type);
-		case Execution_metamodelPackage.ANSWER__VALUE:
-			return value != null;
 		case Execution_metamodelPackage.ANSWER__QUESTION:
 			return question != null;
+		case Execution_metamodelPackage.ANSWER__JUSTIFICATION:
+			return JUSTIFICATION_EDEFAULT == null ? justification != null
+					: !JUSTIFICATION_EDEFAULT.equals(justification);
+		case Execution_metamodelPackage.ANSWER__UNITVALUE:
+			return unitvalue != null;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -374,6 +428,8 @@ public class AnswerImpl extends MinimalEObjectImpl.Container implements Answer {
 		result.append(id);
 		result.append(", type: ");
 		result.append(type);
+		result.append(", justification: ");
+		result.append(justification);
 		result.append(')');
 		return result.toString();
 	}

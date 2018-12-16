@@ -24,7 +24,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *
  * @generated
  */
-public class YesOrNoImpl extends ValueImpl implements YesOrNo {
+public class YesOrNoImpl extends UnitValueImpl implements YesOrNo {
 	/**
 	 * The default value of the '{@link #isValue() <em>Value</em>}' attribute.
 	 * <!-- begin-user-doc -->

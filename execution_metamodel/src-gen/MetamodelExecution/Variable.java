@@ -2,6 +2,8 @@
  */
 package MetamodelExecution;
 
+import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -17,9 +19,9 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link MetamodelExecution.Variable#getType <em>Type</em>}</li>
  *   <li>{@link MetamodelExecution.Variable#getName <em>Name</em>}</li>
  *   <li>{@link MetamodelExecution.Variable#getWeight <em>Weight</em>}</li>
- *   <li>{@link MetamodelExecution.Variable#getValue <em>Value</em>}</li>
- *   <li>{@link MetamodelExecution.Variable#getBond <em>Bond</em>}</li>
  *   <li>{@link MetamodelExecution.Variable#getUnit <em>Unit</em>}</li>
+ *   <li>{@link MetamodelExecution.Variable#getBond <em>Bond</em>}</li>
+ *   <li>{@link MetamodelExecution.Variable#getValue <em>Value</em>}</li>
  * </ul>
  *
  * @see MetamodelExecution.Execution_metamodelPackage#getVariable()
@@ -132,58 +134,6 @@ public interface Variable extends EObject {
 	void setWeight(double value);
 
 	/**
-	 * Returns the value of the '<em><b>Value</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Value</em>' containment reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Value</em>' containment reference.
-	 * @see #setValue(Value)
-	 * @see MetamodelExecution.Execution_metamodelPackage#getVariable_Value()
-	 * @model containment="true" required="true"
-	 * @generated
-	 */
-	Value getValue();
-
-	/**
-	 * Sets the value of the '{@link MetamodelExecution.Variable#getValue <em>Value</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Value</em>' containment reference.
-	 * @see #getValue()
-	 * @generated
-	 */
-	void setValue(Value value);
-
-	/**
-	 * Returns the value of the '<em><b>Bond</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Bond</em>' containment reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Bond</em>' containment reference.
-	 * @see #setBond(Bond)
-	 * @see MetamodelExecution.Execution_metamodelPackage#getVariable_Bond()
-	 * @model containment="true" required="true"
-	 * @generated
-	 */
-	Bond getBond();
-
-	/**
-	 * Sets the value of the '{@link MetamodelExecution.Variable#getBond <em>Bond</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Bond</em>' containment reference.
-	 * @see #getBond()
-	 * @generated
-	 */
-	void setBond(Bond value);
-
-	/**
 	 * Returns the value of the '<em><b>Unit</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <p>
@@ -208,5 +158,47 @@ public interface Variable extends EObject {
 	 * @generated
 	 */
 	void setUnit(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Bond</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Bond</em>' containment reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Bond</em>' containment reference.
+	 * @see #setBond(Bond)
+	 * @see MetamodelExecution.Execution_metamodelPackage#getVariable_Bond()
+	 * @model containment="true"
+	 * @generated
+	 */
+	Bond getBond();
+
+	/**
+	 * Sets the value of the '{@link MetamodelExecution.Variable#getBond <em>Bond</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Bond</em>' containment reference.
+	 * @see #getBond()
+	 * @generated
+	 */
+	void setBond(Bond value);
+
+	/**
+	 * Returns the value of the '<em><b>Value</b></em>' containment reference list.
+	 * The list contents are of type {@link MetamodelExecution.Value}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Value</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Value</em>' containment reference list.
+	 * @see MetamodelExecution.Execution_metamodelPackage#getVariable_Value()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<Value> getValue();
 
 } // Variable

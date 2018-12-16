@@ -4,22 +4,22 @@ package MetamodelExecution;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>Comorbidity</b></em>'.
+ * A representation of the model object '<em><b>Allergy</b></em>'.
  * <!-- end-user-doc -->
  *
  * <p>
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link MetamodelExecution.Comorbidity#getName <em>Name</em>}</li>
- *   <li>{@link MetamodelExecution.Comorbidity#getId <em>Id</em>}</li>
+ *   <li>{@link MetamodelExecution.Allergy#getName <em>Name</em>}</li>
+ *   <li>{@link MetamodelExecution.Allergy#getId <em>Id</em>}</li>
  * </ul>
  *
- * @see MetamodelExecution.Execution_metamodelPackage#getComorbidity()
+ * @see MetamodelExecution.Execution_metamodelPackage#getAllergy()
  * @model
  * @generated
  */
-public interface Comorbidity extends Bond {
+public interface Allergy extends Bond {
 	/**
 	 * Returns the value of the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
@@ -30,14 +30,14 @@ public interface Comorbidity extends Bond {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Name</em>' attribute.
 	 * @see #setName(String)
-	 * @see MetamodelExecution.Execution_metamodelPackage#getComorbidity_Name()
+	 * @see MetamodelExecution.Execution_metamodelPackage#getAllergy_Name()
 	 * @model
 	 * @generated
 	 */
 	String getName();
 
 	/**
-	 * Sets the value of the '{@link MetamodelExecution.Comorbidity#getName <em>Name</em>}' attribute.
+	 * Sets the value of the '{@link MetamodelExecution.Allergy#getName <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Name</em>' attribute.
@@ -56,14 +56,14 @@ public interface Comorbidity extends Bond {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Id</em>' attribute.
 	 * @see #setId(int)
-	 * @see MetamodelExecution.Execution_metamodelPackage#getComorbidity_Id()
+	 * @see MetamodelExecution.Execution_metamodelPackage#getAllergy_Id()
 	 * @model id="true"
 	 * @generated
 	 */
 	int getId();
 
 	/**
-	 * Sets the value of the '{@link MetamodelExecution.Comorbidity#getId <em>Id</em>}' attribute.
+	 * Sets the value of the '{@link MetamodelExecution.Allergy#getId <em>Id</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Id</em>' attribute.
@@ -72,4 +72,4 @@ public interface Comorbidity extends Bond {
 	 */
 	void setId(int value);
 
-} // Comorbidity
+} // Allergy

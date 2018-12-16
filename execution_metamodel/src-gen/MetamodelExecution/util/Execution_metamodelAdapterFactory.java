@@ -152,8 +152,8 @@ public class Execution_metamodelAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
-		public Adapter caseValue(Value object) {
-			return createValueAdapter();
+		public Adapter caseUnitValue(UnitValue object) {
+			return createUnitValueAdapter();
 		}
 
 		@Override
@@ -229,11 +229,6 @@ public class Execution_metamodelAdapterFactory extends AdapterFactoryImpl {
 		@Override
 		public Adapter caseAccess(Access object) {
 			return createAccessAdapter();
-		}
-
-		@Override
-		public Adapter caseBond(Bond object) {
-			return createBondAdapter();
 		}
 
 		@Override
@@ -342,8 +337,38 @@ public class Execution_metamodelAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
+		public Adapter caseAllergy(Allergy object) {
+			return createAllergyAdapter();
+		}
+
+		@Override
+		public Adapter caseVitalSign(VitalSign object) {
+			return createVitalSignAdapter();
+		}
+
+		@Override
+		public Adapter casePatientAge(PatientAge object) {
+			return createPatientAgeAdapter();
+		}
+
+		@Override
+		public Adapter casePatientSex(PatientSex object) {
+			return createPatientSexAdapter();
+		}
+
+		@Override
+		public Adapter caseBond(Bond object) {
+			return createBondAdapter();
+		}
+
+		@Override
 		public Adapter caseOption(Option object) {
 			return createOptionAdapter();
+		}
+
+		@Override
+		public Adapter caseValue(Value object) {
+			return createValueAdapter();
 		}
 
 		@Override
@@ -604,16 +629,16 @@ public class Execution_metamodelAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link MetamodelExecution.Value <em>Value</em>}'.
+	 * Creates a new adapter for an object of class '{@link MetamodelExecution.UnitValue <em>Unit Value</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see MetamodelExecution.Value
+	 * @see MetamodelExecution.UnitValue
 	 * @generated
 	 */
-	public Adapter createValueAdapter() {
+	public Adapter createUnitValueAdapter() {
 		return null;
 	}
 
@@ -824,20 +849,6 @@ public class Execution_metamodelAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createAccessAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link MetamodelExecution.Bond <em>Bond</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see MetamodelExecution.Bond
-	 * @generated
-	 */
-	public Adapter createBondAdapter() {
 		return null;
 	}
 
@@ -1136,6 +1147,76 @@ public class Execution_metamodelAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
+	 * Creates a new adapter for an object of class '{@link MetamodelExecution.Allergy <em>Allergy</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see MetamodelExecution.Allergy
+	 * @generated
+	 */
+	public Adapter createAllergyAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link MetamodelExecution.VitalSign <em>Vital Sign</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see MetamodelExecution.VitalSign
+	 * @generated
+	 */
+	public Adapter createVitalSignAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link MetamodelExecution.PatientAge <em>Patient Age</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see MetamodelExecution.PatientAge
+	 * @generated
+	 */
+	public Adapter createPatientAgeAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link MetamodelExecution.PatientSex <em>Patient Sex</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see MetamodelExecution.PatientSex
+	 * @generated
+	 */
+	public Adapter createPatientSexAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link MetamodelExecution.Bond <em>Bond</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see MetamodelExecution.Bond
+	 * @generated
+	 */
+	public Adapter createBondAdapter() {
+		return null;
+	}
+
+	/**
 	 * Creates a new adapter for an object of class '{@link MetamodelExecution.Option <em>Option</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -1146,6 +1227,20 @@ public class Execution_metamodelAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createOptionAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link MetamodelExecution.Value <em>Value</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see MetamodelExecution.Value
+	 * @generated
+	 */
+	public Adapter createValueAdapter() {
 		return null;
 	}
 

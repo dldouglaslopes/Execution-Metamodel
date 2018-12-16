@@ -112,12 +112,13 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute execution_metamodel.ecore#//User/numberCouncil"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute execution_metamodel.ecore#//User/state"/>
     </genClasses>
-    <genClasses image="false" ecoreClass="execution_metamodel.ecore#//Value"/>
+    <genClasses image="false" ecoreClass="execution_metamodel.ecore#//UnitValue"/>
     <genClasses ecoreClass="execution_metamodel.ecore#//Answer">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute execution_metamodel.ecore#//Answer/id"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute execution_metamodel.ecore#//Answer/type"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference execution_metamodel.ecore#//Answer/value"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference execution_metamodel.ecore#//Answer/question"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute execution_metamodel.ecore#//Answer/justification"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference execution_metamodel.ecore#//Answer/unitvalue"/>
     </genClasses>
     <genClasses ecoreClass="execution_metamodel.ecore#//Numeric">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute execution_metamodel.ecore#//Numeric/value"/>
@@ -181,15 +182,17 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute execution_metamodel.ecore#//Question/text"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference execution_metamodel.ecore#//Question/variable"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute execution_metamodel.ecore#//Question/category"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute execution_metamodel.ecore#//Question/order"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute execution_metamodel.ecore#//Question/notApplied"/>
     </genClasses>
     <genClasses ecoreClass="execution_metamodel.ecore#//Variable">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute execution_metamodel.ecore#//Variable/id"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute execution_metamodel.ecore#//Variable/type"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute execution_metamodel.ecore#//Variable/name"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute execution_metamodel.ecore#//Variable/weight"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference execution_metamodel.ecore#//Variable/value"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference execution_metamodel.ecore#//Variable/bond"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute execution_metamodel.ecore#//Variable/unit"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference execution_metamodel.ecore#//Variable/bond"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference execution_metamodel.ecore#//Variable/value"/>
     </genClasses>
     <genClasses ecoreClass="execution_metamodel.ecore#//Medication">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference execution_metamodel.ecore#//Medication/unit"/>
@@ -218,11 +221,6 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute execution_metamodel.ecore#//Access/id"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute execution_metamodel.ecore#//Access/name"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute execution_metamodel.ecore#//Access/code"/>
-    </genClasses>
-    <genClasses ecoreClass="execution_metamodel.ecore#//Bond">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute execution_metamodel.ecore#//Bond/id"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute execution_metamodel.ecore#//Bond/type"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference execution_metamodel.ecore#//Bond/comorbidity"/>
     </genClasses>
     <genClasses ecoreClass="execution_metamodel.ecore#//EAction">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference execution_metamodel.ecore#//EAction/request"/>
@@ -278,8 +276,8 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute execution_metamodel.ecore#//MedicalCare/sex"/>
     </genClasses>
     <genClasses ecoreClass="execution_metamodel.ecore#//Comorbidity">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute execution_metamodel.ecore#//Comorbidity/id"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute execution_metamodel.ecore#//Comorbidity/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute execution_metamodel.ecore#//Comorbidity/id"/>
     </genClasses>
     <genClasses ecoreClass="execution_metamodel.ecore#//ComplementaryMedication">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference execution_metamodel.ecore#//ComplementaryMedication/prescribedresource"/>
@@ -356,6 +354,27 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute execution_metamodel.ecore#//Standard/codeUnitDosage"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute execution_metamodel.ecore#//Standard/adminDiluent"/>
     </genClasses>
-    <genClasses ecoreClass="execution_metamodel.ecore#//Option"/>
+    <genClasses ecoreClass="execution_metamodel.ecore#//Allergy">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute execution_metamodel.ecore#//Allergy/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute execution_metamodel.ecore#//Allergy/id"/>
+    </genClasses>
+    <genClasses ecoreClass="execution_metamodel.ecore#//VitalSign">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute execution_metamodel.ecore#//VitalSign/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute execution_metamodel.ecore#//VitalSign/id"/>
+    </genClasses>
+    <genClasses ecoreClass="execution_metamodel.ecore#//PatientAge"/>
+    <genClasses ecoreClass="execution_metamodel.ecore#//PatientSex">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute execution_metamodel.ecore#//PatientSex/truePremise"/>
+    </genClasses>
+    <genClasses ecoreClass="execution_metamodel.ecore#//Bond">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute execution_metamodel.ecore#//Bond/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute execution_metamodel.ecore#//Bond/idBond"/>
+    </genClasses>
+    <genClasses ecoreClass="execution_metamodel.ecore#//Option">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute execution_metamodel.ecore#//Option/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute execution_metamodel.ecore#//Option/text"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute execution_metamodel.ecore#//Option/weight"/>
+    </genClasses>
+    <genClasses ecoreClass="execution_metamodel.ecore#//Value"/>
   </genPackages>
 </genmodel:GenModel>
