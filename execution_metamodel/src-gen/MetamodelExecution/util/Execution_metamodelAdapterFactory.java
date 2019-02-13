@@ -102,28 +102,23 @@ public class Execution_metamodelAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
-		public Adapter casePrescribedExamination(PrescribedExamination object) {
-			return createPrescribedExaminationAdapter();
+		public Adapter casePExamination(PExamination object) {
+			return createPExaminationAdapter();
 		}
 
 		@Override
-		public Adapter caseExam(Exam object) {
-			return createExamAdapter();
+		public Adapter casePProcedure(PProcedure object) {
+			return createPProcedureAdapter();
 		}
 
 		@Override
-		public Adapter casePrescribedProcedure(PrescribedProcedure object) {
-			return createPrescribedProcedureAdapter();
+		public Adapter casePInternment(PInternment object) {
+			return createPInternmentAdapter();
 		}
 
 		@Override
-		public Adapter casePrescribedInternment(PrescribedInternment object) {
-			return createPrescribedInternmentAdapter();
-		}
-
-		@Override
-		public Adapter casePrescribedMedication(PrescribedMedication object) {
-			return createPrescribedMedicationAdapter();
+		public Adapter casePMedication(PMedication object) {
+			return createPMedicationAdapter();
 		}
 
 		@Override
@@ -132,8 +127,8 @@ public class Execution_metamodelAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
-		public Adapter casePrescribedPrescriptionItem(PrescribedPrescriptionItem object) {
-			return createPrescribedPrescriptionItemAdapter();
+		public Adapter casePPrescription(PPrescription object) {
+			return createPPrescriptionAdapter();
 		}
 
 		@Override
@@ -197,8 +192,8 @@ public class Execution_metamodelAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
-		public Adapter casePrescription(Prescription object) {
-			return createPrescriptionAdapter();
+		public Adapter casePrescriptionResult(PrescriptionResult object) {
+			return createPrescriptionResultAdapter();
 		}
 
 		@Override
@@ -219,16 +214,6 @@ public class Execution_metamodelAdapterFactory extends AdapterFactoryImpl {
 		@Override
 		public Adapter caseMedication(Medication object) {
 			return createMedicationAdapter();
-		}
-
-		@Override
-		public Adapter caseUnit(Unit object) {
-			return createUnitAdapter();
-		}
-
-		@Override
-		public Adapter caseAccess(Access object) {
-			return createAccessAdapter();
 		}
 
 		@Override
@@ -302,11 +287,6 @@ public class Execution_metamodelAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
-		public Adapter caseNotification(Notification object) {
-			return createNotificationAdapter();
-		}
-
-		@Override
 		public Adapter caseProcedurePrescribedResource(ProcedurePrescribedResource object) {
 			return createProcedurePrescribedResourceAdapter();
 		}
@@ -369,6 +349,11 @@ public class Execution_metamodelAdapterFactory extends AdapterFactoryImpl {
 		@Override
 		public Adapter caseValue(Value object) {
 			return createValueAdapter();
+		}
+
+		@Override
+		public Adapter casePrescription(Prescription object) {
+			return createPrescriptionAdapter();
 		}
 
 		@Override
@@ -489,72 +474,58 @@ public class Execution_metamodelAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link MetamodelExecution.PrescribedExamination <em>Prescribed Examination</em>}'.
+	 * Creates a new adapter for an object of class '{@link MetamodelExecution.PExamination <em>PExamination</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see MetamodelExecution.PrescribedExamination
+	 * @see MetamodelExecution.PExamination
 	 * @generated
 	 */
-	public Adapter createPrescribedExaminationAdapter() {
+	public Adapter createPExaminationAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link MetamodelExecution.Exam <em>Exam</em>}'.
+	 * Creates a new adapter for an object of class '{@link MetamodelExecution.PProcedure <em>PProcedure</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see MetamodelExecution.Exam
+	 * @see MetamodelExecution.PProcedure
 	 * @generated
 	 */
-	public Adapter createExamAdapter() {
+	public Adapter createPProcedureAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link MetamodelExecution.PrescribedProcedure <em>Prescribed Procedure</em>}'.
+	 * Creates a new adapter for an object of class '{@link MetamodelExecution.PInternment <em>PInternment</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see MetamodelExecution.PrescribedProcedure
+	 * @see MetamodelExecution.PInternment
 	 * @generated
 	 */
-	public Adapter createPrescribedProcedureAdapter() {
+	public Adapter createPInternmentAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link MetamodelExecution.PrescribedInternment <em>Prescribed Internment</em>}'.
+	 * Creates a new adapter for an object of class '{@link MetamodelExecution.PMedication <em>PMedication</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see MetamodelExecution.PrescribedInternment
+	 * @see MetamodelExecution.PMedication
 	 * @generated
 	 */
-	public Adapter createPrescribedInternmentAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link MetamodelExecution.PrescribedMedication <em>Prescribed Medication</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see MetamodelExecution.PrescribedMedication
-	 * @generated
-	 */
-	public Adapter createPrescribedMedicationAdapter() {
+	public Adapter createPMedicationAdapter() {
 		return null;
 	}
 
@@ -573,16 +544,16 @@ public class Execution_metamodelAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link MetamodelExecution.PrescribedPrescriptionItem <em>Prescribed Prescription Item</em>}'.
+	 * Creates a new adapter for an object of class '{@link MetamodelExecution.PPrescription <em>PPrescription</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see MetamodelExecution.PrescribedPrescriptionItem
+	 * @see MetamodelExecution.PPrescription
 	 * @generated
 	 */
-	public Adapter createPrescribedPrescriptionItemAdapter() {
+	public Adapter createPPrescriptionAdapter() {
 		return null;
 	}
 
@@ -755,16 +726,16 @@ public class Execution_metamodelAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link MetamodelExecution.Prescription <em>Prescription</em>}'.
+	 * Creates a new adapter for an object of class '{@link MetamodelExecution.PrescriptionResult <em>Prescription Result</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see MetamodelExecution.Prescription
+	 * @see MetamodelExecution.PrescriptionResult
 	 * @generated
 	 */
-	public Adapter createPrescriptionAdapter() {
+	public Adapter createPrescriptionResultAdapter() {
 		return null;
 	}
 
@@ -821,34 +792,6 @@ public class Execution_metamodelAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createMedicationAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link MetamodelExecution.Unit <em>Unit</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see MetamodelExecution.Unit
-	 * @generated
-	 */
-	public Adapter createUnitAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link MetamodelExecution.Access <em>Access</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see MetamodelExecution.Access
-	 * @generated
-	 */
-	public Adapter createAccessAdapter() {
 		return null;
 	}
 
@@ -1049,20 +992,6 @@ public class Execution_metamodelAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link MetamodelExecution.Notification <em>Notification</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see MetamodelExecution.Notification
-	 * @generated
-	 */
-	public Adapter createNotificationAdapter() {
-		return null;
-	}
-
-	/**
 	 * Creates a new adapter for an object of class '{@link MetamodelExecution.ProcedurePrescribedResource <em>Procedure Prescribed Resource</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -1241,6 +1170,20 @@ public class Execution_metamodelAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createValueAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link MetamodelExecution.Prescription <em>Prescription</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see MetamodelExecution.Prescription
+	 * @generated
+	 */
+	public Adapter createPrescriptionAdapter() {
 		return null;
 	}
 

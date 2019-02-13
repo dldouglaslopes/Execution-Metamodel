@@ -4,7 +4,7 @@ package MetamodelExecution.impl;
 
 import MetamodelExecution.Execution_metamodelPackage;
 import MetamodelExecution.Internment;
-import MetamodelExecution.PrescribedInternment;
+import MetamodelExecution.PInternment;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
@@ -17,20 +17,20 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Prescribed Internment</b></em>'.
+ * An implementation of the model object '<em><b>PInternment</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link MetamodelExecution.impl.PrescribedInternmentImpl#getId <em>Id</em>}</li>
- *   <li>{@link MetamodelExecution.impl.PrescribedInternmentImpl#getInternment <em>Internment</em>}</li>
- *   <li>{@link MetamodelExecution.impl.PrescribedInternmentImpl#getNumberGuide <em>Number Guide</em>}</li>
+ *   <li>{@link MetamodelExecution.impl.PInternmentImpl#getId <em>Id</em>}</li>
+ *   <li>{@link MetamodelExecution.impl.PInternmentImpl#getInternment <em>Internment</em>}</li>
+ *   <li>{@link MetamodelExecution.impl.PInternmentImpl#getNumberGuide <em>Number Guide</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class PrescribedInternmentImpl extends MinimalEObjectImpl.Container implements PrescribedInternment {
+public class PInternmentImpl extends MinimalEObjectImpl.Container implements PInternment {
 	/**
 	 * The default value of the '{@link #getId() <em>Id</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -86,7 +86,7 @@ public class PrescribedInternmentImpl extends MinimalEObjectImpl.Container imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected PrescribedInternmentImpl() {
+	protected PInternmentImpl() {
 		super();
 	}
 
@@ -97,7 +97,7 @@ public class PrescribedInternmentImpl extends MinimalEObjectImpl.Container imple
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Execution_metamodelPackage.Literals.PRESCRIBED_INTERNMENT;
+		return Execution_metamodelPackage.Literals.PINTERNMENT;
 	}
 
 	/**
@@ -118,8 +118,8 @@ public class PrescribedInternmentImpl extends MinimalEObjectImpl.Container imple
 		int oldId = id;
 		id = newId;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.PRESCRIBED_INTERNMENT__ID,
-					oldId, id));
+			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.PINTERNMENT__ID, oldId,
+					id));
 	}
 
 	/**
@@ -141,7 +141,7 @@ public class PrescribedInternmentImpl extends MinimalEObjectImpl.Container imple
 		internment = newInternment;
 		if (eNotificationRequired()) {
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
-					Execution_metamodelPackage.PRESCRIBED_INTERNMENT__INTERNMENT, oldInternment, newInternment);
+					Execution_metamodelPackage.PINTERNMENT__INTERNMENT, oldInternment, newInternment);
 			if (msgs == null)
 				msgs = notification;
 			else
@@ -160,18 +160,16 @@ public class PrescribedInternmentImpl extends MinimalEObjectImpl.Container imple
 			NotificationChain msgs = null;
 			if (internment != null)
 				msgs = ((InternalEObject) internment).eInverseRemove(this,
-						EOPPOSITE_FEATURE_BASE - Execution_metamodelPackage.PRESCRIBED_INTERNMENT__INTERNMENT, null,
-						msgs);
+						EOPPOSITE_FEATURE_BASE - Execution_metamodelPackage.PINTERNMENT__INTERNMENT, null, msgs);
 			if (newInternment != null)
 				msgs = ((InternalEObject) newInternment).eInverseAdd(this,
-						EOPPOSITE_FEATURE_BASE - Execution_metamodelPackage.PRESCRIBED_INTERNMENT__INTERNMENT, null,
-						msgs);
+						EOPPOSITE_FEATURE_BASE - Execution_metamodelPackage.PINTERNMENT__INTERNMENT, null, msgs);
 			msgs = basicSetInternment(newInternment, msgs);
 			if (msgs != null)
 				msgs.dispatch();
 		} else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET,
-					Execution_metamodelPackage.PRESCRIBED_INTERNMENT__INTERNMENT, newInternment, newInternment));
+			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.PINTERNMENT__INTERNMENT,
+					newInternment, newInternment));
 	}
 
 	/**
@@ -192,8 +190,8 @@ public class PrescribedInternmentImpl extends MinimalEObjectImpl.Container imple
 		int oldNumberGuide = numberGuide;
 		numberGuide = newNumberGuide;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET,
-					Execution_metamodelPackage.PRESCRIBED_INTERNMENT__NUMBER_GUIDE, oldNumberGuide, numberGuide));
+			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.PINTERNMENT__NUMBER_GUIDE,
+					oldNumberGuide, numberGuide));
 	}
 
 	/**
@@ -204,7 +202,7 @@ public class PrescribedInternmentImpl extends MinimalEObjectImpl.Container imple
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-		case Execution_metamodelPackage.PRESCRIBED_INTERNMENT__INTERNMENT:
+		case Execution_metamodelPackage.PINTERNMENT__INTERNMENT:
 			return basicSetInternment(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -218,11 +216,11 @@ public class PrescribedInternmentImpl extends MinimalEObjectImpl.Container imple
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case Execution_metamodelPackage.PRESCRIBED_INTERNMENT__ID:
+		case Execution_metamodelPackage.PINTERNMENT__ID:
 			return getId();
-		case Execution_metamodelPackage.PRESCRIBED_INTERNMENT__INTERNMENT:
+		case Execution_metamodelPackage.PINTERNMENT__INTERNMENT:
 			return getInternment();
-		case Execution_metamodelPackage.PRESCRIBED_INTERNMENT__NUMBER_GUIDE:
+		case Execution_metamodelPackage.PINTERNMENT__NUMBER_GUIDE:
 			return getNumberGuide();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -236,13 +234,13 @@ public class PrescribedInternmentImpl extends MinimalEObjectImpl.Container imple
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case Execution_metamodelPackage.PRESCRIBED_INTERNMENT__ID:
+		case Execution_metamodelPackage.PINTERNMENT__ID:
 			setId((Integer) newValue);
 			return;
-		case Execution_metamodelPackage.PRESCRIBED_INTERNMENT__INTERNMENT:
+		case Execution_metamodelPackage.PINTERNMENT__INTERNMENT:
 			setInternment((Internment) newValue);
 			return;
-		case Execution_metamodelPackage.PRESCRIBED_INTERNMENT__NUMBER_GUIDE:
+		case Execution_metamodelPackage.PINTERNMENT__NUMBER_GUIDE:
 			setNumberGuide((Integer) newValue);
 			return;
 		}
@@ -257,13 +255,13 @@ public class PrescribedInternmentImpl extends MinimalEObjectImpl.Container imple
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case Execution_metamodelPackage.PRESCRIBED_INTERNMENT__ID:
+		case Execution_metamodelPackage.PINTERNMENT__ID:
 			setId(ID_EDEFAULT);
 			return;
-		case Execution_metamodelPackage.PRESCRIBED_INTERNMENT__INTERNMENT:
+		case Execution_metamodelPackage.PINTERNMENT__INTERNMENT:
 			setInternment((Internment) null);
 			return;
-		case Execution_metamodelPackage.PRESCRIBED_INTERNMENT__NUMBER_GUIDE:
+		case Execution_metamodelPackage.PINTERNMENT__NUMBER_GUIDE:
 			setNumberGuide(NUMBER_GUIDE_EDEFAULT);
 			return;
 		}
@@ -278,11 +276,11 @@ public class PrescribedInternmentImpl extends MinimalEObjectImpl.Container imple
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case Execution_metamodelPackage.PRESCRIBED_INTERNMENT__ID:
+		case Execution_metamodelPackage.PINTERNMENT__ID:
 			return id != ID_EDEFAULT;
-		case Execution_metamodelPackage.PRESCRIBED_INTERNMENT__INTERNMENT:
+		case Execution_metamodelPackage.PINTERNMENT__INTERNMENT:
 			return internment != null;
-		case Execution_metamodelPackage.PRESCRIBED_INTERNMENT__NUMBER_GUIDE:
+		case Execution_metamodelPackage.PINTERNMENT__NUMBER_GUIDE:
 			return numberGuide != NUMBER_GUIDE_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
@@ -307,4 +305,4 @@ public class PrescribedInternmentImpl extends MinimalEObjectImpl.Container imple
 		return result.toString();
 	}
 
-} //PrescribedInternmentImpl
+} //PInternmentImpl

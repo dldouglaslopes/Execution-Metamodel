@@ -38,7 +38,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link MetamodelExecution.impl.EPathwayImpl#getElement <em>Element</em>}</li>
+ *   <li>{@link MetamodelExecution.impl.EPathwayImpl#getEStep <em>EStep</em>}</li>
  *   <li>{@link MetamodelExecution.impl.EPathwayImpl#getId <em>Id</em>}</li>
  *   <li>{@link MetamodelExecution.impl.EPathwayImpl#getCreationDate <em>Creation Date</em>}</li>
  *   <li>{@link MetamodelExecution.impl.EPathwayImpl#getConclusionDate <em>Conclusion Date</em>}</li>
@@ -60,14 +60,14 @@ import org.eclipse.emf.ecore.util.InternalEList;
  */
 public class EPathwayImpl extends MinimalEObjectImpl.Container implements EPathway {
 	/**
-	 * The cached value of the '{@link #getElement() <em>Element</em>}' containment reference list.
+	 * The cached value of the '{@link #getEStep() <em>EStep</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getElement()
+	 * @see #getEStep()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<EStep> element;
+	protected EList<EStep> eStep;
 
 	/**
 	 * The default value of the '{@link #getId() <em>Id</em>}' attribute.
@@ -323,12 +323,11 @@ public class EPathwayImpl extends MinimalEObjectImpl.Container implements EPathw
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<EStep> getElement() {
-		if (element == null) {
-			element = new EObjectContainmentEList<EStep>(EStep.class, this,
-					Execution_metamodelPackage.EPATHWAY__ELEMENT);
+	public EList<EStep> getEStep() {
+		if (eStep == null) {
+			eStep = new EObjectContainmentEList<EStep>(EStep.class, this, Execution_metamodelPackage.EPATHWAY__ESTEP);
 		}
-		return element;
+		return eStep;
 	}
 
 	/**
@@ -790,8 +789,8 @@ public class EPathwayImpl extends MinimalEObjectImpl.Container implements EPathw
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-		case Execution_metamodelPackage.EPATHWAY__ELEMENT:
-			return ((InternalEList<?>) getElement()).basicRemove(otherEnd, msgs);
+		case Execution_metamodelPackage.EPATHWAY__ESTEP:
+			return ((InternalEList<?>) getEStep()).basicRemove(otherEnd, msgs);
 		case Execution_metamodelPackage.EPATHWAY__RESPONSIBLE:
 			return basicSetResponsible(null, msgs);
 		case Execution_metamodelPackage.EPATHWAY__LASTPROFESSIONAL:
@@ -816,8 +815,8 @@ public class EPathwayImpl extends MinimalEObjectImpl.Container implements EPathw
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case Execution_metamodelPackage.EPATHWAY__ELEMENT:
-			return getElement();
+		case Execution_metamodelPackage.EPATHWAY__ESTEP:
+			return getEStep();
 		case Execution_metamodelPackage.EPATHWAY__ID:
 			return getId();
 		case Execution_metamodelPackage.EPATHWAY__CREATION_DATE:
@@ -861,9 +860,9 @@ public class EPathwayImpl extends MinimalEObjectImpl.Container implements EPathw
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case Execution_metamodelPackage.EPATHWAY__ELEMENT:
-			getElement().clear();
-			getElement().addAll((Collection<? extends EStep>) newValue);
+		case Execution_metamodelPackage.EPATHWAY__ESTEP:
+			getEStep().clear();
+			getEStep().addAll((Collection<? extends EStep>) newValue);
 			return;
 		case Execution_metamodelPackage.EPATHWAY__ID:
 			setId((Integer) newValue);
@@ -924,8 +923,8 @@ public class EPathwayImpl extends MinimalEObjectImpl.Container implements EPathw
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case Execution_metamodelPackage.EPATHWAY__ELEMENT:
-			getElement().clear();
+		case Execution_metamodelPackage.EPATHWAY__ESTEP:
+			getEStep().clear();
 			return;
 		case Execution_metamodelPackage.EPATHWAY__ID:
 			setId(ID_EDEFAULT);
@@ -984,8 +983,8 @@ public class EPathwayImpl extends MinimalEObjectImpl.Container implements EPathw
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case Execution_metamodelPackage.EPATHWAY__ELEMENT:
-			return element != null && !element.isEmpty();
+		case Execution_metamodelPackage.EPATHWAY__ESTEP:
+			return eStep != null && !eStep.isEmpty();
 		case Execution_metamodelPackage.EPATHWAY__ID:
 			return id != ID_EDEFAULT;
 		case Execution_metamodelPackage.EPATHWAY__CREATION_DATE:

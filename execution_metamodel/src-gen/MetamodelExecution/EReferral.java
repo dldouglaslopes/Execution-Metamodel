@@ -30,7 +30,7 @@ public interface EReferral extends EStep {
 	 * @return the value of the '<em>Epathway</em>' containment reference.
 	 * @see #setEpathway(EPathway)
 	 * @see MetamodelExecution.Execution_metamodelPackage#getEReferral_Epathway()
-	 * @model containment="true" required="true"
+	 * @model containment="true"
 	 * @generated
 	 */
 	EPathway getEpathway();

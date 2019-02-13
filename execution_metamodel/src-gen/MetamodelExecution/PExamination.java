@@ -6,28 +6,28 @@ import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>Prescribed Examination</b></em>'.
+ * A representation of the model object '<em><b>PExamination</b></em>'.
  * <!-- end-user-doc -->
  *
  * <p>
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link MetamodelExecution.PrescribedExamination#getExamination <em>Examination</em>}</li>
- *   <li>{@link MetamodelExecution.PrescribedExamination#getId <em>Id</em>}</li>
- *   <li>{@link MetamodelExecution.PrescribedExamination#getReport <em>Report</em>}</li>
- *   <li>{@link MetamodelExecution.PrescribedExamination#getNumberGuide <em>Number Guide</em>}</li>
- *   <li>{@link MetamodelExecution.PrescribedExamination#getComplement <em>Complement</em>}</li>
- *   <li>{@link MetamodelExecution.PrescribedExamination#getPrescription <em>Prescription</em>}</li>
- *   <li>{@link MetamodelExecution.PrescribedExamination#getName <em>Name</em>}</li>
- *   <li>{@link MetamodelExecution.PrescribedExamination#getResult <em>Result</em>}</li>
+ *   <li>{@link MetamodelExecution.PExamination#getExamination <em>Examination</em>}</li>
+ *   <li>{@link MetamodelExecution.PExamination#getId <em>Id</em>}</li>
+ *   <li>{@link MetamodelExecution.PExamination#getReport <em>Report</em>}</li>
+ *   <li>{@link MetamodelExecution.PExamination#getNumberGuide <em>Number Guide</em>}</li>
+ *   <li>{@link MetamodelExecution.PExamination#getComplement <em>Complement</em>}</li>
+ *   <li>{@link MetamodelExecution.PExamination#getPrescriptionResult <em>Prescription Result</em>}</li>
+ *   <li>{@link MetamodelExecution.PExamination#getName <em>Name</em>}</li>
+ *   <li>{@link MetamodelExecution.PExamination#getResult <em>Result</em>}</li>
  * </ul>
  *
- * @see MetamodelExecution.Execution_metamodelPackage#getPrescribedExamination()
+ * @see MetamodelExecution.Execution_metamodelPackage#getPExamination()
  * @model
  * @generated
  */
-public interface PrescribedExamination extends EObject {
+public interface PExamination extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Examination</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
@@ -38,14 +38,14 @@ public interface PrescribedExamination extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Examination</em>' containment reference.
 	 * @see #setExamination(Examination)
-	 * @see MetamodelExecution.Execution_metamodelPackage#getPrescribedExamination_Examination()
-	 * @model containment="true" required="true"
+	 * @see MetamodelExecution.Execution_metamodelPackage#getPExamination_Examination()
+	 * @model containment="true"
 	 * @generated
 	 */
 	Examination getExamination();
 
 	/**
-	 * Sets the value of the '{@link MetamodelExecution.PrescribedExamination#getExamination <em>Examination</em>}' containment reference.
+	 * Sets the value of the '{@link MetamodelExecution.PExamination#getExamination <em>Examination</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Examination</em>' containment reference.
@@ -64,14 +64,14 @@ public interface PrescribedExamination extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Id</em>' attribute.
 	 * @see #setId(int)
-	 * @see MetamodelExecution.Execution_metamodelPackage#getPrescribedExamination_Id()
+	 * @see MetamodelExecution.Execution_metamodelPackage#getPExamination_Id()
 	 * @model id="true"
 	 * @generated
 	 */
 	int getId();
 
 	/**
-	 * Sets the value of the '{@link MetamodelExecution.PrescribedExamination#getId <em>Id</em>}' attribute.
+	 * Sets the value of the '{@link MetamodelExecution.PExamination#getId <em>Id</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Id</em>' attribute.
@@ -90,14 +90,14 @@ public interface PrescribedExamination extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Report</em>' attribute.
 	 * @see #setReport(String)
-	 * @see MetamodelExecution.Execution_metamodelPackage#getPrescribedExamination_Report()
+	 * @see MetamodelExecution.Execution_metamodelPackage#getPExamination_Report()
 	 * @model
 	 * @generated
 	 */
 	String getReport();
 
 	/**
-	 * Sets the value of the '{@link MetamodelExecution.PrescribedExamination#getReport <em>Report</em>}' attribute.
+	 * Sets the value of the '{@link MetamodelExecution.PExamination#getReport <em>Report</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Report</em>' attribute.
@@ -116,14 +116,14 @@ public interface PrescribedExamination extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Number Guide</em>' attribute.
 	 * @see #setNumberGuide(int)
-	 * @see MetamodelExecution.Execution_metamodelPackage#getPrescribedExamination_NumberGuide()
+	 * @see MetamodelExecution.Execution_metamodelPackage#getPExamination_NumberGuide()
 	 * @model
 	 * @generated
 	 */
 	int getNumberGuide();
 
 	/**
-	 * Sets the value of the '{@link MetamodelExecution.PrescribedExamination#getNumberGuide <em>Number Guide</em>}' attribute.
+	 * Sets the value of the '{@link MetamodelExecution.PExamination#getNumberGuide <em>Number Guide</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Number Guide</em>' attribute.
@@ -142,14 +142,14 @@ public interface PrescribedExamination extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Complement</em>' containment reference.
 	 * @see #setComplement(Complement)
-	 * @see MetamodelExecution.Execution_metamodelPackage#getPrescribedExamination_Complement()
-	 * @model containment="true" required="true"
+	 * @see MetamodelExecution.Execution_metamodelPackage#getPExamination_Complement()
+	 * @model containment="true"
 	 * @generated
 	 */
 	Complement getComplement();
 
 	/**
-	 * Sets the value of the '{@link MetamodelExecution.PrescribedExamination#getComplement <em>Complement</em>}' containment reference.
+	 * Sets the value of the '{@link MetamodelExecution.PExamination#getComplement <em>Complement</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Complement</em>' containment reference.
@@ -159,30 +159,30 @@ public interface PrescribedExamination extends EObject {
 	void setComplement(Complement value);
 
 	/**
-	 * Returns the value of the '<em><b>Prescription</b></em>' containment reference.
+	 * Returns the value of the '<em><b>Prescription Result</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Prescription</em>' containment reference isn't clear,
+	 * If the meaning of the '<em>Prescription Result</em>' containment reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Prescription</em>' containment reference.
-	 * @see #setPrescription(Prescription)
-	 * @see MetamodelExecution.Execution_metamodelPackage#getPrescribedExamination_Prescription()
-	 * @model containment="true" required="true"
+	 * @return the value of the '<em>Prescription Result</em>' containment reference.
+	 * @see #setPrescriptionResult(PrescriptionResult)
+	 * @see MetamodelExecution.Execution_metamodelPackage#getPExamination_PrescriptionResult()
+	 * @model containment="true"
 	 * @generated
 	 */
-	Prescription getPrescription();
+	PrescriptionResult getPrescriptionResult();
 
 	/**
-	 * Sets the value of the '{@link MetamodelExecution.PrescribedExamination#getPrescription <em>Prescription</em>}' containment reference.
+	 * Sets the value of the '{@link MetamodelExecution.PExamination#getPrescriptionResult <em>Prescription Result</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Prescription</em>' containment reference.
-	 * @see #getPrescription()
+	 * @param value the new value of the '<em>Prescription Result</em>' containment reference.
+	 * @see #getPrescriptionResult()
 	 * @generated
 	 */
-	void setPrescription(Prescription value);
+	void setPrescriptionResult(PrescriptionResult value);
 
 	/**
 	 * Returns the value of the '<em><b>Name</b></em>' attribute.
@@ -194,14 +194,14 @@ public interface PrescribedExamination extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Name</em>' attribute.
 	 * @see #setName(String)
-	 * @see MetamodelExecution.Execution_metamodelPackage#getPrescribedExamination_Name()
+	 * @see MetamodelExecution.Execution_metamodelPackage#getPExamination_Name()
 	 * @model
 	 * @generated
 	 */
 	String getName();
 
 	/**
-	 * Sets the value of the '{@link MetamodelExecution.PrescribedExamination#getName <em>Name</em>}' attribute.
+	 * Sets the value of the '{@link MetamodelExecution.PExamination#getName <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Name</em>' attribute.
@@ -220,14 +220,14 @@ public interface PrescribedExamination extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Result</em>' containment reference.
 	 * @see #setResult(Result)
-	 * @see MetamodelExecution.Execution_metamodelPackage#getPrescribedExamination_Result()
-	 * @model containment="true" required="true"
+	 * @see MetamodelExecution.Execution_metamodelPackage#getPExamination_Result()
+	 * @model containment="true"
 	 * @generated
 	 */
 	Result getResult();
 
 	/**
-	 * Sets the value of the '{@link MetamodelExecution.PrescribedExamination#getResult <em>Result</em>}' containment reference.
+	 * Sets the value of the '{@link MetamodelExecution.PExamination#getResult <em>Result</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Result</em>' containment reference.
@@ -236,4 +236,4 @@ public interface PrescribedExamination extends EObject {
 	 */
 	void setResult(Result value);
 
-} // PrescribedExamination
+} // PExamination

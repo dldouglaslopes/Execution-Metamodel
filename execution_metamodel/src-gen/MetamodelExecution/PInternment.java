@@ -6,23 +6,23 @@ import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>Prescribed Internment</b></em>'.
+ * A representation of the model object '<em><b>PInternment</b></em>'.
  * <!-- end-user-doc -->
  *
  * <p>
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link MetamodelExecution.PrescribedInternment#getId <em>Id</em>}</li>
- *   <li>{@link MetamodelExecution.PrescribedInternment#getInternment <em>Internment</em>}</li>
- *   <li>{@link MetamodelExecution.PrescribedInternment#getNumberGuide <em>Number Guide</em>}</li>
+ *   <li>{@link MetamodelExecution.PInternment#getId <em>Id</em>}</li>
+ *   <li>{@link MetamodelExecution.PInternment#getInternment <em>Internment</em>}</li>
+ *   <li>{@link MetamodelExecution.PInternment#getNumberGuide <em>Number Guide</em>}</li>
  * </ul>
  *
- * @see MetamodelExecution.Execution_metamodelPackage#getPrescribedInternment()
+ * @see MetamodelExecution.Execution_metamodelPackage#getPInternment()
  * @model
  * @generated
  */
-public interface PrescribedInternment extends EObject {
+public interface PInternment extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Id</b></em>' attribute.
 	 * <!-- begin-user-doc -->
@@ -33,14 +33,14 @@ public interface PrescribedInternment extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Id</em>' attribute.
 	 * @see #setId(int)
-	 * @see MetamodelExecution.Execution_metamodelPackage#getPrescribedInternment_Id()
+	 * @see MetamodelExecution.Execution_metamodelPackage#getPInternment_Id()
 	 * @model id="true"
 	 * @generated
 	 */
 	int getId();
 
 	/**
-	 * Sets the value of the '{@link MetamodelExecution.PrescribedInternment#getId <em>Id</em>}' attribute.
+	 * Sets the value of the '{@link MetamodelExecution.PInternment#getId <em>Id</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Id</em>' attribute.
@@ -59,14 +59,14 @@ public interface PrescribedInternment extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Internment</em>' containment reference.
 	 * @see #setInternment(Internment)
-	 * @see MetamodelExecution.Execution_metamodelPackage#getPrescribedInternment_Internment()
-	 * @model containment="true" required="true"
+	 * @see MetamodelExecution.Execution_metamodelPackage#getPInternment_Internment()
+	 * @model containment="true"
 	 * @generated
 	 */
 	Internment getInternment();
 
 	/**
-	 * Sets the value of the '{@link MetamodelExecution.PrescribedInternment#getInternment <em>Internment</em>}' containment reference.
+	 * Sets the value of the '{@link MetamodelExecution.PInternment#getInternment <em>Internment</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Internment</em>' containment reference.
@@ -85,14 +85,14 @@ public interface PrescribedInternment extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Number Guide</em>' attribute.
 	 * @see #setNumberGuide(int)
-	 * @see MetamodelExecution.Execution_metamodelPackage#getPrescribedInternment_NumberGuide()
+	 * @see MetamodelExecution.Execution_metamodelPackage#getPInternment_NumberGuide()
 	 * @model
 	 * @generated
 	 */
 	int getNumberGuide();
 
 	/**
-	 * Sets the value of the '{@link MetamodelExecution.PrescribedInternment#getNumberGuide <em>Number Guide</em>}' attribute.
+	 * Sets the value of the '{@link MetamodelExecution.PInternment#getNumberGuide <em>Number Guide</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Number Guide</em>' attribute.
@@ -101,4 +101,4 @@ public interface PrescribedInternment extends EObject {
 	 */
 	void setNumberGuide(int value);
 
-} // PrescribedInternment
+} // PInternment

@@ -313,7 +313,7 @@ public interface EStep extends EObject {
 	 * @return the value of the '<em>Justification</em>' containment reference.
 	 * @see #setJustification(Justification)
 	 * @see MetamodelExecution.Execution_metamodelPackage#getEStep_Justification()
-	 * @model containment="true" required="true"
+	 * @model containment="true"
 	 * @generated
 	 */
 	Justification getJustification();
@@ -365,7 +365,7 @@ public interface EStep extends EObject {
 	 * @return the value of the '<em>Creator</em>' containment reference.
 	 * @see #setCreator(Creator)
 	 * @see MetamodelExecution.Execution_metamodelPackage#getEStep_Creator()
-	 * @model containment="true" required="true"
+	 * @model containment="true"
 	 * @generated
 	 */
 	Creator getCreator();
@@ -391,7 +391,7 @@ public interface EStep extends EObject {
 	 * @return the value of the '<em>Executor</em>' containment reference.
 	 * @see #setExecutor(Executor)
 	 * @see MetamodelExecution.Execution_metamodelPackage#getEStep_Executor()
-	 * @model containment="true" required="true"
+	 * @model containment="true"
 	 * @generated
 	 */
 	Executor getExecutor();

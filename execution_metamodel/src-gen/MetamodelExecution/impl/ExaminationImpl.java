@@ -2,15 +2,12 @@
  */
 package MetamodelExecution.impl;
 
-import MetamodelExecution.Exam;
 import MetamodelExecution.Examination;
 import MetamodelExecution.Execution_metamodelPackage;
 
 import org.eclipse.emf.common.notify.Notification;
-import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
@@ -28,8 +25,13 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *   <li>{@link MetamodelExecution.impl.ExaminationImpl#getQuantity <em>Quantity</em>}</li>
  *   <li>{@link MetamodelExecution.impl.ExaminationImpl#getJustification <em>Justification</em>}</li>
  *   <li>{@link MetamodelExecution.impl.ExaminationImpl#getClinicalIndication <em>Clinical Indication</em>}</li>
- *   <li>{@link MetamodelExecution.impl.ExaminationImpl#getExam <em>Exam</em>}</li>
  *   <li>{@link MetamodelExecution.impl.ExaminationImpl#getCategory <em>Category</em>}</li>
+ *   <li>{@link MetamodelExecution.impl.ExaminationImpl#getDescription <em>Description</em>}</li>
+ *   <li>{@link MetamodelExecution.impl.ExaminationImpl#getCode <em>Code</em>}</li>
+ *   <li>{@link MetamodelExecution.impl.ExaminationImpl#isMemberPeers <em>Member Peers</em>}</li>
+ *   <li>{@link MetamodelExecution.impl.ExaminationImpl#getName <em>Name</em>}</li>
+ *   <li>{@link MetamodelExecution.impl.ExaminationImpl#isOnlyEmergency <em>Only Emergency</em>}</li>
+ *   <li>{@link MetamodelExecution.impl.ExaminationImpl#getIdExamination <em>Id Examination</em>}</li>
  * </ul>
  *
  * @generated
@@ -136,16 +138,6 @@ public class ExaminationImpl extends MinimalEObjectImpl.Container implements Exa
 	protected String clinicalIndication = CLINICAL_INDICATION_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getExam() <em>Exam</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getExam()
-	 * @generated
-	 * @ordered
-	 */
-	protected Exam exam;
-
-	/**
 	 * The default value of the '{@link #getCategory() <em>Category</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -164,6 +156,126 @@ public class ExaminationImpl extends MinimalEObjectImpl.Container implements Exa
 	 * @ordered
 	 */
 	protected String category = CATEGORY_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getDescription() <em>Description</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDescription()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String DESCRIPTION_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getDescription() <em>Description</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDescription()
+	 * @generated
+	 * @ordered
+	 */
+	protected String description = DESCRIPTION_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getCode() <em>Code</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getCode()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final int CODE_EDEFAULT = 0;
+
+	/**
+	 * The cached value of the '{@link #getCode() <em>Code</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getCode()
+	 * @generated
+	 * @ordered
+	 */
+	protected int code = CODE_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #isMemberPeers() <em>Member Peers</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isMemberPeers()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final boolean MEMBER_PEERS_EDEFAULT = false;
+
+	/**
+	 * The cached value of the '{@link #isMemberPeers() <em>Member Peers</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isMemberPeers()
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean memberPeers = MEMBER_PEERS_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getName()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String NAME_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getName()
+	 * @generated
+	 * @ordered
+	 */
+	protected String name = NAME_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #isOnlyEmergency() <em>Only Emergency</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isOnlyEmergency()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final boolean ONLY_EMERGENCY_EDEFAULT = false;
+
+	/**
+	 * The cached value of the '{@link #isOnlyEmergency() <em>Only Emergency</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isOnlyEmergency()
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean onlyEmergency = ONLY_EMERGENCY_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getIdExamination() <em>Id Examination</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getIdExamination()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final int ID_EXAMINATION_EDEFAULT = 0;
+
+	/**
+	 * The cached value of the '{@link #getIdExamination() <em>Id Examination</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getIdExamination()
+	 * @generated
+	 * @ordered
+	 */
+	protected int idExamination = ID_EXAMINATION_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -300,56 +412,6 @@ public class ExaminationImpl extends MinimalEObjectImpl.Container implements Exa
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Exam getExam() {
-		return exam;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public NotificationChain basicSetExam(Exam newExam, NotificationChain msgs) {
-		Exam oldExam = exam;
-		exam = newExam;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
-					Execution_metamodelPackage.EXAMINATION__EXAM, oldExam, newExam);
-			if (msgs == null)
-				msgs = notification;
-			else
-				msgs.add(notification);
-		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setExam(Exam newExam) {
-		if (newExam != exam) {
-			NotificationChain msgs = null;
-			if (exam != null)
-				msgs = ((InternalEObject) exam).eInverseRemove(this,
-						EOPPOSITE_FEATURE_BASE - Execution_metamodelPackage.EXAMINATION__EXAM, null, msgs);
-			if (newExam != null)
-				msgs = ((InternalEObject) newExam).eInverseAdd(this,
-						EOPPOSITE_FEATURE_BASE - Execution_metamodelPackage.EXAMINATION__EXAM, null, msgs);
-			msgs = basicSetExam(newExam, msgs);
-			if (msgs != null)
-				msgs.dispatch();
-		} else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.EXAMINATION__EXAM, newExam,
-					newExam));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public String getCategory() {
 		return category;
 	}
@@ -372,13 +434,131 @@ public class ExaminationImpl extends MinimalEObjectImpl.Container implements Exa
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
-		case Execution_metamodelPackage.EXAMINATION__EXAM:
-			return basicSetExam(null, msgs);
-		}
-		return super.eInverseRemove(otherEnd, featureID, msgs);
+	public String getDescription() {
+		return description;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setDescription(String newDescription) {
+		String oldDescription = description;
+		description = newDescription;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.EXAMINATION__DESCRIPTION,
+					oldDescription, description));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public int getCode() {
+		return code;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setCode(int newCode) {
+		int oldCode = code;
+		code = newCode;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.EXAMINATION__CODE, oldCode,
+					code));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean isMemberPeers() {
+		return memberPeers;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setMemberPeers(boolean newMemberPeers) {
+		boolean oldMemberPeers = memberPeers;
+		memberPeers = newMemberPeers;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.EXAMINATION__MEMBER_PEERS,
+					oldMemberPeers, memberPeers));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getName() {
+		return name;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setName(String newName) {
+		String oldName = name;
+		name = newName;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.EXAMINATION__NAME, oldName,
+					name));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean isOnlyEmergency() {
+		return onlyEmergency;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setOnlyEmergency(boolean newOnlyEmergency) {
+		boolean oldOnlyEmergency = onlyEmergency;
+		onlyEmergency = newOnlyEmergency;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET,
+					Execution_metamodelPackage.EXAMINATION__ONLY_EMERGENCY, oldOnlyEmergency, onlyEmergency));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public int getIdExamination() {
+		return idExamination;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setIdExamination(int newIdExamination) {
+		int oldIdExamination = idExamination;
+		idExamination = newIdExamination;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET,
+					Execution_metamodelPackage.EXAMINATION__ID_EXAMINATION, oldIdExamination, idExamination));
 	}
 
 	/**
@@ -399,10 +579,20 @@ public class ExaminationImpl extends MinimalEObjectImpl.Container implements Exa
 			return getJustification();
 		case Execution_metamodelPackage.EXAMINATION__CLINICAL_INDICATION:
 			return getClinicalIndication();
-		case Execution_metamodelPackage.EXAMINATION__EXAM:
-			return getExam();
 		case Execution_metamodelPackage.EXAMINATION__CATEGORY:
 			return getCategory();
+		case Execution_metamodelPackage.EXAMINATION__DESCRIPTION:
+			return getDescription();
+		case Execution_metamodelPackage.EXAMINATION__CODE:
+			return getCode();
+		case Execution_metamodelPackage.EXAMINATION__MEMBER_PEERS:
+			return isMemberPeers();
+		case Execution_metamodelPackage.EXAMINATION__NAME:
+			return getName();
+		case Execution_metamodelPackage.EXAMINATION__ONLY_EMERGENCY:
+			return isOnlyEmergency();
+		case Execution_metamodelPackage.EXAMINATION__ID_EXAMINATION:
+			return getIdExamination();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -430,11 +620,26 @@ public class ExaminationImpl extends MinimalEObjectImpl.Container implements Exa
 		case Execution_metamodelPackage.EXAMINATION__CLINICAL_INDICATION:
 			setClinicalIndication((String) newValue);
 			return;
-		case Execution_metamodelPackage.EXAMINATION__EXAM:
-			setExam((Exam) newValue);
-			return;
 		case Execution_metamodelPackage.EXAMINATION__CATEGORY:
 			setCategory((String) newValue);
+			return;
+		case Execution_metamodelPackage.EXAMINATION__DESCRIPTION:
+			setDescription((String) newValue);
+			return;
+		case Execution_metamodelPackage.EXAMINATION__CODE:
+			setCode((Integer) newValue);
+			return;
+		case Execution_metamodelPackage.EXAMINATION__MEMBER_PEERS:
+			setMemberPeers((Boolean) newValue);
+			return;
+		case Execution_metamodelPackage.EXAMINATION__NAME:
+			setName((String) newValue);
+			return;
+		case Execution_metamodelPackage.EXAMINATION__ONLY_EMERGENCY:
+			setOnlyEmergency((Boolean) newValue);
+			return;
+		case Execution_metamodelPackage.EXAMINATION__ID_EXAMINATION:
+			setIdExamination((Integer) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -463,11 +668,26 @@ public class ExaminationImpl extends MinimalEObjectImpl.Container implements Exa
 		case Execution_metamodelPackage.EXAMINATION__CLINICAL_INDICATION:
 			setClinicalIndication(CLINICAL_INDICATION_EDEFAULT);
 			return;
-		case Execution_metamodelPackage.EXAMINATION__EXAM:
-			setExam((Exam) null);
-			return;
 		case Execution_metamodelPackage.EXAMINATION__CATEGORY:
 			setCategory(CATEGORY_EDEFAULT);
+			return;
+		case Execution_metamodelPackage.EXAMINATION__DESCRIPTION:
+			setDescription(DESCRIPTION_EDEFAULT);
+			return;
+		case Execution_metamodelPackage.EXAMINATION__CODE:
+			setCode(CODE_EDEFAULT);
+			return;
+		case Execution_metamodelPackage.EXAMINATION__MEMBER_PEERS:
+			setMemberPeers(MEMBER_PEERS_EDEFAULT);
+			return;
+		case Execution_metamodelPackage.EXAMINATION__NAME:
+			setName(NAME_EDEFAULT);
+			return;
+		case Execution_metamodelPackage.EXAMINATION__ONLY_EMERGENCY:
+			setOnlyEmergency(ONLY_EMERGENCY_EDEFAULT);
+			return;
+		case Execution_metamodelPackage.EXAMINATION__ID_EXAMINATION:
+			setIdExamination(ID_EXAMINATION_EDEFAULT);
 			return;
 		}
 		super.eUnset(featureID);
@@ -493,10 +713,20 @@ public class ExaminationImpl extends MinimalEObjectImpl.Container implements Exa
 		case Execution_metamodelPackage.EXAMINATION__CLINICAL_INDICATION:
 			return CLINICAL_INDICATION_EDEFAULT == null ? clinicalIndication != null
 					: !CLINICAL_INDICATION_EDEFAULT.equals(clinicalIndication);
-		case Execution_metamodelPackage.EXAMINATION__EXAM:
-			return exam != null;
 		case Execution_metamodelPackage.EXAMINATION__CATEGORY:
 			return CATEGORY_EDEFAULT == null ? category != null : !CATEGORY_EDEFAULT.equals(category);
+		case Execution_metamodelPackage.EXAMINATION__DESCRIPTION:
+			return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
+		case Execution_metamodelPackage.EXAMINATION__CODE:
+			return code != CODE_EDEFAULT;
+		case Execution_metamodelPackage.EXAMINATION__MEMBER_PEERS:
+			return memberPeers != MEMBER_PEERS_EDEFAULT;
+		case Execution_metamodelPackage.EXAMINATION__NAME:
+			return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+		case Execution_metamodelPackage.EXAMINATION__ONLY_EMERGENCY:
+			return onlyEmergency != ONLY_EMERGENCY_EDEFAULT;
+		case Execution_metamodelPackage.EXAMINATION__ID_EXAMINATION:
+			return idExamination != ID_EXAMINATION_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -524,6 +754,18 @@ public class ExaminationImpl extends MinimalEObjectImpl.Container implements Exa
 		result.append(clinicalIndication);
 		result.append(", category: ");
 		result.append(category);
+		result.append(", description: ");
+		result.append(description);
+		result.append(", code: ");
+		result.append(code);
+		result.append(", memberPeers: ");
+		result.append(memberPeers);
+		result.append(", name: ");
+		result.append(name);
+		result.append(", onlyEmergency: ");
+		result.append(onlyEmergency);
+		result.append(", idExamination: ");
+		result.append(idExamination);
 		result.append(')');
 		return result.toString();
 	}

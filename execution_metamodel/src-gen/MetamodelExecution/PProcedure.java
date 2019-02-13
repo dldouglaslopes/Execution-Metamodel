@@ -6,24 +6,24 @@ import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>Prescribed Procedure</b></em>'.
+ * A representation of the model object '<em><b>PProcedure</b></em>'.
  * <!-- end-user-doc -->
  *
  * <p>
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link MetamodelExecution.PrescribedProcedure#getId <em>Id</em>}</li>
- *   <li>{@link MetamodelExecution.PrescribedProcedure#getProcedure <em>Procedure</em>}</li>
- *   <li>{@link MetamodelExecution.PrescribedProcedure#getCodeOrderPrescription <em>Code Order Prescription</em>}</li>
- *   <li>{@link MetamodelExecution.PrescribedProcedure#getCodeOrderPrescriptionPlan <em>Code Order Prescription Plan</em>}</li>
+ *   <li>{@link MetamodelExecution.PProcedure#getId <em>Id</em>}</li>
+ *   <li>{@link MetamodelExecution.PProcedure#getProcedure <em>Procedure</em>}</li>
+ *   <li>{@link MetamodelExecution.PProcedure#getCodeOrderPrescription <em>Code Order Prescription</em>}</li>
+ *   <li>{@link MetamodelExecution.PProcedure#getCodeOrderPrescriptionPlan <em>Code Order Prescription Plan</em>}</li>
  * </ul>
  *
- * @see MetamodelExecution.Execution_metamodelPackage#getPrescribedProcedure()
+ * @see MetamodelExecution.Execution_metamodelPackage#getPProcedure()
  * @model
  * @generated
  */
-public interface PrescribedProcedure extends EObject {
+public interface PProcedure extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Id</b></em>' attribute.
 	 * <!-- begin-user-doc -->
@@ -34,14 +34,14 @@ public interface PrescribedProcedure extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Id</em>' attribute.
 	 * @see #setId(int)
-	 * @see MetamodelExecution.Execution_metamodelPackage#getPrescribedProcedure_Id()
+	 * @see MetamodelExecution.Execution_metamodelPackage#getPProcedure_Id()
 	 * @model id="true"
 	 * @generated
 	 */
 	int getId();
 
 	/**
-	 * Sets the value of the '{@link MetamodelExecution.PrescribedProcedure#getId <em>Id</em>}' attribute.
+	 * Sets the value of the '{@link MetamodelExecution.PProcedure#getId <em>Id</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Id</em>' attribute.
@@ -60,14 +60,14 @@ public interface PrescribedProcedure extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Procedure</em>' containment reference.
 	 * @see #setProcedure(Procedure)
-	 * @see MetamodelExecution.Execution_metamodelPackage#getPrescribedProcedure_Procedure()
-	 * @model containment="true" required="true"
+	 * @see MetamodelExecution.Execution_metamodelPackage#getPProcedure_Procedure()
+	 * @model containment="true"
 	 * @generated
 	 */
 	Procedure getProcedure();
 
 	/**
-	 * Sets the value of the '{@link MetamodelExecution.PrescribedProcedure#getProcedure <em>Procedure</em>}' containment reference.
+	 * Sets the value of the '{@link MetamodelExecution.PProcedure#getProcedure <em>Procedure</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Procedure</em>' containment reference.
@@ -86,14 +86,14 @@ public interface PrescribedProcedure extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Code Order Prescription</em>' attribute.
 	 * @see #setCodeOrderPrescription(int)
-	 * @see MetamodelExecution.Execution_metamodelPackage#getPrescribedProcedure_CodeOrderPrescription()
+	 * @see MetamodelExecution.Execution_metamodelPackage#getPProcedure_CodeOrderPrescription()
 	 * @model
 	 * @generated
 	 */
 	int getCodeOrderPrescription();
 
 	/**
-	 * Sets the value of the '{@link MetamodelExecution.PrescribedProcedure#getCodeOrderPrescription <em>Code Order Prescription</em>}' attribute.
+	 * Sets the value of the '{@link MetamodelExecution.PProcedure#getCodeOrderPrescription <em>Code Order Prescription</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Code Order Prescription</em>' attribute.
@@ -112,14 +112,14 @@ public interface PrescribedProcedure extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Code Order Prescription Plan</em>' attribute.
 	 * @see #setCodeOrderPrescriptionPlan(int)
-	 * @see MetamodelExecution.Execution_metamodelPackage#getPrescribedProcedure_CodeOrderPrescriptionPlan()
+	 * @see MetamodelExecution.Execution_metamodelPackage#getPProcedure_CodeOrderPrescriptionPlan()
 	 * @model
 	 * @generated
 	 */
 	int getCodeOrderPrescriptionPlan();
 
 	/**
-	 * Sets the value of the '{@link MetamodelExecution.PrescribedProcedure#getCodeOrderPrescriptionPlan <em>Code Order Prescription Plan</em>}' attribute.
+	 * Sets the value of the '{@link MetamodelExecution.PProcedure#getCodeOrderPrescriptionPlan <em>Code Order Prescription Plan</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Code Order Prescription Plan</em>' attribute.
@@ -128,4 +128,4 @@ public interface PrescribedProcedure extends EObject {
 	 */
 	void setCodeOrderPrescriptionPlan(int value);
 
-} // PrescribedProcedure
+} // PProcedure

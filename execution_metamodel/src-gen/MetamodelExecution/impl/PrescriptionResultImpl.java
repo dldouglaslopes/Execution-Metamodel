@@ -3,7 +3,7 @@
 package MetamodelExecution.impl;
 
 import MetamodelExecution.Execution_metamodelPackage;
-import MetamodelExecution.Result;
+import MetamodelExecution.PrescriptionResult;
 
 import java.util.Date;
 
@@ -16,21 +16,21 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Result</b></em>'.
+ * An implementation of the model object '<em><b>Prescription Result</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link MetamodelExecution.impl.ResultImpl#isSuccess <em>Success</em>}</li>
- *   <li>{@link MetamodelExecution.impl.ResultImpl#getRequestDate <em>Request Date</em>}</li>
- *   <li>{@link MetamodelExecution.impl.ResultImpl#getId <em>Id</em>}</li>
- *   <li>{@link MetamodelExecution.impl.ResultImpl#getMessage <em>Message</em>}</li>
+ *   <li>{@link MetamodelExecution.impl.PrescriptionResultImpl#isSuccess <em>Success</em>}</li>
+ *   <li>{@link MetamodelExecution.impl.PrescriptionResultImpl#getRequestDate <em>Request Date</em>}</li>
+ *   <li>{@link MetamodelExecution.impl.PrescriptionResultImpl#getId <em>Id</em>}</li>
+ *   <li>{@link MetamodelExecution.impl.PrescriptionResultImpl#getMessage <em>Message</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class ResultImpl extends MinimalEObjectImpl.Container implements Result {
+public class PrescriptionResultImpl extends MinimalEObjectImpl.Container implements PrescriptionResult {
 	/**
 	 * The default value of the '{@link #isSuccess() <em>Success</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -116,7 +116,7 @@ public class ResultImpl extends MinimalEObjectImpl.Container implements Result {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ResultImpl() {
+	protected PrescriptionResultImpl() {
 		super();
 	}
 
@@ -127,7 +127,7 @@ public class ResultImpl extends MinimalEObjectImpl.Container implements Result {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Execution_metamodelPackage.Literals.RESULT;
+		return Execution_metamodelPackage.Literals.PRESCRIPTION_RESULT;
 	}
 
 	/**
@@ -148,8 +148,8 @@ public class ResultImpl extends MinimalEObjectImpl.Container implements Result {
 		boolean oldSuccess = success;
 		success = newSuccess;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.RESULT__SUCCESS,
-					oldSuccess, success));
+			eNotify(new ENotificationImpl(this, Notification.SET,
+					Execution_metamodelPackage.PRESCRIPTION_RESULT__SUCCESS, oldSuccess, success));
 	}
 
 	/**
@@ -170,8 +170,8 @@ public class ResultImpl extends MinimalEObjectImpl.Container implements Result {
 		Date oldRequestDate = requestDate;
 		requestDate = newRequestDate;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.RESULT__REQUEST_DATE,
-					oldRequestDate, requestDate));
+			eNotify(new ENotificationImpl(this, Notification.SET,
+					Execution_metamodelPackage.PRESCRIPTION_RESULT__REQUEST_DATE, oldRequestDate, requestDate));
 	}
 
 	/**
@@ -192,7 +192,8 @@ public class ResultImpl extends MinimalEObjectImpl.Container implements Result {
 		int oldId = id;
 		id = newId;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.RESULT__ID, oldId, id));
+			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.PRESCRIPTION_RESULT__ID,
+					oldId, id));
 	}
 
 	/**
@@ -213,8 +214,8 @@ public class ResultImpl extends MinimalEObjectImpl.Container implements Result {
 		String oldMessage = message;
 		message = newMessage;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.RESULT__MESSAGE,
-					oldMessage, message));
+			eNotify(new ENotificationImpl(this, Notification.SET,
+					Execution_metamodelPackage.PRESCRIPTION_RESULT__MESSAGE, oldMessage, message));
 	}
 
 	/**
@@ -225,13 +226,13 @@ public class ResultImpl extends MinimalEObjectImpl.Container implements Result {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case Execution_metamodelPackage.RESULT__SUCCESS:
+		case Execution_metamodelPackage.PRESCRIPTION_RESULT__SUCCESS:
 			return isSuccess();
-		case Execution_metamodelPackage.RESULT__REQUEST_DATE:
+		case Execution_metamodelPackage.PRESCRIPTION_RESULT__REQUEST_DATE:
 			return getRequestDate();
-		case Execution_metamodelPackage.RESULT__ID:
+		case Execution_metamodelPackage.PRESCRIPTION_RESULT__ID:
 			return getId();
-		case Execution_metamodelPackage.RESULT__MESSAGE:
+		case Execution_metamodelPackage.PRESCRIPTION_RESULT__MESSAGE:
 			return getMessage();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -245,16 +246,16 @@ public class ResultImpl extends MinimalEObjectImpl.Container implements Result {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case Execution_metamodelPackage.RESULT__SUCCESS:
+		case Execution_metamodelPackage.PRESCRIPTION_RESULT__SUCCESS:
 			setSuccess((Boolean) newValue);
 			return;
-		case Execution_metamodelPackage.RESULT__REQUEST_DATE:
+		case Execution_metamodelPackage.PRESCRIPTION_RESULT__REQUEST_DATE:
 			setRequestDate((Date) newValue);
 			return;
-		case Execution_metamodelPackage.RESULT__ID:
+		case Execution_metamodelPackage.PRESCRIPTION_RESULT__ID:
 			setId((Integer) newValue);
 			return;
-		case Execution_metamodelPackage.RESULT__MESSAGE:
+		case Execution_metamodelPackage.PRESCRIPTION_RESULT__MESSAGE:
 			setMessage((String) newValue);
 			return;
 		}
@@ -269,16 +270,16 @@ public class ResultImpl extends MinimalEObjectImpl.Container implements Result {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case Execution_metamodelPackage.RESULT__SUCCESS:
+		case Execution_metamodelPackage.PRESCRIPTION_RESULT__SUCCESS:
 			setSuccess(SUCCESS_EDEFAULT);
 			return;
-		case Execution_metamodelPackage.RESULT__REQUEST_DATE:
+		case Execution_metamodelPackage.PRESCRIPTION_RESULT__REQUEST_DATE:
 			setRequestDate(REQUEST_DATE_EDEFAULT);
 			return;
-		case Execution_metamodelPackage.RESULT__ID:
+		case Execution_metamodelPackage.PRESCRIPTION_RESULT__ID:
 			setId(ID_EDEFAULT);
 			return;
-		case Execution_metamodelPackage.RESULT__MESSAGE:
+		case Execution_metamodelPackage.PRESCRIPTION_RESULT__MESSAGE:
 			setMessage(MESSAGE_EDEFAULT);
 			return;
 		}
@@ -293,13 +294,13 @@ public class ResultImpl extends MinimalEObjectImpl.Container implements Result {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case Execution_metamodelPackage.RESULT__SUCCESS:
+		case Execution_metamodelPackage.PRESCRIPTION_RESULT__SUCCESS:
 			return success != SUCCESS_EDEFAULT;
-		case Execution_metamodelPackage.RESULT__REQUEST_DATE:
+		case Execution_metamodelPackage.PRESCRIPTION_RESULT__REQUEST_DATE:
 			return REQUEST_DATE_EDEFAULT == null ? requestDate != null : !REQUEST_DATE_EDEFAULT.equals(requestDate);
-		case Execution_metamodelPackage.RESULT__ID:
+		case Execution_metamodelPackage.PRESCRIPTION_RESULT__ID:
 			return id != ID_EDEFAULT;
-		case Execution_metamodelPackage.RESULT__MESSAGE:
+		case Execution_metamodelPackage.PRESCRIPTION_RESULT__MESSAGE:
 			return MESSAGE_EDEFAULT == null ? message != null : !MESSAGE_EDEFAULT.equals(message);
 		}
 		return super.eIsSet(featureID);
@@ -328,4 +329,4 @@ public class ResultImpl extends MinimalEObjectImpl.Container implements Result {
 		return result.toString();
 	}
 
-} //ResultImpl
+} //PrescriptionResultImpl

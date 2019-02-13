@@ -2,16 +2,12 @@
  */
 package MetamodelExecution.impl;
 
-import MetamodelExecution.Access;
 import MetamodelExecution.Execution_metamodelPackage;
 import MetamodelExecution.Medication;
-import MetamodelExecution.Unit;
 
 import org.eclipse.emf.common.notify.Notification;
-import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
@@ -24,8 +20,6 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link MetamodelExecution.impl.MedicationImpl#getUnit <em>Unit</em>}</li>
- *   <li>{@link MetamodelExecution.impl.MedicationImpl#getAccess <em>Access</em>}</li>
  *   <li>{@link MetamodelExecution.impl.MedicationImpl#getId <em>Id</em>}</li>
  *   <li>{@link MetamodelExecution.impl.MedicationImpl#getName <em>Name</em>}</li>
  *   <li>{@link MetamodelExecution.impl.MedicationImpl#getCode <em>Code</em>}</li>
@@ -39,31 +33,18 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *   <li>{@link MetamodelExecution.impl.MedicationImpl#getTimeTreatement <em>Time Treatement</em>}</li>
  *   <li>{@link MetamodelExecution.impl.MedicationImpl#getTimeInterval <em>Time Interval</em>}</li>
  *   <li>{@link MetamodelExecution.impl.MedicationImpl#getCategory <em>Category</em>}</li>
+ *   <li>{@link MetamodelExecution.impl.MedicationImpl#getCodeAcess <em>Code Acess</em>}</li>
+ *   <li>{@link MetamodelExecution.impl.MedicationImpl#getIdAccess <em>Id Access</em>}</li>
+ *   <li>{@link MetamodelExecution.impl.MedicationImpl#getNameAcess <em>Name Acess</em>}</li>
+ *   <li>{@link MetamodelExecution.impl.MedicationImpl#getCodeUnit <em>Code Unit</em>}</li>
+ *   <li>{@link MetamodelExecution.impl.MedicationImpl#getNameUnit <em>Name Unit</em>}</li>
+ *   <li>{@link MetamodelExecution.impl.MedicationImpl#getIdUnit <em>Id Unit</em>}</li>
+ *   <li>{@link MetamodelExecution.impl.MedicationImpl#getUnit <em>Unit</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class MedicationImpl extends MinimalEObjectImpl.Container implements Medication {
-	/**
-	 * The cached value of the '{@link #getUnit() <em>Unit</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getUnit()
-	 * @generated
-	 * @ordered
-	 */
-	protected Unit unit;
-
-	/**
-	 * The cached value of the '{@link #getAccess() <em>Access</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getAccess()
-	 * @generated
-	 * @ordered
-	 */
-	protected Access access;
-
 	/**
 	 * The default value of the '{@link #getId() <em>Id</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -325,6 +306,146 @@ public class MedicationImpl extends MinimalEObjectImpl.Container implements Medi
 	protected String category = CATEGORY_EDEFAULT;
 
 	/**
+	 * The default value of the '{@link #getCodeAcess() <em>Code Acess</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getCodeAcess()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final int CODE_ACESS_EDEFAULT = 0;
+
+	/**
+	 * The cached value of the '{@link #getCodeAcess() <em>Code Acess</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getCodeAcess()
+	 * @generated
+	 * @ordered
+	 */
+	protected int codeAcess = CODE_ACESS_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getIdAccess() <em>Id Access</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getIdAccess()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final int ID_ACCESS_EDEFAULT = 0;
+
+	/**
+	 * The cached value of the '{@link #getIdAccess() <em>Id Access</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getIdAccess()
+	 * @generated
+	 * @ordered
+	 */
+	protected int idAccess = ID_ACCESS_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getNameAcess() <em>Name Acess</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getNameAcess()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String NAME_ACESS_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getNameAcess() <em>Name Acess</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getNameAcess()
+	 * @generated
+	 * @ordered
+	 */
+	protected String nameAcess = NAME_ACESS_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getCodeUnit() <em>Code Unit</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getCodeUnit()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String CODE_UNIT_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getCodeUnit() <em>Code Unit</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getCodeUnit()
+	 * @generated
+	 * @ordered
+	 */
+	protected String codeUnit = CODE_UNIT_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getNameUnit() <em>Name Unit</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getNameUnit()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String NAME_UNIT_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getNameUnit() <em>Name Unit</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getNameUnit()
+	 * @generated
+	 * @ordered
+	 */
+	protected String nameUnit = NAME_UNIT_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getIdUnit() <em>Id Unit</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getIdUnit()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final int ID_UNIT_EDEFAULT = 0;
+
+	/**
+	 * The cached value of the '{@link #getIdUnit() <em>Id Unit</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getIdUnit()
+	 * @generated
+	 * @ordered
+	 */
+	protected int idUnit = ID_UNIT_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getUnit() <em>Unit</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getUnit()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String UNIT_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getUnit() <em>Unit</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getUnit()
+	 * @generated
+	 * @ordered
+	 */
+	protected String unit = UNIT_EDEFAULT;
+
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -341,106 +462,6 @@ public class MedicationImpl extends MinimalEObjectImpl.Container implements Medi
 	@Override
 	protected EClass eStaticClass() {
 		return Execution_metamodelPackage.Literals.MEDICATION;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Unit getUnit() {
-		return unit;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public NotificationChain basicSetUnit(Unit newUnit, NotificationChain msgs) {
-		Unit oldUnit = unit;
-		unit = newUnit;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
-					Execution_metamodelPackage.MEDICATION__UNIT, oldUnit, newUnit);
-			if (msgs == null)
-				msgs = notification;
-			else
-				msgs.add(notification);
-		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setUnit(Unit newUnit) {
-		if (newUnit != unit) {
-			NotificationChain msgs = null;
-			if (unit != null)
-				msgs = ((InternalEObject) unit).eInverseRemove(this,
-						EOPPOSITE_FEATURE_BASE - Execution_metamodelPackage.MEDICATION__UNIT, null, msgs);
-			if (newUnit != null)
-				msgs = ((InternalEObject) newUnit).eInverseAdd(this,
-						EOPPOSITE_FEATURE_BASE - Execution_metamodelPackage.MEDICATION__UNIT, null, msgs);
-			msgs = basicSetUnit(newUnit, msgs);
-			if (msgs != null)
-				msgs.dispatch();
-		} else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.MEDICATION__UNIT, newUnit,
-					newUnit));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Access getAccess() {
-		return access;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public NotificationChain basicSetAccess(Access newAccess, NotificationChain msgs) {
-		Access oldAccess = access;
-		access = newAccess;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
-					Execution_metamodelPackage.MEDICATION__ACCESS, oldAccess, newAccess);
-			if (msgs == null)
-				msgs = notification;
-			else
-				msgs.add(notification);
-		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setAccess(Access newAccess) {
-		if (newAccess != access) {
-			NotificationChain msgs = null;
-			if (access != null)
-				msgs = ((InternalEObject) access).eInverseRemove(this,
-						EOPPOSITE_FEATURE_BASE - Execution_metamodelPackage.MEDICATION__ACCESS, null, msgs);
-			if (newAccess != null)
-				msgs = ((InternalEObject) newAccess).eInverseAdd(this,
-						EOPPOSITE_FEATURE_BASE - Execution_metamodelPackage.MEDICATION__ACCESS, null, msgs);
-			msgs = basicSetAccess(newAccess, msgs);
-			if (msgs != null)
-				msgs.dispatch();
-		} else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.MEDICATION__ACCESS,
-					newAccess, newAccess));
 	}
 
 	/**
@@ -734,15 +755,153 @@ public class MedicationImpl extends MinimalEObjectImpl.Container implements Medi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
-		case Execution_metamodelPackage.MEDICATION__UNIT:
-			return basicSetUnit(null, msgs);
-		case Execution_metamodelPackage.MEDICATION__ACCESS:
-			return basicSetAccess(null, msgs);
-		}
-		return super.eInverseRemove(otherEnd, featureID, msgs);
+	public int getCodeAcess() {
+		return codeAcess;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setCodeAcess(int newCodeAcess) {
+		int oldCodeAcess = codeAcess;
+		codeAcess = newCodeAcess;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.MEDICATION__CODE_ACESS,
+					oldCodeAcess, codeAcess));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public int getIdAccess() {
+		return idAccess;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setIdAccess(int newIdAccess) {
+		int oldIdAccess = idAccess;
+		idAccess = newIdAccess;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.MEDICATION__ID_ACCESS,
+					oldIdAccess, idAccess));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getNameAcess() {
+		return nameAcess;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setNameAcess(String newNameAcess) {
+		String oldNameAcess = nameAcess;
+		nameAcess = newNameAcess;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.MEDICATION__NAME_ACESS,
+					oldNameAcess, nameAcess));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getCodeUnit() {
+		return codeUnit;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setCodeUnit(String newCodeUnit) {
+		String oldCodeUnit = codeUnit;
+		codeUnit = newCodeUnit;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.MEDICATION__CODE_UNIT,
+					oldCodeUnit, codeUnit));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getNameUnit() {
+		return nameUnit;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setNameUnit(String newNameUnit) {
+		String oldNameUnit = nameUnit;
+		nameUnit = newNameUnit;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.MEDICATION__NAME_UNIT,
+					oldNameUnit, nameUnit));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public int getIdUnit() {
+		return idUnit;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setIdUnit(int newIdUnit) {
+		int oldIdUnit = idUnit;
+		idUnit = newIdUnit;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.MEDICATION__ID_UNIT,
+					oldIdUnit, idUnit));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getUnit() {
+		return unit;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setUnit(String newUnit) {
+		String oldUnit = unit;
+		unit = newUnit;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.MEDICATION__UNIT, oldUnit,
+					unit));
 	}
 
 	/**
@@ -753,10 +912,6 @@ public class MedicationImpl extends MinimalEObjectImpl.Container implements Medi
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case Execution_metamodelPackage.MEDICATION__UNIT:
-			return getUnit();
-		case Execution_metamodelPackage.MEDICATION__ACCESS:
-			return getAccess();
 		case Execution_metamodelPackage.MEDICATION__ID:
 			return getId();
 		case Execution_metamodelPackage.MEDICATION__NAME:
@@ -783,6 +938,20 @@ public class MedicationImpl extends MinimalEObjectImpl.Container implements Medi
 			return getTimeInterval();
 		case Execution_metamodelPackage.MEDICATION__CATEGORY:
 			return getCategory();
+		case Execution_metamodelPackage.MEDICATION__CODE_ACESS:
+			return getCodeAcess();
+		case Execution_metamodelPackage.MEDICATION__ID_ACCESS:
+			return getIdAccess();
+		case Execution_metamodelPackage.MEDICATION__NAME_ACESS:
+			return getNameAcess();
+		case Execution_metamodelPackage.MEDICATION__CODE_UNIT:
+			return getCodeUnit();
+		case Execution_metamodelPackage.MEDICATION__NAME_UNIT:
+			return getNameUnit();
+		case Execution_metamodelPackage.MEDICATION__ID_UNIT:
+			return getIdUnit();
+		case Execution_metamodelPackage.MEDICATION__UNIT:
+			return getUnit();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -795,12 +964,6 @@ public class MedicationImpl extends MinimalEObjectImpl.Container implements Medi
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case Execution_metamodelPackage.MEDICATION__UNIT:
-			setUnit((Unit) newValue);
-			return;
-		case Execution_metamodelPackage.MEDICATION__ACCESS:
-			setAccess((Access) newValue);
-			return;
 		case Execution_metamodelPackage.MEDICATION__ID:
 			setId((Integer) newValue);
 			return;
@@ -840,6 +1003,27 @@ public class MedicationImpl extends MinimalEObjectImpl.Container implements Medi
 		case Execution_metamodelPackage.MEDICATION__CATEGORY:
 			setCategory((String) newValue);
 			return;
+		case Execution_metamodelPackage.MEDICATION__CODE_ACESS:
+			setCodeAcess((Integer) newValue);
+			return;
+		case Execution_metamodelPackage.MEDICATION__ID_ACCESS:
+			setIdAccess((Integer) newValue);
+			return;
+		case Execution_metamodelPackage.MEDICATION__NAME_ACESS:
+			setNameAcess((String) newValue);
+			return;
+		case Execution_metamodelPackage.MEDICATION__CODE_UNIT:
+			setCodeUnit((String) newValue);
+			return;
+		case Execution_metamodelPackage.MEDICATION__NAME_UNIT:
+			setNameUnit((String) newValue);
+			return;
+		case Execution_metamodelPackage.MEDICATION__ID_UNIT:
+			setIdUnit((Integer) newValue);
+			return;
+		case Execution_metamodelPackage.MEDICATION__UNIT:
+			setUnit((String) newValue);
+			return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -852,12 +1036,6 @@ public class MedicationImpl extends MinimalEObjectImpl.Container implements Medi
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case Execution_metamodelPackage.MEDICATION__UNIT:
-			setUnit((Unit) null);
-			return;
-		case Execution_metamodelPackage.MEDICATION__ACCESS:
-			setAccess((Access) null);
-			return;
 		case Execution_metamodelPackage.MEDICATION__ID:
 			setId(ID_EDEFAULT);
 			return;
@@ -897,6 +1075,27 @@ public class MedicationImpl extends MinimalEObjectImpl.Container implements Medi
 		case Execution_metamodelPackage.MEDICATION__CATEGORY:
 			setCategory(CATEGORY_EDEFAULT);
 			return;
+		case Execution_metamodelPackage.MEDICATION__CODE_ACESS:
+			setCodeAcess(CODE_ACESS_EDEFAULT);
+			return;
+		case Execution_metamodelPackage.MEDICATION__ID_ACCESS:
+			setIdAccess(ID_ACCESS_EDEFAULT);
+			return;
+		case Execution_metamodelPackage.MEDICATION__NAME_ACESS:
+			setNameAcess(NAME_ACESS_EDEFAULT);
+			return;
+		case Execution_metamodelPackage.MEDICATION__CODE_UNIT:
+			setCodeUnit(CODE_UNIT_EDEFAULT);
+			return;
+		case Execution_metamodelPackage.MEDICATION__NAME_UNIT:
+			setNameUnit(NAME_UNIT_EDEFAULT);
+			return;
+		case Execution_metamodelPackage.MEDICATION__ID_UNIT:
+			setIdUnit(ID_UNIT_EDEFAULT);
+			return;
+		case Execution_metamodelPackage.MEDICATION__UNIT:
+			setUnit(UNIT_EDEFAULT);
+			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -909,10 +1108,6 @@ public class MedicationImpl extends MinimalEObjectImpl.Container implements Medi
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case Execution_metamodelPackage.MEDICATION__UNIT:
-			return unit != null;
-		case Execution_metamodelPackage.MEDICATION__ACCESS:
-			return access != null;
 		case Execution_metamodelPackage.MEDICATION__ID:
 			return id != ID_EDEFAULT;
 		case Execution_metamodelPackage.MEDICATION__NAME:
@@ -939,6 +1134,20 @@ public class MedicationImpl extends MinimalEObjectImpl.Container implements Medi
 			return timeInterval != TIME_INTERVAL_EDEFAULT;
 		case Execution_metamodelPackage.MEDICATION__CATEGORY:
 			return CATEGORY_EDEFAULT == null ? category != null : !CATEGORY_EDEFAULT.equals(category);
+		case Execution_metamodelPackage.MEDICATION__CODE_ACESS:
+			return codeAcess != CODE_ACESS_EDEFAULT;
+		case Execution_metamodelPackage.MEDICATION__ID_ACCESS:
+			return idAccess != ID_ACCESS_EDEFAULT;
+		case Execution_metamodelPackage.MEDICATION__NAME_ACESS:
+			return NAME_ACESS_EDEFAULT == null ? nameAcess != null : !NAME_ACESS_EDEFAULT.equals(nameAcess);
+		case Execution_metamodelPackage.MEDICATION__CODE_UNIT:
+			return CODE_UNIT_EDEFAULT == null ? codeUnit != null : !CODE_UNIT_EDEFAULT.equals(codeUnit);
+		case Execution_metamodelPackage.MEDICATION__NAME_UNIT:
+			return NAME_UNIT_EDEFAULT == null ? nameUnit != null : !NAME_UNIT_EDEFAULT.equals(nameUnit);
+		case Execution_metamodelPackage.MEDICATION__ID_UNIT:
+			return idUnit != ID_UNIT_EDEFAULT;
+		case Execution_metamodelPackage.MEDICATION__UNIT:
+			return UNIT_EDEFAULT == null ? unit != null : !UNIT_EDEFAULT.equals(unit);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -980,6 +1189,20 @@ public class MedicationImpl extends MinimalEObjectImpl.Container implements Medi
 		result.append(timeInterval);
 		result.append(", category: ");
 		result.append(category);
+		result.append(", codeAcess: ");
+		result.append(codeAcess);
+		result.append(", idAccess: ");
+		result.append(idAccess);
+		result.append(", nameAcess: ");
+		result.append(nameAcess);
+		result.append(", codeUnit: ");
+		result.append(codeUnit);
+		result.append(", nameUnit: ");
+		result.append(nameUnit);
+		result.append(", idUnit: ");
+		result.append(idUnit);
+		result.append(", unit: ");
+		result.append(unit);
 		result.append(')');
 		return result.toString();
 	}

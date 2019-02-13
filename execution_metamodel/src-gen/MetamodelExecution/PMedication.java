@@ -6,24 +6,24 @@ import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>Prescribed Medication</b></em>'.
+ * A representation of the model object '<em><b>PMedication</b></em>'.
  * <!-- end-user-doc -->
  *
  * <p>
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link MetamodelExecution.PrescribedMedication#getId <em>Id</em>}</li>
- *   <li>{@link MetamodelExecution.PrescribedMedication#getResult <em>Result</em>}</li>
- *   <li>{@link MetamodelExecution.PrescribedMedication#getMedication <em>Medication</em>}</li>
- *   <li>{@link MetamodelExecution.PrescribedMedication#getPrescription <em>Prescription</em>}</li>
+ *   <li>{@link MetamodelExecution.PMedication#getId <em>Id</em>}</li>
+ *   <li>{@link MetamodelExecution.PMedication#getResult <em>Result</em>}</li>
+ *   <li>{@link MetamodelExecution.PMedication#getMedication <em>Medication</em>}</li>
+ *   <li>{@link MetamodelExecution.PMedication#getPrescriptionResult <em>Prescription Result</em>}</li>
  * </ul>
  *
- * @see MetamodelExecution.Execution_metamodelPackage#getPrescribedMedication()
+ * @see MetamodelExecution.Execution_metamodelPackage#getPMedication()
  * @model
  * @generated
  */
-public interface PrescribedMedication extends EObject {
+public interface PMedication extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Id</b></em>' attribute.
 	 * <!-- begin-user-doc -->
@@ -34,14 +34,14 @@ public interface PrescribedMedication extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Id</em>' attribute.
 	 * @see #setId(int)
-	 * @see MetamodelExecution.Execution_metamodelPackage#getPrescribedMedication_Id()
+	 * @see MetamodelExecution.Execution_metamodelPackage#getPMedication_Id()
 	 * @model id="true"
 	 * @generated
 	 */
 	int getId();
 
 	/**
-	 * Sets the value of the '{@link MetamodelExecution.PrescribedMedication#getId <em>Id</em>}' attribute.
+	 * Sets the value of the '{@link MetamodelExecution.PMedication#getId <em>Id</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Id</em>' attribute.
@@ -60,14 +60,14 @@ public interface PrescribedMedication extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Result</em>' attribute.
 	 * @see #setResult(String)
-	 * @see MetamodelExecution.Execution_metamodelPackage#getPrescribedMedication_Result()
+	 * @see MetamodelExecution.Execution_metamodelPackage#getPMedication_Result()
 	 * @model
 	 * @generated
 	 */
 	String getResult();
 
 	/**
-	 * Sets the value of the '{@link MetamodelExecution.PrescribedMedication#getResult <em>Result</em>}' attribute.
+	 * Sets the value of the '{@link MetamodelExecution.PMedication#getResult <em>Result</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Result</em>' attribute.
@@ -86,14 +86,14 @@ public interface PrescribedMedication extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Medication</em>' containment reference.
 	 * @see #setMedication(Medication)
-	 * @see MetamodelExecution.Execution_metamodelPackage#getPrescribedMedication_Medication()
-	 * @model containment="true" required="true"
+	 * @see MetamodelExecution.Execution_metamodelPackage#getPMedication_Medication()
+	 * @model containment="true"
 	 * @generated
 	 */
 	Medication getMedication();
 
 	/**
-	 * Sets the value of the '{@link MetamodelExecution.PrescribedMedication#getMedication <em>Medication</em>}' containment reference.
+	 * Sets the value of the '{@link MetamodelExecution.PMedication#getMedication <em>Medication</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Medication</em>' containment reference.
@@ -103,29 +103,29 @@ public interface PrescribedMedication extends EObject {
 	void setMedication(Medication value);
 
 	/**
-	 * Returns the value of the '<em><b>Prescription</b></em>' containment reference.
+	 * Returns the value of the '<em><b>Prescription Result</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Prescription</em>' containment reference isn't clear,
+	 * If the meaning of the '<em>Prescription Result</em>' containment reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Prescription</em>' containment reference.
-	 * @see #setPrescription(Prescription)
-	 * @see MetamodelExecution.Execution_metamodelPackage#getPrescribedMedication_Prescription()
-	 * @model containment="true" required="true"
+	 * @return the value of the '<em>Prescription Result</em>' containment reference.
+	 * @see #setPrescriptionResult(PrescriptionResult)
+	 * @see MetamodelExecution.Execution_metamodelPackage#getPMedication_PrescriptionResult()
+	 * @model containment="true"
 	 * @generated
 	 */
-	Prescription getPrescription();
+	PrescriptionResult getPrescriptionResult();
 
 	/**
-	 * Sets the value of the '{@link MetamodelExecution.PrescribedMedication#getPrescription <em>Prescription</em>}' containment reference.
+	 * Sets the value of the '{@link MetamodelExecution.PMedication#getPrescriptionResult <em>Prescription Result</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Prescription</em>' containment reference.
-	 * @see #getPrescription()
+	 * @param value the new value of the '<em>Prescription Result</em>' containment reference.
+	 * @see #getPrescriptionResult()
 	 * @generated
 	 */
-	void setPrescription(Prescription value);
+	void setPrescriptionResult(PrescriptionResult value);
 
-} // PrescribedMedication
+} // PMedication

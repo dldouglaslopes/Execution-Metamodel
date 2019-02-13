@@ -4,8 +4,8 @@ package MetamodelExecution.impl;
 
 import MetamodelExecution.Execution_metamodelPackage;
 import MetamodelExecution.Medication;
-import MetamodelExecution.PrescribedMedication;
-import MetamodelExecution.Prescription;
+import MetamodelExecution.PMedication;
+import MetamodelExecution.PrescriptionResult;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
@@ -18,21 +18,21 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Prescribed Medication</b></em>'.
+ * An implementation of the model object '<em><b>PMedication</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link MetamodelExecution.impl.PrescribedMedicationImpl#getId <em>Id</em>}</li>
- *   <li>{@link MetamodelExecution.impl.PrescribedMedicationImpl#getResult <em>Result</em>}</li>
- *   <li>{@link MetamodelExecution.impl.PrescribedMedicationImpl#getMedication <em>Medication</em>}</li>
- *   <li>{@link MetamodelExecution.impl.PrescribedMedicationImpl#getPrescription <em>Prescription</em>}</li>
+ *   <li>{@link MetamodelExecution.impl.PMedicationImpl#getId <em>Id</em>}</li>
+ *   <li>{@link MetamodelExecution.impl.PMedicationImpl#getResult <em>Result</em>}</li>
+ *   <li>{@link MetamodelExecution.impl.PMedicationImpl#getMedication <em>Medication</em>}</li>
+ *   <li>{@link MetamodelExecution.impl.PMedicationImpl#getPrescriptionResult <em>Prescription Result</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class PrescribedMedicationImpl extends MinimalEObjectImpl.Container implements PrescribedMedication {
+public class PMedicationImpl extends MinimalEObjectImpl.Container implements PMedication {
 	/**
 	 * The default value of the '{@link #getId() <em>Id</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -84,21 +84,21 @@ public class PrescribedMedicationImpl extends MinimalEObjectImpl.Container imple
 	protected Medication medication;
 
 	/**
-	 * The cached value of the '{@link #getPrescription() <em>Prescription</em>}' containment reference.
+	 * The cached value of the '{@link #getPrescriptionResult() <em>Prescription Result</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getPrescription()
+	 * @see #getPrescriptionResult()
 	 * @generated
 	 * @ordered
 	 */
-	protected Prescription prescription;
+	protected PrescriptionResult prescriptionResult;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected PrescribedMedicationImpl() {
+	protected PMedicationImpl() {
 		super();
 	}
 
@@ -109,7 +109,7 @@ public class PrescribedMedicationImpl extends MinimalEObjectImpl.Container imple
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Execution_metamodelPackage.Literals.PRESCRIBED_MEDICATION;
+		return Execution_metamodelPackage.Literals.PMEDICATION;
 	}
 
 	/**
@@ -130,8 +130,8 @@ public class PrescribedMedicationImpl extends MinimalEObjectImpl.Container imple
 		int oldId = id;
 		id = newId;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.PRESCRIBED_MEDICATION__ID,
-					oldId, id));
+			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.PMEDICATION__ID, oldId,
+					id));
 	}
 
 	/**
@@ -152,8 +152,8 @@ public class PrescribedMedicationImpl extends MinimalEObjectImpl.Container imple
 		String oldResult = result;
 		result = newResult;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET,
-					Execution_metamodelPackage.PRESCRIBED_MEDICATION__RESULT, oldResult, result));
+			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.PMEDICATION__RESULT,
+					oldResult, result));
 	}
 
 	/**
@@ -175,7 +175,7 @@ public class PrescribedMedicationImpl extends MinimalEObjectImpl.Container imple
 		medication = newMedication;
 		if (eNotificationRequired()) {
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
-					Execution_metamodelPackage.PRESCRIBED_MEDICATION__MEDICATION, oldMedication, newMedication);
+					Execution_metamodelPackage.PMEDICATION__MEDICATION, oldMedication, newMedication);
 			if (msgs == null)
 				msgs = notification;
 			else
@@ -194,18 +194,16 @@ public class PrescribedMedicationImpl extends MinimalEObjectImpl.Container imple
 			NotificationChain msgs = null;
 			if (medication != null)
 				msgs = ((InternalEObject) medication).eInverseRemove(this,
-						EOPPOSITE_FEATURE_BASE - Execution_metamodelPackage.PRESCRIBED_MEDICATION__MEDICATION, null,
-						msgs);
+						EOPPOSITE_FEATURE_BASE - Execution_metamodelPackage.PMEDICATION__MEDICATION, null, msgs);
 			if (newMedication != null)
 				msgs = ((InternalEObject) newMedication).eInverseAdd(this,
-						EOPPOSITE_FEATURE_BASE - Execution_metamodelPackage.PRESCRIBED_MEDICATION__MEDICATION, null,
-						msgs);
+						EOPPOSITE_FEATURE_BASE - Execution_metamodelPackage.PMEDICATION__MEDICATION, null, msgs);
 			msgs = basicSetMedication(newMedication, msgs);
 			if (msgs != null)
 				msgs.dispatch();
 		} else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET,
-					Execution_metamodelPackage.PRESCRIBED_MEDICATION__MEDICATION, newMedication, newMedication));
+			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.PMEDICATION__MEDICATION,
+					newMedication, newMedication));
 	}
 
 	/**
@@ -213,8 +211,8 @@ public class PrescribedMedicationImpl extends MinimalEObjectImpl.Container imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Prescription getPrescription() {
-		return prescription;
+	public PrescriptionResult getPrescriptionResult() {
+		return prescriptionResult;
 	}
 
 	/**
@@ -222,12 +220,14 @@ public class PrescribedMedicationImpl extends MinimalEObjectImpl.Container imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetPrescription(Prescription newPrescription, NotificationChain msgs) {
-		Prescription oldPrescription = prescription;
-		prescription = newPrescription;
+	public NotificationChain basicSetPrescriptionResult(PrescriptionResult newPrescriptionResult,
+			NotificationChain msgs) {
+		PrescriptionResult oldPrescriptionResult = prescriptionResult;
+		prescriptionResult = newPrescriptionResult;
 		if (eNotificationRequired()) {
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
-					Execution_metamodelPackage.PRESCRIBED_MEDICATION__PRESCRIPTION, oldPrescription, newPrescription);
+					Execution_metamodelPackage.PMEDICATION__PRESCRIPTION_RESULT, oldPrescriptionResult,
+					newPrescriptionResult);
 			if (msgs == null)
 				msgs = notification;
 			else
@@ -241,23 +241,24 @@ public class PrescribedMedicationImpl extends MinimalEObjectImpl.Container imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setPrescription(Prescription newPrescription) {
-		if (newPrescription != prescription) {
+	public void setPrescriptionResult(PrescriptionResult newPrescriptionResult) {
+		if (newPrescriptionResult != prescriptionResult) {
 			NotificationChain msgs = null;
-			if (prescription != null)
-				msgs = ((InternalEObject) prescription).eInverseRemove(this,
-						EOPPOSITE_FEATURE_BASE - Execution_metamodelPackage.PRESCRIBED_MEDICATION__PRESCRIPTION, null,
+			if (prescriptionResult != null)
+				msgs = ((InternalEObject) prescriptionResult).eInverseRemove(this,
+						EOPPOSITE_FEATURE_BASE - Execution_metamodelPackage.PMEDICATION__PRESCRIPTION_RESULT, null,
 						msgs);
-			if (newPrescription != null)
-				msgs = ((InternalEObject) newPrescription).eInverseAdd(this,
-						EOPPOSITE_FEATURE_BASE - Execution_metamodelPackage.PRESCRIBED_MEDICATION__PRESCRIPTION, null,
+			if (newPrescriptionResult != null)
+				msgs = ((InternalEObject) newPrescriptionResult).eInverseAdd(this,
+						EOPPOSITE_FEATURE_BASE - Execution_metamodelPackage.PMEDICATION__PRESCRIPTION_RESULT, null,
 						msgs);
-			msgs = basicSetPrescription(newPrescription, msgs);
+			msgs = basicSetPrescriptionResult(newPrescriptionResult, msgs);
 			if (msgs != null)
 				msgs.dispatch();
 		} else if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET,
-					Execution_metamodelPackage.PRESCRIBED_MEDICATION__PRESCRIPTION, newPrescription, newPrescription));
+					Execution_metamodelPackage.PMEDICATION__PRESCRIPTION_RESULT, newPrescriptionResult,
+					newPrescriptionResult));
 	}
 
 	/**
@@ -268,10 +269,10 @@ public class PrescribedMedicationImpl extends MinimalEObjectImpl.Container imple
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-		case Execution_metamodelPackage.PRESCRIBED_MEDICATION__MEDICATION:
+		case Execution_metamodelPackage.PMEDICATION__MEDICATION:
 			return basicSetMedication(null, msgs);
-		case Execution_metamodelPackage.PRESCRIBED_MEDICATION__PRESCRIPTION:
-			return basicSetPrescription(null, msgs);
+		case Execution_metamodelPackage.PMEDICATION__PRESCRIPTION_RESULT:
+			return basicSetPrescriptionResult(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -284,14 +285,14 @@ public class PrescribedMedicationImpl extends MinimalEObjectImpl.Container imple
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case Execution_metamodelPackage.PRESCRIBED_MEDICATION__ID:
+		case Execution_metamodelPackage.PMEDICATION__ID:
 			return getId();
-		case Execution_metamodelPackage.PRESCRIBED_MEDICATION__RESULT:
+		case Execution_metamodelPackage.PMEDICATION__RESULT:
 			return getResult();
-		case Execution_metamodelPackage.PRESCRIBED_MEDICATION__MEDICATION:
+		case Execution_metamodelPackage.PMEDICATION__MEDICATION:
 			return getMedication();
-		case Execution_metamodelPackage.PRESCRIBED_MEDICATION__PRESCRIPTION:
-			return getPrescription();
+		case Execution_metamodelPackage.PMEDICATION__PRESCRIPTION_RESULT:
+			return getPrescriptionResult();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -304,17 +305,17 @@ public class PrescribedMedicationImpl extends MinimalEObjectImpl.Container imple
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case Execution_metamodelPackage.PRESCRIBED_MEDICATION__ID:
+		case Execution_metamodelPackage.PMEDICATION__ID:
 			setId((Integer) newValue);
 			return;
-		case Execution_metamodelPackage.PRESCRIBED_MEDICATION__RESULT:
+		case Execution_metamodelPackage.PMEDICATION__RESULT:
 			setResult((String) newValue);
 			return;
-		case Execution_metamodelPackage.PRESCRIBED_MEDICATION__MEDICATION:
+		case Execution_metamodelPackage.PMEDICATION__MEDICATION:
 			setMedication((Medication) newValue);
 			return;
-		case Execution_metamodelPackage.PRESCRIBED_MEDICATION__PRESCRIPTION:
-			setPrescription((Prescription) newValue);
+		case Execution_metamodelPackage.PMEDICATION__PRESCRIPTION_RESULT:
+			setPrescriptionResult((PrescriptionResult) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -328,17 +329,17 @@ public class PrescribedMedicationImpl extends MinimalEObjectImpl.Container imple
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case Execution_metamodelPackage.PRESCRIBED_MEDICATION__ID:
+		case Execution_metamodelPackage.PMEDICATION__ID:
 			setId(ID_EDEFAULT);
 			return;
-		case Execution_metamodelPackage.PRESCRIBED_MEDICATION__RESULT:
+		case Execution_metamodelPackage.PMEDICATION__RESULT:
 			setResult(RESULT_EDEFAULT);
 			return;
-		case Execution_metamodelPackage.PRESCRIBED_MEDICATION__MEDICATION:
+		case Execution_metamodelPackage.PMEDICATION__MEDICATION:
 			setMedication((Medication) null);
 			return;
-		case Execution_metamodelPackage.PRESCRIBED_MEDICATION__PRESCRIPTION:
-			setPrescription((Prescription) null);
+		case Execution_metamodelPackage.PMEDICATION__PRESCRIPTION_RESULT:
+			setPrescriptionResult((PrescriptionResult) null);
 			return;
 		}
 		super.eUnset(featureID);
@@ -352,14 +353,14 @@ public class PrescribedMedicationImpl extends MinimalEObjectImpl.Container imple
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case Execution_metamodelPackage.PRESCRIBED_MEDICATION__ID:
+		case Execution_metamodelPackage.PMEDICATION__ID:
 			return id != ID_EDEFAULT;
-		case Execution_metamodelPackage.PRESCRIBED_MEDICATION__RESULT:
+		case Execution_metamodelPackage.PMEDICATION__RESULT:
 			return RESULT_EDEFAULT == null ? result != null : !RESULT_EDEFAULT.equals(result);
-		case Execution_metamodelPackage.PRESCRIBED_MEDICATION__MEDICATION:
+		case Execution_metamodelPackage.PMEDICATION__MEDICATION:
 			return medication != null;
-		case Execution_metamodelPackage.PRESCRIBED_MEDICATION__PRESCRIPTION:
-			return prescription != null;
+		case Execution_metamodelPackage.PMEDICATION__PRESCRIPTION_RESULT:
+			return prescriptionResult != null;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -383,4 +384,4 @@ public class PrescribedMedicationImpl extends MinimalEObjectImpl.Container imple
 		return result.toString();
 	}
 
-} //PrescribedMedicationImpl
+} //PMedicationImpl

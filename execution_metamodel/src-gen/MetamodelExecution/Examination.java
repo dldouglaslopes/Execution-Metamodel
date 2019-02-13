@@ -18,8 +18,13 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link MetamodelExecution.Examination#getQuantity <em>Quantity</em>}</li>
  *   <li>{@link MetamodelExecution.Examination#getJustification <em>Justification</em>}</li>
  *   <li>{@link MetamodelExecution.Examination#getClinicalIndication <em>Clinical Indication</em>}</li>
- *   <li>{@link MetamodelExecution.Examination#getExam <em>Exam</em>}</li>
  *   <li>{@link MetamodelExecution.Examination#getCategory <em>Category</em>}</li>
+ *   <li>{@link MetamodelExecution.Examination#getDescription <em>Description</em>}</li>
+ *   <li>{@link MetamodelExecution.Examination#getCode <em>Code</em>}</li>
+ *   <li>{@link MetamodelExecution.Examination#isMemberPeers <em>Member Peers</em>}</li>
+ *   <li>{@link MetamodelExecution.Examination#getName <em>Name</em>}</li>
+ *   <li>{@link MetamodelExecution.Examination#isOnlyEmergency <em>Only Emergency</em>}</li>
+ *   <li>{@link MetamodelExecution.Examination#getIdExamination <em>Id Examination</em>}</li>
  * </ul>
  *
  * @see MetamodelExecution.Execution_metamodelPackage#getExamination()
@@ -158,32 +163,6 @@ public interface Examination extends EObject {
 	void setClinicalIndication(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Exam</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Exam</em>' containment reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Exam</em>' containment reference.
-	 * @see #setExam(Exam)
-	 * @see MetamodelExecution.Execution_metamodelPackage#getExamination_Exam()
-	 * @model containment="true" required="true"
-	 * @generated
-	 */
-	Exam getExam();
-
-	/**
-	 * Sets the value of the '{@link MetamodelExecution.Examination#getExam <em>Exam</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Exam</em>' containment reference.
-	 * @see #getExam()
-	 * @generated
-	 */
-	void setExam(Exam value);
-
-	/**
 	 * Returns the value of the '<em><b>Category</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <p>
@@ -208,5 +187,161 @@ public interface Examination extends EObject {
 	 * @generated
 	 */
 	void setCategory(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Description</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Description</em>' attribute.
+	 * @see #setDescription(String)
+	 * @see MetamodelExecution.Execution_metamodelPackage#getExamination_Description()
+	 * @model
+	 * @generated
+	 */
+	String getDescription();
+
+	/**
+	 * Sets the value of the '{@link MetamodelExecution.Examination#getDescription <em>Description</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Description</em>' attribute.
+	 * @see #getDescription()
+	 * @generated
+	 */
+	void setDescription(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Code</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Code</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Code</em>' attribute.
+	 * @see #setCode(int)
+	 * @see MetamodelExecution.Execution_metamodelPackage#getExamination_Code()
+	 * @model
+	 * @generated
+	 */
+	int getCode();
+
+	/**
+	 * Sets the value of the '{@link MetamodelExecution.Examination#getCode <em>Code</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Code</em>' attribute.
+	 * @see #getCode()
+	 * @generated
+	 */
+	void setCode(int value);
+
+	/**
+	 * Returns the value of the '<em><b>Member Peers</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Member Peers</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Member Peers</em>' attribute.
+	 * @see #setMemberPeers(boolean)
+	 * @see MetamodelExecution.Execution_metamodelPackage#getExamination_MemberPeers()
+	 * @model
+	 * @generated
+	 */
+	boolean isMemberPeers();
+
+	/**
+	 * Sets the value of the '{@link MetamodelExecution.Examination#isMemberPeers <em>Member Peers</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Member Peers</em>' attribute.
+	 * @see #isMemberPeers()
+	 * @generated
+	 */
+	void setMemberPeers(boolean value);
+
+	/**
+	 * Returns the value of the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Name</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Name</em>' attribute.
+	 * @see #setName(String)
+	 * @see MetamodelExecution.Execution_metamodelPackage#getExamination_Name()
+	 * @model
+	 * @generated
+	 */
+	String getName();
+
+	/**
+	 * Sets the value of the '{@link MetamodelExecution.Examination#getName <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Name</em>' attribute.
+	 * @see #getName()
+	 * @generated
+	 */
+	void setName(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Only Emergency</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Only Emergency</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Only Emergency</em>' attribute.
+	 * @see #setOnlyEmergency(boolean)
+	 * @see MetamodelExecution.Execution_metamodelPackage#getExamination_OnlyEmergency()
+	 * @model
+	 * @generated
+	 */
+	boolean isOnlyEmergency();
+
+	/**
+	 * Sets the value of the '{@link MetamodelExecution.Examination#isOnlyEmergency <em>Only Emergency</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Only Emergency</em>' attribute.
+	 * @see #isOnlyEmergency()
+	 * @generated
+	 */
+	void setOnlyEmergency(boolean value);
+
+	/**
+	 * Returns the value of the '<em><b>Id Examination</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Id Examination</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Id Examination</em>' attribute.
+	 * @see #setIdExamination(int)
+	 * @see MetamodelExecution.Execution_metamodelPackage#getExamination_IdExamination()
+	 * @model
+	 * @generated
+	 */
+	int getIdExamination();
+
+	/**
+	 * Sets the value of the '{@link MetamodelExecution.Examination#getIdExamination <em>Id Examination</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Id Examination</em>' attribute.
+	 * @see #getIdExamination()
+	 * @generated
+	 */
+	void setIdExamination(int value);
 
 } // Examination

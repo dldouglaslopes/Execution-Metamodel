@@ -167,7 +167,7 @@ public interface Pathway extends EObject {
 	 * @return the value of the '<em>Audit</em>' containment reference.
 	 * @see #setAudit(Audit)
 	 * @see MetamodelExecution.Execution_metamodelPackage#getPathway_Audit()
-	 * @model containment="true" required="true"
+	 * @model containment="true"
 	 * @generated
 	 */
 	Audit getAudit();

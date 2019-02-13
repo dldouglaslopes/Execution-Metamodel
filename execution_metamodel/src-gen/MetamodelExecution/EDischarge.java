@@ -30,7 +30,7 @@ public interface EDischarge extends EStep {
 	 * @return the value of the '<em>Request</em>' containment reference.
 	 * @see #setRequest(Request)
 	 * @see MetamodelExecution.Execution_metamodelPackage#getEDischarge_Request()
-	 * @model containment="true" required="true"
+	 * @model containment="true"
 	 * @generated
 	 */
 	Request getRequest();

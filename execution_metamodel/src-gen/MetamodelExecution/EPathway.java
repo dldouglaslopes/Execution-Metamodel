@@ -17,7 +17,7 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link MetamodelExecution.EPathway#getElement <em>Element</em>}</li>
+ *   <li>{@link MetamodelExecution.EPathway#getEStep <em>EStep</em>}</li>
  *   <li>{@link MetamodelExecution.EPathway#getId <em>Id</em>}</li>
  *   <li>{@link MetamodelExecution.EPathway#getCreationDate <em>Creation Date</em>}</li>
  *   <li>{@link MetamodelExecution.EPathway#getConclusionDate <em>Conclusion Date</em>}</li>
@@ -41,20 +41,20 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface EPathway extends EObject {
 	/**
-	 * Returns the value of the '<em><b>Element</b></em>' containment reference list.
+	 * Returns the value of the '<em><b>EStep</b></em>' containment reference list.
 	 * The list contents are of type {@link MetamodelExecution.EStep}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Element</em>' containment reference list isn't clear,
+	 * If the meaning of the '<em>EStep</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Element</em>' containment reference list.
-	 * @see MetamodelExecution.Execution_metamodelPackage#getEPathway_Element()
+	 * @return the value of the '<em>EStep</em>' containment reference list.
+	 * @see MetamodelExecution.Execution_metamodelPackage#getEPathway_EStep()
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<EStep> getElement();
+	EList<EStep> getEStep();
 
 	/**
 	 * Returns the value of the '<em><b>Id</b></em>' attribute.
@@ -214,7 +214,7 @@ public interface EPathway extends EObject {
 	 * @return the value of the '<em>Responsible</em>' containment reference.
 	 * @see #setResponsible(Responsible)
 	 * @see MetamodelExecution.Execution_metamodelPackage#getEPathway_Responsible()
-	 * @model containment="true" required="true"
+	 * @model containment="true"
 	 * @generated
 	 */
 	Responsible getResponsible();
@@ -240,7 +240,7 @@ public interface EPathway extends EObject {
 	 * @return the value of the '<em>Lastprofessional</em>' containment reference.
 	 * @see #setLastprofessional(LastProfessional)
 	 * @see MetamodelExecution.Execution_metamodelPackage#getEPathway_Lastprofessional()
-	 * @model containment="true" required="true"
+	 * @model containment="true"
 	 * @generated
 	 */
 	LastProfessional getLastprofessional();
@@ -292,7 +292,7 @@ public interface EPathway extends EObject {
 	 * @return the value of the '<em>Justification</em>' containment reference.
 	 * @see #setJustification(Justification)
 	 * @see MetamodelExecution.Execution_metamodelPackage#getEPathway_Justification()
-	 * @model containment="true" required="true"
+	 * @model containment="true"
 	 * @generated
 	 */
 	Justification getJustification();
@@ -360,7 +360,7 @@ public interface EPathway extends EObject {
 	 * @return the value of the '<em>Medicalcare</em>' containment reference.
 	 * @see #setMedicalcare(MedicalCare)
 	 * @see MetamodelExecution.Execution_metamodelPackage#getEPathway_Medicalcare()
-	 * @model containment="true" required="true"
+	 * @model containment="true"
 	 * @generated
 	 */
 	MedicalCare getMedicalcare();

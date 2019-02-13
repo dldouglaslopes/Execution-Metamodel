@@ -13,10 +13,10 @@ import org.eclipse.emf.common.util.EList;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link MetamodelExecution.ETreatment#getPrescribedexam <em>Prescribedexam</em>}</li>
- *   <li>{@link MetamodelExecution.ETreatment#getPrescribedprocedure <em>Prescribedprocedure</em>}</li>
- *   <li>{@link MetamodelExecution.ETreatment#getPrescribedinternment <em>Prescribedinternment</em>}</li>
- *   <li>{@link MetamodelExecution.ETreatment#getPrescribedmedication <em>Prescribedmedication</em>}</li>
+ *   <li>{@link MetamodelExecution.ETreatment#getPexamination <em>Pexamination</em>}</li>
+ *   <li>{@link MetamodelExecution.ETreatment#getPprocedure <em>Pprocedure</em>}</li>
+ *   <li>{@link MetamodelExecution.ETreatment#getPinternment <em>Pinternment</em>}</li>
+ *   <li>{@link MetamodelExecution.ETreatment#getPmedication <em>Pmedication</em>}</li>
  *   <li>{@link MetamodelExecution.ETreatment#getIdsPrescribedExamination <em>Ids Prescribed Examination</em>}</li>
  *   <li>{@link MetamodelExecution.ETreatment#getIdsPrescribedProcedure <em>Ids Prescribed Procedure</em>}</li>
  *   <li>{@link MetamodelExecution.ETreatment#getIdsPrescribedInternment <em>Ids Prescribed Internment</em>}</li>
@@ -29,68 +29,68 @@ import org.eclipse.emf.common.util.EList;
  */
 public interface ETreatment extends EStep {
 	/**
-	 * Returns the value of the '<em><b>Prescribedexam</b></em>' containment reference list.
-	 * The list contents are of type {@link MetamodelExecution.PrescribedExamination}.
+	 * Returns the value of the '<em><b>Pexamination</b></em>' containment reference list.
+	 * The list contents are of type {@link MetamodelExecution.PExamination}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Prescribedexam</em>' containment reference list isn't clear,
+	 * If the meaning of the '<em>Pexamination</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Prescribedexam</em>' containment reference list.
-	 * @see MetamodelExecution.Execution_metamodelPackage#getETreatment_Prescribedexam()
+	 * @return the value of the '<em>Pexamination</em>' containment reference list.
+	 * @see MetamodelExecution.Execution_metamodelPackage#getETreatment_Pexamination()
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<PrescribedExamination> getPrescribedexam();
+	EList<PExamination> getPexamination();
 
 	/**
-	 * Returns the value of the '<em><b>Prescribedprocedure</b></em>' containment reference list.
-	 * The list contents are of type {@link MetamodelExecution.PrescribedProcedure}.
+	 * Returns the value of the '<em><b>Pprocedure</b></em>' containment reference list.
+	 * The list contents are of type {@link MetamodelExecution.PProcedure}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Prescribedprocedure</em>' containment reference list isn't clear,
+	 * If the meaning of the '<em>Pprocedure</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Prescribedprocedure</em>' containment reference list.
-	 * @see MetamodelExecution.Execution_metamodelPackage#getETreatment_Prescribedprocedure()
+	 * @return the value of the '<em>Pprocedure</em>' containment reference list.
+	 * @see MetamodelExecution.Execution_metamodelPackage#getETreatment_Pprocedure()
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<PrescribedProcedure> getPrescribedprocedure();
+	EList<PProcedure> getPprocedure();
 
 	/**
-	 * Returns the value of the '<em><b>Prescribedinternment</b></em>' containment reference list.
-	 * The list contents are of type {@link MetamodelExecution.PrescribedInternment}.
+	 * Returns the value of the '<em><b>Pinternment</b></em>' containment reference list.
+	 * The list contents are of type {@link MetamodelExecution.PInternment}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Prescribedinternment</em>' containment reference list isn't clear,
+	 * If the meaning of the '<em>Pinternment</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Prescribedinternment</em>' containment reference list.
-	 * @see MetamodelExecution.Execution_metamodelPackage#getETreatment_Prescribedinternment()
+	 * @return the value of the '<em>Pinternment</em>' containment reference list.
+	 * @see MetamodelExecution.Execution_metamodelPackage#getETreatment_Pinternment()
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<PrescribedInternment> getPrescribedinternment();
+	EList<PInternment> getPinternment();
 
 	/**
-	 * Returns the value of the '<em><b>Prescribedmedication</b></em>' containment reference list.
-	 * The list contents are of type {@link MetamodelExecution.PrescribedMedication}.
+	 * Returns the value of the '<em><b>Pmedication</b></em>' containment reference list.
+	 * The list contents are of type {@link MetamodelExecution.PMedication}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Prescribedmedication</em>' containment reference list isn't clear,
+	 * If the meaning of the '<em>Pmedication</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Prescribedmedication</em>' containment reference list.
-	 * @see MetamodelExecution.Execution_metamodelPackage#getETreatment_Prescribedmedication()
+	 * @return the value of the '<em>Pmedication</em>' containment reference list.
+	 * @see MetamodelExecution.Execution_metamodelPackage#getETreatment_Pmedication()
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<PrescribedMedication> getPrescribedmedication();
+	EList<PMedication> getPmedication();
 
 	/**
 	 * Returns the value of the '<em><b>Ids Prescribed Examination</b></em>' attribute list.

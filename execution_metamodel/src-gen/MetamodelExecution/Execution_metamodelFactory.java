@@ -85,49 +85,40 @@ public interface Execution_metamodelFactory extends EFactory {
 	Examination createExamination();
 
 	/**
-	 * Returns a new object of class '<em>Prescribed Examination</em>'.
+	 * Returns a new object of class '<em>PExamination</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Prescribed Examination</em>'.
+	 * @return a new object of class '<em>PExamination</em>'.
 	 * @generated
 	 */
-	PrescribedExamination createPrescribedExamination();
+	PExamination createPExamination();
 
 	/**
-	 * Returns a new object of class '<em>Exam</em>'.
+	 * Returns a new object of class '<em>PProcedure</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Exam</em>'.
+	 * @return a new object of class '<em>PProcedure</em>'.
 	 * @generated
 	 */
-	Exam createExam();
+	PProcedure createPProcedure();
 
 	/**
-	 * Returns a new object of class '<em>Prescribed Procedure</em>'.
+	 * Returns a new object of class '<em>PInternment</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Prescribed Procedure</em>'.
+	 * @return a new object of class '<em>PInternment</em>'.
 	 * @generated
 	 */
-	PrescribedProcedure createPrescribedProcedure();
+	PInternment createPInternment();
 
 	/**
-	 * Returns a new object of class '<em>Prescribed Internment</em>'.
+	 * Returns a new object of class '<em>PMedication</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Prescribed Internment</em>'.
+	 * @return a new object of class '<em>PMedication</em>'.
 	 * @generated
 	 */
-	PrescribedInternment createPrescribedInternment();
-
-	/**
-	 * Returns a new object of class '<em>Prescribed Medication</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Prescribed Medication</em>'.
-	 * @generated
-	 */
-	PrescribedMedication createPrescribedMedication();
+	PMedication createPMedication();
 
 	/**
 	 * Returns a new object of class '<em>Complement</em>'.
@@ -139,13 +130,13 @@ public interface Execution_metamodelFactory extends EFactory {
 	Complement createComplement();
 
 	/**
-	 * Returns a new object of class '<em>Prescribed Prescription Item</em>'.
+	 * Returns a new object of class '<em>PPrescription</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Prescribed Prescription Item</em>'.
+	 * @return a new object of class '<em>PPrescription</em>'.
 	 * @generated
 	 */
-	PrescribedPrescriptionItem createPrescribedPrescriptionItem();
+	PPrescription createPPrescription();
 
 	/**
 	 * Returns a new object of class '<em>Justification</em>'.
@@ -229,13 +220,13 @@ public interface Execution_metamodelFactory extends EFactory {
 	LastProfessional createLastProfessional();
 
 	/**
-	 * Returns a new object of class '<em>Prescription</em>'.
+	 * Returns a new object of class '<em>Prescription Result</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Prescription</em>'.
+	 * @return a new object of class '<em>Prescription Result</em>'.
 	 * @generated
 	 */
-	Prescription createPrescription();
+	PrescriptionResult createPrescriptionResult();
 
 	/**
 	 * Returns a new object of class '<em>EPathway</em>'.
@@ -272,24 +263,6 @@ public interface Execution_metamodelFactory extends EFactory {
 	 * @generated
 	 */
 	Medication createMedication();
-
-	/**
-	 * Returns a new object of class '<em>Unit</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Unit</em>'.
-	 * @generated
-	 */
-	Unit createUnit();
-
-	/**
-	 * Returns a new object of class '<em>Access</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Access</em>'.
-	 * @generated
-	 */
-	Access createAccess();
 
 	/**
 	 * Returns a new object of class '<em>EAction</em>'.
@@ -506,6 +479,15 @@ public interface Execution_metamodelFactory extends EFactory {
 	 * @generated
 	 */
 	Option createOption();
+
+	/**
+	 * Returns a new object of class '<em>Prescription</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Prescription</em>'.
+	 * @generated
+	 */
+	Prescription createPrescription();
 
 	/**
 	 * Returns the package supported by this factory.

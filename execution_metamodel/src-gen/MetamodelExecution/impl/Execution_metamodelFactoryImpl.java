@@ -70,20 +70,18 @@ public class Execution_metamodelFactoryImpl extends EFactoryImpl implements Exec
 			return createETreatment();
 		case Execution_metamodelPackage.EXAMINATION:
 			return createExamination();
-		case Execution_metamodelPackage.PRESCRIBED_EXAMINATION:
-			return createPrescribedExamination();
-		case Execution_metamodelPackage.EXAM:
-			return createExam();
-		case Execution_metamodelPackage.PRESCRIBED_PROCEDURE:
-			return createPrescribedProcedure();
-		case Execution_metamodelPackage.PRESCRIBED_INTERNMENT:
-			return createPrescribedInternment();
-		case Execution_metamodelPackage.PRESCRIBED_MEDICATION:
-			return createPrescribedMedication();
+		case Execution_metamodelPackage.PEXAMINATION:
+			return createPExamination();
+		case Execution_metamodelPackage.PPROCEDURE:
+			return createPProcedure();
+		case Execution_metamodelPackage.PINTERNMENT:
+			return createPInternment();
+		case Execution_metamodelPackage.PMEDICATION:
+			return createPMedication();
 		case Execution_metamodelPackage.COMPLEMENT:
 			return createComplement();
-		case Execution_metamodelPackage.PRESCRIBED_PRESCRIPTION_ITEM:
-			return createPrescribedPrescriptionItem();
+		case Execution_metamodelPackage.PPRESCRIPTION:
+			return createPPrescription();
 		case Execution_metamodelPackage.JUSTIFICATION:
 			return createJustification();
 		case Execution_metamodelPackage.RESPONSIBLE:
@@ -102,8 +100,8 @@ public class Execution_metamodelFactoryImpl extends EFactoryImpl implements Exec
 			return createExecutor();
 		case Execution_metamodelPackage.LAST_PROFESSIONAL:
 			return createLastProfessional();
-		case Execution_metamodelPackage.PRESCRIPTION:
-			return createPrescription();
+		case Execution_metamodelPackage.PRESCRIPTION_RESULT:
+			return createPrescriptionResult();
 		case Execution_metamodelPackage.EPATHWAY:
 			return createEPathway();
 		case Execution_metamodelPackage.QUESTION:
@@ -112,10 +110,6 @@ public class Execution_metamodelFactoryImpl extends EFactoryImpl implements Exec
 			return createVariable();
 		case Execution_metamodelPackage.MEDICATION:
 			return createMedication();
-		case Execution_metamodelPackage.UNIT:
-			return createUnit();
-		case Execution_metamodelPackage.ACCESS:
-			return createAccess();
 		case Execution_metamodelPackage.EACTION:
 			return createEAction();
 		case Execution_metamodelPackage.REQUEST:
@@ -164,6 +158,8 @@ public class Execution_metamodelFactoryImpl extends EFactoryImpl implements Exec
 			return createPatientSex();
 		case Execution_metamodelPackage.OPTION:
 			return createOption();
+		case Execution_metamodelPackage.PRESCRIPTION:
+			return createPrescription();
 		default:
 			throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -244,9 +240,9 @@ public class Execution_metamodelFactoryImpl extends EFactoryImpl implements Exec
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public PrescribedExamination createPrescribedExamination() {
-		PrescribedExaminationImpl prescribedExamination = new PrescribedExaminationImpl();
-		return prescribedExamination;
+	public PExamination createPExamination() {
+		PExaminationImpl pExamination = new PExaminationImpl();
+		return pExamination;
 	}
 
 	/**
@@ -254,9 +250,9 @@ public class Execution_metamodelFactoryImpl extends EFactoryImpl implements Exec
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Exam createExam() {
-		ExamImpl exam = new ExamImpl();
-		return exam;
+	public PProcedure createPProcedure() {
+		PProcedureImpl pProcedure = new PProcedureImpl();
+		return pProcedure;
 	}
 
 	/**
@@ -264,9 +260,9 @@ public class Execution_metamodelFactoryImpl extends EFactoryImpl implements Exec
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public PrescribedProcedure createPrescribedProcedure() {
-		PrescribedProcedureImpl prescribedProcedure = new PrescribedProcedureImpl();
-		return prescribedProcedure;
+	public PInternment createPInternment() {
+		PInternmentImpl pInternment = new PInternmentImpl();
+		return pInternment;
 	}
 
 	/**
@@ -274,19 +270,9 @@ public class Execution_metamodelFactoryImpl extends EFactoryImpl implements Exec
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public PrescribedInternment createPrescribedInternment() {
-		PrescribedInternmentImpl prescribedInternment = new PrescribedInternmentImpl();
-		return prescribedInternment;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public PrescribedMedication createPrescribedMedication() {
-		PrescribedMedicationImpl prescribedMedication = new PrescribedMedicationImpl();
-		return prescribedMedication;
+	public PMedication createPMedication() {
+		PMedicationImpl pMedication = new PMedicationImpl();
+		return pMedication;
 	}
 
 	/**
@@ -304,9 +290,9 @@ public class Execution_metamodelFactoryImpl extends EFactoryImpl implements Exec
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public PrescribedPrescriptionItem createPrescribedPrescriptionItem() {
-		PrescribedPrescriptionItemImpl prescribedPrescriptionItem = new PrescribedPrescriptionItemImpl();
-		return prescribedPrescriptionItem;
+	public PPrescription createPPrescription() {
+		PPrescriptionImpl pPrescription = new PPrescriptionImpl();
+		return pPrescription;
 	}
 
 	/**
@@ -404,9 +390,9 @@ public class Execution_metamodelFactoryImpl extends EFactoryImpl implements Exec
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Prescription createPrescription() {
-		PrescriptionImpl prescription = new PrescriptionImpl();
-		return prescription;
+	public PrescriptionResult createPrescriptionResult() {
+		PrescriptionResultImpl prescriptionResult = new PrescriptionResultImpl();
+		return prescriptionResult;
 	}
 
 	/**
@@ -447,26 +433,6 @@ public class Execution_metamodelFactoryImpl extends EFactoryImpl implements Exec
 	public Medication createMedication() {
 		MedicationImpl medication = new MedicationImpl();
 		return medication;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Unit createUnit() {
-		UnitImpl unit = new UnitImpl();
-		return unit;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Access createAccess() {
-		AccessImpl access = new AccessImpl();
-		return access;
 	}
 
 	/**
@@ -707,6 +673,16 @@ public class Execution_metamodelFactoryImpl extends EFactoryImpl implements Exec
 	public Option createOption() {
 		OptionImpl option = new OptionImpl();
 		return option;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Prescription createPrescription() {
+		PrescriptionImpl prescription = new PrescriptionImpl();
+		return prescription;
 	}
 
 	/**

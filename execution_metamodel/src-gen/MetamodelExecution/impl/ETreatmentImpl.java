@@ -4,10 +4,10 @@ package MetamodelExecution.impl;
 
 import MetamodelExecution.ETreatment;
 import MetamodelExecution.Execution_metamodelPackage;
-import MetamodelExecution.PrescribedExamination;
-import MetamodelExecution.PrescribedInternment;
-import MetamodelExecution.PrescribedMedication;
-import MetamodelExecution.PrescribedProcedure;
+import MetamodelExecution.PExamination;
+import MetamodelExecution.PInternment;
+import MetamodelExecution.PMedication;
+import MetamodelExecution.PProcedure;
 
 import java.util.Collection;
 
@@ -30,10 +30,10 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link MetamodelExecution.impl.ETreatmentImpl#getPrescribedexam <em>Prescribedexam</em>}</li>
- *   <li>{@link MetamodelExecution.impl.ETreatmentImpl#getPrescribedprocedure <em>Prescribedprocedure</em>}</li>
- *   <li>{@link MetamodelExecution.impl.ETreatmentImpl#getPrescribedinternment <em>Prescribedinternment</em>}</li>
- *   <li>{@link MetamodelExecution.impl.ETreatmentImpl#getPrescribedmedication <em>Prescribedmedication</em>}</li>
+ *   <li>{@link MetamodelExecution.impl.ETreatmentImpl#getPexamination <em>Pexamination</em>}</li>
+ *   <li>{@link MetamodelExecution.impl.ETreatmentImpl#getPprocedure <em>Pprocedure</em>}</li>
+ *   <li>{@link MetamodelExecution.impl.ETreatmentImpl#getPinternment <em>Pinternment</em>}</li>
+ *   <li>{@link MetamodelExecution.impl.ETreatmentImpl#getPmedication <em>Pmedication</em>}</li>
  *   <li>{@link MetamodelExecution.impl.ETreatmentImpl#getIdsPrescribedExamination <em>Ids Prescribed Examination</em>}</li>
  *   <li>{@link MetamodelExecution.impl.ETreatmentImpl#getIdsPrescribedProcedure <em>Ids Prescribed Procedure</em>}</li>
  *   <li>{@link MetamodelExecution.impl.ETreatmentImpl#getIdsPrescribedInternment <em>Ids Prescribed Internment</em>}</li>
@@ -44,44 +44,44 @@ import org.eclipse.emf.ecore.util.InternalEList;
  */
 public class ETreatmentImpl extends EStepImpl implements ETreatment {
 	/**
-	 * The cached value of the '{@link #getPrescribedexam() <em>Prescribedexam</em>}' containment reference list.
+	 * The cached value of the '{@link #getPexamination() <em>Pexamination</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getPrescribedexam()
+	 * @see #getPexamination()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<PrescribedExamination> prescribedexam;
+	protected EList<PExamination> pexamination;
 
 	/**
-	 * The cached value of the '{@link #getPrescribedprocedure() <em>Prescribedprocedure</em>}' containment reference list.
+	 * The cached value of the '{@link #getPprocedure() <em>Pprocedure</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getPrescribedprocedure()
+	 * @see #getPprocedure()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<PrescribedProcedure> prescribedprocedure;
+	protected EList<PProcedure> pprocedure;
 
 	/**
-	 * The cached value of the '{@link #getPrescribedinternment() <em>Prescribedinternment</em>}' containment reference list.
+	 * The cached value of the '{@link #getPinternment() <em>Pinternment</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getPrescribedinternment()
+	 * @see #getPinternment()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<PrescribedInternment> prescribedinternment;
+	protected EList<PInternment> pinternment;
 
 	/**
-	 * The cached value of the '{@link #getPrescribedmedication() <em>Prescribedmedication</em>}' containment reference list.
+	 * The cached value of the '{@link #getPmedication() <em>Pmedication</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getPrescribedmedication()
+	 * @see #getPmedication()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<PrescribedMedication> prescribedmedication;
+	protected EList<PMedication> pmedication;
 
 	/**
 	 * The cached value of the '{@link #getIdsPrescribedExamination() <em>Ids Prescribed Examination</em>}' attribute list.
@@ -147,12 +147,12 @@ public class ETreatmentImpl extends EStepImpl implements ETreatment {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<PrescribedExamination> getPrescribedexam() {
-		if (prescribedexam == null) {
-			prescribedexam = new EObjectContainmentEList<PrescribedExamination>(PrescribedExamination.class, this,
-					Execution_metamodelPackage.ETREATMENT__PRESCRIBEDEXAM);
+	public EList<PExamination> getPexamination() {
+		if (pexamination == null) {
+			pexamination = new EObjectContainmentEList<PExamination>(PExamination.class, this,
+					Execution_metamodelPackage.ETREATMENT__PEXAMINATION);
 		}
-		return prescribedexam;
+		return pexamination;
 	}
 
 	/**
@@ -160,12 +160,12 @@ public class ETreatmentImpl extends EStepImpl implements ETreatment {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<PrescribedProcedure> getPrescribedprocedure() {
-		if (prescribedprocedure == null) {
-			prescribedprocedure = new EObjectContainmentEList<PrescribedProcedure>(PrescribedProcedure.class, this,
-					Execution_metamodelPackage.ETREATMENT__PRESCRIBEDPROCEDURE);
+	public EList<PProcedure> getPprocedure() {
+		if (pprocedure == null) {
+			pprocedure = new EObjectContainmentEList<PProcedure>(PProcedure.class, this,
+					Execution_metamodelPackage.ETREATMENT__PPROCEDURE);
 		}
-		return prescribedprocedure;
+		return pprocedure;
 	}
 
 	/**
@@ -173,12 +173,12 @@ public class ETreatmentImpl extends EStepImpl implements ETreatment {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<PrescribedInternment> getPrescribedinternment() {
-		if (prescribedinternment == null) {
-			prescribedinternment = new EObjectContainmentEList<PrescribedInternment>(PrescribedInternment.class, this,
-					Execution_metamodelPackage.ETREATMENT__PRESCRIBEDINTERNMENT);
+	public EList<PInternment> getPinternment() {
+		if (pinternment == null) {
+			pinternment = new EObjectContainmentEList<PInternment>(PInternment.class, this,
+					Execution_metamodelPackage.ETREATMENT__PINTERNMENT);
 		}
-		return prescribedinternment;
+		return pinternment;
 	}
 
 	/**
@@ -186,12 +186,12 @@ public class ETreatmentImpl extends EStepImpl implements ETreatment {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<PrescribedMedication> getPrescribedmedication() {
-		if (prescribedmedication == null) {
-			prescribedmedication = new EObjectContainmentEList<PrescribedMedication>(PrescribedMedication.class, this,
-					Execution_metamodelPackage.ETREATMENT__PRESCRIBEDMEDICATION);
+	public EList<PMedication> getPmedication() {
+		if (pmedication == null) {
+			pmedication = new EObjectContainmentEList<PMedication>(PMedication.class, this,
+					Execution_metamodelPackage.ETREATMENT__PMEDICATION);
 		}
-		return prescribedmedication;
+		return pmedication;
 	}
 
 	/**
@@ -254,14 +254,14 @@ public class ETreatmentImpl extends EStepImpl implements ETreatment {
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-		case Execution_metamodelPackage.ETREATMENT__PRESCRIBEDEXAM:
-			return ((InternalEList<?>) getPrescribedexam()).basicRemove(otherEnd, msgs);
-		case Execution_metamodelPackage.ETREATMENT__PRESCRIBEDPROCEDURE:
-			return ((InternalEList<?>) getPrescribedprocedure()).basicRemove(otherEnd, msgs);
-		case Execution_metamodelPackage.ETREATMENT__PRESCRIBEDINTERNMENT:
-			return ((InternalEList<?>) getPrescribedinternment()).basicRemove(otherEnd, msgs);
-		case Execution_metamodelPackage.ETREATMENT__PRESCRIBEDMEDICATION:
-			return ((InternalEList<?>) getPrescribedmedication()).basicRemove(otherEnd, msgs);
+		case Execution_metamodelPackage.ETREATMENT__PEXAMINATION:
+			return ((InternalEList<?>) getPexamination()).basicRemove(otherEnd, msgs);
+		case Execution_metamodelPackage.ETREATMENT__PPROCEDURE:
+			return ((InternalEList<?>) getPprocedure()).basicRemove(otherEnd, msgs);
+		case Execution_metamodelPackage.ETREATMENT__PINTERNMENT:
+			return ((InternalEList<?>) getPinternment()).basicRemove(otherEnd, msgs);
+		case Execution_metamodelPackage.ETREATMENT__PMEDICATION:
+			return ((InternalEList<?>) getPmedication()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -274,14 +274,14 @@ public class ETreatmentImpl extends EStepImpl implements ETreatment {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case Execution_metamodelPackage.ETREATMENT__PRESCRIBEDEXAM:
-			return getPrescribedexam();
-		case Execution_metamodelPackage.ETREATMENT__PRESCRIBEDPROCEDURE:
-			return getPrescribedprocedure();
-		case Execution_metamodelPackage.ETREATMENT__PRESCRIBEDINTERNMENT:
-			return getPrescribedinternment();
-		case Execution_metamodelPackage.ETREATMENT__PRESCRIBEDMEDICATION:
-			return getPrescribedmedication();
+		case Execution_metamodelPackage.ETREATMENT__PEXAMINATION:
+			return getPexamination();
+		case Execution_metamodelPackage.ETREATMENT__PPROCEDURE:
+			return getPprocedure();
+		case Execution_metamodelPackage.ETREATMENT__PINTERNMENT:
+			return getPinternment();
+		case Execution_metamodelPackage.ETREATMENT__PMEDICATION:
+			return getPmedication();
 		case Execution_metamodelPackage.ETREATMENT__IDS_PRESCRIBED_EXAMINATION:
 			return getIdsPrescribedExamination();
 		case Execution_metamodelPackage.ETREATMENT__IDS_PRESCRIBED_PROCEDURE:
@@ -303,21 +303,21 @@ public class ETreatmentImpl extends EStepImpl implements ETreatment {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case Execution_metamodelPackage.ETREATMENT__PRESCRIBEDEXAM:
-			getPrescribedexam().clear();
-			getPrescribedexam().addAll((Collection<? extends PrescribedExamination>) newValue);
+		case Execution_metamodelPackage.ETREATMENT__PEXAMINATION:
+			getPexamination().clear();
+			getPexamination().addAll((Collection<? extends PExamination>) newValue);
 			return;
-		case Execution_metamodelPackage.ETREATMENT__PRESCRIBEDPROCEDURE:
-			getPrescribedprocedure().clear();
-			getPrescribedprocedure().addAll((Collection<? extends PrescribedProcedure>) newValue);
+		case Execution_metamodelPackage.ETREATMENT__PPROCEDURE:
+			getPprocedure().clear();
+			getPprocedure().addAll((Collection<? extends PProcedure>) newValue);
 			return;
-		case Execution_metamodelPackage.ETREATMENT__PRESCRIBEDINTERNMENT:
-			getPrescribedinternment().clear();
-			getPrescribedinternment().addAll((Collection<? extends PrescribedInternment>) newValue);
+		case Execution_metamodelPackage.ETREATMENT__PINTERNMENT:
+			getPinternment().clear();
+			getPinternment().addAll((Collection<? extends PInternment>) newValue);
 			return;
-		case Execution_metamodelPackage.ETREATMENT__PRESCRIBEDMEDICATION:
-			getPrescribedmedication().clear();
-			getPrescribedmedication().addAll((Collection<? extends PrescribedMedication>) newValue);
+		case Execution_metamodelPackage.ETREATMENT__PMEDICATION:
+			getPmedication().clear();
+			getPmedication().addAll((Collection<? extends PMedication>) newValue);
 			return;
 		case Execution_metamodelPackage.ETREATMENT__IDS_PRESCRIBED_EXAMINATION:
 			getIdsPrescribedExamination().clear();
@@ -347,17 +347,17 @@ public class ETreatmentImpl extends EStepImpl implements ETreatment {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case Execution_metamodelPackage.ETREATMENT__PRESCRIBEDEXAM:
-			getPrescribedexam().clear();
+		case Execution_metamodelPackage.ETREATMENT__PEXAMINATION:
+			getPexamination().clear();
 			return;
-		case Execution_metamodelPackage.ETREATMENT__PRESCRIBEDPROCEDURE:
-			getPrescribedprocedure().clear();
+		case Execution_metamodelPackage.ETREATMENT__PPROCEDURE:
+			getPprocedure().clear();
 			return;
-		case Execution_metamodelPackage.ETREATMENT__PRESCRIBEDINTERNMENT:
-			getPrescribedinternment().clear();
+		case Execution_metamodelPackage.ETREATMENT__PINTERNMENT:
+			getPinternment().clear();
 			return;
-		case Execution_metamodelPackage.ETREATMENT__PRESCRIBEDMEDICATION:
-			getPrescribedmedication().clear();
+		case Execution_metamodelPackage.ETREATMENT__PMEDICATION:
+			getPmedication().clear();
 			return;
 		case Execution_metamodelPackage.ETREATMENT__IDS_PRESCRIBED_EXAMINATION:
 			getIdsPrescribedExamination().clear();
@@ -383,14 +383,14 @@ public class ETreatmentImpl extends EStepImpl implements ETreatment {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case Execution_metamodelPackage.ETREATMENT__PRESCRIBEDEXAM:
-			return prescribedexam != null && !prescribedexam.isEmpty();
-		case Execution_metamodelPackage.ETREATMENT__PRESCRIBEDPROCEDURE:
-			return prescribedprocedure != null && !prescribedprocedure.isEmpty();
-		case Execution_metamodelPackage.ETREATMENT__PRESCRIBEDINTERNMENT:
-			return prescribedinternment != null && !prescribedinternment.isEmpty();
-		case Execution_metamodelPackage.ETREATMENT__PRESCRIBEDMEDICATION:
-			return prescribedmedication != null && !prescribedmedication.isEmpty();
+		case Execution_metamodelPackage.ETREATMENT__PEXAMINATION:
+			return pexamination != null && !pexamination.isEmpty();
+		case Execution_metamodelPackage.ETREATMENT__PPROCEDURE:
+			return pprocedure != null && !pprocedure.isEmpty();
+		case Execution_metamodelPackage.ETREATMENT__PINTERNMENT:
+			return pinternment != null && !pinternment.isEmpty();
+		case Execution_metamodelPackage.ETREATMENT__PMEDICATION:
+			return pmedication != null && !pmedication.isEmpty();
 		case Execution_metamodelPackage.ETREATMENT__IDS_PRESCRIBED_EXAMINATION:
 			return idsPrescribedExamination != null && !idsPrescribedExamination.isEmpty();
 		case Execution_metamodelPackage.ETREATMENT__IDS_PRESCRIBED_PROCEDURE:
