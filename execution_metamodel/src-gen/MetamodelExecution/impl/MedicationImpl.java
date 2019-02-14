@@ -33,7 +33,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *   <li>{@link MetamodelExecution.impl.MedicationImpl#getTimeTreatement <em>Time Treatement</em>}</li>
  *   <li>{@link MetamodelExecution.impl.MedicationImpl#getTimeInterval <em>Time Interval</em>}</li>
  *   <li>{@link MetamodelExecution.impl.MedicationImpl#getCategory <em>Category</em>}</li>
- *   <li>{@link MetamodelExecution.impl.MedicationImpl#getCodeAcess <em>Code Acess</em>}</li>
+ *   <li>{@link MetamodelExecution.impl.MedicationImpl#getCodeAccess <em>Code Access</em>}</li>
  *   <li>{@link MetamodelExecution.impl.MedicationImpl#getIdAccess <em>Id Access</em>}</li>
  *   <li>{@link MetamodelExecution.impl.MedicationImpl#getNameAcess <em>Name Acess</em>}</li>
  *   <li>{@link MetamodelExecution.impl.MedicationImpl#getCodeUnit <em>Code Unit</em>}</li>
@@ -306,24 +306,24 @@ public class MedicationImpl extends MinimalEObjectImpl.Container implements Medi
 	protected String category = CATEGORY_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getCodeAcess() <em>Code Acess</em>}' attribute.
+	 * The default value of the '{@link #getCodeAccess() <em>Code Access</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getCodeAcess()
+	 * @see #getCodeAccess()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final int CODE_ACESS_EDEFAULT = 0;
+	protected static final int CODE_ACCESS_EDEFAULT = 0;
 
 	/**
-	 * The cached value of the '{@link #getCodeAcess() <em>Code Acess</em>}' attribute.
+	 * The cached value of the '{@link #getCodeAccess() <em>Code Access</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getCodeAcess()
+	 * @see #getCodeAccess()
 	 * @generated
 	 * @ordered
 	 */
-	protected int codeAcess = CODE_ACESS_EDEFAULT;
+	protected int codeAccess = CODE_ACCESS_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getIdAccess() <em>Id Access</em>}' attribute.
@@ -755,8 +755,8 @@ public class MedicationImpl extends MinimalEObjectImpl.Container implements Medi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public int getCodeAcess() {
-		return codeAcess;
+	public int getCodeAccess() {
+		return codeAccess;
 	}
 
 	/**
@@ -764,12 +764,12 @@ public class MedicationImpl extends MinimalEObjectImpl.Container implements Medi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setCodeAcess(int newCodeAcess) {
-		int oldCodeAcess = codeAcess;
-		codeAcess = newCodeAcess;
+	public void setCodeAccess(int newCodeAccess) {
+		int oldCodeAccess = codeAccess;
+		codeAccess = newCodeAccess;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.MEDICATION__CODE_ACESS,
-					oldCodeAcess, codeAcess));
+			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.MEDICATION__CODE_ACCESS,
+					oldCodeAccess, codeAccess));
 	}
 
 	/**
@@ -938,8 +938,8 @@ public class MedicationImpl extends MinimalEObjectImpl.Container implements Medi
 			return getTimeInterval();
 		case Execution_metamodelPackage.MEDICATION__CATEGORY:
 			return getCategory();
-		case Execution_metamodelPackage.MEDICATION__CODE_ACESS:
-			return getCodeAcess();
+		case Execution_metamodelPackage.MEDICATION__CODE_ACCESS:
+			return getCodeAccess();
 		case Execution_metamodelPackage.MEDICATION__ID_ACCESS:
 			return getIdAccess();
 		case Execution_metamodelPackage.MEDICATION__NAME_ACESS:
@@ -1003,8 +1003,8 @@ public class MedicationImpl extends MinimalEObjectImpl.Container implements Medi
 		case Execution_metamodelPackage.MEDICATION__CATEGORY:
 			setCategory((String) newValue);
 			return;
-		case Execution_metamodelPackage.MEDICATION__CODE_ACESS:
-			setCodeAcess((Integer) newValue);
+		case Execution_metamodelPackage.MEDICATION__CODE_ACCESS:
+			setCodeAccess((Integer) newValue);
 			return;
 		case Execution_metamodelPackage.MEDICATION__ID_ACCESS:
 			setIdAccess((Integer) newValue);
@@ -1075,8 +1075,8 @@ public class MedicationImpl extends MinimalEObjectImpl.Container implements Medi
 		case Execution_metamodelPackage.MEDICATION__CATEGORY:
 			setCategory(CATEGORY_EDEFAULT);
 			return;
-		case Execution_metamodelPackage.MEDICATION__CODE_ACESS:
-			setCodeAcess(CODE_ACESS_EDEFAULT);
+		case Execution_metamodelPackage.MEDICATION__CODE_ACCESS:
+			setCodeAccess(CODE_ACCESS_EDEFAULT);
 			return;
 		case Execution_metamodelPackage.MEDICATION__ID_ACCESS:
 			setIdAccess(ID_ACCESS_EDEFAULT);
@@ -1134,8 +1134,8 @@ public class MedicationImpl extends MinimalEObjectImpl.Container implements Medi
 			return timeInterval != TIME_INTERVAL_EDEFAULT;
 		case Execution_metamodelPackage.MEDICATION__CATEGORY:
 			return CATEGORY_EDEFAULT == null ? category != null : !CATEGORY_EDEFAULT.equals(category);
-		case Execution_metamodelPackage.MEDICATION__CODE_ACESS:
-			return codeAcess != CODE_ACESS_EDEFAULT;
+		case Execution_metamodelPackage.MEDICATION__CODE_ACCESS:
+			return codeAccess != CODE_ACCESS_EDEFAULT;
 		case Execution_metamodelPackage.MEDICATION__ID_ACCESS:
 			return idAccess != ID_ACCESS_EDEFAULT;
 		case Execution_metamodelPackage.MEDICATION__NAME_ACESS:
@@ -1189,8 +1189,8 @@ public class MedicationImpl extends MinimalEObjectImpl.Container implements Medi
 		result.append(timeInterval);
 		result.append(", category: ");
 		result.append(category);
-		result.append(", codeAcess: ");
-		result.append(codeAcess);
+		result.append(", codeAccess: ");
+		result.append(codeAccess);
 		result.append(", idAccess: ");
 		result.append(idAccess);
 		result.append(", nameAcess: ");

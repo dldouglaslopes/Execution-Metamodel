@@ -26,7 +26,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link MetamodelExecution.Medication#getTimeTreatement <em>Time Treatement</em>}</li>
  *   <li>{@link MetamodelExecution.Medication#getTimeInterval <em>Time Interval</em>}</li>
  *   <li>{@link MetamodelExecution.Medication#getCategory <em>Category</em>}</li>
- *   <li>{@link MetamodelExecution.Medication#getCodeAcess <em>Code Acess</em>}</li>
+ *   <li>{@link MetamodelExecution.Medication#getCodeAccess <em>Code Access</em>}</li>
  *   <li>{@link MetamodelExecution.Medication#getIdAccess <em>Id Access</em>}</li>
  *   <li>{@link MetamodelExecution.Medication#getNameAcess <em>Name Acess</em>}</li>
  *   <li>{@link MetamodelExecution.Medication#getCodeUnit <em>Code Unit</em>}</li>
@@ -379,30 +379,30 @@ public interface Medication extends EObject {
 	void setCategory(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Code Acess</b></em>' attribute.
+	 * Returns the value of the '<em><b>Code Access</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Code Acess</em>' attribute isn't clear,
+	 * If the meaning of the '<em>Code Access</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Code Acess</em>' attribute.
-	 * @see #setCodeAcess(int)
-	 * @see MetamodelExecution.Execution_metamodelPackage#getMedication_CodeAcess()
+	 * @return the value of the '<em>Code Access</em>' attribute.
+	 * @see #setCodeAccess(int)
+	 * @see MetamodelExecution.Execution_metamodelPackage#getMedication_CodeAccess()
 	 * @model
 	 * @generated
 	 */
-	int getCodeAcess();
+	int getCodeAccess();
 
 	/**
-	 * Sets the value of the '{@link MetamodelExecution.Medication#getCodeAcess <em>Code Acess</em>}' attribute.
+	 * Sets the value of the '{@link MetamodelExecution.Medication#getCodeAccess <em>Code Access</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Code Acess</em>' attribute.
-	 * @see #getCodeAcess()
+	 * @param value the new value of the '<em>Code Access</em>' attribute.
+	 * @see #getCodeAccess()
 	 * @generated
 	 */
-	void setCodeAcess(int value);
+	void setCodeAccess(int value);
 
 	/**
 	 * Returns the value of the '<em><b>Id Access</b></em>' attribute.

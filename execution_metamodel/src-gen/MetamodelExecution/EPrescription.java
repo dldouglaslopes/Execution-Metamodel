@@ -15,8 +15,8 @@ import org.eclipse.emf.common.util.EList;
  * <ul>
  *   <li>{@link MetamodelExecution.EPrescription#getText <em>Text</em>}</li>
  *   <li>{@link MetamodelExecution.EPrescription#getPprescription <em>Pprescription</em>}</li>
- *   <li>{@link MetamodelExecution.EPrescription#getIdsPrescribedMedication <em>Ids Prescribed Medication</em>}</li>
- *   <li>{@link MetamodelExecution.EPrescription#getIdsPrescribedPrescriptionItem <em>Ids Prescribed Prescription Item</em>}</li>
+ *   <li>{@link MetamodelExecution.EPrescription#getIdsPMedication <em>Ids PMedication</em>}</li>
+ *   <li>{@link MetamodelExecution.EPrescription#getIdsPPrescription <em>Ids PPrescription</em>}</li>
  *   <li>{@link MetamodelExecution.EPrescription#getPmedication <em>Pmedication</em>}</li>
  *   <li>{@link MetamodelExecution.EPrescription#getTypePrescription <em>Type Prescription</em>}</li>
  *   <li>{@link MetamodelExecution.EPrescription#getLastExecutedPrescription <em>Last Executed Prescription</em>}</li>
@@ -71,36 +71,36 @@ public interface EPrescription extends EStep {
 	EList<PPrescription> getPprescription();
 
 	/**
-	 * Returns the value of the '<em><b>Ids Prescribed Medication</b></em>' attribute list.
+	 * Returns the value of the '<em><b>Ids PMedication</b></em>' attribute list.
 	 * The list contents are of type {@link java.lang.Integer}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Ids Prescribed Medication</em>' attribute list isn't clear,
+	 * If the meaning of the '<em>Ids PMedication</em>' attribute list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Ids Prescribed Medication</em>' attribute list.
-	 * @see MetamodelExecution.Execution_metamodelPackage#getEPrescription_IdsPrescribedMedication()
+	 * @return the value of the '<em>Ids PMedication</em>' attribute list.
+	 * @see MetamodelExecution.Execution_metamodelPackage#getEPrescription_IdsPMedication()
 	 * @model
 	 * @generated
 	 */
-	EList<Integer> getIdsPrescribedMedication();
+	EList<Integer> getIdsPMedication();
 
 	/**
-	 * Returns the value of the '<em><b>Ids Prescribed Prescription Item</b></em>' attribute list.
+	 * Returns the value of the '<em><b>Ids PPrescription</b></em>' attribute list.
 	 * The list contents are of type {@link java.lang.Integer}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Ids Prescribed Prescription Item</em>' attribute list isn't clear,
+	 * If the meaning of the '<em>Ids PPrescription</em>' attribute list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Ids Prescribed Prescription Item</em>' attribute list.
-	 * @see MetamodelExecution.Execution_metamodelPackage#getEPrescription_IdsPrescribedPrescriptionItem()
+	 * @return the value of the '<em>Ids PPrescription</em>' attribute list.
+	 * @see MetamodelExecution.Execution_metamodelPackage#getEPrescription_IdsPPrescription()
 	 * @model
 	 * @generated
 	 */
-	EList<Integer> getIdsPrescribedPrescriptionItem();
+	EList<Integer> getIdsPPrescription();
 
 	/**
 	 * Returns the value of the '<em><b>Pmedication</b></em>' containment reference list.

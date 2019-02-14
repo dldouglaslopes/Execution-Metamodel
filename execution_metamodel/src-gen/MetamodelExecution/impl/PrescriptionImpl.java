@@ -27,9 +27,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *   <li>{@link MetamodelExecution.impl.PrescriptionImpl#getMedication <em>Medication</em>}</li>
  *   <li>{@link MetamodelExecution.impl.PrescriptionImpl#getQtdPrescription <em>Qtd Prescription</em>}</li>
  *   <li>{@link MetamodelExecution.impl.PrescriptionImpl#getPresentation <em>Presentation</em>}</li>
- *   <li>{@link MetamodelExecution.impl.PrescriptionImpl#getIdPresentation <em>Id Presentation</em>}</li>
  *   <li>{@link MetamodelExecution.impl.PrescriptionImpl#getAccess <em>Access</em>}</li>
- *   <li>{@link MetamodelExecution.impl.PrescriptionImpl#getIdAccess <em>Id Access</em>}</li>
  *   <li>{@link MetamodelExecution.impl.PrescriptionImpl#getQtdDuration <em>Qtd Duration</em>}</li>
  *   <li>{@link MetamodelExecution.impl.PrescriptionImpl#getUnitDuration <em>Unit Duration</em>}</li>
  *   <li>{@link MetamodelExecution.impl.PrescriptionImpl#getUnitFrequency <em>Unit Frequency</em>}</li>
@@ -181,26 +179,6 @@ public class PrescriptionImpl extends MinimalEObjectImpl.Container implements Pr
 	protected String presentation = PRESENTATION_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getIdPresentation() <em>Id Presentation</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getIdPresentation()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final int ID_PRESENTATION_EDEFAULT = 0;
-
-	/**
-	 * The cached value of the '{@link #getIdPresentation() <em>Id Presentation</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getIdPresentation()
-	 * @generated
-	 * @ordered
-	 */
-	protected int idPresentation = ID_PRESENTATION_EDEFAULT;
-
-	/**
 	 * The default value of the '{@link #getAccess() <em>Access</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -219,26 +197,6 @@ public class PrescriptionImpl extends MinimalEObjectImpl.Container implements Pr
 	 * @ordered
 	 */
 	protected String access = ACCESS_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getIdAccess() <em>Id Access</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getIdAccess()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final int ID_ACCESS_EDEFAULT = 0;
-
-	/**
-	 * The cached value of the '{@link #getIdAccess() <em>Id Access</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getIdAccess()
-	 * @generated
-	 * @ordered
-	 */
-	protected int idAccess = ID_ACCESS_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getQtdDuration() <em>Qtd Duration</em>}' attribute.
@@ -518,28 +476,6 @@ public class PrescriptionImpl extends MinimalEObjectImpl.Container implements Pr
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public int getIdPresentation() {
-		return idPresentation;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setIdPresentation(int newIdPresentation) {
-		int oldIdPresentation = idPresentation;
-		idPresentation = newIdPresentation;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET,
-					Execution_metamodelPackage.PRESCRIPTION__ID_PRESENTATION, oldIdPresentation, idPresentation));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public String getAccess() {
 		return access;
 	}
@@ -555,28 +491,6 @@ public class PrescriptionImpl extends MinimalEObjectImpl.Container implements Pr
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.PRESCRIPTION__ACCESS,
 					oldAccess, access));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public int getIdAccess() {
-		return idAccess;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setIdAccess(int newIdAccess) {
-		int oldIdAccess = idAccess;
-		idAccess = newIdAccess;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.PRESCRIPTION__ID_ACCESS,
-					oldIdAccess, idAccess));
 	}
 
 	/**
@@ -711,12 +625,8 @@ public class PrescriptionImpl extends MinimalEObjectImpl.Container implements Pr
 			return getQtdPrescription();
 		case Execution_metamodelPackage.PRESCRIPTION__PRESENTATION:
 			return getPresentation();
-		case Execution_metamodelPackage.PRESCRIPTION__ID_PRESENTATION:
-			return getIdPresentation();
 		case Execution_metamodelPackage.PRESCRIPTION__ACCESS:
 			return getAccess();
-		case Execution_metamodelPackage.PRESCRIPTION__ID_ACCESS:
-			return getIdAccess();
 		case Execution_metamodelPackage.PRESCRIPTION__QTD_DURATION:
 			return getQtdDuration();
 		case Execution_metamodelPackage.PRESCRIPTION__UNIT_DURATION:
@@ -760,14 +670,8 @@ public class PrescriptionImpl extends MinimalEObjectImpl.Container implements Pr
 		case Execution_metamodelPackage.PRESCRIPTION__PRESENTATION:
 			setPresentation((String) newValue);
 			return;
-		case Execution_metamodelPackage.PRESCRIPTION__ID_PRESENTATION:
-			setIdPresentation((Integer) newValue);
-			return;
 		case Execution_metamodelPackage.PRESCRIPTION__ACCESS:
 			setAccess((String) newValue);
-			return;
-		case Execution_metamodelPackage.PRESCRIPTION__ID_ACCESS:
-			setIdAccess((Integer) newValue);
 			return;
 		case Execution_metamodelPackage.PRESCRIPTION__QTD_DURATION:
 			setQtdDuration((Integer) newValue);
@@ -817,14 +721,8 @@ public class PrescriptionImpl extends MinimalEObjectImpl.Container implements Pr
 		case Execution_metamodelPackage.PRESCRIPTION__PRESENTATION:
 			setPresentation(PRESENTATION_EDEFAULT);
 			return;
-		case Execution_metamodelPackage.PRESCRIPTION__ID_PRESENTATION:
-			setIdPresentation(ID_PRESENTATION_EDEFAULT);
-			return;
 		case Execution_metamodelPackage.PRESCRIPTION__ACCESS:
 			setAccess(ACCESS_EDEFAULT);
-			return;
-		case Execution_metamodelPackage.PRESCRIPTION__ID_ACCESS:
-			setIdAccess(ID_ACCESS_EDEFAULT);
 			return;
 		case Execution_metamodelPackage.PRESCRIPTION__QTD_DURATION:
 			setQtdDuration(QTD_DURATION_EDEFAULT);
@@ -867,12 +765,8 @@ public class PrescriptionImpl extends MinimalEObjectImpl.Container implements Pr
 			return qtdPrescription != QTD_PRESCRIPTION_EDEFAULT;
 		case Execution_metamodelPackage.PRESCRIPTION__PRESENTATION:
 			return PRESENTATION_EDEFAULT == null ? presentation != null : !PRESENTATION_EDEFAULT.equals(presentation);
-		case Execution_metamodelPackage.PRESCRIPTION__ID_PRESENTATION:
-			return idPresentation != ID_PRESENTATION_EDEFAULT;
 		case Execution_metamodelPackage.PRESCRIPTION__ACCESS:
 			return ACCESS_EDEFAULT == null ? access != null : !ACCESS_EDEFAULT.equals(access);
-		case Execution_metamodelPackage.PRESCRIPTION__ID_ACCESS:
-			return idAccess != ID_ACCESS_EDEFAULT;
 		case Execution_metamodelPackage.PRESCRIPTION__QTD_DURATION:
 			return qtdDuration != QTD_DURATION_EDEFAULT;
 		case Execution_metamodelPackage.PRESCRIPTION__UNIT_DURATION:
@@ -913,12 +807,8 @@ public class PrescriptionImpl extends MinimalEObjectImpl.Container implements Pr
 		result.append(qtdPrescription);
 		result.append(", presentation: ");
 		result.append(presentation);
-		result.append(", idPresentation: ");
-		result.append(idPresentation);
 		result.append(", access: ");
 		result.append(access);
-		result.append(", idAccess: ");
-		result.append(idAccess);
 		result.append(", qtdDuration: ");
 		result.append(qtdDuration);
 		result.append(", unitDuration: ");

@@ -17,10 +17,10 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link MetamodelExecution.ETreatment#getPprocedure <em>Pprocedure</em>}</li>
  *   <li>{@link MetamodelExecution.ETreatment#getPinternment <em>Pinternment</em>}</li>
  *   <li>{@link MetamodelExecution.ETreatment#getPmedication <em>Pmedication</em>}</li>
- *   <li>{@link MetamodelExecution.ETreatment#getIdsPrescribedExamination <em>Ids Prescribed Examination</em>}</li>
- *   <li>{@link MetamodelExecution.ETreatment#getIdsPrescribedProcedure <em>Ids Prescribed Procedure</em>}</li>
- *   <li>{@link MetamodelExecution.ETreatment#getIdsPrescribedInternment <em>Ids Prescribed Internment</em>}</li>
- *   <li>{@link MetamodelExecution.ETreatment#getIdsPrescribedMedication <em>Ids Prescribed Medication</em>}</li>
+ *   <li>{@link MetamodelExecution.ETreatment#getIdsPExamination <em>Ids PExamination</em>}</li>
+ *   <li>{@link MetamodelExecution.ETreatment#getIdsPProcedure <em>Ids PProcedure</em>}</li>
+ *   <li>{@link MetamodelExecution.ETreatment#getIdsPInternment <em>Ids PInternment</em>}</li>
+ *   <li>{@link MetamodelExecution.ETreatment#getIdsPMedication <em>Ids PMedication</em>}</li>
  * </ul>
  *
  * @see MetamodelExecution.Execution_metamodelPackage#getETreatment()
@@ -93,67 +93,67 @@ public interface ETreatment extends EStep {
 	EList<PMedication> getPmedication();
 
 	/**
-	 * Returns the value of the '<em><b>Ids Prescribed Examination</b></em>' attribute list.
+	 * Returns the value of the '<em><b>Ids PExamination</b></em>' attribute list.
 	 * The list contents are of type {@link java.lang.Integer}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Ids Prescribed Examination</em>' attribute list isn't clear,
+	 * If the meaning of the '<em>Ids PExamination</em>' attribute list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Ids Prescribed Examination</em>' attribute list.
-	 * @see MetamodelExecution.Execution_metamodelPackage#getETreatment_IdsPrescribedExamination()
+	 * @return the value of the '<em>Ids PExamination</em>' attribute list.
+	 * @see MetamodelExecution.Execution_metamodelPackage#getETreatment_IdsPExamination()
 	 * @model
 	 * @generated
 	 */
-	EList<Integer> getIdsPrescribedExamination();
+	EList<Integer> getIdsPExamination();
 
 	/**
-	 * Returns the value of the '<em><b>Ids Prescribed Procedure</b></em>' attribute list.
+	 * Returns the value of the '<em><b>Ids PProcedure</b></em>' attribute list.
 	 * The list contents are of type {@link java.lang.Integer}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Ids Prescribed Procedure</em>' attribute list isn't clear,
+	 * If the meaning of the '<em>Ids PProcedure</em>' attribute list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Ids Prescribed Procedure</em>' attribute list.
-	 * @see MetamodelExecution.Execution_metamodelPackage#getETreatment_IdsPrescribedProcedure()
+	 * @return the value of the '<em>Ids PProcedure</em>' attribute list.
+	 * @see MetamodelExecution.Execution_metamodelPackage#getETreatment_IdsPProcedure()
 	 * @model
 	 * @generated
 	 */
-	EList<Integer> getIdsPrescribedProcedure();
+	EList<Integer> getIdsPProcedure();
 
 	/**
-	 * Returns the value of the '<em><b>Ids Prescribed Internment</b></em>' attribute list.
+	 * Returns the value of the '<em><b>Ids PInternment</b></em>' attribute list.
 	 * The list contents are of type {@link java.lang.Integer}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Ids Prescribed Internment</em>' attribute list isn't clear,
+	 * If the meaning of the '<em>Ids PInternment</em>' attribute list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Ids Prescribed Internment</em>' attribute list.
-	 * @see MetamodelExecution.Execution_metamodelPackage#getETreatment_IdsPrescribedInternment()
+	 * @return the value of the '<em>Ids PInternment</em>' attribute list.
+	 * @see MetamodelExecution.Execution_metamodelPackage#getETreatment_IdsPInternment()
 	 * @model
 	 * @generated
 	 */
-	EList<Integer> getIdsPrescribedInternment();
+	EList<Integer> getIdsPInternment();
 
 	/**
-	 * Returns the value of the '<em><b>Ids Prescribed Medication</b></em>' attribute list.
+	 * Returns the value of the '<em><b>Ids PMedication</b></em>' attribute list.
 	 * The list contents are of type {@link java.lang.Integer}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Ids Prescribed Medication</em>' attribute list isn't clear,
+	 * If the meaning of the '<em>Ids PMedication</em>' attribute list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Ids Prescribed Medication</em>' attribute list.
-	 * @see MetamodelExecution.Execution_metamodelPackage#getETreatment_IdsPrescribedMedication()
+	 * @return the value of the '<em>Ids PMedication</em>' attribute list.
+	 * @see MetamodelExecution.Execution_metamodelPackage#getETreatment_IdsPMedication()
 	 * @model
 	 * @generated
 	 */
-	EList<Integer> getIdsPrescribedMedication();
+	EList<Integer> getIdsPMedication();
 
 } // ETreatment

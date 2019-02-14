@@ -34,10 +34,10 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link MetamodelExecution.impl.ETreatmentImpl#getPprocedure <em>Pprocedure</em>}</li>
  *   <li>{@link MetamodelExecution.impl.ETreatmentImpl#getPinternment <em>Pinternment</em>}</li>
  *   <li>{@link MetamodelExecution.impl.ETreatmentImpl#getPmedication <em>Pmedication</em>}</li>
- *   <li>{@link MetamodelExecution.impl.ETreatmentImpl#getIdsPrescribedExamination <em>Ids Prescribed Examination</em>}</li>
- *   <li>{@link MetamodelExecution.impl.ETreatmentImpl#getIdsPrescribedProcedure <em>Ids Prescribed Procedure</em>}</li>
- *   <li>{@link MetamodelExecution.impl.ETreatmentImpl#getIdsPrescribedInternment <em>Ids Prescribed Internment</em>}</li>
- *   <li>{@link MetamodelExecution.impl.ETreatmentImpl#getIdsPrescribedMedication <em>Ids Prescribed Medication</em>}</li>
+ *   <li>{@link MetamodelExecution.impl.ETreatmentImpl#getIdsPExamination <em>Ids PExamination</em>}</li>
+ *   <li>{@link MetamodelExecution.impl.ETreatmentImpl#getIdsPProcedure <em>Ids PProcedure</em>}</li>
+ *   <li>{@link MetamodelExecution.impl.ETreatmentImpl#getIdsPInternment <em>Ids PInternment</em>}</li>
+ *   <li>{@link MetamodelExecution.impl.ETreatmentImpl#getIdsPMedication <em>Ids PMedication</em>}</li>
  * </ul>
  *
  * @generated
@@ -84,44 +84,44 @@ public class ETreatmentImpl extends EStepImpl implements ETreatment {
 	protected EList<PMedication> pmedication;
 
 	/**
-	 * The cached value of the '{@link #getIdsPrescribedExamination() <em>Ids Prescribed Examination</em>}' attribute list.
+	 * The cached value of the '{@link #getIdsPExamination() <em>Ids PExamination</em>}' attribute list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getIdsPrescribedExamination()
+	 * @see #getIdsPExamination()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Integer> idsPrescribedExamination;
+	protected EList<Integer> idsPExamination;
 
 	/**
-	 * The cached value of the '{@link #getIdsPrescribedProcedure() <em>Ids Prescribed Procedure</em>}' attribute list.
+	 * The cached value of the '{@link #getIdsPProcedure() <em>Ids PProcedure</em>}' attribute list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getIdsPrescribedProcedure()
+	 * @see #getIdsPProcedure()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Integer> idsPrescribedProcedure;
+	protected EList<Integer> idsPProcedure;
 
 	/**
-	 * The cached value of the '{@link #getIdsPrescribedInternment() <em>Ids Prescribed Internment</em>}' attribute list.
+	 * The cached value of the '{@link #getIdsPInternment() <em>Ids PInternment</em>}' attribute list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getIdsPrescribedInternment()
+	 * @see #getIdsPInternment()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Integer> idsPrescribedInternment;
+	protected EList<Integer> idsPInternment;
 
 	/**
-	 * The cached value of the '{@link #getIdsPrescribedMedication() <em>Ids Prescribed Medication</em>}' attribute list.
+	 * The cached value of the '{@link #getIdsPMedication() <em>Ids PMedication</em>}' attribute list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getIdsPrescribedMedication()
+	 * @see #getIdsPMedication()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Integer> idsPrescribedMedication;
+	protected EList<Integer> idsPMedication;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -199,12 +199,12 @@ public class ETreatmentImpl extends EStepImpl implements ETreatment {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Integer> getIdsPrescribedExamination() {
-		if (idsPrescribedExamination == null) {
-			idsPrescribedExamination = new EDataTypeUniqueEList<Integer>(Integer.class, this,
-					Execution_metamodelPackage.ETREATMENT__IDS_PRESCRIBED_EXAMINATION);
+	public EList<Integer> getIdsPExamination() {
+		if (idsPExamination == null) {
+			idsPExamination = new EDataTypeUniqueEList<Integer>(Integer.class, this,
+					Execution_metamodelPackage.ETREATMENT__IDS_PEXAMINATION);
 		}
-		return idsPrescribedExamination;
+		return idsPExamination;
 	}
 
 	/**
@@ -212,12 +212,12 @@ public class ETreatmentImpl extends EStepImpl implements ETreatment {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Integer> getIdsPrescribedProcedure() {
-		if (idsPrescribedProcedure == null) {
-			idsPrescribedProcedure = new EDataTypeUniqueEList<Integer>(Integer.class, this,
-					Execution_metamodelPackage.ETREATMENT__IDS_PRESCRIBED_PROCEDURE);
+	public EList<Integer> getIdsPProcedure() {
+		if (idsPProcedure == null) {
+			idsPProcedure = new EDataTypeUniqueEList<Integer>(Integer.class, this,
+					Execution_metamodelPackage.ETREATMENT__IDS_PPROCEDURE);
 		}
-		return idsPrescribedProcedure;
+		return idsPProcedure;
 	}
 
 	/**
@@ -225,12 +225,12 @@ public class ETreatmentImpl extends EStepImpl implements ETreatment {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Integer> getIdsPrescribedInternment() {
-		if (idsPrescribedInternment == null) {
-			idsPrescribedInternment = new EDataTypeUniqueEList<Integer>(Integer.class, this,
-					Execution_metamodelPackage.ETREATMENT__IDS_PRESCRIBED_INTERNMENT);
+	public EList<Integer> getIdsPInternment() {
+		if (idsPInternment == null) {
+			idsPInternment = new EDataTypeUniqueEList<Integer>(Integer.class, this,
+					Execution_metamodelPackage.ETREATMENT__IDS_PINTERNMENT);
 		}
-		return idsPrescribedInternment;
+		return idsPInternment;
 	}
 
 	/**
@@ -238,12 +238,12 @@ public class ETreatmentImpl extends EStepImpl implements ETreatment {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Integer> getIdsPrescribedMedication() {
-		if (idsPrescribedMedication == null) {
-			idsPrescribedMedication = new EDataTypeUniqueEList<Integer>(Integer.class, this,
-					Execution_metamodelPackage.ETREATMENT__IDS_PRESCRIBED_MEDICATION);
+	public EList<Integer> getIdsPMedication() {
+		if (idsPMedication == null) {
+			idsPMedication = new EDataTypeUniqueEList<Integer>(Integer.class, this,
+					Execution_metamodelPackage.ETREATMENT__IDS_PMEDICATION);
 		}
-		return idsPrescribedMedication;
+		return idsPMedication;
 	}
 
 	/**
@@ -282,14 +282,14 @@ public class ETreatmentImpl extends EStepImpl implements ETreatment {
 			return getPinternment();
 		case Execution_metamodelPackage.ETREATMENT__PMEDICATION:
 			return getPmedication();
-		case Execution_metamodelPackage.ETREATMENT__IDS_PRESCRIBED_EXAMINATION:
-			return getIdsPrescribedExamination();
-		case Execution_metamodelPackage.ETREATMENT__IDS_PRESCRIBED_PROCEDURE:
-			return getIdsPrescribedProcedure();
-		case Execution_metamodelPackage.ETREATMENT__IDS_PRESCRIBED_INTERNMENT:
-			return getIdsPrescribedInternment();
-		case Execution_metamodelPackage.ETREATMENT__IDS_PRESCRIBED_MEDICATION:
-			return getIdsPrescribedMedication();
+		case Execution_metamodelPackage.ETREATMENT__IDS_PEXAMINATION:
+			return getIdsPExamination();
+		case Execution_metamodelPackage.ETREATMENT__IDS_PPROCEDURE:
+			return getIdsPProcedure();
+		case Execution_metamodelPackage.ETREATMENT__IDS_PINTERNMENT:
+			return getIdsPInternment();
+		case Execution_metamodelPackage.ETREATMENT__IDS_PMEDICATION:
+			return getIdsPMedication();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -319,21 +319,21 @@ public class ETreatmentImpl extends EStepImpl implements ETreatment {
 			getPmedication().clear();
 			getPmedication().addAll((Collection<? extends PMedication>) newValue);
 			return;
-		case Execution_metamodelPackage.ETREATMENT__IDS_PRESCRIBED_EXAMINATION:
-			getIdsPrescribedExamination().clear();
-			getIdsPrescribedExamination().addAll((Collection<? extends Integer>) newValue);
+		case Execution_metamodelPackage.ETREATMENT__IDS_PEXAMINATION:
+			getIdsPExamination().clear();
+			getIdsPExamination().addAll((Collection<? extends Integer>) newValue);
 			return;
-		case Execution_metamodelPackage.ETREATMENT__IDS_PRESCRIBED_PROCEDURE:
-			getIdsPrescribedProcedure().clear();
-			getIdsPrescribedProcedure().addAll((Collection<? extends Integer>) newValue);
+		case Execution_metamodelPackage.ETREATMENT__IDS_PPROCEDURE:
+			getIdsPProcedure().clear();
+			getIdsPProcedure().addAll((Collection<? extends Integer>) newValue);
 			return;
-		case Execution_metamodelPackage.ETREATMENT__IDS_PRESCRIBED_INTERNMENT:
-			getIdsPrescribedInternment().clear();
-			getIdsPrescribedInternment().addAll((Collection<? extends Integer>) newValue);
+		case Execution_metamodelPackage.ETREATMENT__IDS_PINTERNMENT:
+			getIdsPInternment().clear();
+			getIdsPInternment().addAll((Collection<? extends Integer>) newValue);
 			return;
-		case Execution_metamodelPackage.ETREATMENT__IDS_PRESCRIBED_MEDICATION:
-			getIdsPrescribedMedication().clear();
-			getIdsPrescribedMedication().addAll((Collection<? extends Integer>) newValue);
+		case Execution_metamodelPackage.ETREATMENT__IDS_PMEDICATION:
+			getIdsPMedication().clear();
+			getIdsPMedication().addAll((Collection<? extends Integer>) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -359,17 +359,17 @@ public class ETreatmentImpl extends EStepImpl implements ETreatment {
 		case Execution_metamodelPackage.ETREATMENT__PMEDICATION:
 			getPmedication().clear();
 			return;
-		case Execution_metamodelPackage.ETREATMENT__IDS_PRESCRIBED_EXAMINATION:
-			getIdsPrescribedExamination().clear();
+		case Execution_metamodelPackage.ETREATMENT__IDS_PEXAMINATION:
+			getIdsPExamination().clear();
 			return;
-		case Execution_metamodelPackage.ETREATMENT__IDS_PRESCRIBED_PROCEDURE:
-			getIdsPrescribedProcedure().clear();
+		case Execution_metamodelPackage.ETREATMENT__IDS_PPROCEDURE:
+			getIdsPProcedure().clear();
 			return;
-		case Execution_metamodelPackage.ETREATMENT__IDS_PRESCRIBED_INTERNMENT:
-			getIdsPrescribedInternment().clear();
+		case Execution_metamodelPackage.ETREATMENT__IDS_PINTERNMENT:
+			getIdsPInternment().clear();
 			return;
-		case Execution_metamodelPackage.ETREATMENT__IDS_PRESCRIBED_MEDICATION:
-			getIdsPrescribedMedication().clear();
+		case Execution_metamodelPackage.ETREATMENT__IDS_PMEDICATION:
+			getIdsPMedication().clear();
 			return;
 		}
 		super.eUnset(featureID);
@@ -391,14 +391,14 @@ public class ETreatmentImpl extends EStepImpl implements ETreatment {
 			return pinternment != null && !pinternment.isEmpty();
 		case Execution_metamodelPackage.ETREATMENT__PMEDICATION:
 			return pmedication != null && !pmedication.isEmpty();
-		case Execution_metamodelPackage.ETREATMENT__IDS_PRESCRIBED_EXAMINATION:
-			return idsPrescribedExamination != null && !idsPrescribedExamination.isEmpty();
-		case Execution_metamodelPackage.ETREATMENT__IDS_PRESCRIBED_PROCEDURE:
-			return idsPrescribedProcedure != null && !idsPrescribedProcedure.isEmpty();
-		case Execution_metamodelPackage.ETREATMENT__IDS_PRESCRIBED_INTERNMENT:
-			return idsPrescribedInternment != null && !idsPrescribedInternment.isEmpty();
-		case Execution_metamodelPackage.ETREATMENT__IDS_PRESCRIBED_MEDICATION:
-			return idsPrescribedMedication != null && !idsPrescribedMedication.isEmpty();
+		case Execution_metamodelPackage.ETREATMENT__IDS_PEXAMINATION:
+			return idsPExamination != null && !idsPExamination.isEmpty();
+		case Execution_metamodelPackage.ETREATMENT__IDS_PPROCEDURE:
+			return idsPProcedure != null && !idsPProcedure.isEmpty();
+		case Execution_metamodelPackage.ETREATMENT__IDS_PINTERNMENT:
+			return idsPInternment != null && !idsPInternment.isEmpty();
+		case Execution_metamodelPackage.ETREATMENT__IDS_PMEDICATION:
+			return idsPMedication != null && !idsPMedication.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}
@@ -414,14 +414,14 @@ public class ETreatmentImpl extends EStepImpl implements ETreatment {
 			return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (idsPrescribedExamination: ");
-		result.append(idsPrescribedExamination);
-		result.append(", idsPrescribedProcedure: ");
-		result.append(idsPrescribedProcedure);
-		result.append(", idsPrescribedInternment: ");
-		result.append(idsPrescribedInternment);
-		result.append(", idsPrescribedMedication: ");
-		result.append(idsPrescribedMedication);
+		result.append(" (idsPExamination: ");
+		result.append(idsPExamination);
+		result.append(", idsPProcedure: ");
+		result.append(idsPProcedure);
+		result.append(", idsPInternment: ");
+		result.append(idsPInternment);
+		result.append(", idsPMedication: ");
+		result.append(idsPMedication);
 		result.append(')');
 		return result.toString();
 	}

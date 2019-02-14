@@ -20,9 +20,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link MetamodelExecution.Prescription#getMedication <em>Medication</em>}</li>
  *   <li>{@link MetamodelExecution.Prescription#getQtdPrescription <em>Qtd Prescription</em>}</li>
  *   <li>{@link MetamodelExecution.Prescription#getPresentation <em>Presentation</em>}</li>
- *   <li>{@link MetamodelExecution.Prescription#getIdPresentation <em>Id Presentation</em>}</li>
  *   <li>{@link MetamodelExecution.Prescription#getAccess <em>Access</em>}</li>
- *   <li>{@link MetamodelExecution.Prescription#getIdAccess <em>Id Access</em>}</li>
  *   <li>{@link MetamodelExecution.Prescription#getQtdDuration <em>Qtd Duration</em>}</li>
  *   <li>{@link MetamodelExecution.Prescription#getUnitDuration <em>Unit Duration</em>}</li>
  *   <li>{@link MetamodelExecution.Prescription#getUnitFrequency <em>Unit Frequency</em>}</li>
@@ -218,32 +216,6 @@ public interface Prescription extends EObject {
 	void setPresentation(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Id Presentation</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Id Presentation</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Id Presentation</em>' attribute.
-	 * @see #setIdPresentation(int)
-	 * @see MetamodelExecution.Execution_metamodelPackage#getPrescription_IdPresentation()
-	 * @model
-	 * @generated
-	 */
-	int getIdPresentation();
-
-	/**
-	 * Sets the value of the '{@link MetamodelExecution.Prescription#getIdPresentation <em>Id Presentation</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Id Presentation</em>' attribute.
-	 * @see #getIdPresentation()
-	 * @generated
-	 */
-	void setIdPresentation(int value);
-
-	/**
 	 * Returns the value of the '<em><b>Access</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <p>
@@ -268,32 +240,6 @@ public interface Prescription extends EObject {
 	 * @generated
 	 */
 	void setAccess(String value);
-
-	/**
-	 * Returns the value of the '<em><b>Id Access</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Id Access</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Id Access</em>' attribute.
-	 * @see #setIdAccess(int)
-	 * @see MetamodelExecution.Execution_metamodelPackage#getPrescription_IdAccess()
-	 * @model
-	 * @generated
-	 */
-	int getIdAccess();
-
-	/**
-	 * Sets the value of the '{@link MetamodelExecution.Prescription#getIdAccess <em>Id Access</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Id Access</em>' attribute.
-	 * @see #getIdAccess()
-	 * @generated
-	 */
-	void setIdAccess(int value);
 
 	/**
 	 * Returns the value of the '<em><b>Qtd Duration</b></em>' attribute.
