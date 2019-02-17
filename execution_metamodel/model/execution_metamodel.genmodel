@@ -38,6 +38,8 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute execution_metamodel.ecore#//ETreatment/idsPProcedure"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute execution_metamodel.ecore#//ETreatment/idsPInternment"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute execution_metamodel.ecore#//ETreatment/idsPMedication"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute execution_metamodel.ecore#//ETreatment/idsPPaediatricMedication"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference execution_metamodel.ecore#//ETreatment/ppaediatricmedicationt"/>
     </genClasses>
     <genClasses ecoreClass="execution_metamodel.ecore#//Examination">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute execution_metamodel.ecore#//Examination/id"/>
@@ -66,19 +68,21 @@
     <genClasses ecoreClass="execution_metamodel.ecore#//PProcedure">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute execution_metamodel.ecore#//PProcedure/id"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference execution_metamodel.ecore#//PProcedure/procedure"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute execution_metamodel.ecore#//PProcedure/codeOrderPrescription"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute execution_metamodel.ecore#//PProcedure/codeOrderPrescriptionPlan"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference execution_metamodel.ecore#//PProcedure/result"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference execution_metamodel.ecore#//PProcedure/prescriptionResult"/>
     </genClasses>
     <genClasses ecoreClass="execution_metamodel.ecore#//PInternment">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute execution_metamodel.ecore#//PInternment/id"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference execution_metamodel.ecore#//PInternment/internment"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute execution_metamodel.ecore#//PInternment/numberGuide"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference execution_metamodel.ecore#//PInternment/result"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference execution_metamodel.ecore#//PInternment/prescriptionResult"/>
     </genClasses>
     <genClasses ecoreClass="execution_metamodel.ecore#//PMedication">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute execution_metamodel.ecore#//PMedication/id"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute execution_metamodel.ecore#//PMedication/result"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference execution_metamodel.ecore#//PMedication/medication"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference execution_metamodel.ecore#//PMedication/prescriptionResult"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference execution_metamodel.ecore#//PMedication/result"/>
     </genClasses>
     <genClasses ecoreClass="execution_metamodel.ecore#//Complement">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute execution_metamodel.ecore#//Complement/id"/>
@@ -214,11 +218,9 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute execution_metamodel.ecore#//Medication/timeInterval"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute execution_metamodel.ecore#//Medication/category"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute execution_metamodel.ecore#//Medication/codeAccess"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute execution_metamodel.ecore#//Medication/idAccess"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute execution_metamodel.ecore#//Medication/nameAcess"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute execution_metamodel.ecore#//Medication/codeUnit"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute execution_metamodel.ecore#//Medication/nameUnit"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute execution_metamodel.ecore#//Medication/idUnit"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute execution_metamodel.ecore#//Medication/unit"/>
     </genClasses>
     <genClasses ecoreClass="execution_metamodel.ecore#//EAction">
@@ -246,6 +248,14 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute execution_metamodel.ecore#//Procedure/category"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute execution_metamodel.ecore#//Procedure/frequency"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute execution_metamodel.ecore#//Procedure/quantity"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute execution_metamodel.ecore#//Procedure/idProcedure"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute execution_metamodel.ecore#//Procedure/code"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute execution_metamodel.ecore#//Procedure/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute execution_metamodel.ecore#//Procedure/description"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute execution_metamodel.ecore#//Procedure/typeCode"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute execution_metamodel.ecore#//Procedure/typeName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute execution_metamodel.ecore#//Procedure/outpatient"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute execution_metamodel.ecore#//Procedure/memberPeers"/>
     </genClasses>
     <genClasses ecoreClass="execution_metamodel.ecore#//Internment">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute execution_metamodel.ecore#//Internment/id"/>
@@ -253,6 +263,14 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute execution_metamodel.ecore#//Internment/justification"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute execution_metamodel.ecore#//Internment/clinicalIndication"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute execution_metamodel.ecore#//Internment/quantity"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute execution_metamodel.ecore#//Internment/typeName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute execution_metamodel.ecore#//Internment/code"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute execution_metamodel.ecore#//Internment/idInternment"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute execution_metamodel.ecore#//Internment/typeCode"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute execution_metamodel.ecore#//Internment/memberPeers"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute execution_metamodel.ecore#//Internment/outpatient"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute execution_metamodel.ecore#//Internment/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute execution_metamodel.ecore#//Internment/description"/>
     </genClasses>
     <genClasses ecoreClass="execution_metamodel.ecore#//ComplementaryConducts">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute execution_metamodel.ecore#//ComplementaryConducts/id"/>
@@ -394,5 +412,12 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute execution_metamodel.ecore#//Prescription/complement"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute execution_metamodel.ecore#//Prescription/order"/>
     </genClasses>
+    <genClasses ecoreClass="execution_metamodel.ecore#//PPaediatricMedicationt">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute execution_metamodel.ecore#//PPaediatricMedicationt/id"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference execution_metamodel.ecore#//PPaediatricMedicationt/result"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference execution_metamodel.ecore#//PPaediatricMedicationt/prescriptionResult"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference execution_metamodel.ecore#//PPaediatricMedicationt/paediatricMedication"/>
+    </genClasses>
+    <genClasses ecoreClass="execution_metamodel.ecore#//PaediatricMedication"/>
   </genPackages>
 </genmodel:GenModel>

@@ -357,6 +357,16 @@ public class Execution_metamodelAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
+		public Adapter casePPaediatricMedicationt(PPaediatricMedicationt object) {
+			return createPPaediatricMedicationtAdapter();
+		}
+
+		@Override
+		public Adapter casePaediatricMedication(PaediatricMedication object) {
+			return createPaediatricMedicationAdapter();
+		}
+
+		@Override
 		public Adapter defaultCase(EObject object) {
 			return createEObjectAdapter();
 		}
@@ -1184,6 +1194,34 @@ public class Execution_metamodelAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createPrescriptionAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link MetamodelExecution.PPaediatricMedicationt <em>PPaediatric Medicationt</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see MetamodelExecution.PPaediatricMedicationt
+	 * @generated
+	 */
+	public Adapter createPPaediatricMedicationtAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link MetamodelExecution.PaediatricMedication <em>Paediatric Medication</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see MetamodelExecution.PaediatricMedication
+	 * @generated
+	 */
+	public Adapter createPaediatricMedicationAdapter() {
 		return null;
 	}
 

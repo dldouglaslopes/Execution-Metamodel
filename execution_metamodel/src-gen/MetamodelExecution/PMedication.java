@@ -14,9 +14,9 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  * <ul>
  *   <li>{@link MetamodelExecution.PMedication#getId <em>Id</em>}</li>
- *   <li>{@link MetamodelExecution.PMedication#getResult <em>Result</em>}</li>
  *   <li>{@link MetamodelExecution.PMedication#getMedication <em>Medication</em>}</li>
  *   <li>{@link MetamodelExecution.PMedication#getPrescriptionResult <em>Prescription Result</em>}</li>
+ *   <li>{@link MetamodelExecution.PMedication#getResult <em>Result</em>}</li>
  * </ul>
  *
  * @see MetamodelExecution.Execution_metamodelPackage#getPMedication()
@@ -51,30 +51,30 @@ public interface PMedication extends EObject {
 	void setId(int value);
 
 	/**
-	 * Returns the value of the '<em><b>Result</b></em>' attribute.
+	 * Returns the value of the '<em><b>Result</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Result</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Result</em>' attribute.
-	 * @see #setResult(String)
+	 * @return the value of the '<em>Result</em>' containment reference.
+	 * @see #setResult(Result)
 	 * @see MetamodelExecution.Execution_metamodelPackage#getPMedication_Result()
-	 * @model
+	 * @model containment="true"
 	 * @generated
 	 */
-	String getResult();
+	Result getResult();
 
 	/**
-	 * Sets the value of the '{@link MetamodelExecution.PMedication#getResult <em>Result</em>}' attribute.
+	 * Sets the value of the '{@link MetamodelExecution.PMedication#getResult <em>Result</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Result</em>' attribute.
+	 * @param value the new value of the '<em>Result</em>' containment reference.
 	 * @see #getResult()
 	 * @generated
 	 */
-	void setResult(String value);
+	void setResult(Result value);
 
 	/**
 	 * Returns the value of the '<em><b>Medication</b></em>' containment reference.

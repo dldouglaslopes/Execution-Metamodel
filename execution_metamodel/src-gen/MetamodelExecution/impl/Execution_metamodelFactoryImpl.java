@@ -160,6 +160,10 @@ public class Execution_metamodelFactoryImpl extends EFactoryImpl implements Exec
 			return createOption();
 		case Execution_metamodelPackage.PRESCRIPTION:
 			return createPrescription();
+		case Execution_metamodelPackage.PPAEDIATRIC_MEDICATIONT:
+			return createPPaediatricMedicationt();
+		case Execution_metamodelPackage.PAEDIATRIC_MEDICATION:
+			return createPaediatricMedication();
 		default:
 			throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -683,6 +687,26 @@ public class Execution_metamodelFactoryImpl extends EFactoryImpl implements Exec
 	public Prescription createPrescription() {
 		PrescriptionImpl prescription = new PrescriptionImpl();
 		return prescription;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public PPaediatricMedicationt createPPaediatricMedicationt() {
+		PPaediatricMedicationtImpl pPaediatricMedicationt = new PPaediatricMedicationtImpl();
+		return pPaediatricMedicationt;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public PaediatricMedication createPaediatricMedication() {
+		PaediatricMedicationImpl paediatricMedication = new PaediatricMedicationImpl();
+		return paediatricMedication;
 	}
 
 	/**

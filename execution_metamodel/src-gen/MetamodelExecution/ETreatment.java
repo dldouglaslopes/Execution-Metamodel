@@ -21,6 +21,8 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link MetamodelExecution.ETreatment#getIdsPProcedure <em>Ids PProcedure</em>}</li>
  *   <li>{@link MetamodelExecution.ETreatment#getIdsPInternment <em>Ids PInternment</em>}</li>
  *   <li>{@link MetamodelExecution.ETreatment#getIdsPMedication <em>Ids PMedication</em>}</li>
+ *   <li>{@link MetamodelExecution.ETreatment#getIdsPPaediatricMedication <em>Ids PPaediatric Medication</em>}</li>
+ *   <li>{@link MetamodelExecution.ETreatment#getPpaediatricmedicationt <em>Ppaediatricmedicationt</em>}</li>
  * </ul>
  *
  * @see MetamodelExecution.Execution_metamodelPackage#getETreatment()
@@ -155,5 +157,37 @@ public interface ETreatment extends EStep {
 	 * @generated
 	 */
 	EList<Integer> getIdsPMedication();
+
+	/**
+	 * Returns the value of the '<em><b>Ids PPaediatric Medication</b></em>' attribute list.
+	 * The list contents are of type {@link java.lang.Integer}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Ids PPaediatric Medication</em>' attribute list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Ids PPaediatric Medication</em>' attribute list.
+	 * @see MetamodelExecution.Execution_metamodelPackage#getETreatment_IdsPPaediatricMedication()
+	 * @model
+	 * @generated
+	 */
+	EList<Integer> getIdsPPaediatricMedication();
+
+	/**
+	 * Returns the value of the '<em><b>Ppaediatricmedicationt</b></em>' containment reference list.
+	 * The list contents are of type {@link MetamodelExecution.PPaediatricMedicationt}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Ppaediatricmedicationt</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Ppaediatricmedicationt</em>' containment reference list.
+	 * @see MetamodelExecution.Execution_metamodelPackage#getETreatment_Ppaediatricmedicationt()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<PPaediatricMedicationt> getPpaediatricmedicationt();
 
 } // ETreatment

@@ -27,11 +27,9 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link MetamodelExecution.Medication#getTimeInterval <em>Time Interval</em>}</li>
  *   <li>{@link MetamodelExecution.Medication#getCategory <em>Category</em>}</li>
  *   <li>{@link MetamodelExecution.Medication#getCodeAccess <em>Code Access</em>}</li>
- *   <li>{@link MetamodelExecution.Medication#getIdAccess <em>Id Access</em>}</li>
  *   <li>{@link MetamodelExecution.Medication#getNameAcess <em>Name Acess</em>}</li>
  *   <li>{@link MetamodelExecution.Medication#getCodeUnit <em>Code Unit</em>}</li>
  *   <li>{@link MetamodelExecution.Medication#getNameUnit <em>Name Unit</em>}</li>
- *   <li>{@link MetamodelExecution.Medication#getIdUnit <em>Id Unit</em>}</li>
  *   <li>{@link MetamodelExecution.Medication#getUnit <em>Unit</em>}</li>
  * </ul>
  *
@@ -405,32 +403,6 @@ public interface Medication extends EObject {
 	void setCodeAccess(int value);
 
 	/**
-	 * Returns the value of the '<em><b>Id Access</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Id Access</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Id Access</em>' attribute.
-	 * @see #setIdAccess(int)
-	 * @see MetamodelExecution.Execution_metamodelPackage#getMedication_IdAccess()
-	 * @model
-	 * @generated
-	 */
-	int getIdAccess();
-
-	/**
-	 * Sets the value of the '{@link MetamodelExecution.Medication#getIdAccess <em>Id Access</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Id Access</em>' attribute.
-	 * @see #getIdAccess()
-	 * @generated
-	 */
-	void setIdAccess(int value);
-
-	/**
 	 * Returns the value of the '<em><b>Name Acess</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <p>
@@ -507,32 +479,6 @@ public interface Medication extends EObject {
 	 * @generated
 	 */
 	void setNameUnit(String value);
-
-	/**
-	 * Returns the value of the '<em><b>Id Unit</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Id Unit</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Id Unit</em>' attribute.
-	 * @see #setIdUnit(int)
-	 * @see MetamodelExecution.Execution_metamodelPackage#getMedication_IdUnit()
-	 * @model
-	 * @generated
-	 */
-	int getIdUnit();
-
-	/**
-	 * Sets the value of the '{@link MetamodelExecution.Medication#getIdUnit <em>Id Unit</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Id Unit</em>' attribute.
-	 * @see #getIdUnit()
-	 * @generated
-	 */
-	void setIdUnit(int value);
 
 	/**
 	 * Returns the value of the '<em><b>Unit</b></em>' attribute.

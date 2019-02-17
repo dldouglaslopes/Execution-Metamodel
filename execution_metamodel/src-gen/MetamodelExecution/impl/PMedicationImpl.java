@@ -7,6 +7,7 @@ import MetamodelExecution.Medication;
 import MetamodelExecution.PMedication;
 import MetamodelExecution.PrescriptionResult;
 
+import MetamodelExecution.Result;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
@@ -25,9 +26,9 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * </p>
  * <ul>
  *   <li>{@link MetamodelExecution.impl.PMedicationImpl#getId <em>Id</em>}</li>
- *   <li>{@link MetamodelExecution.impl.PMedicationImpl#getResult <em>Result</em>}</li>
  *   <li>{@link MetamodelExecution.impl.PMedicationImpl#getMedication <em>Medication</em>}</li>
  *   <li>{@link MetamodelExecution.impl.PMedicationImpl#getPrescriptionResult <em>Prescription Result</em>}</li>
+ *   <li>{@link MetamodelExecution.impl.PMedicationImpl#getResult <em>Result</em>}</li>
  * </ul>
  *
  * @generated
@@ -54,26 +55,6 @@ public class PMedicationImpl extends MinimalEObjectImpl.Container implements PMe
 	protected int id = ID_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getResult() <em>Result</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getResult()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String RESULT_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getResult() <em>Result</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getResult()
-	 * @generated
-	 * @ordered
-	 */
-	protected String result = RESULT_EDEFAULT;
-
-	/**
 	 * The cached value of the '{@link #getMedication() <em>Medication</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -92,6 +73,16 @@ public class PMedicationImpl extends MinimalEObjectImpl.Container implements PMe
 	 * @ordered
 	 */
 	protected PrescriptionResult prescriptionResult;
+
+	/**
+	 * The cached value of the '{@link #getResult() <em>Result</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getResult()
+	 * @generated
+	 * @ordered
+	 */
+	protected Result result;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -139,7 +130,7 @@ public class PMedicationImpl extends MinimalEObjectImpl.Container implements PMe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getResult() {
+	public Result getResult() {
 		return result;
 	}
 
@@ -148,12 +139,40 @@ public class PMedicationImpl extends MinimalEObjectImpl.Container implements PMe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setResult(String newResult) {
-		String oldResult = result;
+	public NotificationChain basicSetResult(Result newResult, NotificationChain msgs) {
+		Result oldResult = result;
 		result = newResult;
-		if (eNotificationRequired())
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
+					Execution_metamodelPackage.PMEDICATION__RESULT, oldResult, newResult);
+			if (msgs == null)
+				msgs = notification;
+			else
+				msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setResult(Result newResult) {
+		if (newResult != result) {
+			NotificationChain msgs = null;
+			if (result != null)
+				msgs = ((InternalEObject) result).eInverseRemove(this,
+						EOPPOSITE_FEATURE_BASE - Execution_metamodelPackage.PMEDICATION__RESULT, null, msgs);
+			if (newResult != null)
+				msgs = ((InternalEObject) newResult).eInverseAdd(this,
+						EOPPOSITE_FEATURE_BASE - Execution_metamodelPackage.PMEDICATION__RESULT, null, msgs);
+			msgs = basicSetResult(newResult, msgs);
+			if (msgs != null)
+				msgs.dispatch();
+		} else if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.PMEDICATION__RESULT,
-					oldResult, result));
+					newResult, newResult));
 	}
 
 	/**
@@ -273,6 +292,8 @@ public class PMedicationImpl extends MinimalEObjectImpl.Container implements PMe
 			return basicSetMedication(null, msgs);
 		case Execution_metamodelPackage.PMEDICATION__PRESCRIPTION_RESULT:
 			return basicSetPrescriptionResult(null, msgs);
+		case Execution_metamodelPackage.PMEDICATION__RESULT:
+			return basicSetResult(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -287,12 +308,12 @@ public class PMedicationImpl extends MinimalEObjectImpl.Container implements PMe
 		switch (featureID) {
 		case Execution_metamodelPackage.PMEDICATION__ID:
 			return getId();
-		case Execution_metamodelPackage.PMEDICATION__RESULT:
-			return getResult();
 		case Execution_metamodelPackage.PMEDICATION__MEDICATION:
 			return getMedication();
 		case Execution_metamodelPackage.PMEDICATION__PRESCRIPTION_RESULT:
 			return getPrescriptionResult();
+		case Execution_metamodelPackage.PMEDICATION__RESULT:
+			return getResult();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -308,14 +329,14 @@ public class PMedicationImpl extends MinimalEObjectImpl.Container implements PMe
 		case Execution_metamodelPackage.PMEDICATION__ID:
 			setId((Integer) newValue);
 			return;
-		case Execution_metamodelPackage.PMEDICATION__RESULT:
-			setResult((String) newValue);
-			return;
 		case Execution_metamodelPackage.PMEDICATION__MEDICATION:
 			setMedication((Medication) newValue);
 			return;
 		case Execution_metamodelPackage.PMEDICATION__PRESCRIPTION_RESULT:
 			setPrescriptionResult((PrescriptionResult) newValue);
+			return;
+		case Execution_metamodelPackage.PMEDICATION__RESULT:
+			setResult((Result) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -332,14 +353,14 @@ public class PMedicationImpl extends MinimalEObjectImpl.Container implements PMe
 		case Execution_metamodelPackage.PMEDICATION__ID:
 			setId(ID_EDEFAULT);
 			return;
-		case Execution_metamodelPackage.PMEDICATION__RESULT:
-			setResult(RESULT_EDEFAULT);
-			return;
 		case Execution_metamodelPackage.PMEDICATION__MEDICATION:
 			setMedication((Medication) null);
 			return;
 		case Execution_metamodelPackage.PMEDICATION__PRESCRIPTION_RESULT:
 			setPrescriptionResult((PrescriptionResult) null);
+			return;
+		case Execution_metamodelPackage.PMEDICATION__RESULT:
+			setResult((Result) null);
 			return;
 		}
 		super.eUnset(featureID);
@@ -355,12 +376,12 @@ public class PMedicationImpl extends MinimalEObjectImpl.Container implements PMe
 		switch (featureID) {
 		case Execution_metamodelPackage.PMEDICATION__ID:
 			return id != ID_EDEFAULT;
-		case Execution_metamodelPackage.PMEDICATION__RESULT:
-			return RESULT_EDEFAULT == null ? result != null : !RESULT_EDEFAULT.equals(result);
 		case Execution_metamodelPackage.PMEDICATION__MEDICATION:
 			return medication != null;
 		case Execution_metamodelPackage.PMEDICATION__PRESCRIPTION_RESULT:
 			return prescriptionResult != null;
+		case Execution_metamodelPackage.PMEDICATION__RESULT:
+			return result != null;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -378,8 +399,6 @@ public class PMedicationImpl extends MinimalEObjectImpl.Container implements PMe
 		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (id: ");
 		result.append(id);
-		result.append(", result: ");
-		result.append(result);
 		result.append(')');
 		return result.toString();
 	}

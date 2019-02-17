@@ -4,11 +4,12 @@ package MetamodelExecution.impl;
 
 import MetamodelExecution.Execution_metamodelPackage;
 import MetamodelExecution.PProcedure;
+import MetamodelExecution.PrescriptionResult;
 import MetamodelExecution.Procedure;
 
+import MetamodelExecution.Result;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
-
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
@@ -25,8 +26,8 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * <ul>
  *   <li>{@link MetamodelExecution.impl.PProcedureImpl#getId <em>Id</em>}</li>
  *   <li>{@link MetamodelExecution.impl.PProcedureImpl#getProcedure <em>Procedure</em>}</li>
- *   <li>{@link MetamodelExecution.impl.PProcedureImpl#getCodeOrderPrescription <em>Code Order Prescription</em>}</li>
- *   <li>{@link MetamodelExecution.impl.PProcedureImpl#getCodeOrderPrescriptionPlan <em>Code Order Prescription Plan</em>}</li>
+ *   <li>{@link MetamodelExecution.impl.PProcedureImpl#getResult <em>Result</em>}</li>
+ *   <li>{@link MetamodelExecution.impl.PProcedureImpl#getPrescriptionResult <em>Prescription Result</em>}</li>
  * </ul>
  *
  * @generated
@@ -63,44 +64,24 @@ public class PProcedureImpl extends MinimalEObjectImpl.Container implements PPro
 	protected Procedure procedure;
 
 	/**
-	 * The default value of the '{@link #getCodeOrderPrescription() <em>Code Order Prescription</em>}' attribute.
+	 * The cached value of the '{@link #getResult() <em>Result</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getCodeOrderPrescription()
+	 * @see #getResult()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final int CODE_ORDER_PRESCRIPTION_EDEFAULT = 0;
+	protected Result result;
 
 	/**
-	 * The cached value of the '{@link #getCodeOrderPrescription() <em>Code Order Prescription</em>}' attribute.
+	 * The cached value of the '{@link #getPrescriptionResult() <em>Prescription Result</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getCodeOrderPrescription()
+	 * @see #getPrescriptionResult()
 	 * @generated
 	 * @ordered
 	 */
-	protected int codeOrderPrescription = CODE_ORDER_PRESCRIPTION_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getCodeOrderPrescriptionPlan() <em>Code Order Prescription Plan</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getCodeOrderPrescriptionPlan()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final int CODE_ORDER_PRESCRIPTION_PLAN_EDEFAULT = 0;
-
-	/**
-	 * The cached value of the '{@link #getCodeOrderPrescriptionPlan() <em>Code Order Prescription Plan</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getCodeOrderPrescriptionPlan()
-	 * @generated
-	 * @ordered
-	 */
-	protected int codeOrderPrescriptionPlan = CODE_ORDER_PRESCRIPTION_PLAN_EDEFAULT;
+	protected PrescriptionResult prescriptionResult;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -198,8 +179,8 @@ public class PProcedureImpl extends MinimalEObjectImpl.Container implements PPro
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public int getCodeOrderPrescription() {
-		return codeOrderPrescription;
+	public Result getResult() {
+		return result;
 	}
 
 	/**
@@ -207,36 +188,95 @@ public class PProcedureImpl extends MinimalEObjectImpl.Container implements PPro
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setCodeOrderPrescription(int newCodeOrderPrescription) {
-		int oldCodeOrderPrescription = codeOrderPrescription;
-		codeOrderPrescription = newCodeOrderPrescription;
-		if (eNotificationRequired())
+	public NotificationChain basicSetResult(Result newResult, NotificationChain msgs) {
+		Result oldResult = result;
+		result = newResult;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
+					Execution_metamodelPackage.PPROCEDURE__RESULT, oldResult, newResult);
+			if (msgs == null)
+				msgs = notification;
+			else
+				msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setResult(Result newResult) {
+		if (newResult != result) {
+			NotificationChain msgs = null;
+			if (result != null)
+				msgs = ((InternalEObject) result).eInverseRemove(this,
+						EOPPOSITE_FEATURE_BASE - Execution_metamodelPackage.PPROCEDURE__RESULT, null, msgs);
+			if (newResult != null)
+				msgs = ((InternalEObject) newResult).eInverseAdd(this,
+						EOPPOSITE_FEATURE_BASE - Execution_metamodelPackage.PPROCEDURE__RESULT, null, msgs);
+			msgs = basicSetResult(newResult, msgs);
+			if (msgs != null)
+				msgs.dispatch();
+		} else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.PPROCEDURE__RESULT,
+					newResult, newResult));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public PrescriptionResult getPrescriptionResult() {
+		return prescriptionResult;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetPrescriptionResult(PrescriptionResult newPrescriptionResult,
+			NotificationChain msgs) {
+		PrescriptionResult oldPrescriptionResult = prescriptionResult;
+		prescriptionResult = newPrescriptionResult;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
+					Execution_metamodelPackage.PPROCEDURE__PRESCRIPTION_RESULT, oldPrescriptionResult,
+					newPrescriptionResult);
+			if (msgs == null)
+				msgs = notification;
+			else
+				msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setPrescriptionResult(PrescriptionResult newPrescriptionResult) {
+		if (newPrescriptionResult != prescriptionResult) {
+			NotificationChain msgs = null;
+			if (prescriptionResult != null)
+				msgs = ((InternalEObject) prescriptionResult).eInverseRemove(this,
+						EOPPOSITE_FEATURE_BASE - Execution_metamodelPackage.PPROCEDURE__PRESCRIPTION_RESULT, null,
+						msgs);
+			if (newPrescriptionResult != null)
+				msgs = ((InternalEObject) newPrescriptionResult).eInverseAdd(this,
+						EOPPOSITE_FEATURE_BASE - Execution_metamodelPackage.PPROCEDURE__PRESCRIPTION_RESULT, null,
+						msgs);
+			msgs = basicSetPrescriptionResult(newPrescriptionResult, msgs);
+			if (msgs != null)
+				msgs.dispatch();
+		} else if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET,
-					Execution_metamodelPackage.PPROCEDURE__CODE_ORDER_PRESCRIPTION, oldCodeOrderPrescription,
-					codeOrderPrescription));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public int getCodeOrderPrescriptionPlan() {
-		return codeOrderPrescriptionPlan;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setCodeOrderPrescriptionPlan(int newCodeOrderPrescriptionPlan) {
-		int oldCodeOrderPrescriptionPlan = codeOrderPrescriptionPlan;
-		codeOrderPrescriptionPlan = newCodeOrderPrescriptionPlan;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET,
-					Execution_metamodelPackage.PPROCEDURE__CODE_ORDER_PRESCRIPTION_PLAN, oldCodeOrderPrescriptionPlan,
-					codeOrderPrescriptionPlan));
+					Execution_metamodelPackage.PPROCEDURE__PRESCRIPTION_RESULT, newPrescriptionResult,
+					newPrescriptionResult));
 	}
 
 	/**
@@ -249,6 +289,10 @@ public class PProcedureImpl extends MinimalEObjectImpl.Container implements PPro
 		switch (featureID) {
 		case Execution_metamodelPackage.PPROCEDURE__PROCEDURE:
 			return basicSetProcedure(null, msgs);
+		case Execution_metamodelPackage.PPROCEDURE__RESULT:
+			return basicSetResult(null, msgs);
+		case Execution_metamodelPackage.PPROCEDURE__PRESCRIPTION_RESULT:
+			return basicSetPrescriptionResult(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -265,10 +309,10 @@ public class PProcedureImpl extends MinimalEObjectImpl.Container implements PPro
 			return getId();
 		case Execution_metamodelPackage.PPROCEDURE__PROCEDURE:
 			return getProcedure();
-		case Execution_metamodelPackage.PPROCEDURE__CODE_ORDER_PRESCRIPTION:
-			return getCodeOrderPrescription();
-		case Execution_metamodelPackage.PPROCEDURE__CODE_ORDER_PRESCRIPTION_PLAN:
-			return getCodeOrderPrescriptionPlan();
+		case Execution_metamodelPackage.PPROCEDURE__RESULT:
+			return getResult();
+		case Execution_metamodelPackage.PPROCEDURE__PRESCRIPTION_RESULT:
+			return getPrescriptionResult();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -278,6 +322,7 @@ public class PProcedureImpl extends MinimalEObjectImpl.Container implements PPro
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
@@ -287,11 +332,11 @@ public class PProcedureImpl extends MinimalEObjectImpl.Container implements PPro
 		case Execution_metamodelPackage.PPROCEDURE__PROCEDURE:
 			setProcedure((Procedure) newValue);
 			return;
-		case Execution_metamodelPackage.PPROCEDURE__CODE_ORDER_PRESCRIPTION:
-			setCodeOrderPrescription((Integer) newValue);
+		case Execution_metamodelPackage.PPROCEDURE__RESULT:
+			setResult((Result) newValue);
 			return;
-		case Execution_metamodelPackage.PPROCEDURE__CODE_ORDER_PRESCRIPTION_PLAN:
-			setCodeOrderPrescriptionPlan((Integer) newValue);
+		case Execution_metamodelPackage.PPROCEDURE__PRESCRIPTION_RESULT:
+			setPrescriptionResult((PrescriptionResult) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -311,11 +356,11 @@ public class PProcedureImpl extends MinimalEObjectImpl.Container implements PPro
 		case Execution_metamodelPackage.PPROCEDURE__PROCEDURE:
 			setProcedure((Procedure) null);
 			return;
-		case Execution_metamodelPackage.PPROCEDURE__CODE_ORDER_PRESCRIPTION:
-			setCodeOrderPrescription(CODE_ORDER_PRESCRIPTION_EDEFAULT);
+		case Execution_metamodelPackage.PPROCEDURE__RESULT:
+			setResult((Result) null);
 			return;
-		case Execution_metamodelPackage.PPROCEDURE__CODE_ORDER_PRESCRIPTION_PLAN:
-			setCodeOrderPrescriptionPlan(CODE_ORDER_PRESCRIPTION_PLAN_EDEFAULT);
+		case Execution_metamodelPackage.PPROCEDURE__PRESCRIPTION_RESULT:
+			setPrescriptionResult((PrescriptionResult) null);
 			return;
 		}
 		super.eUnset(featureID);
@@ -333,10 +378,10 @@ public class PProcedureImpl extends MinimalEObjectImpl.Container implements PPro
 			return id != ID_EDEFAULT;
 		case Execution_metamodelPackage.PPROCEDURE__PROCEDURE:
 			return procedure != null;
-		case Execution_metamodelPackage.PPROCEDURE__CODE_ORDER_PRESCRIPTION:
-			return codeOrderPrescription != CODE_ORDER_PRESCRIPTION_EDEFAULT;
-		case Execution_metamodelPackage.PPROCEDURE__CODE_ORDER_PRESCRIPTION_PLAN:
-			return codeOrderPrescriptionPlan != CODE_ORDER_PRESCRIPTION_PLAN_EDEFAULT;
+		case Execution_metamodelPackage.PPROCEDURE__RESULT:
+			return result != null;
+		case Execution_metamodelPackage.PPROCEDURE__PRESCRIPTION_RESULT:
+			return prescriptionResult != null;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -354,10 +399,6 @@ public class PProcedureImpl extends MinimalEObjectImpl.Container implements PPro
 		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (id: ");
 		result.append(id);
-		result.append(", codeOrderPrescription: ");
-		result.append(codeOrderPrescription);
-		result.append(", codeOrderPrescriptionPlan: ");
-		result.append(codeOrderPrescriptionPlan);
 		result.append(')');
 		return result.toString();
 	}

@@ -7,6 +7,7 @@ import MetamodelExecution.Execution_metamodelPackage;
 import MetamodelExecution.PExamination;
 import MetamodelExecution.PInternment;
 import MetamodelExecution.PMedication;
+import MetamodelExecution.PPaediatricMedicationt;
 import MetamodelExecution.PProcedure;
 
 import java.util.Collection;
@@ -38,6 +39,8 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link MetamodelExecution.impl.ETreatmentImpl#getIdsPProcedure <em>Ids PProcedure</em>}</li>
  *   <li>{@link MetamodelExecution.impl.ETreatmentImpl#getIdsPInternment <em>Ids PInternment</em>}</li>
  *   <li>{@link MetamodelExecution.impl.ETreatmentImpl#getIdsPMedication <em>Ids PMedication</em>}</li>
+ *   <li>{@link MetamodelExecution.impl.ETreatmentImpl#getIdsPPaediatricMedication <em>Ids PPaediatric Medication</em>}</li>
+ *   <li>{@link MetamodelExecution.impl.ETreatmentImpl#getPpaediatricmedicationt <em>Ppaediatricmedicationt</em>}</li>
  * </ul>
  *
  * @generated
@@ -122,6 +125,26 @@ public class ETreatmentImpl extends EStepImpl implements ETreatment {
 	 * @ordered
 	 */
 	protected EList<Integer> idsPMedication;
+
+	/**
+	 * The cached value of the '{@link #getIdsPPaediatricMedication() <em>Ids PPaediatric Medication</em>}' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getIdsPPaediatricMedication()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Integer> idsPPaediatricMedication;
+
+	/**
+	 * The cached value of the '{@link #getPpaediatricmedicationt() <em>Ppaediatricmedicationt</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getPpaediatricmedicationt()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<PPaediatricMedicationt> ppaediatricmedicationt;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -251,6 +274,32 @@ public class ETreatmentImpl extends EStepImpl implements ETreatment {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EList<Integer> getIdsPPaediatricMedication() {
+		if (idsPPaediatricMedication == null) {
+			idsPPaediatricMedication = new EDataTypeUniqueEList<Integer>(Integer.class, this,
+					Execution_metamodelPackage.ETREATMENT__IDS_PPAEDIATRIC_MEDICATION);
+		}
+		return idsPPaediatricMedication;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<PPaediatricMedicationt> getPpaediatricmedicationt() {
+		if (ppaediatricmedicationt == null) {
+			ppaediatricmedicationt = new EObjectContainmentEList<PPaediatricMedicationt>(PPaediatricMedicationt.class,
+					this, Execution_metamodelPackage.ETREATMENT__PPAEDIATRICMEDICATIONT);
+		}
+		return ppaediatricmedicationt;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -262,6 +311,8 @@ public class ETreatmentImpl extends EStepImpl implements ETreatment {
 			return ((InternalEList<?>) getPinternment()).basicRemove(otherEnd, msgs);
 		case Execution_metamodelPackage.ETREATMENT__PMEDICATION:
 			return ((InternalEList<?>) getPmedication()).basicRemove(otherEnd, msgs);
+		case Execution_metamodelPackage.ETREATMENT__PPAEDIATRICMEDICATIONT:
+			return ((InternalEList<?>) getPpaediatricmedicationt()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -290,6 +341,10 @@ public class ETreatmentImpl extends EStepImpl implements ETreatment {
 			return getIdsPInternment();
 		case Execution_metamodelPackage.ETREATMENT__IDS_PMEDICATION:
 			return getIdsPMedication();
+		case Execution_metamodelPackage.ETREATMENT__IDS_PPAEDIATRIC_MEDICATION:
+			return getIdsPPaediatricMedication();
+		case Execution_metamodelPackage.ETREATMENT__PPAEDIATRICMEDICATIONT:
+			return getPpaediatricmedicationt();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -335,6 +390,14 @@ public class ETreatmentImpl extends EStepImpl implements ETreatment {
 			getIdsPMedication().clear();
 			getIdsPMedication().addAll((Collection<? extends Integer>) newValue);
 			return;
+		case Execution_metamodelPackage.ETREATMENT__IDS_PPAEDIATRIC_MEDICATION:
+			getIdsPPaediatricMedication().clear();
+			getIdsPPaediatricMedication().addAll((Collection<? extends Integer>) newValue);
+			return;
+		case Execution_metamodelPackage.ETREATMENT__PPAEDIATRICMEDICATIONT:
+			getPpaediatricmedicationt().clear();
+			getPpaediatricmedicationt().addAll((Collection<? extends PPaediatricMedicationt>) newValue);
+			return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -371,6 +434,12 @@ public class ETreatmentImpl extends EStepImpl implements ETreatment {
 		case Execution_metamodelPackage.ETREATMENT__IDS_PMEDICATION:
 			getIdsPMedication().clear();
 			return;
+		case Execution_metamodelPackage.ETREATMENT__IDS_PPAEDIATRIC_MEDICATION:
+			getIdsPPaediatricMedication().clear();
+			return;
+		case Execution_metamodelPackage.ETREATMENT__PPAEDIATRICMEDICATIONT:
+			getPpaediatricmedicationt().clear();
+			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -399,6 +468,10 @@ public class ETreatmentImpl extends EStepImpl implements ETreatment {
 			return idsPInternment != null && !idsPInternment.isEmpty();
 		case Execution_metamodelPackage.ETREATMENT__IDS_PMEDICATION:
 			return idsPMedication != null && !idsPMedication.isEmpty();
+		case Execution_metamodelPackage.ETREATMENT__IDS_PPAEDIATRIC_MEDICATION:
+			return idsPPaediatricMedication != null && !idsPPaediatricMedication.isEmpty();
+		case Execution_metamodelPackage.ETREATMENT__PPAEDIATRICMEDICATIONT:
+			return ppaediatricmedicationt != null && !ppaediatricmedicationt.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}
@@ -422,6 +495,8 @@ public class ETreatmentImpl extends EStepImpl implements ETreatment {
 		result.append(idsPInternment);
 		result.append(", idsPMedication: ");
 		result.append(idsPMedication);
+		result.append(", idsPPaediatricMedication: ");
+		result.append(idsPPaediatricMedication);
 		result.append(')');
 		return result.toString();
 	}

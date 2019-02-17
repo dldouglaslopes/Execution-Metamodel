@@ -16,6 +16,8 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link MetamodelExecution.PInternment#getId <em>Id</em>}</li>
  *   <li>{@link MetamodelExecution.PInternment#getInternment <em>Internment</em>}</li>
  *   <li>{@link MetamodelExecution.PInternment#getNumberGuide <em>Number Guide</em>}</li>
+ *   <li>{@link MetamodelExecution.PInternment#getResult <em>Result</em>}</li>
+ *   <li>{@link MetamodelExecution.PInternment#getPrescriptionResult <em>Prescription Result</em>}</li>
  * </ul>
  *
  * @see MetamodelExecution.Execution_metamodelPackage#getPInternment()
@@ -100,5 +102,57 @@ public interface PInternment extends EObject {
 	 * @generated
 	 */
 	void setNumberGuide(int value);
+
+	/**
+	 * Returns the value of the '<em><b>Result</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Result</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Result</em>' containment reference.
+	 * @see #setResult(Result)
+	 * @see MetamodelExecution.Execution_metamodelPackage#getPInternment_Result()
+	 * @model containment="true"
+	 * @generated
+	 */
+	Result getResult();
+
+	/**
+	 * Sets the value of the '{@link MetamodelExecution.PInternment#getResult <em>Result</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Result</em>' containment reference.
+	 * @see #getResult()
+	 * @generated
+	 */
+	void setResult(Result value);
+
+	/**
+	 * Returns the value of the '<em><b>Prescription Result</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Prescription Result</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Prescription Result</em>' containment reference.
+	 * @see #setPrescriptionResult(PrescriptionResult)
+	 * @see MetamodelExecution.Execution_metamodelPackage#getPInternment_PrescriptionResult()
+	 * @model containment="true"
+	 * @generated
+	 */
+	PrescriptionResult getPrescriptionResult();
+
+	/**
+	 * Sets the value of the '{@link MetamodelExecution.PInternment#getPrescriptionResult <em>Prescription Result</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Prescription Result</em>' containment reference.
+	 * @see #getPrescriptionResult()
+	 * @generated
+	 */
+	void setPrescriptionResult(PrescriptionResult value);
 
 } // PInternment

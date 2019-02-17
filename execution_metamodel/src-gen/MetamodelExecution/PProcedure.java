@@ -15,8 +15,8 @@ import org.eclipse.emf.ecore.EObject;
  * <ul>
  *   <li>{@link MetamodelExecution.PProcedure#getId <em>Id</em>}</li>
  *   <li>{@link MetamodelExecution.PProcedure#getProcedure <em>Procedure</em>}</li>
- *   <li>{@link MetamodelExecution.PProcedure#getCodeOrderPrescription <em>Code Order Prescription</em>}</li>
- *   <li>{@link MetamodelExecution.PProcedure#getCodeOrderPrescriptionPlan <em>Code Order Prescription Plan</em>}</li>
+ *   <li>{@link MetamodelExecution.PProcedure#getResult <em>Result</em>}</li>
+ *   <li>{@link MetamodelExecution.PProcedure#getPrescriptionResult <em>Prescription Result</em>}</li>
  * </ul>
  *
  * @see MetamodelExecution.Execution_metamodelPackage#getPProcedure()
@@ -77,55 +77,55 @@ public interface PProcedure extends EObject {
 	void setProcedure(Procedure value);
 
 	/**
-	 * Returns the value of the '<em><b>Code Order Prescription</b></em>' attribute.
+	 * Returns the value of the '<em><b>Result</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Code Order Prescription</em>' attribute isn't clear,
+	 * If the meaning of the '<em>Result</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Code Order Prescription</em>' attribute.
-	 * @see #setCodeOrderPrescription(int)
-	 * @see MetamodelExecution.Execution_metamodelPackage#getPProcedure_CodeOrderPrescription()
-	 * @model
+	 * @return the value of the '<em>Result</em>' containment reference.
+	 * @see #setResult(Result)
+	 * @see MetamodelExecution.Execution_metamodelPackage#getPProcedure_Result()
+	 * @model containment="true"
 	 * @generated
 	 */
-	int getCodeOrderPrescription();
+	Result getResult();
 
 	/**
-	 * Sets the value of the '{@link MetamodelExecution.PProcedure#getCodeOrderPrescription <em>Code Order Prescription</em>}' attribute.
+	 * Sets the value of the '{@link MetamodelExecution.PProcedure#getResult <em>Result</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Code Order Prescription</em>' attribute.
-	 * @see #getCodeOrderPrescription()
+	 * @param value the new value of the '<em>Result</em>' containment reference.
+	 * @see #getResult()
 	 * @generated
 	 */
-	void setCodeOrderPrescription(int value);
+	void setResult(Result value);
 
 	/**
-	 * Returns the value of the '<em><b>Code Order Prescription Plan</b></em>' attribute.
+	 * Returns the value of the '<em><b>Prescription Result</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Code Order Prescription Plan</em>' attribute isn't clear,
+	 * If the meaning of the '<em>Prescription Result</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Code Order Prescription Plan</em>' attribute.
-	 * @see #setCodeOrderPrescriptionPlan(int)
-	 * @see MetamodelExecution.Execution_metamodelPackage#getPProcedure_CodeOrderPrescriptionPlan()
-	 * @model
+	 * @return the value of the '<em>Prescription Result</em>' containment reference.
+	 * @see #setPrescriptionResult(PrescriptionResult)
+	 * @see MetamodelExecution.Execution_metamodelPackage#getPProcedure_PrescriptionResult()
+	 * @model containment="true"
 	 * @generated
 	 */
-	int getCodeOrderPrescriptionPlan();
+	PrescriptionResult getPrescriptionResult();
 
 	/**
-	 * Sets the value of the '{@link MetamodelExecution.PProcedure#getCodeOrderPrescriptionPlan <em>Code Order Prescription Plan</em>}' attribute.
+	 * Sets the value of the '{@link MetamodelExecution.PProcedure#getPrescriptionResult <em>Prescription Result</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Code Order Prescription Plan</em>' attribute.
-	 * @see #getCodeOrderPrescriptionPlan()
+	 * @param value the new value of the '<em>Prescription Result</em>' containment reference.
+	 * @see #getPrescriptionResult()
 	 * @generated
 	 */
-	void setCodeOrderPrescriptionPlan(int value);
+	void setPrescriptionResult(PrescriptionResult value);
 
 } // PProcedure
