@@ -205,7 +205,7 @@ public class ProcedureImpl extends MinimalEObjectImpl.Container implements Proce
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String TYPE_CODE_EDEFAULT = null;
+	protected static final int TYPE_CODE_EDEFAULT = 0;
 
 	/**
 	 * The cached value of the '{@link #getTypeCode() <em>Type Code</em>}' attribute.
@@ -215,7 +215,7 @@ public class ProcedureImpl extends MinimalEObjectImpl.Container implements Proce
 	 * @generated
 	 * @ordered
 	 */
-	protected String typeCode = TYPE_CODE_EDEFAULT;
+	protected int typeCode = TYPE_CODE_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getTypeName() <em>Type Name</em>}' attribute.
@@ -476,7 +476,7 @@ public class ProcedureImpl extends MinimalEObjectImpl.Container implements Proce
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getTypeCode() {
+	public int getTypeCode() {
 		return typeCode;
 	}
 
@@ -485,8 +485,8 @@ public class ProcedureImpl extends MinimalEObjectImpl.Container implements Proce
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setTypeCode(String newTypeCode) {
-		String oldTypeCode = typeCode;
+	public void setTypeCode(int newTypeCode) {
+		int oldTypeCode = typeCode;
 		typeCode = newTypeCode;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.PROCEDURE__TYPE_CODE,
@@ -628,7 +628,7 @@ public class ProcedureImpl extends MinimalEObjectImpl.Container implements Proce
 			setDescription((String) newValue);
 			return;
 		case Execution_metamodelPackage.PROCEDURE__TYPE_CODE:
-			setTypeCode((String) newValue);
+			setTypeCode((Integer) newValue);
 			return;
 		case Execution_metamodelPackage.PROCEDURE__TYPE_NAME:
 			setTypeName((String) newValue);
@@ -716,7 +716,7 @@ public class ProcedureImpl extends MinimalEObjectImpl.Container implements Proce
 		case Execution_metamodelPackage.PROCEDURE__DESCRIPTION:
 			return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
 		case Execution_metamodelPackage.PROCEDURE__TYPE_CODE:
-			return TYPE_CODE_EDEFAULT == null ? typeCode != null : !TYPE_CODE_EDEFAULT.equals(typeCode);
+			return typeCode != TYPE_CODE_EDEFAULT;
 		case Execution_metamodelPackage.PROCEDURE__TYPE_NAME:
 			return TYPE_NAME_EDEFAULT == null ? typeName != null : !TYPE_NAME_EDEFAULT.equals(typeName);
 		case Execution_metamodelPackage.PROCEDURE__OUTPATIENT:

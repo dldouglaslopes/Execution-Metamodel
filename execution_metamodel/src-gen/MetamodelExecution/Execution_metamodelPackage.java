@@ -772,13 +772,13 @@ public interface Execution_metamodelPackage extends EPackage {
 	int EDISCHARGE__NEXT = ESTEP__NEXT;
 
 	/**
-	 * The feature id for the '<em><b>Request</b></em>' containment reference.
+	 * The feature id for the '<em><b>Prescription Result</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int EDISCHARGE__REQUEST = ESTEP_FEATURE_COUNT + 0;
+	int EDISCHARGE__PRESCRIPTION_RESULT = ESTEP_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>EDischarge</em>' class.
@@ -6458,15 +6458,15 @@ public interface Execution_metamodelPackage extends EPackage {
 	EClass getEDischarge();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link MetamodelExecution.EDischarge#getRequest <em>Request</em>}'.
+	 * Returns the meta object for the containment reference '{@link MetamodelExecution.EDischarge#getPrescriptionResult <em>Prescription Result</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Request</em>'.
-	 * @see MetamodelExecution.EDischarge#getRequest()
+	 * @return the meta object for the containment reference '<em>Prescription Result</em>'.
+	 * @see MetamodelExecution.EDischarge#getPrescriptionResult()
 	 * @see #getEDischarge()
 	 * @generated
 	 */
-	EReference getEDischarge_Request();
+	EReference getEDischarge_PrescriptionResult();
 
 	/**
 	 * Returns the meta object for class '{@link MetamodelExecution.EReferral <em>EReferral</em>}'.
@@ -10389,12 +10389,12 @@ public interface Execution_metamodelPackage extends EPackage {
 		EClass EDISCHARGE = eINSTANCE.getEDischarge();
 
 		/**
-		 * The meta object literal for the '<em><b>Request</b></em>' containment reference feature.
+		 * The meta object literal for the '<em><b>Prescription Result</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference EDISCHARGE__REQUEST = eINSTANCE.getEDischarge_Request();
+		EReference EDISCHARGE__PRESCRIPTION_RESULT = eINSTANCE.getEDischarge_PrescriptionResult();
 
 		/**
 		 * The meta object literal for the '{@link MetamodelExecution.impl.EReferralImpl <em>EReferral</em>}' class.

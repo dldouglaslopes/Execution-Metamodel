@@ -249,12 +249,12 @@ public interface Procedure extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Type Code</em>' attribute.
-	 * @see #setTypeCode(String)
+	 * @see #setTypeCode(int)
 	 * @see MetamodelExecution.Execution_metamodelPackage#getProcedure_TypeCode()
 	 * @model
 	 * @generated
 	 */
-	String getTypeCode();
+	int getTypeCode();
 
 	/**
 	 * Sets the value of the '{@link MetamodelExecution.Procedure#getTypeCode <em>Type Code</em>}' attribute.
@@ -264,7 +264,7 @@ public interface Procedure extends EObject {
 	 * @see #getTypeCode()
 	 * @generated
 	 */
-	void setTypeCode(String value);
+	void setTypeCode(int value);
 
 	/**
 	 * Returns the value of the '<em><b>Type Name</b></em>' attribute.

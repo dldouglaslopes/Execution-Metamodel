@@ -604,7 +604,7 @@ public class Execution_metamodelPackageImpl extends EPackageImpl implements Exec
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getEDischarge_Request() {
+	public EReference getEDischarge_PrescriptionResult() {
 		return (EReference) eDischargeEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -3847,7 +3847,7 @@ public class Execution_metamodelPackageImpl extends EPackageImpl implements Exec
 		eInformationEClass = createEClass(EINFORMATION);
 
 		eDischargeEClass = createEClass(EDISCHARGE);
-		createEReference(eDischargeEClass, EDISCHARGE__REQUEST);
+		createEReference(eDischargeEClass, EDISCHARGE__PRESCRIPTION_RESULT);
 
 		eReferralEClass = createEClass(EREFERRAL);
 		createEReference(eReferralEClass, EREFERRAL__EPATHWAY);
@@ -4330,9 +4330,9 @@ public class Execution_metamodelPackageImpl extends EPackageImpl implements Exec
 
 		initEClass(eDischargeEClass, EDischarge.class, "EDischarge", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getEDischarge_Request(), this.getRequest(), null, "request", null, 0, 1, EDischarge.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
-				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getEDischarge_PrescriptionResult(), this.getPrescriptionResult(), null, "prescriptionResult",
+				null, 0, 1, EDischarge.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
+				!IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(eReferralEClass, EReferral.class, "EReferral", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
@@ -4856,7 +4856,7 @@ public class Execution_metamodelPackageImpl extends EPackageImpl implements Exec
 		initEAttribute(getProcedure_Description(), ecorePackage.getEString(), "description", null, 0, 1,
 				Procedure.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
 				!IS_DERIVED, IS_ORDERED);
-		initEAttribute(getProcedure_TypeCode(), ecorePackage.getEString(), "typeCode", null, 0, 1, Procedure.class,
+		initEAttribute(getProcedure_TypeCode(), ecorePackage.getEInt(), "typeCode", null, 0, 1, Procedure.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getProcedure_TypeName(), ecorePackage.getEString(), "typeName", null, 0, 1, Procedure.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -4887,7 +4887,7 @@ public class Execution_metamodelPackageImpl extends EPackageImpl implements Exec
 		initEAttribute(getInternment_IdInternment(), ecorePackage.getEInt(), "idInternment", null, 0, 1,
 				Internment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
 				!IS_DERIVED, IS_ORDERED);
-		initEAttribute(getInternment_TypeCode(), ecorePackage.getEString(), "typeCode", null, 0, 1, Internment.class,
+		initEAttribute(getInternment_TypeCode(), ecorePackage.getEInt(), "typeCode", null, 0, 1, Internment.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getInternment_MemberPeers(), ecorePackage.getEBoolean(), "memberPeers", null, 0, 1,
 				Internment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,

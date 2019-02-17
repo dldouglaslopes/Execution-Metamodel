@@ -250,12 +250,12 @@ public interface Internment extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Type Code</em>' attribute.
-	 * @see #setTypeCode(String)
+	 * @see #setTypeCode(int)
 	 * @see MetamodelExecution.Execution_metamodelPackage#getInternment_TypeCode()
 	 * @model
 	 * @generated
 	 */
-	String getTypeCode();
+	int getTypeCode();
 
 	/**
 	 * Sets the value of the '{@link MetamodelExecution.Internment#getTypeCode <em>Type Code</em>}' attribute.
@@ -265,7 +265,7 @@ public interface Internment extends EObject {
 	 * @see #getTypeCode()
 	 * @generated
 	 */
-	void setTypeCode(String value);
+	void setTypeCode(int value);
 
 	/**
 	 * Returns the value of the '<em><b>Member Peers</b></em>' attribute.

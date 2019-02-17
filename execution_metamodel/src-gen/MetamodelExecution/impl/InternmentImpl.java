@@ -206,7 +206,7 @@ public class InternmentImpl extends MinimalEObjectImpl.Container implements Inte
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String TYPE_CODE_EDEFAULT = null;
+	protected static final int TYPE_CODE_EDEFAULT = 0;
 
 	/**
 	 * The cached value of the '{@link #getTypeCode() <em>Type Code</em>}' attribute.
@@ -216,7 +216,7 @@ public class InternmentImpl extends MinimalEObjectImpl.Container implements Inte
 	 * @generated
 	 * @ordered
 	 */
-	protected String typeCode = TYPE_CODE_EDEFAULT;
+	protected int typeCode = TYPE_CODE_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #isMemberPeers() <em>Member Peers</em>}' attribute.
@@ -499,7 +499,7 @@ public class InternmentImpl extends MinimalEObjectImpl.Container implements Inte
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getTypeCode() {
+	public int getTypeCode() {
 		return typeCode;
 	}
 
@@ -508,8 +508,8 @@ public class InternmentImpl extends MinimalEObjectImpl.Container implements Inte
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setTypeCode(String newTypeCode) {
-		String oldTypeCode = typeCode;
+	public void setTypeCode(int newTypeCode) {
+		int oldTypeCode = typeCode;
 		typeCode = newTypeCode;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.INTERNMENT__TYPE_CODE,
@@ -675,7 +675,7 @@ public class InternmentImpl extends MinimalEObjectImpl.Container implements Inte
 			setIdInternment((Integer) newValue);
 			return;
 		case Execution_metamodelPackage.INTERNMENT__TYPE_CODE:
-			setTypeCode((String) newValue);
+			setTypeCode((Integer) newValue);
 			return;
 		case Execution_metamodelPackage.INTERNMENT__MEMBER_PEERS:
 			setMemberPeers((Boolean) newValue);
@@ -771,7 +771,7 @@ public class InternmentImpl extends MinimalEObjectImpl.Container implements Inte
 		case Execution_metamodelPackage.INTERNMENT__ID_INTERNMENT:
 			return idInternment != ID_INTERNMENT_EDEFAULT;
 		case Execution_metamodelPackage.INTERNMENT__TYPE_CODE:
-			return TYPE_CODE_EDEFAULT == null ? typeCode != null : !TYPE_CODE_EDEFAULT.equals(typeCode);
+			return typeCode != TYPE_CODE_EDEFAULT;
 		case Execution_metamodelPackage.INTERNMENT__MEMBER_PEERS:
 			return memberPeers != MEMBER_PEERS_EDEFAULT;
 		case Execution_metamodelPackage.INTERNMENT__OUTPATIENT:

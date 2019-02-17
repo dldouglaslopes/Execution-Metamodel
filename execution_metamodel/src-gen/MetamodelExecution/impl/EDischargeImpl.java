@@ -4,8 +4,7 @@ package MetamodelExecution.impl;
 
 import MetamodelExecution.EDischarge;
 import MetamodelExecution.Execution_metamodelPackage;
-import MetamodelExecution.Request;
-
+import MetamodelExecution.PrescriptionResult;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
@@ -22,21 +21,21 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link MetamodelExecution.impl.EDischargeImpl#getRequest <em>Request</em>}</li>
+ *   <li>{@link MetamodelExecution.impl.EDischargeImpl#getPrescriptionResult <em>Prescription Result</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class EDischargeImpl extends EStepImpl implements EDischarge {
 	/**
-	 * The cached value of the '{@link #getRequest() <em>Request</em>}' containment reference.
+	 * The cached value of the '{@link #getPrescriptionResult() <em>Prescription Result</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getRequest()
+	 * @see #getPrescriptionResult()
 	 * @generated
 	 * @ordered
 	 */
-	protected Request request;
+	protected PrescriptionResult prescriptionResult;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -62,8 +61,8 @@ public class EDischargeImpl extends EStepImpl implements EDischarge {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Request getRequest() {
-		return request;
+	public PrescriptionResult getPrescriptionResult() {
+		return prescriptionResult;
 	}
 
 	/**
@@ -71,12 +70,14 @@ public class EDischargeImpl extends EStepImpl implements EDischarge {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetRequest(Request newRequest, NotificationChain msgs) {
-		Request oldRequest = request;
-		request = newRequest;
+	public NotificationChain basicSetPrescriptionResult(PrescriptionResult newPrescriptionResult,
+			NotificationChain msgs) {
+		PrescriptionResult oldPrescriptionResult = prescriptionResult;
+		prescriptionResult = newPrescriptionResult;
 		if (eNotificationRequired()) {
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
-					Execution_metamodelPackage.EDISCHARGE__REQUEST, oldRequest, newRequest);
+					Execution_metamodelPackage.EDISCHARGE__PRESCRIPTION_RESULT, oldPrescriptionResult,
+					newPrescriptionResult);
 			if (msgs == null)
 				msgs = notification;
 			else
@@ -90,21 +91,24 @@ public class EDischargeImpl extends EStepImpl implements EDischarge {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setRequest(Request newRequest) {
-		if (newRequest != request) {
+	public void setPrescriptionResult(PrescriptionResult newPrescriptionResult) {
+		if (newPrescriptionResult != prescriptionResult) {
 			NotificationChain msgs = null;
-			if (request != null)
-				msgs = ((InternalEObject) request).eInverseRemove(this,
-						EOPPOSITE_FEATURE_BASE - Execution_metamodelPackage.EDISCHARGE__REQUEST, null, msgs);
-			if (newRequest != null)
-				msgs = ((InternalEObject) newRequest).eInverseAdd(this,
-						EOPPOSITE_FEATURE_BASE - Execution_metamodelPackage.EDISCHARGE__REQUEST, null, msgs);
-			msgs = basicSetRequest(newRequest, msgs);
+			if (prescriptionResult != null)
+				msgs = ((InternalEObject) prescriptionResult).eInverseRemove(this,
+						EOPPOSITE_FEATURE_BASE - Execution_metamodelPackage.EDISCHARGE__PRESCRIPTION_RESULT, null,
+						msgs);
+			if (newPrescriptionResult != null)
+				msgs = ((InternalEObject) newPrescriptionResult).eInverseAdd(this,
+						EOPPOSITE_FEATURE_BASE - Execution_metamodelPackage.EDISCHARGE__PRESCRIPTION_RESULT, null,
+						msgs);
+			msgs = basicSetPrescriptionResult(newPrescriptionResult, msgs);
 			if (msgs != null)
 				msgs.dispatch();
 		} else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.EDISCHARGE__REQUEST,
-					newRequest, newRequest));
+			eNotify(new ENotificationImpl(this, Notification.SET,
+					Execution_metamodelPackage.EDISCHARGE__PRESCRIPTION_RESULT, newPrescriptionResult,
+					newPrescriptionResult));
 	}
 
 	/**
@@ -115,8 +119,8 @@ public class EDischargeImpl extends EStepImpl implements EDischarge {
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-		case Execution_metamodelPackage.EDISCHARGE__REQUEST:
-			return basicSetRequest(null, msgs);
+		case Execution_metamodelPackage.EDISCHARGE__PRESCRIPTION_RESULT:
+			return basicSetPrescriptionResult(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -129,8 +133,8 @@ public class EDischargeImpl extends EStepImpl implements EDischarge {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case Execution_metamodelPackage.EDISCHARGE__REQUEST:
-			return getRequest();
+		case Execution_metamodelPackage.EDISCHARGE__PRESCRIPTION_RESULT:
+			return getPrescriptionResult();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -143,8 +147,8 @@ public class EDischargeImpl extends EStepImpl implements EDischarge {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case Execution_metamodelPackage.EDISCHARGE__REQUEST:
-			setRequest((Request) newValue);
+		case Execution_metamodelPackage.EDISCHARGE__PRESCRIPTION_RESULT:
+			setPrescriptionResult((PrescriptionResult) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -158,8 +162,8 @@ public class EDischargeImpl extends EStepImpl implements EDischarge {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case Execution_metamodelPackage.EDISCHARGE__REQUEST:
-			setRequest((Request) null);
+		case Execution_metamodelPackage.EDISCHARGE__PRESCRIPTION_RESULT:
+			setPrescriptionResult((PrescriptionResult) null);
 			return;
 		}
 		super.eUnset(featureID);
@@ -173,8 +177,8 @@ public class EDischargeImpl extends EStepImpl implements EDischarge {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case Execution_metamodelPackage.EDISCHARGE__REQUEST:
-			return request != null;
+		case Execution_metamodelPackage.EDISCHARGE__PRESCRIPTION_RESULT:
+			return prescriptionResult != null;
 		}
 		return super.eIsSet(featureID);
 	}
