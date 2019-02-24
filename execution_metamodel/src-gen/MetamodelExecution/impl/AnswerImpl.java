@@ -5,7 +5,7 @@ package MetamodelExecution.impl;
 import MetamodelExecution.Answer;
 import MetamodelExecution.Execution_metamodelPackage;
 import MetamodelExecution.Question;
-import MetamodelExecution.UnitValue;
+import MetamodelExecution.Value;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
@@ -28,7 +28,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *   <li>{@link MetamodelExecution.impl.AnswerImpl#getType <em>Type</em>}</li>
  *   <li>{@link MetamodelExecution.impl.AnswerImpl#getQuestion <em>Question</em>}</li>
  *   <li>{@link MetamodelExecution.impl.AnswerImpl#getJustification <em>Justification</em>}</li>
- *   <li>{@link MetamodelExecution.impl.AnswerImpl#getUnitvalue <em>Unitvalue</em>}</li>
+ *   <li>{@link MetamodelExecution.impl.AnswerImpl#getValue <em>Value</em>}</li>
  * </ul>
  *
  * @generated
@@ -105,14 +105,14 @@ public class AnswerImpl extends MinimalEObjectImpl.Container implements Answer {
 	protected String justification = JUSTIFICATION_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getUnitvalue() <em>Unitvalue</em>}' containment reference.
+	 * The cached value of the '{@link #getValue() <em>Value</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getUnitvalue()
+	 * @see #getValue()
 	 * @generated
 	 * @ordered
 	 */
-	protected UnitValue unitvalue;
+	protected Value value;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -253,8 +253,8 @@ public class AnswerImpl extends MinimalEObjectImpl.Container implements Answer {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public UnitValue getUnitvalue() {
-		return unitvalue;
+	public Value getValue() {
+		return value;
 	}
 
 	/**
@@ -262,12 +262,12 @@ public class AnswerImpl extends MinimalEObjectImpl.Container implements Answer {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetUnitvalue(UnitValue newUnitvalue, NotificationChain msgs) {
-		UnitValue oldUnitvalue = unitvalue;
-		unitvalue = newUnitvalue;
+	public NotificationChain basicSetValue(Value newValue, NotificationChain msgs) {
+		Value oldValue = value;
+		value = newValue;
 		if (eNotificationRequired()) {
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
-					Execution_metamodelPackage.ANSWER__UNITVALUE, oldUnitvalue, newUnitvalue);
+					Execution_metamodelPackage.ANSWER__VALUE, oldValue, newValue);
 			if (msgs == null)
 				msgs = notification;
 			else
@@ -281,21 +281,21 @@ public class AnswerImpl extends MinimalEObjectImpl.Container implements Answer {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setUnitvalue(UnitValue newUnitvalue) {
-		if (newUnitvalue != unitvalue) {
+	public void setValue(Value newValue) {
+		if (newValue != value) {
 			NotificationChain msgs = null;
-			if (unitvalue != null)
-				msgs = ((InternalEObject) unitvalue).eInverseRemove(this,
-						EOPPOSITE_FEATURE_BASE - Execution_metamodelPackage.ANSWER__UNITVALUE, null, msgs);
-			if (newUnitvalue != null)
-				msgs = ((InternalEObject) newUnitvalue).eInverseAdd(this,
-						EOPPOSITE_FEATURE_BASE - Execution_metamodelPackage.ANSWER__UNITVALUE, null, msgs);
-			msgs = basicSetUnitvalue(newUnitvalue, msgs);
+			if (value != null)
+				msgs = ((InternalEObject) value).eInverseRemove(this,
+						EOPPOSITE_FEATURE_BASE - Execution_metamodelPackage.ANSWER__VALUE, null, msgs);
+			if (newValue != null)
+				msgs = ((InternalEObject) newValue).eInverseAdd(this,
+						EOPPOSITE_FEATURE_BASE - Execution_metamodelPackage.ANSWER__VALUE, null, msgs);
+			msgs = basicSetValue(newValue, msgs);
 			if (msgs != null)
 				msgs.dispatch();
 		} else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.ANSWER__UNITVALUE,
-					newUnitvalue, newUnitvalue));
+			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.ANSWER__VALUE, newValue,
+					newValue));
 	}
 
 	/**
@@ -308,8 +308,8 @@ public class AnswerImpl extends MinimalEObjectImpl.Container implements Answer {
 		switch (featureID) {
 		case Execution_metamodelPackage.ANSWER__QUESTION:
 			return basicSetQuestion(null, msgs);
-		case Execution_metamodelPackage.ANSWER__UNITVALUE:
-			return basicSetUnitvalue(null, msgs);
+		case Execution_metamodelPackage.ANSWER__VALUE:
+			return basicSetValue(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -330,8 +330,8 @@ public class AnswerImpl extends MinimalEObjectImpl.Container implements Answer {
 			return getQuestion();
 		case Execution_metamodelPackage.ANSWER__JUSTIFICATION:
 			return getJustification();
-		case Execution_metamodelPackage.ANSWER__UNITVALUE:
-			return getUnitvalue();
+		case Execution_metamodelPackage.ANSWER__VALUE:
+			return getValue();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -356,8 +356,8 @@ public class AnswerImpl extends MinimalEObjectImpl.Container implements Answer {
 		case Execution_metamodelPackage.ANSWER__JUSTIFICATION:
 			setJustification((String) newValue);
 			return;
-		case Execution_metamodelPackage.ANSWER__UNITVALUE:
-			setUnitvalue((UnitValue) newValue);
+		case Execution_metamodelPackage.ANSWER__VALUE:
+			setValue((Value) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -383,8 +383,8 @@ public class AnswerImpl extends MinimalEObjectImpl.Container implements Answer {
 		case Execution_metamodelPackage.ANSWER__JUSTIFICATION:
 			setJustification(JUSTIFICATION_EDEFAULT);
 			return;
-		case Execution_metamodelPackage.ANSWER__UNITVALUE:
-			setUnitvalue((UnitValue) null);
+		case Execution_metamodelPackage.ANSWER__VALUE:
+			setValue((Value) null);
 			return;
 		}
 		super.eUnset(featureID);
@@ -407,8 +407,8 @@ public class AnswerImpl extends MinimalEObjectImpl.Container implements Answer {
 		case Execution_metamodelPackage.ANSWER__JUSTIFICATION:
 			return JUSTIFICATION_EDEFAULT == null ? justification != null
 					: !JUSTIFICATION_EDEFAULT.equals(justification);
-		case Execution_metamodelPackage.ANSWER__UNITVALUE:
-			return unitvalue != null;
+		case Execution_metamodelPackage.ANSWER__VALUE:
+			return value != null;
 		}
 		return super.eIsSet(featureID);
 	}

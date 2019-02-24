@@ -17,7 +17,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link MetamodelExecution.Answer#getType <em>Type</em>}</li>
  *   <li>{@link MetamodelExecution.Answer#getQuestion <em>Question</em>}</li>
  *   <li>{@link MetamodelExecution.Answer#getJustification <em>Justification</em>}</li>
- *   <li>{@link MetamodelExecution.Answer#getUnitvalue <em>Unitvalue</em>}</li>
+ *   <li>{@link MetamodelExecution.Answer#getValue <em>Value</em>}</li>
  * </ul>
  *
  * @see MetamodelExecution.Execution_metamodelPackage#getAnswer()
@@ -130,29 +130,29 @@ public interface Answer extends EObject {
 	void setJustification(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Unitvalue</b></em>' containment reference.
+	 * Returns the value of the '<em><b>Value</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Unitvalue</em>' containment reference isn't clear,
+	 * If the meaning of the '<em>Value</em>' containment reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Unitvalue</em>' containment reference.
-	 * @see #setUnitvalue(UnitValue)
-	 * @see MetamodelExecution.Execution_metamodelPackage#getAnswer_Unitvalue()
+	 * @return the value of the '<em>Value</em>' containment reference.
+	 * @see #setValue(Value)
+	 * @see MetamodelExecution.Execution_metamodelPackage#getAnswer_Value()
 	 * @model containment="true"
 	 * @generated
 	 */
-	UnitValue getUnitvalue();
+	Value getValue();
 
 	/**
-	 * Sets the value of the '{@link MetamodelExecution.Answer#getUnitvalue <em>Unitvalue</em>}' containment reference.
+	 * Sets the value of the '{@link MetamodelExecution.Answer#getValue <em>Value</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Unitvalue</em>' containment reference.
-	 * @see #getUnitvalue()
+	 * @param value the new value of the '<em>Value</em>' containment reference.
+	 * @see #getValue()
 	 * @generated
 	 */
-	void setUnitvalue(UnitValue value);
+	void setValue(Value value);
 
 } // Answer

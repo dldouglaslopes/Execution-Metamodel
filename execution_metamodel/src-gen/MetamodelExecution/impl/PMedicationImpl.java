@@ -6,8 +6,8 @@ import MetamodelExecution.Execution_metamodelPackage;
 import MetamodelExecution.Medication;
 import MetamodelExecution.PMedication;
 import MetamodelExecution.PrescriptionResult;
-
 import MetamodelExecution.Result;
+
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
@@ -130,56 +130,6 @@ public class PMedicationImpl extends MinimalEObjectImpl.Container implements PMe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Result getResult() {
-		return result;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public NotificationChain basicSetResult(Result newResult, NotificationChain msgs) {
-		Result oldResult = result;
-		result = newResult;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
-					Execution_metamodelPackage.PMEDICATION__RESULT, oldResult, newResult);
-			if (msgs == null)
-				msgs = notification;
-			else
-				msgs.add(notification);
-		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setResult(Result newResult) {
-		if (newResult != result) {
-			NotificationChain msgs = null;
-			if (result != null)
-				msgs = ((InternalEObject) result).eInverseRemove(this,
-						EOPPOSITE_FEATURE_BASE - Execution_metamodelPackage.PMEDICATION__RESULT, null, msgs);
-			if (newResult != null)
-				msgs = ((InternalEObject) newResult).eInverseAdd(this,
-						EOPPOSITE_FEATURE_BASE - Execution_metamodelPackage.PMEDICATION__RESULT, null, msgs);
-			msgs = basicSetResult(newResult, msgs);
-			if (msgs != null)
-				msgs.dispatch();
-		} else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.PMEDICATION__RESULT,
-					newResult, newResult));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public Medication getMedication() {
 		return medication;
 	}
@@ -278,6 +228,56 @@ public class PMedicationImpl extends MinimalEObjectImpl.Container implements PMe
 			eNotify(new ENotificationImpl(this, Notification.SET,
 					Execution_metamodelPackage.PMEDICATION__PRESCRIPTION_RESULT, newPrescriptionResult,
 					newPrescriptionResult));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Result getResult() {
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetResult(Result newResult, NotificationChain msgs) {
+		Result oldResult = result;
+		result = newResult;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
+					Execution_metamodelPackage.PMEDICATION__RESULT, oldResult, newResult);
+			if (msgs == null)
+				msgs = notification;
+			else
+				msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setResult(Result newResult) {
+		if (newResult != result) {
+			NotificationChain msgs = null;
+			if (result != null)
+				msgs = ((InternalEObject) result).eInverseRemove(this,
+						EOPPOSITE_FEATURE_BASE - Execution_metamodelPackage.PMEDICATION__RESULT, null, msgs);
+			if (newResult != null)
+				msgs = ((InternalEObject) newResult).eInverseAdd(this,
+						EOPPOSITE_FEATURE_BASE - Execution_metamodelPackage.PMEDICATION__RESULT, null, msgs);
+			msgs = basicSetResult(newResult, msgs);
+			if (msgs != null)
+				msgs.dispatch();
+		} else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.PMEDICATION__RESULT,
+					newResult, newResult));
 	}
 
 	/**

@@ -21,7 +21,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * </p>
  * <ul>
  *   <li>{@link MetamodelExecution.impl.MedicalCareImpl#getCodeMedicalCare <em>Code Medical Care</em>}</li>
- *   <li>{@link MetamodelExecution.impl.MedicalCareImpl#getPacient <em>Pacient</em>}</li>
+ *   <li>{@link MetamodelExecution.impl.MedicalCareImpl#getPatient <em>Patient</em>}</li>
  *   <li>{@link MetamodelExecution.impl.MedicalCareImpl#getProfessional <em>Professional</em>}</li>
  *   <li>{@link MetamodelExecution.impl.MedicalCareImpl#getIdProfessional <em>Id Professional</em>}</li>
  *   <li>{@link MetamodelExecution.impl.MedicalCareImpl#getHospitalUnit <em>Hospital Unit</em>}</li>
@@ -54,24 +54,24 @@ public class MedicalCareImpl extends MinimalEObjectImpl.Container implements Med
 	protected int codeMedicalCare = CODE_MEDICAL_CARE_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getPacient() <em>Pacient</em>}' attribute.
+	 * The default value of the '{@link #getPatient() <em>Patient</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getPacient()
+	 * @see #getPatient()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String PACIENT_EDEFAULT = null;
+	protected static final String PATIENT_EDEFAULT = null;
 
 	/**
-	 * The cached value of the '{@link #getPacient() <em>Pacient</em>}' attribute.
+	 * The cached value of the '{@link #getPatient() <em>Patient</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getPacient()
+	 * @see #getPatient()
 	 * @generated
 	 * @ordered
 	 */
-	protected String pacient = PACIENT_EDEFAULT;
+	protected String patient = PATIENT_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getProfessional() <em>Professional</em>}' attribute.
@@ -239,8 +239,8 @@ public class MedicalCareImpl extends MinimalEObjectImpl.Container implements Med
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getPacient() {
-		return pacient;
+	public String getPatient() {
+		return patient;
 	}
 
 	/**
@@ -248,12 +248,12 @@ public class MedicalCareImpl extends MinimalEObjectImpl.Container implements Med
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setPacient(String newPacient) {
-		String oldPacient = pacient;
-		pacient = newPacient;
+	public void setPatient(String newPatient) {
+		String oldPatient = patient;
+		patient = newPatient;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.MEDICAL_CARE__PACIENT,
-					oldPacient, pacient));
+			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.MEDICAL_CARE__PATIENT,
+					oldPatient, patient));
 	}
 
 	/**
@@ -398,8 +398,8 @@ public class MedicalCareImpl extends MinimalEObjectImpl.Container implements Med
 		switch (featureID) {
 		case Execution_metamodelPackage.MEDICAL_CARE__CODE_MEDICAL_CARE:
 			return getCodeMedicalCare();
-		case Execution_metamodelPackage.MEDICAL_CARE__PACIENT:
-			return getPacient();
+		case Execution_metamodelPackage.MEDICAL_CARE__PATIENT:
+			return getPatient();
 		case Execution_metamodelPackage.MEDICAL_CARE__PROFESSIONAL:
 			return getProfessional();
 		case Execution_metamodelPackage.MEDICAL_CARE__ID_PROFESSIONAL:
@@ -427,8 +427,8 @@ public class MedicalCareImpl extends MinimalEObjectImpl.Container implements Med
 		case Execution_metamodelPackage.MEDICAL_CARE__CODE_MEDICAL_CARE:
 			setCodeMedicalCare((Integer) newValue);
 			return;
-		case Execution_metamodelPackage.MEDICAL_CARE__PACIENT:
-			setPacient((String) newValue);
+		case Execution_metamodelPackage.MEDICAL_CARE__PATIENT:
+			setPatient((String) newValue);
 			return;
 		case Execution_metamodelPackage.MEDICAL_CARE__PROFESSIONAL:
 			setProfessional((String) newValue);
@@ -463,8 +463,8 @@ public class MedicalCareImpl extends MinimalEObjectImpl.Container implements Med
 		case Execution_metamodelPackage.MEDICAL_CARE__CODE_MEDICAL_CARE:
 			setCodeMedicalCare(CODE_MEDICAL_CARE_EDEFAULT);
 			return;
-		case Execution_metamodelPackage.MEDICAL_CARE__PACIENT:
-			setPacient(PACIENT_EDEFAULT);
+		case Execution_metamodelPackage.MEDICAL_CARE__PATIENT:
+			setPatient(PATIENT_EDEFAULT);
 			return;
 		case Execution_metamodelPackage.MEDICAL_CARE__PROFESSIONAL:
 			setProfessional(PROFESSIONAL_EDEFAULT);
@@ -498,8 +498,8 @@ public class MedicalCareImpl extends MinimalEObjectImpl.Container implements Med
 		switch (featureID) {
 		case Execution_metamodelPackage.MEDICAL_CARE__CODE_MEDICAL_CARE:
 			return codeMedicalCare != CODE_MEDICAL_CARE_EDEFAULT;
-		case Execution_metamodelPackage.MEDICAL_CARE__PACIENT:
-			return PACIENT_EDEFAULT == null ? pacient != null : !PACIENT_EDEFAULT.equals(pacient);
+		case Execution_metamodelPackage.MEDICAL_CARE__PATIENT:
+			return PATIENT_EDEFAULT == null ? patient != null : !PATIENT_EDEFAULT.equals(patient);
 		case Execution_metamodelPackage.MEDICAL_CARE__PROFESSIONAL:
 			return PROFESSIONAL_EDEFAULT == null ? professional != null : !PROFESSIONAL_EDEFAULT.equals(professional);
 		case Execution_metamodelPackage.MEDICAL_CARE__ID_PROFESSIONAL:
@@ -530,8 +530,8 @@ public class MedicalCareImpl extends MinimalEObjectImpl.Container implements Med
 		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (codeMedicalCare: ");
 		result.append(codeMedicalCare);
-		result.append(", pacient: ");
-		result.append(pacient);
+		result.append(", patient: ");
+		result.append(patient);
 		result.append(", professional: ");
 		result.append(professional);
 		result.append(", idProfessional: ");

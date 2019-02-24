@@ -5,11 +5,12 @@ package MetamodelExecution.impl;
 import MetamodelExecution.Execution_metamodelPackage;
 import MetamodelExecution.Internment;
 import MetamodelExecution.PInternment;
-
 import MetamodelExecution.PrescriptionResult;
 import MetamodelExecution.Result;
+
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
@@ -367,7 +368,6 @@ public class PInternmentImpl extends MinimalEObjectImpl.Container implements PIn
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {

@@ -192,11 +192,9 @@ public class Execution_metamodelSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case Execution_metamodelPackage.UNIT_VALUE: {
-			UnitValue unitValue = (UnitValue) theEObject;
-			T result = caseUnitValue(unitValue);
-			if (result == null)
-				result = caseValue(unitValue);
+		case Execution_metamodelPackage.VALUE: {
+			Value value = (Value) theEObject;
+			T result = caseValue(value);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -212,8 +210,6 @@ public class Execution_metamodelSwitch<T> extends Switch<T> {
 			Numeric numeric = (Numeric) theEObject;
 			T result = caseNumeric(numeric);
 			if (result == null)
-				result = caseUnitValue(numeric);
-			if (result == null)
 				result = caseValue(numeric);
 			if (result == null)
 				result = defaultCase(theEObject);
@@ -222,8 +218,6 @@ public class Execution_metamodelSwitch<T> extends Switch<T> {
 		case Execution_metamodelPackage.YES_OR_NO: {
 			YesOrNo yesOrNo = (YesOrNo) theEObject;
 			T result = caseYesOrNo(yesOrNo);
-			if (result == null)
-				result = caseUnitValue(yesOrNo);
 			if (result == null)
 				result = caseValue(yesOrNo);
 			if (result == null)
@@ -507,15 +501,6 @@ public class Execution_metamodelSwitch<T> extends Switch<T> {
 			Option option = (Option) theEObject;
 			T result = caseOption(option);
 			if (result == null)
-				result = caseValue(option);
-			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
-		case Execution_metamodelPackage.VALUE: {
-			Value value = (Value) theEObject;
-			T result = caseValue(value);
-			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
 		}
@@ -786,17 +771,17 @@ public class Execution_metamodelSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Unit Value</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Value</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Unit Value</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Value</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseUnitValue(UnitValue object) {
+	public T caseValue(Value object) {
 		return null;
 	}
 
@@ -1382,21 +1367,6 @@ public class Execution_metamodelSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseOption(Option object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Value</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Value</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseValue(Value object) {
 		return null;
 	}
 

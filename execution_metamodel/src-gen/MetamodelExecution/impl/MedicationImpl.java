@@ -30,13 +30,12 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *   <li>{@link MetamodelExecution.impl.MedicationImpl#getDailyDosage <em>Daily Dosage</em>}</li>
  *   <li>{@link MetamodelExecution.impl.MedicationImpl#getCycles <em>Cycles</em>}</li>
  *   <li>{@link MetamodelExecution.impl.MedicationImpl#getFrequency <em>Frequency</em>}</li>
- *   <li>{@link MetamodelExecution.impl.MedicationImpl#getTimeTreatement <em>Time Treatement</em>}</li>
+ *   <li>{@link MetamodelExecution.impl.MedicationImpl#getTimeTreatment <em>Time Treatment</em>}</li>
  *   <li>{@link MetamodelExecution.impl.MedicationImpl#getTimeInterval <em>Time Interval</em>}</li>
  *   <li>{@link MetamodelExecution.impl.MedicationImpl#getCategory <em>Category</em>}</li>
  *   <li>{@link MetamodelExecution.impl.MedicationImpl#getCodeAccess <em>Code Access</em>}</li>
- *   <li>{@link MetamodelExecution.impl.MedicationImpl#getNameAcess <em>Name Acess</em>}</li>
+ *   <li>{@link MetamodelExecution.impl.MedicationImpl#getAccess <em>Access</em>}</li>
  *   <li>{@link MetamodelExecution.impl.MedicationImpl#getCodeUnit <em>Code Unit</em>}</li>
- *   <li>{@link MetamodelExecution.impl.MedicationImpl#getNameUnit <em>Name Unit</em>}</li>
  *   <li>{@link MetamodelExecution.impl.MedicationImpl#getUnit <em>Unit</em>}</li>
  * </ul>
  *
@@ -244,24 +243,24 @@ public class MedicationImpl extends MinimalEObjectImpl.Container implements Medi
 	protected int frequency = FREQUENCY_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getTimeTreatement() <em>Time Treatement</em>}' attribute.
+	 * The default value of the '{@link #getTimeTreatment() <em>Time Treatment</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getTimeTreatement()
+	 * @see #getTimeTreatment()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final int TIME_TREATEMENT_EDEFAULT = 0;
+	protected static final int TIME_TREATMENT_EDEFAULT = 0;
 
 	/**
-	 * The cached value of the '{@link #getTimeTreatement() <em>Time Treatement</em>}' attribute.
+	 * The cached value of the '{@link #getTimeTreatment() <em>Time Treatment</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getTimeTreatement()
+	 * @see #getTimeTreatment()
 	 * @generated
 	 * @ordered
 	 */
-	protected int timeTreatement = TIME_TREATEMENT_EDEFAULT;
+	protected int timeTreatment = TIME_TREATMENT_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getTimeInterval() <em>Time Interval</em>}' attribute.
@@ -324,24 +323,24 @@ public class MedicationImpl extends MinimalEObjectImpl.Container implements Medi
 	protected int codeAccess = CODE_ACCESS_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getNameAcess() <em>Name Acess</em>}' attribute.
+	 * The default value of the '{@link #getAccess() <em>Access</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getNameAcess()
+	 * @see #getAccess()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String NAME_ACESS_EDEFAULT = null;
+	protected static final String ACCESS_EDEFAULT = null;
 
 	/**
-	 * The cached value of the '{@link #getNameAcess() <em>Name Acess</em>}' attribute.
+	 * The cached value of the '{@link #getAccess() <em>Access</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getNameAcess()
+	 * @see #getAccess()
 	 * @generated
 	 * @ordered
 	 */
-	protected String nameAcess = NAME_ACESS_EDEFAULT;
+	protected String access = ACCESS_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getCodeUnit() <em>Code Unit</em>}' attribute.
@@ -362,26 +361,6 @@ public class MedicationImpl extends MinimalEObjectImpl.Container implements Medi
 	 * @ordered
 	 */
 	protected String codeUnit = CODE_UNIT_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getNameUnit() <em>Name Unit</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getNameUnit()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String NAME_UNIT_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getNameUnit() <em>Name Unit</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getNameUnit()
-	 * @generated
-	 * @ordered
-	 */
-	protected String nameUnit = NAME_UNIT_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getUnit() <em>Unit</em>}' attribute.
@@ -647,8 +626,8 @@ public class MedicationImpl extends MinimalEObjectImpl.Container implements Medi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public int getTimeTreatement() {
-		return timeTreatement;
+	public int getTimeTreatment() {
+		return timeTreatment;
 	}
 
 	/**
@@ -656,12 +635,12 @@ public class MedicationImpl extends MinimalEObjectImpl.Container implements Medi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setTimeTreatement(int newTimeTreatement) {
-		int oldTimeTreatement = timeTreatement;
-		timeTreatement = newTimeTreatement;
+	public void setTimeTreatment(int newTimeTreatment) {
+		int oldTimeTreatment = timeTreatment;
+		timeTreatment = newTimeTreatment;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET,
-					Execution_metamodelPackage.MEDICATION__TIME_TREATEMENT, oldTimeTreatement, timeTreatement));
+			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.MEDICATION__TIME_TREATMENT,
+					oldTimeTreatment, timeTreatment));
 	}
 
 	/**
@@ -735,8 +714,8 @@ public class MedicationImpl extends MinimalEObjectImpl.Container implements Medi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getNameAcess() {
-		return nameAcess;
+	public String getAccess() {
+		return access;
 	}
 
 	/**
@@ -744,12 +723,12 @@ public class MedicationImpl extends MinimalEObjectImpl.Container implements Medi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setNameAcess(String newNameAcess) {
-		String oldNameAcess = nameAcess;
-		nameAcess = newNameAcess;
+	public void setAccess(String newAccess) {
+		String oldAccess = access;
+		access = newAccess;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.MEDICATION__NAME_ACESS,
-					oldNameAcess, nameAcess));
+			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.MEDICATION__ACCESS,
+					oldAccess, access));
 	}
 
 	/**
@@ -772,28 +751,6 @@ public class MedicationImpl extends MinimalEObjectImpl.Container implements Medi
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.MEDICATION__CODE_UNIT,
 					oldCodeUnit, codeUnit));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String getNameUnit() {
-		return nameUnit;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setNameUnit(String newNameUnit) {
-		String oldNameUnit = nameUnit;
-		nameUnit = newNameUnit;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.MEDICATION__NAME_UNIT,
-					oldNameUnit, nameUnit));
 	}
 
 	/**
@@ -846,20 +803,18 @@ public class MedicationImpl extends MinimalEObjectImpl.Container implements Medi
 			return getCycles();
 		case Execution_metamodelPackage.MEDICATION__FREQUENCY:
 			return getFrequency();
-		case Execution_metamodelPackage.MEDICATION__TIME_TREATEMENT:
-			return getTimeTreatement();
+		case Execution_metamodelPackage.MEDICATION__TIME_TREATMENT:
+			return getTimeTreatment();
 		case Execution_metamodelPackage.MEDICATION__TIME_INTERVAL:
 			return getTimeInterval();
 		case Execution_metamodelPackage.MEDICATION__CATEGORY:
 			return getCategory();
 		case Execution_metamodelPackage.MEDICATION__CODE_ACCESS:
 			return getCodeAccess();
-		case Execution_metamodelPackage.MEDICATION__NAME_ACESS:
-			return getNameAcess();
+		case Execution_metamodelPackage.MEDICATION__ACCESS:
+			return getAccess();
 		case Execution_metamodelPackage.MEDICATION__CODE_UNIT:
 			return getCodeUnit();
-		case Execution_metamodelPackage.MEDICATION__NAME_UNIT:
-			return getNameUnit();
 		case Execution_metamodelPackage.MEDICATION__UNIT:
 			return getUnit();
 		}
@@ -904,8 +859,8 @@ public class MedicationImpl extends MinimalEObjectImpl.Container implements Medi
 		case Execution_metamodelPackage.MEDICATION__FREQUENCY:
 			setFrequency((Integer) newValue);
 			return;
-		case Execution_metamodelPackage.MEDICATION__TIME_TREATEMENT:
-			setTimeTreatement((Integer) newValue);
+		case Execution_metamodelPackage.MEDICATION__TIME_TREATMENT:
+			setTimeTreatment((Integer) newValue);
 			return;
 		case Execution_metamodelPackage.MEDICATION__TIME_INTERVAL:
 			setTimeInterval((Integer) newValue);
@@ -916,14 +871,11 @@ public class MedicationImpl extends MinimalEObjectImpl.Container implements Medi
 		case Execution_metamodelPackage.MEDICATION__CODE_ACCESS:
 			setCodeAccess((Integer) newValue);
 			return;
-		case Execution_metamodelPackage.MEDICATION__NAME_ACESS:
-			setNameAcess((String) newValue);
+		case Execution_metamodelPackage.MEDICATION__ACCESS:
+			setAccess((String) newValue);
 			return;
 		case Execution_metamodelPackage.MEDICATION__CODE_UNIT:
 			setCodeUnit((String) newValue);
-			return;
-		case Execution_metamodelPackage.MEDICATION__NAME_UNIT:
-			setNameUnit((String) newValue);
 			return;
 		case Execution_metamodelPackage.MEDICATION__UNIT:
 			setUnit((String) newValue);
@@ -970,8 +922,8 @@ public class MedicationImpl extends MinimalEObjectImpl.Container implements Medi
 		case Execution_metamodelPackage.MEDICATION__FREQUENCY:
 			setFrequency(FREQUENCY_EDEFAULT);
 			return;
-		case Execution_metamodelPackage.MEDICATION__TIME_TREATEMENT:
-			setTimeTreatement(TIME_TREATEMENT_EDEFAULT);
+		case Execution_metamodelPackage.MEDICATION__TIME_TREATMENT:
+			setTimeTreatment(TIME_TREATMENT_EDEFAULT);
 			return;
 		case Execution_metamodelPackage.MEDICATION__TIME_INTERVAL:
 			setTimeInterval(TIME_INTERVAL_EDEFAULT);
@@ -982,14 +934,11 @@ public class MedicationImpl extends MinimalEObjectImpl.Container implements Medi
 		case Execution_metamodelPackage.MEDICATION__CODE_ACCESS:
 			setCodeAccess(CODE_ACCESS_EDEFAULT);
 			return;
-		case Execution_metamodelPackage.MEDICATION__NAME_ACESS:
-			setNameAcess(NAME_ACESS_EDEFAULT);
+		case Execution_metamodelPackage.MEDICATION__ACCESS:
+			setAccess(ACCESS_EDEFAULT);
 			return;
 		case Execution_metamodelPackage.MEDICATION__CODE_UNIT:
 			setCodeUnit(CODE_UNIT_EDEFAULT);
-			return;
-		case Execution_metamodelPackage.MEDICATION__NAME_UNIT:
-			setNameUnit(NAME_UNIT_EDEFAULT);
 			return;
 		case Execution_metamodelPackage.MEDICATION__UNIT:
 			setUnit(UNIT_EDEFAULT);
@@ -1026,20 +975,18 @@ public class MedicationImpl extends MinimalEObjectImpl.Container implements Medi
 			return cycles != CYCLES_EDEFAULT;
 		case Execution_metamodelPackage.MEDICATION__FREQUENCY:
 			return frequency != FREQUENCY_EDEFAULT;
-		case Execution_metamodelPackage.MEDICATION__TIME_TREATEMENT:
-			return timeTreatement != TIME_TREATEMENT_EDEFAULT;
+		case Execution_metamodelPackage.MEDICATION__TIME_TREATMENT:
+			return timeTreatment != TIME_TREATMENT_EDEFAULT;
 		case Execution_metamodelPackage.MEDICATION__TIME_INTERVAL:
 			return timeInterval != TIME_INTERVAL_EDEFAULT;
 		case Execution_metamodelPackage.MEDICATION__CATEGORY:
 			return CATEGORY_EDEFAULT == null ? category != null : !CATEGORY_EDEFAULT.equals(category);
 		case Execution_metamodelPackage.MEDICATION__CODE_ACCESS:
 			return codeAccess != CODE_ACCESS_EDEFAULT;
-		case Execution_metamodelPackage.MEDICATION__NAME_ACESS:
-			return NAME_ACESS_EDEFAULT == null ? nameAcess != null : !NAME_ACESS_EDEFAULT.equals(nameAcess);
+		case Execution_metamodelPackage.MEDICATION__ACCESS:
+			return ACCESS_EDEFAULT == null ? access != null : !ACCESS_EDEFAULT.equals(access);
 		case Execution_metamodelPackage.MEDICATION__CODE_UNIT:
 			return CODE_UNIT_EDEFAULT == null ? codeUnit != null : !CODE_UNIT_EDEFAULT.equals(codeUnit);
-		case Execution_metamodelPackage.MEDICATION__NAME_UNIT:
-			return NAME_UNIT_EDEFAULT == null ? nameUnit != null : !NAME_UNIT_EDEFAULT.equals(nameUnit);
 		case Execution_metamodelPackage.MEDICATION__UNIT:
 			return UNIT_EDEFAULT == null ? unit != null : !UNIT_EDEFAULT.equals(unit);
 		}
@@ -1077,20 +1024,18 @@ public class MedicationImpl extends MinimalEObjectImpl.Container implements Medi
 		result.append(cycles);
 		result.append(", frequency: ");
 		result.append(frequency);
-		result.append(", timeTreatement: ");
-		result.append(timeTreatement);
+		result.append(", timeTreatment: ");
+		result.append(timeTreatment);
 		result.append(", timeInterval: ");
 		result.append(timeInterval);
 		result.append(", category: ");
 		result.append(category);
 		result.append(", codeAccess: ");
 		result.append(codeAccess);
-		result.append(", nameAcess: ");
-		result.append(nameAcess);
+		result.append(", access: ");
+		result.append(access);
 		result.append(", codeUnit: ");
 		result.append(codeUnit);
-		result.append(", nameUnit: ");
-		result.append(nameUnit);
 		result.append(", unit: ");
 		result.append(unit);
 		result.append(')');

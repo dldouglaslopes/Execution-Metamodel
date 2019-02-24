@@ -2376,7 +2376,7 @@ public interface Execution_metamodelPackage extends EPackage {
 	 * @see MetamodelExecution.impl.Execution_metamodelPackageImpl#getValue()
 	 * @generated
 	 */
-	int VALUE = 56;
+	int VALUE = 16;
 
 	/**
 	 * The number of structural features of the '<em>Value</em>' class.
@@ -2395,34 +2395,6 @@ public interface Execution_metamodelPackage extends EPackage {
 	 * @ordered
 	 */
 	int VALUE_OPERATION_COUNT = 0;
-
-	/**
-	 * The meta object id for the '{@link MetamodelExecution.impl.UnitValueImpl <em>Unit Value</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see MetamodelExecution.impl.UnitValueImpl
-	 * @see MetamodelExecution.impl.Execution_metamodelPackageImpl#getUnitValue()
-	 * @generated
-	 */
-	int UNIT_VALUE = 16;
-
-	/**
-	 * The number of structural features of the '<em>Unit Value</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int UNIT_VALUE_FEATURE_COUNT = VALUE_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of operations of the '<em>Unit Value</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int UNIT_VALUE_OPERATION_COUNT = VALUE_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link MetamodelExecution.impl.AnswerImpl <em>Answer</em>}' class.
@@ -2471,13 +2443,13 @@ public interface Execution_metamodelPackage extends EPackage {
 	int ANSWER__JUSTIFICATION = 3;
 
 	/**
-	 * The feature id for the '<em><b>Unitvalue</b></em>' containment reference.
+	 * The feature id for the '<em><b>Value</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ANSWER__UNITVALUE = 4;
+	int ANSWER__VALUE = 4;
 
 	/**
 	 * The number of structural features of the '<em>Answer</em>' class.
@@ -2514,7 +2486,7 @@ public interface Execution_metamodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int NUMERIC__VALUE = UNIT_VALUE_FEATURE_COUNT + 0;
+	int NUMERIC__VALUE = VALUE_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Numeric</em>' class.
@@ -2523,7 +2495,7 @@ public interface Execution_metamodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int NUMERIC_FEATURE_COUNT = UNIT_VALUE_FEATURE_COUNT + 1;
+	int NUMERIC_FEATURE_COUNT = VALUE_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>Numeric</em>' class.
@@ -2532,7 +2504,7 @@ public interface Execution_metamodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int NUMERIC_OPERATION_COUNT = UNIT_VALUE_OPERATION_COUNT + 0;
+	int NUMERIC_OPERATION_COUNT = VALUE_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link MetamodelExecution.impl.YesOrNoImpl <em>Yes Or No</em>}' class.
@@ -2551,7 +2523,7 @@ public interface Execution_metamodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int YES_OR_NO__VALUE = UNIT_VALUE_FEATURE_COUNT + 0;
+	int YES_OR_NO__VALUE = VALUE_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Yes Or No</em>' class.
@@ -2560,7 +2532,7 @@ public interface Execution_metamodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int YES_OR_NO_FEATURE_COUNT = UNIT_VALUE_FEATURE_COUNT + 1;
+	int YES_OR_NO_FEATURE_COUNT = VALUE_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>Yes Or No</em>' class.
@@ -2569,7 +2541,7 @@ public interface Execution_metamodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int YES_OR_NO_OPERATION_COUNT = UNIT_VALUE_OPERATION_COUNT + 0;
+	int YES_OR_NO_OPERATION_COUNT = VALUE_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link MetamodelExecution.impl.StepImpl <em>Step</em>}' class.
@@ -3354,13 +3326,22 @@ public interface Execution_metamodelPackage extends EPackage {
 	int VARIABLE__BOND = 5;
 
 	/**
-	 * The feature id for the '<em><b>Value</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Option</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int VARIABLE__VALUE = 6;
+	int VARIABLE__OPTION = 6;
+
+	/**
+	 * The feature id for the '<em><b>Value</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VARIABLE__VALUE = 7;
 
 	/**
 	 * The number of structural features of the '<em>Variable</em>' class.
@@ -3369,7 +3350,7 @@ public interface Execution_metamodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VARIABLE_FEATURE_COUNT = 7;
+	int VARIABLE_FEATURE_COUNT = 8;
 
 	/**
 	 * The number of operations of the '<em>Variable</em>' class.
@@ -3481,13 +3462,13 @@ public interface Execution_metamodelPackage extends EPackage {
 	int MEDICATION__FREQUENCY = 9;
 
 	/**
-	 * The feature id for the '<em><b>Time Treatement</b></em>' attribute.
+	 * The feature id for the '<em><b>Time Treatment</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MEDICATION__TIME_TREATEMENT = 10;
+	int MEDICATION__TIME_TREATMENT = 10;
 
 	/**
 	 * The feature id for the '<em><b>Time Interval</b></em>' attribute.
@@ -3517,13 +3498,13 @@ public interface Execution_metamodelPackage extends EPackage {
 	int MEDICATION__CODE_ACCESS = 13;
 
 	/**
-	 * The feature id for the '<em><b>Name Acess</b></em>' attribute.
+	 * The feature id for the '<em><b>Access</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MEDICATION__NAME_ACESS = 14;
+	int MEDICATION__ACCESS = 14;
 
 	/**
 	 * The feature id for the '<em><b>Code Unit</b></em>' attribute.
@@ -3535,22 +3516,13 @@ public interface Execution_metamodelPackage extends EPackage {
 	int MEDICATION__CODE_UNIT = 15;
 
 	/**
-	 * The feature id for the '<em><b>Name Unit</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MEDICATION__NAME_UNIT = 16;
-
-	/**
 	 * The feature id for the '<em><b>Unit</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MEDICATION__UNIT = 17;
+	int MEDICATION__UNIT = 16;
 
 	/**
 	 * The number of structural features of the '<em>Medication</em>' class.
@@ -3559,7 +3531,7 @@ public interface Execution_metamodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MEDICATION_FEATURE_COUNT = 18;
+	int MEDICATION_FEATURE_COUNT = 17;
 
 	/**
 	 * The number of operations of the '<em>Medication</em>' class.
@@ -4678,13 +4650,13 @@ public interface Execution_metamodelPackage extends EPackage {
 	int MEDICAL_CARE__CODE_MEDICAL_CARE = 0;
 
 	/**
-	 * The feature id for the '<em><b>Pacient</b></em>' attribute.
+	 * The feature id for the '<em><b>Patient</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MEDICAL_CARE__PACIENT = 1;
+	int MEDICAL_CARE__PATIENT = 1;
 
 	/**
 	 * The feature id for the '<em><b>Professional</b></em>' attribute.
@@ -6141,7 +6113,7 @@ public interface Execution_metamodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int OPTION__ID = VALUE_FEATURE_COUNT + 0;
+	int OPTION__ID = 0;
 
 	/**
 	 * The feature id for the '<em><b>Text</b></em>' attribute.
@@ -6150,7 +6122,7 @@ public interface Execution_metamodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int OPTION__TEXT = VALUE_FEATURE_COUNT + 1;
+	int OPTION__TEXT = 1;
 
 	/**
 	 * The feature id for the '<em><b>Weight</b></em>' attribute.
@@ -6159,7 +6131,7 @@ public interface Execution_metamodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int OPTION__WEIGHT = VALUE_FEATURE_COUNT + 2;
+	int OPTION__WEIGHT = 2;
 
 	/**
 	 * The number of structural features of the '<em>Option</em>' class.
@@ -6168,7 +6140,7 @@ public interface Execution_metamodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int OPTION_FEATURE_COUNT = VALUE_FEATURE_COUNT + 3;
+	int OPTION_FEATURE_COUNT = 3;
 
 	/**
 	 * The number of operations of the '<em>Option</em>' class.
@@ -6177,7 +6149,7 @@ public interface Execution_metamodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int OPTION_OPERATION_COUNT = VALUE_OPERATION_COUNT + 0;
+	int OPTION_OPERATION_COUNT = 0;
 
 	/**
 	 * The meta object id for the '{@link MetamodelExecution.impl.PrescriptionImpl <em>Prescription</em>}' class.
@@ -6187,7 +6159,7 @@ public interface Execution_metamodelPackage extends EPackage {
 	 * @see MetamodelExecution.impl.Execution_metamodelPackageImpl#getPrescription()
 	 * @generated
 	 */
-	int PRESCRIPTION = 57;
+	int PRESCRIPTION = 56;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -6332,7 +6304,7 @@ public interface Execution_metamodelPackage extends EPackage {
 	 * @see MetamodelExecution.impl.Execution_metamodelPackageImpl#getPPaediatricMedicationt()
 	 * @generated
 	 */
-	int PPAEDIATRIC_MEDICATIONT = 58;
+	int PPAEDIATRIC_MEDICATIONT = 57;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -6396,7 +6368,7 @@ public interface Execution_metamodelPackage extends EPackage {
 	 * @see MetamodelExecution.impl.Execution_metamodelPackageImpl#getPaediatricMedication()
 	 * @generated
 	 */
-	int PAEDIATRIC_MEDICATION = 59;
+	int PAEDIATRIC_MEDICATION = 58;
 
 	/**
 	 * The number of structural features of the '<em>Paediatric Medication</em>' class.
@@ -7088,17 +7060,6 @@ public interface Execution_metamodelPackage extends EPackage {
 	EAttribute getPMedication_Id();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link MetamodelExecution.PMedication#getResult <em>Result</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Result</em>'.
-	 * @see MetamodelExecution.PMedication#getResult()
-	 * @see #getPMedication()
-	 * @generated
-	 */
-	EReference getPMedication_Result();
-
-	/**
 	 * Returns the meta object for the containment reference '{@link MetamodelExecution.PMedication#getMedication <em>Medication</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -7119,6 +7080,17 @@ public interface Execution_metamodelPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getPMedication_PrescriptionResult();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link MetamodelExecution.PMedication#getResult <em>Result</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Result</em>'.
+	 * @see MetamodelExecution.PMedication#getResult()
+	 * @see #getPMedication()
+	 * @generated
+	 */
+	EReference getPMedication_Result();
 
 	/**
 	 * Returns the meta object for class '{@link MetamodelExecution.Complement <em>Complement</em>}'.
@@ -7424,14 +7396,14 @@ public interface Execution_metamodelPackage extends EPackage {
 	EAttribute getUser_State();
 
 	/**
-	 * Returns the meta object for class '{@link MetamodelExecution.UnitValue <em>Unit Value</em>}'.
+	 * Returns the meta object for class '{@link MetamodelExecution.Value <em>Value</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Unit Value</em>'.
-	 * @see MetamodelExecution.UnitValue
+	 * @return the meta object for class '<em>Value</em>'.
+	 * @see MetamodelExecution.Value
 	 * @generated
 	 */
-	EClass getUnitValue();
+	EClass getValue();
 
 	/**
 	 * Returns the meta object for class '{@link MetamodelExecution.Answer <em>Answer</em>}'.
@@ -7488,15 +7460,15 @@ public interface Execution_metamodelPackage extends EPackage {
 	EAttribute getAnswer_Justification();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link MetamodelExecution.Answer#getUnitvalue <em>Unitvalue</em>}'.
+	 * Returns the meta object for the containment reference '{@link MetamodelExecution.Answer#getValue <em>Value</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Unitvalue</em>'.
-	 * @see MetamodelExecution.Answer#getUnitvalue()
+	 * @return the meta object for the containment reference '<em>Value</em>'.
+	 * @see MetamodelExecution.Answer#getValue()
 	 * @see #getAnswer()
 	 * @generated
 	 */
-	EReference getAnswer_Unitvalue();
+	EReference getAnswer_Value();
 
 	/**
 	 * Returns the meta object for class '{@link MetamodelExecution.Numeric <em>Numeric</em>}'.
@@ -8258,15 +8230,26 @@ public interface Execution_metamodelPackage extends EPackage {
 	EReference getVariable_Bond();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link MetamodelExecution.Variable#getValue <em>Value</em>}'.
+	 * Returns the meta object for the containment reference list '{@link MetamodelExecution.Variable#getOption <em>Option</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Value</em>'.
+	 * @return the meta object for the containment reference list '<em>Option</em>'.
+	 * @see MetamodelExecution.Variable#getOption()
+	 * @see #getVariable()
+	 * @generated
+	 */
+	EReference getVariable_Option();
+
+	/**
+	 * Returns the meta object for the attribute '{@link MetamodelExecution.Variable#getValue <em>Value</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Value</em>'.
 	 * @see MetamodelExecution.Variable#getValue()
 	 * @see #getVariable()
 	 * @generated
 	 */
-	EReference getVariable_Value();
+	EAttribute getVariable_Value();
 
 	/**
 	 * Returns the meta object for class '{@link MetamodelExecution.Medication <em>Medication</em>}'.
@@ -8389,15 +8372,15 @@ public interface Execution_metamodelPackage extends EPackage {
 	EAttribute getMedication_Frequency();
 
 	/**
-	 * Returns the meta object for the attribute '{@link MetamodelExecution.Medication#getTimeTreatement <em>Time Treatement</em>}'.
+	 * Returns the meta object for the attribute '{@link MetamodelExecution.Medication#getTimeTreatment <em>Time Treatment</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Time Treatement</em>'.
-	 * @see MetamodelExecution.Medication#getTimeTreatement()
+	 * @return the meta object for the attribute '<em>Time Treatment</em>'.
+	 * @see MetamodelExecution.Medication#getTimeTreatment()
 	 * @see #getMedication()
 	 * @generated
 	 */
-	EAttribute getMedication_TimeTreatement();
+	EAttribute getMedication_TimeTreatment();
 
 	/**
 	 * Returns the meta object for the attribute '{@link MetamodelExecution.Medication#getTimeInterval <em>Time Interval</em>}'.
@@ -8433,15 +8416,15 @@ public interface Execution_metamodelPackage extends EPackage {
 	EAttribute getMedication_CodeAccess();
 
 	/**
-	 * Returns the meta object for the attribute '{@link MetamodelExecution.Medication#getNameAcess <em>Name Acess</em>}'.
+	 * Returns the meta object for the attribute '{@link MetamodelExecution.Medication#getAccess <em>Access</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Name Acess</em>'.
-	 * @see MetamodelExecution.Medication#getNameAcess()
+	 * @return the meta object for the attribute '<em>Access</em>'.
+	 * @see MetamodelExecution.Medication#getAccess()
 	 * @see #getMedication()
 	 * @generated
 	 */
-	EAttribute getMedication_NameAcess();
+	EAttribute getMedication_Access();
 
 	/**
 	 * Returns the meta object for the attribute '{@link MetamodelExecution.Medication#getCodeUnit <em>Code Unit</em>}'.
@@ -8453,17 +8436,6 @@ public interface Execution_metamodelPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getMedication_CodeUnit();
-
-	/**
-	 * Returns the meta object for the attribute '{@link MetamodelExecution.Medication#getNameUnit <em>Name Unit</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Name Unit</em>'.
-	 * @see MetamodelExecution.Medication#getNameUnit()
-	 * @see #getMedication()
-	 * @generated
-	 */
-	EAttribute getMedication_NameUnit();
 
 	/**
 	 * Returns the meta object for the attribute '{@link MetamodelExecution.Medication#getUnit <em>Unit</em>}'.
@@ -9073,15 +9045,15 @@ public interface Execution_metamodelPackage extends EPackage {
 	EAttribute getMedicalCare_CodeMedicalCare();
 
 	/**
-	 * Returns the meta object for the attribute '{@link MetamodelExecution.MedicalCare#getPacient <em>Pacient</em>}'.
+	 * Returns the meta object for the attribute '{@link MetamodelExecution.MedicalCare#getPatient <em>Patient</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Pacient</em>'.
-	 * @see MetamodelExecution.MedicalCare#getPacient()
+	 * @return the meta object for the attribute '<em>Patient</em>'.
+	 * @see MetamodelExecution.MedicalCare#getPatient()
 	 * @see #getMedicalCare()
 	 * @generated
 	 */
-	EAttribute getMedicalCare_Pacient();
+	EAttribute getMedicalCare_Patient();
 
 	/**
 	 * Returns the meta object for the attribute '{@link MetamodelExecution.MedicalCare#getProfessional <em>Professional</em>}'.
@@ -10101,16 +10073,6 @@ public interface Execution_metamodelPackage extends EPackage {
 	EAttribute getOption_Weight();
 
 	/**
-	 * Returns the meta object for class '{@link MetamodelExecution.Value <em>Value</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Value</em>'.
-	 * @see MetamodelExecution.Value
-	 * @generated
-	 */
-	EClass getValue();
-
-	/**
 	 * Returns the meta object for class '{@link MetamodelExecution.Prescription <em>Prescription</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -10869,14 +10831,6 @@ public interface Execution_metamodelPackage extends EPackage {
 		EAttribute PMEDICATION__ID = eINSTANCE.getPMedication_Id();
 
 		/**
-		 * The meta object literal for the '<em><b>Result</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference PMEDICATION__RESULT = eINSTANCE.getPMedication_Result();
-
-		/**
 		 * The meta object literal for the '<em><b>Medication</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -10891,6 +10845,14 @@ public interface Execution_metamodelPackage extends EPackage {
 		 * @generated
 		 */
 		EReference PMEDICATION__PRESCRIPTION_RESULT = eINSTANCE.getPMedication_PrescriptionResult();
+
+		/**
+		 * The meta object literal for the '<em><b>Result</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference PMEDICATION__RESULT = eINSTANCE.getPMedication_Result();
 
 		/**
 		 * The meta object literal for the '{@link MetamodelExecution.impl.ComplementImpl <em>Complement</em>}' class.
@@ -11127,14 +11089,14 @@ public interface Execution_metamodelPackage extends EPackage {
 		EAttribute USER__STATE = eINSTANCE.getUser_State();
 
 		/**
-		 * The meta object literal for the '{@link MetamodelExecution.impl.UnitValueImpl <em>Unit Value</em>}' class.
+		 * The meta object literal for the '{@link MetamodelExecution.impl.ValueImpl <em>Value</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see MetamodelExecution.impl.UnitValueImpl
-		 * @see MetamodelExecution.impl.Execution_metamodelPackageImpl#getUnitValue()
+		 * @see MetamodelExecution.impl.ValueImpl
+		 * @see MetamodelExecution.impl.Execution_metamodelPackageImpl#getValue()
 		 * @generated
 		 */
-		EClass UNIT_VALUE = eINSTANCE.getUnitValue();
+		EClass VALUE = eINSTANCE.getValue();
 
 		/**
 		 * The meta object literal for the '{@link MetamodelExecution.impl.AnswerImpl <em>Answer</em>}' class.
@@ -11179,12 +11141,12 @@ public interface Execution_metamodelPackage extends EPackage {
 		EAttribute ANSWER__JUSTIFICATION = eINSTANCE.getAnswer_Justification();
 
 		/**
-		 * The meta object literal for the '<em><b>Unitvalue</b></em>' containment reference feature.
+		 * The meta object literal for the '<em><b>Value</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference ANSWER__UNITVALUE = eINSTANCE.getAnswer_Unitvalue();
+		EReference ANSWER__VALUE = eINSTANCE.getAnswer_Value();
 
 		/**
 		 * The meta object literal for the '{@link MetamodelExecution.impl.NumericImpl <em>Numeric</em>}' class.
@@ -11769,12 +11731,20 @@ public interface Execution_metamodelPackage extends EPackage {
 		EReference VARIABLE__BOND = eINSTANCE.getVariable_Bond();
 
 		/**
-		 * The meta object literal for the '<em><b>Value</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Option</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference VARIABLE__VALUE = eINSTANCE.getVariable_Value();
+		EReference VARIABLE__OPTION = eINSTANCE.getVariable_Option();
+
+		/**
+		 * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute VARIABLE__VALUE = eINSTANCE.getVariable_Value();
 
 		/**
 		 * The meta object literal for the '{@link MetamodelExecution.impl.MedicationImpl <em>Medication</em>}' class.
@@ -11867,12 +11837,12 @@ public interface Execution_metamodelPackage extends EPackage {
 		EAttribute MEDICATION__FREQUENCY = eINSTANCE.getMedication_Frequency();
 
 		/**
-		 * The meta object literal for the '<em><b>Time Treatement</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Time Treatment</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute MEDICATION__TIME_TREATEMENT = eINSTANCE.getMedication_TimeTreatement();
+		EAttribute MEDICATION__TIME_TREATMENT = eINSTANCE.getMedication_TimeTreatment();
 
 		/**
 		 * The meta object literal for the '<em><b>Time Interval</b></em>' attribute feature.
@@ -11899,12 +11869,12 @@ public interface Execution_metamodelPackage extends EPackage {
 		EAttribute MEDICATION__CODE_ACCESS = eINSTANCE.getMedication_CodeAccess();
 
 		/**
-		 * The meta object literal for the '<em><b>Name Acess</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Access</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute MEDICATION__NAME_ACESS = eINSTANCE.getMedication_NameAcess();
+		EAttribute MEDICATION__ACCESS = eINSTANCE.getMedication_Access();
 
 		/**
 		 * The meta object literal for the '<em><b>Code Unit</b></em>' attribute feature.
@@ -11913,14 +11883,6 @@ public interface Execution_metamodelPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute MEDICATION__CODE_UNIT = eINSTANCE.getMedication_CodeUnit();
-
-		/**
-		 * The meta object literal for the '<em><b>Name Unit</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute MEDICATION__NAME_UNIT = eINSTANCE.getMedication_NameUnit();
 
 		/**
 		 * The meta object literal for the '<em><b>Unit</b></em>' attribute feature.
@@ -12389,12 +12351,12 @@ public interface Execution_metamodelPackage extends EPackage {
 		EAttribute MEDICAL_CARE__CODE_MEDICAL_CARE = eINSTANCE.getMedicalCare_CodeMedicalCare();
 
 		/**
-		 * The meta object literal for the '<em><b>Pacient</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Patient</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute MEDICAL_CARE__PACIENT = eINSTANCE.getMedicalCare_Pacient();
+		EAttribute MEDICAL_CARE__PATIENT = eINSTANCE.getMedicalCare_Patient();
 
 		/**
 		 * The meta object literal for the '<em><b>Professional</b></em>' attribute feature.
@@ -13191,16 +13153,6 @@ public interface Execution_metamodelPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute OPTION__WEIGHT = eINSTANCE.getOption_Weight();
-
-		/**
-		 * The meta object literal for the '{@link MetamodelExecution.impl.ValueImpl <em>Value</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see MetamodelExecution.impl.ValueImpl
-		 * @see MetamodelExecution.impl.Execution_metamodelPackageImpl#getValue()
-		 * @generated
-		 */
-		EClass VALUE = eINSTANCE.getValue();
 
 		/**
 		 * The meta object literal for the '{@link MetamodelExecution.impl.PrescriptionImpl <em>Prescription</em>}' class.

@@ -147,8 +147,8 @@ public class Execution_metamodelAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
-		public Adapter caseUnitValue(UnitValue object) {
-			return createUnitValueAdapter();
+		public Adapter caseValue(Value object) {
+			return createValueAdapter();
 		}
 
 		@Override
@@ -344,11 +344,6 @@ public class Execution_metamodelAdapterFactory extends AdapterFactoryImpl {
 		@Override
 		public Adapter caseOption(Option object) {
 			return createOptionAdapter();
-		}
-
-		@Override
-		public Adapter caseValue(Value object) {
-			return createValueAdapter();
 		}
 
 		@Override
@@ -610,16 +605,16 @@ public class Execution_metamodelAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link MetamodelExecution.UnitValue <em>Unit Value</em>}'.
+	 * Creates a new adapter for an object of class '{@link MetamodelExecution.Value <em>Value</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see MetamodelExecution.UnitValue
+	 * @see MetamodelExecution.Value
 	 * @generated
 	 */
-	public Adapter createUnitValueAdapter() {
+	public Adapter createValueAdapter() {
 		return null;
 	}
 
@@ -1166,20 +1161,6 @@ public class Execution_metamodelAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createOptionAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link MetamodelExecution.Value <em>Value</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see MetamodelExecution.Value
-	 * @generated
-	 */
-	public Adapter createValueAdapter() {
 		return null;
 	}
 

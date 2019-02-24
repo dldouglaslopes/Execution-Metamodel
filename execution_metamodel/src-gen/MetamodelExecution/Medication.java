@@ -23,13 +23,12 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link MetamodelExecution.Medication#getDailyDosage <em>Daily Dosage</em>}</li>
  *   <li>{@link MetamodelExecution.Medication#getCycles <em>Cycles</em>}</li>
  *   <li>{@link MetamodelExecution.Medication#getFrequency <em>Frequency</em>}</li>
- *   <li>{@link MetamodelExecution.Medication#getTimeTreatement <em>Time Treatement</em>}</li>
+ *   <li>{@link MetamodelExecution.Medication#getTimeTreatment <em>Time Treatment</em>}</li>
  *   <li>{@link MetamodelExecution.Medication#getTimeInterval <em>Time Interval</em>}</li>
  *   <li>{@link MetamodelExecution.Medication#getCategory <em>Category</em>}</li>
  *   <li>{@link MetamodelExecution.Medication#getCodeAccess <em>Code Access</em>}</li>
- *   <li>{@link MetamodelExecution.Medication#getNameAcess <em>Name Acess</em>}</li>
+ *   <li>{@link MetamodelExecution.Medication#getAccess <em>Access</em>}</li>
  *   <li>{@link MetamodelExecution.Medication#getCodeUnit <em>Code Unit</em>}</li>
- *   <li>{@link MetamodelExecution.Medication#getNameUnit <em>Name Unit</em>}</li>
  *   <li>{@link MetamodelExecution.Medication#getUnit <em>Unit</em>}</li>
  * </ul>
  *
@@ -299,30 +298,30 @@ public interface Medication extends EObject {
 	void setFrequency(int value);
 
 	/**
-	 * Returns the value of the '<em><b>Time Treatement</b></em>' attribute.
+	 * Returns the value of the '<em><b>Time Treatment</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Time Treatement</em>' attribute isn't clear,
+	 * If the meaning of the '<em>Time Treatment</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Time Treatement</em>' attribute.
-	 * @see #setTimeTreatement(int)
-	 * @see MetamodelExecution.Execution_metamodelPackage#getMedication_TimeTreatement()
+	 * @return the value of the '<em>Time Treatment</em>' attribute.
+	 * @see #setTimeTreatment(int)
+	 * @see MetamodelExecution.Execution_metamodelPackage#getMedication_TimeTreatment()
 	 * @model
 	 * @generated
 	 */
-	int getTimeTreatement();
+	int getTimeTreatment();
 
 	/**
-	 * Sets the value of the '{@link MetamodelExecution.Medication#getTimeTreatement <em>Time Treatement</em>}' attribute.
+	 * Sets the value of the '{@link MetamodelExecution.Medication#getTimeTreatment <em>Time Treatment</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Time Treatement</em>' attribute.
-	 * @see #getTimeTreatement()
+	 * @param value the new value of the '<em>Time Treatment</em>' attribute.
+	 * @see #getTimeTreatment()
 	 * @generated
 	 */
-	void setTimeTreatement(int value);
+	void setTimeTreatment(int value);
 
 	/**
 	 * Returns the value of the '<em><b>Time Interval</b></em>' attribute.
@@ -403,30 +402,30 @@ public interface Medication extends EObject {
 	void setCodeAccess(int value);
 
 	/**
-	 * Returns the value of the '<em><b>Name Acess</b></em>' attribute.
+	 * Returns the value of the '<em><b>Access</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Name Acess</em>' attribute isn't clear,
+	 * If the meaning of the '<em>Access</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Name Acess</em>' attribute.
-	 * @see #setNameAcess(String)
-	 * @see MetamodelExecution.Execution_metamodelPackage#getMedication_NameAcess()
+	 * @return the value of the '<em>Access</em>' attribute.
+	 * @see #setAccess(String)
+	 * @see MetamodelExecution.Execution_metamodelPackage#getMedication_Access()
 	 * @model
 	 * @generated
 	 */
-	String getNameAcess();
+	String getAccess();
 
 	/**
-	 * Sets the value of the '{@link MetamodelExecution.Medication#getNameAcess <em>Name Acess</em>}' attribute.
+	 * Sets the value of the '{@link MetamodelExecution.Medication#getAccess <em>Access</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Name Acess</em>' attribute.
-	 * @see #getNameAcess()
+	 * @param value the new value of the '<em>Access</em>' attribute.
+	 * @see #getAccess()
 	 * @generated
 	 */
-	void setNameAcess(String value);
+	void setAccess(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Code Unit</b></em>' attribute.
@@ -453,32 +452,6 @@ public interface Medication extends EObject {
 	 * @generated
 	 */
 	void setCodeUnit(String value);
-
-	/**
-	 * Returns the value of the '<em><b>Name Unit</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Name Unit</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Name Unit</em>' attribute.
-	 * @see #setNameUnit(String)
-	 * @see MetamodelExecution.Execution_metamodelPackage#getMedication_NameUnit()
-	 * @model
-	 * @generated
-	 */
-	String getNameUnit();
-
-	/**
-	 * Sets the value of the '{@link MetamodelExecution.Medication#getNameUnit <em>Name Unit</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Name Unit</em>' attribute.
-	 * @see #getNameUnit()
-	 * @generated
-	 */
-	void setNameUnit(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Unit</b></em>' attribute.

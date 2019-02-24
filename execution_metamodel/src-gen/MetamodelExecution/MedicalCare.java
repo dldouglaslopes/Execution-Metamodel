@@ -14,7 +14,7 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  * <ul>
  *   <li>{@link MetamodelExecution.MedicalCare#getCodeMedicalCare <em>Code Medical Care</em>}</li>
- *   <li>{@link MetamodelExecution.MedicalCare#getPacient <em>Pacient</em>}</li>
+ *   <li>{@link MetamodelExecution.MedicalCare#getPatient <em>Patient</em>}</li>
  *   <li>{@link MetamodelExecution.MedicalCare#getProfessional <em>Professional</em>}</li>
  *   <li>{@link MetamodelExecution.MedicalCare#getIdProfessional <em>Id Professional</em>}</li>
  *   <li>{@link MetamodelExecution.MedicalCare#getHospitalUnit <em>Hospital Unit</em>}</li>
@@ -55,30 +55,30 @@ public interface MedicalCare extends EObject {
 	void setCodeMedicalCare(int value);
 
 	/**
-	 * Returns the value of the '<em><b>Pacient</b></em>' attribute.
+	 * Returns the value of the '<em><b>Patient</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Pacient</em>' attribute isn't clear,
+	 * If the meaning of the '<em>Patient</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Pacient</em>' attribute.
-	 * @see #setPacient(String)
-	 * @see MetamodelExecution.Execution_metamodelPackage#getMedicalCare_Pacient()
+	 * @return the value of the '<em>Patient</em>' attribute.
+	 * @see #setPatient(String)
+	 * @see MetamodelExecution.Execution_metamodelPackage#getMedicalCare_Patient()
 	 * @model
 	 * @generated
 	 */
-	String getPacient();
+	String getPatient();
 
 	/**
-	 * Sets the value of the '{@link MetamodelExecution.MedicalCare#getPacient <em>Pacient</em>}' attribute.
+	 * Sets the value of the '{@link MetamodelExecution.MedicalCare#getPatient <em>Patient</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Pacient</em>' attribute.
-	 * @see #getPacient()
+	 * @param value the new value of the '<em>Patient</em>' attribute.
+	 * @see #getPatient()
 	 * @generated
 	 */
-	void setPacient(String value);
+	void setPatient(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Professional</b></em>' attribute.

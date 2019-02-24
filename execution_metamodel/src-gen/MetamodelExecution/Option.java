@@ -2,6 +2,8 @@
  */
 package MetamodelExecution;
 
+import org.eclipse.emf.ecore.EObject;
+
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Option</b></em>'.
@@ -20,7 +22,7 @@ package MetamodelExecution;
  * @model
  * @generated
  */
-public interface Option extends Value {
+public interface Option extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Id</b></em>' attribute.
 	 * <!-- begin-user-doc -->
