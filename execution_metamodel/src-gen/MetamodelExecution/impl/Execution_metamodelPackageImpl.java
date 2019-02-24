@@ -6,6 +6,7 @@ import MetamodelExecution.Allergy;
 import MetamodelExecution.Answer;
 import MetamodelExecution.Audit;
 import MetamodelExecution.Bond;
+import MetamodelExecution.Choice;
 import MetamodelExecution.Comorbidity;
 import MetamodelExecution.Complement;
 import MetamodelExecution.ComplementaryConducts;
@@ -490,6 +491,13 @@ public class Execution_metamodelPackageImpl extends EPackageImpl implements Exec
 	 * @generated
 	 */
 	private EClass paediatricMedicationEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass choiceEClass = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -1453,6 +1461,15 @@ public class Execution_metamodelPackageImpl extends EPackageImpl implements Exec
 	 */
 	public EReference getAnswer_Value() {
 		return (EReference) answerEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getAnswer_Choice() {
+		return (EReference) answerEClass.getEStructuralFeatures().get(5);
 	}
 
 	/**
@@ -3800,6 +3817,24 @@ public class Execution_metamodelPackageImpl extends EPackageImpl implements Exec
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getChoice() {
+		return choiceEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getChoice_Option() {
+		return (EAttribute) choiceEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public Execution_metamodelFactory getExecution_metamodelFactory() {
 		return (Execution_metamodelFactory) getEFactoryInstance();
 	}
@@ -3941,6 +3976,7 @@ public class Execution_metamodelPackageImpl extends EPackageImpl implements Exec
 		createEReference(answerEClass, ANSWER__QUESTION);
 		createEAttribute(answerEClass, ANSWER__JUSTIFICATION);
 		createEReference(answerEClass, ANSWER__VALUE);
+		createEReference(answerEClass, ANSWER__CHOICE);
 
 		numericEClass = createEClass(NUMERIC);
 		createEAttribute(numericEClass, NUMERIC__VALUE);
@@ -4242,6 +4278,9 @@ public class Execution_metamodelPackageImpl extends EPackageImpl implements Exec
 		createEReference(pPaediatricMedicationtEClass, PPAEDIATRIC_MEDICATIONT__PAEDIATRIC_MEDICATION);
 
 		paediatricMedicationEClass = createEClass(PAEDIATRIC_MEDICATION);
+
+		choiceEClass = createEClass(CHOICE);
+		createEAttribute(choiceEClass, CHOICE__OPTION);
 	}
 
 	/**
@@ -4562,6 +4601,9 @@ public class Execution_metamodelPackageImpl extends EPackageImpl implements Exec
 		initEAttribute(getAnswer_Justification(), ecorePackage.getEString(), "justification", null, 0, 1, Answer.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getAnswer_Value(), this.getValue(), null, "value", null, 0, 1, Answer.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED,
+				IS_ORDERED);
+		initEReference(getAnswer_Choice(), this.getChoice(), null, "choice", null, 0, 1, Answer.class, !IS_TRANSIENT,
 				!IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED,
 				IS_ORDERED);
 
@@ -5216,6 +5258,10 @@ public class Execution_metamodelPackageImpl extends EPackageImpl implements Exec
 
 		initEClass(paediatricMedicationEClass, PaediatricMedication.class, "PaediatricMedication", !IS_ABSTRACT,
 				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(choiceEClass, Choice.class, "Choice", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getChoice_Option(), ecorePackage.getEInt(), "option", null, 0, -1, Choice.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Create resource
 		createResource(eNS_URI);

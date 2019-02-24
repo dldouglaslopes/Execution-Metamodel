@@ -18,6 +18,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link MetamodelExecution.Answer#getQuestion <em>Question</em>}</li>
  *   <li>{@link MetamodelExecution.Answer#getJustification <em>Justification</em>}</li>
  *   <li>{@link MetamodelExecution.Answer#getValue <em>Value</em>}</li>
+ *   <li>{@link MetamodelExecution.Answer#getChoice <em>Choice</em>}</li>
  * </ul>
  *
  * @see MetamodelExecution.Execution_metamodelPackage#getAnswer()
@@ -154,5 +155,31 @@ public interface Answer extends EObject {
 	 * @generated
 	 */
 	void setValue(Value value);
+
+	/**
+	 * Returns the value of the '<em><b>Choice</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Choice</em>' containment reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Choice</em>' containment reference.
+	 * @see #setChoice(Choice)
+	 * @see MetamodelExecution.Execution_metamodelPackage#getAnswer_Choice()
+	 * @model containment="true"
+	 * @generated
+	 */
+	Choice getChoice();
+
+	/**
+	 * Sets the value of the '{@link MetamodelExecution.Answer#getChoice <em>Choice</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Choice</em>' containment reference.
+	 * @see #getChoice()
+	 * @generated
+	 */
+	void setChoice(Choice value);
 
 } // Answer

@@ -508,6 +508,15 @@ public interface Execution_metamodelFactory extends EFactory {
 	PaediatricMedication createPaediatricMedication();
 
 	/**
+	 * Returns a new object of class '<em>Choice</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Choice</em>'.
+	 * @generated
+	 */
+	Choice createChoice();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

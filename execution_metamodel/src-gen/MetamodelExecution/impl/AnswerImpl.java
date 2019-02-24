@@ -3,6 +3,7 @@
 package MetamodelExecution.impl;
 
 import MetamodelExecution.Answer;
+import MetamodelExecution.Choice;
 import MetamodelExecution.Execution_metamodelPackage;
 import MetamodelExecution.Question;
 import MetamodelExecution.Value;
@@ -29,6 +30,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *   <li>{@link MetamodelExecution.impl.AnswerImpl#getQuestion <em>Question</em>}</li>
  *   <li>{@link MetamodelExecution.impl.AnswerImpl#getJustification <em>Justification</em>}</li>
  *   <li>{@link MetamodelExecution.impl.AnswerImpl#getValue <em>Value</em>}</li>
+ *   <li>{@link MetamodelExecution.impl.AnswerImpl#getChoice <em>Choice</em>}</li>
  * </ul>
  *
  * @generated
@@ -113,6 +115,16 @@ public class AnswerImpl extends MinimalEObjectImpl.Container implements Answer {
 	 * @ordered
 	 */
 	protected Value value;
+
+	/**
+	 * The cached value of the '{@link #getChoice() <em>Choice</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getChoice()
+	 * @generated
+	 * @ordered
+	 */
+	protected Choice choice;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -303,6 +315,56 @@ public class AnswerImpl extends MinimalEObjectImpl.Container implements Answer {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public Choice getChoice() {
+		return choice;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetChoice(Choice newChoice, NotificationChain msgs) {
+		Choice oldChoice = choice;
+		choice = newChoice;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
+					Execution_metamodelPackage.ANSWER__CHOICE, oldChoice, newChoice);
+			if (msgs == null)
+				msgs = notification;
+			else
+				msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setChoice(Choice newChoice) {
+		if (newChoice != choice) {
+			NotificationChain msgs = null;
+			if (choice != null)
+				msgs = ((InternalEObject) choice).eInverseRemove(this,
+						EOPPOSITE_FEATURE_BASE - Execution_metamodelPackage.ANSWER__CHOICE, null, msgs);
+			if (newChoice != null)
+				msgs = ((InternalEObject) newChoice).eInverseAdd(this,
+						EOPPOSITE_FEATURE_BASE - Execution_metamodelPackage.ANSWER__CHOICE, null, msgs);
+			msgs = basicSetChoice(newChoice, msgs);
+			if (msgs != null)
+				msgs.dispatch();
+		} else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, Execution_metamodelPackage.ANSWER__CHOICE, newChoice,
+					newChoice));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -310,6 +372,8 @@ public class AnswerImpl extends MinimalEObjectImpl.Container implements Answer {
 			return basicSetQuestion(null, msgs);
 		case Execution_metamodelPackage.ANSWER__VALUE:
 			return basicSetValue(null, msgs);
+		case Execution_metamodelPackage.ANSWER__CHOICE:
+			return basicSetChoice(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -332,6 +396,8 @@ public class AnswerImpl extends MinimalEObjectImpl.Container implements Answer {
 			return getJustification();
 		case Execution_metamodelPackage.ANSWER__VALUE:
 			return getValue();
+		case Execution_metamodelPackage.ANSWER__CHOICE:
+			return getChoice();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -358,6 +424,9 @@ public class AnswerImpl extends MinimalEObjectImpl.Container implements Answer {
 			return;
 		case Execution_metamodelPackage.ANSWER__VALUE:
 			setValue((Value) newValue);
+			return;
+		case Execution_metamodelPackage.ANSWER__CHOICE:
+			setChoice((Choice) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -386,6 +455,9 @@ public class AnswerImpl extends MinimalEObjectImpl.Container implements Answer {
 		case Execution_metamodelPackage.ANSWER__VALUE:
 			setValue((Value) null);
 			return;
+		case Execution_metamodelPackage.ANSWER__CHOICE:
+			setChoice((Choice) null);
+			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -409,6 +481,8 @@ public class AnswerImpl extends MinimalEObjectImpl.Container implements Answer {
 					: !JUSTIFICATION_EDEFAULT.equals(justification);
 		case Execution_metamodelPackage.ANSWER__VALUE:
 			return value != null;
+		case Execution_metamodelPackage.ANSWER__CHOICE:
+			return choice != null;
 		}
 		return super.eIsSet(featureID);
 	}

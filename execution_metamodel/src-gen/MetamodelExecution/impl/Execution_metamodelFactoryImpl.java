@@ -164,6 +164,8 @@ public class Execution_metamodelFactoryImpl extends EFactoryImpl implements Exec
 			return createPPaediatricMedicationt();
 		case Execution_metamodelPackage.PAEDIATRIC_MEDICATION:
 			return createPaediatricMedication();
+		case Execution_metamodelPackage.CHOICE:
+			return createChoice();
 		default:
 			throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -707,6 +709,16 @@ public class Execution_metamodelFactoryImpl extends EFactoryImpl implements Exec
 	public PaediatricMedication createPaediatricMedication() {
 		PaediatricMedicationImpl paediatricMedication = new PaediatricMedicationImpl();
 		return paediatricMedication;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Choice createChoice() {
+		ChoiceImpl choice = new ChoiceImpl();
+		return choice;
 	}
 
 	/**

@@ -123,6 +123,7 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference execution_metamodel.ecore#//Answer/question"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute execution_metamodel.ecore#//Answer/justification"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference execution_metamodel.ecore#//Answer/value"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference execution_metamodel.ecore#//Answer/choice"/>
     </genClasses>
     <genClasses ecoreClass="execution_metamodel.ecore#//Numeric">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute execution_metamodel.ecore#//Numeric/value"/>
@@ -418,5 +419,8 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference execution_metamodel.ecore#//PPaediatricMedicationt/paediatricMedication"/>
     </genClasses>
     <genClasses ecoreClass="execution_metamodel.ecore#//PaediatricMedication"/>
+    <genClasses ecoreClass="execution_metamodel.ecore#//Choice">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute execution_metamodel.ecore#//Choice/option"/>
+    </genClasses>
   </genPackages>
 </genmodel:GenModel>

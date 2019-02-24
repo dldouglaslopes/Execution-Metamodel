@@ -2452,13 +2452,22 @@ public interface Execution_metamodelPackage extends EPackage {
 	int ANSWER__VALUE = 4;
 
 	/**
+	 * The feature id for the '<em><b>Choice</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ANSWER__CHOICE = 5;
+
+	/**
 	 * The number of structural features of the '<em>Answer</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ANSWER_FEATURE_COUNT = 5;
+	int ANSWER_FEATURE_COUNT = 6;
 
 	/**
 	 * The number of operations of the '<em>Answer</em>' class.
@@ -6389,6 +6398,43 @@ public interface Execution_metamodelPackage extends EPackage {
 	int PAEDIATRIC_MEDICATION_OPERATION_COUNT = 0;
 
 	/**
+	 * The meta object id for the '{@link MetamodelExecution.impl.ChoiceImpl <em>Choice</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see MetamodelExecution.impl.ChoiceImpl
+	 * @see MetamodelExecution.impl.Execution_metamodelPackageImpl#getChoice()
+	 * @generated
+	 */
+	int CHOICE = 59;
+
+	/**
+	 * The feature id for the '<em><b>Option</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CHOICE__OPTION = 0;
+
+	/**
+	 * The number of structural features of the '<em>Choice</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CHOICE_FEATURE_COUNT = 1;
+
+	/**
+	 * The number of operations of the '<em>Choice</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CHOICE_OPERATION_COUNT = 0;
+
+	/**
 	 * Returns the meta object for class '{@link MetamodelExecution.EAuxiliaryConduct <em>EAuxiliary Conduct</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -7469,6 +7515,17 @@ public interface Execution_metamodelPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getAnswer_Value();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link MetamodelExecution.Answer#getChoice <em>Choice</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Choice</em>'.
+	 * @see MetamodelExecution.Answer#getChoice()
+	 * @see #getAnswer()
+	 * @generated
+	 */
+	EReference getAnswer_Choice();
 
 	/**
 	 * Returns the meta object for class '{@link MetamodelExecution.Numeric <em>Numeric</em>}'.
@@ -10290,6 +10347,27 @@ public interface Execution_metamodelPackage extends EPackage {
 	EClass getPaediatricMedication();
 
 	/**
+	 * Returns the meta object for class '{@link MetamodelExecution.Choice <em>Choice</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Choice</em>'.
+	 * @see MetamodelExecution.Choice
+	 * @generated
+	 */
+	EClass getChoice();
+
+	/**
+	 * Returns the meta object for the attribute list '{@link MetamodelExecution.Choice#getOption <em>Option</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute list '<em>Option</em>'.
+	 * @see MetamodelExecution.Choice#getOption()
+	 * @see #getChoice()
+	 * @generated
+	 */
+	EAttribute getChoice_Option();
+
+	/**
 	 * Returns the factory that creates the instances of the model.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -11147,6 +11225,14 @@ public interface Execution_metamodelPackage extends EPackage {
 		 * @generated
 		 */
 		EReference ANSWER__VALUE = eINSTANCE.getAnswer_Value();
+
+		/**
+		 * The meta object literal for the '<em><b>Choice</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference ANSWER__CHOICE = eINSTANCE.getAnswer_Choice();
 
 		/**
 		 * The meta object literal for the '{@link MetamodelExecution.impl.NumericImpl <em>Numeric</em>}' class.
@@ -13321,6 +13407,24 @@ public interface Execution_metamodelPackage extends EPackage {
 		 * @generated
 		 */
 		EClass PAEDIATRIC_MEDICATION = eINSTANCE.getPaediatricMedication();
+
+		/**
+		 * The meta object literal for the '{@link MetamodelExecution.impl.ChoiceImpl <em>Choice</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see MetamodelExecution.impl.ChoiceImpl
+		 * @see MetamodelExecution.impl.Execution_metamodelPackageImpl#getChoice()
+		 * @generated
+		 */
+		EClass CHOICE = eINSTANCE.getChoice();
+
+		/**
+		 * The meta object literal for the '<em><b>Option</b></em>' attribute list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute CHOICE__OPTION = eINSTANCE.getChoice_Option();
 
 	}
 
